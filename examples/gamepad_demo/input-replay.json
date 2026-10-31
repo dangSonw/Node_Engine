@@ -1,0 +1,151 @@
+{
+  "events": [
+    {
+      "connected": true,
+      "controller": 7,
+      "frame": 0,
+      "type": "gamepad_connection"
+    },
+    {
+      "axis": "LeftX",
+      "controller": 7,
+      "frame": 0,
+      "type": "gamepad_axis",
+      "value": 1
+    },
+    {
+      "axis": "LeftY",
+      "controller": 7,
+      "frame": 0,
+      "type": "gamepad_axis",
+      "value": 0.15
+    },
+    {
+      "axis": "LeftTrigger",
+      "controller": 7,
+      "frame": 0,
+      "type": "gamepad_axis",
+      "value": 0.575
+    },
+    {
+      "button": "South",
+      "controller": 7,
+      "down": true,
+      "frame": 0,
+      "type": "gamepad_button"
+    },
+    {
+      "button": "South",
+      "controller": 7,
+      "down": false,
+      "frame": 1,
+      "type": "gamepad_button"
+    },
+    {
+      "button": "East",
+      "controller": 7,
+      "down": true,
+      "frame": 1,
+      "type": "gamepad_button"
+    },
+    {
+      "button": "S",
+      "down": true,
+      "frame": 2
+    },
+    {
+      "button": "S",
+      "down": false,
+      "frame": 3
+    },
+    {
+      "axis": "LeftX",
+      "controller": 7,
+      "frame": 4,
+      "type": "gamepad_axis",
+      "value": -0.575
+    },
+    {
+      "button": "South",
+      "controller": 7,
+      "down": true,
+      "frame": 4,
+      "type": "gamepad_button"
+    },
+    {
+      "connected": false,
+      "controller": 7,
+      "frame": 5,
+      "type": "gamepad_connection"
+    },
+    {
+      "connected": true,
+      "controller": 9,
+      "frame": 6,
+      "type": "gamepad_connection"
+    },
+    {
+      "axis": "LeftX",
+      "controller": 9,
+      "frame": 6,
+      "type": "gamepad_axis",
+      "value": -1
+    },
+    {
+      "axis": "LeftY",
+      "controller": 9,
+      "frame": 6,
+      "type": "gamepad_axis",
+      "value": 1
+    },
+    {
+      "button": "South",
+      "controller": 9,
+      "down": true,
+      "frame": 6,
+      "type": "gamepad_button"
+    },
+    {
+      "button": "South",
+      "controller": 9,
+      "down": false,
+      "frame": 7,
+      "type": "gamepad_button"
+    },
+    {
+      "connected": true,
+      "controller": 12,
+      "frame": 8,
+      "type": "gamepad_connection"
+    },
+    {
+      "button": "East",
+      "controller": 12,
+      "down": true,
+      "frame": 8,
+      "type": "gamepad_button"
+    },
+    {
+      "frame": 9,
+      "release_all": true
+    },
+    {
+      "connected": false,
+      "controller": 9,
+      "frame": 10,
+      "type": "gamepad_connection"
+    },
+    {
+      "axis": "LeftX",
+      "controller": 12,
+      "frame": 12,
+      "type": "gamepad_axis",
+      "value": 0.575
+    },
+    {
+      "frame": 20,
+      "release_all": true
+    }
+  ],
+  "version": 3
+}

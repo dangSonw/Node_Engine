@@ -1,0 +1,437 @@
+{
+  "links": [
+    {
+      "from": [
+        "next",
+        "Out"
+      ],
+      "to": [
+        "next_branch",
+        "In"
+      ]
+    },
+    {
+      "from": [
+        "next_pressed",
+        "Value"
+      ],
+      "to": [
+        "next_branch",
+        "Condition"
+      ]
+    },
+    {
+      "from": [
+        "flip_x",
+        "Out"
+      ],
+      "to": [
+        "flip_x_branch",
+        "In"
+      ]
+    },
+    {
+      "from": [
+        "flip_x_pressed",
+        "Value"
+      ],
+      "to": [
+        "flip_x_branch",
+        "Condition"
+      ]
+    },
+    {
+      "from": [
+        "flip_y",
+        "Out"
+      ],
+      "to": [
+        "flip_y_branch",
+        "In"
+      ]
+    },
+    {
+      "from": [
+        "flip_y_pressed",
+        "Value"
+      ],
+      "to": [
+        "flip_y_branch",
+        "Condition"
+      ]
+    },
+    {
+      "from": [
+        "frame",
+        "Value"
+      ],
+      "to": [
+        "increment",
+        "A"
+      ]
+    },
+    {
+      "from": [
+        "increment",
+        "Value"
+      ],
+      "to": [
+        "within",
+        "A"
+      ]
+    },
+    {
+      "from": [
+        "within",
+        "Value"
+      ],
+      "to": [
+        "wrap",
+        "Condition"
+      ]
+    },
+    {
+      "from": [
+        "next_branch",
+        "True"
+      ],
+      "to": [
+        "wrap",
+        "In"
+      ]
+    },
+    {
+      "from": [
+        "increment",
+        "Value"
+      ],
+      "to": [
+        "set_frame",
+        "Frame"
+      ]
+    },
+    {
+      "from": [
+        "wrap",
+        "True"
+      ],
+      "to": [
+        "set_frame",
+        "In"
+      ]
+    },
+    {
+      "from": [
+        "wrap",
+        "False"
+      ],
+      "to": [
+        "reset_frame",
+        "In"
+      ]
+    },
+    {
+      "from": [
+        "flip_x_get",
+        "Value"
+      ],
+      "to": [
+        "flip_x_not",
+        "Value"
+      ]
+    },
+    {
+      "from": [
+        "flip_x_not",
+        "Value"
+      ],
+      "to": [
+        "flip_x_set",
+        "Flip X"
+      ]
+    },
+    {
+      "from": [
+        "flip_x_other",
+        "Value"
+      ],
+      "to": [
+        "flip_x_set",
+        "Flip Y"
+      ]
+    },
+    {
+      "from": [
+        "flip_x_branch",
+        "True"
+      ],
+      "to": [
+        "flip_x_set",
+        "In"
+      ]
+    },
+    {
+      "from": [
+        "flip_y_get",
+        "Value"
+      ],
+      "to": [
+        "flip_y_not",
+        "Value"
+      ]
+    },
+    {
+      "from": [
+        "flip_y_not",
+        "Value"
+      ],
+      "to": [
+        "flip_y_set",
+        "Flip Y"
+      ]
+    },
+    {
+      "from": [
+        "flip_y_other",
+        "Value"
+      ],
+      "to": [
+        "flip_y_set",
+        "Flip X"
+      ]
+    },
+    {
+      "from": [
+        "flip_y_branch",
+        "True"
+      ],
+      "to": [
+        "flip_y_set",
+        "In"
+      ]
+    }
+  ],
+  "name": "Sprite atlas: Space next frame, X/Y toggle flip",
+  "nodes": [
+    {
+      "id": "next",
+      "position": [
+        0,
+        0
+      ],
+      "type": 1002,
+      "values": {}
+    },
+    {
+      "id": "next_pressed",
+      "position": [
+        260,
+        0
+      ],
+      "type": 10005,
+      "values": {
+        "Action": "next"
+      }
+    },
+    {
+      "id": "next_branch",
+      "position": [
+        520,
+        0
+      ],
+      "type": 2001,
+      "values": {}
+    },
+    {
+      "id": "flip_x",
+      "position": [
+        780,
+        0
+      ],
+      "type": 1002,
+      "values": {}
+    },
+    {
+      "id": "flip_x_pressed",
+      "position": [
+        1040,
+        0
+      ],
+      "type": 10005,
+      "values": {
+        "Action": "flip_x"
+      }
+    },
+    {
+      "id": "flip_x_branch",
+      "position": [
+        0,
+        220
+      ],
+      "type": 2001,
+      "values": {}
+    },
+    {
+      "id": "flip_y",
+      "position": [
+        260,
+        220
+      ],
+      "type": 1002,
+      "values": {}
+    },
+    {
+      "id": "flip_y_pressed",
+      "position": [
+        520,
+        220
+      ],
+      "type": 10005,
+      "values": {
+        "Action": "flip_y"
+      }
+    },
+    {
+      "id": "flip_y_branch",
+      "position": [
+        780,
+        220
+      ],
+      "type": 2001,
+      "values": {}
+    },
+    {
+      "id": "frame",
+      "position": [
+        1040,
+        220
+      ],
+      "type": 14105,
+      "values": {}
+    },
+    {
+      "id": "increment",
+      "position": [
+        0,
+        440
+      ],
+      "type": 4030,
+      "values": {
+        "B": 1
+      }
+    },
+    {
+      "id": "within",
+      "position": [
+        260,
+        440
+      ],
+      "type": 4033,
+      "values": {
+        "B": 4
+      }
+    },
+    {
+      "id": "wrap",
+      "position": [
+        520,
+        440
+      ],
+      "type": 2001,
+      "values": {}
+    },
+    {
+      "id": "set_frame",
+      "position": [
+        780,
+        440
+      ],
+      "type": 14104,
+      "values": {}
+    },
+    {
+      "id": "reset_frame",
+      "position": [
+        1040,
+        440
+      ],
+      "type": 14104,
+      "values": {
+        "Frame": 0
+      }
+    },
+    {
+      "id": "flip_x_get",
+      "position": [
+        0,
+        660
+      ],
+      "type": 14108,
+      "values": {}
+    },
+    {
+      "id": "flip_x_not",
+      "position": [
+        260,
+        660
+      ],
+      "type": 4017,
+      "values": {}
+    },
+    {
+      "id": "flip_x_other",
+      "position": [
+        520,
+        660
+      ],
+      "type": 14109,
+      "values": {}
+    },
+    {
+      "id": "flip_x_set",
+      "position": [
+        780,
+        660
+      ],
+      "type": 14107,
+      "values": {}
+    },
+    {
+      "id": "flip_y_get",
+      "position": [
+        1040,
+        660
+      ],
+      "type": 14109,
+      "values": {}
+    },
+    {
+      "id": "flip_y_not",
+      "position": [
+        0,
+        880
+      ],
+      "type": 4017,
+      "values": {}
+    },
+    {
+      "id": "flip_y_other",
+      "position": [
+        260,
+        880
+      ],
+      "type": 14108,
+      "values": {}
+    },
+    {
+      "id": "flip_y_set",
+      "position": [
+        520,
+        880
+      ],
+      "type": 14107,
+      "values": {}
+    }
+  ],
+  "version": 1
+}

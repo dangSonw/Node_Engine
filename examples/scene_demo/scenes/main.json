@@ -1,0 +1,64 @@
+{
+  "entities": [
+    {
+      "id": "player",
+      "name": "Player",
+      "position": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "rotation": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "scale": [
+        1.0,
+        1.0,
+        1.0
+      ]
+    },
+    {
+      "id": "257f11825c7d4aa5a522d00c16c90d02",
+      "mesh": "assets/robot/robot.gltf",
+      "name": "Robot trái",
+      "position": [
+        -1,
+        0,
+        0
+      ],
+      "rotation": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "scale": [
+        1.0,
+        1.0,
+        1.0
+      ]
+    },
+    {
+      "id": "786efe3a48e346fca5eb019bebc8e3ae",
+      "mesh": "assets/robot/robot.gltf",
+      "name": "Robot phải",
+      "position": [
+        1,
+        0,
+        0
+      ],
+      "rotation": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "scale": [
+        1.0,
+        1.0,
+        1.0
+      ]
+    }
+  ],
+  "variables": {}
+}

@@ -1,0 +1,703 @@
+{
+  "links": [
+    {
+      "from": [
+        "start",
+        "Out"
+      ],
+      "to": [
+        "music",
+        "In"
+      ]
+    },
+    {
+      "from": [
+        "effect_update",
+        "Out"
+      ],
+      "to": [
+        "effect_if",
+        "In"
+      ]
+    },
+    {
+      "from": [
+        "effect_pressed",
+        "Value"
+      ],
+      "to": [
+        "effect_if",
+        "Condition"
+      ]
+    },
+    {
+      "from": [
+        "effect_if",
+        "True"
+      ],
+      "to": [
+        "effect_run",
+        "In"
+      ]
+    },
+    {
+      "from": [
+        "effect_run",
+        "Out"
+      ],
+      "to": [
+        "effect_frame",
+        "In"
+      ]
+    },
+    {
+      "from": [
+        "pause_update",
+        "Out"
+      ],
+      "to": [
+        "pause_if",
+        "In"
+      ]
+    },
+    {
+      "from": [
+        "pause_pressed",
+        "Value"
+      ],
+      "to": [
+        "pause_if",
+        "Condition"
+      ]
+    },
+    {
+      "from": [
+        "pause_if",
+        "True"
+      ],
+      "to": [
+        "pause_run",
+        "In"
+      ]
+    },
+    {
+      "from": [
+        "pause_run",
+        "Out"
+      ],
+      "to": [
+        "pause_frame",
+        "In"
+      ]
+    },
+    {
+      "from": [
+        "resume_update",
+        "Out"
+      ],
+      "to": [
+        "resume_if",
+        "In"
+      ]
+    },
+    {
+      "from": [
+        "resume_pressed",
+        "Value"
+      ],
+      "to": [
+        "resume_if",
+        "Condition"
+      ]
+    },
+    {
+      "from": [
+        "resume_if",
+        "True"
+      ],
+      "to": [
+        "resume_run",
+        "In"
+      ]
+    },
+    {
+      "from": [
+        "resume_run",
+        "Out"
+      ],
+      "to": [
+        "resume_frame",
+        "In"
+      ]
+    },
+    {
+      "from": [
+        "stop_update",
+        "Out"
+      ],
+      "to": [
+        "stop_if",
+        "In"
+      ]
+    },
+    {
+      "from": [
+        "stop_pressed",
+        "Value"
+      ],
+      "to": [
+        "stop_if",
+        "Condition"
+      ]
+    },
+    {
+      "from": [
+        "stop_if",
+        "True"
+      ],
+      "to": [
+        "stop_run",
+        "In"
+      ]
+    },
+    {
+      "from": [
+        "stop_run",
+        "Out"
+      ],
+      "to": [
+        "stop_frame",
+        "In"
+      ]
+    },
+    {
+      "from": [
+        "quiet_update",
+        "Out"
+      ],
+      "to": [
+        "quiet_if",
+        "In"
+      ]
+    },
+    {
+      "from": [
+        "quiet_pressed",
+        "Value"
+      ],
+      "to": [
+        "quiet_if",
+        "Condition"
+      ]
+    },
+    {
+      "from": [
+        "quiet_if",
+        "True"
+      ],
+      "to": [
+        "quiet_run",
+        "In"
+      ]
+    },
+    {
+      "from": [
+        "quiet_run",
+        "Out"
+      ],
+      "to": [
+        "quiet_frame",
+        "In"
+      ]
+    },
+    {
+      "from": [
+        "mute_update",
+        "Out"
+      ],
+      "to": [
+        "mute_if",
+        "In"
+      ]
+    },
+    {
+      "from": [
+        "mute_pressed",
+        "Value"
+      ],
+      "to": [
+        "mute_if",
+        "Condition"
+      ]
+    },
+    {
+      "from": [
+        "mute_if",
+        "True"
+      ],
+      "to": [
+        "mute_run",
+        "In"
+      ]
+    },
+    {
+      "from": [
+        "mute_run",
+        "Out"
+      ],
+      "to": [
+        "mute_frame",
+        "In"
+      ]
+    },
+    {
+      "from": [
+        "restart_update",
+        "Out"
+      ],
+      "to": [
+        "restart_if",
+        "In"
+      ]
+    },
+    {
+      "from": [
+        "restart_pressed",
+        "Value"
+      ],
+      "to": [
+        "restart_if",
+        "Condition"
+      ]
+    },
+    {
+      "from": [
+        "restart_if",
+        "True"
+      ],
+      "to": [
+        "restart_run",
+        "In"
+      ]
+    },
+    {
+      "from": [
+        "restart_run",
+        "Out"
+      ],
+      "to": [
+        "restart_frame",
+        "In"
+      ]
+    },
+    {
+      "from": [
+        "restart_frame",
+        "Out"
+      ],
+      "to": [
+        "unmute",
+        "In"
+      ]
+    }
+  ],
+  "name": "Audio: Space effect, P pause, R resume, S stop, V volume, M master mute, L restart",
+  "nodes": [
+    {
+      "id": "start",
+      "position": [
+        0,
+        0
+      ],
+      "type": 1001,
+      "values": {}
+    },
+    {
+      "id": "music",
+      "position": [
+        260,
+        0
+      ],
+      "type": 17001,
+      "values": {
+        "Loop": true,
+        "Sound": "music",
+        "Voice": "music",
+        "Volume": 0.4
+      }
+    },
+    {
+      "id": "effect_update",
+      "position": [
+        520,
+        0
+      ],
+      "type": 1002,
+      "values": {}
+    },
+    {
+      "id": "effect_pressed",
+      "position": [
+        780,
+        0
+      ],
+      "type": 10005,
+      "values": {
+        "Action": "effect"
+      }
+    },
+    {
+      "id": "effect_if",
+      "position": [
+        1040,
+        0
+      ],
+      "type": 2001,
+      "values": {}
+    },
+    {
+      "id": "effect_run",
+      "position": [
+        0,
+        220
+      ],
+      "type": 17001,
+      "values": {
+        "Sound": "effect",
+        "Voice": "effect",
+        "Volume": 0.3
+      }
+    },
+    {
+      "id": "effect_frame",
+      "position": [
+        260,
+        220
+      ],
+      "type": 14104,
+      "values": {
+        "Frame": 0
+      }
+    },
+    {
+      "id": "pause_update",
+      "position": [
+        520,
+        220
+      ],
+      "type": 1002,
+      "values": {}
+    },
+    {
+      "id": "pause_pressed",
+      "position": [
+        780,
+        220
+      ],
+      "type": 10005,
+      "values": {
+        "Action": "pause"
+      }
+    },
+    {
+      "id": "pause_if",
+      "position": [
+        1040,
+        220
+      ],
+      "type": 2001,
+      "values": {}
+    },
+    {
+      "id": "pause_run",
+      "position": [
+        0,
+        440
+      ],
+      "type": 17003,
+      "values": {
+        "Voice": "music"
+      }
+    },
+    {
+      "id": "pause_frame",
+      "position": [
+        260,
+        440
+      ],
+      "type": 14104,
+      "values": {
+        "Frame": 1
+      }
+    },
+    {
+      "id": "resume_update",
+      "position": [
+        520,
+        440
+      ],
+      "type": 1002,
+      "values": {}
+    },
+    {
+      "id": "resume_pressed",
+      "position": [
+        780,
+        440
+      ],
+      "type": 10005,
+      "values": {
+        "Action": "resume"
+      }
+    },
+    {
+      "id": "resume_if",
+      "position": [
+        1040,
+        440
+      ],
+      "type": 2001,
+      "values": {}
+    },
+    {
+      "id": "resume_run",
+      "position": [
+        0,
+        660
+      ],
+      "type": 17004,
+      "values": {
+        "Voice": "music"
+      }
+    },
+    {
+      "id": "resume_frame",
+      "position": [
+        260,
+        660
+      ],
+      "type": 14104,
+      "values": {
+        "Frame": 2
+      }
+    },
+    {
+      "id": "stop_update",
+      "position": [
+        520,
+        660
+      ],
+      "type": 1002,
+      "values": {}
+    },
+    {
+      "id": "stop_pressed",
+      "position": [
+        780,
+        660
+      ],
+      "type": 10005,
+      "values": {
+        "Action": "stop"
+      }
+    },
+    {
+      "id": "stop_if",
+      "position": [
+        1040,
+        660
+      ],
+      "type": 2001,
+      "values": {}
+    },
+    {
+      "id": "stop_run",
+      "position": [
+        0,
+        880
+      ],
+      "type": 17012,
+      "values": {}
+    },
+    {
+      "id": "stop_frame",
+      "position": [
+        260,
+        880
+      ],
+      "type": 14104,
+      "values": {
+        "Frame": 3
+      }
+    },
+    {
+      "id": "quiet_update",
+      "position": [
+        520,
+        880
+      ],
+      "type": 1002,
+      "values": {}
+    },
+    {
+      "id": "quiet_pressed",
+      "position": [
+        780,
+        880
+      ],
+      "type": 10005,
+      "values": {
+        "Action": "quiet"
+      }
+    },
+    {
+      "id": "quiet_if",
+      "position": [
+        1040,
+        880
+      ],
+      "type": 2001,
+      "values": {}
+    },
+    {
+      "id": "quiet_run",
+      "position": [
+        0,
+        1100
+      ],
+      "type": 17007,
+      "values": {
+        "Voice": "music",
+        "Volume": 0.1
+      }
+    },
+    {
+      "id": "quiet_frame",
+      "position": [
+        260,
+        1100
+      ],
+      "type": 14104,
+      "values": {
+        "Frame": 0
+      }
+    },
+    {
+      "id": "mute_update",
+      "position": [
+        520,
+        1100
+      ],
+      "type": 1002,
+      "values": {}
+    },
+    {
+      "id": "mute_pressed",
+      "position": [
+        780,
+        1100
+      ],
+      "type": 10005,
+      "values": {
+        "Action": "mute"
+      }
+    },
+    {
+      "id": "mute_if",
+      "position": [
+        1040,
+        1100
+      ],
+      "type": 2001,
+      "values": {}
+    },
+    {
+      "id": "mute_run",
+      "position": [
+        0,
+        1320
+      ],
+      "type": 17013,
+      "values": {
+        "Volume": 0.0
+      }
+    },
+    {
+      "id": "mute_frame",
+      "position": [
+        260,
+        1320
+      ],
+      "type": 14104,
+      "values": {
+        "Frame": 1
+      }
+    },
+    {
+      "id": "restart_update",
+      "position": [
+        520,
+        1320
+      ],
+      "type": 1002,
+      "values": {}
+    },
+    {
+      "id": "restart_pressed",
+      "position": [
+        780,
+        1320
+      ],
+      "type": 10005,
+      "values": {
+        "Action": "restart"
+      }
+    },
+    {
+      "id": "restart_if",
+      "position": [
+        1040,
+        1320
+      ],
+      "type": 2001,
+      "values": {}
+    },
+    {
+      "id": "restart_run",
+      "position": [
+        0,
+        1540
+      ],
+      "type": 17001,
+      "values": {
+        "Loop": true,
+        "Sound": "music",
+        "Voice": "music",
+        "Volume": 0.4
+      }
+    },
+    {
+      "id": "restart_frame",
+      "position": [
+        260,
+        1540
+      ],
+      "type": 14104,
+      "values": {
+        "Frame": 2
+      }
+    },
+    {
+      "id": "unmute",
+      "position": [
+        520,
+        1540
+      ],
+      "type": 17013,
+      "values": {
+        "Volume": 1.0
+      }
+    }
+  ],
+  "version": 1
+}

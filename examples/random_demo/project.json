@@ -1,0 +1,6 @@
+{
+  "graph": "graphs/gameplay.json",
+  "name": "Seeded random playground",
+  "scene": "scenes/main.json",
+  "version": 1
+}

@@ -1,0 +1,10 @@
+{
+  "assets": [
+    "assets/robot.gltf",
+    "assets/floor.gltf"
+  ],
+  "graph": "graphs/gameplay.json",
+  "name": "Overlap regions and Blockbench robot",
+  "scene": "scenes/main.json",
+  "version": 1
+}

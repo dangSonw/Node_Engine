@@ -1,0 +1,6 @@
+{
+  "graph": "graphs/gameplay.json",
+  "name": "Time scale playground",
+  "scene": "scenes/main.json",
+  "version": 1
+}

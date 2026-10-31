@@ -1,0 +1,18 @@
+{
+  "elements": [
+    {
+      "from": [
+        -8,
+        -8,
+        -8
+      ],
+      "name": "Light Floor",
+      "to": [
+        8,
+        8,
+        8
+      ],
+      "type": "cube"
+    }
+  ]
+}

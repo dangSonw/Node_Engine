@@ -1,0 +1,725 @@
+{
+  "links": [
+    {
+      "from": [
+        "start",
+        "Out"
+      ],
+      "to": [
+        "create",
+        "In"
+      ]
+    },
+    {
+      "from": [
+        "click",
+        "Out"
+      ],
+      "to": [
+        "store",
+        "In"
+      ]
+    },
+    {
+      "from": [
+        "score",
+        "Value"
+      ],
+      "to": [
+        "increment",
+        "A"
+      ]
+    },
+    {
+      "from": [
+        "increment",
+        "Value"
+      ],
+      "to": [
+        "store",
+        "Value"
+      ]
+    },
+    {
+      "from": [
+        "store",
+        "Out"
+      ],
+      "to": [
+        "text",
+        "In"
+      ]
+    },
+    {
+      "from": [
+        "text",
+        "Out"
+      ],
+      "to": [
+        "progress",
+        "In"
+      ]
+    },
+    {
+      "from": [
+        "score",
+        "Value"
+      ],
+      "to": [
+        "score_string",
+        "Value"
+      ]
+    },
+    {
+      "from": [
+        "score_string",
+        "Value"
+      ],
+      "to": [
+        "score_label",
+        "B"
+      ]
+    },
+    {
+      "from": [
+        "score_label",
+        "Value"
+      ],
+      "to": [
+        "text",
+        "Text"
+      ]
+    },
+    {
+      "from": [
+        "score",
+        "Value"
+      ],
+      "to": [
+        "portion",
+        "A"
+      ]
+    },
+    {
+      "from": [
+        "portion",
+        "Value"
+      ],
+      "to": [
+        "clamp",
+        "Value"
+      ]
+    },
+    {
+      "from": [
+        "clamp",
+        "Value"
+      ],
+      "to": [
+        "progress",
+        "Value"
+      ]
+    },
+    {
+      "from": [
+        "progress",
+        "Out"
+      ],
+      "to": [
+        "turn",
+        "In"
+      ]
+    },
+    {
+      "from": [
+        "submitted",
+        "Out"
+      ],
+      "to": [
+        "save_name",
+        "In"
+      ]
+    },
+    {
+      "from": [
+        "submitted",
+        "Value"
+      ],
+      "to": [
+        "save_name",
+        "Value"
+      ]
+    },
+    {
+      "from": [
+        "submitted",
+        "Value"
+      ],
+      "to": [
+        "welcome",
+        "B"
+      ]
+    },
+    {
+      "from": [
+        "save_name",
+        "Out"
+      ],
+      "to": [
+        "status",
+        "In"
+      ]
+    },
+    {
+      "from": [
+        "welcome",
+        "Value"
+      ],
+      "to": [
+        "status",
+        "Text"
+      ]
+    },
+    {
+      "from": [
+        "changed",
+        "Out"
+      ],
+      "to": [
+        "enable",
+        "In"
+      ]
+    },
+    {
+      "from": [
+        "changed",
+        "Checked"
+      ],
+      "to": [
+        "enable",
+        "Enabled"
+      ]
+    },
+    {
+      "from": [
+        "slider",
+        "Out"
+      ],
+      "to": [
+        "save_volume",
+        "In"
+      ]
+    },
+    {
+      "from": [
+        "volume",
+        "Value"
+      ],
+      "to": [
+        "save_volume",
+        "Value"
+      ]
+    },
+    {
+      "from": [
+        "update",
+        "Out"
+      ],
+      "to": [
+        "save_axis",
+        "In"
+      ]
+    },
+    {
+      "from": [
+        "axis",
+        "Value"
+      ],
+      "to": [
+        "save_axis",
+        "Value"
+      ]
+    },
+    {
+      "from": [
+        "save_axis",
+        "Out"
+      ],
+      "to": [
+        "move",
+        "In"
+      ]
+    },
+    {
+      "from": [
+        "axis",
+        "Value"
+      ],
+      "to": [
+        "distance",
+        "A"
+      ]
+    },
+    {
+      "from": [
+        "dt",
+        "Value"
+      ],
+      "to": [
+        "distance",
+        "B"
+      ]
+    },
+    {
+      "from": [
+        "distance",
+        "Value"
+      ],
+      "to": [
+        "direction",
+        "X"
+      ]
+    },
+    {
+      "from": [
+        "direction",
+        "Value"
+      ],
+      "to": [
+        "move",
+        "Delta"
+      ]
+    },
+    {
+      "from": [
+        "world_update",
+        "Out"
+      ],
+      "to": [
+        "world_branch",
+        "In"
+      ]
+    },
+    {
+      "from": [
+        "world_pressed",
+        "Value"
+      ],
+      "to": [
+        "world_branch",
+        "Condition"
+      ]
+    },
+    {
+      "from": [
+        "world_branch",
+        "True"
+      ],
+      "to": [
+        "world_save",
+        "In"
+      ]
+    },
+    {
+      "from": [
+        "world_count",
+        "Value"
+      ],
+      "to": [
+        "world_add",
+        "A"
+      ]
+    },
+    {
+      "from": [
+        "world_add",
+        "Value"
+      ],
+      "to": [
+        "world_save",
+        "Value"
+      ]
+    }
+  ],
+  "name": "HUD: Add point rotates robot; A/D move; Enter submits name",
+  "nodes": [
+    {
+      "id": "start",
+      "position": [
+        0,
+        0
+      ],
+      "type": 1001,
+      "values": {}
+    },
+    {
+      "id": "create",
+      "position": [
+        260,
+        0
+      ],
+      "type": 18001,
+      "values": {
+        "Template": "hud",
+        "Widget": "hud"
+      }
+    },
+    {
+      "id": "click",
+      "position": [
+        520,
+        0
+      ],
+      "type": 18101,
+      "values": {
+        "Element Filter": "add",
+        "Widget Filter": "hud"
+      }
+    },
+    {
+      "id": "score",
+      "position": [
+        780,
+        0
+      ],
+      "type": 3004,
+      "values": {
+        "Name": "score"
+      }
+    },
+    {
+      "id": "increment",
+      "position": [
+        1040,
+        0
+      ],
+      "type": 4001,
+      "values": {
+        "B": 1.0
+      }
+    },
+    {
+      "id": "store",
+      "position": [
+        1300,
+        0
+      ],
+      "type": 3005,
+      "values": {
+        "Name": "score"
+      }
+    },
+    {
+      "id": "text",
+      "position": [
+        0,
+        220
+      ],
+      "type": 18005,
+      "values": {
+        "Text": "Point added!"
+      }
+    },
+    {
+      "id": "score_string",
+      "position": [
+        260,
+        220
+      ],
+      "type": 3050,
+      "values": {}
+    },
+    {
+      "id": "score_label",
+      "position": [
+        520,
+        220
+      ],
+      "type": 3052,
+      "values": {
+        "A": "Score: "
+      }
+    },
+    {
+      "id": "portion",
+      "position": [
+        780,
+        220
+      ],
+      "type": 4004,
+      "values": {
+        "B": 10.0
+      }
+    },
+    {
+      "id": "clamp",
+      "position": [
+        1040,
+        220
+      ],
+      "type": 4007,
+      "values": {
+        "Max": 1.0,
+        "Min": 0.0
+      }
+    },
+    {
+      "id": "progress",
+      "position": [
+        1300,
+        220
+      ],
+      "type": 18007,
+      "values": {
+        "Element": "progress"
+      }
+    },
+    {
+      "id": "turn",
+      "position": [
+        0,
+        440
+      ],
+      "type": 9004,
+      "values": {
+        "Degrees": [
+          0,
+          30,
+          0
+        ]
+      }
+    },
+    {
+      "id": "submitted",
+      "position": [
+        260,
+        440
+      ],
+      "type": 18103,
+      "values": {
+        "Element Filter": "name",
+        "Widget Filter": "hud"
+      }
+    },
+    {
+      "id": "save_name",
+      "position": [
+        520,
+        440
+      ],
+      "type": 3113,
+      "values": {
+        "Name": "player_name"
+      }
+    },
+    {
+      "id": "welcome",
+      "position": [
+        780,
+        440
+      ],
+      "type": 3052,
+      "values": {
+        "A": "Welcome, "
+      }
+    },
+    {
+      "id": "status",
+      "position": [
+        1040,
+        440
+      ],
+      "type": 18005,
+      "values": {
+        "Element": "status"
+      }
+    },
+    {
+      "id": "changed",
+      "position": [
+        1300,
+        440
+      ],
+      "type": 18102,
+      "values": {
+        "Element Filter": "enabled",
+        "Widget Filter": "hud"
+      }
+    },
+    {
+      "id": "enable",
+      "position": [
+        0,
+        660
+      ],
+      "type": 18011,
+      "values": {
+        "Element": "add"
+      }
+    },
+    {
+      "id": "slider",
+      "position": [
+        260,
+        660
+      ],
+      "type": 18102,
+      "values": {
+        "Element Filter": "volume",
+        "Widget Filter": "hud"
+      }
+    },
+    {
+      "id": "volume",
+      "position": [
+        520,
+        660
+      ],
+      "type": 18008,
+      "values": {
+        "Element": "volume"
+      }
+    },
+    {
+      "id": "save_volume",
+      "position": [
+        780,
+        660
+      ],
+      "type": 3005,
+      "values": {
+        "Name": "volume"
+      }
+    },
+    {
+      "id": "update",
+      "position": [
+        1040,
+        660
+      ],
+      "type": 1002,
+      "values": {}
+    },
+    {
+      "id": "axis",
+      "position": [
+        1300,
+        660
+      ],
+      "type": 10007,
+      "values": {
+        "Axis": "horizontal"
+      }
+    },
+    {
+      "id": "save_axis",
+      "position": [
+        0,
+        880
+      ],
+      "type": 3005,
+      "values": {
+        "Name": "horizontal"
+      }
+    },
+    {
+      "id": "dt",
+      "position": [
+        260,
+        880
+      ],
+      "type": 5001,
+      "values": {}
+    },
+    {
+      "id": "distance",
+      "position": [
+        520,
+        880
+      ],
+      "type": 4003,
+      "values": {}
+    },
+    {
+      "id": "direction",
+      "position": [
+        780,
+        880
+      ],
+      "type": 4020,
+      "values": {}
+    },
+    {
+      "id": "move",
+      "position": [
+        1040,
+        880
+      ],
+      "type": 9003,
+      "values": {}
+    },
+    {
+      "id": "world_update",
+      "position": [
+        1300,
+        880
+      ],
+      "type": 1002,
+      "values": {}
+    },
+    {
+      "id": "world_pressed",
+      "position": [
+        0,
+        1100
+      ],
+      "type": 10005,
+      "values": {
+        "Action": "world_click"
+      }
+    },
+    {
+      "id": "world_branch",
+      "position": [
+        260,
+        1100
+      ],
+      "type": 2001,
+      "values": {}
+    },
+    {
+      "id": "world_count",
+      "position": [
+        520,
+        1100
+      ],
+      "type": 3004,
+      "values": {
+        "Name": "clicks_outside"
+      }
+    },
+    {
+      "id": "world_add",
+      "position": [
+        780,
+        1100
+      ],
+      "type": 4001,
+      "values": {
+        "B": 1.0
+      }
+    },
+    {
+      "id": "world_save",
+      "position": [
+        1040,
+        1100
+      ],
+      "type": 3005,
+      "values": {
+        "Name": "clicks_outside"
+      }
+    }
+  ],
+  "version": 1
+}

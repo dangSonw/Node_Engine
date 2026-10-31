@@ -1,0 +1,1179 @@
+{
+  "links": [
+    {
+      "from": [
+        "start",
+        "Out"
+      ],
+      "to": [
+        "storage",
+        "In"
+      ]
+    },
+    {
+      "from": [
+        "storage",
+        "Out"
+      ],
+      "to": [
+        "hud",
+        "In"
+      ]
+    },
+    {
+      "from": [
+        "hud",
+        "Out"
+      ],
+      "to": [
+        "idle",
+        "In"
+      ]
+    },
+    {
+      "from": [
+        "input_O",
+        "Out"
+      ],
+      "to": [
+        "if_O",
+        "In"
+      ]
+    },
+    {
+      "from": [
+        "key_O",
+        "Value"
+      ],
+      "to": [
+        "if_O",
+        "Condition"
+      ]
+    },
+    {
+      "from": [
+        "if_O",
+        "True"
+      ],
+      "to": [
+        "once",
+        "In"
+      ]
+    },
+    {
+      "from": [
+        "input_N",
+        "Out"
+      ],
+      "to": [
+        "if_N",
+        "In"
+      ]
+    },
+    {
+      "from": [
+        "key_N",
+        "Value"
+      ],
+      "to": [
+        "if_N",
+        "Condition"
+      ]
+    },
+    {
+      "from": [
+        "if_N",
+        "True"
+      ],
+      "to": [
+        "quota",
+        "In"
+      ]
+    },
+    {
+      "from": [
+        "input_G",
+        "Out"
+      ],
+      "to": [
+        "if_G",
+        "In"
+      ]
+    },
+    {
+      "from": [
+        "key_G",
+        "Value"
+      ],
+      "to": [
+        "if_G",
+        "Condition"
+      ]
+    },
+    {
+      "from": [
+        "if_G",
+        "True"
+      ],
+      "to": [
+        "gate",
+        "Toggle"
+      ]
+    },
+    {
+      "from": [
+        "input_F",
+        "Out"
+      ],
+      "to": [
+        "if_F",
+        "In"
+      ]
+    },
+    {
+      "from": [
+        "key_F",
+        "Value"
+      ],
+      "to": [
+        "if_F",
+        "Condition"
+      ]
+    },
+    {
+      "from": [
+        "if_F",
+        "True"
+      ],
+      "to": [
+        "flip",
+        "In"
+      ]
+    },
+    {
+      "from": [
+        "once",
+        "Out"
+      ],
+      "to": [
+        "lift",
+        "In"
+      ]
+    },
+    {
+      "from": [
+        "quota",
+        "Out"
+      ],
+      "to": [
+        "step",
+        "In"
+      ]
+    },
+    {
+      "from": [
+        "step",
+        "Out"
+      ],
+      "to": [
+        "used",
+        "In"
+      ]
+    },
+    {
+      "from": [
+        "quota",
+        "Counter"
+      ],
+      "to": [
+        "used",
+        "Value"
+      ]
+    },
+    {
+      "from": [
+        "z_drive",
+        "Out"
+      ],
+      "to": [
+        "gate",
+        "In"
+      ]
+    },
+    {
+      "from": [
+        "gate",
+        "Out"
+      ],
+      "to": [
+        "rotate",
+        "In"
+      ]
+    },
+    {
+      "from": [
+        "dt",
+        "Value"
+      ],
+      "to": [
+        "degrees",
+        "Scale"
+      ]
+    },
+    {
+      "from": [
+        "degrees",
+        "Value"
+      ],
+      "to": [
+        "rotate",
+        "Degrees"
+      ]
+    },
+    {
+      "from": [
+        "flip",
+        "A"
+      ],
+      "to": [
+        "scale_A",
+        "In"
+      ]
+    },
+    {
+      "from": [
+        "scale_A",
+        "Out"
+      ],
+      "to": [
+        "is_a_A",
+        "In"
+      ]
+    },
+    {
+      "from": [
+        "flip",
+        "Is A"
+      ],
+      "to": [
+        "is_a_A",
+        "Value"
+      ]
+    },
+    {
+      "from": [
+        "flip",
+        "B"
+      ],
+      "to": [
+        "scale_B",
+        "In"
+      ]
+    },
+    {
+      "from": [
+        "scale_B",
+        "Out"
+      ],
+      "to": [
+        "is_a_B",
+        "In"
+      ]
+    },
+    {
+      "from": [
+        "flip",
+        "Is A"
+      ],
+      "to": [
+        "is_a_B",
+        "Value"
+      ]
+    },
+    {
+      "from": [
+        "input_R_pose",
+        "Out"
+      ],
+      "to": [
+        "if_R_pose",
+        "In"
+      ]
+    },
+    {
+      "from": [
+        "key_R_pose",
+        "Value"
+      ],
+      "to": [
+        "if_R_pose",
+        "Condition"
+      ]
+    },
+    {
+      "from": [
+        "if_R_pose",
+        "True"
+      ],
+      "to": [
+        "reset_position",
+        "In"
+      ]
+    },
+    {
+      "from": [
+        "reset_position",
+        "Out"
+      ],
+      "to": [
+        "reset_rotation",
+        "In"
+      ]
+    },
+    {
+      "from": [
+        "reset_rotation",
+        "Out"
+      ],
+      "to": [
+        "reset_scale",
+        "In"
+      ]
+    },
+    {
+      "from": [
+        "reset_scale",
+        "Out"
+      ],
+      "to": [
+        "reset_used",
+        "In"
+      ]
+    },
+    {
+      "from": [
+        "reset_used",
+        "Out"
+      ],
+      "to": [
+        "reset_is_a",
+        "In"
+      ]
+    },
+    {
+      "from": [
+        "input_R_once",
+        "Out"
+      ],
+      "to": [
+        "if_R_once",
+        "In"
+      ]
+    },
+    {
+      "from": [
+        "key_R_once",
+        "Value"
+      ],
+      "to": [
+        "if_R_once",
+        "Condition"
+      ]
+    },
+    {
+      "from": [
+        "if_R_once",
+        "True"
+      ],
+      "to": [
+        "once",
+        "Reset"
+      ]
+    },
+    {
+      "from": [
+        "input_R_quota",
+        "Out"
+      ],
+      "to": [
+        "if_R_quota",
+        "In"
+      ]
+    },
+    {
+      "from": [
+        "key_R_quota",
+        "Value"
+      ],
+      "to": [
+        "if_R_quota",
+        "Condition"
+      ]
+    },
+    {
+      "from": [
+        "if_R_quota",
+        "True"
+      ],
+      "to": [
+        "quota",
+        "Reset"
+      ]
+    },
+    {
+      "from": [
+        "input_R_flip",
+        "Out"
+      ],
+      "to": [
+        "if_R_flip",
+        "In"
+      ]
+    },
+    {
+      "from": [
+        "key_R_flip",
+        "Value"
+      ],
+      "to": [
+        "if_R_flip",
+        "Condition"
+      ]
+    },
+    {
+      "from": [
+        "if_R_flip",
+        "True"
+      ],
+      "to": [
+        "flip",
+        "Reset"
+      ]
+    },
+    {
+      "from": [
+        "input_R_gate",
+        "Out"
+      ],
+      "to": [
+        "if_R_gate",
+        "In"
+      ]
+    },
+    {
+      "from": [
+        "key_R_gate",
+        "Value"
+      ],
+      "to": [
+        "if_R_gate",
+        "Condition"
+      ]
+    },
+    {
+      "from": [
+        "if_R_gate",
+        "True"
+      ],
+      "to": [
+        "gate",
+        "Close"
+      ]
+    },
+    {
+      "from": [
+        "input_S",
+        "Out"
+      ],
+      "to": [
+        "if_S",
+        "In"
+      ]
+    },
+    {
+      "from": [
+        "key_S",
+        "Value"
+      ],
+      "to": [
+        "if_S",
+        "Condition"
+      ]
+    },
+    {
+      "from": [
+        "if_S",
+        "True"
+      ],
+      "to": [
+        "action_S",
+        "In"
+      ]
+    },
+    {
+      "from": [
+        "input_L",
+        "Out"
+      ],
+      "to": [
+        "if_L",
+        "In"
+      ]
+    },
+    {
+      "from": [
+        "key_L",
+        "Value"
+      ],
+      "to": [
+        "if_L",
+        "Condition"
+      ]
+    },
+    {
+      "from": [
+        "if_L",
+        "True"
+      ],
+      "to": [
+        "action_L",
+        "In"
+      ]
+    }
+  ],
+  "name": "Persistent flow gates",
+  "nodes": [
+    {
+      "id": "start",
+      "position": [
+        0,
+        0
+      ],
+      "type": 1001,
+      "values": {}
+    },
+    {
+      "id": "storage",
+      "position": [
+        270,
+        0
+      ],
+      "type": 23001,
+      "values": {
+        "Game ID": "node-engine-stateful-flow-demo"
+      }
+    },
+    {
+      "id": "hud",
+      "position": [
+        540,
+        0
+      ],
+      "type": 18001,
+      "values": {}
+    },
+    {
+      "id": "idle",
+      "position": [
+        810,
+        0
+      ],
+      "type": 13002,
+      "values": {
+        "Clip": "Idle"
+      }
+    },
+    {
+      "id": "once",
+      "position": [
+        1080,
+        0
+      ],
+      "type": 2007,
+      "values": {
+        "Owner": "player"
+      }
+    },
+    {
+      "id": "input_O",
+      "position": [
+        1350,
+        0
+      ],
+      "type": 1002,
+      "values": {}
+    },
+    {
+      "id": "key_O",
+      "position": [
+        1620,
+        0
+      ],
+      "type": 10002,
+      "values": {
+        "Key": "O"
+      }
+    },
+    {
+      "id": "if_O",
+      "position": [
+        0,
+        220
+      ],
+      "type": 2001,
+      "values": {}
+    },
+    {
+      "id": "quota",
+      "position": [
+        270,
+        220
+      ],
+      "type": 2008,
+      "values": {
+        "N": 3,
+        "Owner": "player"
+      }
+    },
+    {
+      "id": "input_N",
+      "position": [
+        540,
+        220
+      ],
+      "type": 1002,
+      "values": {}
+    },
+    {
+      "id": "key_N",
+      "position": [
+        810,
+        220
+      ],
+      "type": 10002,
+      "values": {
+        "Key": "N"
+      }
+    },
+    {
+      "id": "if_N",
+      "position": [
+        1080,
+        220
+      ],
+      "type": 2001,
+      "values": {}
+    },
+    {
+      "id": "gate",
+      "position": [
+        1350,
+        220
+      ],
+      "type": 2009,
+      "values": {
+        "Owner": "player",
+        "Start Closed": true
+      }
+    },
+    {
+      "id": "input_G",
+      "position": [
+        1620,
+        220
+      ],
+      "type": 1002,
+      "values": {}
+    },
+    {
+      "id": "key_G",
+      "position": [
+        0,
+        440
+      ],
+      "type": 10002,
+      "values": {
+        "Key": "G"
+      }
+    },
+    {
+      "id": "if_G",
+      "position": [
+        270,
+        440
+      ],
+      "type": 2001,
+      "values": {}
+    },
+    {
+      "id": "flip",
+      "position": [
+        540,
+        440
+      ],
+      "type": 2010,
+      "values": {
+        "Owner": "player"
+      }
+    },
+    {
+      "id": "input_F",
+      "position": [
+        810,
+        440
+      ],
+      "type": 1002,
+      "values": {}
+    },
+    {
+      "id": "key_F",
+      "position": [
+        1080,
+        440
+      ],
+      "type": 10002,
+      "values": {
+        "Key": "F"
+      }
+    },
+    {
+      "id": "if_F",
+      "position": [
+        1350,
+        440
+      ],
+      "type": 2001,
+      "values": {}
+    },
+    {
+      "id": "lift",
+      "position": [
+        1620,
+        440
+      ],
+      "type": 9003,
+      "values": {
+        "Delta": [
+          0,
+          0.5,
+          0
+        ]
+      }
+    },
+    {
+      "id": "step",
+      "position": [
+        0,
+        660
+      ],
+      "type": 9003,
+      "values": {
+        "Delta": [
+          0.5,
+          0,
+          0
+        ]
+      }
+    },
+    {
+      "id": "used",
+      "position": [
+        270,
+        660
+      ],
+      "type": 3111,
+      "values": {
+        "Name": "used"
+      }
+    },
+    {
+      "id": "z_drive",
+      "position": [
+        540,
+        660
+      ],
+      "type": 1002,
+      "values": {}
+    },
+    {
+      "id": "rotate",
+      "position": [
+        810,
+        660
+      ],
+      "type": 9004,
+      "values": {}
+    },
+    {
+      "id": "dt",
+      "position": [
+        1080,
+        660
+      ],
+      "type": 5001,
+      "values": {}
+    },
+    {
+      "id": "degrees",
+      "position": [
+        1350,
+        660
+      ],
+      "type": 4022,
+      "values": {
+        "Vector": [
+          0,
+          90,
+          0
+        ]
+      }
+    },
+    {
+      "id": "scale_A",
+      "position": [
+        1620,
+        660
+      ],
+      "type": 9005,
+      "values": {
+        "Value": [
+          1.25,
+          1.25,
+          1.25
+        ]
+      }
+    },
+    {
+      "id": "is_a_A",
+      "position": [
+        0,
+        880
+      ],
+      "type": 3112,
+      "values": {
+        "Name": "is_a"
+      }
+    },
+    {
+      "id": "scale_B",
+      "position": [
+        270,
+        880
+      ],
+      "type": 9005,
+      "values": {
+        "Value": [
+          0.75,
+          0.75,
+          0.75
+        ]
+      }
+    },
+    {
+      "id": "is_a_B",
+      "position": [
+        540,
+        880
+      ],
+      "type": 3112,
+      "values": {
+        "Name": "is_a"
+      }
+    },
+    {
+      "id": "input_R_pose",
+      "position": [
+        810,
+        880
+      ],
+      "type": 1002,
+      "values": {}
+    },
+    {
+      "id": "key_R_pose",
+      "position": [
+        1080,
+        880
+      ],
+      "type": 10002,
+      "values": {
+        "Key": "R"
+      }
+    },
+    {
+      "id": "if_R_pose",
+      "position": [
+        1350,
+        880
+      ],
+      "type": 2001,
+      "values": {}
+    },
+    {
+      "id": "reset_position",
+      "position": [
+        1620,
+        880
+      ],
+      "type": 9002,
+      "values": {
+        "Value": [
+          0,
+          0,
+          0
+        ]
+      }
+    },
+    {
+      "id": "reset_rotation",
+      "position": [
+        0,
+        1100
+      ],
+      "type": 9007,
+      "values": {
+        "Value": [
+          0,
+          0,
+          0
+        ]
+      }
+    },
+    {
+      "id": "reset_scale",
+      "position": [
+        270,
+        1100
+      ],
+      "type": 9005,
+      "values": {
+        "Value": [
+          1,
+          1,
+          1
+        ]
+      }
+    },
+    {
+      "id": "reset_used",
+      "position": [
+        540,
+        1100
+      ],
+      "type": 3111,
+      "values": {
+        "Name": "used",
+        "Value": 0
+      }
+    },
+    {
+      "id": "reset_is_a",
+      "position": [
+        810,
+        1100
+      ],
+      "type": 3112,
+      "values": {
+        "Name": "is_a",
+        "Value": false
+      }
+    },
+    {
+      "id": "input_R_once",
+      "position": [
+        1080,
+        1100
+      ],
+      "type": 1002,
+      "values": {}
+    },
+    {
+      "id": "key_R_once",
+      "position": [
+        1350,
+        1100
+      ],
+      "type": 10002,
+      "values": {
+        "Key": "R"
+      }
+    },
+    {
+      "id": "if_R_once",
+      "position": [
+        1620,
+        1100
+      ],
+      "type": 2001,
+      "values": {}
+    },
+    {
+      "id": "input_R_quota",
+      "position": [
+        0,
+        1320
+      ],
+      "type": 1002,
+      "values": {}
+    },
+    {
+      "id": "key_R_quota",
+      "position": [
+        270,
+        1320
+      ],
+      "type": 10002,
+      "values": {
+        "Key": "R"
+      }
+    },
+    {
+      "id": "if_R_quota",
+      "position": [
+        540,
+        1320
+      ],
+      "type": 2001,
+      "values": {}
+    },
+    {
+      "id": "input_R_flip",
+      "position": [
+        810,
+        1320
+      ],
+      "type": 1002,
+      "values": {}
+    },
+    {
+      "id": "key_R_flip",
+      "position": [
+        1080,
+        1320
+      ],
+      "type": 10002,
+      "values": {
+        "Key": "R"
+      }
+    },
+    {
+      "id": "if_R_flip",
+      "position": [
+        1350,
+        1320
+      ],
+      "type": 2001,
+      "values": {}
+    },
+    {
+      "id": "input_R_gate",
+      "position": [
+        1620,
+        1320
+      ],
+      "type": 1002,
+      "values": {}
+    },
+    {
+      "id": "key_R_gate",
+      "position": [
+        0,
+        1540
+      ],
+      "type": 10002,
+      "values": {
+        "Key": "R"
+      }
+    },
+    {
+      "id": "if_R_gate",
+      "position": [
+        270,
+        1540
+      ],
+      "type": 2001,
+      "values": {}
+    },
+    {
+      "id": "input_S",
+      "position": [
+        540,
+        1540
+      ],
+      "type": 1002,
+      "values": {}
+    },
+    {
+      "id": "key_S",
+      "position": [
+        810,
+        1540
+      ],
+      "type": 10002,
+      "values": {
+        "Key": "S"
+      }
+    },
+    {
+      "id": "if_S",
+      "position": [
+        1080,
+        1540
+      ],
+      "type": 2001,
+      "values": {}
+    },
+    {
+      "id": "action_S",
+      "position": [
+        1350,
+        1540
+      ],
+      "type": 23016,
+      "values": {
+        "Slot": "gates"
+      }
+    },
+    {
+      "id": "input_L",
+      "position": [
+        1620,
+        1540
+      ],
+      "type": 1002,
+      "values": {}
+    },
+    {
+      "id": "key_L",
+      "position": [
+        0,
+        1760
+      ],
+      "type": 10002,
+      "values": {
+        "Key": "L"
+      }
+    },
+    {
+      "id": "if_L",
+      "position": [
+        270,
+        1760
+      ],
+      "type": 2001,
+      "values": {}
+    },
+    {
+      "id": "action_L",
+      "position": [
+        540,
+        1760
+      ],
+      "type": 23017,
+      "values": {
+        "Slot": "gates"
+      }
+    }
+  ],
+  "version": 1
+}

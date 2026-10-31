@@ -1,0 +1,2167 @@
+{
+  "links": [
+    {
+      "from": [
+        "start",
+        "Out"
+      ],
+      "to": [
+        "storage",
+        "In"
+      ]
+    },
+    {
+      "from": [
+        "storage",
+        "Out"
+      ],
+      "to": [
+        "hud",
+        "In"
+      ]
+    },
+    {
+      "from": [
+        "hud",
+        "Out"
+      ],
+      "to": [
+        "animation",
+        "In"
+      ]
+    },
+    {
+      "from": [
+        "animation",
+        "Out"
+      ],
+      "to": [
+        "start_position",
+        "In"
+      ]
+    },
+    {
+      "from": [
+        "position",
+        "Value"
+      ],
+      "to": [
+        "start_position",
+        "Value"
+      ]
+    },
+    {
+      "from": [
+        "update",
+        "Out"
+      ],
+      "to": [
+        "write_position",
+        "In"
+      ]
+    },
+    {
+      "from": [
+        "position",
+        "Value"
+      ],
+      "to": [
+        "write_position",
+        "Value"
+      ]
+    },
+    {
+      "from": [
+        "write_position",
+        "Out"
+      ],
+      "to": [
+        "write_delta",
+        "In"
+      ]
+    },
+    {
+      "from": [
+        "delta",
+        "Value"
+      ],
+      "to": [
+        "write_delta",
+        "Value"
+      ]
+    },
+    {
+      "from": [
+        "write_delta",
+        "Out"
+      ],
+      "to": [
+        "write_wheel",
+        "In"
+      ]
+    },
+    {
+      "from": [
+        "wheel",
+        "Value"
+      ],
+      "to": [
+        "write_wheel",
+        "Value"
+      ]
+    },
+    {
+      "from": [
+        "get_total_delta",
+        "Value"
+      ],
+      "to": [
+        "add_total_delta",
+        "A"
+      ]
+    },
+    {
+      "from": [
+        "delta",
+        "Value"
+      ],
+      "to": [
+        "add_total_delta",
+        "B"
+      ]
+    },
+    {
+      "from": [
+        "write_wheel",
+        "Out"
+      ],
+      "to": [
+        "write_total_delta",
+        "In"
+      ]
+    },
+    {
+      "from": [
+        "add_total_delta",
+        "Value"
+      ],
+      "to": [
+        "write_total_delta",
+        "Value"
+      ]
+    },
+    {
+      "from": [
+        "get_total_wheel",
+        "Value"
+      ],
+      "to": [
+        "add_total_wheel",
+        "A"
+      ]
+    },
+    {
+      "from": [
+        "wheel",
+        "Value"
+      ],
+      "to": [
+        "add_total_wheel",
+        "B"
+      ]
+    },
+    {
+      "from": [
+        "write_total_delta",
+        "Out"
+      ],
+      "to": [
+        "write_total_wheel",
+        "In"
+      ]
+    },
+    {
+      "from": [
+        "add_total_wheel",
+        "Value"
+      ],
+      "to": [
+        "write_total_wheel",
+        "Value"
+      ]
+    },
+    {
+      "from": [
+        "wheel",
+        "Value"
+      ],
+      "to": [
+        "wheel_y",
+        "A"
+      ]
+    },
+    {
+      "from": [
+        "wheel_y",
+        "Value"
+      ],
+      "to": [
+        "wheel_speed",
+        "A"
+      ]
+    },
+    {
+      "from": [
+        "wheel_speed",
+        "Value"
+      ],
+      "to": [
+        "wheel_move",
+        "Z"
+      ]
+    },
+    {
+      "from": [
+        "write_total_wheel",
+        "Out"
+      ],
+      "to": [
+        "move",
+        "In"
+      ]
+    },
+    {
+      "from": [
+        "wheel_move",
+        "Value"
+      ],
+      "to": [
+        "move",
+        "Delta"
+      ]
+    },
+    {
+      "from": [
+        "move",
+        "Out"
+      ],
+      "to": [
+        "drag_branch",
+        "In"
+      ]
+    },
+    {
+      "from": [
+        "drag_branch",
+        "True"
+      ],
+      "to": [
+        "rotate",
+        "In"
+      ]
+    },
+    {
+      "from": [
+        "delta",
+        "Value"
+      ],
+      "to": [
+        "dx",
+        "A"
+      ]
+    },
+    {
+      "from": [
+        "dx",
+        "Value"
+      ],
+      "to": [
+        "sx",
+        "A"
+      ]
+    },
+    {
+      "from": [
+        "delta",
+        "Value"
+      ],
+      "to": [
+        "dy",
+        "A"
+      ]
+    },
+    {
+      "from": [
+        "dy",
+        "Value"
+      ],
+      "to": [
+        "sy",
+        "A"
+      ]
+    },
+    {
+      "from": [
+        "sx",
+        "Value"
+      ],
+      "to": [
+        "degrees",
+        "Y"
+      ]
+    },
+    {
+      "from": [
+        "sy",
+        "Value"
+      ],
+      "to": [
+        "degrees",
+        "X"
+      ]
+    },
+    {
+      "from": [
+        "degrees",
+        "Value"
+      ],
+      "to": [
+        "rotate",
+        "Degrees"
+      ]
+    },
+    {
+      "from": [
+        "key_S",
+        "Out"
+      ],
+      "to": [
+        "save",
+        "In"
+      ]
+    },
+    {
+      "from": [
+        "key_L",
+        "Out"
+      ],
+      "to": [
+        "load",
+        "In"
+      ]
+    },
+    {
+      "from": [
+        "key_R",
+        "Out"
+      ],
+      "to": [
+        "reset_pos",
+        "In"
+      ]
+    },
+    {
+      "from": [
+        "reset_pos",
+        "Out"
+      ],
+      "to": [
+        "reset_rot",
+        "In"
+      ]
+    },
+    {
+      "from": [
+        "read_position",
+        "Value"
+      ],
+      "to": [
+        "position_display_x",
+        "A"
+      ]
+    },
+    {
+      "from": [
+        "position_display_x",
+        "Value"
+      ],
+      "to": [
+        "position_text_x",
+        "Value"
+      ]
+    },
+    {
+      "from": [
+        "read_position",
+        "Value"
+      ],
+      "to": [
+        "position_display_y",
+        "A"
+      ]
+    },
+    {
+      "from": [
+        "position_display_y",
+        "Value"
+      ],
+      "to": [
+        "position_text_y",
+        "Value"
+      ]
+    },
+    {
+      "from": [
+        "position_text_x",
+        "Value"
+      ],
+      "to": [
+        "position_comma",
+        "A"
+      ]
+    },
+    {
+      "from": [
+        "position_comma",
+        "Value"
+      ],
+      "to": [
+        "format_position",
+        "A"
+      ]
+    },
+    {
+      "from": [
+        "position_text_y",
+        "Value"
+      ],
+      "to": [
+        "format_position",
+        "B"
+      ]
+    },
+    {
+      "from": [
+        "late",
+        "Out"
+      ],
+      "to": [
+        "show_position",
+        "In"
+      ]
+    },
+    {
+      "from": [
+        "format_position",
+        "Value"
+      ],
+      "to": [
+        "show_position",
+        "Text"
+      ]
+    },
+    {
+      "from": [
+        "read_delta",
+        "Value"
+      ],
+      "to": [
+        "delta_display_x",
+        "A"
+      ]
+    },
+    {
+      "from": [
+        "delta_display_x",
+        "Value"
+      ],
+      "to": [
+        "delta_text_x",
+        "Value"
+      ]
+    },
+    {
+      "from": [
+        "read_delta",
+        "Value"
+      ],
+      "to": [
+        "delta_display_y",
+        "A"
+      ]
+    },
+    {
+      "from": [
+        "delta_display_y",
+        "Value"
+      ],
+      "to": [
+        "delta_text_y",
+        "Value"
+      ]
+    },
+    {
+      "from": [
+        "delta_text_x",
+        "Value"
+      ],
+      "to": [
+        "delta_comma",
+        "A"
+      ]
+    },
+    {
+      "from": [
+        "delta_comma",
+        "Value"
+      ],
+      "to": [
+        "format_delta",
+        "A"
+      ]
+    },
+    {
+      "from": [
+        "delta_text_y",
+        "Value"
+      ],
+      "to": [
+        "format_delta",
+        "B"
+      ]
+    },
+    {
+      "from": [
+        "show_position",
+        "Out"
+      ],
+      "to": [
+        "show_delta",
+        "In"
+      ]
+    },
+    {
+      "from": [
+        "format_delta",
+        "Value"
+      ],
+      "to": [
+        "show_delta",
+        "Text"
+      ]
+    },
+    {
+      "from": [
+        "read_wheel",
+        "Value"
+      ],
+      "to": [
+        "wheel_display_x",
+        "A"
+      ]
+    },
+    {
+      "from": [
+        "wheel_display_x",
+        "Value"
+      ],
+      "to": [
+        "wheel_text_x",
+        "Value"
+      ]
+    },
+    {
+      "from": [
+        "read_wheel",
+        "Value"
+      ],
+      "to": [
+        "wheel_display_y",
+        "A"
+      ]
+    },
+    {
+      "from": [
+        "wheel_display_y",
+        "Value"
+      ],
+      "to": [
+        "wheel_text_y",
+        "Value"
+      ]
+    },
+    {
+      "from": [
+        "wheel_text_x",
+        "Value"
+      ],
+      "to": [
+        "wheel_comma",
+        "A"
+      ]
+    },
+    {
+      "from": [
+        "wheel_comma",
+        "Value"
+      ],
+      "to": [
+        "format_wheel",
+        "A"
+      ]
+    },
+    {
+      "from": [
+        "wheel_text_y",
+        "Value"
+      ],
+      "to": [
+        "format_wheel",
+        "B"
+      ]
+    },
+    {
+      "from": [
+        "show_delta",
+        "Out"
+      ],
+      "to": [
+        "show_wheel",
+        "In"
+      ]
+    },
+    {
+      "from": [
+        "format_wheel",
+        "Value"
+      ],
+      "to": [
+        "show_wheel",
+        "Text"
+      ]
+    },
+    {
+      "from": [
+        "read_total_delta",
+        "Value"
+      ],
+      "to": [
+        "total_delta_display_x",
+        "A"
+      ]
+    },
+    {
+      "from": [
+        "total_delta_display_x",
+        "Value"
+      ],
+      "to": [
+        "total_delta_text_x",
+        "Value"
+      ]
+    },
+    {
+      "from": [
+        "read_total_delta",
+        "Value"
+      ],
+      "to": [
+        "total_delta_display_y",
+        "A"
+      ]
+    },
+    {
+      "from": [
+        "total_delta_display_y",
+        "Value"
+      ],
+      "to": [
+        "total_delta_text_y",
+        "Value"
+      ]
+    },
+    {
+      "from": [
+        "total_delta_text_x",
+        "Value"
+      ],
+      "to": [
+        "total_delta_comma",
+        "A"
+      ]
+    },
+    {
+      "from": [
+        "total_delta_comma",
+        "Value"
+      ],
+      "to": [
+        "format_total_delta",
+        "A"
+      ]
+    },
+    {
+      "from": [
+        "total_delta_text_y",
+        "Value"
+      ],
+      "to": [
+        "format_total_delta",
+        "B"
+      ]
+    },
+    {
+      "from": [
+        "show_wheel",
+        "Out"
+      ],
+      "to": [
+        "show_total_delta",
+        "In"
+      ]
+    },
+    {
+      "from": [
+        "format_total_delta",
+        "Value"
+      ],
+      "to": [
+        "show_total_delta",
+        "Text"
+      ]
+    },
+    {
+      "from": [
+        "read_total_wheel",
+        "Value"
+      ],
+      "to": [
+        "total_wheel_display_x",
+        "A"
+      ]
+    },
+    {
+      "from": [
+        "total_wheel_display_x",
+        "Value"
+      ],
+      "to": [
+        "total_wheel_text_x",
+        "Value"
+      ]
+    },
+    {
+      "from": [
+        "read_total_wheel",
+        "Value"
+      ],
+      "to": [
+        "total_wheel_display_y",
+        "A"
+      ]
+    },
+    {
+      "from": [
+        "total_wheel_display_y",
+        "Value"
+      ],
+      "to": [
+        "total_wheel_text_y",
+        "Value"
+      ]
+    },
+    {
+      "from": [
+        "total_wheel_text_x",
+        "Value"
+      ],
+      "to": [
+        "total_wheel_comma",
+        "A"
+      ]
+    },
+    {
+      "from": [
+        "total_wheel_comma",
+        "Value"
+      ],
+      "to": [
+        "format_total_wheel",
+        "A"
+      ]
+    },
+    {
+      "from": [
+        "total_wheel_text_y",
+        "Value"
+      ],
+      "to": [
+        "format_total_wheel",
+        "B"
+      ]
+    },
+    {
+      "from": [
+        "show_total_delta",
+        "Out"
+      ],
+      "to": [
+        "show_total_wheel",
+        "In"
+      ]
+    },
+    {
+      "from": [
+        "format_total_wheel",
+        "Value"
+      ],
+      "to": [
+        "show_total_wheel",
+        "Text"
+      ]
+    },
+    {
+      "from": [
+        "key_K",
+        "Out"
+      ],
+      "to": [
+        "cursor_K",
+        "In"
+      ]
+    },
+    {
+      "from": [
+        "cursor_K",
+        "Out"
+      ],
+      "to": [
+        "cursor_K_remember",
+        "In"
+      ]
+    },
+    {
+      "from": [
+        "key_U",
+        "Out"
+      ],
+      "to": [
+        "cursor_U",
+        "In"
+      ]
+    },
+    {
+      "from": [
+        "cursor_U",
+        "Out"
+      ],
+      "to": [
+        "cursor_U_remember",
+        "In"
+      ]
+    },
+    {
+      "from": [
+        "key_H",
+        "Out"
+      ],
+      "to": [
+        "cursor_H",
+        "In"
+      ]
+    },
+    {
+      "from": [
+        "cursor_H",
+        "Out"
+      ],
+      "to": [
+        "cursor_H_remember",
+        "In"
+      ]
+    },
+    {
+      "from": [
+        "key_V",
+        "Out"
+      ],
+      "to": [
+        "cursor_V",
+        "In"
+      ]
+    },
+    {
+      "from": [
+        "cursor_V",
+        "Out"
+      ],
+      "to": [
+        "cursor_V_remember",
+        "In"
+      ]
+    },
+    {
+      "from": [
+        "escape",
+        "Out"
+      ],
+      "to": [
+        "escape_unlock",
+        "In"
+      ]
+    },
+    {
+      "from": [
+        "escape_unlock",
+        "Out"
+      ],
+      "to": [
+        "escape_unlock_remember",
+        "In"
+      ]
+    },
+    {
+      "from": [
+        "escape_unlock_remember",
+        "Out"
+      ],
+      "to": [
+        "escape_show",
+        "In"
+      ]
+    },
+    {
+      "from": [
+        "escape_show",
+        "Out"
+      ],
+      "to": [
+        "escape_show_remember",
+        "In"
+      ]
+    },
+    {
+      "from": [
+        "drag",
+        "Value"
+      ],
+      "to": [
+        "rotate_condition",
+        "A"
+      ]
+    },
+    {
+      "from": [
+        "locked",
+        "Value"
+      ],
+      "to": [
+        "rotate_condition",
+        "B"
+      ]
+    },
+    {
+      "from": [
+        "rotate_condition",
+        "Value"
+      ],
+      "to": [
+        "drag_branch",
+        "Condition"
+      ]
+    },
+    {
+      "from": [
+        "hud_locked",
+        "Value"
+      ],
+      "to": [
+        "text_locked",
+        "Value"
+      ]
+    },
+    {
+      "from": [
+        "text_locked",
+        "Value"
+      ],
+      "to": [
+        "show_locked",
+        "Text"
+      ]
+    },
+    {
+      "from": [
+        "show_total_wheel",
+        "Out"
+      ],
+      "to": [
+        "show_locked",
+        "In"
+      ]
+    },
+    {
+      "from": [
+        "hud_visible",
+        "Value"
+      ],
+      "to": [
+        "text_visible",
+        "Value"
+      ]
+    },
+    {
+      "from": [
+        "text_visible",
+        "Value"
+      ],
+      "to": [
+        "show_visible",
+        "Text"
+      ]
+    },
+    {
+      "from": [
+        "show_locked",
+        "Out"
+      ],
+      "to": [
+        "show_visible",
+        "In"
+      ]
+    }
+  ],
+  "name": "Cursor lock and visibility",
+  "nodes": [
+    {
+      "id": "start",
+      "position": [
+        0,
+        0
+      ],
+      "type": 1001,
+      "values": {}
+    },
+    {
+      "id": "storage",
+      "position": [
+        280,
+        0
+      ],
+      "type": 23001,
+      "values": {
+        "Game ID": "node-engine-cursor-demo"
+      }
+    },
+    {
+      "id": "hud",
+      "position": [
+        560,
+        0
+      ],
+      "type": 18001,
+      "values": {}
+    },
+    {
+      "id": "animation",
+      "position": [
+        840,
+        0
+      ],
+      "type": 13002,
+      "values": {
+        "Clip": "Idle"
+      }
+    },
+    {
+      "id": "start_position",
+      "position": [
+        1120,
+        0
+      ],
+      "type": 3114,
+      "values": {
+        "Name": "start_position"
+      }
+    },
+    {
+      "id": "position",
+      "position": [
+        1400,
+        0
+      ],
+      "type": 10013,
+      "values": {}
+    },
+    {
+      "id": "delta",
+      "position": [
+        0,
+        270
+      ],
+      "type": 10014,
+      "values": {}
+    },
+    {
+      "id": "wheel",
+      "position": [
+        280,
+        270
+      ],
+      "type": 10015,
+      "values": {}
+    },
+    {
+      "id": "update",
+      "position": [
+        560,
+        270
+      ],
+      "type": 1002,
+      "values": {}
+    },
+    {
+      "id": "write_position",
+      "position": [
+        840,
+        270
+      ],
+      "type": 3114,
+      "values": {
+        "Name": "position"
+      }
+    },
+    {
+      "id": "write_delta",
+      "position": [
+        1120,
+        270
+      ],
+      "type": 3114,
+      "values": {
+        "Name": "delta"
+      }
+    },
+    {
+      "id": "write_wheel",
+      "position": [
+        1400,
+        270
+      ],
+      "type": 3114,
+      "values": {
+        "Name": "wheel"
+      }
+    },
+    {
+      "id": "get_total_delta",
+      "position": [
+        0,
+        540
+      ],
+      "type": 3104,
+      "values": {
+        "Name": "total_delta"
+      }
+    },
+    {
+      "id": "add_total_delta",
+      "position": [
+        280,
+        540
+      ],
+      "type": 4021,
+      "values": {}
+    },
+    {
+      "id": "write_total_delta",
+      "position": [
+        560,
+        540
+      ],
+      "type": 3114,
+      "values": {
+        "Name": "total_delta"
+      }
+    },
+    {
+      "id": "get_total_wheel",
+      "position": [
+        840,
+        540
+      ],
+      "type": 3104,
+      "values": {
+        "Name": "total_wheel"
+      }
+    },
+    {
+      "id": "add_total_wheel",
+      "position": [
+        1120,
+        540
+      ],
+      "type": 4021,
+      "values": {}
+    },
+    {
+      "id": "write_total_wheel",
+      "position": [
+        1400,
+        540
+      ],
+      "type": 3114,
+      "values": {
+        "Name": "total_wheel"
+      }
+    },
+    {
+      "id": "wheel_y",
+      "position": [
+        0,
+        810
+      ],
+      "type": 4025,
+      "values": {
+        "B": [
+          0,
+          1,
+          0
+        ]
+      }
+    },
+    {
+      "id": "wheel_speed",
+      "position": [
+        280,
+        810
+      ],
+      "type": 4003,
+      "values": {
+        "B": 0.15
+      }
+    },
+    {
+      "id": "wheel_move",
+      "position": [
+        560,
+        810
+      ],
+      "type": 4020,
+      "values": {}
+    },
+    {
+      "id": "move",
+      "position": [
+        840,
+        810
+      ],
+      "type": 9003,
+      "values": {}
+    },
+    {
+      "id": "drag",
+      "position": [
+        1120,
+        810
+      ],
+      "type": 10001,
+      "values": {
+        "Key": "MouseLeft"
+      }
+    },
+    {
+      "id": "drag_branch",
+      "position": [
+        1400,
+        810
+      ],
+      "type": 2001,
+      "values": {}
+    },
+    {
+      "id": "rotate",
+      "position": [
+        0,
+        1080
+      ],
+      "type": 9004,
+      "values": {}
+    },
+    {
+      "id": "dx",
+      "position": [
+        280,
+        1080
+      ],
+      "type": 4025,
+      "values": {
+        "B": [
+          1,
+          0,
+          0
+        ]
+      }
+    },
+    {
+      "id": "sx",
+      "position": [
+        560,
+        1080
+      ],
+      "type": 4003,
+      "values": {
+        "B": 0.5
+      }
+    },
+    {
+      "id": "dy",
+      "position": [
+        840,
+        1080
+      ],
+      "type": 4025,
+      "values": {
+        "B": [
+          0,
+          1,
+          0
+        ]
+      }
+    },
+    {
+      "id": "sy",
+      "position": [
+        1120,
+        1080
+      ],
+      "type": 4003,
+      "values": {
+        "B": 0.5
+      }
+    },
+    {
+      "id": "degrees",
+      "position": [
+        1400,
+        1080
+      ],
+      "type": 4020,
+      "values": {}
+    },
+    {
+      "id": "key_S",
+      "position": [
+        0,
+        1350
+      ],
+      "type": 10008,
+      "values": {
+        "Filter": "S"
+      }
+    },
+    {
+      "id": "save",
+      "position": [
+        280,
+        1350
+      ],
+      "type": 23016,
+      "values": {
+        "Slot": "cursor"
+      }
+    },
+    {
+      "id": "key_L",
+      "position": [
+        560,
+        1350
+      ],
+      "type": 10008,
+      "values": {
+        "Filter": "L"
+      }
+    },
+    {
+      "id": "load",
+      "position": [
+        840,
+        1350
+      ],
+      "type": 23017,
+      "values": {
+        "Slot": "cursor"
+      }
+    },
+    {
+      "id": "key_R",
+      "position": [
+        1120,
+        1350
+      ],
+      "type": 10008,
+      "values": {
+        "Filter": "R"
+      }
+    },
+    {
+      "id": "reset_pos",
+      "position": [
+        1400,
+        1350
+      ],
+      "type": 9002,
+      "values": {}
+    },
+    {
+      "id": "reset_rot",
+      "position": [
+        0,
+        1620
+      ],
+      "type": 9007,
+      "values": {
+        "Value": [
+          0,
+          0,
+          0
+        ]
+      }
+    },
+    {
+      "id": "late",
+      "position": [
+        280,
+        1620
+      ],
+      "type": 1005,
+      "values": {}
+    },
+    {
+      "id": "read_position",
+      "position": [
+        560,
+        1620
+      ],
+      "type": 3104,
+      "values": {
+        "Name": "position"
+      }
+    },
+    {
+      "id": "position_display_x",
+      "position": [
+        840,
+        1620
+      ],
+      "type": 4025,
+      "values": {
+        "B": [
+          1,
+          0,
+          0
+        ]
+      }
+    },
+    {
+      "id": "position_text_x",
+      "position": [
+        1120,
+        1620
+      ],
+      "type": 3050,
+      "values": {}
+    },
+    {
+      "id": "position_display_y",
+      "position": [
+        1400,
+        1620
+      ],
+      "type": 4025,
+      "values": {
+        "B": [
+          0,
+          1,
+          0
+        ]
+      }
+    },
+    {
+      "id": "position_text_y",
+      "position": [
+        0,
+        1890
+      ],
+      "type": 3050,
+      "values": {}
+    },
+    {
+      "id": "position_comma",
+      "position": [
+        280,
+        1890
+      ],
+      "type": 3052,
+      "values": {
+        "B": ", "
+      }
+    },
+    {
+      "id": "format_position",
+      "position": [
+        560,
+        1890
+      ],
+      "type": 3052,
+      "values": {}
+    },
+    {
+      "id": "show_position",
+      "position": [
+        840,
+        1890
+      ],
+      "type": 18005,
+      "values": {
+        "Element": "position"
+      }
+    },
+    {
+      "id": "read_delta",
+      "position": [
+        1120,
+        1890
+      ],
+      "type": 3104,
+      "values": {
+        "Name": "delta"
+      }
+    },
+    {
+      "id": "delta_display_x",
+      "position": [
+        1400,
+        1890
+      ],
+      "type": 4025,
+      "values": {
+        "B": [
+          1,
+          0,
+          0
+        ]
+      }
+    },
+    {
+      "id": "delta_text_x",
+      "position": [
+        0,
+        2160
+      ],
+      "type": 3050,
+      "values": {}
+    },
+    {
+      "id": "delta_display_y",
+      "position": [
+        280,
+        2160
+      ],
+      "type": 4025,
+      "values": {
+        "B": [
+          0,
+          1,
+          0
+        ]
+      }
+    },
+    {
+      "id": "delta_text_y",
+      "position": [
+        560,
+        2160
+      ],
+      "type": 3050,
+      "values": {}
+    },
+    {
+      "id": "delta_comma",
+      "position": [
+        840,
+        2160
+      ],
+      "type": 3052,
+      "values": {
+        "B": ", "
+      }
+    },
+    {
+      "id": "format_delta",
+      "position": [
+        1120,
+        2160
+      ],
+      "type": 3052,
+      "values": {}
+    },
+    {
+      "id": "show_delta",
+      "position": [
+        1400,
+        2160
+      ],
+      "type": 18005,
+      "values": {
+        "Element": "delta"
+      }
+    },
+    {
+      "id": "read_wheel",
+      "position": [
+        0,
+        2430
+      ],
+      "type": 3104,
+      "values": {
+        "Name": "wheel"
+      }
+    },
+    {
+      "id": "wheel_display_x",
+      "position": [
+        280,
+        2430
+      ],
+      "type": 4025,
+      "values": {
+        "B": [
+          1,
+          0,
+          0
+        ]
+      }
+    },
+    {
+      "id": "wheel_text_x",
+      "position": [
+        560,
+        2430
+      ],
+      "type": 3050,
+      "values": {}
+    },
+    {
+      "id": "wheel_display_y",
+      "position": [
+        840,
+        2430
+      ],
+      "type": 4025,
+      "values": {
+        "B": [
+          0,
+          1,
+          0
+        ]
+      }
+    },
+    {
+      "id": "wheel_text_y",
+      "position": [
+        1120,
+        2430
+      ],
+      "type": 3050,
+      "values": {}
+    },
+    {
+      "id": "wheel_comma",
+      "position": [
+        1400,
+        2430
+      ],
+      "type": 3052,
+      "values": {
+        "B": ", "
+      }
+    },
+    {
+      "id": "format_wheel",
+      "position": [
+        0,
+        2700
+      ],
+      "type": 3052,
+      "values": {}
+    },
+    {
+      "id": "show_wheel",
+      "position": [
+        280,
+        2700
+      ],
+      "type": 18005,
+      "values": {
+        "Element": "wheel"
+      }
+    },
+    {
+      "id": "read_total_delta",
+      "position": [
+        560,
+        2700
+      ],
+      "type": 3104,
+      "values": {
+        "Name": "total_delta"
+      }
+    },
+    {
+      "id": "total_delta_display_x",
+      "position": [
+        840,
+        2700
+      ],
+      "type": 4025,
+      "values": {
+        "B": [
+          1,
+          0,
+          0
+        ]
+      }
+    },
+    {
+      "id": "total_delta_text_x",
+      "position": [
+        1120,
+        2700
+      ],
+      "type": 3050,
+      "values": {}
+    },
+    {
+      "id": "total_delta_display_y",
+      "position": [
+        1400,
+        2700
+      ],
+      "type": 4025,
+      "values": {
+        "B": [
+          0,
+          1,
+          0
+        ]
+      }
+    },
+    {
+      "id": "total_delta_text_y",
+      "position": [
+        0,
+        2970
+      ],
+      "type": 3050,
+      "values": {}
+    },
+    {
+      "id": "total_delta_comma",
+      "position": [
+        280,
+        2970
+      ],
+      "type": 3052,
+      "values": {
+        "B": ", "
+      }
+    },
+    {
+      "id": "format_total_delta",
+      "position": [
+        560,
+        2970
+      ],
+      "type": 3052,
+      "values": {}
+    },
+    {
+      "id": "show_total_delta",
+      "position": [
+        840,
+        2970
+      ],
+      "type": 18005,
+      "values": {
+        "Element": "total_delta"
+      }
+    },
+    {
+      "id": "read_total_wheel",
+      "position": [
+        1120,
+        2970
+      ],
+      "type": 3104,
+      "values": {
+        "Name": "total_wheel"
+      }
+    },
+    {
+      "id": "total_wheel_display_x",
+      "position": [
+        1400,
+        2970
+      ],
+      "type": 4025,
+      "values": {
+        "B": [
+          1,
+          0,
+          0
+        ]
+      }
+    },
+    {
+      "id": "total_wheel_text_x",
+      "position": [
+        0,
+        3240
+      ],
+      "type": 3050,
+      "values": {}
+    },
+    {
+      "id": "total_wheel_display_y",
+      "position": [
+        280,
+        3240
+      ],
+      "type": 4025,
+      "values": {
+        "B": [
+          0,
+          1,
+          0
+        ]
+      }
+    },
+    {
+      "id": "total_wheel_text_y",
+      "position": [
+        560,
+        3240
+      ],
+      "type": 3050,
+      "values": {}
+    },
+    {
+      "id": "total_wheel_comma",
+      "position": [
+        840,
+        3240
+      ],
+      "type": 3052,
+      "values": {
+        "B": ", "
+      }
+    },
+    {
+      "id": "format_total_wheel",
+      "position": [
+        1120,
+        3240
+      ],
+      "type": 3052,
+      "values": {}
+    },
+    {
+      "id": "show_total_wheel",
+      "position": [
+        1400,
+        3240
+      ],
+      "type": 18005,
+      "values": {
+        "Element": "total_wheel"
+      }
+    },
+    {
+      "id": "key_K",
+      "position": [
+        0,
+        3510
+      ],
+      "type": 10008,
+      "values": {
+        "Filter": "K"
+      }
+    },
+    {
+      "id": "cursor_K",
+      "position": [
+        280,
+        3510
+      ],
+      "type": 10017,
+      "values": {
+        "Locked": true
+      }
+    },
+    {
+      "id": "cursor_K_remember",
+      "position": [
+        560,
+        3510
+      ],
+      "type": 3112,
+      "values": {
+        "Name": "locked",
+        "Value": true
+      }
+    },
+    {
+      "id": "key_U",
+      "position": [
+        840,
+        3510
+      ],
+      "type": 10008,
+      "values": {
+        "Filter": "U"
+      }
+    },
+    {
+      "id": "cursor_U",
+      "position": [
+        1120,
+        3510
+      ],
+      "type": 10017,
+      "values": {
+        "Locked": false
+      }
+    },
+    {
+      "id": "cursor_U_remember",
+      "position": [
+        1400,
+        3510
+      ],
+      "type": 3112,
+      "values": {
+        "Name": "locked",
+        "Value": false
+      }
+    },
+    {
+      "id": "key_H",
+      "position": [
+        0,
+        3780
+      ],
+      "type": 10008,
+      "values": {
+        "Filter": "H"
+      }
+    },
+    {
+      "id": "cursor_H",
+      "position": [
+        280,
+        3780
+      ],
+      "type": 10016,
+      "values": {
+        "Visible": false
+      }
+    },
+    {
+      "id": "cursor_H_remember",
+      "position": [
+        560,
+        3780
+      ],
+      "type": 3112,
+      "values": {
+        "Name": "visible",
+        "Value": false
+      }
+    },
+    {
+      "id": "key_V",
+      "position": [
+        840,
+        3780
+      ],
+      "type": 10008,
+      "values": {
+        "Filter": "V"
+      }
+    },
+    {
+      "id": "cursor_V",
+      "position": [
+        1120,
+        3780
+      ],
+      "type": 10016,
+      "values": {
+        "Visible": true
+      }
+    },
+    {
+      "id": "cursor_V_remember",
+      "position": [
+        1400,
+        3780
+      ],
+      "type": 3112,
+      "values": {
+        "Name": "visible",
+        "Value": true
+      }
+    },
+    {
+      "id": "escape",
+      "position": [
+        0,
+        4050
+      ],
+      "type": 10008,
+      "values": {
+        "Filter": "Escape"
+      }
+    },
+    {
+      "id": "escape_unlock",
+      "position": [
+        280,
+        4050
+      ],
+      "type": 10017,
+      "values": {
+        "Locked": false
+      }
+    },
+    {
+      "id": "escape_unlock_remember",
+      "position": [
+        560,
+        4050
+      ],
+      "type": 3112,
+      "values": {
+        "Name": "locked",
+        "Value": false
+      }
+    },
+    {
+      "id": "escape_show",
+      "position": [
+        840,
+        4050
+      ],
+      "type": 10016,
+      "values": {
+        "Visible": true
+      }
+    },
+    {
+      "id": "escape_show_remember",
+      "position": [
+        1120,
+        4050
+      ],
+      "type": 3112,
+      "values": {
+        "Name": "visible",
+        "Value": true
+      }
+    },
+    {
+      "id": "locked",
+      "position": [
+        1400,
+        4050
+      ],
+      "type": 3102,
+      "values": {
+        "Name": "locked"
+      }
+    },
+    {
+      "id": "rotate_condition",
+      "position": [
+        0,
+        4320
+      ],
+      "type": 4016,
+      "values": {}
+    },
+    {
+      "id": "hud_locked",
+      "position": [
+        280,
+        4320
+      ],
+      "type": 3102,
+      "values": {
+        "Name": "locked"
+      }
+    },
+    {
+      "id": "text_locked",
+      "position": [
+        560,
+        4320
+      ],
+      "type": 3054,
+      "values": {}
+    },
+    {
+      "id": "show_locked",
+      "position": [
+        840,
+        4320
+      ],
+      "type": 18005,
+      "values": {
+        "Element": "locked"
+      }
+    },
+    {
+      "id": "hud_visible",
+      "position": [
+        1120,
+        4320
+      ],
+      "type": 3102,
+      "values": {
+        "Name": "visible"
+      }
+    },
+    {
+      "id": "text_visible",
+      "position": [
+        1400,
+        4320
+      ],
+      "type": 3054,
+      "values": {}
+    },
+    {
+      "id": "show_visible",
+      "position": [
+        0,
+        4590
+      ],
+      "type": 18005,
+      "values": {
+        "Element": "visible"
+      }
+    }
+  ],
+  "version": 1
+}

@@ -1,0 +1,55 @@
+{
+  "events": [
+    {
+      "button": "Space",
+      "down": true,
+      "frame": 0
+    },
+    {
+      "button": "Space",
+      "down": false,
+      "frame": 1
+    },
+    {
+      "button": "Space",
+      "down": true,
+      "frame": 40
+    },
+    {
+      "button": "Space",
+      "down": false,
+      "frame": 41
+    },
+    {
+      "button": "Space",
+      "down": true,
+      "frame": 80
+    },
+    {
+      "button": "Space",
+      "down": false,
+      "frame": 81
+    },
+    {
+      "button": "Space",
+      "down": true,
+      "frame": 120
+    },
+    {
+      "button": "Space",
+      "down": false,
+      "frame": 121
+    },
+    {
+      "button": "Space",
+      "down": true,
+      "frame": 160
+    },
+    {
+      "button": "Space",
+      "down": false,
+      "frame": 161
+    }
+  ],
+  "version": 1
+}

@@ -1,0 +1,30 @@
+{
+  "assets": [
+    "assets/bird.png",
+    "assets/pipe.png",
+    "assets/sky.png",
+    "assets/ground.png"
+  ],
+  "editor": {
+    "node_workflow": "2d"
+  },
+  "engine": {
+    "created_with": "0.1.0",
+    "last_saved_with": "0.1.0",
+    "minimum_version": "0.1.0"
+  },
+  "entry_scene": "main",
+  "format": "NodeEngine.Project",
+  "format_version": 1,
+  "name": "Flappy Bird",
+  "project_id": "3a5ff3d0-74b8-47fb-8d85-4cd7aa821f23",
+  "scenes": [
+    {
+      "graph": "graphs/gameplay.json",
+      "id": "main",
+      "name": "Main",
+      "scene": "scenes/main.json"
+    }
+  ],
+  "version": 2
+}

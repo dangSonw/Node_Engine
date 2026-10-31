@@ -1,0 +1,108 @@
+{
+  "active_camera": "camera",
+  "entities": [
+    {
+      "id": "player",
+      "mesh": "assets/robot.gltf",
+      "name": "Random position robot",
+      "position": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "rotation": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "scale": [
+        1.0,
+        1.0,
+        1.0
+      ]
+    },
+    {
+      "id": "bonus",
+      "mesh": "assets/robot.gltf",
+      "name": "Bonus robot",
+      "position": [
+        2.4,
+        0,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "scale": [
+        0.55,
+        0.55,
+        0.55
+      ],
+      "visible": false
+    },
+    {
+      "id": "direction",
+      "mesh": "assets/robot.gltf",
+      "name": "Random direction marker",
+      "position": [
+        0,
+        0,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "scale": [
+        0.24,
+        0.24,
+        0.24
+      ],
+      "visible": false
+    },
+    {
+      "camera": {
+        "far": 1000.0,
+        "fov": 60.0,
+        "near": 0.1,
+        "projection": "perspective",
+        "size": 10.0
+      },
+      "id": "camera",
+      "name": "Camera",
+      "position": [
+        0,
+        1,
+        7
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ]
+    }
+  ],
+  "ui_assets": [
+    {
+      "id": "hud",
+      "name": "HUD",
+      "rml": "<rml><head><style>body {width:100%;height:100%;font-family:node-ui;font-size:14px;color:#ffffff;pointer-events:none;}\n    #help {position:absolute;left:8px;top:8px;padding:8px;width:92%;max-width:440px;box-sizing:border-box;background-color:#171e32dd;}</style></head>\n    <body><div id=\"help\">Seeded random playground (seed 42)<br/>\n    Space: new position, dice roll, 25% bonus robot<br/>\n    R: reset seed / S: save / L: load<br/>Dice: <span id=\"roll\">0</span><br/>\n    Random item: <span id=\"item\">-</span><br/>\n    Weighted loot (6:3:1): <span id=\"loot\">-</span><br/>\n    Shuffled deck: <span id=\"deck\">-</span><br/>\n    Small robot: random unit direction x 1.8</div></body></rml>",
+      "type": "ui",
+      "version": 1
+    }
+  ],
+  "variables": {
+    "roll": {
+      "type": "int",
+      "value": 0
+    }
+  }
+}

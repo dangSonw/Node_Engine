@@ -1,0 +1,416 @@
+{
+  "functions": [
+    {
+      "graph": {
+        "links": [
+          {
+            "from": [
+              "entry",
+              "Speed"
+            ],
+            "to": [
+              "multiply",
+              "A"
+            ]
+          },
+          {
+            "from": [
+              "entry",
+              "Seconds"
+            ],
+            "to": [
+              "multiply",
+              "B"
+            ]
+          },
+          {
+            "from": [
+              "multiply",
+              "Value"
+            ],
+            "to": [
+              "degrees",
+              "Y"
+            ]
+          },
+          {
+            "from": [
+              "degrees",
+              "Value"
+            ],
+            "to": [
+              "return",
+              "Degrees"
+            ]
+          }
+        ],
+        "name": "Rotation Delta",
+        "nodes": [
+          {
+            "id": "entry",
+            "position": [
+              0,
+              0
+            ],
+            "type": 6001,
+            "values": {}
+          },
+          {
+            "id": "multiply",
+            "position": [
+              280,
+              40
+            ],
+            "type": 4003,
+            "values": {}
+          },
+          {
+            "id": "degrees",
+            "position": [
+              540,
+              0
+            ],
+            "type": 4020,
+            "values": {}
+          },
+          {
+            "id": "return",
+            "position": [
+              800,
+              0
+            ],
+            "type": 6002,
+            "values": {}
+          }
+        ],
+        "version": 1
+      },
+      "id": 1000001,
+      "inputs": [
+        {
+          "name": "Speed",
+          "type": "float"
+        },
+        {
+          "name": "Seconds",
+          "type": "float"
+        }
+      ],
+      "name": "Rotation Delta",
+      "outputs": [
+        {
+          "name": "Degrees",
+          "type": "vec3"
+        }
+      ],
+      "pure": true
+    },
+    {
+      "graph": {
+        "links": [
+          {
+            "from": [
+              "entry",
+              "Out"
+            ],
+            "to": [
+              "rotate",
+              "In"
+            ]
+          },
+          {
+            "from": [
+              "entry",
+              "Target"
+            ],
+            "to": [
+              "rotate",
+              "Entity"
+            ]
+          },
+          {
+            "from": [
+              "entry",
+              "Target"
+            ],
+            "to": [
+              "rotation",
+              "Entity"
+            ]
+          },
+          {
+            "from": [
+              "entry",
+              "Speed"
+            ],
+            "to": [
+              "delta",
+              "Speed"
+            ]
+          },
+          {
+            "from": [
+              "entry",
+              "Seconds"
+            ],
+            "to": [
+              "delta",
+              "Seconds"
+            ]
+          },
+          {
+            "from": [
+              "delta",
+              "Degrees"
+            ],
+            "to": [
+              "rotate",
+              "Degrees"
+            ]
+          },
+          {
+            "from": [
+              "rotate",
+              "Out"
+            ],
+            "to": [
+              "return",
+              "In"
+            ]
+          },
+          {
+            "from": [
+              "rotation",
+              "Value"
+            ],
+            "to": [
+              "return",
+              "Rotation"
+            ]
+          }
+        ],
+        "name": "Spin Robot",
+        "nodes": [
+          {
+            "id": "entry",
+            "position": [
+              0,
+              0
+            ],
+            "type": 6001,
+            "values": {}
+          },
+          {
+            "id": "delta",
+            "position": [
+              260,
+              200
+            ],
+            "type": 1000001,
+            "values": {}
+          },
+          {
+            "id": "rotate",
+            "position": [
+              520,
+              0
+            ],
+            "type": 9004,
+            "values": {}
+          },
+          {
+            "id": "rotation",
+            "position": [
+              520,
+              230
+            ],
+            "type": 9006,
+            "values": {}
+          },
+          {
+            "id": "return",
+            "position": [
+              800,
+              0
+            ],
+            "type": 6002,
+            "values": {}
+          }
+        ],
+        "version": 1
+      },
+      "id": 1000002,
+      "inputs": [
+        {
+          "name": "Target",
+          "type": "entity"
+        },
+        {
+          "name": "Speed",
+          "type": "float"
+        },
+        {
+          "name": "Seconds",
+          "type": "float"
+        }
+      ],
+      "name": "Spin Robot",
+      "outputs": [
+        {
+          "name": "Rotation",
+          "type": "vec3"
+        }
+      ],
+      "pure": false
+    }
+  ],
+  "links": [
+    {
+      "from": [
+        "start",
+        "Out"
+      ],
+      "to": [
+        "log",
+        "In"
+      ]
+    },
+    {
+      "from": [
+        "update",
+        "Out"
+      ],
+      "to": [
+        "left",
+        "In"
+      ]
+    },
+    {
+      "from": [
+        "left",
+        "Out"
+      ],
+      "to": [
+        "right",
+        "In"
+      ]
+    },
+    {
+      "from": [
+        "right",
+        "Out"
+      ],
+      "to": [
+        "save",
+        "In"
+      ]
+    },
+    {
+      "from": [
+        "left",
+        "Rotation"
+      ],
+      "to": [
+        "save",
+        "Value"
+      ]
+    },
+    {
+      "from": [
+        "dt",
+        "Value"
+      ],
+      "to": [
+        "left",
+        "Seconds"
+      ]
+    },
+    {
+      "from": [
+        "dt",
+        "Value"
+      ],
+      "to": [
+        "right",
+        "Seconds"
+      ]
+    }
+  ],
+  "name": "Reusable robot functions",
+  "nodes": [
+    {
+      "id": "start",
+      "position": [
+        0,
+        -200
+      ],
+      "type": 1001,
+      "values": {}
+    },
+    {
+      "id": "log",
+      "position": [
+        300,
+        -200
+      ],
+      "type": 27001,
+      "values": {
+        "Message": "Hai robot dùng chung function Spin Robot"
+      }
+    },
+    {
+      "id": "update",
+      "position": [
+        0,
+        40
+      ],
+      "type": 1002,
+      "values": {}
+    },
+    {
+      "id": "dt",
+      "position": [
+        0,
+        230
+      ],
+      "type": 5001,
+      "values": {}
+    },
+    {
+      "id": "left",
+      "position": [
+        300,
+        0
+      ],
+      "type": 1000002,
+      "values": {
+        "Speed": 45,
+        "Target": "player"
+      }
+    },
+    {
+      "id": "right",
+      "position": [
+        610,
+        0
+      ],
+      "type": 1000002,
+      "values": {
+        "Speed": -90,
+        "Target": "partner"
+      }
+    },
+    {
+      "id": "save",
+      "position": [
+        920,
+        0
+      ],
+      "type": 3114,
+      "values": {
+        "Name": "left_rotation"
+      }
+    }
+  ],
+  "version": 1
+}

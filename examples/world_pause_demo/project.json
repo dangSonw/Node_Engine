@@ -1,0 +1,6 @@
+{
+  "graph": "graphs/gameplay.json",
+  "name": "World pause playground",
+  "scene": "scenes/main.json",
+  "version": 1
+}

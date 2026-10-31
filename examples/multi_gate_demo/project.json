@@ -1,0 +1,6 @@
+{
+  "graph": "graphs/gameplay.json",
+  "name": "Multi Gate robot tour",
+  "scene": "scenes/main.json",
+  "version": 1
+}

@@ -1,0 +1,1139 @@
+{
+  "links": [
+    {
+      "from": [
+        "score",
+        "Value"
+      ],
+      "to": [
+        "format",
+        "Value"
+      ]
+    },
+    {
+      "from": [
+        "format",
+        "Value"
+      ],
+      "to": [
+        "label",
+        "B"
+      ]
+    },
+    {
+      "from": [
+        "start",
+        "Out"
+      ],
+      "to": [
+        "widget",
+        "In"
+      ]
+    },
+    {
+      "from": [
+        "widget",
+        "Out"
+      ],
+      "to": [
+        "open",
+        "In"
+      ]
+    },
+    {
+      "from": [
+        "open",
+        "Out"
+      ],
+      "to": [
+        "storage_check",
+        "In"
+      ]
+    },
+    {
+      "from": [
+        "open",
+        "Value"
+      ],
+      "to": [
+        "storage_check",
+        "Condition"
+      ]
+    },
+    {
+      "from": [
+        "storage_check",
+        "False"
+      ],
+      "to": [
+        "storage_error",
+        "In"
+      ]
+    },
+    {
+      "from": [
+        "error",
+        "Value"
+      ],
+      "to": [
+        "storage_error",
+        "Text"
+      ]
+    },
+    {
+      "from": [
+        "storage_check",
+        "True"
+      ],
+      "to": [
+        "exists",
+        "In"
+      ]
+    },
+    {
+      "from": [
+        "exists",
+        "Out"
+      ],
+      "to": [
+        "exists_check",
+        "In"
+      ]
+    },
+    {
+      "from": [
+        "exists_ok",
+        "Value"
+      ],
+      "to": [
+        "exists_check",
+        "Condition"
+      ]
+    },
+    {
+      "from": [
+        "exists_check",
+        "False"
+      ],
+      "to": [
+        "exists_error",
+        "In"
+      ]
+    },
+    {
+      "from": [
+        "error",
+        "Value"
+      ],
+      "to": [
+        "exists_error",
+        "Text"
+      ]
+    },
+    {
+      "from": [
+        "exists_check",
+        "True"
+      ],
+      "to": [
+        "has_save",
+        "In"
+      ]
+    },
+    {
+      "from": [
+        "exists",
+        "Value"
+      ],
+      "to": [
+        "has_save",
+        "Condition"
+      ]
+    },
+    {
+      "from": [
+        "has_save",
+        "True"
+      ],
+      "to": [
+        "startup_load",
+        "In"
+      ]
+    },
+    {
+      "from": [
+        "startup_load",
+        "Out"
+      ],
+      "to": [
+        "startup_check",
+        "In"
+      ]
+    },
+    {
+      "from": [
+        "startup_load",
+        "Value"
+      ],
+      "to": [
+        "startup_check",
+        "Condition"
+      ]
+    },
+    {
+      "from": [
+        "startup_check",
+        "False"
+      ],
+      "to": [
+        "startup_error",
+        "In"
+      ]
+    },
+    {
+      "from": [
+        "error",
+        "Value"
+      ],
+      "to": [
+        "startup_error",
+        "Text"
+      ]
+    },
+    {
+      "from": [
+        "startup_check",
+        "True"
+      ],
+      "to": [
+        "startup_turn",
+        "In"
+      ]
+    },
+    {
+      "from": [
+        "rotation",
+        "Value"
+      ],
+      "to": [
+        "startup_turn",
+        "Value"
+      ]
+    },
+    {
+      "from": [
+        "startup_turn",
+        "Out"
+      ],
+      "to": [
+        "startup_score",
+        "In"
+      ]
+    },
+    {
+      "from": [
+        "label",
+        "Value"
+      ],
+      "to": [
+        "startup_score",
+        "Text"
+      ]
+    },
+    {
+      "from": [
+        "startup_score",
+        "Out"
+      ],
+      "to": [
+        "startup_name",
+        "In"
+      ]
+    },
+    {
+      "from": [
+        "name",
+        "Value"
+      ],
+      "to": [
+        "startup_name",
+        "Text"
+      ]
+    },
+    {
+      "from": [
+        "startup_name",
+        "Out"
+      ],
+      "to": [
+        "startup_status",
+        "In"
+      ]
+    },
+    {
+      "from": [
+        "score",
+        "Value"
+      ],
+      "to": [
+        "increment",
+        "A"
+      ]
+    },
+    {
+      "from": [
+        "clicked",
+        "Out"
+      ],
+      "to": [
+        "store_score",
+        "In"
+      ]
+    },
+    {
+      "from": [
+        "increment",
+        "Value"
+      ],
+      "to": [
+        "store_score",
+        "Value"
+      ]
+    },
+    {
+      "from": [
+        "store_score",
+        "Out"
+      ],
+      "to": [
+        "rotate",
+        "In"
+      ]
+    },
+    {
+      "from": [
+        "rotate",
+        "Out"
+      ],
+      "to": [
+        "show_score",
+        "In"
+      ]
+    },
+    {
+      "from": [
+        "label",
+        "Value"
+      ],
+      "to": [
+        "show_score",
+        "Text"
+      ]
+    },
+    {
+      "from": [
+        "show_score",
+        "Out"
+      ],
+      "to": [
+        "unsaved",
+        "In"
+      ]
+    },
+    {
+      "from": [
+        "submitted",
+        "Out"
+      ],
+      "to": [
+        "set_name",
+        "In"
+      ]
+    },
+    {
+      "from": [
+        "submitted",
+        "Value"
+      ],
+      "to": [
+        "set_name",
+        "Value"
+      ]
+    },
+    {
+      "from": [
+        "set_name",
+        "Out"
+      ],
+      "to": [
+        "name_changed",
+        "In"
+      ]
+    },
+    {
+      "from": [
+        "save_clicked",
+        "Out"
+      ],
+      "to": [
+        "save_name",
+        "In"
+      ]
+    },
+    {
+      "from": [
+        "input_name",
+        "Value"
+      ],
+      "to": [
+        "save_name",
+        "Value"
+      ]
+    },
+    {
+      "from": [
+        "save_name",
+        "Out"
+      ],
+      "to": [
+        "store_rotation",
+        "In"
+      ]
+    },
+    {
+      "from": [
+        "actual_rotation",
+        "Value"
+      ],
+      "to": [
+        "store_rotation",
+        "Value"
+      ]
+    },
+    {
+      "from": [
+        "store_rotation",
+        "Out"
+      ],
+      "to": [
+        "save",
+        "In"
+      ]
+    },
+    {
+      "from": [
+        "save",
+        "Out"
+      ],
+      "to": [
+        "saved_check",
+        "In"
+      ]
+    },
+    {
+      "from": [
+        "save",
+        "Value"
+      ],
+      "to": [
+        "saved_check",
+        "Condition"
+      ]
+    },
+    {
+      "from": [
+        "saved_check",
+        "False"
+      ],
+      "to": [
+        "saved_error",
+        "In"
+      ]
+    },
+    {
+      "from": [
+        "error",
+        "Value"
+      ],
+      "to": [
+        "saved_error",
+        "Text"
+      ]
+    },
+    {
+      "from": [
+        "saved_check",
+        "True"
+      ],
+      "to": [
+        "saved_status",
+        "In"
+      ]
+    },
+    {
+      "from": [
+        "load_clicked",
+        "Out"
+      ],
+      "to": [
+        "manual_load",
+        "In"
+      ]
+    },
+    {
+      "from": [
+        "manual_load",
+        "Out"
+      ],
+      "to": [
+        "manual_check",
+        "In"
+      ]
+    },
+    {
+      "from": [
+        "manual_load",
+        "Value"
+      ],
+      "to": [
+        "manual_check",
+        "Condition"
+      ]
+    },
+    {
+      "from": [
+        "manual_check",
+        "False"
+      ],
+      "to": [
+        "manual_error",
+        "In"
+      ]
+    },
+    {
+      "from": [
+        "error",
+        "Value"
+      ],
+      "to": [
+        "manual_error",
+        "Text"
+      ]
+    },
+    {
+      "from": [
+        "manual_check",
+        "True"
+      ],
+      "to": [
+        "manual_turn",
+        "In"
+      ]
+    },
+    {
+      "from": [
+        "rotation",
+        "Value"
+      ],
+      "to": [
+        "manual_turn",
+        "Value"
+      ]
+    },
+    {
+      "from": [
+        "manual_turn",
+        "Out"
+      ],
+      "to": [
+        "manual_score",
+        "In"
+      ]
+    },
+    {
+      "from": [
+        "label",
+        "Value"
+      ],
+      "to": [
+        "manual_score",
+        "Text"
+      ]
+    },
+    {
+      "from": [
+        "manual_score",
+        "Out"
+      ],
+      "to": [
+        "manual_name",
+        "In"
+      ]
+    },
+    {
+      "from": [
+        "name",
+        "Value"
+      ],
+      "to": [
+        "manual_name",
+        "Text"
+      ]
+    },
+    {
+      "from": [
+        "manual_name",
+        "Out"
+      ],
+      "to": [
+        "manual_status",
+        "In"
+      ]
+    }
+  ],
+  "name": "Save and restore progress across game restarts",
+  "nodes": [
+    {
+      "id": "error",
+      "position": [
+        0,
+        0
+      ],
+      "type": 23015,
+      "values": {}
+    },
+    {
+      "id": "score",
+      "position": [
+        270,
+        0
+      ],
+      "type": 3004,
+      "values": {
+        "Name": "score"
+      }
+    },
+    {
+      "id": "format",
+      "position": [
+        540,
+        0
+      ],
+      "type": 3050,
+      "values": {}
+    },
+    {
+      "id": "label",
+      "position": [
+        810,
+        0
+      ],
+      "type": 3052,
+      "values": {
+        "A": "Score: "
+      }
+    },
+    {
+      "id": "name",
+      "position": [
+        1080,
+        0
+      ],
+      "type": 3103,
+      "values": {
+        "Name": "player_name"
+      }
+    },
+    {
+      "id": "rotation",
+      "position": [
+        1350,
+        0
+      ],
+      "type": 3104,
+      "values": {
+        "Name": "robot_rotation"
+      }
+    },
+    {
+      "id": "start",
+      "position": [
+        1620,
+        0
+      ],
+      "type": 1001,
+      "values": {}
+    },
+    {
+      "id": "widget",
+      "position": [
+        0,
+        230
+      ],
+      "type": 18001,
+      "values": {
+        "Template": "hud"
+      }
+    },
+    {
+      "id": "open",
+      "position": [
+        270,
+        230
+      ],
+      "type": 23001,
+      "values": {
+        "Game ID": "node-engine-robot-save-demo"
+      }
+    },
+    {
+      "id": "storage_check",
+      "position": [
+        540,
+        230
+      ],
+      "type": 2001,
+      "values": {}
+    },
+    {
+      "id": "storage_error",
+      "position": [
+        810,
+        230
+      ],
+      "type": 18005,
+      "values": {
+        "Element": "status",
+        "Text": ""
+      }
+    },
+    {
+      "id": "exists",
+      "position": [
+        1080,
+        230
+      ],
+      "type": 23004,
+      "values": {}
+    },
+    {
+      "id": "exists_ok",
+      "position": [
+        1350,
+        230
+      ],
+      "type": 23014,
+      "values": {}
+    },
+    {
+      "id": "exists_check",
+      "position": [
+        1620,
+        230
+      ],
+      "type": 2001,
+      "values": {}
+    },
+    {
+      "id": "exists_error",
+      "position": [
+        0,
+        460
+      ],
+      "type": 18005,
+      "values": {
+        "Element": "status",
+        "Text": ""
+      }
+    },
+    {
+      "id": "has_save",
+      "position": [
+        270,
+        460
+      ],
+      "type": 2001,
+      "values": {}
+    },
+    {
+      "id": "startup_load",
+      "position": [
+        540,
+        460
+      ],
+      "type": 23009,
+      "values": {
+        "Names": [
+          "score",
+          "player_name",
+          "robot_rotation"
+        ]
+      }
+    },
+    {
+      "id": "startup_check",
+      "position": [
+        810,
+        460
+      ],
+      "type": 2001,
+      "values": {}
+    },
+    {
+      "id": "startup_error",
+      "position": [
+        1080,
+        460
+      ],
+      "type": 18005,
+      "values": {
+        "Element": "status",
+        "Text": ""
+      }
+    },
+    {
+      "id": "startup_turn",
+      "position": [
+        1350,
+        460
+      ],
+      "type": 9007,
+      "values": {}
+    },
+    {
+      "id": "startup_score",
+      "position": [
+        1620,
+        460
+      ],
+      "type": 18005,
+      "values": {
+        "Element": "score"
+      }
+    },
+    {
+      "id": "startup_name",
+      "position": [
+        0,
+        690
+      ],
+      "type": 18005,
+      "values": {
+        "Element": "name"
+      }
+    },
+    {
+      "id": "startup_status",
+      "position": [
+        270,
+        690
+      ],
+      "type": 18005,
+      "values": {
+        "Element": "status",
+        "Text": "Loaded saved progress."
+      }
+    },
+    {
+      "id": "clicked",
+      "position": [
+        540,
+        690
+      ],
+      "type": 18101,
+      "values": {
+        "Element Filter": "add",
+        "Widget Filter": "hud"
+      }
+    },
+    {
+      "id": "save_clicked",
+      "position": [
+        810,
+        690
+      ],
+      "type": 18101,
+      "values": {
+        "Element Filter": "save",
+        "Widget Filter": "hud"
+      }
+    },
+    {
+      "id": "load_clicked",
+      "position": [
+        1080,
+        690
+      ],
+      "type": 18101,
+      "values": {
+        "Element Filter": "load",
+        "Widget Filter": "hud"
+      }
+    },
+    {
+      "id": "increment",
+      "position": [
+        1350,
+        690
+      ],
+      "type": 4001,
+      "values": {
+        "B": 1.0
+      }
+    },
+    {
+      "id": "store_score",
+      "position": [
+        1620,
+        690
+      ],
+      "type": 3005,
+      "values": {
+        "Name": "score"
+      }
+    },
+    {
+      "id": "rotate",
+      "position": [
+        0,
+        920
+      ],
+      "type": 9004,
+      "values": {
+        "Degrees": [
+          0,
+          30,
+          0
+        ]
+      }
+    },
+    {
+      "id": "show_score",
+      "position": [
+        270,
+        920
+      ],
+      "type": 18005,
+      "values": {
+        "Element": "score"
+      }
+    },
+    {
+      "id": "unsaved",
+      "position": [
+        540,
+        920
+      ],
+      "type": 18005,
+      "values": {
+        "Element": "status",
+        "Text": "Progress changed. Press Save."
+      }
+    },
+    {
+      "id": "submitted",
+      "position": [
+        810,
+        920
+      ],
+      "type": 18103,
+      "values": {
+        "Element Filter": "name",
+        "Widget Filter": "hud"
+      }
+    },
+    {
+      "id": "set_name",
+      "position": [
+        1080,
+        920
+      ],
+      "type": 3113,
+      "values": {
+        "Name": "player_name"
+      }
+    },
+    {
+      "id": "name_changed",
+      "position": [
+        1350,
+        920
+      ],
+      "type": 18005,
+      "values": {
+        "Element": "status",
+        "Text": "Name changed. Press Save."
+      }
+    },
+    {
+      "id": "input_name",
+      "position": [
+        1620,
+        920
+      ],
+      "type": 18006,
+      "values": {
+        "Element": "name"
+      }
+    },
+    {
+      "id": "save_name",
+      "position": [
+        0,
+        1150
+      ],
+      "type": 3113,
+      "values": {
+        "Name": "player_name"
+      }
+    },
+    {
+      "id": "actual_rotation",
+      "position": [
+        270,
+        1150
+      ],
+      "type": 9006,
+      "values": {}
+    },
+    {
+      "id": "store_rotation",
+      "position": [
+        540,
+        1150
+      ],
+      "type": 3114,
+      "values": {
+        "Name": "robot_rotation"
+      }
+    },
+    {
+      "id": "save",
+      "position": [
+        810,
+        1150
+      ],
+      "type": 23008,
+      "values": {
+        "Names": [
+          "score",
+          "player_name",
+          "robot_rotation"
+        ]
+      }
+    },
+    {
+      "id": "saved_check",
+      "position": [
+        1080,
+        1150
+      ],
+      "type": 2001,
+      "values": {}
+    },
+    {
+      "id": "saved_error",
+      "position": [
+        1350,
+        1150
+      ],
+      "type": 18005,
+      "values": {
+        "Element": "status",
+        "Text": ""
+      }
+    },
+    {
+      "id": "saved_status",
+      "position": [
+        1620,
+        1150
+      ],
+      "type": 18005,
+      "values": {
+        "Element": "status",
+        "Text": "Saved. You can close and reopen the game."
+      }
+    },
+    {
+      "id": "manual_load",
+      "position": [
+        0,
+        1380
+      ],
+      "type": 23009,
+      "values": {
+        "Names": [
+          "score",
+          "player_name",
+          "robot_rotation"
+        ]
+      }
+    },
+    {
+      "id": "manual_check",
+      "position": [
+        270,
+        1380
+      ],
+      "type": 2001,
+      "values": {}
+    },
+    {
+      "id": "manual_error",
+      "position": [
+        540,
+        1380
+      ],
+      "type": 18005,
+      "values": {
+        "Element": "status",
+        "Text": ""
+      }
+    },
+    {
+      "id": "manual_turn",
+      "position": [
+        810,
+        1380
+      ],
+      "type": 9007,
+      "values": {}
+    },
+    {
+      "id": "manual_score",
+      "position": [
+        1080,
+        1380
+      ],
+      "type": 18005,
+      "values": {
+        "Element": "score"
+      }
+    },
+    {
+      "id": "manual_name",
+      "position": [
+        1350,
+        1380
+      ],
+      "type": 18005,
+      "values": {
+        "Element": "name"
+      }
+    },
+    {
+      "id": "manual_status",
+      "position": [
+        1620,
+        1380
+      ],
+      "type": 18005,
+      "values": {
+        "Element": "status",
+        "Text": "Loaded saved progress."
+      }
+    }
+  ],
+  "version": 1
+}

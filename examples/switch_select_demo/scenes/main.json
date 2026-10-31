@@ -1,0 +1,158 @@
+{
+  "active_camera": "camera",
+  "entities": [
+    {
+      "id": "player",
+      "mesh": "assets/robot.glb",
+      "name": "Touring robot",
+      "position": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "rotation": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "scale": [
+        1.0,
+        1.0,
+        1.0
+      ]
+    },
+    {
+      "id": "station0",
+      "mesh": "assets/robot.glb",
+      "name": "Station 0",
+      "position": [
+        -1.5,
+        -0.5,
+        -1
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "scale": [
+        0.25,
+        0.25,
+        0.25
+      ]
+    },
+    {
+      "id": "station1",
+      "mesh": "assets/robot.glb",
+      "name": "Station 1",
+      "position": [
+        1.5,
+        -0.5,
+        -1
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "scale": [
+        0.25,
+        0.25,
+        0.25
+      ]
+    },
+    {
+      "id": "station2",
+      "mesh": "assets/robot.glb",
+      "name": "Station 2",
+      "position": [
+        1.5,
+        -0.5,
+        1
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "scale": [
+        0.25,
+        0.25,
+        0.25
+      ]
+    },
+    {
+      "id": "station3",
+      "mesh": "assets/robot.glb",
+      "name": "Station 3",
+      "position": [
+        -1.5,
+        -0.5,
+        1
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "scale": [
+        0.25,
+        0.25,
+        0.25
+      ]
+    },
+    {
+      "camera": {
+        "far": 1000.0,
+        "fov": 60.0,
+        "near": 0.1,
+        "projection": "perspective",
+        "size": 10.0
+      },
+      "id": "camera",
+      "name": "Camera",
+      "position": [
+        0,
+        1.5,
+        8
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ]
+    }
+  ],
+  "ui_assets": [
+    {
+      "id": "hud",
+      "name": "HUD",
+      "rml": "<rml><head><style>body {width:100%;height:100%;font-family:node-ui;font-size:14px;color:#ffffff;pointer-events:none;}\n    #help {position:absolute;left:8px;top:8px;padding:8px;width:94%;max-width:480px;box-sizing:border-box;background-color:#171e32dd;}</style></head>\n    <body><div id=\"help\">Switch + Select: delayed robot routing<br/>\n    1/2/3: select left/center/right / 9: default case<br/>Space: apply after 0.25s / M: mirror the destination<br/>S/L: save/load a suspended route<br/>\n    Mode: <span id=\"mode\">0</span> / <span id=\"mirror\">Normal</span><br/>\n    Last route: <span id=\"selected\">Idle</span> / Visits: <span id=\"visits\">0</span></div></body></rml>",
+      "type": "ui",
+      "version": 1
+    }
+  ],
+  "variables": {
+    "mirror": {
+      "type": "bool",
+      "value": false
+    },
+    "mode": {
+      "type": "int",
+      "value": 0
+    },
+    "selected": {
+      "type": "string",
+      "value": "Idle"
+    },
+    "visits": {
+      "type": "int",
+      "value": 0
+    }
+  }
+}

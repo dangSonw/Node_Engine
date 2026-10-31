@@ -1,0 +1,1244 @@
+{
+  "links": [
+    {
+      "from": [
+        "start",
+        "Out"
+      ],
+      "to": [
+        "storage",
+        "In"
+      ]
+    },
+    {
+      "from": [
+        "storage",
+        "Out"
+      ],
+      "to": [
+        "hud",
+        "In"
+      ]
+    },
+    {
+      "from": [
+        "hud",
+        "Out"
+      ],
+      "to": [
+        "wave",
+        "In"
+      ]
+    },
+    {
+      "from": [
+        "wave",
+        "Out"
+      ],
+      "to": [
+        "walk",
+        "In"
+      ]
+    },
+    {
+      "from": [
+        "update_1",
+        "Out"
+      ],
+      "to": [
+        "if_1",
+        "In"
+      ]
+    },
+    {
+      "from": [
+        "key_1",
+        "Value"
+      ],
+      "to": [
+        "if_1",
+        "Condition"
+      ]
+    },
+    {
+      "from": [
+        "if_1",
+        "True"
+      ],
+      "to": [
+        "action_1",
+        "In"
+      ]
+    },
+    {
+      "from": [
+        "update_2",
+        "Out"
+      ],
+      "to": [
+        "if_2",
+        "In"
+      ]
+    },
+    {
+      "from": [
+        "key_2",
+        "Value"
+      ],
+      "to": [
+        "if_2",
+        "Condition"
+      ]
+    },
+    {
+      "from": [
+        "if_2",
+        "True"
+      ],
+      "to": [
+        "action_2",
+        "In"
+      ]
+    },
+    {
+      "from": [
+        "update_3",
+        "Out"
+      ],
+      "to": [
+        "if_3",
+        "In"
+      ]
+    },
+    {
+      "from": [
+        "key_3",
+        "Value"
+      ],
+      "to": [
+        "if_3",
+        "Condition"
+      ]
+    },
+    {
+      "from": [
+        "if_3",
+        "True"
+      ],
+      "to": [
+        "action_3",
+        "In"
+      ]
+    },
+    {
+      "from": [
+        "update_X",
+        "Out"
+      ],
+      "to": [
+        "if_X",
+        "In"
+      ]
+    },
+    {
+      "from": [
+        "key_X",
+        "Value"
+      ],
+      "to": [
+        "if_X",
+        "Condition"
+      ]
+    },
+    {
+      "from": [
+        "if_X",
+        "True"
+      ],
+      "to": [
+        "action_X",
+        "In"
+      ]
+    },
+    {
+      "from": [
+        "update_P",
+        "Out"
+      ],
+      "to": [
+        "if_P",
+        "In"
+      ]
+    },
+    {
+      "from": [
+        "key_P",
+        "Value"
+      ],
+      "to": [
+        "if_P",
+        "Condition"
+      ]
+    },
+    {
+      "from": [
+        "playing_P",
+        "Value"
+      ],
+      "to": [
+        "selected_P",
+        "A"
+      ]
+    },
+    {
+      "from": [
+        "paused_P",
+        "Value"
+      ],
+      "to": [
+        "selected_P",
+        "B"
+      ]
+    },
+    {
+      "from": [
+        "if_P",
+        "True"
+      ],
+      "to": [
+        "has_P",
+        "In"
+      ]
+    },
+    {
+      "from": [
+        "selected_P",
+        "Value"
+      ],
+      "to": [
+        "has_P",
+        "Condition"
+      ]
+    },
+    {
+      "from": [
+        "has_P",
+        "True"
+      ],
+      "to": [
+        "action_P",
+        "In"
+      ]
+    },
+    {
+      "from": [
+        "update_R",
+        "Out"
+      ],
+      "to": [
+        "if_R",
+        "In"
+      ]
+    },
+    {
+      "from": [
+        "key_R",
+        "Value"
+      ],
+      "to": [
+        "if_R",
+        "Condition"
+      ]
+    },
+    {
+      "from": [
+        "playing_R",
+        "Value"
+      ],
+      "to": [
+        "selected_R",
+        "A"
+      ]
+    },
+    {
+      "from": [
+        "paused_R",
+        "Value"
+      ],
+      "to": [
+        "selected_R",
+        "B"
+      ]
+    },
+    {
+      "from": [
+        "if_R",
+        "True"
+      ],
+      "to": [
+        "has_R",
+        "In"
+      ]
+    },
+    {
+      "from": [
+        "selected_R",
+        "Value"
+      ],
+      "to": [
+        "has_R",
+        "Condition"
+      ]
+    },
+    {
+      "from": [
+        "has_R",
+        "True"
+      ],
+      "to": [
+        "action_R",
+        "In"
+      ]
+    },
+    {
+      "from": [
+        "update_T",
+        "Out"
+      ],
+      "to": [
+        "if_T",
+        "In"
+      ]
+    },
+    {
+      "from": [
+        "key_T",
+        "Value"
+      ],
+      "to": [
+        "if_T",
+        "Condition"
+      ]
+    },
+    {
+      "from": [
+        "playing_T",
+        "Value"
+      ],
+      "to": [
+        "selected_T",
+        "A"
+      ]
+    },
+    {
+      "from": [
+        "paused_T",
+        "Value"
+      ],
+      "to": [
+        "selected_T",
+        "B"
+      ]
+    },
+    {
+      "from": [
+        "if_T",
+        "True"
+      ],
+      "to": [
+        "has_T",
+        "In"
+      ]
+    },
+    {
+      "from": [
+        "selected_T",
+        "Value"
+      ],
+      "to": [
+        "has_T",
+        "Condition"
+      ]
+    },
+    {
+      "from": [
+        "has_T",
+        "True"
+      ],
+      "to": [
+        "action_T",
+        "In"
+      ]
+    },
+    {
+      "from": [
+        "update_B",
+        "Out"
+      ],
+      "to": [
+        "if_B",
+        "In"
+      ]
+    },
+    {
+      "from": [
+        "key_B",
+        "Value"
+      ],
+      "to": [
+        "if_B",
+        "Condition"
+      ]
+    },
+    {
+      "from": [
+        "playing_B",
+        "Value"
+      ],
+      "to": [
+        "selected_B",
+        "A"
+      ]
+    },
+    {
+      "from": [
+        "paused_B",
+        "Value"
+      ],
+      "to": [
+        "selected_B",
+        "B"
+      ]
+    },
+    {
+      "from": [
+        "if_B",
+        "True"
+      ],
+      "to": [
+        "has_B",
+        "In"
+      ]
+    },
+    {
+      "from": [
+        "selected_B",
+        "Value"
+      ],
+      "to": [
+        "has_B",
+        "Condition"
+      ]
+    },
+    {
+      "from": [
+        "has_B",
+        "True"
+      ],
+      "to": [
+        "action_B",
+        "In"
+      ]
+    },
+    {
+      "from": [
+        "update_N",
+        "Out"
+      ],
+      "to": [
+        "if_N",
+        "In"
+      ]
+    },
+    {
+      "from": [
+        "key_N",
+        "Value"
+      ],
+      "to": [
+        "if_N",
+        "Condition"
+      ]
+    },
+    {
+      "from": [
+        "playing_N",
+        "Value"
+      ],
+      "to": [
+        "selected_N",
+        "A"
+      ]
+    },
+    {
+      "from": [
+        "paused_N",
+        "Value"
+      ],
+      "to": [
+        "selected_N",
+        "B"
+      ]
+    },
+    {
+      "from": [
+        "if_N",
+        "True"
+      ],
+      "to": [
+        "has_N",
+        "In"
+      ]
+    },
+    {
+      "from": [
+        "selected_N",
+        "Value"
+      ],
+      "to": [
+        "has_N",
+        "Condition"
+      ]
+    },
+    {
+      "from": [
+        "has_N",
+        "True"
+      ],
+      "to": [
+        "action_N",
+        "In"
+      ]
+    },
+    {
+      "from": [
+        "update_S",
+        "Out"
+      ],
+      "to": [
+        "if_S",
+        "In"
+      ]
+    },
+    {
+      "from": [
+        "key_S",
+        "Value"
+      ],
+      "to": [
+        "if_S",
+        "Condition"
+      ]
+    },
+    {
+      "from": [
+        "if_S",
+        "True"
+      ],
+      "to": [
+        "action_S",
+        "In"
+      ]
+    },
+    {
+      "from": [
+        "update_L",
+        "Out"
+      ],
+      "to": [
+        "if_L",
+        "In"
+      ]
+    },
+    {
+      "from": [
+        "key_L",
+        "Value"
+      ],
+      "to": [
+        "if_L",
+        "Condition"
+      ]
+    },
+    {
+      "from": [
+        "if_L",
+        "True"
+      ],
+      "to": [
+        "action_L",
+        "In"
+      ]
+    }
+  ],
+  "name": "Animation playground",
+  "nodes": [
+    {
+      "id": "start",
+      "position": [
+        0,
+        0
+      ],
+      "type": 1001,
+      "values": {}
+    },
+    {
+      "id": "storage",
+      "position": [
+        270,
+        0
+      ],
+      "type": 23001,
+      "values": {
+        "Game ID": "node-engine-animation-demo"
+      }
+    },
+    {
+      "id": "hud",
+      "position": [
+        540,
+        0
+      ],
+      "type": 18001,
+      "values": {}
+    },
+    {
+      "id": "wave",
+      "position": [
+        810,
+        0
+      ],
+      "type": 13002,
+      "values": {
+        "Clip": "Wave"
+      }
+    },
+    {
+      "id": "walk",
+      "position": [
+        1080,
+        0
+      ],
+      "type": 13002,
+      "values": {
+        "Clip": "Walk",
+        "Entity": "walker"
+      }
+    },
+    {
+      "id": "update_1",
+      "position": [
+        1350,
+        0
+      ],
+      "type": 1002,
+      "values": {}
+    },
+    {
+      "id": "key_1",
+      "position": [
+        1620,
+        0
+      ],
+      "type": 10002,
+      "values": {
+        "Key": "1"
+      }
+    },
+    {
+      "id": "if_1",
+      "position": [
+        1890,
+        0
+      ],
+      "type": 2001,
+      "values": {}
+    },
+    {
+      "id": "action_1",
+      "position": [
+        0,
+        210
+      ],
+      "type": 13002,
+      "values": {
+        "Clip": "Idle"
+      }
+    },
+    {
+      "id": "update_2",
+      "position": [
+        270,
+        210
+      ],
+      "type": 1002,
+      "values": {}
+    },
+    {
+      "id": "key_2",
+      "position": [
+        540,
+        210
+      ],
+      "type": 10002,
+      "values": {
+        "Key": "2"
+      }
+    },
+    {
+      "id": "if_2",
+      "position": [
+        810,
+        210
+      ],
+      "type": 2001,
+      "values": {}
+    },
+    {
+      "id": "action_2",
+      "position": [
+        1080,
+        210
+      ],
+      "type": 13002,
+      "values": {
+        "Clip": "Wave"
+      }
+    },
+    {
+      "id": "update_3",
+      "position": [
+        1350,
+        210
+      ],
+      "type": 1002,
+      "values": {}
+    },
+    {
+      "id": "key_3",
+      "position": [
+        1620,
+        210
+      ],
+      "type": 10002,
+      "values": {
+        "Key": "3"
+      }
+    },
+    {
+      "id": "if_3",
+      "position": [
+        1890,
+        210
+      ],
+      "type": 2001,
+      "values": {}
+    },
+    {
+      "id": "action_3",
+      "position": [
+        0,
+        420
+      ],
+      "type": 13002,
+      "values": {
+        "Clip": "Walk"
+      }
+    },
+    {
+      "id": "update_X",
+      "position": [
+        270,
+        420
+      ],
+      "type": 1002,
+      "values": {}
+    },
+    {
+      "id": "key_X",
+      "position": [
+        540,
+        420
+      ],
+      "type": 10002,
+      "values": {
+        "Key": "X"
+      }
+    },
+    {
+      "id": "if_X",
+      "position": [
+        810,
+        420
+      ],
+      "type": 2001,
+      "values": {}
+    },
+    {
+      "id": "action_X",
+      "position": [
+        1080,
+        420
+      ],
+      "type": 13003,
+      "values": {}
+    },
+    {
+      "id": "update_P",
+      "position": [
+        1350,
+        420
+      ],
+      "type": 1002,
+      "values": {}
+    },
+    {
+      "id": "key_P",
+      "position": [
+        1620,
+        420
+      ],
+      "type": 10002,
+      "values": {
+        "Key": "P"
+      }
+    },
+    {
+      "id": "if_P",
+      "position": [
+        1890,
+        420
+      ],
+      "type": 2001,
+      "values": {}
+    },
+    {
+      "id": "playing_P",
+      "position": [
+        0,
+        630
+      ],
+      "type": 13012,
+      "values": {}
+    },
+    {
+      "id": "paused_P",
+      "position": [
+        270,
+        630
+      ],
+      "type": 13013,
+      "values": {}
+    },
+    {
+      "id": "selected_P",
+      "position": [
+        540,
+        630
+      ],
+      "type": 4016,
+      "values": {}
+    },
+    {
+      "id": "has_P",
+      "position": [
+        810,
+        630
+      ],
+      "type": 2001,
+      "values": {}
+    },
+    {
+      "id": "action_P",
+      "position": [
+        1080,
+        630
+      ],
+      "type": 13004,
+      "values": {}
+    },
+    {
+      "id": "update_R",
+      "position": [
+        1350,
+        630
+      ],
+      "type": 1002,
+      "values": {}
+    },
+    {
+      "id": "key_R",
+      "position": [
+        1620,
+        630
+      ],
+      "type": 10002,
+      "values": {
+        "Key": "R"
+      }
+    },
+    {
+      "id": "if_R",
+      "position": [
+        1890,
+        630
+      ],
+      "type": 2001,
+      "values": {}
+    },
+    {
+      "id": "playing_R",
+      "position": [
+        0,
+        840
+      ],
+      "type": 13012,
+      "values": {}
+    },
+    {
+      "id": "paused_R",
+      "position": [
+        270,
+        840
+      ],
+      "type": 13013,
+      "values": {}
+    },
+    {
+      "id": "selected_R",
+      "position": [
+        540,
+        840
+      ],
+      "type": 4016,
+      "values": {}
+    },
+    {
+      "id": "has_R",
+      "position": [
+        810,
+        840
+      ],
+      "type": 2001,
+      "values": {}
+    },
+    {
+      "id": "action_R",
+      "position": [
+        1080,
+        840
+      ],
+      "type": 13005,
+      "values": {}
+    },
+    {
+      "id": "update_T",
+      "position": [
+        1350,
+        840
+      ],
+      "type": 1002,
+      "values": {}
+    },
+    {
+      "id": "key_T",
+      "position": [
+        1620,
+        840
+      ],
+      "type": 10002,
+      "values": {
+        "Key": "T"
+      }
+    },
+    {
+      "id": "if_T",
+      "position": [
+        1890,
+        840
+      ],
+      "type": 2001,
+      "values": {}
+    },
+    {
+      "id": "playing_T",
+      "position": [
+        0,
+        1050
+      ],
+      "type": 13012,
+      "values": {}
+    },
+    {
+      "id": "paused_T",
+      "position": [
+        270,
+        1050
+      ],
+      "type": 13013,
+      "values": {}
+    },
+    {
+      "id": "selected_T",
+      "position": [
+        540,
+        1050
+      ],
+      "type": 4016,
+      "values": {}
+    },
+    {
+      "id": "has_T",
+      "position": [
+        810,
+        1050
+      ],
+      "type": 2001,
+      "values": {}
+    },
+    {
+      "id": "action_T",
+      "position": [
+        1080,
+        1050
+      ],
+      "type": 13008,
+      "values": {
+        "Time": 1.0
+      }
+    },
+    {
+      "id": "update_B",
+      "position": [
+        1350,
+        1050
+      ],
+      "type": 1002,
+      "values": {}
+    },
+    {
+      "id": "key_B",
+      "position": [
+        1620,
+        1050
+      ],
+      "type": 10002,
+      "values": {
+        "Key": "B"
+      }
+    },
+    {
+      "id": "if_B",
+      "position": [
+        1890,
+        1050
+      ],
+      "type": 2001,
+      "values": {}
+    },
+    {
+      "id": "playing_B",
+      "position": [
+        0,
+        1260
+      ],
+      "type": 13012,
+      "values": {}
+    },
+    {
+      "id": "paused_B",
+      "position": [
+        270,
+        1260
+      ],
+      "type": 13013,
+      "values": {}
+    },
+    {
+      "id": "selected_B",
+      "position": [
+        540,
+        1260
+      ],
+      "type": 4016,
+      "values": {}
+    },
+    {
+      "id": "has_B",
+      "position": [
+        810,
+        1260
+      ],
+      "type": 2001,
+      "values": {}
+    },
+    {
+      "id": "action_B",
+      "position": [
+        1080,
+        1260
+      ],
+      "type": 13006,
+      "values": {
+        "Speed": -1.0
+      }
+    },
+    {
+      "id": "update_N",
+      "position": [
+        1350,
+        1260
+      ],
+      "type": 1002,
+      "values": {}
+    },
+    {
+      "id": "key_N",
+      "position": [
+        1620,
+        1260
+      ],
+      "type": 10002,
+      "values": {
+        "Key": "N"
+      }
+    },
+    {
+      "id": "if_N",
+      "position": [
+        1890,
+        1260
+      ],
+      "type": 2001,
+      "values": {}
+    },
+    {
+      "id": "playing_N",
+      "position": [
+        0,
+        1470
+      ],
+      "type": 13012,
+      "values": {}
+    },
+    {
+      "id": "paused_N",
+      "position": [
+        270,
+        1470
+      ],
+      "type": 13013,
+      "values": {}
+    },
+    {
+      "id": "selected_N",
+      "position": [
+        540,
+        1470
+      ],
+      "type": 4016,
+      "values": {}
+    },
+    {
+      "id": "has_N",
+      "position": [
+        810,
+        1470
+      ],
+      "type": 2001,
+      "values": {}
+    },
+    {
+      "id": "action_N",
+      "position": [
+        1080,
+        1470
+      ],
+      "type": 13006,
+      "values": {
+        "Speed": 1.0
+      }
+    },
+    {
+      "id": "update_S",
+      "position": [
+        1350,
+        1470
+      ],
+      "type": 1002,
+      "values": {}
+    },
+    {
+      "id": "key_S",
+      "position": [
+        1620,
+        1470
+      ],
+      "type": 10002,
+      "values": {
+        "Key": "S"
+      }
+    },
+    {
+      "id": "if_S",
+      "position": [
+        1890,
+        1470
+      ],
+      "type": 2001,
+      "values": {}
+    },
+    {
+      "id": "action_S",
+      "position": [
+        0,
+        1680
+      ],
+      "type": 23016,
+      "values": {
+        "Slot": "animation"
+      }
+    },
+    {
+      "id": "update_L",
+      "position": [
+        270,
+        1680
+      ],
+      "type": 1002,
+      "values": {}
+    },
+    {
+      "id": "key_L",
+      "position": [
+        540,
+        1680
+      ],
+      "type": 10002,
+      "values": {
+        "Key": "L"
+      }
+    },
+    {
+      "id": "if_L",
+      "position": [
+        810,
+        1680
+      ],
+      "type": 2001,
+      "values": {}
+    },
+    {
+      "id": "action_L",
+      "position": [
+        1080,
+        1680
+      ],
+      "type": 23017,
+      "values": {
+        "Slot": "animation"
+      }
+    }
+  ],
+  "version": 1
+}

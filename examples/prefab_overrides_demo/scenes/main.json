@@ -1,0 +1,190 @@
+{
+  "component_definitions": [
+    {
+      "id": 1,
+      "name": "Motion",
+      "properties": [
+        {
+          "default": 90.0,
+          "id": 1,
+          "name": "Speed",
+          "type": "float"
+        }
+      ]
+    }
+  ],
+  "entities": [
+    {
+      "active": true,
+      "components": {
+        "1": {
+          "enabled": true,
+          "properties": {
+            "1": 90
+          }
+        }
+      },
+      "id": "left",
+      "layer": 3,
+      "mesh": "assets/robot.gltf",
+      "name": "Timed robot",
+      "parent": "",
+      "position": [
+        -2.2,
+        0,
+        0
+      ],
+      "rotation": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "scale": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "tags": [],
+      "visible": true
+    },
+    {
+      "active": true,
+      "components": {
+        "1": {
+          "enabled": true,
+          "properties": {
+            "1": 45
+          }
+        }
+      },
+      "id": "right",
+      "layer": 3,
+      "mesh": "assets/robot.gltf",
+      "name": "Timed robot",
+      "parent": "",
+      "position": [
+        2.2,
+        0,
+        0
+      ],
+      "rotation": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "scale": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "tags": [],
+      "visible": true
+    }
+  ],
+  "prefab_assets": [
+    {
+      "component_definitions": [
+        {
+          "id": 1,
+          "name": "Motion",
+          "properties": [
+            {
+              "default": 90.0,
+              "id": 1,
+              "name": "Speed",
+              "type": "float"
+            }
+          ]
+        }
+      ],
+      "entities": [
+        {
+          "active": true,
+          "components": {
+            "1": {
+              "enabled": true,
+              "properties": {
+                "1": 90.0
+              }
+            }
+          },
+          "id": "root",
+          "layer": 3,
+          "mesh": "assets/robot.gltf",
+          "name": "Timed robot",
+          "parent": "",
+          "position": [
+            0,
+            0,
+            0
+          ],
+          "rotation": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "scale": [
+            1.0,
+            1.0,
+            1.0
+          ],
+          "tags": [],
+          "visible": true
+        }
+      ],
+      "id": "robot",
+      "name": "Robot",
+      "overrides": {
+        "root": {
+          "components": {
+            "1": {
+              "properties": {
+                "1": 45
+              }
+            }
+          }
+        }
+      },
+      "root": "root",
+      "type": "prefab",
+      "version": 1
+    }
+  ],
+  "prefab_instances": [
+    {
+      "component_overrides": {
+        "root": {
+          "1": {
+            "properties": [
+              1
+            ]
+          }
+        }
+      },
+      "mapping": {
+        "root": "left"
+      },
+      "owned_components": {
+        "root": [
+          "transform"
+        ]
+      },
+      "prefab": "robot",
+      "root": "left"
+    },
+    {
+      "mapping": {
+        "root": "right"
+      },
+      "owned_components": {
+        "root": [
+          "transform"
+        ]
+      },
+      "prefab": "robot",
+      "root": "right"
+    }
+  ],
+  "variables": {},
+  "version": 1
+}

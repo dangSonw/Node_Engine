@@ -1,0 +1,10 @@
+{
+  "assets": [
+    "assets/robot.gltf",
+    "assets/tone.wav"
+  ],
+  "graph": "graphs/gameplay.json",
+  "name": "Whole-game checkpoint robot",
+  "scene": "scenes/main.json",
+  "version": 1
+}

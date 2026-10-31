@@ -1,0 +1,716 @@
+{
+  "event_definitions": [
+    {
+      "id": 100001,
+      "name": "Nested Notice",
+      "parameters": [
+        {
+          "name": "Message",
+          "type": "string"
+        }
+      ]
+    }
+  ],
+  "links": [
+    {
+      "from": [
+        "start",
+        "Out"
+      ],
+      "to": [
+        "timer",
+        "In"
+      ]
+    },
+    {
+      "from": [
+        "timer",
+        "Out"
+      ],
+      "to": [
+        "pin",
+        "In"
+      ]
+    },
+    {
+      "from": [
+        "tick",
+        "Out"
+      ],
+      "to": [
+        "save",
+        "In"
+      ]
+    },
+    {
+      "from": [
+        "count",
+        "Value"
+      ],
+      "to": [
+        "inc",
+        "A"
+      ]
+    },
+    {
+      "from": [
+        "inc",
+        "Value"
+      ],
+      "to": [
+        "save",
+        "Value"
+      ]
+    },
+    {
+      "from": [
+        "enlarge_update",
+        "Out"
+      ],
+      "to": [
+        "enlarge_if",
+        "In"
+      ]
+    },
+    {
+      "from": [
+        "enlarge_frame",
+        "Value"
+      ],
+      "to": [
+        "enlarge_eq",
+        "A"
+      ]
+    },
+    {
+      "from": [
+        "enlarge_eq",
+        "Value"
+      ],
+      "to": [
+        "enlarge_if",
+        "Condition"
+      ]
+    },
+    {
+      "from": [
+        "enlarge_if",
+        "True"
+      ],
+      "to": [
+        "enlarge",
+        "In"
+      ]
+    },
+    {
+      "from": [
+        "queue_update",
+        "Out"
+      ],
+      "to": [
+        "queue_if",
+        "In"
+      ]
+    },
+    {
+      "from": [
+        "queue_frame",
+        "Value"
+      ],
+      "to": [
+        "queue_eq",
+        "A"
+      ]
+    },
+    {
+      "from": [
+        "queue_eq",
+        "Value"
+      ],
+      "to": [
+        "queue_if",
+        "Condition"
+      ]
+    },
+    {
+      "from": [
+        "queue_if",
+        "True"
+      ],
+      "to": [
+        "queue",
+        "In"
+      ]
+    },
+    {
+      "from": [
+        "queue",
+        "Out"
+      ],
+      "to": [
+        "apply",
+        "In"
+      ]
+    },
+    {
+      "from": [
+        "speed_update",
+        "Out"
+      ],
+      "to": [
+        "speed_if",
+        "In"
+      ]
+    },
+    {
+      "from": [
+        "speed_frame",
+        "Value"
+      ],
+      "to": [
+        "speed_eq",
+        "A"
+      ]
+    },
+    {
+      "from": [
+        "speed_eq",
+        "Value"
+      ],
+      "to": [
+        "speed_if",
+        "Condition"
+      ]
+    },
+    {
+      "from": [
+        "speed_if",
+        "True"
+      ],
+      "to": [
+        "speed",
+        "In"
+      ]
+    },
+    {
+      "from": [
+        "speed",
+        "Out"
+      ],
+      "to": [
+        "rename",
+        "In"
+      ]
+    },
+    {
+      "from": [
+        "rename",
+        "Out"
+      ],
+      "to": [
+        "apply_source",
+        "In"
+      ]
+    },
+    {
+      "from": [
+        "temporary_update",
+        "Out"
+      ],
+      "to": [
+        "temporary_if",
+        "In"
+      ]
+    },
+    {
+      "from": [
+        "temporary_frame",
+        "Value"
+      ],
+      "to": [
+        "temporary_eq",
+        "A"
+      ]
+    },
+    {
+      "from": [
+        "temporary_eq",
+        "Value"
+      ],
+      "to": [
+        "temporary_if",
+        "Condition"
+      ]
+    },
+    {
+      "from": [
+        "temporary_if",
+        "True"
+      ],
+      "to": [
+        "temporary",
+        "In"
+      ]
+    },
+    {
+      "from": [
+        "reset_update",
+        "Out"
+      ],
+      "to": [
+        "reset_if",
+        "In"
+      ]
+    },
+    {
+      "from": [
+        "reset_frame",
+        "Value"
+      ],
+      "to": [
+        "reset_eq",
+        "A"
+      ]
+    },
+    {
+      "from": [
+        "reset_eq",
+        "Value"
+      ],
+      "to": [
+        "reset_if",
+        "Condition"
+      ]
+    },
+    {
+      "from": [
+        "reset_if",
+        "True"
+      ],
+      "to": [
+        "reset",
+        "In"
+      ]
+    },
+    {
+      "from": [
+        "notice",
+        "Out"
+      ],
+      "to": [
+        "log",
+        "In"
+      ]
+    },
+    {
+      "from": [
+        "notice",
+        "Message"
+      ],
+      "to": [
+        "log",
+        "Message"
+      ]
+    }
+  ],
+  "name": "Apply independently placed nested robot",
+  "nodes": [
+    {
+      "id": "start",
+      "position": [
+        0,
+        0
+      ],
+      "type": 1001,
+      "values": {}
+    },
+    {
+      "id": "timer",
+      "position": [
+        310,
+        0
+      ],
+      "type": 5010,
+      "values": {
+        "Name": "heartbeat",
+        "Owner": "nested_body",
+        "Repeat": true,
+        "Seconds": 0.25
+      }
+    },
+    {
+      "id": "pin",
+      "position": [
+        620,
+        0
+      ],
+      "type": 600113,
+      "values": {
+        "Entity": "nested",
+        "Value": 90
+      }
+    },
+    {
+      "id": "tick",
+      "position": [
+        930,
+        0
+      ],
+      "type": 1003,
+      "values": {
+        "NameFilter": "heartbeat",
+        "Receiver": "nested_body"
+      }
+    },
+    {
+      "id": "count",
+      "position": [
+        1240,
+        0
+      ],
+      "type": 3101,
+      "values": {
+        "Name": "ticks"
+      }
+    },
+    {
+      "id": "inc",
+      "position": [
+        1550,
+        0
+      ],
+      "type": 4030,
+      "values": {
+        "B": 1
+      }
+    },
+    {
+      "id": "save",
+      "position": [
+        0,
+        230
+      ],
+      "type": 3111,
+      "values": {
+        "Name": "ticks"
+      }
+    },
+    {
+      "id": "enlarge_update",
+      "position": [
+        310,
+        230
+      ],
+      "type": 1002,
+      "values": {}
+    },
+    {
+      "id": "enlarge_frame",
+      "position": [
+        620,
+        230
+      ],
+      "type": 5003,
+      "values": {}
+    },
+    {
+      "id": "enlarge_eq",
+      "position": [
+        930,
+        230
+      ],
+      "type": 4014,
+      "values": {
+        "B": 20,
+        "Epsilon": 0
+      }
+    },
+    {
+      "id": "enlarge_if",
+      "position": [
+        1240,
+        230
+      ],
+      "type": 2001,
+      "values": {}
+    },
+    {
+      "id": "enlarge",
+      "position": [
+        1550,
+        230
+      ],
+      "type": 9005,
+      "values": {
+        "Entity": "nested_body",
+        "Value": [
+          1.5,
+          1.5,
+          1.5
+        ]
+      }
+    },
+    {
+      "id": "queue_update",
+      "position": [
+        0,
+        460
+      ],
+      "type": 1002,
+      "values": {}
+    },
+    {
+      "id": "queue_frame",
+      "position": [
+        310,
+        460
+      ],
+      "type": 5003,
+      "values": {}
+    },
+    {
+      "id": "queue_eq",
+      "position": [
+        620,
+        460
+      ],
+      "type": 4014,
+      "values": {
+        "B": 60,
+        "Epsilon": 0
+      }
+    },
+    {
+      "id": "queue_if",
+      "position": [
+        930,
+        460
+      ],
+      "type": 2001,
+      "values": {}
+    },
+    {
+      "id": "queue",
+      "position": [
+        1240,
+        460
+      ],
+      "type": 200001,
+      "values": {
+        "Message": "Nested event survived adoption",
+        "Recipient": "nested_body"
+      }
+    },
+    {
+      "id": "apply",
+      "position": [
+        1550,
+        460
+      ],
+      "type": 8040,
+      "values": {
+        "Instance": "left"
+      }
+    },
+    {
+      "id": "speed_update",
+      "position": [
+        0,
+        690
+      ],
+      "type": 1002,
+      "values": {}
+    },
+    {
+      "id": "speed_frame",
+      "position": [
+        310,
+        690
+      ],
+      "type": 5003,
+      "values": {}
+    },
+    {
+      "id": "speed_eq",
+      "position": [
+        620,
+        690
+      ],
+      "type": 4014,
+      "values": {
+        "B": 100,
+        "Epsilon": 0
+      }
+    },
+    {
+      "id": "speed_if",
+      "position": [
+        930,
+        690
+      ],
+      "type": 2001,
+      "values": {}
+    },
+    {
+      "id": "speed",
+      "position": [
+        1240,
+        690
+      ],
+      "type": 600113,
+      "values": {
+        "Entity": "source",
+        "Value": 45
+      }
+    },
+    {
+      "id": "rename",
+      "position": [
+        1550,
+        690
+      ],
+      "type": 8017,
+      "values": {
+        "Entity": "source_body",
+        "Name": "Updated from source"
+      }
+    },
+    {
+      "id": "apply_source",
+      "position": [
+        0,
+        920
+      ],
+      "type": 8040,
+      "values": {
+        "Instance": "source"
+      }
+    },
+    {
+      "id": "temporary_update",
+      "position": [
+        310,
+        920
+      ],
+      "type": 1002,
+      "values": {}
+    },
+    {
+      "id": "temporary_frame",
+      "position": [
+        620,
+        920
+      ],
+      "type": 5003,
+      "values": {}
+    },
+    {
+      "id": "temporary_eq",
+      "position": [
+        930,
+        920
+      ],
+      "type": 4014,
+      "values": {
+        "B": 110,
+        "Epsilon": 0
+      }
+    },
+    {
+      "id": "temporary_if",
+      "position": [
+        1240,
+        920
+      ],
+      "type": 2001,
+      "values": {}
+    },
+    {
+      "id": "temporary",
+      "position": [
+        1550,
+        920
+      ],
+      "type": 9005,
+      "values": {
+        "Entity": "nested_body",
+        "Value": [
+          0.5,
+          0.5,
+          0.5
+        ]
+      }
+    },
+    {
+      "id": "reset_update",
+      "position": [
+        0,
+        1150
+      ],
+      "type": 1002,
+      "values": {}
+    },
+    {
+      "id": "reset_frame",
+      "position": [
+        310,
+        1150
+      ],
+      "type": 5003,
+      "values": {}
+    },
+    {
+      "id": "reset_eq",
+      "position": [
+        620,
+        1150
+      ],
+      "type": 4014,
+      "values": {
+        "B": 120,
+        "Epsilon": 0
+      }
+    },
+    {
+      "id": "reset_if",
+      "position": [
+        930,
+        1150
+      ],
+      "type": 2001,
+      "values": {}
+    },
+    {
+      "id": "reset",
+      "position": [
+        1240,
+        1150
+      ],
+      "type": 8039,
+      "values": {
+        "Instance": "left"
+      }
+    },
+    {
+      "id": "notice",
+      "position": [
+        1550,
+        1150
+      ],
+      "type": 100001,
+      "values": {
+        "Receiver": "nested_body"
+      }
+    },
+    {
+      "id": "log",
+      "position": [
+        0,
+        1380
+      ],
+      "type": 27001,
+      "values": {}
+    }
+  ],
+  "version": 1
+}

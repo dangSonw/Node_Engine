@@ -1,0 +1,7640 @@
+{
+  "active_camera": "camera",
+  "entities": [
+    {
+      "id": "snake_head",
+      "material": {
+        "asset": "head",
+        "overrides": {}
+      },
+      "mesh": "assets/cube.gltf",
+      "name": "Snake Head",
+      "position": [
+        3,
+        0.5,
+        5
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "scale": [
+        0.84,
+        0.65,
+        0.84
+      ]
+    },
+    {
+      "active": true,
+      "id": "segment_1",
+      "material": {
+        "asset": "body",
+        "overrides": {}
+      },
+      "mesh": "assets/cube.gltf",
+      "name": "Segment 1",
+      "position": [
+        2,
+        0.5,
+        5
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "scale": [
+        0.8,
+        0.58,
+        0.8
+      ]
+    },
+    {
+      "active": true,
+      "id": "segment_2",
+      "material": {
+        "asset": "body",
+        "overrides": {}
+      },
+      "mesh": "assets/cube.gltf",
+      "name": "Segment 2",
+      "position": [
+        1,
+        0.5,
+        5
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "scale": [
+        0.8,
+        0.58,
+        0.8
+      ]
+    },
+    {
+      "active": true,
+      "id": "segment_3",
+      "material": {
+        "asset": "body",
+        "overrides": {}
+      },
+      "mesh": "assets/cube.gltf",
+      "name": "Segment 3",
+      "position": [
+        0,
+        0.5,
+        5
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "scale": [
+        0.8,
+        0.58,
+        0.8
+      ]
+    },
+    {
+      "active": false,
+      "id": "segment_4",
+      "material": {
+        "asset": "body",
+        "overrides": {}
+      },
+      "mesh": "assets/cube.gltf",
+      "name": "Segment 4",
+      "position": [
+        0,
+        -5,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "scale": [
+        0.8,
+        0.58,
+        0.8
+      ]
+    },
+    {
+      "active": false,
+      "id": "segment_5",
+      "material": {
+        "asset": "body",
+        "overrides": {}
+      },
+      "mesh": "assets/cube.gltf",
+      "name": "Segment 5",
+      "position": [
+        0,
+        -5,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "scale": [
+        0.8,
+        0.58,
+        0.8
+      ]
+    },
+    {
+      "active": false,
+      "id": "segment_6",
+      "material": {
+        "asset": "body",
+        "overrides": {}
+      },
+      "mesh": "assets/cube.gltf",
+      "name": "Segment 6",
+      "position": [
+        0,
+        -5,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "scale": [
+        0.8,
+        0.58,
+        0.8
+      ]
+    },
+    {
+      "active": false,
+      "id": "segment_7",
+      "material": {
+        "asset": "body",
+        "overrides": {}
+      },
+      "mesh": "assets/cube.gltf",
+      "name": "Segment 7",
+      "position": [
+        0,
+        -5,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "scale": [
+        0.8,
+        0.58,
+        0.8
+      ]
+    },
+    {
+      "active": false,
+      "id": "segment_8",
+      "material": {
+        "asset": "body",
+        "overrides": {}
+      },
+      "mesh": "assets/cube.gltf",
+      "name": "Segment 8",
+      "position": [
+        0,
+        -5,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "scale": [
+        0.8,
+        0.58,
+        0.8
+      ]
+    },
+    {
+      "active": false,
+      "id": "segment_9",
+      "material": {
+        "asset": "body",
+        "overrides": {}
+      },
+      "mesh": "assets/cube.gltf",
+      "name": "Segment 9",
+      "position": [
+        0,
+        -5,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "scale": [
+        0.8,
+        0.58,
+        0.8
+      ]
+    },
+    {
+      "active": false,
+      "id": "segment_10",
+      "material": {
+        "asset": "body",
+        "overrides": {}
+      },
+      "mesh": "assets/cube.gltf",
+      "name": "Segment 10",
+      "position": [
+        0,
+        -5,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "scale": [
+        0.8,
+        0.58,
+        0.8
+      ]
+    },
+    {
+      "active": false,
+      "id": "segment_11",
+      "material": {
+        "asset": "body",
+        "overrides": {}
+      },
+      "mesh": "assets/cube.gltf",
+      "name": "Segment 11",
+      "position": [
+        0,
+        -5,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "scale": [
+        0.8,
+        0.58,
+        0.8
+      ]
+    },
+    {
+      "active": false,
+      "id": "segment_12",
+      "material": {
+        "asset": "body",
+        "overrides": {}
+      },
+      "mesh": "assets/cube.gltf",
+      "name": "Segment 12",
+      "position": [
+        0,
+        -5,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "scale": [
+        0.8,
+        0.58,
+        0.8
+      ]
+    },
+    {
+      "active": false,
+      "id": "segment_13",
+      "material": {
+        "asset": "body",
+        "overrides": {}
+      },
+      "mesh": "assets/cube.gltf",
+      "name": "Segment 13",
+      "position": [
+        0,
+        -5,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "scale": [
+        0.8,
+        0.58,
+        0.8
+      ]
+    },
+    {
+      "active": false,
+      "id": "segment_14",
+      "material": {
+        "asset": "body",
+        "overrides": {}
+      },
+      "mesh": "assets/cube.gltf",
+      "name": "Segment 14",
+      "position": [
+        0,
+        -5,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "scale": [
+        0.8,
+        0.58,
+        0.8
+      ]
+    },
+    {
+      "active": false,
+      "id": "segment_15",
+      "material": {
+        "asset": "body",
+        "overrides": {}
+      },
+      "mesh": "assets/cube.gltf",
+      "name": "Segment 15",
+      "position": [
+        0,
+        -5,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "scale": [
+        0.8,
+        0.58,
+        0.8
+      ]
+    },
+    {
+      "active": false,
+      "id": "segment_16",
+      "material": {
+        "asset": "body",
+        "overrides": {}
+      },
+      "mesh": "assets/cube.gltf",
+      "name": "Segment 16",
+      "position": [
+        0,
+        -5,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "scale": [
+        0.8,
+        0.58,
+        0.8
+      ]
+    },
+    {
+      "active": false,
+      "id": "segment_17",
+      "material": {
+        "asset": "body",
+        "overrides": {}
+      },
+      "mesh": "assets/cube.gltf",
+      "name": "Segment 17",
+      "position": [
+        0,
+        -5,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "scale": [
+        0.8,
+        0.58,
+        0.8
+      ]
+    },
+    {
+      "active": false,
+      "id": "segment_18",
+      "material": {
+        "asset": "body",
+        "overrides": {}
+      },
+      "mesh": "assets/cube.gltf",
+      "name": "Segment 18",
+      "position": [
+        0,
+        -5,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "scale": [
+        0.8,
+        0.58,
+        0.8
+      ]
+    },
+    {
+      "active": false,
+      "id": "segment_19",
+      "material": {
+        "asset": "body",
+        "overrides": {}
+      },
+      "mesh": "assets/cube.gltf",
+      "name": "Segment 19",
+      "position": [
+        0,
+        -5,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "scale": [
+        0.8,
+        0.58,
+        0.8
+      ]
+    },
+    {
+      "active": false,
+      "id": "segment_20",
+      "material": {
+        "asset": "body",
+        "overrides": {}
+      },
+      "mesh": "assets/cube.gltf",
+      "name": "Segment 20",
+      "position": [
+        0,
+        -5,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "scale": [
+        0.8,
+        0.58,
+        0.8
+      ]
+    },
+    {
+      "active": false,
+      "id": "segment_21",
+      "material": {
+        "asset": "body",
+        "overrides": {}
+      },
+      "mesh": "assets/cube.gltf",
+      "name": "Segment 21",
+      "position": [
+        0,
+        -5,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "scale": [
+        0.8,
+        0.58,
+        0.8
+      ]
+    },
+    {
+      "active": false,
+      "id": "segment_22",
+      "material": {
+        "asset": "body",
+        "overrides": {}
+      },
+      "mesh": "assets/cube.gltf",
+      "name": "Segment 22",
+      "position": [
+        0,
+        -5,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "scale": [
+        0.8,
+        0.58,
+        0.8
+      ]
+    },
+    {
+      "active": false,
+      "id": "segment_23",
+      "material": {
+        "asset": "body",
+        "overrides": {}
+      },
+      "mesh": "assets/cube.gltf",
+      "name": "Segment 23",
+      "position": [
+        0,
+        -5,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "scale": [
+        0.8,
+        0.58,
+        0.8
+      ]
+    },
+    {
+      "active": false,
+      "id": "segment_24",
+      "material": {
+        "asset": "body",
+        "overrides": {}
+      },
+      "mesh": "assets/cube.gltf",
+      "name": "Segment 24",
+      "position": [
+        0,
+        -5,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "scale": [
+        0.8,
+        0.58,
+        0.8
+      ]
+    },
+    {
+      "active": false,
+      "id": "segment_25",
+      "material": {
+        "asset": "body",
+        "overrides": {}
+      },
+      "mesh": "assets/cube.gltf",
+      "name": "Segment 25",
+      "position": [
+        0,
+        -5,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "scale": [
+        0.8,
+        0.58,
+        0.8
+      ]
+    },
+    {
+      "active": false,
+      "id": "segment_26",
+      "material": {
+        "asset": "body",
+        "overrides": {}
+      },
+      "mesh": "assets/cube.gltf",
+      "name": "Segment 26",
+      "position": [
+        0,
+        -5,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "scale": [
+        0.8,
+        0.58,
+        0.8
+      ]
+    },
+    {
+      "active": false,
+      "id": "segment_27",
+      "material": {
+        "asset": "body",
+        "overrides": {}
+      },
+      "mesh": "assets/cube.gltf",
+      "name": "Segment 27",
+      "position": [
+        0,
+        -5,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "scale": [
+        0.8,
+        0.58,
+        0.8
+      ]
+    },
+    {
+      "active": false,
+      "id": "segment_28",
+      "material": {
+        "asset": "body",
+        "overrides": {}
+      },
+      "mesh": "assets/cube.gltf",
+      "name": "Segment 28",
+      "position": [
+        0,
+        -5,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "scale": [
+        0.8,
+        0.58,
+        0.8
+      ]
+    },
+    {
+      "active": false,
+      "id": "segment_29",
+      "material": {
+        "asset": "body",
+        "overrides": {}
+      },
+      "mesh": "assets/cube.gltf",
+      "name": "Segment 29",
+      "position": [
+        0,
+        -5,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "scale": [
+        0.8,
+        0.58,
+        0.8
+      ]
+    },
+    {
+      "active": false,
+      "id": "segment_30",
+      "material": {
+        "asset": "body",
+        "overrides": {}
+      },
+      "mesh": "assets/cube.gltf",
+      "name": "Segment 30",
+      "position": [
+        0,
+        -5,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "scale": [
+        0.8,
+        0.58,
+        0.8
+      ]
+    },
+    {
+      "active": false,
+      "id": "segment_31",
+      "material": {
+        "asset": "body",
+        "overrides": {}
+      },
+      "mesh": "assets/cube.gltf",
+      "name": "Segment 31",
+      "position": [
+        0,
+        -5,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "scale": [
+        0.8,
+        0.58,
+        0.8
+      ]
+    },
+    {
+      "active": false,
+      "id": "segment_32",
+      "material": {
+        "asset": "body",
+        "overrides": {}
+      },
+      "mesh": "assets/cube.gltf",
+      "name": "Segment 32",
+      "position": [
+        0,
+        -5,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "scale": [
+        0.8,
+        0.58,
+        0.8
+      ]
+    },
+    {
+      "active": false,
+      "id": "segment_33",
+      "material": {
+        "asset": "body",
+        "overrides": {}
+      },
+      "mesh": "assets/cube.gltf",
+      "name": "Segment 33",
+      "position": [
+        0,
+        -5,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "scale": [
+        0.8,
+        0.58,
+        0.8
+      ]
+    },
+    {
+      "active": false,
+      "id": "segment_34",
+      "material": {
+        "asset": "body",
+        "overrides": {}
+      },
+      "mesh": "assets/cube.gltf",
+      "name": "Segment 34",
+      "position": [
+        0,
+        -5,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "scale": [
+        0.8,
+        0.58,
+        0.8
+      ]
+    },
+    {
+      "active": false,
+      "id": "segment_35",
+      "material": {
+        "asset": "body",
+        "overrides": {}
+      },
+      "mesh": "assets/cube.gltf",
+      "name": "Segment 35",
+      "position": [
+        0,
+        -5,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "scale": [
+        0.8,
+        0.58,
+        0.8
+      ]
+    },
+    {
+      "active": false,
+      "id": "segment_36",
+      "material": {
+        "asset": "body",
+        "overrides": {}
+      },
+      "mesh": "assets/cube.gltf",
+      "name": "Segment 36",
+      "position": [
+        0,
+        -5,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "scale": [
+        0.8,
+        0.58,
+        0.8
+      ]
+    },
+    {
+      "active": false,
+      "id": "segment_37",
+      "material": {
+        "asset": "body",
+        "overrides": {}
+      },
+      "mesh": "assets/cube.gltf",
+      "name": "Segment 37",
+      "position": [
+        0,
+        -5,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "scale": [
+        0.8,
+        0.58,
+        0.8
+      ]
+    },
+    {
+      "active": false,
+      "id": "segment_38",
+      "material": {
+        "asset": "body",
+        "overrides": {}
+      },
+      "mesh": "assets/cube.gltf",
+      "name": "Segment 38",
+      "position": [
+        0,
+        -5,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "scale": [
+        0.8,
+        0.58,
+        0.8
+      ]
+    },
+    {
+      "active": false,
+      "id": "segment_39",
+      "material": {
+        "asset": "body",
+        "overrides": {}
+      },
+      "mesh": "assets/cube.gltf",
+      "name": "Segment 39",
+      "position": [
+        0,
+        -5,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "scale": [
+        0.8,
+        0.58,
+        0.8
+      ]
+    },
+    {
+      "active": false,
+      "id": "segment_40",
+      "material": {
+        "asset": "body",
+        "overrides": {}
+      },
+      "mesh": "assets/cube.gltf",
+      "name": "Segment 40",
+      "position": [
+        0,
+        -5,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "scale": [
+        0.8,
+        0.58,
+        0.8
+      ]
+    },
+    {
+      "active": false,
+      "id": "segment_41",
+      "material": {
+        "asset": "body",
+        "overrides": {}
+      },
+      "mesh": "assets/cube.gltf",
+      "name": "Segment 41",
+      "position": [
+        0,
+        -5,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "scale": [
+        0.8,
+        0.58,
+        0.8
+      ]
+    },
+    {
+      "active": false,
+      "id": "segment_42",
+      "material": {
+        "asset": "body",
+        "overrides": {}
+      },
+      "mesh": "assets/cube.gltf",
+      "name": "Segment 42",
+      "position": [
+        0,
+        -5,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "scale": [
+        0.8,
+        0.58,
+        0.8
+      ]
+    },
+    {
+      "active": false,
+      "id": "segment_43",
+      "material": {
+        "asset": "body",
+        "overrides": {}
+      },
+      "mesh": "assets/cube.gltf",
+      "name": "Segment 43",
+      "position": [
+        0,
+        -5,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "scale": [
+        0.8,
+        0.58,
+        0.8
+      ]
+    },
+    {
+      "active": false,
+      "id": "segment_44",
+      "material": {
+        "asset": "body",
+        "overrides": {}
+      },
+      "mesh": "assets/cube.gltf",
+      "name": "Segment 44",
+      "position": [
+        0,
+        -5,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "scale": [
+        0.8,
+        0.58,
+        0.8
+      ]
+    },
+    {
+      "active": false,
+      "id": "segment_45",
+      "material": {
+        "asset": "body",
+        "overrides": {}
+      },
+      "mesh": "assets/cube.gltf",
+      "name": "Segment 45",
+      "position": [
+        0,
+        -5,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "scale": [
+        0.8,
+        0.58,
+        0.8
+      ]
+    },
+    {
+      "active": false,
+      "id": "segment_46",
+      "material": {
+        "asset": "body",
+        "overrides": {}
+      },
+      "mesh": "assets/cube.gltf",
+      "name": "Segment 46",
+      "position": [
+        0,
+        -5,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "scale": [
+        0.8,
+        0.58,
+        0.8
+      ]
+    },
+    {
+      "active": false,
+      "id": "segment_47",
+      "material": {
+        "asset": "body",
+        "overrides": {}
+      },
+      "mesh": "assets/cube.gltf",
+      "name": "Segment 47",
+      "position": [
+        0,
+        -5,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "scale": [
+        0.8,
+        0.58,
+        0.8
+      ]
+    },
+    {
+      "active": false,
+      "id": "segment_48",
+      "material": {
+        "asset": "body",
+        "overrides": {}
+      },
+      "mesh": "assets/cube.gltf",
+      "name": "Segment 48",
+      "position": [
+        0,
+        -5,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "scale": [
+        0.8,
+        0.58,
+        0.8
+      ]
+    },
+    {
+      "active": false,
+      "id": "segment_49",
+      "material": {
+        "asset": "body",
+        "overrides": {}
+      },
+      "mesh": "assets/cube.gltf",
+      "name": "Segment 49",
+      "position": [
+        0,
+        -5,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "scale": [
+        0.8,
+        0.58,
+        0.8
+      ]
+    },
+    {
+      "active": false,
+      "id": "segment_50",
+      "material": {
+        "asset": "body",
+        "overrides": {}
+      },
+      "mesh": "assets/cube.gltf",
+      "name": "Segment 50",
+      "position": [
+        0,
+        -5,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "scale": [
+        0.8,
+        0.58,
+        0.8
+      ]
+    },
+    {
+      "active": false,
+      "id": "segment_51",
+      "material": {
+        "asset": "body",
+        "overrides": {}
+      },
+      "mesh": "assets/cube.gltf",
+      "name": "Segment 51",
+      "position": [
+        0,
+        -5,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "scale": [
+        0.8,
+        0.58,
+        0.8
+      ]
+    },
+    {
+      "active": false,
+      "id": "segment_52",
+      "material": {
+        "asset": "body",
+        "overrides": {}
+      },
+      "mesh": "assets/cube.gltf",
+      "name": "Segment 52",
+      "position": [
+        0,
+        -5,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "scale": [
+        0.8,
+        0.58,
+        0.8
+      ]
+    },
+    {
+      "active": false,
+      "id": "segment_53",
+      "material": {
+        "asset": "body",
+        "overrides": {}
+      },
+      "mesh": "assets/cube.gltf",
+      "name": "Segment 53",
+      "position": [
+        0,
+        -5,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "scale": [
+        0.8,
+        0.58,
+        0.8
+      ]
+    },
+    {
+      "active": false,
+      "id": "segment_54",
+      "material": {
+        "asset": "body",
+        "overrides": {}
+      },
+      "mesh": "assets/cube.gltf",
+      "name": "Segment 54",
+      "position": [
+        0,
+        -5,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "scale": [
+        0.8,
+        0.58,
+        0.8
+      ]
+    },
+    {
+      "active": false,
+      "id": "segment_55",
+      "material": {
+        "asset": "body",
+        "overrides": {}
+      },
+      "mesh": "assets/cube.gltf",
+      "name": "Segment 55",
+      "position": [
+        0,
+        -5,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "scale": [
+        0.8,
+        0.58,
+        0.8
+      ]
+    },
+    {
+      "active": false,
+      "id": "segment_56",
+      "material": {
+        "asset": "body",
+        "overrides": {}
+      },
+      "mesh": "assets/cube.gltf",
+      "name": "Segment 56",
+      "position": [
+        0,
+        -5,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "scale": [
+        0.8,
+        0.58,
+        0.8
+      ]
+    },
+    {
+      "active": false,
+      "id": "segment_57",
+      "material": {
+        "asset": "body",
+        "overrides": {}
+      },
+      "mesh": "assets/cube.gltf",
+      "name": "Segment 57",
+      "position": [
+        0,
+        -5,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "scale": [
+        0.8,
+        0.58,
+        0.8
+      ]
+    },
+    {
+      "active": false,
+      "id": "segment_58",
+      "material": {
+        "asset": "body",
+        "overrides": {}
+      },
+      "mesh": "assets/cube.gltf",
+      "name": "Segment 58",
+      "position": [
+        0,
+        -5,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "scale": [
+        0.8,
+        0.58,
+        0.8
+      ]
+    },
+    {
+      "active": false,
+      "id": "segment_59",
+      "material": {
+        "asset": "body",
+        "overrides": {}
+      },
+      "mesh": "assets/cube.gltf",
+      "name": "Segment 59",
+      "position": [
+        0,
+        -5,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "scale": [
+        0.8,
+        0.58,
+        0.8
+      ]
+    },
+    {
+      "active": false,
+      "id": "segment_60",
+      "material": {
+        "asset": "body",
+        "overrides": {}
+      },
+      "mesh": "assets/cube.gltf",
+      "name": "Segment 60",
+      "position": [
+        0,
+        -5,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "scale": [
+        0.8,
+        0.58,
+        0.8
+      ]
+    },
+    {
+      "active": false,
+      "id": "segment_61",
+      "material": {
+        "asset": "body",
+        "overrides": {}
+      },
+      "mesh": "assets/cube.gltf",
+      "name": "Segment 61",
+      "position": [
+        0,
+        -5,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "scale": [
+        0.8,
+        0.58,
+        0.8
+      ]
+    },
+    {
+      "active": false,
+      "id": "segment_62",
+      "material": {
+        "asset": "body",
+        "overrides": {}
+      },
+      "mesh": "assets/cube.gltf",
+      "name": "Segment 62",
+      "position": [
+        0,
+        -5,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "scale": [
+        0.8,
+        0.58,
+        0.8
+      ]
+    },
+    {
+      "active": false,
+      "id": "segment_63",
+      "material": {
+        "asset": "body",
+        "overrides": {}
+      },
+      "mesh": "assets/cube.gltf",
+      "name": "Segment 63",
+      "position": [
+        0,
+        -5,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "scale": [
+        0.8,
+        0.58,
+        0.8
+      ]
+    },
+    {
+      "active": false,
+      "id": "segment_64",
+      "material": {
+        "asset": "body",
+        "overrides": {}
+      },
+      "mesh": "assets/cube.gltf",
+      "name": "Segment 64",
+      "position": [
+        0,
+        -5,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "scale": [
+        0.8,
+        0.58,
+        0.8
+      ]
+    },
+    {
+      "active": false,
+      "id": "segment_65",
+      "material": {
+        "asset": "body",
+        "overrides": {}
+      },
+      "mesh": "assets/cube.gltf",
+      "name": "Segment 65",
+      "position": [
+        0,
+        -5,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "scale": [
+        0.8,
+        0.58,
+        0.8
+      ]
+    },
+    {
+      "active": false,
+      "id": "segment_66",
+      "material": {
+        "asset": "body",
+        "overrides": {}
+      },
+      "mesh": "assets/cube.gltf",
+      "name": "Segment 66",
+      "position": [
+        0,
+        -5,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "scale": [
+        0.8,
+        0.58,
+        0.8
+      ]
+    },
+    {
+      "active": false,
+      "id": "segment_67",
+      "material": {
+        "asset": "body",
+        "overrides": {}
+      },
+      "mesh": "assets/cube.gltf",
+      "name": "Segment 67",
+      "position": [
+        0,
+        -5,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "scale": [
+        0.8,
+        0.58,
+        0.8
+      ]
+    },
+    {
+      "active": false,
+      "id": "segment_68",
+      "material": {
+        "asset": "body",
+        "overrides": {}
+      },
+      "mesh": "assets/cube.gltf",
+      "name": "Segment 68",
+      "position": [
+        0,
+        -5,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "scale": [
+        0.8,
+        0.58,
+        0.8
+      ]
+    },
+    {
+      "active": false,
+      "id": "segment_69",
+      "material": {
+        "asset": "body",
+        "overrides": {}
+      },
+      "mesh": "assets/cube.gltf",
+      "name": "Segment 69",
+      "position": [
+        0,
+        -5,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "scale": [
+        0.8,
+        0.58,
+        0.8
+      ]
+    },
+    {
+      "active": false,
+      "id": "segment_70",
+      "material": {
+        "asset": "body",
+        "overrides": {}
+      },
+      "mesh": "assets/cube.gltf",
+      "name": "Segment 70",
+      "position": [
+        0,
+        -5,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "scale": [
+        0.8,
+        0.58,
+        0.8
+      ]
+    },
+    {
+      "active": false,
+      "id": "segment_71",
+      "material": {
+        "asset": "body",
+        "overrides": {}
+      },
+      "mesh": "assets/cube.gltf",
+      "name": "Segment 71",
+      "position": [
+        0,
+        -5,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "scale": [
+        0.8,
+        0.58,
+        0.8
+      ]
+    },
+    {
+      "active": false,
+      "id": "segment_72",
+      "material": {
+        "asset": "body",
+        "overrides": {}
+      },
+      "mesh": "assets/cube.gltf",
+      "name": "Segment 72",
+      "position": [
+        0,
+        -5,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "scale": [
+        0.8,
+        0.58,
+        0.8
+      ]
+    },
+    {
+      "active": false,
+      "id": "segment_73",
+      "material": {
+        "asset": "body",
+        "overrides": {}
+      },
+      "mesh": "assets/cube.gltf",
+      "name": "Segment 73",
+      "position": [
+        0,
+        -5,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "scale": [
+        0.8,
+        0.58,
+        0.8
+      ]
+    },
+    {
+      "active": false,
+      "id": "segment_74",
+      "material": {
+        "asset": "body",
+        "overrides": {}
+      },
+      "mesh": "assets/cube.gltf",
+      "name": "Segment 74",
+      "position": [
+        0,
+        -5,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "scale": [
+        0.8,
+        0.58,
+        0.8
+      ]
+    },
+    {
+      "active": false,
+      "id": "segment_75",
+      "material": {
+        "asset": "body",
+        "overrides": {}
+      },
+      "mesh": "assets/cube.gltf",
+      "name": "Segment 75",
+      "position": [
+        0,
+        -5,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "scale": [
+        0.8,
+        0.58,
+        0.8
+      ]
+    },
+    {
+      "active": false,
+      "id": "segment_76",
+      "material": {
+        "asset": "body",
+        "overrides": {}
+      },
+      "mesh": "assets/cube.gltf",
+      "name": "Segment 76",
+      "position": [
+        0,
+        -5,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "scale": [
+        0.8,
+        0.58,
+        0.8
+      ]
+    },
+    {
+      "active": false,
+      "id": "segment_77",
+      "material": {
+        "asset": "body",
+        "overrides": {}
+      },
+      "mesh": "assets/cube.gltf",
+      "name": "Segment 77",
+      "position": [
+        0,
+        -5,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "scale": [
+        0.8,
+        0.58,
+        0.8
+      ]
+    },
+    {
+      "active": false,
+      "id": "segment_78",
+      "material": {
+        "asset": "body",
+        "overrides": {}
+      },
+      "mesh": "assets/cube.gltf",
+      "name": "Segment 78",
+      "position": [
+        0,
+        -5,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "scale": [
+        0.8,
+        0.58,
+        0.8
+      ]
+    },
+    {
+      "active": false,
+      "id": "segment_79",
+      "material": {
+        "asset": "body",
+        "overrides": {}
+      },
+      "mesh": "assets/cube.gltf",
+      "name": "Segment 79",
+      "position": [
+        0,
+        -5,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "scale": [
+        0.8,
+        0.58,
+        0.8
+      ]
+    },
+    {
+      "active": false,
+      "id": "segment_80",
+      "material": {
+        "asset": "body",
+        "overrides": {}
+      },
+      "mesh": "assets/cube.gltf",
+      "name": "Segment 80",
+      "position": [
+        0,
+        -5,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "scale": [
+        0.8,
+        0.58,
+        0.8
+      ]
+    },
+    {
+      "active": false,
+      "id": "segment_81",
+      "material": {
+        "asset": "body",
+        "overrides": {}
+      },
+      "mesh": "assets/cube.gltf",
+      "name": "Segment 81",
+      "position": [
+        0,
+        -5,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "scale": [
+        0.8,
+        0.58,
+        0.8
+      ]
+    },
+    {
+      "active": false,
+      "id": "segment_82",
+      "material": {
+        "asset": "body",
+        "overrides": {}
+      },
+      "mesh": "assets/cube.gltf",
+      "name": "Segment 82",
+      "position": [
+        0,
+        -5,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "scale": [
+        0.8,
+        0.58,
+        0.8
+      ]
+    },
+    {
+      "active": false,
+      "id": "segment_83",
+      "material": {
+        "asset": "body",
+        "overrides": {}
+      },
+      "mesh": "assets/cube.gltf",
+      "name": "Segment 83",
+      "position": [
+        0,
+        -5,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "scale": [
+        0.8,
+        0.58,
+        0.8
+      ]
+    },
+    {
+      "active": false,
+      "id": "segment_84",
+      "material": {
+        "asset": "body",
+        "overrides": {}
+      },
+      "mesh": "assets/cube.gltf",
+      "name": "Segment 84",
+      "position": [
+        0,
+        -5,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "scale": [
+        0.8,
+        0.58,
+        0.8
+      ]
+    },
+    {
+      "active": false,
+      "id": "segment_85",
+      "material": {
+        "asset": "body",
+        "overrides": {}
+      },
+      "mesh": "assets/cube.gltf",
+      "name": "Segment 85",
+      "position": [
+        0,
+        -5,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "scale": [
+        0.8,
+        0.58,
+        0.8
+      ]
+    },
+    {
+      "active": false,
+      "id": "segment_86",
+      "material": {
+        "asset": "body",
+        "overrides": {}
+      },
+      "mesh": "assets/cube.gltf",
+      "name": "Segment 86",
+      "position": [
+        0,
+        -5,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "scale": [
+        0.8,
+        0.58,
+        0.8
+      ]
+    },
+    {
+      "active": false,
+      "id": "segment_87",
+      "material": {
+        "asset": "body",
+        "overrides": {}
+      },
+      "mesh": "assets/cube.gltf",
+      "name": "Segment 87",
+      "position": [
+        0,
+        -5,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "scale": [
+        0.8,
+        0.58,
+        0.8
+      ]
+    },
+    {
+      "active": false,
+      "id": "segment_88",
+      "material": {
+        "asset": "body",
+        "overrides": {}
+      },
+      "mesh": "assets/cube.gltf",
+      "name": "Segment 88",
+      "position": [
+        0,
+        -5,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "scale": [
+        0.8,
+        0.58,
+        0.8
+      ]
+    },
+    {
+      "active": false,
+      "id": "segment_89",
+      "material": {
+        "asset": "body",
+        "overrides": {}
+      },
+      "mesh": "assets/cube.gltf",
+      "name": "Segment 89",
+      "position": [
+        0,
+        -5,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "scale": [
+        0.8,
+        0.58,
+        0.8
+      ]
+    },
+    {
+      "active": false,
+      "id": "segment_90",
+      "material": {
+        "asset": "body",
+        "overrides": {}
+      },
+      "mesh": "assets/cube.gltf",
+      "name": "Segment 90",
+      "position": [
+        0,
+        -5,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "scale": [
+        0.8,
+        0.58,
+        0.8
+      ]
+    },
+    {
+      "active": false,
+      "id": "segment_91",
+      "material": {
+        "asset": "body",
+        "overrides": {}
+      },
+      "mesh": "assets/cube.gltf",
+      "name": "Segment 91",
+      "position": [
+        0,
+        -5,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "scale": [
+        0.8,
+        0.58,
+        0.8
+      ]
+    },
+    {
+      "active": false,
+      "id": "segment_92",
+      "material": {
+        "asset": "body",
+        "overrides": {}
+      },
+      "mesh": "assets/cube.gltf",
+      "name": "Segment 92",
+      "position": [
+        0,
+        -5,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "scale": [
+        0.8,
+        0.58,
+        0.8
+      ]
+    },
+    {
+      "active": false,
+      "id": "segment_93",
+      "material": {
+        "asset": "body",
+        "overrides": {}
+      },
+      "mesh": "assets/cube.gltf",
+      "name": "Segment 93",
+      "position": [
+        0,
+        -5,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "scale": [
+        0.8,
+        0.58,
+        0.8
+      ]
+    },
+    {
+      "active": false,
+      "id": "segment_94",
+      "material": {
+        "asset": "body",
+        "overrides": {}
+      },
+      "mesh": "assets/cube.gltf",
+      "name": "Segment 94",
+      "position": [
+        0,
+        -5,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "scale": [
+        0.8,
+        0.58,
+        0.8
+      ]
+    },
+    {
+      "active": false,
+      "id": "segment_95",
+      "material": {
+        "asset": "body",
+        "overrides": {}
+      },
+      "mesh": "assets/cube.gltf",
+      "name": "Segment 95",
+      "position": [
+        0,
+        -5,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "scale": [
+        0.8,
+        0.58,
+        0.8
+      ]
+    },
+    {
+      "active": false,
+      "id": "segment_96",
+      "material": {
+        "asset": "body",
+        "overrides": {}
+      },
+      "mesh": "assets/cube.gltf",
+      "name": "Segment 96",
+      "position": [
+        0,
+        -5,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "scale": [
+        0.8,
+        0.58,
+        0.8
+      ]
+    },
+    {
+      "active": false,
+      "id": "segment_97",
+      "material": {
+        "asset": "body",
+        "overrides": {}
+      },
+      "mesh": "assets/cube.gltf",
+      "name": "Segment 97",
+      "position": [
+        0,
+        -5,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "scale": [
+        0.8,
+        0.58,
+        0.8
+      ]
+    },
+    {
+      "active": false,
+      "id": "segment_98",
+      "material": {
+        "asset": "body",
+        "overrides": {}
+      },
+      "mesh": "assets/cube.gltf",
+      "name": "Segment 98",
+      "position": [
+        0,
+        -5,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "scale": [
+        0.8,
+        0.58,
+        0.8
+      ]
+    },
+    {
+      "active": false,
+      "id": "segment_99",
+      "material": {
+        "asset": "body",
+        "overrides": {}
+      },
+      "mesh": "assets/cube.gltf",
+      "name": "Segment 99",
+      "position": [
+        0,
+        -5,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "scale": [
+        0.8,
+        0.58,
+        0.8
+      ]
+    },
+    {
+      "active": false,
+      "id": "segment_100",
+      "material": {
+        "asset": "body",
+        "overrides": {}
+      },
+      "mesh": "assets/cube.gltf",
+      "name": "Segment 100",
+      "position": [
+        0,
+        -5,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "scale": [
+        0.8,
+        0.58,
+        0.8
+      ]
+    },
+    {
+      "active": false,
+      "id": "segment_101",
+      "material": {
+        "asset": "body",
+        "overrides": {}
+      },
+      "mesh": "assets/cube.gltf",
+      "name": "Segment 101",
+      "position": [
+        0,
+        -5,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "scale": [
+        0.8,
+        0.58,
+        0.8
+      ]
+    },
+    {
+      "active": false,
+      "id": "segment_102",
+      "material": {
+        "asset": "body",
+        "overrides": {}
+      },
+      "mesh": "assets/cube.gltf",
+      "name": "Segment 102",
+      "position": [
+        0,
+        -5,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "scale": [
+        0.8,
+        0.58,
+        0.8
+      ]
+    },
+    {
+      "active": false,
+      "id": "segment_103",
+      "material": {
+        "asset": "body",
+        "overrides": {}
+      },
+      "mesh": "assets/cube.gltf",
+      "name": "Segment 103",
+      "position": [
+        0,
+        -5,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "scale": [
+        0.8,
+        0.58,
+        0.8
+      ]
+    },
+    {
+      "active": false,
+      "id": "segment_104",
+      "material": {
+        "asset": "body",
+        "overrides": {}
+      },
+      "mesh": "assets/cube.gltf",
+      "name": "Segment 104",
+      "position": [
+        0,
+        -5,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "scale": [
+        0.8,
+        0.58,
+        0.8
+      ]
+    },
+    {
+      "active": false,
+      "id": "segment_105",
+      "material": {
+        "asset": "body",
+        "overrides": {}
+      },
+      "mesh": "assets/cube.gltf",
+      "name": "Segment 105",
+      "position": [
+        0,
+        -5,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "scale": [
+        0.8,
+        0.58,
+        0.8
+      ]
+    },
+    {
+      "active": false,
+      "id": "segment_106",
+      "material": {
+        "asset": "body",
+        "overrides": {}
+      },
+      "mesh": "assets/cube.gltf",
+      "name": "Segment 106",
+      "position": [
+        0,
+        -5,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "scale": [
+        0.8,
+        0.58,
+        0.8
+      ]
+    },
+    {
+      "active": false,
+      "id": "segment_107",
+      "material": {
+        "asset": "body",
+        "overrides": {}
+      },
+      "mesh": "assets/cube.gltf",
+      "name": "Segment 107",
+      "position": [
+        0,
+        -5,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "scale": [
+        0.8,
+        0.58,
+        0.8
+      ]
+    },
+    {
+      "active": false,
+      "id": "segment_108",
+      "material": {
+        "asset": "body",
+        "overrides": {}
+      },
+      "mesh": "assets/cube.gltf",
+      "name": "Segment 108",
+      "position": [
+        0,
+        -5,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "scale": [
+        0.8,
+        0.58,
+        0.8
+      ]
+    },
+    {
+      "active": false,
+      "id": "segment_109",
+      "material": {
+        "asset": "body",
+        "overrides": {}
+      },
+      "mesh": "assets/cube.gltf",
+      "name": "Segment 109",
+      "position": [
+        0,
+        -5,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "scale": [
+        0.8,
+        0.58,
+        0.8
+      ]
+    },
+    {
+      "active": false,
+      "id": "segment_110",
+      "material": {
+        "asset": "body",
+        "overrides": {}
+      },
+      "mesh": "assets/cube.gltf",
+      "name": "Segment 110",
+      "position": [
+        0,
+        -5,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "scale": [
+        0.8,
+        0.58,
+        0.8
+      ]
+    },
+    {
+      "active": false,
+      "id": "segment_111",
+      "material": {
+        "asset": "body",
+        "overrides": {}
+      },
+      "mesh": "assets/cube.gltf",
+      "name": "Segment 111",
+      "position": [
+        0,
+        -5,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "scale": [
+        0.8,
+        0.58,
+        0.8
+      ]
+    },
+    {
+      "active": false,
+      "id": "segment_112",
+      "material": {
+        "asset": "body",
+        "overrides": {}
+      },
+      "mesh": "assets/cube.gltf",
+      "name": "Segment 112",
+      "position": [
+        0,
+        -5,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "scale": [
+        0.8,
+        0.58,
+        0.8
+      ]
+    },
+    {
+      "active": false,
+      "id": "segment_113",
+      "material": {
+        "asset": "body",
+        "overrides": {}
+      },
+      "mesh": "assets/cube.gltf",
+      "name": "Segment 113",
+      "position": [
+        0,
+        -5,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "scale": [
+        0.8,
+        0.58,
+        0.8
+      ]
+    },
+    {
+      "active": false,
+      "id": "segment_114",
+      "material": {
+        "asset": "body",
+        "overrides": {}
+      },
+      "mesh": "assets/cube.gltf",
+      "name": "Segment 114",
+      "position": [
+        0,
+        -5,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "scale": [
+        0.8,
+        0.58,
+        0.8
+      ]
+    },
+    {
+      "active": false,
+      "id": "segment_115",
+      "material": {
+        "asset": "body",
+        "overrides": {}
+      },
+      "mesh": "assets/cube.gltf",
+      "name": "Segment 115",
+      "position": [
+        0,
+        -5,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "scale": [
+        0.8,
+        0.58,
+        0.8
+      ]
+    },
+    {
+      "active": false,
+      "id": "segment_116",
+      "material": {
+        "asset": "body",
+        "overrides": {}
+      },
+      "mesh": "assets/cube.gltf",
+      "name": "Segment 116",
+      "position": [
+        0,
+        -5,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "scale": [
+        0.8,
+        0.58,
+        0.8
+      ]
+    },
+    {
+      "active": false,
+      "id": "segment_117",
+      "material": {
+        "asset": "body",
+        "overrides": {}
+      },
+      "mesh": "assets/cube.gltf",
+      "name": "Segment 117",
+      "position": [
+        0,
+        -5,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "scale": [
+        0.8,
+        0.58,
+        0.8
+      ]
+    },
+    {
+      "active": false,
+      "id": "segment_118",
+      "material": {
+        "asset": "body",
+        "overrides": {}
+      },
+      "mesh": "assets/cube.gltf",
+      "name": "Segment 118",
+      "position": [
+        0,
+        -5,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "scale": [
+        0.8,
+        0.58,
+        0.8
+      ]
+    },
+    {
+      "active": false,
+      "id": "segment_119",
+      "material": {
+        "asset": "body",
+        "overrides": {}
+      },
+      "mesh": "assets/cube.gltf",
+      "name": "Segment 119",
+      "position": [
+        0,
+        -5,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "scale": [
+        0.8,
+        0.58,
+        0.8
+      ]
+    },
+    {
+      "active": false,
+      "id": "segment_120",
+      "material": {
+        "asset": "body",
+        "overrides": {}
+      },
+      "mesh": "assets/cube.gltf",
+      "name": "Segment 120",
+      "position": [
+        0,
+        -5,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "scale": [
+        0.8,
+        0.58,
+        0.8
+      ]
+    },
+    {
+      "active": false,
+      "id": "segment_121",
+      "material": {
+        "asset": "body",
+        "overrides": {}
+      },
+      "mesh": "assets/cube.gltf",
+      "name": "Segment 121",
+      "position": [
+        0,
+        -5,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "scale": [
+        0.8,
+        0.58,
+        0.8
+      ]
+    },
+    {
+      "active": false,
+      "id": "segment_122",
+      "material": {
+        "asset": "body",
+        "overrides": {}
+      },
+      "mesh": "assets/cube.gltf",
+      "name": "Segment 122",
+      "position": [
+        0,
+        -5,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "scale": [
+        0.8,
+        0.58,
+        0.8
+      ]
+    },
+    {
+      "active": false,
+      "id": "segment_123",
+      "material": {
+        "asset": "body",
+        "overrides": {}
+      },
+      "mesh": "assets/cube.gltf",
+      "name": "Segment 123",
+      "position": [
+        0,
+        -5,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "scale": [
+        0.8,
+        0.58,
+        0.8
+      ]
+    },
+    {
+      "active": false,
+      "id": "segment_124",
+      "material": {
+        "asset": "body",
+        "overrides": {}
+      },
+      "mesh": "assets/cube.gltf",
+      "name": "Segment 124",
+      "position": [
+        0,
+        -5,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "scale": [
+        0.8,
+        0.58,
+        0.8
+      ]
+    },
+    {
+      "active": false,
+      "id": "segment_125",
+      "material": {
+        "asset": "body",
+        "overrides": {}
+      },
+      "mesh": "assets/cube.gltf",
+      "name": "Segment 125",
+      "position": [
+        0,
+        -5,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "scale": [
+        0.8,
+        0.58,
+        0.8
+      ]
+    },
+    {
+      "active": false,
+      "id": "segment_126",
+      "material": {
+        "asset": "body",
+        "overrides": {}
+      },
+      "mesh": "assets/cube.gltf",
+      "name": "Segment 126",
+      "position": [
+        0,
+        -5,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "scale": [
+        0.8,
+        0.58,
+        0.8
+      ]
+    },
+    {
+      "active": false,
+      "id": "segment_127",
+      "material": {
+        "asset": "body",
+        "overrides": {}
+      },
+      "mesh": "assets/cube.gltf",
+      "name": "Segment 127",
+      "position": [
+        0,
+        -5,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "scale": [
+        0.8,
+        0.58,
+        0.8
+      ]
+    },
+    {
+      "active": false,
+      "id": "segment_128",
+      "material": {
+        "asset": "body",
+        "overrides": {}
+      },
+      "mesh": "assets/cube.gltf",
+      "name": "Segment 128",
+      "position": [
+        0,
+        -5,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "scale": [
+        0.8,
+        0.58,
+        0.8
+      ]
+    },
+    {
+      "active": false,
+      "id": "segment_129",
+      "material": {
+        "asset": "body",
+        "overrides": {}
+      },
+      "mesh": "assets/cube.gltf",
+      "name": "Segment 129",
+      "position": [
+        0,
+        -5,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "scale": [
+        0.8,
+        0.58,
+        0.8
+      ]
+    },
+    {
+      "active": false,
+      "id": "segment_130",
+      "material": {
+        "asset": "body",
+        "overrides": {}
+      },
+      "mesh": "assets/cube.gltf",
+      "name": "Segment 130",
+      "position": [
+        0,
+        -5,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "scale": [
+        0.8,
+        0.58,
+        0.8
+      ]
+    },
+    {
+      "active": false,
+      "id": "segment_131",
+      "material": {
+        "asset": "body",
+        "overrides": {}
+      },
+      "mesh": "assets/cube.gltf",
+      "name": "Segment 131",
+      "position": [
+        0,
+        -5,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "scale": [
+        0.8,
+        0.58,
+        0.8
+      ]
+    },
+    {
+      "active": false,
+      "id": "segment_132",
+      "material": {
+        "asset": "body",
+        "overrides": {}
+      },
+      "mesh": "assets/cube.gltf",
+      "name": "Segment 132",
+      "position": [
+        0,
+        -5,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "scale": [
+        0.8,
+        0.58,
+        0.8
+      ]
+    },
+    {
+      "active": false,
+      "id": "segment_133",
+      "material": {
+        "asset": "body",
+        "overrides": {}
+      },
+      "mesh": "assets/cube.gltf",
+      "name": "Segment 133",
+      "position": [
+        0,
+        -5,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "scale": [
+        0.8,
+        0.58,
+        0.8
+      ]
+    },
+    {
+      "active": false,
+      "id": "segment_134",
+      "material": {
+        "asset": "body",
+        "overrides": {}
+      },
+      "mesh": "assets/cube.gltf",
+      "name": "Segment 134",
+      "position": [
+        0,
+        -5,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "scale": [
+        0.8,
+        0.58,
+        0.8
+      ]
+    },
+    {
+      "active": false,
+      "id": "segment_135",
+      "material": {
+        "asset": "body",
+        "overrides": {}
+      },
+      "mesh": "assets/cube.gltf",
+      "name": "Segment 135",
+      "position": [
+        0,
+        -5,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "scale": [
+        0.8,
+        0.58,
+        0.8
+      ]
+    },
+    {
+      "active": false,
+      "id": "segment_136",
+      "material": {
+        "asset": "body",
+        "overrides": {}
+      },
+      "mesh": "assets/cube.gltf",
+      "name": "Segment 136",
+      "position": [
+        0,
+        -5,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "scale": [
+        0.8,
+        0.58,
+        0.8
+      ]
+    },
+    {
+      "active": false,
+      "id": "segment_137",
+      "material": {
+        "asset": "body",
+        "overrides": {}
+      },
+      "mesh": "assets/cube.gltf",
+      "name": "Segment 137",
+      "position": [
+        0,
+        -5,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "scale": [
+        0.8,
+        0.58,
+        0.8
+      ]
+    },
+    {
+      "active": false,
+      "id": "segment_138",
+      "material": {
+        "asset": "body",
+        "overrides": {}
+      },
+      "mesh": "assets/cube.gltf",
+      "name": "Segment 138",
+      "position": [
+        0,
+        -5,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "scale": [
+        0.8,
+        0.58,
+        0.8
+      ]
+    },
+    {
+      "active": false,
+      "id": "segment_139",
+      "material": {
+        "asset": "body",
+        "overrides": {}
+      },
+      "mesh": "assets/cube.gltf",
+      "name": "Segment 139",
+      "position": [
+        0,
+        -5,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "scale": [
+        0.8,
+        0.58,
+        0.8
+      ]
+    },
+    {
+      "active": false,
+      "id": "segment_140",
+      "material": {
+        "asset": "body",
+        "overrides": {}
+      },
+      "mesh": "assets/cube.gltf",
+      "name": "Segment 140",
+      "position": [
+        0,
+        -5,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "scale": [
+        0.8,
+        0.58,
+        0.8
+      ]
+    },
+    {
+      "active": false,
+      "id": "segment_141",
+      "material": {
+        "asset": "body",
+        "overrides": {}
+      },
+      "mesh": "assets/cube.gltf",
+      "name": "Segment 141",
+      "position": [
+        0,
+        -5,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "scale": [
+        0.8,
+        0.58,
+        0.8
+      ]
+    },
+    {
+      "active": false,
+      "id": "segment_142",
+      "material": {
+        "asset": "body",
+        "overrides": {}
+      },
+      "mesh": "assets/cube.gltf",
+      "name": "Segment 142",
+      "position": [
+        0,
+        -5,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "scale": [
+        0.8,
+        0.58,
+        0.8
+      ]
+    },
+    {
+      "active": false,
+      "id": "segment_143",
+      "material": {
+        "asset": "body",
+        "overrides": {}
+      },
+      "mesh": "assets/cube.gltf",
+      "name": "Segment 143",
+      "position": [
+        0,
+        -5,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "scale": [
+        0.8,
+        0.58,
+        0.8
+      ]
+    },
+    {
+      "id": "eye_left",
+      "material": {
+        "asset": "eye",
+        "overrides": {}
+      },
+      "mesh": "assets/cube.gltf",
+      "name": "Eye Left",
+      "parent": "snake_head",
+      "position": [
+        0.51,
+        0.22,
+        -0.23
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "scale": [
+        0.06,
+        0.17,
+        0.16
+      ]
+    },
+    {
+      "id": "eye_right",
+      "material": {
+        "asset": "eye",
+        "overrides": {}
+      },
+      "mesh": "assets/cube.gltf",
+      "name": "Eye Right",
+      "parent": "snake_head",
+      "position": [
+        0.51,
+        0.22,
+        0.23
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "scale": [
+        0.06,
+        0.17,
+        0.16
+      ]
+    },
+    {
+      "id": "food",
+      "material": {
+        "asset": "food",
+        "overrides": {}
+      },
+      "mesh": "assets/cube.gltf",
+      "name": "Food",
+      "position": [
+        6,
+        0.5,
+        5
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "scale": [
+        0.58,
+        0.65,
+        0.58
+      ]
+    },
+    {
+      "id": "tile_0_0",
+      "material": {
+        "asset": "tile_a",
+        "overrides": {}
+      },
+      "mesh": "assets/cube.gltf",
+      "name": "Tile 0 0",
+      "position": [
+        0,
+        -0.08,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "scale": [
+        0.98,
+        0.2,
+        0.98
+      ]
+    },
+    {
+      "id": "tile_1_0",
+      "material": {
+        "asset": "tile_b",
+        "overrides": {}
+      },
+      "mesh": "assets/cube.gltf",
+      "name": "Tile 1 0",
+      "position": [
+        1,
+        -0.08,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "scale": [
+        0.98,
+        0.2,
+        0.98
+      ]
+    },
+    {
+      "id": "tile_2_0",
+      "material": {
+        "asset": "tile_a",
+        "overrides": {}
+      },
+      "mesh": "assets/cube.gltf",
+      "name": "Tile 2 0",
+      "position": [
+        2,
+        -0.08,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "scale": [
+        0.98,
+        0.2,
+        0.98
+      ]
+    },
+    {
+      "id": "tile_3_0",
+      "material": {
+        "asset": "tile_b",
+        "overrides": {}
+      },
+      "mesh": "assets/cube.gltf",
+      "name": "Tile 3 0",
+      "position": [
+        3,
+        -0.08,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "scale": [
+        0.98,
+        0.2,
+        0.98
+      ]
+    },
+    {
+      "id": "tile_4_0",
+      "material": {
+        "asset": "tile_a",
+        "overrides": {}
+      },
+      "mesh": "assets/cube.gltf",
+      "name": "Tile 4 0",
+      "position": [
+        4,
+        -0.08,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "scale": [
+        0.98,
+        0.2,
+        0.98
+      ]
+    },
+    {
+      "id": "tile_5_0",
+      "material": {
+        "asset": "tile_b",
+        "overrides": {}
+      },
+      "mesh": "assets/cube.gltf",
+      "name": "Tile 5 0",
+      "position": [
+        5,
+        -0.08,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "scale": [
+        0.98,
+        0.2,
+        0.98
+      ]
+    },
+    {
+      "id": "tile_6_0",
+      "material": {
+        "asset": "tile_a",
+        "overrides": {}
+      },
+      "mesh": "assets/cube.gltf",
+      "name": "Tile 6 0",
+      "position": [
+        6,
+        -0.08,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "scale": [
+        0.98,
+        0.2,
+        0.98
+      ]
+    },
+    {
+      "id": "tile_7_0",
+      "material": {
+        "asset": "tile_b",
+        "overrides": {}
+      },
+      "mesh": "assets/cube.gltf",
+      "name": "Tile 7 0",
+      "position": [
+        7,
+        -0.08,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "scale": [
+        0.98,
+        0.2,
+        0.98
+      ]
+    },
+    {
+      "id": "tile_8_0",
+      "material": {
+        "asset": "tile_a",
+        "overrides": {}
+      },
+      "mesh": "assets/cube.gltf",
+      "name": "Tile 8 0",
+      "position": [
+        8,
+        -0.08,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "scale": [
+        0.98,
+        0.2,
+        0.98
+      ]
+    },
+    {
+      "id": "tile_9_0",
+      "material": {
+        "asset": "tile_b",
+        "overrides": {}
+      },
+      "mesh": "assets/cube.gltf",
+      "name": "Tile 9 0",
+      "position": [
+        9,
+        -0.08,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "scale": [
+        0.98,
+        0.2,
+        0.98
+      ]
+    },
+    {
+      "id": "tile_10_0",
+      "material": {
+        "asset": "tile_a",
+        "overrides": {}
+      },
+      "mesh": "assets/cube.gltf",
+      "name": "Tile 10 0",
+      "position": [
+        10,
+        -0.08,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "scale": [
+        0.98,
+        0.2,
+        0.98
+      ]
+    },
+    {
+      "id": "tile_11_0",
+      "material": {
+        "asset": "tile_b",
+        "overrides": {}
+      },
+      "mesh": "assets/cube.gltf",
+      "name": "Tile 11 0",
+      "position": [
+        11,
+        -0.08,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "scale": [
+        0.98,
+        0.2,
+        0.98
+      ]
+    },
+    {
+      "id": "tile_0_1",
+      "material": {
+        "asset": "tile_b",
+        "overrides": {}
+      },
+      "mesh": "assets/cube.gltf",
+      "name": "Tile 0 1",
+      "position": [
+        0,
+        -0.08,
+        1
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "scale": [
+        0.98,
+        0.2,
+        0.98
+      ]
+    },
+    {
+      "id": "tile_1_1",
+      "material": {
+        "asset": "tile_a",
+        "overrides": {}
+      },
+      "mesh": "assets/cube.gltf",
+      "name": "Tile 1 1",
+      "position": [
+        1,
+        -0.08,
+        1
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "scale": [
+        0.98,
+        0.2,
+        0.98
+      ]
+    },
+    {
+      "id": "tile_2_1",
+      "material": {
+        "asset": "tile_b",
+        "overrides": {}
+      },
+      "mesh": "assets/cube.gltf",
+      "name": "Tile 2 1",
+      "position": [
+        2,
+        -0.08,
+        1
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "scale": [
+        0.98,
+        0.2,
+        0.98
+      ]
+    },
+    {
+      "id": "tile_3_1",
+      "material": {
+        "asset": "tile_a",
+        "overrides": {}
+      },
+      "mesh": "assets/cube.gltf",
+      "name": "Tile 3 1",
+      "position": [
+        3,
+        -0.08,
+        1
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "scale": [
+        0.98,
+        0.2,
+        0.98
+      ]
+    },
+    {
+      "id": "tile_4_1",
+      "material": {
+        "asset": "tile_b",
+        "overrides": {}
+      },
+      "mesh": "assets/cube.gltf",
+      "name": "Tile 4 1",
+      "position": [
+        4,
+        -0.08,
+        1
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "scale": [
+        0.98,
+        0.2,
+        0.98
+      ]
+    },
+    {
+      "id": "tile_5_1",
+      "material": {
+        "asset": "tile_a",
+        "overrides": {}
+      },
+      "mesh": "assets/cube.gltf",
+      "name": "Tile 5 1",
+      "position": [
+        5,
+        -0.08,
+        1
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "scale": [
+        0.98,
+        0.2,
+        0.98
+      ]
+    },
+    {
+      "id": "tile_6_1",
+      "material": {
+        "asset": "tile_b",
+        "overrides": {}
+      },
+      "mesh": "assets/cube.gltf",
+      "name": "Tile 6 1",
+      "position": [
+        6,
+        -0.08,
+        1
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "scale": [
+        0.98,
+        0.2,
+        0.98
+      ]
+    },
+    {
+      "id": "tile_7_1",
+      "material": {
+        "asset": "tile_a",
+        "overrides": {}
+      },
+      "mesh": "assets/cube.gltf",
+      "name": "Tile 7 1",
+      "position": [
+        7,
+        -0.08,
+        1
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "scale": [
+        0.98,
+        0.2,
+        0.98
+      ]
+    },
+    {
+      "id": "tile_8_1",
+      "material": {
+        "asset": "tile_b",
+        "overrides": {}
+      },
+      "mesh": "assets/cube.gltf",
+      "name": "Tile 8 1",
+      "position": [
+        8,
+        -0.08,
+        1
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "scale": [
+        0.98,
+        0.2,
+        0.98
+      ]
+    },
+    {
+      "id": "tile_9_1",
+      "material": {
+        "asset": "tile_a",
+        "overrides": {}
+      },
+      "mesh": "assets/cube.gltf",
+      "name": "Tile 9 1",
+      "position": [
+        9,
+        -0.08,
+        1
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "scale": [
+        0.98,
+        0.2,
+        0.98
+      ]
+    },
+    {
+      "id": "tile_10_1",
+      "material": {
+        "asset": "tile_b",
+        "overrides": {}
+      },
+      "mesh": "assets/cube.gltf",
+      "name": "Tile 10 1",
+      "position": [
+        10,
+        -0.08,
+        1
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "scale": [
+        0.98,
+        0.2,
+        0.98
+      ]
+    },
+    {
+      "id": "tile_11_1",
+      "material": {
+        "asset": "tile_a",
+        "overrides": {}
+      },
+      "mesh": "assets/cube.gltf",
+      "name": "Tile 11 1",
+      "position": [
+        11,
+        -0.08,
+        1
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "scale": [
+        0.98,
+        0.2,
+        0.98
+      ]
+    },
+    {
+      "id": "tile_0_2",
+      "material": {
+        "asset": "tile_a",
+        "overrides": {}
+      },
+      "mesh": "assets/cube.gltf",
+      "name": "Tile 0 2",
+      "position": [
+        0,
+        -0.08,
+        2
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "scale": [
+        0.98,
+        0.2,
+        0.98
+      ]
+    },
+    {
+      "id": "tile_1_2",
+      "material": {
+        "asset": "tile_b",
+        "overrides": {}
+      },
+      "mesh": "assets/cube.gltf",
+      "name": "Tile 1 2",
+      "position": [
+        1,
+        -0.08,
+        2
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "scale": [
+        0.98,
+        0.2,
+        0.98
+      ]
+    },
+    {
+      "id": "tile_2_2",
+      "material": {
+        "asset": "tile_a",
+        "overrides": {}
+      },
+      "mesh": "assets/cube.gltf",
+      "name": "Tile 2 2",
+      "position": [
+        2,
+        -0.08,
+        2
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "scale": [
+        0.98,
+        0.2,
+        0.98
+      ]
+    },
+    {
+      "id": "tile_3_2",
+      "material": {
+        "asset": "tile_b",
+        "overrides": {}
+      },
+      "mesh": "assets/cube.gltf",
+      "name": "Tile 3 2",
+      "position": [
+        3,
+        -0.08,
+        2
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "scale": [
+        0.98,
+        0.2,
+        0.98
+      ]
+    },
+    {
+      "id": "tile_4_2",
+      "material": {
+        "asset": "tile_a",
+        "overrides": {}
+      },
+      "mesh": "assets/cube.gltf",
+      "name": "Tile 4 2",
+      "position": [
+        4,
+        -0.08,
+        2
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "scale": [
+        0.98,
+        0.2,
+        0.98
+      ]
+    },
+    {
+      "id": "tile_5_2",
+      "material": {
+        "asset": "tile_b",
+        "overrides": {}
+      },
+      "mesh": "assets/cube.gltf",
+      "name": "Tile 5 2",
+      "position": [
+        5,
+        -0.08,
+        2
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "scale": [
+        0.98,
+        0.2,
+        0.98
+      ]
+    },
+    {
+      "id": "tile_6_2",
+      "material": {
+        "asset": "tile_a",
+        "overrides": {}
+      },
+      "mesh": "assets/cube.gltf",
+      "name": "Tile 6 2",
+      "position": [
+        6,
+        -0.08,
+        2
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "scale": [
+        0.98,
+        0.2,
+        0.98
+      ]
+    },
+    {
+      "id": "tile_7_2",
+      "material": {
+        "asset": "tile_b",
+        "overrides": {}
+      },
+      "mesh": "assets/cube.gltf",
+      "name": "Tile 7 2",
+      "position": [
+        7,
+        -0.08,
+        2
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "scale": [
+        0.98,
+        0.2,
+        0.98
+      ]
+    },
+    {
+      "id": "tile_8_2",
+      "material": {
+        "asset": "tile_a",
+        "overrides": {}
+      },
+      "mesh": "assets/cube.gltf",
+      "name": "Tile 8 2",
+      "position": [
+        8,
+        -0.08,
+        2
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "scale": [
+        0.98,
+        0.2,
+        0.98
+      ]
+    },
+    {
+      "id": "tile_9_2",
+      "material": {
+        "asset": "tile_b",
+        "overrides": {}
+      },
+      "mesh": "assets/cube.gltf",
+      "name": "Tile 9 2",
+      "position": [
+        9,
+        -0.08,
+        2
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "scale": [
+        0.98,
+        0.2,
+        0.98
+      ]
+    },
+    {
+      "id": "tile_10_2",
+      "material": {
+        "asset": "tile_a",
+        "overrides": {}
+      },
+      "mesh": "assets/cube.gltf",
+      "name": "Tile 10 2",
+      "position": [
+        10,
+        -0.08,
+        2
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "scale": [
+        0.98,
+        0.2,
+        0.98
+      ]
+    },
+    {
+      "id": "tile_11_2",
+      "material": {
+        "asset": "tile_b",
+        "overrides": {}
+      },
+      "mesh": "assets/cube.gltf",
+      "name": "Tile 11 2",
+      "position": [
+        11,
+        -0.08,
+        2
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "scale": [
+        0.98,
+        0.2,
+        0.98
+      ]
+    },
+    {
+      "id": "tile_0_3",
+      "material": {
+        "asset": "tile_b",
+        "overrides": {}
+      },
+      "mesh": "assets/cube.gltf",
+      "name": "Tile 0 3",
+      "position": [
+        0,
+        -0.08,
+        3
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "scale": [
+        0.98,
+        0.2,
+        0.98
+      ]
+    },
+    {
+      "id": "tile_1_3",
+      "material": {
+        "asset": "tile_a",
+        "overrides": {}
+      },
+      "mesh": "assets/cube.gltf",
+      "name": "Tile 1 3",
+      "position": [
+        1,
+        -0.08,
+        3
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "scale": [
+        0.98,
+        0.2,
+        0.98
+      ]
+    },
+    {
+      "id": "tile_2_3",
+      "material": {
+        "asset": "tile_b",
+        "overrides": {}
+      },
+      "mesh": "assets/cube.gltf",
+      "name": "Tile 2 3",
+      "position": [
+        2,
+        -0.08,
+        3
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "scale": [
+        0.98,
+        0.2,
+        0.98
+      ]
+    },
+    {
+      "id": "tile_3_3",
+      "material": {
+        "asset": "tile_a",
+        "overrides": {}
+      },
+      "mesh": "assets/cube.gltf",
+      "name": "Tile 3 3",
+      "position": [
+        3,
+        -0.08,
+        3
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "scale": [
+        0.98,
+        0.2,
+        0.98
+      ]
+    },
+    {
+      "id": "tile_4_3",
+      "material": {
+        "asset": "tile_b",
+        "overrides": {}
+      },
+      "mesh": "assets/cube.gltf",
+      "name": "Tile 4 3",
+      "position": [
+        4,
+        -0.08,
+        3
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "scale": [
+        0.98,
+        0.2,
+        0.98
+      ]
+    },
+    {
+      "id": "tile_5_3",
+      "material": {
+        "asset": "tile_a",
+        "overrides": {}
+      },
+      "mesh": "assets/cube.gltf",
+      "name": "Tile 5 3",
+      "position": [
+        5,
+        -0.08,
+        3
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "scale": [
+        0.98,
+        0.2,
+        0.98
+      ]
+    },
+    {
+      "id": "tile_6_3",
+      "material": {
+        "asset": "tile_b",
+        "overrides": {}
+      },
+      "mesh": "assets/cube.gltf",
+      "name": "Tile 6 3",
+      "position": [
+        6,
+        -0.08,
+        3
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "scale": [
+        0.98,
+        0.2,
+        0.98
+      ]
+    },
+    {
+      "id": "tile_7_3",
+      "material": {
+        "asset": "tile_a",
+        "overrides": {}
+      },
+      "mesh": "assets/cube.gltf",
+      "name": "Tile 7 3",
+      "position": [
+        7,
+        -0.08,
+        3
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "scale": [
+        0.98,
+        0.2,
+        0.98
+      ]
+    },
+    {
+      "id": "tile_8_3",
+      "material": {
+        "asset": "tile_b",
+        "overrides": {}
+      },
+      "mesh": "assets/cube.gltf",
+      "name": "Tile 8 3",
+      "position": [
+        8,
+        -0.08,
+        3
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "scale": [
+        0.98,
+        0.2,
+        0.98
+      ]
+    },
+    {
+      "id": "tile_9_3",
+      "material": {
+        "asset": "tile_a",
+        "overrides": {}
+      },
+      "mesh": "assets/cube.gltf",
+      "name": "Tile 9 3",
+      "position": [
+        9,
+        -0.08,
+        3
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "scale": [
+        0.98,
+        0.2,
+        0.98
+      ]
+    },
+    {
+      "id": "tile_10_3",
+      "material": {
+        "asset": "tile_b",
+        "overrides": {}
+      },
+      "mesh": "assets/cube.gltf",
+      "name": "Tile 10 3",
+      "position": [
+        10,
+        -0.08,
+        3
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "scale": [
+        0.98,
+        0.2,
+        0.98
+      ]
+    },
+    {
+      "id": "tile_11_3",
+      "material": {
+        "asset": "tile_a",
+        "overrides": {}
+      },
+      "mesh": "assets/cube.gltf",
+      "name": "Tile 11 3",
+      "position": [
+        11,
+        -0.08,
+        3
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "scale": [
+        0.98,
+        0.2,
+        0.98
+      ]
+    },
+    {
+      "id": "tile_0_4",
+      "material": {
+        "asset": "tile_a",
+        "overrides": {}
+      },
+      "mesh": "assets/cube.gltf",
+      "name": "Tile 0 4",
+      "position": [
+        0,
+        -0.08,
+        4
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "scale": [
+        0.98,
+        0.2,
+        0.98
+      ]
+    },
+    {
+      "id": "tile_1_4",
+      "material": {
+        "asset": "tile_b",
+        "overrides": {}
+      },
+      "mesh": "assets/cube.gltf",
+      "name": "Tile 1 4",
+      "position": [
+        1,
+        -0.08,
+        4
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "scale": [
+        0.98,
+        0.2,
+        0.98
+      ]
+    },
+    {
+      "id": "tile_2_4",
+      "material": {
+        "asset": "tile_a",
+        "overrides": {}
+      },
+      "mesh": "assets/cube.gltf",
+      "name": "Tile 2 4",
+      "position": [
+        2,
+        -0.08,
+        4
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "scale": [
+        0.98,
+        0.2,
+        0.98
+      ]
+    },
+    {
+      "id": "tile_3_4",
+      "material": {
+        "asset": "tile_b",
+        "overrides": {}
+      },
+      "mesh": "assets/cube.gltf",
+      "name": "Tile 3 4",
+      "position": [
+        3,
+        -0.08,
+        4
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "scale": [
+        0.98,
+        0.2,
+        0.98
+      ]
+    },
+    {
+      "id": "tile_4_4",
+      "material": {
+        "asset": "tile_a",
+        "overrides": {}
+      },
+      "mesh": "assets/cube.gltf",
+      "name": "Tile 4 4",
+      "position": [
+        4,
+        -0.08,
+        4
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "scale": [
+        0.98,
+        0.2,
+        0.98
+      ]
+    },
+    {
+      "id": "tile_5_4",
+      "material": {
+        "asset": "tile_b",
+        "overrides": {}
+      },
+      "mesh": "assets/cube.gltf",
+      "name": "Tile 5 4",
+      "position": [
+        5,
+        -0.08,
+        4
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "scale": [
+        0.98,
+        0.2,
+        0.98
+      ]
+    },
+    {
+      "id": "tile_6_4",
+      "material": {
+        "asset": "tile_a",
+        "overrides": {}
+      },
+      "mesh": "assets/cube.gltf",
+      "name": "Tile 6 4",
+      "position": [
+        6,
+        -0.08,
+        4
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "scale": [
+        0.98,
+        0.2,
+        0.98
+      ]
+    },
+    {
+      "id": "tile_7_4",
+      "material": {
+        "asset": "tile_b",
+        "overrides": {}
+      },
+      "mesh": "assets/cube.gltf",
+      "name": "Tile 7 4",
+      "position": [
+        7,
+        -0.08,
+        4
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "scale": [
+        0.98,
+        0.2,
+        0.98
+      ]
+    },
+    {
+      "id": "tile_8_4",
+      "material": {
+        "asset": "tile_a",
+        "overrides": {}
+      },
+      "mesh": "assets/cube.gltf",
+      "name": "Tile 8 4",
+      "position": [
+        8,
+        -0.08,
+        4
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "scale": [
+        0.98,
+        0.2,
+        0.98
+      ]
+    },
+    {
+      "id": "tile_9_4",
+      "material": {
+        "asset": "tile_b",
+        "overrides": {}
+      },
+      "mesh": "assets/cube.gltf",
+      "name": "Tile 9 4",
+      "position": [
+        9,
+        -0.08,
+        4
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "scale": [
+        0.98,
+        0.2,
+        0.98
+      ]
+    },
+    {
+      "id": "tile_10_4",
+      "material": {
+        "asset": "tile_a",
+        "overrides": {}
+      },
+      "mesh": "assets/cube.gltf",
+      "name": "Tile 10 4",
+      "position": [
+        10,
+        -0.08,
+        4
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "scale": [
+        0.98,
+        0.2,
+        0.98
+      ]
+    },
+    {
+      "id": "tile_11_4",
+      "material": {
+        "asset": "tile_b",
+        "overrides": {}
+      },
+      "mesh": "assets/cube.gltf",
+      "name": "Tile 11 4",
+      "position": [
+        11,
+        -0.08,
+        4
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "scale": [
+        0.98,
+        0.2,
+        0.98
+      ]
+    },
+    {
+      "id": "tile_0_5",
+      "material": {
+        "asset": "tile_b",
+        "overrides": {}
+      },
+      "mesh": "assets/cube.gltf",
+      "name": "Tile 0 5",
+      "position": [
+        0,
+        -0.08,
+        5
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "scale": [
+        0.98,
+        0.2,
+        0.98
+      ]
+    },
+    {
+      "id": "tile_1_5",
+      "material": {
+        "asset": "tile_a",
+        "overrides": {}
+      },
+      "mesh": "assets/cube.gltf",
+      "name": "Tile 1 5",
+      "position": [
+        1,
+        -0.08,
+        5
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "scale": [
+        0.98,
+        0.2,
+        0.98
+      ]
+    },
+    {
+      "id": "tile_2_5",
+      "material": {
+        "asset": "tile_b",
+        "overrides": {}
+      },
+      "mesh": "assets/cube.gltf",
+      "name": "Tile 2 5",
+      "position": [
+        2,
+        -0.08,
+        5
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "scale": [
+        0.98,
+        0.2,
+        0.98
+      ]
+    },
+    {
+      "id": "tile_3_5",
+      "material": {
+        "asset": "tile_a",
+        "overrides": {}
+      },
+      "mesh": "assets/cube.gltf",
+      "name": "Tile 3 5",
+      "position": [
+        3,
+        -0.08,
+        5
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "scale": [
+        0.98,
+        0.2,
+        0.98
+      ]
+    },
+    {
+      "id": "tile_4_5",
+      "material": {
+        "asset": "tile_b",
+        "overrides": {}
+      },
+      "mesh": "assets/cube.gltf",
+      "name": "Tile 4 5",
+      "position": [
+        4,
+        -0.08,
+        5
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "scale": [
+        0.98,
+        0.2,
+        0.98
+      ]
+    },
+    {
+      "id": "tile_5_5",
+      "material": {
+        "asset": "tile_a",
+        "overrides": {}
+      },
+      "mesh": "assets/cube.gltf",
+      "name": "Tile 5 5",
+      "position": [
+        5,
+        -0.08,
+        5
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "scale": [
+        0.98,
+        0.2,
+        0.98
+      ]
+    },
+    {
+      "id": "tile_6_5",
+      "material": {
+        "asset": "tile_b",
+        "overrides": {}
+      },
+      "mesh": "assets/cube.gltf",
+      "name": "Tile 6 5",
+      "position": [
+        6,
+        -0.08,
+        5
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "scale": [
+        0.98,
+        0.2,
+        0.98
+      ]
+    },
+    {
+      "id": "tile_7_5",
+      "material": {
+        "asset": "tile_a",
+        "overrides": {}
+      },
+      "mesh": "assets/cube.gltf",
+      "name": "Tile 7 5",
+      "position": [
+        7,
+        -0.08,
+        5
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "scale": [
+        0.98,
+        0.2,
+        0.98
+      ]
+    },
+    {
+      "id": "tile_8_5",
+      "material": {
+        "asset": "tile_b",
+        "overrides": {}
+      },
+      "mesh": "assets/cube.gltf",
+      "name": "Tile 8 5",
+      "position": [
+        8,
+        -0.08,
+        5
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "scale": [
+        0.98,
+        0.2,
+        0.98
+      ]
+    },
+    {
+      "id": "tile_9_5",
+      "material": {
+        "asset": "tile_a",
+        "overrides": {}
+      },
+      "mesh": "assets/cube.gltf",
+      "name": "Tile 9 5",
+      "position": [
+        9,
+        -0.08,
+        5
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "scale": [
+        0.98,
+        0.2,
+        0.98
+      ]
+    },
+    {
+      "id": "tile_10_5",
+      "material": {
+        "asset": "tile_b",
+        "overrides": {}
+      },
+      "mesh": "assets/cube.gltf",
+      "name": "Tile 10 5",
+      "position": [
+        10,
+        -0.08,
+        5
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "scale": [
+        0.98,
+        0.2,
+        0.98
+      ]
+    },
+    {
+      "id": "tile_11_5",
+      "material": {
+        "asset": "tile_a",
+        "overrides": {}
+      },
+      "mesh": "assets/cube.gltf",
+      "name": "Tile 11 5",
+      "position": [
+        11,
+        -0.08,
+        5
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "scale": [
+        0.98,
+        0.2,
+        0.98
+      ]
+    },
+    {
+      "id": "tile_0_6",
+      "material": {
+        "asset": "tile_a",
+        "overrides": {}
+      },
+      "mesh": "assets/cube.gltf",
+      "name": "Tile 0 6",
+      "position": [
+        0,
+        -0.08,
+        6
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "scale": [
+        0.98,
+        0.2,
+        0.98
+      ]
+    },
+    {
+      "id": "tile_1_6",
+      "material": {
+        "asset": "tile_b",
+        "overrides": {}
+      },
+      "mesh": "assets/cube.gltf",
+      "name": "Tile 1 6",
+      "position": [
+        1,
+        -0.08,
+        6
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "scale": [
+        0.98,
+        0.2,
+        0.98
+      ]
+    },
+    {
+      "id": "tile_2_6",
+      "material": {
+        "asset": "tile_a",
+        "overrides": {}
+      },
+      "mesh": "assets/cube.gltf",
+      "name": "Tile 2 6",
+      "position": [
+        2,
+        -0.08,
+        6
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "scale": [
+        0.98,
+        0.2,
+        0.98
+      ]
+    },
+    {
+      "id": "tile_3_6",
+      "material": {
+        "asset": "tile_b",
+        "overrides": {}
+      },
+      "mesh": "assets/cube.gltf",
+      "name": "Tile 3 6",
+      "position": [
+        3,
+        -0.08,
+        6
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "scale": [
+        0.98,
+        0.2,
+        0.98
+      ]
+    },
+    {
+      "id": "tile_4_6",
+      "material": {
+        "asset": "tile_a",
+        "overrides": {}
+      },
+      "mesh": "assets/cube.gltf",
+      "name": "Tile 4 6",
+      "position": [
+        4,
+        -0.08,
+        6
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "scale": [
+        0.98,
+        0.2,
+        0.98
+      ]
+    },
+    {
+      "id": "tile_5_6",
+      "material": {
+        "asset": "tile_b",
+        "overrides": {}
+      },
+      "mesh": "assets/cube.gltf",
+      "name": "Tile 5 6",
+      "position": [
+        5,
+        -0.08,
+        6
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "scale": [
+        0.98,
+        0.2,
+        0.98
+      ]
+    },
+    {
+      "id": "tile_6_6",
+      "material": {
+        "asset": "tile_a",
+        "overrides": {}
+      },
+      "mesh": "assets/cube.gltf",
+      "name": "Tile 6 6",
+      "position": [
+        6,
+        -0.08,
+        6
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "scale": [
+        0.98,
+        0.2,
+        0.98
+      ]
+    },
+    {
+      "id": "tile_7_6",
+      "material": {
+        "asset": "tile_b",
+        "overrides": {}
+      },
+      "mesh": "assets/cube.gltf",
+      "name": "Tile 7 6",
+      "position": [
+        7,
+        -0.08,
+        6
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "scale": [
+        0.98,
+        0.2,
+        0.98
+      ]
+    },
+    {
+      "id": "tile_8_6",
+      "material": {
+        "asset": "tile_a",
+        "overrides": {}
+      },
+      "mesh": "assets/cube.gltf",
+      "name": "Tile 8 6",
+      "position": [
+        8,
+        -0.08,
+        6
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "scale": [
+        0.98,
+        0.2,
+        0.98
+      ]
+    },
+    {
+      "id": "tile_9_6",
+      "material": {
+        "asset": "tile_b",
+        "overrides": {}
+      },
+      "mesh": "assets/cube.gltf",
+      "name": "Tile 9 6",
+      "position": [
+        9,
+        -0.08,
+        6
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "scale": [
+        0.98,
+        0.2,
+        0.98
+      ]
+    },
+    {
+      "id": "tile_10_6",
+      "material": {
+        "asset": "tile_a",
+        "overrides": {}
+      },
+      "mesh": "assets/cube.gltf",
+      "name": "Tile 10 6",
+      "position": [
+        10,
+        -0.08,
+        6
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "scale": [
+        0.98,
+        0.2,
+        0.98
+      ]
+    },
+    {
+      "id": "tile_11_6",
+      "material": {
+        "asset": "tile_b",
+        "overrides": {}
+      },
+      "mesh": "assets/cube.gltf",
+      "name": "Tile 11 6",
+      "position": [
+        11,
+        -0.08,
+        6
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "scale": [
+        0.98,
+        0.2,
+        0.98
+      ]
+    },
+    {
+      "id": "tile_0_7",
+      "material": {
+        "asset": "tile_b",
+        "overrides": {}
+      },
+      "mesh": "assets/cube.gltf",
+      "name": "Tile 0 7",
+      "position": [
+        0,
+        -0.08,
+        7
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "scale": [
+        0.98,
+        0.2,
+        0.98
+      ]
+    },
+    {
+      "id": "tile_1_7",
+      "material": {
+        "asset": "tile_a",
+        "overrides": {}
+      },
+      "mesh": "assets/cube.gltf",
+      "name": "Tile 1 7",
+      "position": [
+        1,
+        -0.08,
+        7
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "scale": [
+        0.98,
+        0.2,
+        0.98
+      ]
+    },
+    {
+      "id": "tile_2_7",
+      "material": {
+        "asset": "tile_b",
+        "overrides": {}
+      },
+      "mesh": "assets/cube.gltf",
+      "name": "Tile 2 7",
+      "position": [
+        2,
+        -0.08,
+        7
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "scale": [
+        0.98,
+        0.2,
+        0.98
+      ]
+    },
+    {
+      "id": "tile_3_7",
+      "material": {
+        "asset": "tile_a",
+        "overrides": {}
+      },
+      "mesh": "assets/cube.gltf",
+      "name": "Tile 3 7",
+      "position": [
+        3,
+        -0.08,
+        7
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "scale": [
+        0.98,
+        0.2,
+        0.98
+      ]
+    },
+    {
+      "id": "tile_4_7",
+      "material": {
+        "asset": "tile_b",
+        "overrides": {}
+      },
+      "mesh": "assets/cube.gltf",
+      "name": "Tile 4 7",
+      "position": [
+        4,
+        -0.08,
+        7
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "scale": [
+        0.98,
+        0.2,
+        0.98
+      ]
+    },
+    {
+      "id": "tile_5_7",
+      "material": {
+        "asset": "tile_a",
+        "overrides": {}
+      },
+      "mesh": "assets/cube.gltf",
+      "name": "Tile 5 7",
+      "position": [
+        5,
+        -0.08,
+        7
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "scale": [
+        0.98,
+        0.2,
+        0.98
+      ]
+    },
+    {
+      "id": "tile_6_7",
+      "material": {
+        "asset": "tile_b",
+        "overrides": {}
+      },
+      "mesh": "assets/cube.gltf",
+      "name": "Tile 6 7",
+      "position": [
+        6,
+        -0.08,
+        7
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "scale": [
+        0.98,
+        0.2,
+        0.98
+      ]
+    },
+    {
+      "id": "tile_7_7",
+      "material": {
+        "asset": "tile_a",
+        "overrides": {}
+      },
+      "mesh": "assets/cube.gltf",
+      "name": "Tile 7 7",
+      "position": [
+        7,
+        -0.08,
+        7
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "scale": [
+        0.98,
+        0.2,
+        0.98
+      ]
+    },
+    {
+      "id": "tile_8_7",
+      "material": {
+        "asset": "tile_b",
+        "overrides": {}
+      },
+      "mesh": "assets/cube.gltf",
+      "name": "Tile 8 7",
+      "position": [
+        8,
+        -0.08,
+        7
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "scale": [
+        0.98,
+        0.2,
+        0.98
+      ]
+    },
+    {
+      "id": "tile_9_7",
+      "material": {
+        "asset": "tile_a",
+        "overrides": {}
+      },
+      "mesh": "assets/cube.gltf",
+      "name": "Tile 9 7",
+      "position": [
+        9,
+        -0.08,
+        7
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "scale": [
+        0.98,
+        0.2,
+        0.98
+      ]
+    },
+    {
+      "id": "tile_10_7",
+      "material": {
+        "asset": "tile_b",
+        "overrides": {}
+      },
+      "mesh": "assets/cube.gltf",
+      "name": "Tile 10 7",
+      "position": [
+        10,
+        -0.08,
+        7
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "scale": [
+        0.98,
+        0.2,
+        0.98
+      ]
+    },
+    {
+      "id": "tile_11_7",
+      "material": {
+        "asset": "tile_a",
+        "overrides": {}
+      },
+      "mesh": "assets/cube.gltf",
+      "name": "Tile 11 7",
+      "position": [
+        11,
+        -0.08,
+        7
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "scale": [
+        0.98,
+        0.2,
+        0.98
+      ]
+    },
+    {
+      "id": "tile_0_8",
+      "material": {
+        "asset": "tile_a",
+        "overrides": {}
+      },
+      "mesh": "assets/cube.gltf",
+      "name": "Tile 0 8",
+      "position": [
+        0,
+        -0.08,
+        8
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "scale": [
+        0.98,
+        0.2,
+        0.98
+      ]
+    },
+    {
+      "id": "tile_1_8",
+      "material": {
+        "asset": "tile_b",
+        "overrides": {}
+      },
+      "mesh": "assets/cube.gltf",
+      "name": "Tile 1 8",
+      "position": [
+        1,
+        -0.08,
+        8
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "scale": [
+        0.98,
+        0.2,
+        0.98
+      ]
+    },
+    {
+      "id": "tile_2_8",
+      "material": {
+        "asset": "tile_a",
+        "overrides": {}
+      },
+      "mesh": "assets/cube.gltf",
+      "name": "Tile 2 8",
+      "position": [
+        2,
+        -0.08,
+        8
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "scale": [
+        0.98,
+        0.2,
+        0.98
+      ]
+    },
+    {
+      "id": "tile_3_8",
+      "material": {
+        "asset": "tile_b",
+        "overrides": {}
+      },
+      "mesh": "assets/cube.gltf",
+      "name": "Tile 3 8",
+      "position": [
+        3,
+        -0.08,
+        8
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "scale": [
+        0.98,
+        0.2,
+        0.98
+      ]
+    },
+    {
+      "id": "tile_4_8",
+      "material": {
+        "asset": "tile_a",
+        "overrides": {}
+      },
+      "mesh": "assets/cube.gltf",
+      "name": "Tile 4 8",
+      "position": [
+        4,
+        -0.08,
+        8
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "scale": [
+        0.98,
+        0.2,
+        0.98
+      ]
+    },
+    {
+      "id": "tile_5_8",
+      "material": {
+        "asset": "tile_b",
+        "overrides": {}
+      },
+      "mesh": "assets/cube.gltf",
+      "name": "Tile 5 8",
+      "position": [
+        5,
+        -0.08,
+        8
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "scale": [
+        0.98,
+        0.2,
+        0.98
+      ]
+    },
+    {
+      "id": "tile_6_8",
+      "material": {
+        "asset": "tile_a",
+        "overrides": {}
+      },
+      "mesh": "assets/cube.gltf",
+      "name": "Tile 6 8",
+      "position": [
+        6,
+        -0.08,
+        8
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "scale": [
+        0.98,
+        0.2,
+        0.98
+      ]
+    },
+    {
+      "id": "tile_7_8",
+      "material": {
+        "asset": "tile_b",
+        "overrides": {}
+      },
+      "mesh": "assets/cube.gltf",
+      "name": "Tile 7 8",
+      "position": [
+        7,
+        -0.08,
+        8
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "scale": [
+        0.98,
+        0.2,
+        0.98
+      ]
+    },
+    {
+      "id": "tile_8_8",
+      "material": {
+        "asset": "tile_a",
+        "overrides": {}
+      },
+      "mesh": "assets/cube.gltf",
+      "name": "Tile 8 8",
+      "position": [
+        8,
+        -0.08,
+        8
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "scale": [
+        0.98,
+        0.2,
+        0.98
+      ]
+    },
+    {
+      "id": "tile_9_8",
+      "material": {
+        "asset": "tile_b",
+        "overrides": {}
+      },
+      "mesh": "assets/cube.gltf",
+      "name": "Tile 9 8",
+      "position": [
+        9,
+        -0.08,
+        8
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "scale": [
+        0.98,
+        0.2,
+        0.98
+      ]
+    },
+    {
+      "id": "tile_10_8",
+      "material": {
+        "asset": "tile_a",
+        "overrides": {}
+      },
+      "mesh": "assets/cube.gltf",
+      "name": "Tile 10 8",
+      "position": [
+        10,
+        -0.08,
+        8
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "scale": [
+        0.98,
+        0.2,
+        0.98
+      ]
+    },
+    {
+      "id": "tile_11_8",
+      "material": {
+        "asset": "tile_b",
+        "overrides": {}
+      },
+      "mesh": "assets/cube.gltf",
+      "name": "Tile 11 8",
+      "position": [
+        11,
+        -0.08,
+        8
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "scale": [
+        0.98,
+        0.2,
+        0.98
+      ]
+    },
+    {
+      "id": "tile_0_9",
+      "material": {
+        "asset": "tile_b",
+        "overrides": {}
+      },
+      "mesh": "assets/cube.gltf",
+      "name": "Tile 0 9",
+      "position": [
+        0,
+        -0.08,
+        9
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "scale": [
+        0.98,
+        0.2,
+        0.98
+      ]
+    },
+    {
+      "id": "tile_1_9",
+      "material": {
+        "asset": "tile_a",
+        "overrides": {}
+      },
+      "mesh": "assets/cube.gltf",
+      "name": "Tile 1 9",
+      "position": [
+        1,
+        -0.08,
+        9
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "scale": [
+        0.98,
+        0.2,
+        0.98
+      ]
+    },
+    {
+      "id": "tile_2_9",
+      "material": {
+        "asset": "tile_b",
+        "overrides": {}
+      },
+      "mesh": "assets/cube.gltf",
+      "name": "Tile 2 9",
+      "position": [
+        2,
+        -0.08,
+        9
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "scale": [
+        0.98,
+        0.2,
+        0.98
+      ]
+    },
+    {
+      "id": "tile_3_9",
+      "material": {
+        "asset": "tile_a",
+        "overrides": {}
+      },
+      "mesh": "assets/cube.gltf",
+      "name": "Tile 3 9",
+      "position": [
+        3,
+        -0.08,
+        9
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "scale": [
+        0.98,
+        0.2,
+        0.98
+      ]
+    },
+    {
+      "id": "tile_4_9",
+      "material": {
+        "asset": "tile_b",
+        "overrides": {}
+      },
+      "mesh": "assets/cube.gltf",
+      "name": "Tile 4 9",
+      "position": [
+        4,
+        -0.08,
+        9
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "scale": [
+        0.98,
+        0.2,
+        0.98
+      ]
+    },
+    {
+      "id": "tile_5_9",
+      "material": {
+        "asset": "tile_a",
+        "overrides": {}
+      },
+      "mesh": "assets/cube.gltf",
+      "name": "Tile 5 9",
+      "position": [
+        5,
+        -0.08,
+        9
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "scale": [
+        0.98,
+        0.2,
+        0.98
+      ]
+    },
+    {
+      "id": "tile_6_9",
+      "material": {
+        "asset": "tile_b",
+        "overrides": {}
+      },
+      "mesh": "assets/cube.gltf",
+      "name": "Tile 6 9",
+      "position": [
+        6,
+        -0.08,
+        9
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "scale": [
+        0.98,
+        0.2,
+        0.98
+      ]
+    },
+    {
+      "id": "tile_7_9",
+      "material": {
+        "asset": "tile_a",
+        "overrides": {}
+      },
+      "mesh": "assets/cube.gltf",
+      "name": "Tile 7 9",
+      "position": [
+        7,
+        -0.08,
+        9
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "scale": [
+        0.98,
+        0.2,
+        0.98
+      ]
+    },
+    {
+      "id": "tile_8_9",
+      "material": {
+        "asset": "tile_b",
+        "overrides": {}
+      },
+      "mesh": "assets/cube.gltf",
+      "name": "Tile 8 9",
+      "position": [
+        8,
+        -0.08,
+        9
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "scale": [
+        0.98,
+        0.2,
+        0.98
+      ]
+    },
+    {
+      "id": "tile_9_9",
+      "material": {
+        "asset": "tile_a",
+        "overrides": {}
+      },
+      "mesh": "assets/cube.gltf",
+      "name": "Tile 9 9",
+      "position": [
+        9,
+        -0.08,
+        9
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "scale": [
+        0.98,
+        0.2,
+        0.98
+      ]
+    },
+    {
+      "id": "tile_10_9",
+      "material": {
+        "asset": "tile_b",
+        "overrides": {}
+      },
+      "mesh": "assets/cube.gltf",
+      "name": "Tile 10 9",
+      "position": [
+        10,
+        -0.08,
+        9
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "scale": [
+        0.98,
+        0.2,
+        0.98
+      ]
+    },
+    {
+      "id": "tile_11_9",
+      "material": {
+        "asset": "tile_a",
+        "overrides": {}
+      },
+      "mesh": "assets/cube.gltf",
+      "name": "Tile 11 9",
+      "position": [
+        11,
+        -0.08,
+        9
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "scale": [
+        0.98,
+        0.2,
+        0.98
+      ]
+    },
+    {
+      "id": "tile_0_10",
+      "material": {
+        "asset": "tile_a",
+        "overrides": {}
+      },
+      "mesh": "assets/cube.gltf",
+      "name": "Tile 0 10",
+      "position": [
+        0,
+        -0.08,
+        10
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "scale": [
+        0.98,
+        0.2,
+        0.98
+      ]
+    },
+    {
+      "id": "tile_1_10",
+      "material": {
+        "asset": "tile_b",
+        "overrides": {}
+      },
+      "mesh": "assets/cube.gltf",
+      "name": "Tile 1 10",
+      "position": [
+        1,
+        -0.08,
+        10
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "scale": [
+        0.98,
+        0.2,
+        0.98
+      ]
+    },
+    {
+      "id": "tile_2_10",
+      "material": {
+        "asset": "tile_a",
+        "overrides": {}
+      },
+      "mesh": "assets/cube.gltf",
+      "name": "Tile 2 10",
+      "position": [
+        2,
+        -0.08,
+        10
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "scale": [
+        0.98,
+        0.2,
+        0.98
+      ]
+    },
+    {
+      "id": "tile_3_10",
+      "material": {
+        "asset": "tile_b",
+        "overrides": {}
+      },
+      "mesh": "assets/cube.gltf",
+      "name": "Tile 3 10",
+      "position": [
+        3,
+        -0.08,
+        10
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "scale": [
+        0.98,
+        0.2,
+        0.98
+      ]
+    },
+    {
+      "id": "tile_4_10",
+      "material": {
+        "asset": "tile_a",
+        "overrides": {}
+      },
+      "mesh": "assets/cube.gltf",
+      "name": "Tile 4 10",
+      "position": [
+        4,
+        -0.08,
+        10
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "scale": [
+        0.98,
+        0.2,
+        0.98
+      ]
+    },
+    {
+      "id": "tile_5_10",
+      "material": {
+        "asset": "tile_b",
+        "overrides": {}
+      },
+      "mesh": "assets/cube.gltf",
+      "name": "Tile 5 10",
+      "position": [
+        5,
+        -0.08,
+        10
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "scale": [
+        0.98,
+        0.2,
+        0.98
+      ]
+    },
+    {
+      "id": "tile_6_10",
+      "material": {
+        "asset": "tile_a",
+        "overrides": {}
+      },
+      "mesh": "assets/cube.gltf",
+      "name": "Tile 6 10",
+      "position": [
+        6,
+        -0.08,
+        10
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "scale": [
+        0.98,
+        0.2,
+        0.98
+      ]
+    },
+    {
+      "id": "tile_7_10",
+      "material": {
+        "asset": "tile_b",
+        "overrides": {}
+      },
+      "mesh": "assets/cube.gltf",
+      "name": "Tile 7 10",
+      "position": [
+        7,
+        -0.08,
+        10
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "scale": [
+        0.98,
+        0.2,
+        0.98
+      ]
+    },
+    {
+      "id": "tile_8_10",
+      "material": {
+        "asset": "tile_a",
+        "overrides": {}
+      },
+      "mesh": "assets/cube.gltf",
+      "name": "Tile 8 10",
+      "position": [
+        8,
+        -0.08,
+        10
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "scale": [
+        0.98,
+        0.2,
+        0.98
+      ]
+    },
+    {
+      "id": "tile_9_10",
+      "material": {
+        "asset": "tile_b",
+        "overrides": {}
+      },
+      "mesh": "assets/cube.gltf",
+      "name": "Tile 9 10",
+      "position": [
+        9,
+        -0.08,
+        10
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "scale": [
+        0.98,
+        0.2,
+        0.98
+      ]
+    },
+    {
+      "id": "tile_10_10",
+      "material": {
+        "asset": "tile_a",
+        "overrides": {}
+      },
+      "mesh": "assets/cube.gltf",
+      "name": "Tile 10 10",
+      "position": [
+        10,
+        -0.08,
+        10
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "scale": [
+        0.98,
+        0.2,
+        0.98
+      ]
+    },
+    {
+      "id": "tile_11_10",
+      "material": {
+        "asset": "tile_b",
+        "overrides": {}
+      },
+      "mesh": "assets/cube.gltf",
+      "name": "Tile 11 10",
+      "position": [
+        11,
+        -0.08,
+        10
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "scale": [
+        0.98,
+        0.2,
+        0.98
+      ]
+    },
+    {
+      "id": "tile_0_11",
+      "material": {
+        "asset": "tile_b",
+        "overrides": {}
+      },
+      "mesh": "assets/cube.gltf",
+      "name": "Tile 0 11",
+      "position": [
+        0,
+        -0.08,
+        11
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "scale": [
+        0.98,
+        0.2,
+        0.98
+      ]
+    },
+    {
+      "id": "tile_1_11",
+      "material": {
+        "asset": "tile_a",
+        "overrides": {}
+      },
+      "mesh": "assets/cube.gltf",
+      "name": "Tile 1 11",
+      "position": [
+        1,
+        -0.08,
+        11
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "scale": [
+        0.98,
+        0.2,
+        0.98
+      ]
+    },
+    {
+      "id": "tile_2_11",
+      "material": {
+        "asset": "tile_b",
+        "overrides": {}
+      },
+      "mesh": "assets/cube.gltf",
+      "name": "Tile 2 11",
+      "position": [
+        2,
+        -0.08,
+        11
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "scale": [
+        0.98,
+        0.2,
+        0.98
+      ]
+    },
+    {
+      "id": "tile_3_11",
+      "material": {
+        "asset": "tile_a",
+        "overrides": {}
+      },
+      "mesh": "assets/cube.gltf",
+      "name": "Tile 3 11",
+      "position": [
+        3,
+        -0.08,
+        11
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "scale": [
+        0.98,
+        0.2,
+        0.98
+      ]
+    },
+    {
+      "id": "tile_4_11",
+      "material": {
+        "asset": "tile_b",
+        "overrides": {}
+      },
+      "mesh": "assets/cube.gltf",
+      "name": "Tile 4 11",
+      "position": [
+        4,
+        -0.08,
+        11
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "scale": [
+        0.98,
+        0.2,
+        0.98
+      ]
+    },
+    {
+      "id": "tile_5_11",
+      "material": {
+        "asset": "tile_a",
+        "overrides": {}
+      },
+      "mesh": "assets/cube.gltf",
+      "name": "Tile 5 11",
+      "position": [
+        5,
+        -0.08,
+        11
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "scale": [
+        0.98,
+        0.2,
+        0.98
+      ]
+    },
+    {
+      "id": "tile_6_11",
+      "material": {
+        "asset": "tile_b",
+        "overrides": {}
+      },
+      "mesh": "assets/cube.gltf",
+      "name": "Tile 6 11",
+      "position": [
+        6,
+        -0.08,
+        11
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "scale": [
+        0.98,
+        0.2,
+        0.98
+      ]
+    },
+    {
+      "id": "tile_7_11",
+      "material": {
+        "asset": "tile_a",
+        "overrides": {}
+      },
+      "mesh": "assets/cube.gltf",
+      "name": "Tile 7 11",
+      "position": [
+        7,
+        -0.08,
+        11
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "scale": [
+        0.98,
+        0.2,
+        0.98
+      ]
+    },
+    {
+      "id": "tile_8_11",
+      "material": {
+        "asset": "tile_b",
+        "overrides": {}
+      },
+      "mesh": "assets/cube.gltf",
+      "name": "Tile 8 11",
+      "position": [
+        8,
+        -0.08,
+        11
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "scale": [
+        0.98,
+        0.2,
+        0.98
+      ]
+    },
+    {
+      "id": "tile_9_11",
+      "material": {
+        "asset": "tile_a",
+        "overrides": {}
+      },
+      "mesh": "assets/cube.gltf",
+      "name": "Tile 9 11",
+      "position": [
+        9,
+        -0.08,
+        11
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "scale": [
+        0.98,
+        0.2,
+        0.98
+      ]
+    },
+    {
+      "id": "tile_10_11",
+      "material": {
+        "asset": "tile_b",
+        "overrides": {}
+      },
+      "mesh": "assets/cube.gltf",
+      "name": "Tile 10 11",
+      "position": [
+        10,
+        -0.08,
+        11
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "scale": [
+        0.98,
+        0.2,
+        0.98
+      ]
+    },
+    {
+      "id": "tile_11_11",
+      "material": {
+        "asset": "tile_a",
+        "overrides": {}
+      },
+      "mesh": "assets/cube.gltf",
+      "name": "Tile 11 11",
+      "position": [
+        11,
+        -0.08,
+        11
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "scale": [
+        0.98,
+        0.2,
+        0.98
+      ]
+    },
+    {
+      "id": "north",
+      "material": {
+        "asset": "rim",
+        "overrides": {}
+      },
+      "mesh": "assets/cube.gltf",
+      "name": "North",
+      "position": [
+        5.5,
+        0.1,
+        -0.65
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "scale": [
+        12.8,
+        0.6,
+        0.3
+      ]
+    },
+    {
+      "id": "south",
+      "material": {
+        "asset": "rim",
+        "overrides": {}
+      },
+      "mesh": "assets/cube.gltf",
+      "name": "South",
+      "position": [
+        5.5,
+        0.1,
+        11.65
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "scale": [
+        12.8,
+        0.6,
+        0.3
+      ]
+    },
+    {
+      "id": "west",
+      "material": {
+        "asset": "rim",
+        "overrides": {}
+      },
+      "mesh": "assets/cube.gltf",
+      "name": "West",
+      "position": [
+        -0.65,
+        0.1,
+        5.5
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "scale": [
+        0.3,
+        0.6,
+        12.8
+      ]
+    },
+    {
+      "id": "east",
+      "material": {
+        "asset": "rim",
+        "overrides": {}
+      },
+      "mesh": "assets/cube.gltf",
+      "name": "East",
+      "position": [
+        11.65,
+        0.1,
+        5.5
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "scale": [
+        0.3,
+        0.6,
+        12.8
+      ]
+    },
+    {
+      "camera": {
+        "far": 1000,
+        "fov": 60,
+        "near": 0.1,
+        "projection": "orthographic",
+        "size": 18
+      },
+      "id": "camera",
+      "name": "Isometric camera",
+      "position": [
+        18,
+        20,
+        20
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ]
+    }
+  ],
+  "features": {
+    "3d": {
+      "lights": [
+        {
+          "color": [
+            0.93,
+            0.97,
+            1
+          ],
+          "intensity": 1.1,
+          "kind": "directional"
+        }
+      ],
+      "pbr": {
+        "metallic": 0.05,
+        "roughness": 0.7
+      }
+    }
+  },
+  "material_assets": [
+    {
+      "alpha_cutoff": 0.5,
+      "alpha_mode": "opaque",
+      "color": [
+        0.1,
+        0.95,
+        0.52
+      ],
+      "id": "head",
+      "name": "Head",
+      "opacity": 1.0,
+      "type": "material",
+      "unlit": false,
+      "version": 1
+    },
+    {
+      "alpha_cutoff": 0.5,
+      "alpha_mode": "opaque",
+      "color": [
+        0.07,
+        0.6,
+        0.48
+      ],
+      "id": "body",
+      "name": "Body",
+      "opacity": 1.0,
+      "type": "material",
+      "unlit": false,
+      "version": 1
+    },
+    {
+      "alpha_cutoff": 0.5,
+      "alpha_mode": "opaque",
+      "color": [
+        1,
+        0.22,
+        0.16
+      ],
+      "id": "food",
+      "name": "Food",
+      "opacity": 1.0,
+      "type": "material",
+      "unlit": false,
+      "version": 1
+    },
+    {
+      "alpha_cutoff": 0.5,
+      "alpha_mode": "opaque",
+      "color": [
+        0.1,
+        0.18,
+        0.25
+      ],
+      "id": "tile_a",
+      "name": "Tile_A",
+      "opacity": 1.0,
+      "type": "material",
+      "unlit": false,
+      "version": 1
+    },
+    {
+      "alpha_cutoff": 0.5,
+      "alpha_mode": "opaque",
+      "color": [
+        0.13,
+        0.23,
+        0.3
+      ],
+      "id": "tile_b",
+      "name": "Tile_B",
+      "opacity": 1.0,
+      "type": "material",
+      "unlit": false,
+      "version": 1
+    },
+    {
+      "alpha_cutoff": 0.5,
+      "alpha_mode": "opaque",
+      "color": [
+        0.05,
+        0.09,
+        0.15
+      ],
+      "id": "rim",
+      "name": "Rim",
+      "opacity": 1.0,
+      "type": "material",
+      "unlit": false,
+      "version": 1
+    },
+    {
+      "alpha_cutoff": 0.5,
+      "alpha_mode": "opaque",
+      "color": [
+        0.01,
+        0.02,
+        0.025
+      ],
+      "id": "eye",
+      "name": "Eye",
+      "opacity": 1.0,
+      "type": "material",
+      "unlit": false,
+      "version": 1
+    }
+  ],
+  "ui_assets": [
+    {
+      "id": "hud",
+      "name": "Snake HUD",
+      "rml": "<rml><head><title>Isometric Snake</title><style>\nbody{width:100%;height:100%;font-family:node-ui;color:#e8f8ff;pointer-events:none;font-size:17px;}\n#title{position:absolute;left:24px;top:20px;font-size:27px;color:#60efbd;}\n#sub{position:absolute;left:26px;top:59px;font-size:13px;color:#9bb5c8;}\n#points{position:absolute;right:24px;top:20px;padding:14px 20px;background-color:#142536e8;border-radius:10px;}\n#state{position:absolute;left:24px;top:89px;color:#f1cf81;font-size:15px;}\n#help{position:absolute;left:24px;bottom:22px;right:24px;background-color:#142536ed;padding:12px 16px;border-radius:8px;font-size:14px;}\n@media (max-width:600px){\n#title{left:16px;top:16px;font-size:23px;}\n#sub{display:none;}\n#points{left:16px;right:auto;top:54px;padding:8px 12px;font-size:14px;}\n#state{left:16px;top:99px;right:12px;font-size:13px;}\n#help{left:12px;right:12px;bottom:12px;padding:10px 12px;font-size:12px;}\n}\n@media (max-width:400px){\n#title{left:12px;top:12px;font-size:20px;}\n#points{left:12px;top:46px;padding:7px 10px;font-size:13px;}\n#state{left:12px;top:87px;font-size:12px;}\n#help{left:8px;right:8px;bottom:8px;padding:8px 10px;font-size:11px;}\n}\n</style></head><body><div id=\"title\">ISOMETRIC SNAKE</div><div id=\"sub\">A native node graph game</div>\n<div id=\"points\">SCORE <span id=\"score\">0</span>   /   BEST <span id=\"best\">0</span></div>\n<div id=\"state\"><span id=\"status\">RUNNING</span></div>\n<div id=\"help\">WASD / ARROWS: turn &nbsp; | &nbsp; P: pause &nbsp; | &nbsp; R: restart<br/>Eat coral cubes. Avoid the rim and your own body. One turn per tick.</div></body></rml>",
+      "type": "ui",
+      "version": 1
+    }
+  ],
+  "variables": {
+    "alive": {
+      "type": "bool",
+      "value": true
+    },
+    "ate": {
+      "type": "bool",
+      "value": false
+    },
+    "best": {
+      "type": "int",
+      "value": 0
+    },
+    "body_entities": {
+      "type": "array<entity>",
+      "value": [
+        "snake_head",
+        "segment_1",
+        "segment_2",
+        "segment_3",
+        "segment_4",
+        "segment_5",
+        "segment_6",
+        "segment_7",
+        "segment_8",
+        "segment_9",
+        "segment_10",
+        "segment_11",
+        "segment_12",
+        "segment_13",
+        "segment_14",
+        "segment_15",
+        "segment_16",
+        "segment_17",
+        "segment_18",
+        "segment_19",
+        "segment_20",
+        "segment_21",
+        "segment_22",
+        "segment_23",
+        "segment_24",
+        "segment_25",
+        "segment_26",
+        "segment_27",
+        "segment_28",
+        "segment_29",
+        "segment_30",
+        "segment_31",
+        "segment_32",
+        "segment_33",
+        "segment_34",
+        "segment_35",
+        "segment_36",
+        "segment_37",
+        "segment_38",
+        "segment_39",
+        "segment_40",
+        "segment_41",
+        "segment_42",
+        "segment_43",
+        "segment_44",
+        "segment_45",
+        "segment_46",
+        "segment_47",
+        "segment_48",
+        "segment_49",
+        "segment_50",
+        "segment_51",
+        "segment_52",
+        "segment_53",
+        "segment_54",
+        "segment_55",
+        "segment_56",
+        "segment_57",
+        "segment_58",
+        "segment_59",
+        "segment_60",
+        "segment_61",
+        "segment_62",
+        "segment_63",
+        "segment_64",
+        "segment_65",
+        "segment_66",
+        "segment_67",
+        "segment_68",
+        "segment_69",
+        "segment_70",
+        "segment_71",
+        "segment_72",
+        "segment_73",
+        "segment_74",
+        "segment_75",
+        "segment_76",
+        "segment_77",
+        "segment_78",
+        "segment_79",
+        "segment_80",
+        "segment_81",
+        "segment_82",
+        "segment_83",
+        "segment_84",
+        "segment_85",
+        "segment_86",
+        "segment_87",
+        "segment_88",
+        "segment_89",
+        "segment_90",
+        "segment_91",
+        "segment_92",
+        "segment_93",
+        "segment_94",
+        "segment_95",
+        "segment_96",
+        "segment_97",
+        "segment_98",
+        "segment_99",
+        "segment_100",
+        "segment_101",
+        "segment_102",
+        "segment_103",
+        "segment_104",
+        "segment_105",
+        "segment_106",
+        "segment_107",
+        "segment_108",
+        "segment_109",
+        "segment_110",
+        "segment_111",
+        "segment_112",
+        "segment_113",
+        "segment_114",
+        "segment_115",
+        "segment_116",
+        "segment_117",
+        "segment_118",
+        "segment_119",
+        "segment_120",
+        "segment_121",
+        "segment_122",
+        "segment_123",
+        "segment_124",
+        "segment_125",
+        "segment_126",
+        "segment_127",
+        "segment_128",
+        "segment_129",
+        "segment_130",
+        "segment_131",
+        "segment_132",
+        "segment_133",
+        "segment_134",
+        "segment_135",
+        "segment_136",
+        "segment_137",
+        "segment_138",
+        "segment_139",
+        "segment_140",
+        "segment_141",
+        "segment_142",
+        "segment_143"
+      ]
+    },
+    "death_reason": {
+      "type": "string",
+      "value": ""
+    },
+    "direction": {
+      "type": "vec3",
+      "value": [
+        1,
+        0,
+        0
+      ]
+    },
+    "food": {
+      "type": "vec3",
+      "value": [
+        6,
+        0.5,
+        5
+      ]
+    },
+    "food_found": {
+      "type": "bool",
+      "value": false
+    },
+    "next_head": {
+      "type": "vec3",
+      "value": [
+        3,
+        0.5,
+        5
+      ]
+    },
+    "paused": {
+      "type": "bool",
+      "value": false
+    },
+    "restart_count": {
+      "type": "int",
+      "value": 0
+    },
+    "score": {
+      "type": "int",
+      "value": 0
+    },
+    "snake": {
+      "type": "array<vec3>",
+      "value": [
+        [
+          3,
+          0.5,
+          5
+        ],
+        [
+          2,
+          0.5,
+          5
+        ],
+        [
+          1,
+          0.5,
+          5
+        ],
+        [
+          0,
+          0.5,
+          5
+        ]
+      ]
+    },
+    "status": {
+      "type": "string",
+      "value": "RUNNING"
+    },
+    "steps": {
+      "type": "int",
+      "value": 0
+    },
+    "trimmed": {
+      "type": "array<vec3>",
+      "value": []
+    },
+    "turn_locked": {
+      "type": "bool",
+      "value": false
+    }
+  },
+  "version": 1
+}

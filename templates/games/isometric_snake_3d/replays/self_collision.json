@@ -1,0 +1,35 @@
+{
+  "events": [
+    {
+      "button": "Down",
+      "down": true,
+      "frame": 34
+    },
+    {
+      "button": "Down",
+      "down": false,
+      "frame": 35
+    },
+    {
+      "button": "Left",
+      "down": true,
+      "frame": 45
+    },
+    {
+      "button": "Left",
+      "down": false,
+      "frame": 46
+    },
+    {
+      "button": "Up",
+      "down": true,
+      "frame": 56
+    },
+    {
+      "button": "Up",
+      "down": false,
+      "frame": 57
+    }
+  ],
+  "version": 1
+}

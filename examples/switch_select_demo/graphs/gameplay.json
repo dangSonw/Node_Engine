@@ -1,0 +1,1467 @@
+{
+  "functions": [
+    {
+      "graph": {
+        "links": [
+          {
+            "from": [
+              "entry",
+              "Out"
+            ],
+            "to": [
+              "route",
+              "In"
+            ]
+          },
+          {
+            "from": [
+              "entry",
+              "Mode"
+            ],
+            "to": [
+              "route",
+              "Value"
+            ]
+          },
+          {
+            "from": [
+              "route",
+              "Case left"
+            ],
+            "to": [
+              "delayLeft",
+              "In"
+            ]
+          },
+          {
+            "from": [
+              "delayLeft",
+              "Out"
+            ],
+            "to": [
+              "returnLeft",
+              "In"
+            ]
+          },
+          {
+            "from": [
+              "route",
+              "Case center"
+            ],
+            "to": [
+              "delayCenter",
+              "In"
+            ]
+          },
+          {
+            "from": [
+              "delayCenter",
+              "Out"
+            ],
+            "to": [
+              "returnCenter",
+              "In"
+            ]
+          },
+          {
+            "from": [
+              "route",
+              "Case right"
+            ],
+            "to": [
+              "delayRight",
+              "In"
+            ]
+          },
+          {
+            "from": [
+              "delayRight",
+              "Out"
+            ],
+            "to": [
+              "returnRight",
+              "In"
+            ]
+          },
+          {
+            "from": [
+              "route",
+              "Default"
+            ],
+            "to": [
+              "delayFallback",
+              "In"
+            ]
+          },
+          {
+            "from": [
+              "delayFallback",
+              "Out"
+            ],
+            "to": [
+              "returnFallback",
+              "In"
+            ]
+          }
+        ],
+        "name": "Gameplay",
+        "nodes": [
+          {
+            "id": "entry",
+            "type": 6001,
+            "values": {}
+          },
+          {
+            "cases": [
+              {
+                "id": "left",
+                "value": 0
+              },
+              {
+                "id": "center",
+                "value": 1
+              },
+              {
+                "id": "right",
+                "value": 2
+              }
+            ],
+            "id": "route",
+            "type": 2015,
+            "values": {}
+          },
+          {
+            "id": "delayLeft",
+            "type": 2012,
+            "values": {
+              "Owner": "player",
+              "Seconds": 0.25
+            }
+          },
+          {
+            "id": "returnLeft",
+            "type": 6002,
+            "values": {
+              "Label": "Left",
+              "Point": [
+                -2,
+                0,
+                0
+              ]
+            }
+          },
+          {
+            "id": "delayCenter",
+            "type": 2012,
+            "values": {
+              "Owner": "player",
+              "Seconds": 0.25
+            }
+          },
+          {
+            "id": "returnCenter",
+            "type": 6002,
+            "values": {
+              "Label": "Center",
+              "Point": [
+                0,
+                0,
+                0
+              ]
+            }
+          },
+          {
+            "id": "delayRight",
+            "type": 2012,
+            "values": {
+              "Owner": "player",
+              "Seconds": 0.25
+            }
+          },
+          {
+            "id": "returnRight",
+            "type": 6002,
+            "values": {
+              "Label": "Right",
+              "Point": [
+                2,
+                0,
+                0
+              ]
+            }
+          },
+          {
+            "id": "delayFallback",
+            "type": 2012,
+            "values": {
+              "Owner": "player",
+              "Seconds": 0.25
+            }
+          },
+          {
+            "id": "returnFallback",
+            "type": 6002,
+            "values": {
+              "Label": "Fallback",
+              "Point": [
+                0,
+                1,
+                0
+              ]
+            }
+          }
+        ],
+        "version": 1
+      },
+      "id": 67577800,
+      "inputs": [
+        {
+          "default": 0,
+          "name": "Mode",
+          "type": "int"
+        }
+      ],
+      "name": "Choose destination",
+      "outputs": [
+        {
+          "name": "Point",
+          "type": "vec3"
+        },
+        {
+          "name": "Label",
+          "type": "string"
+        }
+      ],
+      "pure": false
+    }
+  ],
+  "links": [
+    {
+      "from": [
+        "start",
+        "Out"
+      ],
+      "to": [
+        "storage",
+        "In"
+      ]
+    },
+    {
+      "from": [
+        "storage",
+        "Out"
+      ],
+      "to": [
+        "hud",
+        "In"
+      ]
+    },
+    {
+      "from": [
+        "hud",
+        "Out"
+      ],
+      "to": [
+        "idle",
+        "In"
+      ]
+    },
+    {
+      "from": [
+        "input_1",
+        "Out"
+      ],
+      "to": [
+        "if_1",
+        "In"
+      ]
+    },
+    {
+      "from": [
+        "key_1",
+        "Value"
+      ],
+      "to": [
+        "if_1",
+        "Condition"
+      ]
+    },
+    {
+      "from": [
+        "if_1",
+        "True"
+      ],
+      "to": [
+        "mode1",
+        "In"
+      ]
+    },
+    {
+      "from": [
+        "input_2",
+        "Out"
+      ],
+      "to": [
+        "if_2",
+        "In"
+      ]
+    },
+    {
+      "from": [
+        "key_2",
+        "Value"
+      ],
+      "to": [
+        "if_2",
+        "Condition"
+      ]
+    },
+    {
+      "from": [
+        "if_2",
+        "True"
+      ],
+      "to": [
+        "mode2",
+        "In"
+      ]
+    },
+    {
+      "from": [
+        "input_3",
+        "Out"
+      ],
+      "to": [
+        "if_3",
+        "In"
+      ]
+    },
+    {
+      "from": [
+        "key_3",
+        "Value"
+      ],
+      "to": [
+        "if_3",
+        "Condition"
+      ]
+    },
+    {
+      "from": [
+        "if_3",
+        "True"
+      ],
+      "to": [
+        "mode3",
+        "In"
+      ]
+    },
+    {
+      "from": [
+        "input_9",
+        "Out"
+      ],
+      "to": [
+        "if_9",
+        "In"
+      ]
+    },
+    {
+      "from": [
+        "key_9",
+        "Value"
+      ],
+      "to": [
+        "if_9",
+        "Condition"
+      ]
+    },
+    {
+      "from": [
+        "if_9",
+        "True"
+      ],
+      "to": [
+        "mode9",
+        "In"
+      ]
+    },
+    {
+      "from": [
+        "input_M",
+        "Out"
+      ],
+      "to": [
+        "if_M",
+        "In"
+      ]
+    },
+    {
+      "from": [
+        "key_M",
+        "Value"
+      ],
+      "to": [
+        "if_M",
+        "Condition"
+      ]
+    },
+    {
+      "from": [
+        "if_M",
+        "True"
+      ],
+      "to": [
+        "mirror",
+        "In"
+      ]
+    },
+    {
+      "from": [
+        "get_mirror",
+        "Value"
+      ],
+      "to": [
+        "not",
+        "Value"
+      ]
+    },
+    {
+      "from": [
+        "not",
+        "Value"
+      ],
+      "to": [
+        "mirror",
+        "Value"
+      ]
+    },
+    {
+      "from": [
+        "input_Space",
+        "Out"
+      ],
+      "to": [
+        "if_Space",
+        "In"
+      ]
+    },
+    {
+      "from": [
+        "key_Space",
+        "Value"
+      ],
+      "to": [
+        "if_Space",
+        "Condition"
+      ]
+    },
+    {
+      "from": [
+        "if_Space",
+        "True"
+      ],
+      "to": [
+        "destination",
+        "In"
+      ]
+    },
+    {
+      "from": [
+        "get_mode",
+        "Value"
+      ],
+      "to": [
+        "destination",
+        "Mode"
+      ]
+    },
+    {
+      "from": [
+        "destination",
+        "Point"
+      ],
+      "to": [
+        "opposite",
+        "Vector"
+      ]
+    },
+    {
+      "from": [
+        "opposite",
+        "Value"
+      ],
+      "to": [
+        "select",
+        "True"
+      ]
+    },
+    {
+      "from": [
+        "destination",
+        "Point"
+      ],
+      "to": [
+        "select",
+        "False"
+      ]
+    },
+    {
+      "from": [
+        "get_mirror",
+        "Value"
+      ],
+      "to": [
+        "select",
+        "Condition"
+      ]
+    },
+    {
+      "from": [
+        "destination",
+        "Out"
+      ],
+      "to": [
+        "move",
+        "In"
+      ]
+    },
+    {
+      "from": [
+        "select",
+        "Value"
+      ],
+      "to": [
+        "move",
+        "Value"
+      ]
+    },
+    {
+      "from": [
+        "move",
+        "Out"
+      ],
+      "to": [
+        "selected",
+        "In"
+      ]
+    },
+    {
+      "from": [
+        "destination",
+        "Label"
+      ],
+      "to": [
+        "selected",
+        "Value"
+      ]
+    },
+    {
+      "from": [
+        "selected",
+        "Out"
+      ],
+      "to": [
+        "visit",
+        "In"
+      ]
+    },
+    {
+      "from": [
+        "get_visits",
+        "Value"
+      ],
+      "to": [
+        "increment",
+        "A"
+      ]
+    },
+    {
+      "from": [
+        "increment",
+        "Value"
+      ],
+      "to": [
+        "visit",
+        "Value"
+      ]
+    },
+    {
+      "from": [
+        "late",
+        "Out"
+      ],
+      "to": [
+        "show_mode",
+        "In"
+      ]
+    },
+    {
+      "from": [
+        "get_mode",
+        "Value"
+      ],
+      "to": [
+        "format_mode",
+        "Value"
+      ]
+    },
+    {
+      "from": [
+        "format_mode",
+        "Value"
+      ],
+      "to": [
+        "show_mode",
+        "Text"
+      ]
+    },
+    {
+      "from": [
+        "show_mode",
+        "Out"
+      ],
+      "to": [
+        "show_mirror",
+        "In"
+      ]
+    },
+    {
+      "from": [
+        "get_mirror",
+        "Value"
+      ],
+      "to": [
+        "mirror_label",
+        "Condition"
+      ]
+    },
+    {
+      "from": [
+        "mirror_label",
+        "Value"
+      ],
+      "to": [
+        "show_mirror",
+        "Text"
+      ]
+    },
+    {
+      "from": [
+        "show_mirror",
+        "Out"
+      ],
+      "to": [
+        "show_visits",
+        "In"
+      ]
+    },
+    {
+      "from": [
+        "get_visits",
+        "Value"
+      ],
+      "to": [
+        "format_visits",
+        "Value"
+      ]
+    },
+    {
+      "from": [
+        "format_visits",
+        "Value"
+      ],
+      "to": [
+        "show_visits",
+        "Text"
+      ]
+    },
+    {
+      "from": [
+        "show_visits",
+        "Out"
+      ],
+      "to": [
+        "show_selected",
+        "In"
+      ]
+    },
+    {
+      "from": [
+        "get_selected",
+        "Value"
+      ],
+      "to": [
+        "show_selected",
+        "Text"
+      ]
+    },
+    {
+      "from": [
+        "show_selected",
+        "Out"
+      ],
+      "to": [
+        "facing",
+        "In"
+      ]
+    },
+    {
+      "from": [
+        "get_selected",
+        "Value"
+      ],
+      "to": [
+        "facing",
+        "Value"
+      ]
+    },
+    {
+      "from": [
+        "facing",
+        "Case left"
+      ],
+      "to": [
+        "yawleft",
+        "In"
+      ]
+    },
+    {
+      "from": [
+        "facing",
+        "Case center"
+      ],
+      "to": [
+        "yawcenter",
+        "In"
+      ]
+    },
+    {
+      "from": [
+        "facing",
+        "Case right"
+      ],
+      "to": [
+        "yawright",
+        "In"
+      ]
+    },
+    {
+      "from": [
+        "facing",
+        "Default"
+      ],
+      "to": [
+        "yawDefault",
+        "In"
+      ]
+    },
+    {
+      "from": [
+        "input_S",
+        "Out"
+      ],
+      "to": [
+        "if_S",
+        "In"
+      ]
+    },
+    {
+      "from": [
+        "key_S",
+        "Value"
+      ],
+      "to": [
+        "if_S",
+        "Condition"
+      ]
+    },
+    {
+      "from": [
+        "if_S",
+        "True"
+      ],
+      "to": [
+        "action_S",
+        "In"
+      ]
+    },
+    {
+      "from": [
+        "input_L",
+        "Out"
+      ],
+      "to": [
+        "if_L",
+        "In"
+      ]
+    },
+    {
+      "from": [
+        "key_L",
+        "Value"
+      ],
+      "to": [
+        "if_L",
+        "Condition"
+      ]
+    },
+    {
+      "from": [
+        "if_L",
+        "True"
+      ],
+      "to": [
+        "action_L",
+        "In"
+      ]
+    }
+  ],
+  "name": "Switch and Select robot routes",
+  "nodes": [
+    {
+      "id": "start",
+      "position": [
+        0,
+        0
+      ],
+      "type": 1001,
+      "values": {}
+    },
+    {
+      "id": "storage",
+      "position": [
+        280,
+        0
+      ],
+      "type": 23001,
+      "values": {
+        "Game ID": "node-engine-switch-select-demo"
+      }
+    },
+    {
+      "id": "hud",
+      "position": [
+        560,
+        0
+      ],
+      "type": 18001,
+      "values": {}
+    },
+    {
+      "id": "idle",
+      "position": [
+        840,
+        0
+      ],
+      "type": 13002,
+      "values": {
+        "Clip": "Idle"
+      }
+    },
+    {
+      "id": "input_1",
+      "position": [
+        1120,
+        0
+      ],
+      "type": 1002,
+      "values": {}
+    },
+    {
+      "id": "key_1",
+      "position": [
+        1400,
+        0
+      ],
+      "type": 10002,
+      "values": {
+        "Key": "1"
+      }
+    },
+    {
+      "id": "if_1",
+      "position": [
+        0,
+        280
+      ],
+      "type": 2001,
+      "values": {}
+    },
+    {
+      "id": "mode1",
+      "position": [
+        280,
+        280
+      ],
+      "type": 3111,
+      "values": {
+        "Name": "mode",
+        "Value": 0
+      }
+    },
+    {
+      "id": "input_2",
+      "position": [
+        560,
+        280
+      ],
+      "type": 1002,
+      "values": {}
+    },
+    {
+      "id": "key_2",
+      "position": [
+        840,
+        280
+      ],
+      "type": 10002,
+      "values": {
+        "Key": "2"
+      }
+    },
+    {
+      "id": "if_2",
+      "position": [
+        1120,
+        280
+      ],
+      "type": 2001,
+      "values": {}
+    },
+    {
+      "id": "mode2",
+      "position": [
+        1400,
+        280
+      ],
+      "type": 3111,
+      "values": {
+        "Name": "mode",
+        "Value": 1
+      }
+    },
+    {
+      "id": "input_3",
+      "position": [
+        0,
+        560
+      ],
+      "type": 1002,
+      "values": {}
+    },
+    {
+      "id": "key_3",
+      "position": [
+        280,
+        560
+      ],
+      "type": 10002,
+      "values": {
+        "Key": "3"
+      }
+    },
+    {
+      "id": "if_3",
+      "position": [
+        560,
+        560
+      ],
+      "type": 2001,
+      "values": {}
+    },
+    {
+      "id": "mode3",
+      "position": [
+        840,
+        560
+      ],
+      "type": 3111,
+      "values": {
+        "Name": "mode",
+        "Value": 2
+      }
+    },
+    {
+      "id": "input_9",
+      "position": [
+        1120,
+        560
+      ],
+      "type": 1002,
+      "values": {}
+    },
+    {
+      "id": "key_9",
+      "position": [
+        1400,
+        560
+      ],
+      "type": 10002,
+      "values": {
+        "Key": "9"
+      }
+    },
+    {
+      "id": "if_9",
+      "position": [
+        0,
+        840
+      ],
+      "type": 2001,
+      "values": {}
+    },
+    {
+      "id": "mode9",
+      "position": [
+        280,
+        840
+      ],
+      "type": 3111,
+      "values": {
+        "Name": "mode",
+        "Value": 9
+      }
+    },
+    {
+      "id": "input_M",
+      "position": [
+        560,
+        840
+      ],
+      "type": 1002,
+      "values": {}
+    },
+    {
+      "id": "key_M",
+      "position": [
+        840,
+        840
+      ],
+      "type": 10002,
+      "values": {
+        "Key": "M"
+      }
+    },
+    {
+      "id": "if_M",
+      "position": [
+        1120,
+        840
+      ],
+      "type": 2001,
+      "values": {}
+    },
+    {
+      "id": "mirror",
+      "position": [
+        1400,
+        840
+      ],
+      "type": 3112,
+      "values": {
+        "Name": "mirror"
+      }
+    },
+    {
+      "id": "get_mirror",
+      "position": [
+        0,
+        1120
+      ],
+      "type": 3102,
+      "values": {
+        "Name": "mirror"
+      }
+    },
+    {
+      "id": "not",
+      "position": [
+        280,
+        1120
+      ],
+      "type": 4017,
+      "values": {}
+    },
+    {
+      "id": "input_Space",
+      "position": [
+        560,
+        1120
+      ],
+      "type": 1002,
+      "values": {}
+    },
+    {
+      "id": "key_Space",
+      "position": [
+        840,
+        1120
+      ],
+      "type": 10002,
+      "values": {
+        "Key": "Space"
+      }
+    },
+    {
+      "id": "if_Space",
+      "position": [
+        1120,
+        1120
+      ],
+      "type": 2001,
+      "values": {}
+    },
+    {
+      "id": "destination",
+      "position": [
+        1400,
+        1120
+      ],
+      "type": 67577800,
+      "values": {}
+    },
+    {
+      "id": "get_mode",
+      "position": [
+        0,
+        1400
+      ],
+      "type": 3101,
+      "values": {
+        "Name": "mode"
+      }
+    },
+    {
+      "id": "select",
+      "position": [
+        280,
+        1400
+      ],
+      "type": 2104,
+      "values": {}
+    },
+    {
+      "id": "opposite",
+      "position": [
+        560,
+        1400
+      ],
+      "type": 4022,
+      "values": {
+        "Scale": -1
+      }
+    },
+    {
+      "id": "move",
+      "position": [
+        840,
+        1400
+      ],
+      "type": 9002,
+      "values": {}
+    },
+    {
+      "id": "selected",
+      "position": [
+        1120,
+        1400
+      ],
+      "type": 3113,
+      "values": {
+        "Name": "selected"
+      }
+    },
+    {
+      "id": "visit",
+      "position": [
+        1400,
+        1400
+      ],
+      "type": 3111,
+      "values": {
+        "Name": "visits"
+      }
+    },
+    {
+      "id": "get_visits",
+      "position": [
+        0,
+        1680
+      ],
+      "type": 3101,
+      "values": {
+        "Name": "visits"
+      }
+    },
+    {
+      "id": "increment",
+      "position": [
+        280,
+        1680
+      ],
+      "type": 4030,
+      "values": {
+        "B": 1
+      }
+    },
+    {
+      "id": "late",
+      "position": [
+        560,
+        1680
+      ],
+      "type": 1005,
+      "values": {}
+    },
+    {
+      "id": "show_mode",
+      "position": [
+        840,
+        1680
+      ],
+      "type": 18005,
+      "values": {
+        "Element": "mode"
+      }
+    },
+    {
+      "id": "format_mode",
+      "position": [
+        1120,
+        1680
+      ],
+      "type": 3051,
+      "values": {}
+    },
+    {
+      "id": "show_mirror",
+      "position": [
+        1400,
+        1680
+      ],
+      "type": 18005,
+      "values": {
+        "Element": "mirror"
+      }
+    },
+    {
+      "id": "mirror_label",
+      "position": [
+        0,
+        1960
+      ],
+      "type": 2103,
+      "values": {
+        "False": "Normal",
+        "True": "Mirrored"
+      }
+    },
+    {
+      "id": "show_visits",
+      "position": [
+        280,
+        1960
+      ],
+      "type": 18005,
+      "values": {
+        "Element": "visits"
+      }
+    },
+    {
+      "id": "format_visits",
+      "position": [
+        560,
+        1960
+      ],
+      "type": 3051,
+      "values": {}
+    },
+    {
+      "id": "show_selected",
+      "position": [
+        840,
+        1960
+      ],
+      "type": 18005,
+      "values": {
+        "Element": "selected"
+      }
+    },
+    {
+      "id": "get_selected",
+      "position": [
+        1120,
+        1960
+      ],
+      "type": 3103,
+      "values": {
+        "Name": "selected"
+      }
+    },
+    {
+      "cases": [
+        {
+          "id": "left",
+          "value": "Left"
+        },
+        {
+          "id": "center",
+          "value": "Center"
+        },
+        {
+          "id": "right",
+          "value": "Right"
+        }
+      ],
+      "id": "facing",
+      "position": [
+        1400,
+        1960
+      ],
+      "type": 2016,
+      "values": {}
+    },
+    {
+      "id": "yawleft",
+      "position": [
+        0,
+        2240
+      ],
+      "type": 9007,
+      "values": {
+        "Value": [
+          0,
+          -30,
+          0
+        ]
+      }
+    },
+    {
+      "id": "yawcenter",
+      "position": [
+        280,
+        2240
+      ],
+      "type": 9007,
+      "values": {
+        "Value": [
+          0,
+          0,
+          0
+        ]
+      }
+    },
+    {
+      "id": "yawright",
+      "position": [
+        560,
+        2240
+      ],
+      "type": 9007,
+      "values": {
+        "Value": [
+          0,
+          30,
+          0
+        ]
+      }
+    },
+    {
+      "id": "yawDefault",
+      "position": [
+        840,
+        2240
+      ],
+      "type": 9007,
+      "values": {
+        "Value": [
+          0,
+          0,
+          0
+        ]
+      }
+    },
+    {
+      "id": "input_S",
+      "position": [
+        1120,
+        2240
+      ],
+      "type": 1002,
+      "values": {}
+    },
+    {
+      "id": "key_S",
+      "position": [
+        1400,
+        2240
+      ],
+      "type": 10002,
+      "values": {
+        "Key": "S"
+      }
+    },
+    {
+      "id": "if_S",
+      "position": [
+        0,
+        2520
+      ],
+      "type": 2001,
+      "values": {}
+    },
+    {
+      "id": "action_S",
+      "position": [
+        280,
+        2520
+      ],
+      "type": 23016,
+      "values": {
+        "Slot": "route"
+      }
+    },
+    {
+      "id": "input_L",
+      "position": [
+        560,
+        2520
+      ],
+      "type": 1002,
+      "values": {}
+    },
+    {
+      "id": "key_L",
+      "position": [
+        840,
+        2520
+      ],
+      "type": 10002,
+      "values": {
+        "Key": "L"
+      }
+    },
+    {
+      "id": "if_L",
+      "position": [
+        1120,
+        2520
+      ],
+      "type": 2001,
+      "values": {}
+    },
+    {
+      "id": "action_L",
+      "position": [
+        1400,
+        2520
+      ],
+      "type": 23017,
+      "values": {
+        "Slot": "route"
+      }
+    }
+  ],
+  "version": 1
+}

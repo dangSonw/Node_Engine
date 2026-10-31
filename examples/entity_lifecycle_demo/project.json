@@ -1,0 +1,6 @@
+{
+  "graph": "graphs/gameplay.json",
+  "name": "Entity lifecycle robot family",
+  "scene": "scenes/main.json",
+  "version": 1
+}

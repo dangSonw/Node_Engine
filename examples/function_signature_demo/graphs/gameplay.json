@@ -1,0 +1,457 @@
+{
+  "functions": [
+    {
+      "graph": {
+        "links": [
+          {
+            "from": [
+              "entry",
+              "Rate"
+            ],
+            "to": [
+              "multiply",
+              "A"
+            ]
+          },
+          {
+            "from": [
+              "entry",
+              "Step"
+            ],
+            "to": [
+              "multiply",
+              "B"
+            ]
+          },
+          {
+            "from": [
+              "multiply",
+              "Value"
+            ],
+            "to": [
+              "degrees",
+              "Y"
+            ]
+          },
+          {
+            "from": [
+              "degrees",
+              "Value"
+            ],
+            "to": [
+              "return",
+              "Delta"
+            ]
+          }
+        ],
+        "name": "Rotation Delta",
+        "nodes": [
+          {
+            "id": "entry",
+            "position": [
+              0,
+              0
+            ],
+            "type": 6001,
+            "values": {}
+          },
+          {
+            "id": "multiply",
+            "position": [
+              280,
+              40
+            ],
+            "type": 4003,
+            "values": {}
+          },
+          {
+            "id": "degrees",
+            "position": [
+              540,
+              0
+            ],
+            "type": 4020,
+            "values": {}
+          },
+          {
+            "id": "return",
+            "position": [
+              800,
+              0
+            ],
+            "type": 6002,
+            "values": {
+              "Delta": [
+                0.0,
+                0.0,
+                0.0
+              ]
+            }
+          }
+        ],
+        "version": 1
+      },
+      "id": 1000001,
+      "inputs": [
+        {
+          "default": 0.0,
+          "name": "Step",
+          "type": "float"
+        },
+        {
+          "default": 0.0,
+          "name": "Rate",
+          "type": "float"
+        }
+      ],
+      "name": "Angular Step",
+      "outputs": [
+        {
+          "name": "Delta",
+          "type": "vec3"
+        }
+      ],
+      "pure": true
+    },
+    {
+      "graph": {
+        "links": [
+          {
+            "from": [
+              "entry",
+              "Out"
+            ],
+            "to": [
+              "rotate",
+              "In"
+            ]
+          },
+          {
+            "from": [
+              "entry",
+              "Actor"
+            ],
+            "to": [
+              "rotate",
+              "Entity"
+            ]
+          },
+          {
+            "from": [
+              "entry",
+              "Actor"
+            ],
+            "to": [
+              "rotation",
+              "Entity"
+            ]
+          },
+          {
+            "from": [
+              "entry",
+              "Rate"
+            ],
+            "to": [
+              "delta",
+              "Rate"
+            ]
+          },
+          {
+            "from": [
+              "entry",
+              "DeltaSeconds"
+            ],
+            "to": [
+              "delta",
+              "Step"
+            ]
+          },
+          {
+            "from": [
+              "delta",
+              "Delta"
+            ],
+            "to": [
+              "rotate",
+              "Degrees"
+            ]
+          },
+          {
+            "from": [
+              "rotate",
+              "Out"
+            ],
+            "to": [
+              "return",
+              "In"
+            ]
+          },
+          {
+            "from": [
+              "rotation",
+              "Value"
+            ],
+            "to": [
+              "return",
+              "Angle"
+            ]
+          }
+        ],
+        "name": "Spin Robot",
+        "nodes": [
+          {
+            "id": "entry",
+            "position": [
+              0,
+              0
+            ],
+            "type": 6001,
+            "values": {}
+          },
+          {
+            "id": "delta",
+            "position": [
+              260,
+              200
+            ],
+            "type": 1000001,
+            "values": {
+              "Rate": 0.0,
+              "Step": 0.0
+            }
+          },
+          {
+            "id": "rotate",
+            "position": [
+              520,
+              0
+            ],
+            "type": 9004,
+            "values": {}
+          },
+          {
+            "id": "rotation",
+            "position": [
+              520,
+              230
+            ],
+            "type": 9006,
+            "values": {}
+          },
+          {
+            "id": "return",
+            "position": [
+              800,
+              0
+            ],
+            "type": 6002,
+            "values": {
+              "Angle": [
+                0.0,
+                0.0,
+                0.0
+              ]
+            }
+          }
+        ],
+        "version": 1
+      },
+      "id": 1000002,
+      "inputs": [
+        {
+          "default": 0.0,
+          "name": "DeltaSeconds",
+          "type": "float"
+        },
+        {
+          "default": "",
+          "name": "Actor",
+          "type": "entity"
+        },
+        {
+          "default": 6,
+          "name": "Rate",
+          "type": "float"
+        },
+        {
+          "default": "shared",
+          "name": "Note",
+          "type": "string"
+        }
+      ],
+      "name": "Turn Robot",
+      "outputs": [
+        {
+          "name": "Angle",
+          "type": "vec3"
+        }
+      ],
+      "pure": false
+    }
+  ],
+  "links": [
+    {
+      "from": [
+        "dt",
+        "Value"
+      ],
+      "to": [
+        "left",
+        "DeltaSeconds"
+      ]
+    },
+    {
+      "from": [
+        "dt",
+        "Value"
+      ],
+      "to": [
+        "right",
+        "DeltaSeconds"
+      ]
+    },
+    {
+      "from": [
+        "left",
+        "Angle"
+      ],
+      "to": [
+        "save",
+        "Value"
+      ]
+    },
+    {
+      "from": [
+        "left",
+        "Out"
+      ],
+      "to": [
+        "right",
+        "In"
+      ]
+    },
+    {
+      "from": [
+        "right",
+        "Out"
+      ],
+      "to": [
+        "save",
+        "In"
+      ]
+    },
+    {
+      "from": [
+        "start",
+        "Out"
+      ],
+      "to": [
+        "log",
+        "In"
+      ]
+    },
+    {
+      "from": [
+        "update",
+        "Out"
+      ],
+      "to": [
+        "left",
+        "In"
+      ]
+    }
+  ],
+  "name": "Reusable robot functions",
+  "nodes": [
+    {
+      "id": "dt",
+      "label": "Get Delta Time",
+      "position": [
+        0.0,
+        230.0
+      ],
+      "type": 5001,
+      "values": {}
+    },
+    {
+      "id": "left",
+      "label": "Turn Robot",
+      "position": [
+        300.0,
+        0.0
+      ],
+      "type": 1000002,
+      "values": {
+        "Actor": "player",
+        "DeltaSeconds": 0.0,
+        "Note": "shared",
+        "Rate": 60
+      }
+    },
+    {
+      "id": "log",
+      "label": "Print Log",
+      "position": [
+        300.0,
+        -200.0
+      ],
+      "type": 27001,
+      "values": {
+        "Message": "Hai robot dùng chung function Spin Robot"
+      }
+    },
+    {
+      "id": "right",
+      "label": "Spin Robot 1",
+      "position": [
+        610.0,
+        0.0
+      ],
+      "type": 1000002,
+      "values": {
+        "Actor": "partner",
+        "DeltaSeconds": 0.0,
+        "Note": "shared",
+        "Rate": -90
+      }
+    },
+    {
+      "id": "save",
+      "label": "Set Vector3 Variable",
+      "position": [
+        920.0,
+        0.0
+      ],
+      "type": 3114,
+      "values": {
+        "Name": "left_rotation",
+        "Value": [
+          0,
+          0,
+          0
+        ]
+      }
+    },
+    {
+      "id": "start",
+      "label": "On Game Start",
+      "position": [
+        0.0,
+        -200.0
+      ],
+      "type": 1001,
+      "values": {}
+    },
+    {
+      "id": "update",
+      "label": "On Update",
+      "position": [
+        0.0,
+        40.0
+      ],
+      "type": 1002,
+      "values": {}
+    }
+  ],
+  "version": 1
+}

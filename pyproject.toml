@@ -1,0 +1,24 @@
+[project]
+name = "node-engine"
+version = "0.1.0"
+description = "Python visual game editor with a shared native SDL3 runtime"
+requires-python = ">=3.11"
+dependencies = ["PySide6-Essentials>=6.8,<7", "NodeGraphQt>=0.6.43,<0.7", "Jinja2>=3.1,<4", "PyYAML>=6,<7", "setuptools>=75,<81"]
+
+[project.optional-dependencies]
+test = ["pytest>=8"]
+
+[project.scripts]
+node-engine = "editor.main:main"
+node-engine-compile = "editor.cli:main"
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+pythonpath = ["."]
+
+[build-system]
+requires = ["setuptools>=75"]
+build-backend = "setuptools.build_meta"
+
+[tool.setuptools.packages.find]
+include = ["editor*"]

@@ -1,0 +1,1462 @@
+{
+  "links": [
+    {
+      "from": [
+        "start",
+        "Out"
+      ],
+      "to": [
+        "storage",
+        "In"
+      ]
+    },
+    {
+      "from": [
+        "storage",
+        "Out"
+      ],
+      "to": [
+        "hud",
+        "In"
+      ]
+    },
+    {
+      "from": [
+        "hud",
+        "Out"
+      ],
+      "to": [
+        "idle",
+        "In"
+      ]
+    },
+    {
+      "from": [
+        "key_S",
+        "Out"
+      ],
+      "to": [
+        "save",
+        "In"
+      ]
+    },
+    {
+      "from": [
+        "key_L",
+        "Out"
+      ],
+      "to": [
+        "load",
+        "In"
+      ]
+    },
+    {
+      "from": [
+        "key_R",
+        "Out"
+      ],
+      "to": [
+        "reset_pos",
+        "In"
+      ]
+    },
+    {
+      "from": [
+        "reset_pos",
+        "Out"
+      ],
+      "to": [
+        "reset_rot",
+        "In"
+      ]
+    },
+    {
+      "from": [
+        "button",
+        "Out"
+      ],
+      "to": [
+        "remember_button",
+        "In"
+      ]
+    },
+    {
+      "from": [
+        "button",
+        "Button"
+      ],
+      "to": [
+        "remember_button",
+        "Value"
+      ]
+    },
+    {
+      "from": [
+        "remember_button",
+        "Out"
+      ],
+      "to": [
+        "remember_id",
+        "In"
+      ]
+    },
+    {
+      "from": [
+        "button",
+        "Controller"
+      ],
+      "to": [
+        "remember_id",
+        "Value"
+      ]
+    },
+    {
+      "from": [
+        "remember_id",
+        "Out"
+      ],
+      "to": [
+        "edge",
+        "In"
+      ]
+    },
+    {
+      "from": [
+        "button",
+        "Down"
+      ],
+      "to": [
+        "edge",
+        "Condition"
+      ]
+    },
+    {
+      "from": [
+        "get_presses",
+        "Value"
+      ],
+      "to": [
+        "add_presses",
+        "A"
+      ]
+    },
+    {
+      "from": [
+        "edge",
+        "True"
+      ],
+      "to": [
+        "save_presses",
+        "In"
+      ]
+    },
+    {
+      "from": [
+        "add_presses",
+        "Value"
+      ],
+      "to": [
+        "save_presses",
+        "Value"
+      ]
+    },
+    {
+      "from": [
+        "get_releases",
+        "Value"
+      ],
+      "to": [
+        "add_releases",
+        "A"
+      ]
+    },
+    {
+      "from": [
+        "edge",
+        "False"
+      ],
+      "to": [
+        "save_releases",
+        "In"
+      ]
+    },
+    {
+      "from": [
+        "add_releases",
+        "Value"
+      ],
+      "to": [
+        "save_releases",
+        "Value"
+      ]
+    },
+    {
+      "from": [
+        "turn",
+        "Down"
+      ],
+      "to": [
+        "turn_down",
+        "Condition"
+      ]
+    },
+    {
+      "from": [
+        "turn",
+        "Out"
+      ],
+      "to": [
+        "turn_down",
+        "In"
+      ]
+    },
+    {
+      "from": [
+        "turn_down",
+        "True"
+      ],
+      "to": [
+        "rotate",
+        "In"
+      ]
+    },
+    {
+      "from": [
+        "rotate",
+        "Out"
+      ],
+      "to": [
+        "delay",
+        "In"
+      ]
+    },
+    {
+      "from": [
+        "delay",
+        "Out"
+      ],
+      "to": [
+        "remember_delayed",
+        "In"
+      ]
+    },
+    {
+      "from": [
+        "turn",
+        "Controller"
+      ],
+      "to": [
+        "remember_delayed",
+        "Value"
+      ]
+    },
+    {
+      "from": [
+        "update",
+        "Out"
+      ],
+      "to": [
+        "write_left_x",
+        "In"
+      ]
+    },
+    {
+      "from": [
+        "axis_left_x",
+        "Value"
+      ],
+      "to": [
+        "write_left_x",
+        "Value"
+      ]
+    },
+    {
+      "from": [
+        "write_left_x",
+        "Out"
+      ],
+      "to": [
+        "write_left_y",
+        "In"
+      ]
+    },
+    {
+      "from": [
+        "axis_left_y",
+        "Value"
+      ],
+      "to": [
+        "write_left_y",
+        "Value"
+      ]
+    },
+    {
+      "from": [
+        "write_left_y",
+        "Out"
+      ],
+      "to": [
+        "write_trigger",
+        "In"
+      ]
+    },
+    {
+      "from": [
+        "axis_trigger",
+        "Value"
+      ],
+      "to": [
+        "write_trigger",
+        "Value"
+      ]
+    },
+    {
+      "from": [
+        "pads",
+        "Value"
+      ],
+      "to": [
+        "length",
+        "Array"
+      ]
+    },
+    {
+      "from": [
+        "write_trigger",
+        "Out"
+      ],
+      "to": [
+        "write_controllers",
+        "In"
+      ]
+    },
+    {
+      "from": [
+        "pads",
+        "Value"
+      ],
+      "to": [
+        "write_controllers",
+        "Value"
+      ]
+    },
+    {
+      "from": [
+        "write_controllers",
+        "Out"
+      ],
+      "to": [
+        "write_count",
+        "In"
+      ]
+    },
+    {
+      "from": [
+        "length",
+        "Value"
+      ],
+      "to": [
+        "write_count",
+        "Value"
+      ]
+    },
+    {
+      "from": [
+        "axis_left_x",
+        "Value"
+      ],
+      "to": [
+        "sum",
+        "A"
+      ]
+    },
+    {
+      "from": [
+        "keys",
+        "Value"
+      ],
+      "to": [
+        "sum",
+        "B"
+      ]
+    },
+    {
+      "from": [
+        "sum",
+        "Value"
+      ],
+      "to": [
+        "direction",
+        "X"
+      ]
+    },
+    {
+      "from": [
+        "axis_left_y",
+        "Value"
+      ],
+      "to": [
+        "direction",
+        "Z"
+      ]
+    },
+    {
+      "from": [
+        "dt",
+        "Value"
+      ],
+      "to": [
+        "speed",
+        "A"
+      ]
+    },
+    {
+      "from": [
+        "direction",
+        "Value"
+      ],
+      "to": [
+        "movement",
+        "Vector"
+      ]
+    },
+    {
+      "from": [
+        "speed",
+        "Value"
+      ],
+      "to": [
+        "movement",
+        "Scale"
+      ]
+    },
+    {
+      "from": [
+        "write_count",
+        "Out"
+      ],
+      "to": [
+        "move",
+        "In"
+      ]
+    },
+    {
+      "from": [
+        "movement",
+        "Value"
+      ],
+      "to": [
+        "move",
+        "Delta"
+      ]
+    },
+    {
+      "from": [
+        "value_count",
+        "Value"
+      ],
+      "to": [
+        "text_count",
+        "Value"
+      ]
+    },
+    {
+      "from": [
+        "late",
+        "Out"
+      ],
+      "to": [
+        "show_count",
+        "In"
+      ]
+    },
+    {
+      "from": [
+        "text_count",
+        "Value"
+      ],
+      "to": [
+        "show_count",
+        "Text"
+      ]
+    },
+    {
+      "from": [
+        "value_left_x",
+        "Value"
+      ],
+      "to": [
+        "text_left_x",
+        "Value"
+      ]
+    },
+    {
+      "from": [
+        "show_count",
+        "Out"
+      ],
+      "to": [
+        "show_left_x",
+        "In"
+      ]
+    },
+    {
+      "from": [
+        "text_left_x",
+        "Value"
+      ],
+      "to": [
+        "show_left_x",
+        "Text"
+      ]
+    },
+    {
+      "from": [
+        "value_left_y",
+        "Value"
+      ],
+      "to": [
+        "text_left_y",
+        "Value"
+      ]
+    },
+    {
+      "from": [
+        "show_left_x",
+        "Out"
+      ],
+      "to": [
+        "show_left_y",
+        "In"
+      ]
+    },
+    {
+      "from": [
+        "text_left_y",
+        "Value"
+      ],
+      "to": [
+        "show_left_y",
+        "Text"
+      ]
+    },
+    {
+      "from": [
+        "value_trigger",
+        "Value"
+      ],
+      "to": [
+        "text_trigger",
+        "Value"
+      ]
+    },
+    {
+      "from": [
+        "show_left_y",
+        "Out"
+      ],
+      "to": [
+        "show_trigger",
+        "In"
+      ]
+    },
+    {
+      "from": [
+        "text_trigger",
+        "Value"
+      ],
+      "to": [
+        "show_trigger",
+        "Text"
+      ]
+    },
+    {
+      "from": [
+        "value_presses",
+        "Value"
+      ],
+      "to": [
+        "text_presses",
+        "Value"
+      ]
+    },
+    {
+      "from": [
+        "show_trigger",
+        "Out"
+      ],
+      "to": [
+        "show_presses",
+        "In"
+      ]
+    },
+    {
+      "from": [
+        "text_presses",
+        "Value"
+      ],
+      "to": [
+        "show_presses",
+        "Text"
+      ]
+    },
+    {
+      "from": [
+        "value_releases",
+        "Value"
+      ],
+      "to": [
+        "text_releases",
+        "Value"
+      ]
+    },
+    {
+      "from": [
+        "show_presses",
+        "Out"
+      ],
+      "to": [
+        "show_releases",
+        "In"
+      ]
+    },
+    {
+      "from": [
+        "text_releases",
+        "Value"
+      ],
+      "to": [
+        "show_releases",
+        "Text"
+      ]
+    },
+    {
+      "from": [
+        "show_releases",
+        "Out"
+      ],
+      "to": [
+        "show_last_button",
+        "In"
+      ]
+    },
+    {
+      "from": [
+        "value_last_button",
+        "Value"
+      ],
+      "to": [
+        "show_last_button",
+        "Text"
+      ]
+    },
+    {
+      "from": [
+        "value_last_controller",
+        "Value"
+      ],
+      "to": [
+        "text_last_controller",
+        "Value"
+      ]
+    },
+    {
+      "from": [
+        "show_last_button",
+        "Out"
+      ],
+      "to": [
+        "show_last_controller",
+        "In"
+      ]
+    },
+    {
+      "from": [
+        "text_last_controller",
+        "Value"
+      ],
+      "to": [
+        "show_last_controller",
+        "Text"
+      ]
+    },
+    {
+      "from": [
+        "value_delayed_controller",
+        "Value"
+      ],
+      "to": [
+        "text_delayed_controller",
+        "Value"
+      ]
+    },
+    {
+      "from": [
+        "show_last_controller",
+        "Out"
+      ],
+      "to": [
+        "show_delayed_controller",
+        "In"
+      ]
+    },
+    {
+      "from": [
+        "text_delayed_controller",
+        "Value"
+      ],
+      "to": [
+        "show_delayed_controller",
+        "Text"
+      ]
+    }
+  ],
+  "name": "Gamepad robot",
+  "nodes": [
+    {
+      "id": "start",
+      "position": [
+        0,
+        0
+      ],
+      "type": 1001,
+      "values": {}
+    },
+    {
+      "id": "storage",
+      "position": [
+        280,
+        0
+      ],
+      "type": 23001,
+      "values": {
+        "Game ID": "node-engine-gamepad-demo"
+      }
+    },
+    {
+      "id": "hud",
+      "position": [
+        560,
+        0
+      ],
+      "type": 18001,
+      "values": {}
+    },
+    {
+      "id": "idle",
+      "position": [
+        840,
+        0
+      ],
+      "type": 13002,
+      "values": {
+        "Clip": "Idle"
+      }
+    },
+    {
+      "id": "key_S",
+      "position": [
+        1120,
+        0
+      ],
+      "type": 10008,
+      "values": {
+        "Filter": "S"
+      }
+    },
+    {
+      "id": "save",
+      "position": [
+        1400,
+        0
+      ],
+      "type": 23016,
+      "values": {
+        "Slot": "gamepad"
+      }
+    },
+    {
+      "id": "key_L",
+      "position": [
+        0,
+        270
+      ],
+      "type": 10008,
+      "values": {
+        "Filter": "L"
+      }
+    },
+    {
+      "id": "load",
+      "position": [
+        280,
+        270
+      ],
+      "type": 23017,
+      "values": {
+        "Slot": "gamepad"
+      }
+    },
+    {
+      "id": "key_R",
+      "position": [
+        560,
+        270
+      ],
+      "type": 10008,
+      "values": {
+        "Filter": "R"
+      }
+    },
+    {
+      "id": "reset_pos",
+      "position": [
+        840,
+        270
+      ],
+      "type": 9002,
+      "values": {}
+    },
+    {
+      "id": "reset_rot",
+      "position": [
+        1120,
+        270
+      ],
+      "type": 9007,
+      "values": {
+        "Value": [
+          0,
+          0,
+          0
+        ]
+      }
+    },
+    {
+      "id": "button",
+      "position": [
+        1400,
+        270
+      ],
+      "type": 10020,
+      "values": {}
+    },
+    {
+      "id": "remember_button",
+      "position": [
+        0,
+        540
+      ],
+      "type": 3113,
+      "values": {
+        "Name": "last_button"
+      }
+    },
+    {
+      "id": "remember_id",
+      "position": [
+        280,
+        540
+      ],
+      "type": 3111,
+      "values": {
+        "Name": "last_controller"
+      }
+    },
+    {
+      "id": "edge",
+      "position": [
+        560,
+        540
+      ],
+      "type": 2001,
+      "values": {}
+    },
+    {
+      "id": "get_presses",
+      "position": [
+        840,
+        540
+      ],
+      "type": 3101,
+      "values": {
+        "Name": "presses"
+      }
+    },
+    {
+      "id": "add_presses",
+      "position": [
+        1120,
+        540
+      ],
+      "type": 4030,
+      "values": {
+        "B": 1
+      }
+    },
+    {
+      "id": "save_presses",
+      "position": [
+        1400,
+        540
+      ],
+      "type": 3111,
+      "values": {
+        "Name": "presses"
+      }
+    },
+    {
+      "id": "get_releases",
+      "position": [
+        0,
+        810
+      ],
+      "type": 3101,
+      "values": {
+        "Name": "releases"
+      }
+    },
+    {
+      "id": "add_releases",
+      "position": [
+        280,
+        810
+      ],
+      "type": 4030,
+      "values": {
+        "B": 1
+      }
+    },
+    {
+      "id": "save_releases",
+      "position": [
+        560,
+        810
+      ],
+      "type": 3111,
+      "values": {
+        "Name": "releases"
+      }
+    },
+    {
+      "id": "turn",
+      "position": [
+        840,
+        810
+      ],
+      "type": 10020,
+      "values": {
+        "Filter": "South"
+      }
+    },
+    {
+      "id": "turn_down",
+      "position": [
+        1120,
+        810
+      ],
+      "type": 2001,
+      "values": {}
+    },
+    {
+      "id": "rotate",
+      "position": [
+        1400,
+        810
+      ],
+      "type": 9004,
+      "values": {
+        "Degrees": [
+          0,
+          90,
+          0
+        ]
+      }
+    },
+    {
+      "id": "delay",
+      "position": [
+        0,
+        1080
+      ],
+      "type": 2014,
+      "values": {
+        "Seconds": 0.2,
+        "Unscaled": true
+      }
+    },
+    {
+      "id": "remember_delayed",
+      "position": [
+        280,
+        1080
+      ],
+      "type": 3111,
+      "values": {
+        "Name": "delayed_controller"
+      }
+    },
+    {
+      "id": "update",
+      "position": [
+        560,
+        1080
+      ],
+      "type": 1002,
+      "values": {}
+    },
+    {
+      "id": "axis_left_x",
+      "position": [
+        840,
+        1080
+      ],
+      "type": 10019,
+      "values": {
+        "Axis": "LeftX"
+      }
+    },
+    {
+      "id": "write_left_x",
+      "position": [
+        1120,
+        1080
+      ],
+      "type": 3005,
+      "values": {
+        "Name": "left_x"
+      }
+    },
+    {
+      "id": "axis_left_y",
+      "position": [
+        1400,
+        1080
+      ],
+      "type": 10019,
+      "values": {
+        "Axis": "LeftY"
+      }
+    },
+    {
+      "id": "write_left_y",
+      "position": [
+        0,
+        1350
+      ],
+      "type": 3005,
+      "values": {
+        "Name": "left_y"
+      }
+    },
+    {
+      "id": "axis_trigger",
+      "position": [
+        280,
+        1350
+      ],
+      "type": 10019,
+      "values": {
+        "Axis": "LeftTrigger"
+      }
+    },
+    {
+      "id": "write_trigger",
+      "position": [
+        560,
+        1350
+      ],
+      "type": 3005,
+      "values": {
+        "Name": "trigger"
+      }
+    },
+    {
+      "id": "pads",
+      "position": [
+        840,
+        1350
+      ],
+      "type": 10018,
+      "values": {}
+    },
+    {
+      "id": "length",
+      "position": [
+        1120,
+        1350
+      ],
+      "type": 3281,
+      "values": {}
+    },
+    {
+      "id": "write_controllers",
+      "position": [
+        1400,
+        1350
+      ],
+      "type": 3211,
+      "values": {
+        "Name": "controllers"
+      }
+    },
+    {
+      "id": "write_count",
+      "position": [
+        0,
+        1620
+      ],
+      "type": 3111,
+      "values": {
+        "Name": "count"
+      }
+    },
+    {
+      "id": "keys",
+      "position": [
+        280,
+        1620
+      ],
+      "type": 10007,
+      "values": {
+        "Axis": "horizontal"
+      }
+    },
+    {
+      "id": "sum",
+      "position": [
+        560,
+        1620
+      ],
+      "type": 4001,
+      "values": {}
+    },
+    {
+      "id": "direction",
+      "position": [
+        840,
+        1620
+      ],
+      "type": 4020,
+      "values": {}
+    },
+    {
+      "id": "dt",
+      "position": [
+        1120,
+        1620
+      ],
+      "type": 5001,
+      "values": {}
+    },
+    {
+      "id": "speed",
+      "position": [
+        1400,
+        1620
+      ],
+      "type": 4003,
+      "values": {
+        "B": 3
+      }
+    },
+    {
+      "id": "movement",
+      "position": [
+        0,
+        1890
+      ],
+      "type": 4022,
+      "values": {}
+    },
+    {
+      "id": "move",
+      "position": [
+        280,
+        1890
+      ],
+      "type": 9003,
+      "values": {}
+    },
+    {
+      "id": "late",
+      "position": [
+        560,
+        1890
+      ],
+      "type": 1005,
+      "values": {}
+    },
+    {
+      "id": "value_count",
+      "position": [
+        840,
+        1890
+      ],
+      "type": 3101,
+      "values": {
+        "Name": "count"
+      }
+    },
+    {
+      "id": "text_count",
+      "position": [
+        1120,
+        1890
+      ],
+      "type": 3051,
+      "values": {}
+    },
+    {
+      "id": "show_count",
+      "position": [
+        1400,
+        1890
+      ],
+      "type": 18005,
+      "values": {
+        "Element": "count"
+      }
+    },
+    {
+      "id": "value_left_x",
+      "position": [
+        0,
+        2160
+      ],
+      "type": 3004,
+      "values": {
+        "Name": "left_x"
+      }
+    },
+    {
+      "id": "text_left_x",
+      "position": [
+        280,
+        2160
+      ],
+      "type": 3050,
+      "values": {}
+    },
+    {
+      "id": "show_left_x",
+      "position": [
+        560,
+        2160
+      ],
+      "type": 18005,
+      "values": {
+        "Element": "left_x"
+      }
+    },
+    {
+      "id": "value_left_y",
+      "position": [
+        840,
+        2160
+      ],
+      "type": 3004,
+      "values": {
+        "Name": "left_y"
+      }
+    },
+    {
+      "id": "text_left_y",
+      "position": [
+        1120,
+        2160
+      ],
+      "type": 3050,
+      "values": {}
+    },
+    {
+      "id": "show_left_y",
+      "position": [
+        1400,
+        2160
+      ],
+      "type": 18005,
+      "values": {
+        "Element": "left_y"
+      }
+    },
+    {
+      "id": "value_trigger",
+      "position": [
+        0,
+        2430
+      ],
+      "type": 3004,
+      "values": {
+        "Name": "trigger"
+      }
+    },
+    {
+      "id": "text_trigger",
+      "position": [
+        280,
+        2430
+      ],
+      "type": 3050,
+      "values": {}
+    },
+    {
+      "id": "show_trigger",
+      "position": [
+        560,
+        2430
+      ],
+      "type": 18005,
+      "values": {
+        "Element": "trigger"
+      }
+    },
+    {
+      "id": "value_presses",
+      "position": [
+        840,
+        2430
+      ],
+      "type": 3101,
+      "values": {
+        "Name": "presses"
+      }
+    },
+    {
+      "id": "text_presses",
+      "position": [
+        1120,
+        2430
+      ],
+      "type": 3051,
+      "values": {}
+    },
+    {
+      "id": "show_presses",
+      "position": [
+        1400,
+        2430
+      ],
+      "type": 18005,
+      "values": {
+        "Element": "presses"
+      }
+    },
+    {
+      "id": "value_releases",
+      "position": [
+        0,
+        2700
+      ],
+      "type": 3101,
+      "values": {
+        "Name": "releases"
+      }
+    },
+    {
+      "id": "text_releases",
+      "position": [
+        280,
+        2700
+      ],
+      "type": 3051,
+      "values": {}
+    },
+    {
+      "id": "show_releases",
+      "position": [
+        560,
+        2700
+      ],
+      "type": 18005,
+      "values": {
+        "Element": "releases"
+      }
+    },
+    {
+      "id": "value_last_button",
+      "position": [
+        840,
+        2700
+      ],
+      "type": 3103,
+      "values": {
+        "Name": "last_button"
+      }
+    },
+    {
+      "id": "show_last_button",
+      "position": [
+        1120,
+        2700
+      ],
+      "type": 18005,
+      "values": {
+        "Element": "last_button"
+      }
+    },
+    {
+      "id": "value_last_controller",
+      "position": [
+        1400,
+        2700
+      ],
+      "type": 3101,
+      "values": {
+        "Name": "last_controller"
+      }
+    },
+    {
+      "id": "text_last_controller",
+      "position": [
+        0,
+        2970
+      ],
+      "type": 3051,
+      "values": {}
+    },
+    {
+      "id": "show_last_controller",
+      "position": [
+        280,
+        2970
+      ],
+      "type": 18005,
+      "values": {
+        "Element": "last_controller"
+      }
+    },
+    {
+      "id": "value_delayed_controller",
+      "position": [
+        560,
+        2970
+      ],
+      "type": 3101,
+      "values": {
+        "Name": "delayed_controller"
+      }
+    },
+    {
+      "id": "text_delayed_controller",
+      "position": [
+        840,
+        2970
+      ],
+      "type": 3051,
+      "values": {}
+    },
+    {
+      "id": "show_delayed_controller",
+      "position": [
+        1120,
+        2970
+      ],
+      "type": 18005,
+      "values": {
+        "Element": "delayed_controller"
+      }
+    }
+  ],
+  "version": 1
+}

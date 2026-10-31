@@ -1,0 +1,67 @@
+{
+  "entities": [
+    {
+      "id": "player",
+      "mesh": "assets/robot.gltf",
+      "name": "Controlled robot",
+      "position": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "rotation": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "scale": [
+        1.0,
+        1.0,
+        1.0
+      ]
+    }
+  ],
+  "input": {
+    "actions": {
+      "reset": [
+        "R"
+      ],
+      "turn": [
+        "Space",
+        "MouseLeft"
+      ]
+    },
+    "axes": {
+      "horizontal": {
+        "negative": [
+          "A",
+          "Left"
+        ],
+        "positive": [
+          "D",
+          "Right"
+        ]
+      },
+      "vertical": {
+        "negative": [
+          "W",
+          "Up"
+        ],
+        "positive": [
+          "S",
+          "Down"
+        ]
+      }
+    },
+    "version": 1
+  },
+  "variables": {
+    "horizontal": 0.0,
+    "release_count": 0.0,
+    "turn_count": 0.0,
+    "turn_held": {
+      "type": "bool",
+      "value": false
+    }
+  }
+}

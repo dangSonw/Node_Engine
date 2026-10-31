@@ -1,0 +1,35 @@
+{
+  "events": [
+    {
+      "button": "C",
+      "down": true,
+      "frame": 5
+    },
+    {
+      "button": "C",
+      "down": false,
+      "frame": 6
+    },
+    {
+      "button": "M",
+      "down": true,
+      "frame": 30
+    },
+    {
+      "button": "M",
+      "down": false,
+      "frame": 31
+    },
+    {
+      "button": "C",
+      "down": true,
+      "frame": 40
+    },
+    {
+      "button": "C",
+      "down": false,
+      "frame": 41
+    }
+  ],
+  "version": 1
+}

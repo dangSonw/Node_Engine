@@ -1,0 +1,102 @@
+{
+  "links": [
+    {
+      "from": [
+        "57fe0ccaafa0422e890c281bc9ebc9f6",
+        "Value"
+      ],
+      "to": [
+        "afac7592bb264c6fa6e8714d80160c0c",
+        "Scale"
+      ]
+    },
+    {
+      "from": [
+        "afac7592bb264c6fa6e8714d80160c0c",
+        "Value"
+      ],
+      "to": [
+        "fc671fedeeb242ebad2c6d43f850d161",
+        "Degrees"
+      ]
+    },
+    {
+      "from": [
+        "update",
+        "Out"
+      ],
+      "to": [
+        "fc671fedeeb242ebad2c6d43f850d161",
+        "In"
+      ]
+    }
+  ],
+  "name": "Gameplay",
+  "nodes": [
+    {
+      "id": "57fe0ccaafa0422e890c281bc9ebc9f6",
+      "label": "Get Delta Time",
+      "position": [
+        0.0,
+        350.0
+      ],
+      "type": 5001,
+      "values": {}
+    },
+    {
+      "id": "afac7592bb264c6fa6e8714d80160c0c",
+      "label": "Vector Scale",
+      "position": [
+        220.0,
+        350.0
+      ],
+      "type": 4022,
+      "values": {
+        "Scale": 1.0,
+        "Vector": [
+          0,
+          45,
+          0
+        ]
+      }
+    },
+    {
+      "id": "fc671fedeeb242ebad2c6d43f850d161",
+      "label": "Rotate",
+      "position": [
+        440.0,
+        180.0
+      ],
+      "type": 9004,
+      "values": {
+        "Degrees": [
+          0,
+          1,
+          0
+        ],
+        "Entity": "257f11825c7d4aa5a522d00c16c90d02"
+      }
+    },
+    {
+      "id": "start",
+      "label": "On Game Start",
+      "position": [
+        0.0,
+        0.0
+      ],
+      "type": 1001,
+      "values": {}
+    },
+    {
+      "id": "update",
+      "label": "On Update",
+      "position": [
+        0.0,
+        180.0
+      ],
+      "type": 1002,
+      "values": {}
+    }
+  ],
+  "version": 1
+}

@@ -1,0 +1,75 @@
+{
+  "events": [
+    {
+      "button": "Space",
+      "down": true,
+      "frame": 2
+    },
+    {
+      "button": "Space",
+      "down": false,
+      "frame": 3
+    },
+    {
+      "button": "P",
+      "down": true,
+      "frame": 6
+    },
+    {
+      "button": "P",
+      "down": false,
+      "frame": 7
+    },
+    {
+      "button": "R",
+      "down": true,
+      "frame": 12
+    },
+    {
+      "button": "R",
+      "down": false,
+      "frame": 13
+    },
+    {
+      "button": "V",
+      "down": true,
+      "frame": 18
+    },
+    {
+      "button": "V",
+      "down": false,
+      "frame": 19
+    },
+    {
+      "button": "M",
+      "down": true,
+      "frame": 24
+    },
+    {
+      "button": "M",
+      "down": false,
+      "frame": 25
+    },
+    {
+      "button": "L",
+      "down": true,
+      "frame": 30
+    },
+    {
+      "button": "L",
+      "down": false,
+      "frame": 31
+    },
+    {
+      "button": "S",
+      "down": true,
+      "frame": 38
+    },
+    {
+      "button": "S",
+      "down": false,
+      "frame": 39
+    }
+  ],
+  "version": 1
+}

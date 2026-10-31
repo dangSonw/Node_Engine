@@ -1,0 +1,7 @@
+{
+  "assets": [],
+  "graph": "graphs/gameplay.json",
+  "name": "Core Demo",
+  "scene": "scenes/main.json",
+  "version": 1
+}

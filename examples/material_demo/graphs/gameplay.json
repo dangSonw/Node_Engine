@@ -1,0 +1,387 @@
+{
+  "links": [
+    {
+      "from": [
+        "start",
+        "Out"
+      ],
+      "to": [
+        "aim",
+        "In"
+      ]
+    },
+    {
+      "from": [
+        "tint_update",
+        "Out"
+      ],
+      "to": [
+        "tint_branch",
+        "In"
+      ]
+    },
+    {
+      "from": [
+        "tint_pressed",
+        "Value"
+      ],
+      "to": [
+        "tint_branch",
+        "Condition"
+      ]
+    },
+    {
+      "from": [
+        "tint_branch",
+        "True"
+      ],
+      "to": [
+        "tint_0",
+        "In"
+      ]
+    },
+    {
+      "from": [
+        "tint_0",
+        "Out"
+      ],
+      "to": [
+        "tint_1",
+        "In"
+      ]
+    },
+    {
+      "from": [
+        "fade_update",
+        "Out"
+      ],
+      "to": [
+        "fade_branch",
+        "In"
+      ]
+    },
+    {
+      "from": [
+        "fade_pressed",
+        "Value"
+      ],
+      "to": [
+        "fade_branch",
+        "Condition"
+      ]
+    },
+    {
+      "from": [
+        "fade_branch",
+        "True"
+      ],
+      "to": [
+        "fade_0",
+        "In"
+      ]
+    },
+    {
+      "from": [
+        "fade_0",
+        "Out"
+      ],
+      "to": [
+        "fade_1",
+        "In"
+      ]
+    },
+    {
+      "from": [
+        "fade_1",
+        "Out"
+      ],
+      "to": [
+        "fade_2",
+        "In"
+      ]
+    },
+    {
+      "from": [
+        "reset_update",
+        "Out"
+      ],
+      "to": [
+        "reset_branch",
+        "In"
+      ]
+    },
+    {
+      "from": [
+        "reset_pressed",
+        "Value"
+      ],
+      "to": [
+        "reset_branch",
+        "Condition"
+      ]
+    },
+    {
+      "from": [
+        "reset_branch",
+        "True"
+      ],
+      "to": [
+        "reset_0",
+        "In"
+      ]
+    },
+    {
+      "from": [
+        "original_update",
+        "Out"
+      ],
+      "to": [
+        "original_branch",
+        "In"
+      ]
+    },
+    {
+      "from": [
+        "original_pressed",
+        "Value"
+      ],
+      "to": [
+        "original_branch",
+        "Condition"
+      ]
+    },
+    {
+      "from": [
+        "original_branch",
+        "True"
+      ],
+      "to": [
+        "original_0",
+        "In"
+      ]
+    }
+  ],
+  "name": "Material instances: T tint, F fade, R reset, O original",
+  "nodes": [
+    {
+      "id": "start",
+      "position": [
+        0,
+        0
+      ],
+      "type": 1001,
+      "values": {}
+    },
+    {
+      "id": "aim",
+      "position": [
+        260,
+        0
+      ],
+      "type": 15012,
+      "values": {
+        "Target": [
+          0,
+          0.8,
+          0
+        ]
+      }
+    },
+    {
+      "id": "tint_update",
+      "position": [
+        520,
+        0
+      ],
+      "type": 1002,
+      "values": {}
+    },
+    {
+      "id": "tint_pressed",
+      "position": [
+        780,
+        0
+      ],
+      "type": 10005,
+      "values": {
+        "Action": "tint"
+      }
+    },
+    {
+      "id": "tint_branch",
+      "position": [
+        1040,
+        0
+      ],
+      "type": 2001,
+      "values": {}
+    },
+    {
+      "id": "tint_0",
+      "position": [
+        0,
+        240
+      ],
+      "type": 14001,
+      "values": {
+        "Material": "robot_blue"
+      }
+    },
+    {
+      "id": "tint_1",
+      "position": [
+        260,
+        240
+      ],
+      "type": 14005,
+      "values": {
+        "Color": [
+          1,
+          0.18,
+          0.04
+        ]
+      }
+    },
+    {
+      "id": "fade_update",
+      "position": [
+        520,
+        240
+      ],
+      "type": 1002,
+      "values": {}
+    },
+    {
+      "id": "fade_pressed",
+      "position": [
+        780,
+        240
+      ],
+      "type": 10005,
+      "values": {
+        "Action": "fade"
+      }
+    },
+    {
+      "id": "fade_branch",
+      "position": [
+        1040,
+        240
+      ],
+      "type": 2001,
+      "values": {}
+    },
+    {
+      "id": "fade_0",
+      "position": [
+        0,
+        480
+      ],
+      "type": 14001,
+      "values": {
+        "Material": "robot_blue"
+      }
+    },
+    {
+      "id": "fade_1",
+      "position": [
+        260,
+        480
+      ],
+      "type": 14010,
+      "values": {
+        "Mode": "blend"
+      }
+    },
+    {
+      "id": "fade_2",
+      "position": [
+        520,
+        480
+      ],
+      "type": 14007,
+      "values": {
+        "Opacity": 0.3
+      }
+    },
+    {
+      "id": "reset_update",
+      "position": [
+        780,
+        480
+      ],
+      "type": 1002,
+      "values": {}
+    },
+    {
+      "id": "reset_pressed",
+      "position": [
+        1040,
+        480
+      ],
+      "type": 10005,
+      "values": {
+        "Action": "reset"
+      }
+    },
+    {
+      "id": "reset_branch",
+      "position": [
+        0,
+        720
+      ],
+      "type": 2001,
+      "values": {}
+    },
+    {
+      "id": "reset_0",
+      "position": [
+        260,
+        720
+      ],
+      "type": 14001,
+      "values": {
+        "Material": "robot_blue"
+      }
+    },
+    {
+      "id": "original_update",
+      "position": [
+        520,
+        720
+      ],
+      "type": 1002,
+      "values": {}
+    },
+    {
+      "id": "original_pressed",
+      "position": [
+        780,
+        720
+      ],
+      "type": 10005,
+      "values": {
+        "Action": "original"
+      }
+    },
+    {
+      "id": "original_branch",
+      "position": [
+        1040,
+        720
+      ],
+      "type": 2001,
+      "values": {}
+    },
+    {
+      "id": "original_0",
+      "position": [
+        0,
+        960
+      ],
+      "type": 14003,
+      "values": {}
+    }
+  ],
+  "version": 1
+}

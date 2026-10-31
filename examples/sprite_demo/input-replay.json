@@ -1,0 +1,45 @@
+{
+  "events": [
+    {
+      "button": "Space",
+      "down": true,
+      "frame": 2
+    },
+    {
+      "button": "Space",
+      "down": false,
+      "frame": 3
+    },
+    {
+      "button": "X",
+      "down": true,
+      "frame": 4
+    },
+    {
+      "button": "X",
+      "down": false,
+      "frame": 5
+    },
+    {
+      "button": "Y",
+      "down": true,
+      "frame": 6
+    },
+    {
+      "button": "Y",
+      "down": false,
+      "frame": 7
+    },
+    {
+      "button": "Space",
+      "down": true,
+      "frame": 8
+    },
+    {
+      "button": "Space",
+      "down": false,
+      "frame": 9
+    }
+  ],
+  "version": 1
+}

@@ -1,0 +1,164 @@
+{
+  "events": [
+    {
+      "frame": 0,
+      "type": "move",
+      "x": 150,
+      "y": 150
+    },
+    {
+      "button": 0,
+      "down": true,
+      "frame": 0,
+      "type": "button"
+    },
+    {
+      "button": 0,
+      "down": false,
+      "frame": 0,
+      "type": "button"
+    },
+    {
+      "frame": 2,
+      "type": "move",
+      "x": 52,
+      "y": 280
+    },
+    {
+      "button": 0,
+      "down": true,
+      "frame": 2,
+      "type": "button"
+    },
+    {
+      "button": 0,
+      "down": false,
+      "frame": 2,
+      "type": "button"
+    },
+    {
+      "frame": 3,
+      "type": "move",
+      "x": 150,
+      "y": 150
+    },
+    {
+      "button": 0,
+      "down": true,
+      "frame": 3,
+      "type": "button"
+    },
+    {
+      "button": 0,
+      "down": false,
+      "frame": 3,
+      "type": "button"
+    },
+    {
+      "frame": 4,
+      "type": "move",
+      "x": 52,
+      "y": 280
+    },
+    {
+      "button": 0,
+      "down": true,
+      "frame": 4,
+      "type": "button"
+    },
+    {
+      "button": 0,
+      "down": false,
+      "frame": 4,
+      "type": "button"
+    },
+    {
+      "frame": 5,
+      "type": "move",
+      "x": 150,
+      "y": 150
+    },
+    {
+      "button": 0,
+      "down": true,
+      "frame": 5,
+      "type": "button"
+    },
+    {
+      "button": 0,
+      "down": false,
+      "frame": 5,
+      "type": "button"
+    },
+    {
+      "frame": 6,
+      "type": "move",
+      "x": 280,
+      "y": 247
+    },
+    {
+      "button": 0,
+      "down": true,
+      "frame": 6,
+      "type": "button"
+    },
+    {
+      "button": 0,
+      "down": false,
+      "frame": 6,
+      "type": "button"
+    },
+    {
+      "frame": 7,
+      "type": "move",
+      "x": 150,
+      "y": 205
+    },
+    {
+      "button": 0,
+      "down": true,
+      "frame": 7,
+      "type": "button"
+    },
+    {
+      "button": 0,
+      "down": false,
+      "frame": 7,
+      "type": "button"
+    },
+    {
+      "down": true,
+      "frame": 7,
+      "key": "End",
+      "type": "key"
+    },
+    {
+      "down": false,
+      "frame": 7,
+      "key": "End",
+      "type": "key"
+    },
+    {
+      "frame": 7,
+      "text": " Việt",
+      "type": "text"
+    },
+    {
+      "down": true,
+      "frame": 8,
+      "key": "Return",
+      "type": "key"
+    },
+    {
+      "down": false,
+      "frame": 8,
+      "key": "Return",
+      "type": "key"
+    },
+    {
+      "frame": 9,
+      "type": "clear"
+    }
+  ],
+  "version": 1
+}

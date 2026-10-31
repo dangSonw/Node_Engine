@@ -1,0 +1,339 @@
+{
+  "component_definitions": [
+    {
+      "id": 1,
+      "name": "Motion",
+      "properties": [
+        {
+          "default": 90.0,
+          "id": 1,
+          "name": "Speed",
+          "type": "float"
+        }
+      ]
+    }
+  ],
+  "entities": [
+    {
+      "active": true,
+      "components": {},
+      "id": "left",
+      "layer": 0,
+      "mesh": "",
+      "name": "Group",
+      "parent": "",
+      "position": [
+        -3.6,
+        0,
+        0
+      ],
+      "rotation": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "scale": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "tags": [],
+      "visible": true
+    },
+    {
+      "active": true,
+      "components": {},
+      "id": "middle",
+      "layer": 0,
+      "mesh": "",
+      "name": "Group",
+      "parent": "",
+      "position": [
+        0,
+        0,
+        0
+      ],
+      "rotation": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "scale": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "tags": [],
+      "visible": true
+    },
+    {
+      "active": true,
+      "components": {},
+      "id": "nested_body",
+      "layer": 0,
+      "mesh": "assets/robot.gltf",
+      "name": "Body",
+      "parent": "nested",
+      "position": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "rotation": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "scale": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "tags": [],
+      "visible": true
+    },
+    {
+      "active": true,
+      "components": {
+        "1": {
+          "enabled": true,
+          "properties": {
+            "1": 90.0
+          }
+        }
+      },
+      "id": "nested",
+      "layer": 0,
+      "mesh": "",
+      "name": "Robot",
+      "parent": "left",
+      "position": [
+        0,
+        0,
+        0
+      ],
+      "rotation": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "scale": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "tags": [],
+      "visible": true
+    },
+    {
+      "active": true,
+      "components": {},
+      "id": "source_body",
+      "layer": 0,
+      "mesh": "assets/robot.gltf",
+      "name": "Body",
+      "parent": "source",
+      "position": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "rotation": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "scale": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "tags": [],
+      "visible": true
+    },
+    {
+      "active": true,
+      "components": {
+        "1": {
+          "enabled": true,
+          "properties": {
+            "1": 90.0
+          }
+        }
+      },
+      "id": "source",
+      "layer": 0,
+      "mesh": "",
+      "name": "Robot",
+      "parent": "",
+      "position": [
+        3.6,
+        0,
+        0
+      ],
+      "rotation": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "scale": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "tags": [],
+      "visible": true
+    }
+  ],
+  "prefab_assets": [
+    {
+      "entities": [
+        {
+          "id": "root",
+          "name": "Group",
+          "position": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "rotation": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "scale": [
+            1.0,
+            1.0,
+            1.0
+          ]
+        }
+      ],
+      "id": "group",
+      "name": "Robot Group",
+      "root": "root",
+      "type": "prefab",
+      "version": 1
+    },
+    {
+      "component_definitions": [
+        {
+          "id": 1,
+          "name": "Motion",
+          "properties": [
+            {
+              "default": 90.0,
+              "id": 1,
+              "name": "Speed",
+              "type": "float"
+            }
+          ]
+        }
+      ],
+      "entities": [
+        {
+          "active": true,
+          "components": {},
+          "id": "e1",
+          "layer": 0,
+          "mesh": "assets/robot.gltf",
+          "name": "Body",
+          "parent": "root",
+          "position": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "rotation": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "scale": [
+            1.0,
+            1.0,
+            1.0
+          ],
+          "tags": [],
+          "visible": true
+        },
+        {
+          "active": true,
+          "components": {
+            "1": {
+              "enabled": true,
+              "properties": {
+                "1": 90.0
+              }
+            }
+          },
+          "id": "root",
+          "layer": 0,
+          "mesh": "",
+          "name": "Robot",
+          "parent": "",
+          "position": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "rotation": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "scale": [
+            1.0,
+            1.0,
+            1.0
+          ],
+          "tags": [],
+          "visible": true
+        }
+      ],
+      "id": "robot",
+      "name": "Robot",
+      "root": "root",
+      "type": "prefab",
+      "version": 1
+    }
+  ],
+  "prefab_instances": [
+    {
+      "mapping": {
+        "root": "left"
+      },
+      "prefab": "group",
+      "root": "left"
+    },
+    {
+      "mapping": {
+        "root": "middle"
+      },
+      "prefab": "group",
+      "root": "middle"
+    },
+    {
+      "mapping": {
+        "e1": "nested_body",
+        "root": "nested"
+      },
+      "prefab": "robot",
+      "root": "nested"
+    },
+    {
+      "mapping": {
+        "e1": "source_body",
+        "root": "source"
+      },
+      "prefab": "robot",
+      "root": "source"
+    }
+  ],
+  "variables": {
+    "ticks": {
+      "type": "int",
+      "value": 0
+    }
+  },
+  "version": 1
+}

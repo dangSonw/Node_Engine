@@ -1,0 +1,10 @@
+{
+  "assets": [
+    "assets/robot.gltf",
+    "assets/floor.gltf"
+  ],
+  "graph": "graphs/gameplay.json",
+  "name": "Character playground",
+  "scene": "scenes/main.json",
+  "version": 1
+}

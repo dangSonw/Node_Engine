@@ -1,0 +1,312 @@
+{
+  "component_definitions": [
+    {
+      "id": 1,
+      "name": "Motion",
+      "properties": [
+        {
+          "default": 90.0,
+          "id": 1,
+          "name": "Speed",
+          "type": "float"
+        }
+      ]
+    }
+  ],
+  "entities": [
+    {
+      "active": true,
+      "components": {},
+      "id": "left_body",
+      "layer": 0,
+      "mesh": "assets/robot.gltf",
+      "name": "Robot body",
+      "parent": "left",
+      "position": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "rotation": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "scale": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "tags": [],
+      "visible": true
+    },
+    {
+      "active": true,
+      "components": {
+        "1": {
+          "enabled": true,
+          "properties": {
+            "1": 90.0
+          }
+        }
+      },
+      "id": "left",
+      "layer": 0,
+      "mesh": "",
+      "name": "Robot group",
+      "parent": "",
+      "position": [
+        -3.6,
+        0,
+        0
+      ],
+      "rotation": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "scale": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "tags": [],
+      "visible": true
+    },
+    {
+      "active": true,
+      "components": {},
+      "id": "middle_body",
+      "layer": 0,
+      "mesh": "assets/robot.gltf",
+      "name": "Robot body",
+      "parent": "middle",
+      "position": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "rotation": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "scale": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "tags": [],
+      "visible": true
+    },
+    {
+      "active": true,
+      "components": {
+        "1": {
+          "enabled": true,
+          "properties": {
+            "1": 90.0
+          }
+        }
+      },
+      "id": "middle",
+      "layer": 0,
+      "mesh": "",
+      "name": "Robot group",
+      "parent": "",
+      "position": [
+        0,
+        0,
+        0
+      ],
+      "rotation": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "scale": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "tags": [],
+      "visible": true
+    },
+    {
+      "active": true,
+      "components": {},
+      "id": "right_body",
+      "layer": 0,
+      "mesh": "assets/robot.gltf",
+      "name": "Robot body",
+      "parent": "right",
+      "position": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "rotation": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "scale": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "tags": [],
+      "visible": true
+    },
+    {
+      "active": true,
+      "components": {
+        "1": {
+          "enabled": true,
+          "properties": {
+            "1": 90.0
+          }
+        }
+      },
+      "id": "right",
+      "layer": 0,
+      "mesh": "",
+      "name": "Robot group",
+      "parent": "",
+      "position": [
+        3.6,
+        0,
+        0
+      ],
+      "rotation": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "scale": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "tags": [],
+      "visible": true
+    }
+  ],
+  "prefab_assets": [
+    {
+      "component_definitions": [
+        {
+          "id": 1,
+          "name": "Motion",
+          "properties": [
+            {
+              "default": 90.0,
+              "id": 1,
+              "name": "Speed",
+              "type": "float"
+            }
+          ]
+        }
+      ],
+      "entities": [
+        {
+          "active": true,
+          "components": {},
+          "id": "e1",
+          "layer": 0,
+          "mesh": "assets/robot.gltf",
+          "name": "Robot body",
+          "parent": "root",
+          "position": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "rotation": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "scale": [
+            1.0,
+            1.0,
+            1.0
+          ],
+          "tags": [],
+          "visible": true
+        },
+        {
+          "active": true,
+          "components": {
+            "1": {
+              "enabled": true,
+              "properties": {
+                "1": 90.0
+              }
+            }
+          },
+          "id": "root",
+          "layer": 0,
+          "mesh": "",
+          "name": "Robot group",
+          "parent": "",
+          "position": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "rotation": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "scale": [
+            1.0,
+            1.0,
+            1.0
+          ],
+          "tags": [],
+          "visible": true
+        }
+      ],
+      "id": "robot",
+      "name": "Robot",
+      "root": "root",
+      "type": "prefab",
+      "version": 1
+    }
+  ],
+  "prefab_instances": [
+    {
+      "mapping": {
+        "e1": "left_body",
+        "root": "left"
+      },
+      "prefab": "robot",
+      "root": "left"
+    },
+    {
+      "mapping": {
+        "e1": "middle_body",
+        "root": "middle"
+      },
+      "prefab": "robot",
+      "root": "middle"
+    },
+    {
+      "mapping": {
+        "e1": "right_body",
+        "root": "right"
+      },
+      "prefab": "robot",
+      "root": "right"
+    }
+  ],
+  "variables": {
+    "ticks": {
+      "type": "int",
+      "value": 0
+    }
+  },
+  "version": 1
+}

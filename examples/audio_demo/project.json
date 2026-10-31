@@ -1,0 +1,11 @@
+{
+  "assets": [
+    "assets/atlas.png",
+    "assets/music.wav",
+    "assets/effect.wav"
+  ],
+  "graph": "graphs/gameplay.json",
+  "name": "Audio playground",
+  "scene": "scenes/main.json",
+  "version": 1
+}

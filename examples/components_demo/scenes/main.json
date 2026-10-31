@@ -1,0 +1,87 @@
+{
+  "component_definitions": [
+    {
+      "id": 1,
+      "name": "Health",
+      "properties": [
+        {
+          "default": 100,
+          "id": 1,
+          "name": "Points",
+          "type": "int"
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "name": "Inventory",
+      "properties": [
+        {
+          "default": [],
+          "id": 1,
+          "name": "Items",
+          "type": "array<string>"
+        }
+      ]
+    }
+  ],
+  "entities": [
+    {
+      "components": {
+        "1": {
+          "enabled": true,
+          "properties": {
+            "1": 100
+          }
+        }
+      },
+      "id": "player",
+      "mesh": "assets/robot.gltf",
+      "name": "Damageable robot",
+      "position": [
+        -1,
+        0,
+        0
+      ],
+      "rotation": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "scale": [
+        1.0,
+        1.0,
+        1.0
+      ]
+    },
+    {
+      "components": {
+        "2": {
+          "enabled": true,
+          "properties": {
+            "1": []
+          }
+        }
+      },
+      "id": "collector",
+      "mesh": "assets/robot.gltf",
+      "name": "Collector",
+      "position": [
+        1,
+        0,
+        0
+      ],
+      "rotation": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "scale": [
+        1.0,
+        1.0,
+        1.0
+      ]
+    }
+  ],
+  "variables": {}
+}

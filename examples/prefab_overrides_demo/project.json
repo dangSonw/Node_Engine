@@ -1,0 +1,9 @@
+{
+  "assets": [
+    "assets/robot.gltf"
+  ],
+  "graph": "graphs/gameplay.json",
+  "name": "Independent prefab component overrides",
+  "scene": "scenes/main.json",
+  "version": 1
+}

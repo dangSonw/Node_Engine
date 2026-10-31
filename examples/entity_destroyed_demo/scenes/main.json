@@ -1,0 +1,229 @@
+{
+  "active_camera": "camera",
+  "entities": [
+    {
+      "id": "group",
+      "name": "Toggle this parent",
+      "position": [
+        0,
+        0,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ]
+    },
+    {
+      "id": "player",
+      "mesh": "assets/robot.glb",
+      "name": "Robot",
+      "parent": "group",
+      "position": [
+        0,
+        0,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "tags": [
+        "loot_source"
+      ]
+    },
+    {
+      "id": "child",
+      "mesh": "assets/robot.glb",
+      "name": "Child robot",
+      "parent": "player",
+      "position": [
+        0,
+        1.5,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "scale": [
+        0.35,
+        0.35,
+        0.35
+      ]
+    },
+    {
+      "camera": {
+        "far": 1000.0,
+        "fov": 60.0,
+        "near": 0.1,
+        "projection": "perspective",
+        "size": 10.0
+      },
+      "id": "camera",
+      "name": "Camera",
+      "position": [
+        0,
+        1.5,
+        8
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ]
+    }
+  ],
+  "prefab_assets": [
+    {
+      "component_definitions": [],
+      "entities": [
+        {
+          "active": true,
+          "camera": null,
+          "components": {},
+          "id": "e1",
+          "layer": 0,
+          "material": null,
+          "mesh": "assets/robot.glb",
+          "name": "Child robot",
+          "parent": "root",
+          "position": [
+            0,
+            1.5,
+            0
+          ],
+          "rigid_body": null,
+          "rotation": [
+            0,
+            0,
+            0
+          ],
+          "scale": [
+            0.35,
+            0.35,
+            0.35
+          ],
+          "sprite": null,
+          "tags": [],
+          "visible": true
+        },
+        {
+          "active": true,
+          "camera": null,
+          "components": {},
+          "id": "root",
+          "layer": 0,
+          "material": null,
+          "mesh": "assets/robot.glb",
+          "name": "Robot",
+          "parent": "",
+          "position": [
+            0,
+            0,
+            0
+          ],
+          "rigid_body": null,
+          "rotation": [
+            0,
+            0,
+            0
+          ],
+          "scale": [
+            1,
+            1,
+            1
+          ],
+          "sprite": null,
+          "tags": [
+            "loot_source"
+          ],
+          "visible": true
+        }
+      ],
+      "id": "robot_pair",
+      "name": "Robot pair",
+      "root": "root",
+      "type": "prefab",
+      "version": 1
+    }
+  ],
+  "ui_assets": [
+    {
+      "id": "hud",
+      "name": "HUD",
+      "rml": "<rml><head><style>body {width:100%;height:100%;font-family:node-ui;font-size:14px;color:#ffffff;pointer-events:none;}\n    #help {position:absolute;left:8px;top:8px;padding:8px;width:94%;max-width:480px;box-sizing:border-box;background-color:#171e32dd;}</style></head>\n    <body><div id=\"help\">Before deletion: read data and drop loot<br/>\n    T: toggle parent / N: spawn prefab / C: clone robot<br/>X: destroy last spawn / A: add prefab attachment<br/>R: reset last prefab / P: apply its overrides<br/>S/L: save/load the game<br/>Destroyed: <span id=\"destroyed\">0</span> / Loot: <span id=\"loot\">0</span><br/>Before removal: <span id=\"dead_name\">None</span> / active: <span id=\"dead_active\">false</span><br/>\n    Created: <span id=\"created\">0</span> / Enabled: <span id=\"enabled\">0</span> / Disabled: <span id=\"disabled\">0</span><br/>\n    Robot disabled callbacks: <span id=\"owned_disabled\">0</span><br/>\n    Last: <span id=\"last_event\">None</span> / <span id=\"last_entity\"></span> / Active: <span id=\"last_active\">false</span></div></body></rml>",
+      "type": "ui",
+      "version": 1
+    }
+  ],
+  "variables": {
+    "created": {
+      "type": "int",
+      "value": 0
+    },
+    "dead_active": {
+      "type": "bool",
+      "value": false
+    },
+    "dead_name": {
+      "type": "string",
+      "value": "None"
+    },
+    "destroyed": {
+      "type": "int",
+      "value": 0
+    },
+    "disabled": {
+      "type": "int",
+      "value": 0
+    },
+    "enabled": {
+      "type": "int",
+      "value": 0
+    },
+    "last_active": {
+      "type": "bool",
+      "value": false
+    },
+    "last_entity": {
+      "type": "entity",
+      "value": ""
+    },
+    "last_event": {
+      "type": "string",
+      "value": "None"
+    },
+    "loot": {
+      "type": "int",
+      "value": 0
+    },
+    "owned_disabled": {
+      "type": "int",
+      "value": 0
+    },
+    "spawned": {
+      "type": "entity",
+      "value": ""
+    }
+  },
+  "version": 1
+}

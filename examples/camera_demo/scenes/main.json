@@ -1,0 +1,141 @@
+{
+  "active_camera": "camera",
+  "entities": [
+    {
+      "id": "player",
+      "mesh": "assets/robot.gltf",
+      "name": "Controlled robot",
+      "position": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "rotation": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "scale": [
+        1.0,
+        1.0,
+        1.0
+      ]
+    },
+    {
+      "camera": {
+        "far": 1000.0,
+        "fov": 60.0,
+        "near": 0.1,
+        "projection": "perspective",
+        "size": 10.0
+      },
+      "id": "camera",
+      "name": "Following camera",
+      "position": [
+        0,
+        2,
+        6
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ]
+    },
+    {
+      "id": "landmark_0",
+      "mesh": "assets/robot.gltf",
+      "name": "Landmark 1",
+      "position": [
+        -4,
+        0,
+        -2
+      ],
+      "rotation": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "scale": [
+        1.0,
+        1.0,
+        1.0
+      ]
+    },
+    {
+      "id": "landmark_1",
+      "mesh": "assets/robot.gltf",
+      "name": "Landmark 2",
+      "position": [
+        4,
+        0,
+        -2
+      ],
+      "rotation": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "scale": [
+        1.0,
+        1.0,
+        1.0
+      ]
+    }
+  ],
+  "input": {
+    "actions": {
+      "projection": [
+        "C"
+      ],
+      "reset": [
+        "R"
+      ],
+      "turn": [
+        "Space",
+        "MouseLeft"
+      ]
+    },
+    "axes": {
+      "horizontal": {
+        "negative": [
+          "A",
+          "Left"
+        ],
+        "positive": [
+          "D",
+          "Right"
+        ]
+      },
+      "vertical": {
+        "negative": [
+          "W",
+          "Up"
+        ],
+        "positive": [
+          "S",
+          "Down"
+        ]
+      }
+    },
+    "version": 1
+  },
+  "variables": {
+    "camera_ortho": {
+      "type": "bool",
+      "value": false
+    },
+    "horizontal": 0.0,
+    "release_count": 0.0,
+    "turn_count": 0.0,
+    "turn_held": {
+      "type": "bool",
+      "value": false
+    }
+  }
+}

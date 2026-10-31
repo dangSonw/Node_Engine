@@ -1,0 +1,1709 @@
+{
+  "functions": [
+    {
+      "graph": {
+        "links": [
+          {
+            "from": [
+              "entry",
+              "Out"
+            ],
+            "to": [
+              "reset",
+              "In"
+            ]
+          },
+          {
+            "from": [
+              "reset",
+              "Out"
+            ],
+            "to": [
+              "visited_reset",
+              "In"
+            ]
+          },
+          {
+            "from": [
+              "visited_reset",
+              "Out"
+            ],
+            "to": [
+              "scan",
+              "In"
+            ]
+          },
+          {
+            "from": [
+              "entry",
+              "Targets"
+            ],
+            "to": [
+              "scan",
+              "Array"
+            ]
+          },
+          {
+            "from": [
+              "scan",
+              "Body"
+            ],
+            "to": [
+              "visit",
+              "In"
+            ]
+          },
+          {
+            "from": [
+              "visited",
+              "Value"
+            ],
+            "to": [
+              "inc",
+              "A"
+            ]
+          },
+          {
+            "from": [
+              "inc",
+              "Value"
+            ],
+            "to": [
+              "visit",
+              "Value"
+            ]
+          },
+          {
+            "from": [
+              "visit",
+              "Out"
+            ],
+            "to": [
+              "tagged",
+              "In"
+            ]
+          },
+          {
+            "from": [
+              "scan",
+              "Item"
+            ],
+            "to": [
+              "tag",
+              "Entity"
+            ]
+          },
+          {
+            "from": [
+              "tag",
+              "Value"
+            ],
+            "to": [
+              "tagged",
+              "Condition"
+            ]
+          },
+          {
+            "from": [
+              "tagged",
+              "False"
+            ],
+            "to": [
+              "skip_other",
+              "In"
+            ]
+          },
+          {
+            "from": [
+              "tagged",
+              "True"
+            ],
+            "to": [
+              "available",
+              "In"
+            ]
+          },
+          {
+            "from": [
+              "scan",
+              "Item"
+            ],
+            "to": [
+              "active",
+              "Entity"
+            ]
+          },
+          {
+            "from": [
+              "active",
+              "Value"
+            ],
+            "to": [
+              "available",
+              "Condition"
+            ]
+          },
+          {
+            "from": [
+              "available",
+              "False"
+            ],
+            "to": [
+              "skip_inactive",
+              "In"
+            ]
+          },
+          {
+            "from": [
+              "available",
+              "True"
+            ],
+            "to": [
+              "select",
+              "In"
+            ]
+          },
+          {
+            "from": [
+              "scan",
+              "Item"
+            ],
+            "to": [
+              "select",
+              "Value"
+            ]
+          },
+          {
+            "from": [
+              "select",
+              "Out"
+            ],
+            "to": [
+              "found",
+              "In"
+            ]
+          },
+          {
+            "from": [
+              "scan",
+              "Done"
+            ],
+            "to": [
+              "return",
+              "In"
+            ]
+          },
+          {
+            "from": [
+              "selected",
+              "Value"
+            ],
+            "to": [
+              "return",
+              "Selected"
+            ]
+          }
+        ],
+        "name": "Gameplay",
+        "nodes": [
+          {
+            "id": "entry",
+            "position": [
+              0,
+              0
+            ],
+            "type": 6001,
+            "values": {}
+          },
+          {
+            "id": "reset",
+            "position": [
+              270,
+              0
+            ],
+            "type": 3115,
+            "values": {
+              "Name": "selected",
+              "Value": ""
+            }
+          },
+          {
+            "id": "visited_reset",
+            "position": [
+              540,
+              0
+            ],
+            "type": 3111,
+            "values": {
+              "Name": "visited",
+              "Value": 0
+            }
+          },
+          {
+            "id": "scan",
+            "position": [
+              810,
+              0
+            ],
+            "type": 2305,
+            "values": {}
+          },
+          {
+            "id": "visit",
+            "position": [
+              1080,
+              0
+            ],
+            "type": 3111,
+            "values": {
+              "Name": "visited"
+            }
+          },
+          {
+            "id": "visited",
+            "position": [
+              1350,
+              0
+            ],
+            "type": 3101,
+            "values": {
+              "Name": "visited"
+            }
+          },
+          {
+            "id": "inc",
+            "position": [
+              0,
+              220
+            ],
+            "type": 4030,
+            "values": {
+              "B": 1
+            }
+          },
+          {
+            "id": "tagged",
+            "position": [
+              270,
+              220
+            ],
+            "type": 2001,
+            "values": {}
+          },
+          {
+            "id": "tag",
+            "position": [
+              540,
+              220
+            ],
+            "type": 8026,
+            "values": {
+              "Tag": "target"
+            }
+          },
+          {
+            "id": "skip_other",
+            "position": [
+              810,
+              220
+            ],
+            "type": 2006,
+            "values": {}
+          },
+          {
+            "id": "available",
+            "position": [
+              1080,
+              220
+            ],
+            "type": 2001,
+            "values": {}
+          },
+          {
+            "id": "active",
+            "position": [
+              1350,
+              220
+            ],
+            "type": 8029,
+            "values": {}
+          },
+          {
+            "id": "skip_inactive",
+            "position": [
+              0,
+              440
+            ],
+            "type": 2006,
+            "values": {}
+          },
+          {
+            "id": "select",
+            "position": [
+              270,
+              440
+            ],
+            "type": 3115,
+            "values": {
+              "Name": "selected"
+            }
+          },
+          {
+            "id": "found",
+            "position": [
+              540,
+              440
+            ],
+            "type": 2005,
+            "values": {}
+          },
+          {
+            "id": "selected",
+            "position": [
+              810,
+              440
+            ],
+            "type": 3105,
+            "values": {
+              "Name": "selected"
+            }
+          },
+          {
+            "id": "return",
+            "position": [
+              1080,
+              440
+            ],
+            "type": 6002,
+            "values": {}
+          }
+        ],
+        "version": 1
+      },
+      "id": 1000200,
+      "inputs": [
+        {
+          "default": [],
+          "name": "Targets",
+          "type": "array<entity>"
+        }
+      ],
+      "name": "Select Available Robot",
+      "outputs": [
+        {
+          "name": "Selected",
+          "type": "entity"
+        }
+      ],
+      "pure": false
+    }
+  ],
+  "links": [
+    {
+      "from": [
+        "start",
+        "Out"
+      ],
+      "to": [
+        "storage",
+        "In"
+      ]
+    },
+    {
+      "from": [
+        "storage",
+        "Out"
+      ],
+      "to": [
+        "hud",
+        "In"
+      ]
+    },
+    {
+      "from": [
+        "hud",
+        "Out"
+      ],
+      "to": [
+        "idle_0",
+        "In"
+      ]
+    },
+    {
+      "from": [
+        "idle_0",
+        "Out"
+      ],
+      "to": [
+        "idle_1",
+        "In"
+      ]
+    },
+    {
+      "from": [
+        "idle_1",
+        "Out"
+      ],
+      "to": [
+        "idle_2",
+        "In"
+      ]
+    },
+    {
+      "from": [
+        "idle_2",
+        "Out"
+      ],
+      "to": [
+        "initial_scale0",
+        "In"
+      ]
+    },
+    {
+      "from": [
+        "initial_scale0",
+        "Out"
+      ],
+      "to": [
+        "initial_scale1",
+        "In"
+      ]
+    },
+    {
+      "from": [
+        "initial_scale1",
+        "Out"
+      ],
+      "to": [
+        "initial_scale2",
+        "In"
+      ]
+    },
+    {
+      "from": [
+        "initial_scale2",
+        "Out"
+      ],
+      "to": [
+        "initial_call",
+        "In"
+      ]
+    },
+    {
+      "from": [
+        "initial_entities",
+        "Value"
+      ],
+      "to": [
+        "initial_call",
+        "Targets"
+      ]
+    },
+    {
+      "from": [
+        "initial_call",
+        "Out"
+      ],
+      "to": [
+        "initial_count",
+        "In"
+      ]
+    },
+    {
+      "from": [
+        "initial_count_get",
+        "Value"
+      ],
+      "to": [
+        "initial_add",
+        "A"
+      ]
+    },
+    {
+      "from": [
+        "initial_add",
+        "Value"
+      ],
+      "to": [
+        "initial_count",
+        "Value"
+      ]
+    },
+    {
+      "from": [
+        "initial_count",
+        "Out"
+      ],
+      "to": [
+        "initial_status",
+        "In"
+      ]
+    },
+    {
+      "from": [
+        "initial_status",
+        "Out"
+      ],
+      "to": [
+        "initial_valid",
+        "In"
+      ]
+    },
+    {
+      "from": [
+        "initial_call",
+        "Selected"
+      ],
+      "to": [
+        "initial_exists",
+        "Entity"
+      ]
+    },
+    {
+      "from": [
+        "initial_exists",
+        "Value"
+      ],
+      "to": [
+        "initial_valid",
+        "Condition"
+      ]
+    },
+    {
+      "from": [
+        "initial_valid",
+        "True"
+      ],
+      "to": [
+        "initial_enlarge",
+        "In"
+      ]
+    },
+    {
+      "from": [
+        "initial_call",
+        "Selected"
+      ],
+      "to": [
+        "initial_enlarge",
+        "Entity"
+      ]
+    },
+    {
+      "from": [
+        "initial_call",
+        "Selected"
+      ],
+      "to": [
+        "initial_name",
+        "Entity"
+      ]
+    },
+    {
+      "from": [
+        "initial_enlarge",
+        "Out"
+      ],
+      "to": [
+        "initial_name_set",
+        "In"
+      ]
+    },
+    {
+      "from": [
+        "initial_name",
+        "Value"
+      ],
+      "to": [
+        "initial_name_set",
+        "Text"
+      ]
+    },
+    {
+      "from": [
+        "update_1",
+        "Out"
+      ],
+      "to": [
+        "if_1",
+        "In"
+      ]
+    },
+    {
+      "from": [
+        "key_1",
+        "Value"
+      ],
+      "to": [
+        "if_1",
+        "Condition"
+      ]
+    },
+    {
+      "from": [
+        "if_1",
+        "True"
+      ],
+      "to": [
+        "toggle_1",
+        "In"
+      ]
+    },
+    {
+      "from": [
+        "active_1",
+        "Value"
+      ],
+      "to": [
+        "not_1",
+        "Value"
+      ]
+    },
+    {
+      "from": [
+        "not_1",
+        "Value"
+      ],
+      "to": [
+        "toggle_1",
+        "Active"
+      ]
+    },
+    {
+      "from": [
+        "update_2",
+        "Out"
+      ],
+      "to": [
+        "if_2",
+        "In"
+      ]
+    },
+    {
+      "from": [
+        "key_2",
+        "Value"
+      ],
+      "to": [
+        "if_2",
+        "Condition"
+      ]
+    },
+    {
+      "from": [
+        "if_2",
+        "True"
+      ],
+      "to": [
+        "toggle_2",
+        "In"
+      ]
+    },
+    {
+      "from": [
+        "active_2",
+        "Value"
+      ],
+      "to": [
+        "not_2",
+        "Value"
+      ]
+    },
+    {
+      "from": [
+        "not_2",
+        "Value"
+      ],
+      "to": [
+        "toggle_2",
+        "Active"
+      ]
+    },
+    {
+      "from": [
+        "update_3",
+        "Out"
+      ],
+      "to": [
+        "if_3",
+        "In"
+      ]
+    },
+    {
+      "from": [
+        "key_3",
+        "Value"
+      ],
+      "to": [
+        "if_3",
+        "Condition"
+      ]
+    },
+    {
+      "from": [
+        "if_3",
+        "True"
+      ],
+      "to": [
+        "toggle_3",
+        "In"
+      ]
+    },
+    {
+      "from": [
+        "active_3",
+        "Value"
+      ],
+      "to": [
+        "not_3",
+        "Value"
+      ]
+    },
+    {
+      "from": [
+        "not_3",
+        "Value"
+      ],
+      "to": [
+        "toggle_3",
+        "Active"
+      ]
+    },
+    {
+      "from": [
+        "update_S",
+        "Out"
+      ],
+      "to": [
+        "if_S",
+        "In"
+      ]
+    },
+    {
+      "from": [
+        "key_S",
+        "Value"
+      ],
+      "to": [
+        "if_S",
+        "Condition"
+      ]
+    },
+    {
+      "from": [
+        "if_S",
+        "True"
+      ],
+      "to": [
+        "action_S",
+        "In"
+      ]
+    },
+    {
+      "from": [
+        "update_L",
+        "Out"
+      ],
+      "to": [
+        "if_L",
+        "In"
+      ]
+    },
+    {
+      "from": [
+        "key_L",
+        "Value"
+      ],
+      "to": [
+        "if_L",
+        "Condition"
+      ]
+    },
+    {
+      "from": [
+        "if_L",
+        "True"
+      ],
+      "to": [
+        "action_L",
+        "In"
+      ]
+    },
+    {
+      "from": [
+        "update_Space",
+        "Out"
+      ],
+      "to": [
+        "if_Space",
+        "In"
+      ]
+    },
+    {
+      "from": [
+        "key_Space",
+        "Value"
+      ],
+      "to": [
+        "if_Space",
+        "Condition"
+      ]
+    },
+    {
+      "from": [
+        "if_Space",
+        "True"
+      ],
+      "to": [
+        "manual_scale0",
+        "In"
+      ]
+    },
+    {
+      "from": [
+        "manual_scale0",
+        "Out"
+      ],
+      "to": [
+        "manual_scale1",
+        "In"
+      ]
+    },
+    {
+      "from": [
+        "manual_scale1",
+        "Out"
+      ],
+      "to": [
+        "manual_scale2",
+        "In"
+      ]
+    },
+    {
+      "from": [
+        "manual_scale2",
+        "Out"
+      ],
+      "to": [
+        "manual_call",
+        "In"
+      ]
+    },
+    {
+      "from": [
+        "manual_entities",
+        "Value"
+      ],
+      "to": [
+        "manual_call",
+        "Targets"
+      ]
+    },
+    {
+      "from": [
+        "manual_call",
+        "Out"
+      ],
+      "to": [
+        "manual_count",
+        "In"
+      ]
+    },
+    {
+      "from": [
+        "manual_count_get",
+        "Value"
+      ],
+      "to": [
+        "manual_add",
+        "A"
+      ]
+    },
+    {
+      "from": [
+        "manual_add",
+        "Value"
+      ],
+      "to": [
+        "manual_count",
+        "Value"
+      ]
+    },
+    {
+      "from": [
+        "manual_count",
+        "Out"
+      ],
+      "to": [
+        "manual_status",
+        "In"
+      ]
+    },
+    {
+      "from": [
+        "manual_status",
+        "Out"
+      ],
+      "to": [
+        "manual_valid",
+        "In"
+      ]
+    },
+    {
+      "from": [
+        "manual_call",
+        "Selected"
+      ],
+      "to": [
+        "manual_exists",
+        "Entity"
+      ]
+    },
+    {
+      "from": [
+        "manual_exists",
+        "Value"
+      ],
+      "to": [
+        "manual_valid",
+        "Condition"
+      ]
+    },
+    {
+      "from": [
+        "manual_valid",
+        "True"
+      ],
+      "to": [
+        "manual_enlarge",
+        "In"
+      ]
+    },
+    {
+      "from": [
+        "manual_call",
+        "Selected"
+      ],
+      "to": [
+        "manual_enlarge",
+        "Entity"
+      ]
+    },
+    {
+      "from": [
+        "manual_call",
+        "Selected"
+      ],
+      "to": [
+        "manual_name",
+        "Entity"
+      ]
+    },
+    {
+      "from": [
+        "manual_enlarge",
+        "Out"
+      ],
+      "to": [
+        "manual_name_set",
+        "In"
+      ]
+    },
+    {
+      "from": [
+        "manual_name",
+        "Value"
+      ],
+      "to": [
+        "manual_name_set",
+        "Text"
+      ]
+    }
+  ],
+  "name": "Break and Continue playground",
+  "nodes": [
+    {
+      "id": "start",
+      "position": [
+        0,
+        0
+      ],
+      "type": 1001,
+      "values": {}
+    },
+    {
+      "id": "storage",
+      "position": [
+        270,
+        0
+      ],
+      "type": 23001,
+      "values": {
+        "Game ID": "node-engine-loop-control-demo"
+      }
+    },
+    {
+      "id": "hud",
+      "position": [
+        540,
+        0
+      ],
+      "type": 18001,
+      "values": {}
+    },
+    {
+      "id": "idle_0",
+      "position": [
+        810,
+        0
+      ],
+      "type": 13002,
+      "values": {
+        "Clip": "Idle",
+        "Entity": "player"
+      }
+    },
+    {
+      "id": "idle_1",
+      "position": [
+        1080,
+        0
+      ],
+      "type": 13002,
+      "values": {
+        "Clip": "Idle",
+        "Entity": "robot_b"
+      }
+    },
+    {
+      "id": "idle_2",
+      "position": [
+        1350,
+        0
+      ],
+      "type": 13002,
+      "values": {
+        "Clip": "Idle",
+        "Entity": "robot_c"
+      }
+    },
+    {
+      "id": "initial_scale0",
+      "position": [
+        0,
+        220
+      ],
+      "type": 9005,
+      "values": {
+        "Entity": "player",
+        "Value": [
+          1,
+          1,
+          1
+        ]
+      }
+    },
+    {
+      "id": "initial_scale1",
+      "position": [
+        270,
+        220
+      ],
+      "type": 9005,
+      "values": {
+        "Entity": "robot_b",
+        "Value": [
+          1,
+          1,
+          1
+        ]
+      }
+    },
+    {
+      "id": "initial_scale2",
+      "position": [
+        540,
+        220
+      ],
+      "type": 9005,
+      "values": {
+        "Entity": "robot_c",
+        "Value": [
+          1,
+          1,
+          1
+        ]
+      }
+    },
+    {
+      "id": "initial_call",
+      "position": [
+        810,
+        220
+      ],
+      "type": 1000200,
+      "values": {}
+    },
+    {
+      "id": "initial_entities",
+      "position": [
+        1080,
+        220
+      ],
+      "type": 8014,
+      "values": {}
+    },
+    {
+      "id": "initial_count",
+      "position": [
+        1350,
+        220
+      ],
+      "type": 3005,
+      "values": {
+        "Name": "scans"
+      }
+    },
+    {
+      "id": "initial_count_get",
+      "position": [
+        0,
+        440
+      ],
+      "type": 3004,
+      "values": {
+        "Name": "scans"
+      }
+    },
+    {
+      "id": "initial_add",
+      "position": [
+        270,
+        440
+      ],
+      "type": 4001,
+      "values": {
+        "B": 1
+      }
+    },
+    {
+      "id": "initial_status",
+      "position": [
+        540,
+        440
+      ],
+      "type": 18005,
+      "values": {
+        "Element": "selected",
+        "Text": "none"
+      }
+    },
+    {
+      "id": "initial_valid",
+      "position": [
+        810,
+        440
+      ],
+      "type": 2001,
+      "values": {}
+    },
+    {
+      "id": "initial_exists",
+      "position": [
+        1080,
+        440
+      ],
+      "type": 8003,
+      "values": {}
+    },
+    {
+      "id": "initial_enlarge",
+      "position": [
+        1350,
+        440
+      ],
+      "type": 9005,
+      "values": {
+        "Value": [
+          1.25,
+          1.25,
+          1.25
+        ]
+      }
+    },
+    {
+      "id": "initial_name",
+      "position": [
+        0,
+        660
+      ],
+      "type": 8016,
+      "values": {}
+    },
+    {
+      "id": "initial_name_set",
+      "position": [
+        270,
+        660
+      ],
+      "type": 18005,
+      "values": {
+        "Element": "selected"
+      }
+    },
+    {
+      "id": "update_1",
+      "position": [
+        540,
+        660
+      ],
+      "type": 1002,
+      "values": {}
+    },
+    {
+      "id": "key_1",
+      "position": [
+        810,
+        660
+      ],
+      "type": 10002,
+      "values": {
+        "Key": "1"
+      }
+    },
+    {
+      "id": "if_1",
+      "position": [
+        1080,
+        660
+      ],
+      "type": 2001,
+      "values": {}
+    },
+    {
+      "id": "toggle_1",
+      "position": [
+        1350,
+        660
+      ],
+      "type": 8028,
+      "values": {
+        "Entity": "player"
+      }
+    },
+    {
+      "id": "active_1",
+      "position": [
+        0,
+        880
+      ],
+      "type": 8030,
+      "values": {
+        "Entity": "player"
+      }
+    },
+    {
+      "id": "not_1",
+      "position": [
+        270,
+        880
+      ],
+      "type": 4017,
+      "values": {}
+    },
+    {
+      "id": "update_2",
+      "position": [
+        540,
+        880
+      ],
+      "type": 1002,
+      "values": {}
+    },
+    {
+      "id": "key_2",
+      "position": [
+        810,
+        880
+      ],
+      "type": 10002,
+      "values": {
+        "Key": "2"
+      }
+    },
+    {
+      "id": "if_2",
+      "position": [
+        1080,
+        880
+      ],
+      "type": 2001,
+      "values": {}
+    },
+    {
+      "id": "toggle_2",
+      "position": [
+        1350,
+        880
+      ],
+      "type": 8028,
+      "values": {
+        "Entity": "robot_b"
+      }
+    },
+    {
+      "id": "active_2",
+      "position": [
+        0,
+        1100
+      ],
+      "type": 8030,
+      "values": {
+        "Entity": "robot_b"
+      }
+    },
+    {
+      "id": "not_2",
+      "position": [
+        270,
+        1100
+      ],
+      "type": 4017,
+      "values": {}
+    },
+    {
+      "id": "update_3",
+      "position": [
+        540,
+        1100
+      ],
+      "type": 1002,
+      "values": {}
+    },
+    {
+      "id": "key_3",
+      "position": [
+        810,
+        1100
+      ],
+      "type": 10002,
+      "values": {
+        "Key": "3"
+      }
+    },
+    {
+      "id": "if_3",
+      "position": [
+        1080,
+        1100
+      ],
+      "type": 2001,
+      "values": {}
+    },
+    {
+      "id": "toggle_3",
+      "position": [
+        1350,
+        1100
+      ],
+      "type": 8028,
+      "values": {
+        "Entity": "robot_c"
+      }
+    },
+    {
+      "id": "active_3",
+      "position": [
+        0,
+        1320
+      ],
+      "type": 8030,
+      "values": {
+        "Entity": "robot_c"
+      }
+    },
+    {
+      "id": "not_3",
+      "position": [
+        270,
+        1320
+      ],
+      "type": 4017,
+      "values": {}
+    },
+    {
+      "id": "update_S",
+      "position": [
+        540,
+        1320
+      ],
+      "type": 1002,
+      "values": {}
+    },
+    {
+      "id": "key_S",
+      "position": [
+        810,
+        1320
+      ],
+      "type": 10002,
+      "values": {
+        "Key": "S"
+      }
+    },
+    {
+      "id": "if_S",
+      "position": [
+        1080,
+        1320
+      ],
+      "type": 2001,
+      "values": {}
+    },
+    {
+      "id": "action_S",
+      "position": [
+        1350,
+        1320
+      ],
+      "type": 23016,
+      "values": {
+        "Slot": "selection"
+      }
+    },
+    {
+      "id": "update_L",
+      "position": [
+        0,
+        1540
+      ],
+      "type": 1002,
+      "values": {}
+    },
+    {
+      "id": "key_L",
+      "position": [
+        270,
+        1540
+      ],
+      "type": 10002,
+      "values": {
+        "Key": "L"
+      }
+    },
+    {
+      "id": "if_L",
+      "position": [
+        540,
+        1540
+      ],
+      "type": 2001,
+      "values": {}
+    },
+    {
+      "id": "action_L",
+      "position": [
+        810,
+        1540
+      ],
+      "type": 23017,
+      "values": {
+        "Slot": "selection"
+      }
+    },
+    {
+      "id": "update_Space",
+      "position": [
+        1080,
+        1540
+      ],
+      "type": 1002,
+      "values": {}
+    },
+    {
+      "id": "key_Space",
+      "position": [
+        1350,
+        1540
+      ],
+      "type": 10002,
+      "values": {
+        "Key": "Space"
+      }
+    },
+    {
+      "id": "if_Space",
+      "position": [
+        0,
+        1760
+      ],
+      "type": 2001,
+      "values": {}
+    },
+    {
+      "id": "manual_scale0",
+      "position": [
+        270,
+        1760
+      ],
+      "type": 9005,
+      "values": {
+        "Entity": "player",
+        "Value": [
+          1,
+          1,
+          1
+        ]
+      }
+    },
+    {
+      "id": "manual_scale1",
+      "position": [
+        540,
+        1760
+      ],
+      "type": 9005,
+      "values": {
+        "Entity": "robot_b",
+        "Value": [
+          1,
+          1,
+          1
+        ]
+      }
+    },
+    {
+      "id": "manual_scale2",
+      "position": [
+        810,
+        1760
+      ],
+      "type": 9005,
+      "values": {
+        "Entity": "robot_c",
+        "Value": [
+          1,
+          1,
+          1
+        ]
+      }
+    },
+    {
+      "id": "manual_call",
+      "position": [
+        1080,
+        1760
+      ],
+      "type": 1000200,
+      "values": {}
+    },
+    {
+      "id": "manual_entities",
+      "position": [
+        1350,
+        1760
+      ],
+      "type": 8014,
+      "values": {}
+    },
+    {
+      "id": "manual_count",
+      "position": [
+        0,
+        1980
+      ],
+      "type": 3005,
+      "values": {
+        "Name": "scans"
+      }
+    },
+    {
+      "id": "manual_count_get",
+      "position": [
+        270,
+        1980
+      ],
+      "type": 3004,
+      "values": {
+        "Name": "scans"
+      }
+    },
+    {
+      "id": "manual_add",
+      "position": [
+        540,
+        1980
+      ],
+      "type": 4001,
+      "values": {
+        "B": 1
+      }
+    },
+    {
+      "id": "manual_status",
+      "position": [
+        810,
+        1980
+      ],
+      "type": 18005,
+      "values": {
+        "Element": "selected",
+        "Text": "none"
+      }
+    },
+    {
+      "id": "manual_valid",
+      "position": [
+        1080,
+        1980
+      ],
+      "type": 2001,
+      "values": {}
+    },
+    {
+      "id": "manual_exists",
+      "position": [
+        1350,
+        1980
+      ],
+      "type": 8003,
+      "values": {}
+    },
+    {
+      "id": "manual_enlarge",
+      "position": [
+        0,
+        2200
+      ],
+      "type": 9005,
+      "values": {
+        "Value": [
+          1.25,
+          1.25,
+          1.25
+        ]
+      }
+    },
+    {
+      "id": "manual_name",
+      "position": [
+        270,
+        2200
+      ],
+      "type": 8016,
+      "values": {}
+    },
+    {
+      "id": "manual_name_set",
+      "position": [
+        540,
+        2200
+      ],
+      "type": 18005,
+      "values": {
+        "Element": "selected"
+      }
+    }
+  ],
+  "version": 1
+}

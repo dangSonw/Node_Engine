@@ -1,0 +1,9 @@
+{
+  "assets": [
+    "assets/robot.gltf"
+  ],
+  "graph": "graphs/gameplay.json",
+  "name": "Health and collectible components",
+  "scene": "scenes/main.json",
+  "version": 1
+}

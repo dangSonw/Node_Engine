@@ -1,0 +1,139 @@
+{
+  "active_camera": "camera",
+  "entities": [
+    {
+      "id": "left",
+      "material": {
+        "asset": "robot_blue",
+        "overrides": {}
+      },
+      "mesh": "assets/robot.gltf",
+      "name": "Shared material",
+      "position": [
+        -2.5,
+        0,
+        0
+      ],
+      "rotation": [
+        0,
+        20,
+        0
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ]
+    },
+    {
+      "id": "player",
+      "material": {
+        "asset": "robot_blue",
+        "overrides": {}
+      },
+      "mesh": "assets/robot.gltf",
+      "name": "Editable instance",
+      "position": [
+        0,
+        0,
+        0
+      ],
+      "rotation": [
+        0,
+        20,
+        0
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ]
+    },
+    {
+      "id": "right",
+      "material": {
+        "asset": "robot_blue",
+        "overrides": {}
+      },
+      "mesh": "assets/robot.gltf",
+      "name": "Shared material",
+      "position": [
+        2.5,
+        0,
+        0
+      ],
+      "rotation": [
+        0,
+        20,
+        0
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ]
+    },
+    {
+      "camera": {
+        "far": 1000.0,
+        "fov": 60.0,
+        "near": 0.1,
+        "projection": "orthographic",
+        "size": 6
+      },
+      "id": "camera",
+      "name": "Material camera",
+      "position": [
+        0,
+        2,
+        8
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ]
+    }
+  ],
+  "input": {
+    "actions": {
+      "fade": [
+        "F"
+      ],
+      "original": [
+        "O"
+      ],
+      "reset": [
+        "R"
+      ],
+      "tint": [
+        "T"
+      ]
+    },
+    "axes": {},
+    "version": 1
+  },
+  "material_assets": [
+    {
+      "alpha_cutoff": 0.5,
+      "alpha_mode": "opaque",
+      "color": [
+        0.12,
+        0.45,
+        1
+      ],
+      "id": "robot_blue",
+      "name": "Robot blue",
+      "opacity": 1.0,
+      "type": "material",
+      "unlit": true,
+      "version": 1
+    }
+  ],
+  "variables": {}
+}

@@ -1,0 +1,998 @@
+{
+  "links": [
+    {
+      "from": [
+        "start",
+        "Out"
+      ],
+      "to": [
+        "storage",
+        "In"
+      ]
+    },
+    {
+      "from": [
+        "storage",
+        "Out"
+      ],
+      "to": [
+        "hud",
+        "In"
+      ]
+    },
+    {
+      "from": [
+        "hud",
+        "Out"
+      ],
+      "to": [
+        "game_timer",
+        "In"
+      ]
+    },
+    {
+      "from": [
+        "game_timer",
+        "Out"
+      ],
+      "to": [
+        "menu_timer",
+        "In"
+      ]
+    },
+    {
+      "from": [
+        "game_event",
+        "Out"
+      ],
+      "to": [
+        "game_turn",
+        "In"
+      ]
+    },
+    {
+      "from": [
+        "menu_event",
+        "Out"
+      ],
+      "to": [
+        "menu_turn",
+        "In"
+      ]
+    },
+    {
+      "from": [
+        "resume_event",
+        "Out"
+      ],
+      "to": [
+        "auto_resume",
+        "In"
+      ]
+    },
+    {
+      "from": [
+        "update_0",
+        "Out"
+      ],
+      "to": [
+        "if_0",
+        "In"
+      ]
+    },
+    {
+      "from": [
+        "key_0",
+        "Value"
+      ],
+      "to": [
+        "if_0",
+        "Condition"
+      ]
+    },
+    {
+      "from": [
+        "if_0",
+        "True"
+      ],
+      "to": [
+        "action_0",
+        "In"
+      ]
+    },
+    {
+      "from": [
+        "update_1",
+        "Out"
+      ],
+      "to": [
+        "if_1",
+        "In"
+      ]
+    },
+    {
+      "from": [
+        "key_1",
+        "Value"
+      ],
+      "to": [
+        "if_1",
+        "Condition"
+      ]
+    },
+    {
+      "from": [
+        "if_1",
+        "True"
+      ],
+      "to": [
+        "action_1",
+        "In"
+      ]
+    },
+    {
+      "from": [
+        "update_2",
+        "Out"
+      ],
+      "to": [
+        "if_2",
+        "In"
+      ]
+    },
+    {
+      "from": [
+        "key_2",
+        "Value"
+      ],
+      "to": [
+        "if_2",
+        "Condition"
+      ]
+    },
+    {
+      "from": [
+        "if_2",
+        "True"
+      ],
+      "to": [
+        "action_2",
+        "In"
+      ]
+    },
+    {
+      "from": [
+        "update_3",
+        "Out"
+      ],
+      "to": [
+        "if_3",
+        "In"
+      ]
+    },
+    {
+      "from": [
+        "key_3",
+        "Value"
+      ],
+      "to": [
+        "if_3",
+        "Condition"
+      ]
+    },
+    {
+      "from": [
+        "if_3",
+        "True"
+      ],
+      "to": [
+        "action_3",
+        "In"
+      ]
+    },
+    {
+      "from": [
+        "update_R",
+        "Out"
+      ],
+      "to": [
+        "if_R",
+        "In"
+      ]
+    },
+    {
+      "from": [
+        "key_R",
+        "Value"
+      ],
+      "to": [
+        "if_R",
+        "Condition"
+      ]
+    },
+    {
+      "from": [
+        "if_R",
+        "True"
+      ],
+      "to": [
+        "action_R",
+        "In"
+      ]
+    },
+    {
+      "from": [
+        "action_R",
+        "Out"
+      ],
+      "to": [
+        "resume_timer",
+        "In"
+      ]
+    },
+    {
+      "from": [
+        "update_P",
+        "Out"
+      ],
+      "to": [
+        "if_P",
+        "In"
+      ]
+    },
+    {
+      "from": [
+        "key_P",
+        "Value"
+      ],
+      "to": [
+        "if_P",
+        "Condition"
+      ]
+    },
+    {
+      "from": [
+        "if_P",
+        "True"
+      ],
+      "to": [
+        "action_P",
+        "In"
+      ]
+    },
+    {
+      "from": [
+        "update_U",
+        "Out"
+      ],
+      "to": [
+        "if_U",
+        "In"
+      ]
+    },
+    {
+      "from": [
+        "key_U",
+        "Value"
+      ],
+      "to": [
+        "if_U",
+        "Condition"
+      ]
+    },
+    {
+      "from": [
+        "if_U",
+        "True"
+      ],
+      "to": [
+        "action_U",
+        "In"
+      ]
+    },
+    {
+      "from": [
+        "update_S",
+        "Out"
+      ],
+      "to": [
+        "if_S",
+        "In"
+      ]
+    },
+    {
+      "from": [
+        "key_S",
+        "Value"
+      ],
+      "to": [
+        "if_S",
+        "Condition"
+      ]
+    },
+    {
+      "from": [
+        "if_S",
+        "True"
+      ],
+      "to": [
+        "action_S",
+        "In"
+      ]
+    },
+    {
+      "from": [
+        "update_L",
+        "Out"
+      ],
+      "to": [
+        "if_L",
+        "In"
+      ]
+    },
+    {
+      "from": [
+        "key_L",
+        "Value"
+      ],
+      "to": [
+        "if_L",
+        "Condition"
+      ]
+    },
+    {
+      "from": [
+        "if_L",
+        "True"
+      ],
+      "to": [
+        "action_L",
+        "In"
+      ]
+    },
+    {
+      "from": [
+        "update",
+        "Out"
+      ],
+      "to": [
+        "game_store",
+        "In"
+      ]
+    },
+    {
+      "from": [
+        "game_remaining",
+        "Value"
+      ],
+      "to": [
+        "game_store",
+        "Value"
+      ]
+    },
+    {
+      "from": [
+        "game_store",
+        "Out"
+      ],
+      "to": [
+        "menu_store",
+        "In"
+      ]
+    },
+    {
+      "from": [
+        "menu_remaining",
+        "Value"
+      ],
+      "to": [
+        "menu_store",
+        "Value"
+      ]
+    },
+    {
+      "from": [
+        "menu_store",
+        "Out"
+      ],
+      "to": [
+        "resume_store",
+        "In"
+      ]
+    },
+    {
+      "from": [
+        "resume_remaining",
+        "Value"
+      ],
+      "to": [
+        "resume_store",
+        "Value"
+      ]
+    }
+  ],
+  "name": "Independent timer clocks",
+  "nodes": [
+    {
+      "id": "start",
+      "position": [
+        0,
+        0
+      ],
+      "type": 1001,
+      "values": {}
+    },
+    {
+      "id": "storage",
+      "position": [
+        270,
+        0
+      ],
+      "type": 23001,
+      "values": {
+        "Game ID": "node-engine-unscaled-timer-demo"
+      }
+    },
+    {
+      "id": "hud",
+      "position": [
+        540,
+        0
+      ],
+      "type": 18001,
+      "values": {}
+    },
+    {
+      "id": "game_timer",
+      "position": [
+        810,
+        0
+      ],
+      "type": 5010,
+      "values": {
+        "Name": "game",
+        "Repeat": true,
+        "Seconds": 0.25
+      }
+    },
+    {
+      "id": "menu_timer",
+      "position": [
+        1080,
+        0
+      ],
+      "type": 5010,
+      "values": {
+        "Name": "menu",
+        "Repeat": true,
+        "Seconds": 0.25,
+        "Unscaled": true
+      }
+    },
+    {
+      "id": "game_event",
+      "position": [
+        1350,
+        0
+      ],
+      "type": 1003,
+      "values": {
+        "Filter": "game"
+      }
+    },
+    {
+      "id": "game_turn",
+      "position": [
+        1620,
+        0
+      ],
+      "type": 9004,
+      "values": {
+        "Degrees": [
+          0,
+          15,
+          0
+        ],
+        "Entity": "player"
+      }
+    },
+    {
+      "id": "menu_event",
+      "position": [
+        0,
+        220
+      ],
+      "type": 1003,
+      "values": {
+        "Filter": "menu"
+      }
+    },
+    {
+      "id": "menu_turn",
+      "position": [
+        270,
+        220
+      ],
+      "type": 9004,
+      "values": {
+        "Degrees": [
+          0,
+          15,
+          0
+        ],
+        "Entity": "menu"
+      }
+    },
+    {
+      "id": "resume_event",
+      "position": [
+        540,
+        220
+      ],
+      "type": 1003,
+      "values": {
+        "Filter": "resume"
+      }
+    },
+    {
+      "id": "auto_resume",
+      "position": [
+        810,
+        220
+      ],
+      "type": 5030,
+      "values": {
+        "Scale": 1.0
+      }
+    },
+    {
+      "id": "update_0",
+      "position": [
+        1080,
+        220
+      ],
+      "type": 1002,
+      "values": {}
+    },
+    {
+      "id": "key_0",
+      "position": [
+        1350,
+        220
+      ],
+      "type": 10002,
+      "values": {
+        "Key": "0"
+      }
+    },
+    {
+      "id": "if_0",
+      "position": [
+        1620,
+        220
+      ],
+      "type": 2001,
+      "values": {}
+    },
+    {
+      "id": "action_0",
+      "position": [
+        0,
+        440
+      ],
+      "type": 5030,
+      "values": {
+        "Scale": 0
+      }
+    },
+    {
+      "id": "update_1",
+      "position": [
+        270,
+        440
+      ],
+      "type": 1002,
+      "values": {}
+    },
+    {
+      "id": "key_1",
+      "position": [
+        540,
+        440
+      ],
+      "type": 10002,
+      "values": {
+        "Key": "1"
+      }
+    },
+    {
+      "id": "if_1",
+      "position": [
+        810,
+        440
+      ],
+      "type": 2001,
+      "values": {}
+    },
+    {
+      "id": "action_1",
+      "position": [
+        1080,
+        440
+      ],
+      "type": 5030,
+      "values": {
+        "Scale": 1
+      }
+    },
+    {
+      "id": "update_2",
+      "position": [
+        1350,
+        440
+      ],
+      "type": 1002,
+      "values": {}
+    },
+    {
+      "id": "key_2",
+      "position": [
+        1620,
+        440
+      ],
+      "type": 10002,
+      "values": {
+        "Key": "2"
+      }
+    },
+    {
+      "id": "if_2",
+      "position": [
+        0,
+        660
+      ],
+      "type": 2001,
+      "values": {}
+    },
+    {
+      "id": "action_2",
+      "position": [
+        270,
+        660
+      ],
+      "type": 5030,
+      "values": {
+        "Scale": 0.25
+      }
+    },
+    {
+      "id": "update_3",
+      "position": [
+        540,
+        660
+      ],
+      "type": 1002,
+      "values": {}
+    },
+    {
+      "id": "key_3",
+      "position": [
+        810,
+        660
+      ],
+      "type": 10002,
+      "values": {
+        "Key": "3"
+      }
+    },
+    {
+      "id": "if_3",
+      "position": [
+        1080,
+        660
+      ],
+      "type": 2001,
+      "values": {}
+    },
+    {
+      "id": "action_3",
+      "position": [
+        1350,
+        660
+      ],
+      "type": 5030,
+      "values": {
+        "Scale": 2
+      }
+    },
+    {
+      "id": "update_R",
+      "position": [
+        1620,
+        660
+      ],
+      "type": 1002,
+      "values": {}
+    },
+    {
+      "id": "key_R",
+      "position": [
+        0,
+        880
+      ],
+      "type": 10002,
+      "values": {
+        "Key": "R"
+      }
+    },
+    {
+      "id": "if_R",
+      "position": [
+        270,
+        880
+      ],
+      "type": 2001,
+      "values": {}
+    },
+    {
+      "id": "action_R",
+      "position": [
+        540,
+        880
+      ],
+      "type": 5030,
+      "values": {
+        "Scale": 0
+      }
+    },
+    {
+      "id": "resume_timer",
+      "position": [
+        810,
+        880
+      ],
+      "type": 5010,
+      "values": {
+        "Name": "resume",
+        "Seconds": 2,
+        "Unscaled": true
+      }
+    },
+    {
+      "id": "update_P",
+      "position": [
+        1080,
+        880
+      ],
+      "type": 1002,
+      "values": {}
+    },
+    {
+      "id": "key_P",
+      "position": [
+        1350,
+        880
+      ],
+      "type": 10002,
+      "values": {
+        "Key": "P"
+      }
+    },
+    {
+      "id": "if_P",
+      "position": [
+        1620,
+        880
+      ],
+      "type": 2001,
+      "values": {}
+    },
+    {
+      "id": "action_P",
+      "position": [
+        0,
+        1100
+      ],
+      "type": 5012,
+      "values": {
+        "Name": "menu"
+      }
+    },
+    {
+      "id": "update_U",
+      "position": [
+        270,
+        1100
+      ],
+      "type": 1002,
+      "values": {}
+    },
+    {
+      "id": "key_U",
+      "position": [
+        540,
+        1100
+      ],
+      "type": 10002,
+      "values": {
+        "Key": "U"
+      }
+    },
+    {
+      "id": "if_U",
+      "position": [
+        810,
+        1100
+      ],
+      "type": 2001,
+      "values": {}
+    },
+    {
+      "id": "action_U",
+      "position": [
+        1080,
+        1100
+      ],
+      "type": 5013,
+      "values": {
+        "Name": "menu"
+      }
+    },
+    {
+      "id": "update_S",
+      "position": [
+        1350,
+        1100
+      ],
+      "type": 1002,
+      "values": {}
+    },
+    {
+      "id": "key_S",
+      "position": [
+        1620,
+        1100
+      ],
+      "type": 10002,
+      "values": {
+        "Key": "S"
+      }
+    },
+    {
+      "id": "if_S",
+      "position": [
+        0,
+        1320
+      ],
+      "type": 2001,
+      "values": {}
+    },
+    {
+      "id": "action_S",
+      "position": [
+        270,
+        1320
+      ],
+      "type": 23016,
+      "values": {
+        "Slot": "timers"
+      }
+    },
+    {
+      "id": "update_L",
+      "position": [
+        540,
+        1320
+      ],
+      "type": 1002,
+      "values": {}
+    },
+    {
+      "id": "key_L",
+      "position": [
+        810,
+        1320
+      ],
+      "type": 10002,
+      "values": {
+        "Key": "L"
+      }
+    },
+    {
+      "id": "if_L",
+      "position": [
+        1080,
+        1320
+      ],
+      "type": 2001,
+      "values": {}
+    },
+    {
+      "id": "action_L",
+      "position": [
+        1350,
+        1320
+      ],
+      "type": 23017,
+      "values": {
+        "Slot": "timers"
+      }
+    },
+    {
+      "id": "update",
+      "position": [
+        1620,
+        1320
+      ],
+      "type": 1002,
+      "values": {}
+    },
+    {
+      "id": "game_remaining",
+      "position": [
+        0,
+        1540
+      ],
+      "type": 5016,
+      "values": {
+        "Name": "game"
+      }
+    },
+    {
+      "id": "game_store",
+      "position": [
+        270,
+        1540
+      ],
+      "type": 3005,
+      "values": {
+        "Name": "game_remaining"
+      }
+    },
+    {
+      "id": "menu_remaining",
+      "position": [
+        540,
+        1540
+      ],
+      "type": 5016,
+      "values": {
+        "Name": "menu"
+      }
+    },
+    {
+      "id": "menu_store",
+      "position": [
+        810,
+        1540
+      ],
+      "type": 3005,
+      "values": {
+        "Name": "menu_remaining"
+      }
+    },
+    {
+      "id": "resume_remaining",
+      "position": [
+        1080,
+        1540
+      ],
+      "type": 5016,
+      "values": {
+        "Name": "resume"
+      }
+    },
+    {
+      "id": "resume_store",
+      "position": [
+        1350,
+        1540
+      ],
+      "type": 3005,
+      "values": {
+        "Name": "resume_remaining"
+      }
+    }
+  ],
+  "version": 1
+}

@@ -1,0 +1,240 @@
+{
+  "links": [
+    {
+      "from": [
+        "dt",
+        "Value"
+      ],
+      "to": [
+        "left_delta",
+        "B"
+      ]
+    },
+    {
+      "from": [
+        "dt",
+        "Value"
+      ],
+      "to": [
+        "right_delta",
+        "B"
+      ]
+    },
+    {
+      "from": [
+        "left_delta",
+        "Value"
+      ],
+      "to": [
+        "left_vector",
+        "Y"
+      ]
+    },
+    {
+      "from": [
+        "left_rotate",
+        "Out"
+      ],
+      "to": [
+        "right_rotate",
+        "In"
+      ]
+    },
+    {
+      "from": [
+        "left_speed",
+        "Value"
+      ],
+      "to": [
+        "left_delta",
+        "A"
+      ]
+    },
+    {
+      "from": [
+        "left_vector",
+        "Value"
+      ],
+      "to": [
+        "left_rotate",
+        "Degrees"
+      ]
+    },
+    {
+      "from": [
+        "right_delta",
+        "Value"
+      ],
+      "to": [
+        "right_vector",
+        "Y"
+      ]
+    },
+    {
+      "from": [
+        "right_speed",
+        "Value"
+      ],
+      "to": [
+        "right_delta",
+        "A"
+      ]
+    },
+    {
+      "from": [
+        "right_vector",
+        "Value"
+      ],
+      "to": [
+        "right_rotate",
+        "Degrees"
+      ]
+    },
+    {
+      "from": [
+        "update",
+        "Out"
+      ],
+      "to": [
+        "left_rotate",
+        "In"
+      ]
+    }
+  ],
+  "name": "Independent component overrides",
+  "nodes": [
+    {
+      "id": "dt",
+      "label": "Get Delta Time",
+      "position": [
+        -300,
+        260
+      ],
+      "type": 5001,
+      "values": {}
+    },
+    {
+      "id": "left_delta",
+      "label": "Multiply",
+      "position": [
+        300,
+        0
+      ],
+      "type": 4003,
+      "values": {
+        "A": 1.0,
+        "B": 1.0
+      }
+    },
+    {
+      "id": "left_rotate",
+      "label": "Rotate",
+      "position": [
+        900,
+        0
+      ],
+      "type": 9004,
+      "values": {
+        "Degrees": [
+          0,
+          1,
+          0
+        ],
+        "Entity": "left"
+      }
+    },
+    {
+      "id": "left_speed",
+      "label": "Get Motion Speed",
+      "position": [
+        0,
+        0
+      ],
+      "type": 600112,
+      "values": {
+        "Entity": "left"
+      }
+    },
+    {
+      "id": "left_vector",
+      "label": "Make Vector3",
+      "position": [
+        600,
+        0
+      ],
+      "type": 4020,
+      "values": {
+        "X": 0.0,
+        "Y": 0.0,
+        "Z": 0.0
+      }
+    },
+    {
+      "id": "right_delta",
+      "label": "Multiply 1",
+      "position": [
+        300,
+        260
+      ],
+      "type": 4003,
+      "values": {
+        "A": 1.0,
+        "B": 1.0
+      }
+    },
+    {
+      "id": "right_rotate",
+      "label": "Rotate 1",
+      "position": [
+        900,
+        260
+      ],
+      "type": 9004,
+      "values": {
+        "Degrees": [
+          0,
+          1,
+          0
+        ],
+        "Entity": "right"
+      }
+    },
+    {
+      "id": "right_speed",
+      "label": "Get Motion Speed 1",
+      "position": [
+        0,
+        260
+      ],
+      "type": 600112,
+      "values": {
+        "Entity": "right"
+      }
+    },
+    {
+      "id": "right_vector",
+      "label": "Make Vector3 1",
+      "position": [
+        600,
+        260
+      ],
+      "type": 4020,
+      "values": {
+        "X": 0.0,
+        "Y": 0.0,
+        "Z": 0.0
+      }
+    },
+    {
+      "id": "update",
+      "label": "On Update",
+      "position": [
+        -300,
+        0
+      ],
+      "type": 1002,
+      "values": {}
+    }
+  ],
+  "version": 1
+}

@@ -1,0 +1,16 @@
+{
+  "version": 1,
+  "name": "Embedded C++ Robot",
+  "nodes": [
+    {"id": "start", "type": 1001, "values": {}, "position": [0, 0]},
+    {"id": "setup", "type": 27006, "label": "C++: initialize", "values": {}, "position": [230, 0], "code": "rt::SetVariable(ctx, \"updates\", 0.0);\nrt::Print(ctx, \"Embedded C++ is running\");"},
+    {"id": "update", "type": 1002, "values": {}, "position": [0, 200]},
+    {"id": "spin", "type": 27006, "label": "C++: rotate robot", "values": {}, "position": [230, 200], "code": "rt::Rotate(ctx, rt::EntityRef{\"player\"}, rt::Vec3{0.0, 60.0 * ctx.dt, 0.0});\nrt::SetVariable(ctx, \"updates\", rt::GetVariable(ctx, \"updates\") + 1.0);"},
+    {"id": "position", "type": 9002, "label": "Hook: move after call", "values": {"Entity": "player", "Value": [0, 0, 0]}, "position": [530, 200], "code": "{{call}}\nrt::Translate(ctx, input_0, rt::Vec3{std::sin(ctx.time) * 1.5, 0.0, 0.0});"}
+  ],
+  "links": [
+    {"from": ["start", "Out"], "to": ["setup", "In"]},
+    {"from": ["update", "Out"], "to": ["spin", "In"]},
+    {"from": ["spin", "Out"], "to": ["position", "In"]}
+  ]
+}

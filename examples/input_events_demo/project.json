@@ -1,0 +1,6 @@
+{
+  "graph": "graphs/gameplay.json",
+  "name": "Input events robot",
+  "scene": "scenes/main.json",
+  "version": 1
+}

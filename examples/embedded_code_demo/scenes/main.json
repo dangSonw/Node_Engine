@@ -1,0 +1,9 @@
+{
+  "version": 1,
+  "entities": [
+    {"id": "player", "name": "C++ Robot", "mesh": "assets/robot.gltf", "position": [0, 0, 0], "rotation": [0, 0, 0], "scale": [1, 1, 1]},
+    {"id": "camera", "name": "Demo camera", "position": [0, 0.8, 5], "rotation": [0, 0, 0], "scale": [1, 1, 1], "camera": {"projection": "orthographic", "size": 4.5, "near": 0.1, "far": 100, "fov": 60}}
+  ],
+  "active_camera": "camera",
+  "variables": {"updates": 0.0}
+}

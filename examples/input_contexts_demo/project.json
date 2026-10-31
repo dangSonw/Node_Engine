@@ -1,0 +1,6 @@
+{
+  "graph": "graphs/gameplay.json",
+  "name": "Gameplay input contexts",
+  "scene": "scenes/main.json",
+  "version": 1
+}

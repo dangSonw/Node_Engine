@@ -1,0 +1,70 @@
+{
+  "active_camera": "camera",
+  "entities": [
+    {
+      "id": "player",
+      "mesh": "assets/robot.glb",
+      "name": "Gate-controlled robot",
+      "position": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "rotation": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "scale": [
+        1.0,
+        1.0,
+        1.0
+      ]
+    },
+    {
+      "camera": {
+        "far": 1000.0,
+        "fov": 60.0,
+        "near": 0.1,
+        "projection": "perspective",
+        "size": 10.0
+      },
+      "id": "camera",
+      "name": "Camera",
+      "position": [
+        0.7,
+        1.2,
+        7
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ]
+    }
+  ],
+  "ui_assets": [
+    {
+      "id": "hud",
+      "name": "HUD",
+      "rml": "<rml><head><style>body {width:100%;height:100%;font-family:node-ui;font-size:14px;color:#ffffff;pointer-events:none;}\n    #help {position:absolute;left:8px;top:8px;padding:8px;width:94%;max-width:480px;box-sizing:border-box;background-color:#171e32dd;}</style></head>\n    <body><div id=\"help\">Persistent flow gates<br/>\n    O: lift once until reset (Do Once)<br/>N: step right, at most 3 times (Do N)<br/>\n    G: toggle rotation (Gate)<br/>F: alternate large/small (Flip Flop)<br/>\n    R: reset gates and robot / S: save / L: load</div></body></rml>",
+      "type": "ui",
+      "version": 1
+    }
+  ],
+  "variables": {
+    "is_a": {
+      "type": "bool",
+      "value": false
+    },
+    "used": {
+      "type": "int",
+      "value": 0
+    }
+  }
+}

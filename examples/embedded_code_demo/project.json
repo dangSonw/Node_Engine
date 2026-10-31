@@ -1,0 +1,7 @@
+{
+  "version": 1,
+  "name": "Embedded C++ Robot",
+  "graph": "graphs/gameplay.json",
+  "scene": "scenes/main.json",
+  "assets": ["assets/robot.gltf"]
+}

@@ -1,0 +1,274 @@
+{
+  "links": [
+    {
+      "from": [
+        "start",
+        "Out"
+      ],
+      "to": [
+        "spawn",
+        "In"
+      ]
+    },
+    {
+      "from": [
+        "spawn",
+        "Out"
+      ],
+      "to": [
+        "enable",
+        "In"
+      ]
+    },
+    {
+      "from": [
+        "spawn",
+        "Entity"
+      ],
+      "to": [
+        "left",
+        "Instance"
+      ]
+    },
+    {
+      "from": [
+        "spawn",
+        "Entity"
+      ],
+      "to": [
+        "right",
+        "Instance"
+      ]
+    },
+    {
+      "from": [
+        "right",
+        "Entity"
+      ],
+      "to": [
+        "enable",
+        "Entity"
+      ]
+    },
+    {
+      "from": [
+        "enable",
+        "Out"
+      ],
+      "to": [
+        "save_left",
+        "In"
+      ]
+    },
+    {
+      "from": [
+        "left",
+        "Entity"
+      ],
+      "to": [
+        "save_left",
+        "Value"
+      ]
+    },
+    {
+      "from": [
+        "save_left",
+        "Out"
+      ],
+      "to": [
+        "save_right",
+        "In"
+      ]
+    },
+    {
+      "from": [
+        "right",
+        "Entity"
+      ],
+      "to": [
+        "save_right",
+        "Value"
+      ]
+    },
+    {
+      "from": [
+        "update",
+        "Out"
+      ],
+      "to": [
+        "rotate_left",
+        "In"
+      ]
+    },
+    {
+      "from": [
+        "rotate_left",
+        "Out"
+      ],
+      "to": [
+        "rotate_right",
+        "In"
+      ]
+    },
+    {
+      "from": [
+        "get_left",
+        "Value"
+      ],
+      "to": [
+        "rotate_left",
+        "Entity"
+      ]
+    },
+    {
+      "from": [
+        "get_right",
+        "Value"
+      ],
+      "to": [
+        "rotate_right",
+        "Entity"
+      ]
+    }
+  ],
+  "name": "Nested prefab robots",
+  "nodes": [
+    {
+      "id": "start",
+      "position": [
+        0,
+        0
+      ],
+      "type": 1001,
+      "values": {}
+    },
+    {
+      "id": "spawn",
+      "position": [
+        300,
+        0
+      ],
+      "type": 8034,
+      "values": {
+        "Prefab": "robot_pair"
+      }
+    },
+    {
+      "id": "left",
+      "position": [
+        600,
+        0
+      ],
+      "type": 8038,
+      "values": {
+        "LocalID": "left"
+      }
+    },
+    {
+      "id": "right",
+      "position": [
+        900,
+        0
+      ],
+      "type": 8038,
+      "values": {
+        "LocalID": "right"
+      }
+    },
+    {
+      "id": "enable",
+      "position": [
+        0,
+        240
+      ],
+      "type": 8028,
+      "values": {
+        "Active": true
+      }
+    },
+    {
+      "id": "save_left",
+      "position": [
+        300,
+        240
+      ],
+      "type": 3115,
+      "values": {
+        "Name": "left"
+      }
+    },
+    {
+      "id": "save_right",
+      "position": [
+        600,
+        240
+      ],
+      "type": 3115,
+      "values": {
+        "Name": "right"
+      }
+    },
+    {
+      "id": "update",
+      "position": [
+        900,
+        240
+      ],
+      "type": 1002,
+      "values": {}
+    },
+    {
+      "id": "get_left",
+      "position": [
+        0,
+        480
+      ],
+      "type": 3105,
+      "values": {
+        "Name": "left"
+      }
+    },
+    {
+      "id": "get_right",
+      "position": [
+        300,
+        480
+      ],
+      "type": 3105,
+      "values": {
+        "Name": "right"
+      }
+    },
+    {
+      "id": "rotate_left",
+      "position": [
+        600,
+        480
+      ],
+      "type": 9004,
+      "values": {
+        "Degrees": [
+          0,
+          1,
+          0
+        ]
+      }
+    },
+    {
+      "id": "rotate_right",
+      "position": [
+        900,
+        480
+      ],
+      "type": 9004,
+      "values": {
+        "Degrees": [
+          0,
+          -1,
+          0
+        ]
+      }
+    }
+  ],
+  "version": 1
+}

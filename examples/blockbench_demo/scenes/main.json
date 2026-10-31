@@ -1,0 +1,25 @@
+{
+  "entities": [
+    {
+      "id": "player",
+      "mesh": "assets/robot.gltf",
+      "name": "Test Robot",
+      "position": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "rotation": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "scale": [
+        1.0,
+        1.0,
+        1.0
+      ]
+    }
+  ],
+  "variables": {}
+}

@@ -1,0 +1,6 @@
+{
+  "graph": "graphs/gameplay.json",
+  "name": "Independent timer clocks",
+  "scene": "scenes/main.json",
+  "version": 1
+}

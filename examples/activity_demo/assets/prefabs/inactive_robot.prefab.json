@@ -1,0 +1,13 @@
+{
+  "base": "robot",
+  "id": "inactive_robot",
+  "name": "Inactive Robot",
+  "overrides": {
+    "root": {
+      "active": false,
+      "layer": 5
+    }
+  },
+  "type": "prefab",
+  "version": 1
+}

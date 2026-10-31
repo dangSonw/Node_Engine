@@ -1,0 +1,431 @@
+{
+  "event_definitions": [
+    {
+      "id": 100001,
+      "name": "Turn",
+      "parameters": [
+        {
+          "default": 15,
+          "name": "Angle",
+          "type": "float"
+        }
+      ]
+    }
+  ],
+  "functions": [
+    {
+      "graph": {
+        "links": [
+          {
+            "from": [
+              "entry",
+              "Out"
+            ],
+            "to": [
+              "rotate",
+              "In"
+            ]
+          },
+          {
+            "from": [
+              "entry",
+              "Target"
+            ],
+            "to": [
+              "rotate",
+              "Entity"
+            ]
+          },
+          {
+            "from": [
+              "entry",
+              "Angle"
+            ],
+            "to": [
+              "multiply",
+              "A"
+            ]
+          },
+          {
+            "from": [
+              "entry",
+              "Multiplier"
+            ],
+            "to": [
+              "multiply",
+              "B"
+            ]
+          },
+          {
+            "from": [
+              "multiply",
+              "Value"
+            ],
+            "to": [
+              "degrees",
+              "Y"
+            ]
+          },
+          {
+            "from": [
+              "degrees",
+              "Value"
+            ],
+            "to": [
+              "rotate",
+              "Degrees"
+            ]
+          },
+          {
+            "from": [
+              "rotate",
+              "Out"
+            ],
+            "to": [
+              "return",
+              "In"
+            ]
+          }
+        ],
+        "name": "Turn Robot",
+        "nodes": [
+          {
+            "id": "entry",
+            "position": [
+              0,
+              0
+            ],
+            "type": 6001,
+            "values": {}
+          },
+          {
+            "id": "multiply",
+            "position": [
+              240,
+              210
+            ],
+            "type": 4003,
+            "values": {}
+          },
+          {
+            "id": "degrees",
+            "position": [
+              480,
+              210
+            ],
+            "type": 4020,
+            "values": {}
+          },
+          {
+            "id": "rotate",
+            "position": [
+              700,
+              0
+            ],
+            "type": 9004,
+            "values": {}
+          },
+          {
+            "id": "return",
+            "position": [
+              960,
+              0
+            ],
+            "type": 6002,
+            "values": {}
+          }
+        ],
+        "version": 1
+      },
+      "id": 1000001,
+      "inputs": [
+        {
+          "name": "Target",
+          "type": "entity"
+        },
+        {
+          "name": "Angle",
+          "type": "float"
+        },
+        {
+          "default": 1,
+          "name": "Multiplier",
+          "type": "float"
+        }
+      ],
+      "name": "Turn Robot",
+      "outputs": [],
+      "pure": false
+    }
+  ],
+  "links": [
+    {
+      "from": [
+        "start",
+        "Out"
+      ],
+      "to": [
+        "pulse",
+        "In"
+      ]
+    },
+    {
+      "from": [
+        "pulse",
+        "Out"
+      ],
+      "to": [
+        "detach_timer",
+        "In"
+      ]
+    },
+    {
+      "from": [
+        "detach_timer",
+        "Out"
+      ],
+      "to": [
+        "subscribe",
+        "In"
+      ]
+    },
+    {
+      "from": [
+        "pulse_event",
+        "Out"
+      ],
+      "to": [
+        "broadcast",
+        "In"
+      ]
+    },
+    {
+      "from": [
+        "detach_event",
+        "Out"
+      ],
+      "to": [
+        "detach",
+        "In"
+      ]
+    },
+    {
+      "from": [
+        "detach",
+        "Out"
+      ],
+      "to": [
+        "boost",
+        "In"
+      ]
+    },
+    {
+      "from": [
+        "player_event",
+        "Out"
+      ],
+      "to": [
+        "player_turn",
+        "In"
+      ]
+    },
+    {
+      "from": [
+        "player_event",
+        "Receiver"
+      ],
+      "to": [
+        "player_turn",
+        "Target"
+      ]
+    },
+    {
+      "from": [
+        "player_event",
+        "Angle"
+      ],
+      "to": [
+        "player_turn",
+        "Angle"
+      ]
+    },
+    {
+      "from": [
+        "partner_event",
+        "Out"
+      ],
+      "to": [
+        "partner_turn",
+        "In"
+      ]
+    },
+    {
+      "from": [
+        "partner_event",
+        "Receiver"
+      ],
+      "to": [
+        "partner_turn",
+        "Target"
+      ]
+    },
+    {
+      "from": [
+        "partner_event",
+        "Angle"
+      ],
+      "to": [
+        "partner_turn",
+        "Angle"
+      ]
+    }
+  ],
+  "name": "Typed event broadcasts",
+  "nodes": [
+    {
+      "id": "start",
+      "position": [
+        0,
+        0
+      ],
+      "type": 1001,
+      "values": {}
+    },
+    {
+      "id": "pulse",
+      "position": [
+        210,
+        0
+      ],
+      "type": 5010,
+      "values": {
+        "Name": "pulse",
+        "Repeat": true,
+        "Seconds": 0.25
+      }
+    },
+    {
+      "id": "detach_timer",
+      "position": [
+        520,
+        0
+      ],
+      "type": 5010,
+      "values": {
+        "Name": "detach",
+        "Seconds": 1
+      }
+    },
+    {
+      "id": "subscribe",
+      "position": [
+        840,
+        0
+      ],
+      "type": 400001,
+      "values": {
+        "Recipient": "partner"
+      }
+    },
+    {
+      "id": "pulse_event",
+      "position": [
+        0,
+        270
+      ],
+      "type": 1003,
+      "values": {
+        "Filter": "pulse"
+      }
+    },
+    {
+      "id": "broadcast",
+      "position": [
+        310,
+        270
+      ],
+      "type": 300001,
+      "values": {
+        "Angle": 15
+      }
+    },
+    {
+      "id": "detach_event",
+      "position": [
+        0,
+        500
+      ],
+      "type": 1003,
+      "values": {
+        "Filter": "detach"
+      }
+    },
+    {
+      "id": "detach",
+      "position": [
+        310,
+        500
+      ],
+      "type": 500001,
+      "values": {
+        "Recipient": "partner"
+      }
+    },
+    {
+      "id": "boost",
+      "position": [
+        630,
+        500
+      ],
+      "type": 200001,
+      "values": {
+        "Angle": 60,
+        "Recipient": "player"
+      }
+    },
+    {
+      "id": "player_event",
+      "position": [
+        0,
+        750
+      ],
+      "type": 100001,
+      "values": {
+        "Receiver": "player"
+      }
+    },
+    {
+      "id": "player_turn",
+      "position": [
+        310,
+        750
+      ],
+      "type": 1000001,
+      "values": {}
+    },
+    {
+      "id": "partner_event",
+      "position": [
+        630,
+        750
+      ],
+      "type": 100001,
+      "values": {
+        "InitiallySubscribed": false,
+        "Receiver": "partner"
+      }
+    },
+    {
+      "id": "partner_turn",
+      "position": [
+        940,
+        750
+      ],
+      "type": 1000001,
+      "values": {
+        "Multiplier": -1
+      }
+    }
+  ],
+  "version": 1
+}

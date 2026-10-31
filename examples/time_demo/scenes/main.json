@@ -1,0 +1,112 @@
+{
+  "active_camera": "camera",
+  "audio_assets": [
+    {
+      "file": "assets/tone.wav",
+      "id": "tone",
+      "name": "Unscaled tone",
+      "type": "sound",
+      "version": 1
+    }
+  ],
+  "entities": [
+    {
+      "id": "player",
+      "mesh": "assets/robot.glb",
+      "name": "Animated robot",
+      "position": [
+        -1.8,
+        0,
+        0
+      ],
+      "rotation": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "scale": [
+        1.0,
+        1.0,
+        1.0
+      ]
+    },
+    {
+      "id": "timer",
+      "mesh": "assets/robot.gltf",
+      "name": "Timer robot",
+      "position": [
+        0,
+        0,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "scale": [
+        0.8,
+        0.8,
+        0.8
+      ]
+    },
+    {
+      "id": "body",
+      "mesh": "assets/robot.gltf",
+      "name": "Physics robot",
+      "position": [
+        1.8,
+        0,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "scale": [
+        0.8,
+        0.8,
+        0.8
+      ]
+    },
+    {
+      "camera": {
+        "far": 1000.0,
+        "fov": 60.0,
+        "near": 0.1,
+        "projection": "perspective",
+        "size": 10.0
+      },
+      "id": "camera",
+      "name": "Camera",
+      "position": [
+        0,
+        1,
+        8
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ]
+    }
+  ],
+  "ui_assets": [
+    {
+      "id": "hud",
+      "name": "HUD",
+      "rml": "<rml><head><style>body {width:100%;height:100%;font-family:node-ui;font-size:14px;color:#ffffff;pointer-events:none;}\n    #help {position:absolute;left:8px;top:8px;padding:8px;width:92%;max-width:450px;box-sizing:border-box;background-color:#171e32dd;}</style></head>\n    <body><div id=\"help\">Time scale playground<br/>\n    0: freeze / 1: 0.25x / 2: 1x / 3: 2x<br/>S: save / L: load<br/>\n    Left: animation / Middle: timer / Right: physics<br/>Audio continues when time is frozen.</div></body></rml>",
+      "type": "ui",
+      "version": 1
+    }
+  ],
+  "variables": {
+    "fixed_steps": 0.0
+  }
+}

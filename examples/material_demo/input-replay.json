@@ -1,0 +1,45 @@
+{
+  "events": [
+    {
+      "button": "T",
+      "down": true,
+      "frame": 2
+    },
+    {
+      "button": "T",
+      "down": false,
+      "frame": 3
+    },
+    {
+      "button": "F",
+      "down": true,
+      "frame": 4
+    },
+    {
+      "button": "F",
+      "down": false,
+      "frame": 5
+    },
+    {
+      "button": "O",
+      "down": true,
+      "frame": 6
+    },
+    {
+      "button": "O",
+      "down": false,
+      "frame": 7
+    },
+    {
+      "button": "R",
+      "down": true,
+      "frame": 8
+    },
+    {
+      "button": "R",
+      "down": false,
+      "frame": 9
+    }
+  ],
+  "version": 1
+}

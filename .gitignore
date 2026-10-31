@@ -1,0 +1,44 @@
+# Local toolchains, dependencies and Python caches
+/.venv/
+/deps/
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+*.egg-info/
+
+# Native builds and reproducible experiment/AI output
+/build/
+/build-*/
+/cmake-build-*/
+/.cache/
+/.work/
+/artifacts/validation/
+/artifacts/demos/
+/game.generated.cpp
+
+# Generated project IR, C++, requests, binaries and distributable packages
+/examples/**/generated/
+/examples/**/build/
+/examples/**/dist/
+/templates/games/**/generated/
+/templates/games/**/build/
+/templates/games/**/dist/
+
+# Runtime save storage and transient local files
+.node-engine/
+saves/
+save-data/
+.storage.lock
+slot-*.json
+*.log
+*.tmp
+*.dmp
+Thumbs.db
+.DS_Store
+.env
+.env.local
+artifacts
+# Keep source documents and curated help assets: .nen, graphs/scenes/*.json,
+# acceptance.json, replays/, docs/*.md, docs/images/ and runtime/generated/.

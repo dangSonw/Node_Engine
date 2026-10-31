@@ -1,0 +1,324 @@
+{
+  "active_camera": "camera",
+  "entities": [
+    {
+      "id": "player",
+      "name": "Robot rigid body",
+      "position": [
+        0,
+        3,
+        0
+      ],
+      "rigid_body": {
+        "angular_damping": 0.5,
+        "continuous": true,
+        "enabled": true,
+        "friction": 0.5,
+        "gravity_scale": 1.0,
+        "half_extents": [
+          0.6,
+          0.75,
+          0.3
+        ],
+        "half_height": 0.5,
+        "linear_damping": 0.35,
+        "mask": 4294967295,
+        "mass": 1.0,
+        "motion": "dynamic",
+        "radius": 0.5,
+        "restitution": 0.0,
+        "sensor": false,
+        "shape": "box"
+      },
+      "rotation": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "scale": [
+        1.0,
+        1.0,
+        1.0
+      ]
+    },
+    {
+      "id": "robot_mesh",
+      "mesh": "assets/robot.gltf",
+      "name": "Blockbench robot",
+      "parent": "player",
+      "position": [
+        0,
+        -0.75,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ]
+    },
+    {
+      "id": "floor",
+      "mesh": "assets/floor.gltf",
+      "name": "Ground",
+      "position": [
+        0,
+        -0.25,
+        0
+      ],
+      "rigid_body": {
+        "angular_damping": 0.05,
+        "continuous": false,
+        "enabled": true,
+        "friction": 0.5,
+        "gravity_scale": 1.0,
+        "half_extents": [
+          0.5,
+          0.5,
+          0.5
+        ],
+        "half_height": 0.5,
+        "linear_damping": 0.05,
+        "mask": 4294967295,
+        "mass": 1.0,
+        "motion": "static",
+        "radius": 0.5,
+        "restitution": 0.0,
+        "sensor": false,
+        "shape": "box"
+      },
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "scale": [
+        10,
+        0.5,
+        10
+      ]
+    },
+    {
+      "camera": {
+        "far": 1000.0,
+        "fov": 60.0,
+        "near": 0.1,
+        "projection": "perspective",
+        "size": 10.0
+      },
+      "id": "camera",
+      "name": "Game camera",
+      "position": [
+        6,
+        5,
+        9
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ]
+    },
+    {
+      "id": "zone",
+      "name": "Center trigger zone",
+      "position": [
+        0,
+        1,
+        0
+      ],
+      "rigid_body": {
+        "angular_damping": 0.05,
+        "continuous": false,
+        "enabled": true,
+        "friction": 0.5,
+        "gravity_scale": 1.0,
+        "half_extents": [
+          1,
+          3,
+          1
+        ],
+        "half_height": 0.5,
+        "linear_damping": 0.05,
+        "mask": 4294967295,
+        "mass": 1.0,
+        "motion": "static",
+        "radius": 0.5,
+        "restitution": 0.0,
+        "sensor": true,
+        "shape": "box"
+      },
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ]
+    }
+  ],
+  "input": {
+    "actions": {},
+    "axes": {
+      "horizontal": {
+        "negative": [
+          "A",
+          "Left"
+        ],
+        "positive": [
+          "D",
+          "Right"
+        ]
+      },
+      "vertical": {
+        "negative": [
+          "W",
+          "Up"
+        ],
+        "positive": [
+          "Down"
+        ]
+      }
+    },
+    "version": 1
+  },
+  "prefab_assets": [
+    {
+      "component_definitions": [],
+      "entities": [
+        {
+          "active": true,
+          "camera": null,
+          "components": {},
+          "id": "e1",
+          "layer": 0,
+          "material": null,
+          "mesh": "assets/robot.gltf",
+          "name": "Blockbench robot",
+          "parent": "root",
+          "position": [
+            0,
+            -0.75,
+            0
+          ],
+          "rigid_body": null,
+          "rotation": [
+            0,
+            0,
+            0
+          ],
+          "scale": [
+            1,
+            1,
+            1
+          ],
+          "sprite": null,
+          "tags": [],
+          "visible": true
+        },
+        {
+          "active": true,
+          "camera": null,
+          "components": {},
+          "id": "root",
+          "layer": 0,
+          "material": null,
+          "mesh": "",
+          "name": "Robot rigid body",
+          "parent": "",
+          "position": [
+            0,
+            3,
+            0
+          ],
+          "rigid_body": {
+            "angular_damping": 0.5,
+            "continuous": true,
+            "enabled": true,
+            "friction": 0.5,
+            "gravity_scale": 1.0,
+            "half_extents": [
+              0.6,
+              0.75,
+              0.3
+            ],
+            "half_height": 0.5,
+            "linear_damping": 0.35,
+            "mask": 4294967295,
+            "mass": 1.0,
+            "motion": "dynamic",
+            "radius": 0.5,
+            "restitution": 0.0,
+            "sensor": false,
+            "shape": "box"
+          },
+          "rotation": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "scale": [
+            1.0,
+            1.0,
+            1.0
+          ],
+          "sprite": null,
+          "tags": [],
+          "visible": true
+        }
+      ],
+      "id": "physics_robot",
+      "name": "Physics robot",
+      "root": "root",
+      "type": "prefab",
+      "version": 1
+    }
+  ],
+  "prefab_instances": [
+    {
+      "mapping": {
+        "e1": "robot_mesh",
+        "root": "player"
+      },
+      "owned_components": {
+        "e1": [],
+        "root": [
+          "transform"
+        ]
+      },
+      "prefab": "physics_robot",
+      "root": "player"
+    }
+  ],
+  "ui_assets": [
+    {
+      "id": "hud",
+      "name": "HUD",
+      "rml": "<rml><head><style>body {width:100%;height:100%;pointer-events:none;font-family:node-ui;font-size:16px;color:#ffffff;}\n    #help {display:block;position:absolute;left:16px;right:16px;top:16px;max-width:430px;padding:12px;background-color:#171e32ee;}</style></head>\n    <body><div id=\"help\">Scene colliders / robot prefab<br/>W/A/D / arrows: force; Space: impulse<br/>R: reset; S: save; L: load<br/>C: load last collision checkpoint<br/>Center trigger: x/z within 1 meter<br/><span id=\"collision\">Collision: waiting</span><br/><span id=\"trigger\">Trigger: waiting</span></div></body></rml>",
+      "type": "ui",
+      "version": 1
+    }
+  ],
+  "variables": {
+    "collision_enter": 0.0,
+    "collision_exit": 0.0,
+    "collision_stay": 0.0,
+    "fixed_steps": 0.0,
+    "trigger_enter": 0.0,
+    "trigger_exit": 0.0,
+    "trigger_stay": 0.0
+  }
+}

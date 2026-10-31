@@ -1,0 +1,84 @@
+{
+  "active_camera": "camera",
+  "entities": [
+    {
+      "id": "player",
+      "mesh": "assets/robot.glb",
+      "name": "One-shot Wave robot",
+      "position": [
+        -1.1,
+        0,
+        0
+      ],
+      "rotation": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "scale": [
+        1.0,
+        1.0,
+        1.0
+      ]
+    },
+    {
+      "id": "walker",
+      "mesh": "assets/robot.glb",
+      "name": "Looping Walk robot",
+      "position": [
+        1.1,
+        0,
+        0
+      ],
+      "rotation": [
+        0,
+        -25,
+        0
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ]
+    },
+    {
+      "camera": {
+        "far": 1000.0,
+        "fov": 60.0,
+        "near": 0.1,
+        "projection": "perspective",
+        "size": 10.0
+      },
+      "id": "camera",
+      "name": "Camera",
+      "position": [
+        0,
+        1.0,
+        6
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ]
+    }
+  ],
+  "ui_assets": [
+    {
+      "id": "hud",
+      "name": "HUD",
+      "rml": "<rml><head><style>body {width:100%;height:100%;font-family:node-ui;font-size:14px;color:#ffffff;pointer-events:none;}\n    #help {position:absolute;left:8px;top:8px;padding:8px;width:92%;max-width:450px;box-sizing:border-box;background-color:#171e32dd;}</style></head>\n    <body><div id=\"help\">Animation completion playground<br/>Left: Wave once, then Idle / Right: Walk loop<br/>\n    1: Wave / B: Reverse Wave / X: Stop<br/>\n    P: Pause / R: Resume / 0: Freeze / 2: Normal time<br/>\n    S: Save / L: Load / K: Load completion checkpoint<br/>\n    Each completed Wave saves the new Idle state.</div></body></rml>",
+      "type": "ui",
+      "version": 1
+    }
+  ],
+  "variables": {
+    "completed": 0.0,
+    "late_completed": 0.0
+  }
+}

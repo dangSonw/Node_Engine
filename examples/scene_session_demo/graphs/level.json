@@ -1,0 +1,1504 @@
+{
+  "links": [
+    {
+      "from": [
+        "start",
+        "Out"
+      ],
+      "to": [
+        "storage",
+        "In"
+      ]
+    },
+    {
+      "from": [
+        "storage",
+        "Out"
+      ],
+      "to": [
+        "hud",
+        "In"
+      ]
+    },
+    {
+      "from": [
+        "hud",
+        "Out"
+      ],
+      "to": [
+        "wave",
+        "In"
+      ]
+    },
+    {
+      "from": [
+        "wave",
+        "Out"
+      ],
+      "to": [
+        "gravity",
+        "In"
+      ]
+    },
+    {
+      "from": [
+        "gravity",
+        "Out"
+      ],
+      "to": [
+        "body",
+        "In"
+      ]
+    },
+    {
+      "from": [
+        "body",
+        "Out"
+      ],
+      "to": [
+        "damping",
+        "In"
+      ]
+    },
+    {
+      "from": [
+        "damping",
+        "Out"
+      ],
+      "to": [
+        "velocity",
+        "In"
+      ]
+    },
+    {
+      "from": [
+        "velocity",
+        "Out"
+      ],
+      "to": [
+        "timer_start",
+        "In"
+      ]
+    },
+    {
+      "from": [
+        "timer_start",
+        "Out"
+      ],
+      "to": [
+        "sound",
+        "In"
+      ]
+    },
+    {
+      "from": [
+        "timer_event",
+        "Out"
+      ],
+      "to": [
+        "turn",
+        "In"
+      ]
+    },
+    {
+      "from": [
+        "fixed",
+        "Out"
+      ],
+      "to": [
+        "count",
+        "In"
+      ]
+    },
+    {
+      "from": [
+        "ticks",
+        "Value"
+      ],
+      "to": [
+        "plus",
+        "A"
+      ]
+    },
+    {
+      "from": [
+        "plus",
+        "Value"
+      ],
+      "to": [
+        "count",
+        "Value"
+      ]
+    },
+    {
+      "from": [
+        "update",
+        "Out"
+      ],
+      "to": [
+        "dt_store",
+        "In"
+      ]
+    },
+    {
+      "from": [
+        "dt",
+        "Value"
+      ],
+      "to": [
+        "dt_store",
+        "Value"
+      ]
+    },
+    {
+      "from": [
+        "dt_store",
+        "Out"
+      ],
+      "to": [
+        "unscaled_store",
+        "In"
+      ]
+    },
+    {
+      "from": [
+        "unscaled",
+        "Value"
+      ],
+      "to": [
+        "unscaled_store",
+        "Value"
+      ]
+    },
+    {
+      "from": [
+        "unscaled_store",
+        "Out"
+      ],
+      "to": [
+        "real_store",
+        "In"
+      ]
+    },
+    {
+      "from": [
+        "real",
+        "Value"
+      ],
+      "to": [
+        "real_store",
+        "Value"
+      ]
+    },
+    {
+      "from": [
+        "real_store",
+        "Out"
+      ],
+      "to": [
+        "game_store",
+        "In"
+      ]
+    },
+    {
+      "from": [
+        "game",
+        "Value"
+      ],
+      "to": [
+        "game_store",
+        "Value"
+      ]
+    },
+    {
+      "from": [
+        "game_store",
+        "Out"
+      ],
+      "to": [
+        "scale_store",
+        "In"
+      ]
+    },
+    {
+      "from": [
+        "scale",
+        "Value"
+      ],
+      "to": [
+        "scale_store",
+        "Value"
+      ]
+    },
+    {
+      "from": [
+        "scale_store",
+        "Out"
+      ],
+      "to": [
+        "fixed_dt_store",
+        "In"
+      ]
+    },
+    {
+      "from": [
+        "fixed_dt",
+        "Value"
+      ],
+      "to": [
+        "fixed_dt_store",
+        "Value"
+      ]
+    },
+    {
+      "from": [
+        "update_0",
+        "Out"
+      ],
+      "to": [
+        "if_0",
+        "In"
+      ]
+    },
+    {
+      "from": [
+        "key_0",
+        "Value"
+      ],
+      "to": [
+        "if_0",
+        "Condition"
+      ]
+    },
+    {
+      "from": [
+        "if_0",
+        "True"
+      ],
+      "to": [
+        "scale_0",
+        "In"
+      ]
+    },
+    {
+      "from": [
+        "update_1",
+        "Out"
+      ],
+      "to": [
+        "if_1",
+        "In"
+      ]
+    },
+    {
+      "from": [
+        "key_1",
+        "Value"
+      ],
+      "to": [
+        "if_1",
+        "Condition"
+      ]
+    },
+    {
+      "from": [
+        "if_1",
+        "True"
+      ],
+      "to": [
+        "scale_1",
+        "In"
+      ]
+    },
+    {
+      "from": [
+        "update_2",
+        "Out"
+      ],
+      "to": [
+        "if_2",
+        "In"
+      ]
+    },
+    {
+      "from": [
+        "key_2",
+        "Value"
+      ],
+      "to": [
+        "if_2",
+        "Condition"
+      ]
+    },
+    {
+      "from": [
+        "if_2",
+        "True"
+      ],
+      "to": [
+        "scale_2",
+        "In"
+      ]
+    },
+    {
+      "from": [
+        "update_3",
+        "Out"
+      ],
+      "to": [
+        "if_3",
+        "In"
+      ]
+    },
+    {
+      "from": [
+        "key_3",
+        "Value"
+      ],
+      "to": [
+        "if_3",
+        "Condition"
+      ]
+    },
+    {
+      "from": [
+        "if_3",
+        "True"
+      ],
+      "to": [
+        "scale_3",
+        "In"
+      ]
+    },
+    {
+      "from": [
+        "update_S",
+        "Out"
+      ],
+      "to": [
+        "if_S",
+        "In"
+      ]
+    },
+    {
+      "from": [
+        "key_S",
+        "Value"
+      ],
+      "to": [
+        "if_S",
+        "Condition"
+      ]
+    },
+    {
+      "from": [
+        "if_S",
+        "True"
+      ],
+      "to": [
+        "action_S",
+        "In"
+      ]
+    },
+    {
+      "from": [
+        "update_L",
+        "Out"
+      ],
+      "to": [
+        "if_L",
+        "In"
+      ]
+    },
+    {
+      "from": [
+        "key_L",
+        "Value"
+      ],
+      "to": [
+        "if_L",
+        "Condition"
+      ]
+    },
+    {
+      "from": [
+        "if_L",
+        "True"
+      ],
+      "to": [
+        "action_L",
+        "In"
+      ]
+    },
+    {
+      "from": [
+        "C",
+        "Out"
+      ],
+      "to": [
+        "C_action",
+        "In"
+      ]
+    },
+    {
+      "from": [
+        "M",
+        "Out"
+      ],
+      "to": [
+        "M_action",
+        "In"
+      ]
+    },
+    {
+      "from": [
+        "R",
+        "Out"
+      ],
+      "to": [
+        "R_action",
+        "In"
+      ]
+    },
+    {
+      "from": [
+        "P",
+        "Out"
+      ],
+      "to": [
+        "P_action",
+        "In"
+      ]
+    },
+    {
+      "from": [
+        "U",
+        "Out"
+      ],
+      "to": [
+        "U_action",
+        "In"
+      ]
+    },
+    {
+      "from": [
+        "Q",
+        "Out"
+      ],
+      "to": [
+        "Q_action",
+        "In"
+      ]
+    },
+    {
+      "from": [
+        "X",
+        "Out"
+      ],
+      "to": [
+        "X_action",
+        "In"
+      ]
+    },
+    {
+      "from": [
+        "scene_loaded_log",
+        "Out"
+      ],
+      "to": [
+        "scene_log",
+        "In"
+      ]
+    },
+    {
+      "from": [
+        "load_failed",
+        "Out"
+      ],
+      "to": [
+        "failed_log",
+        "In"
+      ]
+    },
+    {
+      "from": [
+        "load_failed",
+        "Error"
+      ],
+      "to": [
+        "failed_log",
+        "Message"
+      ]
+    },
+    {
+      "from": [
+        "late",
+        "Out"
+      ],
+      "to": [
+        "active_scene_store",
+        "In"
+      ]
+    },
+    {
+      "from": [
+        "active_scene",
+        "Value"
+      ],
+      "to": [
+        "active_scene_store",
+        "Value"
+      ]
+    },
+    {
+      "from": [
+        "active_scene_store",
+        "Out"
+      ],
+      "to": [
+        "scene_ok_store",
+        "In"
+      ]
+    },
+    {
+      "from": [
+        "scene_ok",
+        "Value"
+      ],
+      "to": [
+        "scene_ok_store",
+        "Value"
+      ]
+    },
+    {
+      "from": [
+        "scene_ok_store",
+        "Out"
+      ],
+      "to": [
+        "scene_error_store",
+        "In"
+      ]
+    },
+    {
+      "from": [
+        "scene_error",
+        "Value"
+      ],
+      "to": [
+        "scene_error_store",
+        "Value"
+      ]
+    },
+    {
+      "from": [
+        "names",
+        "Value"
+      ],
+      "to": [
+        "join",
+        "Items"
+      ]
+    },
+    {
+      "from": [
+        "scene_error_store",
+        "Out"
+      ],
+      "to": [
+        "scene_list",
+        "In"
+      ]
+    },
+    {
+      "from": [
+        "join",
+        "Value"
+      ],
+      "to": [
+        "scene_list",
+        "Value"
+      ]
+    },
+    {
+      "from": [
+        "scene_list",
+        "Out"
+      ],
+      "to": [
+        "status",
+        "In"
+      ]
+    },
+    {
+      "from": [
+        "scene_error",
+        "Value"
+      ],
+      "to": [
+        "status",
+        "Text"
+      ]
+    }
+  ],
+  "name": "Time scale playground",
+  "nodes": [
+    {
+      "id": "start",
+      "position": [
+        0,
+        0
+      ],
+      "type": 1019,
+      "values": {}
+    },
+    {
+      "id": "storage",
+      "position": [
+        280,
+        0
+      ],
+      "type": 23001,
+      "values": {
+        "Game ID": "node-engine-scene-demo"
+      }
+    },
+    {
+      "id": "hud",
+      "position": [
+        560,
+        0
+      ],
+      "type": 18001,
+      "values": {}
+    },
+    {
+      "id": "wave",
+      "position": [
+        840,
+        0
+      ],
+      "type": 13002,
+      "values": {
+        "Clip": "Wave"
+      }
+    },
+    {
+      "id": "gravity",
+      "position": [
+        1120,
+        0
+      ],
+      "type": 11027,
+      "values": {
+        "Gravity": [
+          0,
+          0,
+          0
+        ]
+      }
+    },
+    {
+      "id": "body",
+      "position": [
+        1400,
+        0
+      ],
+      "type": 11001,
+      "values": {
+        "Entity": "body"
+      }
+    },
+    {
+      "id": "damping",
+      "position": [
+        1680,
+        0
+      ],
+      "type": 11018,
+      "values": {
+        "Angular": 0.0,
+        "Entity": "body",
+        "Linear": 0.0
+      }
+    },
+    {
+      "id": "velocity",
+      "position": [
+        0,
+        220
+      ],
+      "type": 11010,
+      "values": {
+        "Entity": "body",
+        "Value": [
+          0,
+          0,
+          0.6
+        ]
+      }
+    },
+    {
+      "id": "timer_start",
+      "position": [
+        280,
+        220
+      ],
+      "type": 5010,
+      "values": {
+        "Name": "turn",
+        "Repeat": true,
+        "Seconds": 0.25
+      }
+    },
+    {
+      "id": "sound",
+      "position": [
+        560,
+        220
+      ],
+      "type": 17001,
+      "values": {
+        "Loop": true,
+        "Sound": "tone",
+        "Voice": "tone",
+        "Volume": 0.05
+      }
+    },
+    {
+      "id": "timer_event",
+      "position": [
+        840,
+        220
+      ],
+      "type": 1003,
+      "values": {
+        "Filter": "turn"
+      }
+    },
+    {
+      "id": "turn",
+      "position": [
+        1120,
+        220
+      ],
+      "type": 9004,
+      "values": {
+        "Degrees": [
+          0,
+          15,
+          0
+        ],
+        "Entity": "timer"
+      }
+    },
+    {
+      "id": "fixed",
+      "position": [
+        1400,
+        220
+      ],
+      "type": 1004,
+      "values": {}
+    },
+    {
+      "id": "count",
+      "position": [
+        1680,
+        220
+      ],
+      "type": 3005,
+      "values": {
+        "Name": "fixed_steps"
+      }
+    },
+    {
+      "id": "ticks",
+      "position": [
+        0,
+        440
+      ],
+      "type": 3004,
+      "values": {
+        "Name": "fixed_steps"
+      }
+    },
+    {
+      "id": "plus",
+      "position": [
+        280,
+        440
+      ],
+      "type": 4001,
+      "values": {
+        "B": 1
+      }
+    },
+    {
+      "id": "update",
+      "position": [
+        560,
+        440
+      ],
+      "type": 1002,
+      "values": {}
+    },
+    {
+      "id": "dt",
+      "position": [
+        840,
+        440
+      ],
+      "type": 5001,
+      "values": {}
+    },
+    {
+      "id": "dt_store",
+      "position": [
+        1120,
+        440
+      ],
+      "type": 3005,
+      "values": {
+        "Name": "dt"
+      }
+    },
+    {
+      "id": "unscaled",
+      "position": [
+        1400,
+        440
+      ],
+      "type": 5032,
+      "values": {}
+    },
+    {
+      "id": "unscaled_store",
+      "position": [
+        1680,
+        440
+      ],
+      "type": 3005,
+      "values": {
+        "Name": "unscaled"
+      }
+    },
+    {
+      "id": "real",
+      "position": [
+        0,
+        660
+      ],
+      "type": 5033,
+      "values": {}
+    },
+    {
+      "id": "real_store",
+      "position": [
+        280,
+        660
+      ],
+      "type": 3005,
+      "values": {
+        "Name": "real"
+      }
+    },
+    {
+      "id": "game",
+      "position": [
+        560,
+        660
+      ],
+      "type": 5002,
+      "values": {}
+    },
+    {
+      "id": "game_store",
+      "position": [
+        840,
+        660
+      ],
+      "type": 3005,
+      "values": {
+        "Name": "game"
+      }
+    },
+    {
+      "id": "scale",
+      "position": [
+        1120,
+        660
+      ],
+      "type": 5031,
+      "values": {}
+    },
+    {
+      "id": "scale_store",
+      "position": [
+        1400,
+        660
+      ],
+      "type": 3005,
+      "values": {
+        "Name": "scale"
+      }
+    },
+    {
+      "id": "fixed_dt",
+      "position": [
+        1680,
+        660
+      ],
+      "type": 5034,
+      "values": {}
+    },
+    {
+      "id": "fixed_dt_store",
+      "position": [
+        0,
+        880
+      ],
+      "type": 3005,
+      "values": {
+        "Name": "fixed_dt"
+      }
+    },
+    {
+      "id": "update_0",
+      "position": [
+        280,
+        880
+      ],
+      "type": 1002,
+      "values": {}
+    },
+    {
+      "id": "key_0",
+      "position": [
+        560,
+        880
+      ],
+      "type": 10002,
+      "values": {
+        "Key": "0"
+      }
+    },
+    {
+      "id": "if_0",
+      "position": [
+        840,
+        880
+      ],
+      "type": 2001,
+      "values": {}
+    },
+    {
+      "id": "scale_0",
+      "position": [
+        1120,
+        880
+      ],
+      "type": 5030,
+      "values": {
+        "Scale": 0
+      }
+    },
+    {
+      "id": "update_1",
+      "position": [
+        1400,
+        880
+      ],
+      "type": 1002,
+      "values": {}
+    },
+    {
+      "id": "key_1",
+      "position": [
+        1680,
+        880
+      ],
+      "type": 10002,
+      "values": {
+        "Key": "1"
+      }
+    },
+    {
+      "id": "if_1",
+      "position": [
+        0,
+        1100
+      ],
+      "type": 2001,
+      "values": {}
+    },
+    {
+      "id": "scale_1",
+      "position": [
+        280,
+        1100
+      ],
+      "type": 5030,
+      "values": {
+        "Scale": 0.25
+      }
+    },
+    {
+      "id": "update_2",
+      "position": [
+        560,
+        1100
+      ],
+      "type": 1002,
+      "values": {}
+    },
+    {
+      "id": "key_2",
+      "position": [
+        840,
+        1100
+      ],
+      "type": 10002,
+      "values": {
+        "Key": "2"
+      }
+    },
+    {
+      "id": "if_2",
+      "position": [
+        1120,
+        1100
+      ],
+      "type": 2001,
+      "values": {}
+    },
+    {
+      "id": "scale_2",
+      "position": [
+        1400,
+        1100
+      ],
+      "type": 5030,
+      "values": {
+        "Scale": 1
+      }
+    },
+    {
+      "id": "update_3",
+      "position": [
+        1680,
+        1100
+      ],
+      "type": 1002,
+      "values": {}
+    },
+    {
+      "id": "key_3",
+      "position": [
+        0,
+        1320
+      ],
+      "type": 10002,
+      "values": {
+        "Key": "3"
+      }
+    },
+    {
+      "id": "if_3",
+      "position": [
+        280,
+        1320
+      ],
+      "type": 2001,
+      "values": {}
+    },
+    {
+      "id": "scale_3",
+      "position": [
+        560,
+        1320
+      ],
+      "type": 5030,
+      "values": {
+        "Scale": 2
+      }
+    },
+    {
+      "id": "update_S",
+      "position": [
+        840,
+        1320
+      ],
+      "type": 1002,
+      "values": {}
+    },
+    {
+      "id": "key_S",
+      "position": [
+        1120,
+        1320
+      ],
+      "type": 10002,
+      "values": {
+        "Key": "S"
+      }
+    },
+    {
+      "id": "if_S",
+      "position": [
+        1400,
+        1320
+      ],
+      "type": 2001,
+      "values": {}
+    },
+    {
+      "id": "action_S",
+      "position": [
+        1680,
+        1320
+      ],
+      "type": 23016,
+      "values": {
+        "Slot": "scene"
+      }
+    },
+    {
+      "id": "update_L",
+      "position": [
+        0,
+        1540
+      ],
+      "type": 1002,
+      "values": {}
+    },
+    {
+      "id": "key_L",
+      "position": [
+        280,
+        1540
+      ],
+      "type": 10002,
+      "values": {
+        "Key": "L"
+      }
+    },
+    {
+      "id": "if_L",
+      "position": [
+        560,
+        1540
+      ],
+      "type": 2001,
+      "values": {}
+    },
+    {
+      "id": "action_L",
+      "position": [
+        840,
+        1540
+      ],
+      "type": 23017,
+      "values": {
+        "Slot": "scene"
+      }
+    },
+    {
+      "id": "C",
+      "position": [
+        1120,
+        1540
+      ],
+      "type": 10008,
+      "values": {
+        "Filter": "C"
+      }
+    },
+    {
+      "id": "C_action",
+      "position": [
+        1400,
+        1540
+      ],
+      "type": 7004,
+      "values": {
+        "Scene": "level"
+      }
+    },
+    {
+      "id": "M",
+      "position": [
+        1680,
+        1540
+      ],
+      "type": 10008,
+      "values": {
+        "Filter": "M"
+      }
+    },
+    {
+      "id": "M_action",
+      "position": [
+        0,
+        1760
+      ],
+      "type": 7004,
+      "values": {
+        "Scene": "menu"
+      }
+    },
+    {
+      "id": "R",
+      "position": [
+        280,
+        1760
+      ],
+      "type": 10008,
+      "values": {
+        "Filter": "R"
+      }
+    },
+    {
+      "id": "R_action",
+      "position": [
+        560,
+        1760
+      ],
+      "type": 7005,
+      "values": {}
+    },
+    {
+      "id": "P",
+      "position": [
+        840,
+        1760
+      ],
+      "type": 10008,
+      "values": {
+        "Filter": "P"
+      }
+    },
+    {
+      "id": "P_action",
+      "position": [
+        1120,
+        1760
+      ],
+      "type": 7001,
+      "values": {}
+    },
+    {
+      "id": "U",
+      "position": [
+        1400,
+        1760
+      ],
+      "type": 10008,
+      "values": {
+        "Filter": "U"
+      }
+    },
+    {
+      "id": "U_action",
+      "position": [
+        1680,
+        1760
+      ],
+      "type": 7002,
+      "values": {}
+    },
+    {
+      "id": "Q",
+      "position": [
+        0,
+        1980
+      ],
+      "type": 10008,
+      "values": {
+        "Filter": "Q"
+      }
+    },
+    {
+      "id": "Q_action",
+      "position": [
+        280,
+        1980
+      ],
+      "type": 26001,
+      "values": {}
+    },
+    {
+      "id": "X",
+      "position": [
+        560,
+        1980
+      ],
+      "type": 10008,
+      "values": {
+        "Filter": "X"
+      }
+    },
+    {
+      "id": "X_action",
+      "position": [
+        840,
+        1980
+      ],
+      "type": 7004,
+      "values": {
+        "Scene": "missing"
+      }
+    },
+    {
+      "id": "scene_loaded_log",
+      "position": [
+        1120,
+        1980
+      ],
+      "type": 1019,
+      "values": {}
+    },
+    {
+      "id": "scene_log",
+      "position": [
+        1400,
+        1980
+      ],
+      "type": 27001,
+      "values": {
+        "Message": "Loaded level"
+      }
+    },
+    {
+      "id": "load_failed",
+      "position": [
+        1680,
+        1980
+      ],
+      "type": 1020,
+      "values": {}
+    },
+    {
+      "id": "failed_log",
+      "position": [
+        0,
+        2200
+      ],
+      "type": 27001,
+      "values": {}
+    },
+    {
+      "id": "late",
+      "position": [
+        280,
+        2200
+      ],
+      "type": 1005,
+      "values": {}
+    },
+    {
+      "id": "active_scene",
+      "position": [
+        560,
+        2200
+      ],
+      "type": 7006,
+      "values": {}
+    },
+    {
+      "id": "active_scene_store",
+      "position": [
+        840,
+        2200
+      ],
+      "type": 3113,
+      "values": {
+        "Name": "active_scene"
+      }
+    },
+    {
+      "id": "scene_ok",
+      "position": [
+        1120,
+        2200
+      ],
+      "type": 7008,
+      "values": {}
+    },
+    {
+      "id": "scene_ok_store",
+      "position": [
+        1400,
+        2200
+      ],
+      "type": 3112,
+      "values": {
+        "Name": "scene_ok"
+      }
+    },
+    {
+      "id": "scene_error",
+      "position": [
+        1680,
+        2200
+      ],
+      "type": 7009,
+      "values": {}
+    },
+    {
+      "id": "scene_error_store",
+      "position": [
+        0,
+        2420
+      ],
+      "type": 3113,
+      "values": {
+        "Name": "scene_error"
+      }
+    },
+    {
+      "id": "names",
+      "position": [
+        280,
+        2420
+      ],
+      "type": 7007,
+      "values": {}
+    },
+    {
+      "id": "join",
+      "position": [
+        560,
+        2420
+      ],
+      "type": 3057,
+      "values": {
+        "Separator": ", "
+      }
+    },
+    {
+      "id": "scene_list",
+      "position": [
+        840,
+        2420
+      ],
+      "type": 3113,
+      "values": {
+        "Name": "scene_list"
+      }
+    },
+    {
+      "id": "status",
+      "position": [
+        1120,
+        2420
+      ],
+      "type": 18005,
+      "values": {
+        "Element": "status",
+        "Widget": "hud"
+      }
+    }
+  ],
+  "version": 1
+}

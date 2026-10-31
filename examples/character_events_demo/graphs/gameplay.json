@@ -1,0 +1,2289 @@
+{
+  "links": [
+    {
+      "from": [
+        "aim",
+        "Out"
+      ],
+      "to": [
+        "hud",
+        "In"
+      ]
+    },
+    {
+      "from": [
+        "hud",
+        "Out"
+      ],
+      "to": [
+        "storage",
+        "In"
+      ]
+    },
+    {
+      "from": [
+        "storage",
+        "Out"
+      ],
+      "to": [
+        "slot",
+        "In"
+      ]
+    },
+    {
+      "from": [
+        "slot",
+        "Out"
+      ],
+      "to": [
+        "exists",
+        "In"
+      ]
+    },
+    {
+      "from": [
+        "slot",
+        "Value"
+      ],
+      "to": [
+        "exists",
+        "Condition"
+      ]
+    },
+    {
+      "from": [
+        "exists",
+        "True"
+      ],
+      "to": [
+        "startup_load",
+        "In"
+      ]
+    },
+    {
+      "from": [
+        "fixed",
+        "Out"
+      ],
+      "to": [
+        "force",
+        "In"
+      ]
+    },
+    {
+      "from": [
+        "axis_x",
+        "Value"
+      ],
+      "to": [
+        "vector",
+        "X"
+      ]
+    },
+    {
+      "from": [
+        "axis_z",
+        "Value"
+      ],
+      "to": [
+        "vector",
+        "Z"
+      ]
+    },
+    {
+      "from": [
+        "vector",
+        "Value"
+      ],
+      "to": [
+        "strength",
+        "Vector"
+      ]
+    },
+    {
+      "from": [
+        "strength",
+        "Value"
+      ],
+      "to": [
+        "force",
+        "Velocity"
+      ]
+    },
+    {
+      "from": [
+        "force",
+        "Out"
+      ],
+      "to": [
+        "count",
+        "In"
+      ]
+    },
+    {
+      "from": [
+        "ticks",
+        "Value"
+      ],
+      "to": [
+        "plus",
+        "A"
+      ]
+    },
+    {
+      "from": [
+        "plus",
+        "Value"
+      ],
+      "to": [
+        "count",
+        "Value"
+      ]
+    },
+    {
+      "from": [
+        "jump_event",
+        "Out"
+      ],
+      "to": [
+        "jump_branch",
+        "In"
+      ]
+    },
+    {
+      "from": [
+        "jump_pressed",
+        "Value"
+      ],
+      "to": [
+        "jump_branch",
+        "Condition"
+      ]
+    },
+    {
+      "from": [
+        "jump_branch",
+        "True"
+      ],
+      "to": [
+        "jump",
+        "In"
+      ]
+    },
+    {
+      "from": [
+        "reset_event",
+        "Out"
+      ],
+      "to": [
+        "reset_branch",
+        "In"
+      ]
+    },
+    {
+      "from": [
+        "reset_pressed",
+        "Value"
+      ],
+      "to": [
+        "reset_branch",
+        "Condition"
+      ]
+    },
+    {
+      "from": [
+        "reset_branch",
+        "True"
+      ],
+      "to": [
+        "reset",
+        "In"
+      ]
+    },
+    {
+      "from": [
+        "save_event",
+        "Out"
+      ],
+      "to": [
+        "save_branch",
+        "In"
+      ]
+    },
+    {
+      "from": [
+        "save_pressed",
+        "Value"
+      ],
+      "to": [
+        "save_branch",
+        "Condition"
+      ]
+    },
+    {
+      "from": [
+        "save_branch",
+        "True"
+      ],
+      "to": [
+        "save",
+        "In"
+      ]
+    },
+    {
+      "from": [
+        "load_event",
+        "Out"
+      ],
+      "to": [
+        "load_branch",
+        "In"
+      ]
+    },
+    {
+      "from": [
+        "load_pressed",
+        "Value"
+      ],
+      "to": [
+        "load_branch",
+        "Condition"
+      ]
+    },
+    {
+      "from": [
+        "load_branch",
+        "True"
+      ],
+      "to": [
+        "load",
+        "In"
+      ]
+    },
+    {
+      "from": [
+        "reset",
+        "Out"
+      ],
+      "to": [
+        "reset_rotation",
+        "In"
+      ]
+    },
+    {
+      "from": [
+        "reset_rotation",
+        "Out"
+      ],
+      "to": [
+        "reset_velocity",
+        "In"
+      ]
+    },
+    {
+      "from": [
+        "start",
+        "Out"
+      ],
+      "to": [
+        "aim",
+        "In"
+      ]
+    },
+    {
+      "from": [
+        "crouch_event",
+        "Out"
+      ],
+      "to": [
+        "crouch_branch",
+        "In"
+      ]
+    },
+    {
+      "from": [
+        "crouch_key",
+        "Value"
+      ],
+      "to": [
+        "crouch_branch",
+        "Condition"
+      ]
+    },
+    {
+      "from": [
+        "crouch_branch",
+        "True"
+      ],
+      "to": [
+        "crouch",
+        "In"
+      ]
+    },
+    {
+      "from": [
+        "crouch",
+        "Out"
+      ],
+      "to": [
+        "crouch_fits",
+        "In"
+      ]
+    },
+    {
+      "from": [
+        "crouch",
+        "Resized"
+      ],
+      "to": [
+        "crouch_fits",
+        "Condition"
+      ]
+    },
+    {
+      "from": [
+        "crouch_fits",
+        "True"
+      ],
+      "to": [
+        "crouch_mesh",
+        "In"
+      ]
+    },
+    {
+      "from": [
+        "crouch_mesh",
+        "Out"
+      ],
+      "to": [
+        "crouch_offset",
+        "In"
+      ]
+    },
+    {
+      "from": [
+        "crouch_offset",
+        "Out"
+      ],
+      "to": [
+        "crouch_hud",
+        "In"
+      ]
+    },
+    {
+      "from": [
+        "stand_event",
+        "Out"
+      ],
+      "to": [
+        "stand_branch",
+        "In"
+      ]
+    },
+    {
+      "from": [
+        "stand_key",
+        "Value"
+      ],
+      "to": [
+        "stand_branch",
+        "Condition"
+      ]
+    },
+    {
+      "from": [
+        "stand_branch",
+        "True"
+      ],
+      "to": [
+        "stand",
+        "In"
+      ]
+    },
+    {
+      "from": [
+        "stand",
+        "Out"
+      ],
+      "to": [
+        "stand_fits",
+        "In"
+      ]
+    },
+    {
+      "from": [
+        "stand",
+        "Resized"
+      ],
+      "to": [
+        "stand_fits",
+        "Condition"
+      ]
+    },
+    {
+      "from": [
+        "stand_fits",
+        "True"
+      ],
+      "to": [
+        "stand_mesh",
+        "In"
+      ]
+    },
+    {
+      "from": [
+        "stand_mesh",
+        "Out"
+      ],
+      "to": [
+        "stand_offset",
+        "In"
+      ]
+    },
+    {
+      "from": [
+        "stand_offset",
+        "Out"
+      ],
+      "to": [
+        "stand_hud",
+        "In"
+      ]
+    },
+    {
+      "from": [
+        "status",
+        "Out"
+      ],
+      "to": [
+        "ground_check",
+        "In"
+      ]
+    },
+    {
+      "from": [
+        "ground_check",
+        "Out"
+      ],
+      "to": [
+        "ground_hud",
+        "In"
+      ]
+    },
+    {
+      "from": [
+        "ground_check",
+        "State"
+      ],
+      "to": [
+        "ground_text",
+        "B"
+      ]
+    },
+    {
+      "from": [
+        "ground_text",
+        "Value"
+      ],
+      "to": [
+        "ground_hud",
+        "Text"
+      ]
+    },
+    {
+      "from": [
+        "collision_enter_count",
+        "Value"
+      ],
+      "to": [
+        "collision_enter_add",
+        "A"
+      ]
+    },
+    {
+      "from": [
+        "collision_enter",
+        "Out"
+      ],
+      "to": [
+        "collision_enter_set",
+        "In"
+      ]
+    },
+    {
+      "from": [
+        "collision_enter_add",
+        "Value"
+      ],
+      "to": [
+        "collision_enter_set",
+        "Value"
+      ]
+    },
+    {
+      "from": [
+        "collision_enter",
+        "Other"
+      ],
+      "to": [
+        "collision_enter_other",
+        "Entity"
+      ]
+    },
+    {
+      "from": [
+        "collision_enter_other",
+        "Value"
+      ],
+      "to": [
+        "collision_enter_label",
+        "B"
+      ]
+    },
+    {
+      "from": [
+        "collision_enter_set",
+        "Out"
+      ],
+      "to": [
+        "collision_enter_hud",
+        "In"
+      ]
+    },
+    {
+      "from": [
+        "collision_enter_label",
+        "Value"
+      ],
+      "to": [
+        "collision_enter_hud",
+        "Text"
+      ]
+    },
+    {
+      "from": [
+        "collision_enter_hud",
+        "Out"
+      ],
+      "to": [
+        "collision_enter_normal",
+        "In"
+      ]
+    },
+    {
+      "from": [
+        "collision_enter",
+        "Normal"
+      ],
+      "to": [
+        "collision_enter_normal",
+        "Value"
+      ]
+    },
+    {
+      "from": [
+        "collision_stay_count",
+        "Value"
+      ],
+      "to": [
+        "collision_stay_add",
+        "A"
+      ]
+    },
+    {
+      "from": [
+        "collision_stay",
+        "Out"
+      ],
+      "to": [
+        "collision_stay_set",
+        "In"
+      ]
+    },
+    {
+      "from": [
+        "collision_stay_add",
+        "Value"
+      ],
+      "to": [
+        "collision_stay_set",
+        "Value"
+      ]
+    },
+    {
+      "from": [
+        "collision_stay",
+        "Other"
+      ],
+      "to": [
+        "collision_stay_other",
+        "Entity"
+      ]
+    },
+    {
+      "from": [
+        "collision_stay_other",
+        "Value"
+      ],
+      "to": [
+        "collision_stay_label",
+        "B"
+      ]
+    },
+    {
+      "from": [
+        "collision_stay_set",
+        "Out"
+      ],
+      "to": [
+        "collision_stay_hud",
+        "In"
+      ]
+    },
+    {
+      "from": [
+        "collision_stay_label",
+        "Value"
+      ],
+      "to": [
+        "collision_stay_hud",
+        "Text"
+      ]
+    },
+    {
+      "from": [
+        "collision_stay_hud",
+        "Out"
+      ],
+      "to": [
+        "collision_stay_normal",
+        "In"
+      ]
+    },
+    {
+      "from": [
+        "collision_stay",
+        "Normal"
+      ],
+      "to": [
+        "collision_stay_normal",
+        "Value"
+      ]
+    },
+    {
+      "from": [
+        "collision_exit_count",
+        "Value"
+      ],
+      "to": [
+        "collision_exit_add",
+        "A"
+      ]
+    },
+    {
+      "from": [
+        "collision_exit",
+        "Out"
+      ],
+      "to": [
+        "collision_exit_set",
+        "In"
+      ]
+    },
+    {
+      "from": [
+        "collision_exit_add",
+        "Value"
+      ],
+      "to": [
+        "collision_exit_set",
+        "Value"
+      ]
+    },
+    {
+      "from": [
+        "collision_exit",
+        "Other"
+      ],
+      "to": [
+        "collision_exit_other",
+        "Entity"
+      ]
+    },
+    {
+      "from": [
+        "collision_exit_other",
+        "Value"
+      ],
+      "to": [
+        "collision_exit_label",
+        "B"
+      ]
+    },
+    {
+      "from": [
+        "collision_exit_set",
+        "Out"
+      ],
+      "to": [
+        "collision_exit_hud",
+        "In"
+      ]
+    },
+    {
+      "from": [
+        "collision_exit_label",
+        "Value"
+      ],
+      "to": [
+        "collision_exit_hud",
+        "Text"
+      ]
+    },
+    {
+      "from": [
+        "collision_exit_hud",
+        "Out"
+      ],
+      "to": [
+        "collision_exit_normal",
+        "In"
+      ]
+    },
+    {
+      "from": [
+        "collision_exit",
+        "Normal"
+      ],
+      "to": [
+        "collision_exit_normal",
+        "Value"
+      ]
+    },
+    {
+      "from": [
+        "trigger_enter_count",
+        "Value"
+      ],
+      "to": [
+        "trigger_enter_add",
+        "A"
+      ]
+    },
+    {
+      "from": [
+        "trigger_enter",
+        "Out"
+      ],
+      "to": [
+        "trigger_enter_set",
+        "In"
+      ]
+    },
+    {
+      "from": [
+        "trigger_enter_add",
+        "Value"
+      ],
+      "to": [
+        "trigger_enter_set",
+        "Value"
+      ]
+    },
+    {
+      "from": [
+        "trigger_enter",
+        "Other"
+      ],
+      "to": [
+        "trigger_enter_other",
+        "Entity"
+      ]
+    },
+    {
+      "from": [
+        "trigger_enter_other",
+        "Value"
+      ],
+      "to": [
+        "trigger_enter_label",
+        "B"
+      ]
+    },
+    {
+      "from": [
+        "trigger_enter_set",
+        "Out"
+      ],
+      "to": [
+        "trigger_enter_hud",
+        "In"
+      ]
+    },
+    {
+      "from": [
+        "trigger_enter_label",
+        "Value"
+      ],
+      "to": [
+        "trigger_enter_hud",
+        "Text"
+      ]
+    },
+    {
+      "from": [
+        "trigger_enter_hud",
+        "Out"
+      ],
+      "to": [
+        "trigger_enter_normal",
+        "In"
+      ]
+    },
+    {
+      "from": [
+        "trigger_enter",
+        "Normal"
+      ],
+      "to": [
+        "trigger_enter_normal",
+        "Value"
+      ]
+    },
+    {
+      "from": [
+        "trigger_stay_count",
+        "Value"
+      ],
+      "to": [
+        "trigger_stay_add",
+        "A"
+      ]
+    },
+    {
+      "from": [
+        "trigger_stay",
+        "Out"
+      ],
+      "to": [
+        "trigger_stay_set",
+        "In"
+      ]
+    },
+    {
+      "from": [
+        "trigger_stay_add",
+        "Value"
+      ],
+      "to": [
+        "trigger_stay_set",
+        "Value"
+      ]
+    },
+    {
+      "from": [
+        "trigger_stay",
+        "Other"
+      ],
+      "to": [
+        "trigger_stay_other",
+        "Entity"
+      ]
+    },
+    {
+      "from": [
+        "trigger_stay_other",
+        "Value"
+      ],
+      "to": [
+        "trigger_stay_label",
+        "B"
+      ]
+    },
+    {
+      "from": [
+        "trigger_stay_set",
+        "Out"
+      ],
+      "to": [
+        "trigger_stay_hud",
+        "In"
+      ]
+    },
+    {
+      "from": [
+        "trigger_stay_label",
+        "Value"
+      ],
+      "to": [
+        "trigger_stay_hud",
+        "Text"
+      ]
+    },
+    {
+      "from": [
+        "trigger_stay_hud",
+        "Out"
+      ],
+      "to": [
+        "trigger_stay_normal",
+        "In"
+      ]
+    },
+    {
+      "from": [
+        "trigger_stay",
+        "Normal"
+      ],
+      "to": [
+        "trigger_stay_normal",
+        "Value"
+      ]
+    },
+    {
+      "from": [
+        "trigger_exit_count",
+        "Value"
+      ],
+      "to": [
+        "trigger_exit_add",
+        "A"
+      ]
+    },
+    {
+      "from": [
+        "trigger_exit",
+        "Out"
+      ],
+      "to": [
+        "trigger_exit_set",
+        "In"
+      ]
+    },
+    {
+      "from": [
+        "trigger_exit_add",
+        "Value"
+      ],
+      "to": [
+        "trigger_exit_set",
+        "Value"
+      ]
+    },
+    {
+      "from": [
+        "trigger_exit",
+        "Other"
+      ],
+      "to": [
+        "trigger_exit_other",
+        "Entity"
+      ]
+    },
+    {
+      "from": [
+        "trigger_exit_other",
+        "Value"
+      ],
+      "to": [
+        "trigger_exit_label",
+        "B"
+      ]
+    },
+    {
+      "from": [
+        "trigger_exit_set",
+        "Out"
+      ],
+      "to": [
+        "trigger_exit_hud",
+        "In"
+      ]
+    },
+    {
+      "from": [
+        "trigger_exit_label",
+        "Value"
+      ],
+      "to": [
+        "trigger_exit_hud",
+        "Text"
+      ]
+    },
+    {
+      "from": [
+        "trigger_exit_hud",
+        "Out"
+      ],
+      "to": [
+        "trigger_exit_normal",
+        "In"
+      ]
+    },
+    {
+      "from": [
+        "trigger_exit",
+        "Normal"
+      ],
+      "to": [
+        "trigger_exit_normal",
+        "Value"
+      ]
+    },
+    {
+      "from": [
+        "collision_enter_normal",
+        "Out"
+      ],
+      "to": [
+        "contact_once",
+        "In"
+      ]
+    },
+    {
+      "from": [
+        "saved_contact",
+        "Value"
+      ],
+      "to": [
+        "contact_once",
+        "Condition"
+      ]
+    },
+    {
+      "from": [
+        "contact_once",
+        "False"
+      ],
+      "to": [
+        "mark_contact",
+        "In"
+      ]
+    },
+    {
+      "from": [
+        "mark_contact",
+        "Out"
+      ],
+      "to": [
+        "contact_save",
+        "In"
+      ]
+    },
+    {
+      "from": [
+        "contact_load_event",
+        "Out"
+      ],
+      "to": [
+        "contact_if",
+        "In"
+      ]
+    },
+    {
+      "from": [
+        "contact_key",
+        "Value"
+      ],
+      "to": [
+        "contact_if",
+        "Condition"
+      ]
+    },
+    {
+      "from": [
+        "contact_if",
+        "True"
+      ],
+      "to": [
+        "contact_load",
+        "In"
+      ]
+    }
+  ],
+  "name": "Character collision and trigger callbacks",
+  "nodes": [
+    {
+      "id": "start",
+      "position": [
+        0,
+        0
+      ],
+      "type": 1001,
+      "values": {}
+    },
+    {
+      "id": "aim",
+      "position": [
+        285,
+        0
+      ],
+      "type": 15012,
+      "values": {
+        "Target": [
+          0,
+          1,
+          0
+        ]
+      }
+    },
+    {
+      "id": "hud",
+      "position": [
+        570,
+        0
+      ],
+      "type": 18001,
+      "values": {}
+    },
+    {
+      "id": "storage",
+      "position": [
+        855,
+        0
+      ],
+      "type": 23001,
+      "values": {
+        "Game ID": "node-engine-character-events-demo"
+      }
+    },
+    {
+      "id": "slot",
+      "position": [
+        1140,
+        0
+      ],
+      "type": 23004,
+      "values": {}
+    },
+    {
+      "id": "exists",
+      "position": [
+        1425,
+        0
+      ],
+      "type": 2001,
+      "values": {}
+    },
+    {
+      "id": "startup_load",
+      "position": [
+        1710,
+        0
+      ],
+      "type": 23017,
+      "values": {}
+    },
+    {
+      "id": "fixed",
+      "position": [
+        1995,
+        0
+      ],
+      "type": 1004,
+      "values": {}
+    },
+    {
+      "id": "force",
+      "position": [
+        0,
+        220
+      ],
+      "type": 12004,
+      "values": {}
+    },
+    {
+      "id": "axis_x",
+      "position": [
+        285,
+        220
+      ],
+      "type": 10007,
+      "values": {
+        "Axis": "horizontal"
+      }
+    },
+    {
+      "id": "axis_z",
+      "position": [
+        570,
+        220
+      ],
+      "type": 10007,
+      "values": {
+        "Axis": "vertical"
+      }
+    },
+    {
+      "id": "vector",
+      "position": [
+        855,
+        220
+      ],
+      "type": 4020,
+      "values": {}
+    },
+    {
+      "id": "strength",
+      "position": [
+        1140,
+        220
+      ],
+      "type": 4022,
+      "values": {
+        "Scale": 3
+      }
+    },
+    {
+      "id": "count",
+      "position": [
+        1425,
+        220
+      ],
+      "type": 3005,
+      "values": {
+        "Name": "fixed_steps"
+      }
+    },
+    {
+      "id": "ticks",
+      "position": [
+        1710,
+        220
+      ],
+      "type": 3004,
+      "values": {
+        "Name": "fixed_steps"
+      }
+    },
+    {
+      "id": "plus",
+      "position": [
+        1995,
+        220
+      ],
+      "type": 4001,
+      "values": {
+        "B": 1
+      }
+    },
+    {
+      "id": "jump_event",
+      "position": [
+        0,
+        440
+      ],
+      "type": 1002,
+      "values": {}
+    },
+    {
+      "id": "jump_pressed",
+      "position": [
+        285,
+        440
+      ],
+      "type": 10002,
+      "values": {
+        "Key": "Space"
+      }
+    },
+    {
+      "id": "jump_branch",
+      "position": [
+        570,
+        440
+      ],
+      "type": 2001,
+      "values": {}
+    },
+    {
+      "id": "jump",
+      "position": [
+        855,
+        440
+      ],
+      "type": 12005,
+      "values": {
+        "Speed": 5
+      }
+    },
+    {
+      "id": "reset_event",
+      "position": [
+        1140,
+        440
+      ],
+      "type": 1002,
+      "values": {}
+    },
+    {
+      "id": "reset_pressed",
+      "position": [
+        1425,
+        440
+      ],
+      "type": 10002,
+      "values": {
+        "Key": "R"
+      }
+    },
+    {
+      "id": "reset_branch",
+      "position": [
+        1710,
+        440
+      ],
+      "type": 2001,
+      "values": {}
+    },
+    {
+      "id": "reset",
+      "position": [
+        1995,
+        440
+      ],
+      "type": 9002,
+      "values": {
+        "Value": [
+          0,
+          3,
+          0
+        ]
+      }
+    },
+    {
+      "id": "save_event",
+      "position": [
+        0,
+        660
+      ],
+      "type": 1002,
+      "values": {}
+    },
+    {
+      "id": "save_pressed",
+      "position": [
+        285,
+        660
+      ],
+      "type": 10002,
+      "values": {
+        "Key": "S"
+      }
+    },
+    {
+      "id": "save_branch",
+      "position": [
+        570,
+        660
+      ],
+      "type": 2001,
+      "values": {}
+    },
+    {
+      "id": "save",
+      "position": [
+        855,
+        660
+      ],
+      "type": 23016,
+      "values": {}
+    },
+    {
+      "id": "load_event",
+      "position": [
+        1140,
+        660
+      ],
+      "type": 1002,
+      "values": {}
+    },
+    {
+      "id": "load_pressed",
+      "position": [
+        1425,
+        660
+      ],
+      "type": 10002,
+      "values": {
+        "Key": "L"
+      }
+    },
+    {
+      "id": "load_branch",
+      "position": [
+        1710,
+        660
+      ],
+      "type": 2001,
+      "values": {}
+    },
+    {
+      "id": "load",
+      "position": [
+        1995,
+        660
+      ],
+      "type": 23017,
+      "values": {}
+    },
+    {
+      "id": "reset_rotation",
+      "position": [
+        0,
+        880
+      ],
+      "type": 9007,
+      "values": {
+        "Value": [
+          0,
+          0,
+          0
+        ]
+      }
+    },
+    {
+      "id": "reset_velocity",
+      "position": [
+        285,
+        880
+      ],
+      "type": 11010,
+      "values": {
+        "Value": [
+          0,
+          0,
+          0
+        ]
+      }
+    },
+    {
+      "id": "crouch_event",
+      "position": [
+        570,
+        880
+      ],
+      "type": 1002,
+      "values": {}
+    },
+    {
+      "id": "crouch_key",
+      "position": [
+        855,
+        880
+      ],
+      "type": 10002,
+      "values": {
+        "Key": "C"
+      }
+    },
+    {
+      "id": "crouch_branch",
+      "position": [
+        1140,
+        880
+      ],
+      "type": 2001,
+      "values": {}
+    },
+    {
+      "id": "crouch",
+      "position": [
+        1425,
+        880
+      ],
+      "type": 12006,
+      "values": {
+        "Half Height": 0.2,
+        "Radius": 0.35
+      }
+    },
+    {
+      "id": "crouch_fits",
+      "position": [
+        1710,
+        880
+      ],
+      "type": 2001,
+      "values": {}
+    },
+    {
+      "id": "crouch_mesh",
+      "position": [
+        1995,
+        880
+      ],
+      "type": 9005,
+      "values": {
+        "Entity": "robot_mesh",
+        "Value": [
+          1,
+          0.6470588235294118,
+          1
+        ]
+      }
+    },
+    {
+      "id": "crouch_offset",
+      "position": [
+        0,
+        1100
+      ],
+      "type": 9002,
+      "values": {
+        "Entity": "robot_mesh",
+        "Value": [
+          0,
+          -0.55,
+          0
+        ]
+      }
+    },
+    {
+      "id": "crouch_hud",
+      "position": [
+        285,
+        1100
+      ],
+      "type": 18005,
+      "values": {
+        "Element": "posture",
+        "Text": "Posture: crouching"
+      }
+    },
+    {
+      "id": "stand_event",
+      "position": [
+        570,
+        1100
+      ],
+      "type": 1002,
+      "values": {}
+    },
+    {
+      "id": "stand_key",
+      "position": [
+        855,
+        1100
+      ],
+      "type": 10002,
+      "values": {
+        "Key": "V"
+      }
+    },
+    {
+      "id": "stand_branch",
+      "position": [
+        1140,
+        1100
+      ],
+      "type": 2001,
+      "values": {}
+    },
+    {
+      "id": "stand",
+      "position": [
+        1425,
+        1100
+      ],
+      "type": 12006,
+      "values": {
+        "Half Height": 0.5,
+        "Radius": 0.35
+      }
+    },
+    {
+      "id": "stand_fits",
+      "position": [
+        1710,
+        1100
+      ],
+      "type": 2001,
+      "values": {}
+    },
+    {
+      "id": "stand_mesh",
+      "position": [
+        1995,
+        1100
+      ],
+      "type": 9005,
+      "values": {
+        "Entity": "robot_mesh",
+        "Value": [
+          1,
+          1.0,
+          1
+        ]
+      }
+    },
+    {
+      "id": "stand_offset",
+      "position": [
+        0,
+        1320
+      ],
+      "type": 9002,
+      "values": {
+        "Entity": "robot_mesh",
+        "Value": [
+          0,
+          -0.85,
+          0
+        ]
+      }
+    },
+    {
+      "id": "stand_hud",
+      "position": [
+        285,
+        1320
+      ],
+      "type": 18005,
+      "values": {
+        "Element": "posture",
+        "Text": "Posture: standing"
+      }
+    },
+    {
+      "id": "status",
+      "position": [
+        570,
+        1320
+      ],
+      "type": 1002,
+      "values": {}
+    },
+    {
+      "id": "ground_check",
+      "position": [
+        855,
+        1320
+      ],
+      "type": 12008,
+      "values": {}
+    },
+    {
+      "id": "ground_hud",
+      "position": [
+        1140,
+        1320
+      ],
+      "type": 18005,
+      "values": {
+        "Element": "ground"
+      }
+    },
+    {
+      "id": "ground_text",
+      "position": [
+        1425,
+        1320
+      ],
+      "type": 3052,
+      "values": {
+        "A": "Ground: "
+      }
+    },
+    {
+      "id": "collision_enter",
+      "position": [
+        1710,
+        1320
+      ],
+      "type": 1011,
+      "values": {
+        "Receiver": "player"
+      }
+    },
+    {
+      "id": "collision_enter_count",
+      "position": [
+        1995,
+        1320
+      ],
+      "type": 3004,
+      "values": {
+        "Name": "collision_enter"
+      }
+    },
+    {
+      "id": "collision_enter_add",
+      "position": [
+        0,
+        1540
+      ],
+      "type": 4001,
+      "values": {
+        "B": 1
+      }
+    },
+    {
+      "id": "collision_enter_set",
+      "position": [
+        285,
+        1540
+      ],
+      "type": 3005,
+      "values": {
+        "Name": "collision_enter"
+      }
+    },
+    {
+      "id": "collision_enter_other",
+      "position": [
+        570,
+        1540
+      ],
+      "type": 3058,
+      "values": {}
+    },
+    {
+      "id": "collision_enter_label",
+      "position": [
+        855,
+        1540
+      ],
+      "type": 3052,
+      "values": {
+        "A": "Collision enter: "
+      }
+    },
+    {
+      "id": "collision_enter_hud",
+      "position": [
+        1140,
+        1540
+      ],
+      "type": 18005,
+      "values": {
+        "Element": "collision"
+      }
+    },
+    {
+      "id": "collision_enter_normal",
+      "position": [
+        1425,
+        1540
+      ],
+      "type": 3114,
+      "values": {
+        "Name": "collision_normal"
+      }
+    },
+    {
+      "id": "collision_stay",
+      "position": [
+        1710,
+        1540
+      ],
+      "type": 1012,
+      "values": {
+        "Receiver": "player"
+      }
+    },
+    {
+      "id": "collision_stay_count",
+      "position": [
+        1995,
+        1540
+      ],
+      "type": 3004,
+      "values": {
+        "Name": "collision_stay"
+      }
+    },
+    {
+      "id": "collision_stay_add",
+      "position": [
+        0,
+        1760
+      ],
+      "type": 4001,
+      "values": {
+        "B": 1
+      }
+    },
+    {
+      "id": "collision_stay_set",
+      "position": [
+        285,
+        1760
+      ],
+      "type": 3005,
+      "values": {
+        "Name": "collision_stay"
+      }
+    },
+    {
+      "id": "collision_stay_other",
+      "position": [
+        570,
+        1760
+      ],
+      "type": 3058,
+      "values": {}
+    },
+    {
+      "id": "collision_stay_label",
+      "position": [
+        855,
+        1760
+      ],
+      "type": 3052,
+      "values": {
+        "A": "Collision stay: "
+      }
+    },
+    {
+      "id": "collision_stay_hud",
+      "position": [
+        1140,
+        1760
+      ],
+      "type": 18005,
+      "values": {
+        "Element": "collision"
+      }
+    },
+    {
+      "id": "collision_stay_normal",
+      "position": [
+        1425,
+        1760
+      ],
+      "type": 3114,
+      "values": {
+        "Name": "collision_normal"
+      }
+    },
+    {
+      "id": "collision_exit",
+      "position": [
+        1710,
+        1760
+      ],
+      "type": 1013,
+      "values": {
+        "Receiver": "player"
+      }
+    },
+    {
+      "id": "collision_exit_count",
+      "position": [
+        1995,
+        1760
+      ],
+      "type": 3004,
+      "values": {
+        "Name": "collision_exit"
+      }
+    },
+    {
+      "id": "collision_exit_add",
+      "position": [
+        0,
+        1980
+      ],
+      "type": 4001,
+      "values": {
+        "B": 1
+      }
+    },
+    {
+      "id": "collision_exit_set",
+      "position": [
+        285,
+        1980
+      ],
+      "type": 3005,
+      "values": {
+        "Name": "collision_exit"
+      }
+    },
+    {
+      "id": "collision_exit_other",
+      "position": [
+        570,
+        1980
+      ],
+      "type": 3058,
+      "values": {}
+    },
+    {
+      "id": "collision_exit_label",
+      "position": [
+        855,
+        1980
+      ],
+      "type": 3052,
+      "values": {
+        "A": "Collision exit: "
+      }
+    },
+    {
+      "id": "collision_exit_hud",
+      "position": [
+        1140,
+        1980
+      ],
+      "type": 18005,
+      "values": {
+        "Element": "collision"
+      }
+    },
+    {
+      "id": "collision_exit_normal",
+      "position": [
+        1425,
+        1980
+      ],
+      "type": 3114,
+      "values": {
+        "Name": "collision_normal"
+      }
+    },
+    {
+      "id": "trigger_enter",
+      "position": [
+        1710,
+        1980
+      ],
+      "type": 1014,
+      "values": {
+        "Receiver": "player"
+      }
+    },
+    {
+      "id": "trigger_enter_count",
+      "position": [
+        1995,
+        1980
+      ],
+      "type": 3004,
+      "values": {
+        "Name": "trigger_enter"
+      }
+    },
+    {
+      "id": "trigger_enter_add",
+      "position": [
+        0,
+        2200
+      ],
+      "type": 4001,
+      "values": {
+        "B": 1
+      }
+    },
+    {
+      "id": "trigger_enter_set",
+      "position": [
+        285,
+        2200
+      ],
+      "type": 3005,
+      "values": {
+        "Name": "trigger_enter"
+      }
+    },
+    {
+      "id": "trigger_enter_other",
+      "position": [
+        570,
+        2200
+      ],
+      "type": 3058,
+      "values": {}
+    },
+    {
+      "id": "trigger_enter_label",
+      "position": [
+        855,
+        2200
+      ],
+      "type": 3052,
+      "values": {
+        "A": "Trigger enter: "
+      }
+    },
+    {
+      "id": "trigger_enter_hud",
+      "position": [
+        1140,
+        2200
+      ],
+      "type": 18005,
+      "values": {
+        "Element": "trigger"
+      }
+    },
+    {
+      "id": "trigger_enter_normal",
+      "position": [
+        1425,
+        2200
+      ],
+      "type": 3114,
+      "values": {
+        "Name": "trigger_normal"
+      }
+    },
+    {
+      "id": "trigger_stay",
+      "position": [
+        1710,
+        2200
+      ],
+      "type": 1015,
+      "values": {
+        "Receiver": "player"
+      }
+    },
+    {
+      "id": "trigger_stay_count",
+      "position": [
+        1995,
+        2200
+      ],
+      "type": 3004,
+      "values": {
+        "Name": "trigger_stay"
+      }
+    },
+    {
+      "id": "trigger_stay_add",
+      "position": [
+        0,
+        2420
+      ],
+      "type": 4001,
+      "values": {
+        "B": 1
+      }
+    },
+    {
+      "id": "trigger_stay_set",
+      "position": [
+        285,
+        2420
+      ],
+      "type": 3005,
+      "values": {
+        "Name": "trigger_stay"
+      }
+    },
+    {
+      "id": "trigger_stay_other",
+      "position": [
+        570,
+        2420
+      ],
+      "type": 3058,
+      "values": {}
+    },
+    {
+      "id": "trigger_stay_label",
+      "position": [
+        855,
+        2420
+      ],
+      "type": 3052,
+      "values": {
+        "A": "Trigger stay: "
+      }
+    },
+    {
+      "id": "trigger_stay_hud",
+      "position": [
+        1140,
+        2420
+      ],
+      "type": 18005,
+      "values": {
+        "Element": "trigger"
+      }
+    },
+    {
+      "id": "trigger_stay_normal",
+      "position": [
+        1425,
+        2420
+      ],
+      "type": 3114,
+      "values": {
+        "Name": "trigger_normal"
+      }
+    },
+    {
+      "id": "trigger_exit",
+      "position": [
+        1710,
+        2420
+      ],
+      "type": 1016,
+      "values": {
+        "Receiver": "player"
+      }
+    },
+    {
+      "id": "trigger_exit_count",
+      "position": [
+        1995,
+        2420
+      ],
+      "type": 3004,
+      "values": {
+        "Name": "trigger_exit"
+      }
+    },
+    {
+      "id": "trigger_exit_add",
+      "position": [
+        0,
+        2640
+      ],
+      "type": 4001,
+      "values": {
+        "B": 1
+      }
+    },
+    {
+      "id": "trigger_exit_set",
+      "position": [
+        285,
+        2640
+      ],
+      "type": 3005,
+      "values": {
+        "Name": "trigger_exit"
+      }
+    },
+    {
+      "id": "trigger_exit_other",
+      "position": [
+        570,
+        2640
+      ],
+      "type": 3058,
+      "values": {}
+    },
+    {
+      "id": "trigger_exit_label",
+      "position": [
+        855,
+        2640
+      ],
+      "type": 3052,
+      "values": {
+        "A": "Trigger exit: "
+      }
+    },
+    {
+      "id": "trigger_exit_hud",
+      "position": [
+        1140,
+        2640
+      ],
+      "type": 18005,
+      "values": {
+        "Element": "trigger"
+      }
+    },
+    {
+      "id": "trigger_exit_normal",
+      "position": [
+        1425,
+        2640
+      ],
+      "type": 3114,
+      "values": {
+        "Name": "trigger_normal"
+      }
+    },
+    {
+      "id": "saved_contact",
+      "position": [
+        1710,
+        2640
+      ],
+      "type": 3102,
+      "values": {
+        "Name": "contact_saved"
+      }
+    },
+    {
+      "id": "contact_once",
+      "position": [
+        1995,
+        2640
+      ],
+      "type": 2001,
+      "values": {}
+    },
+    {
+      "id": "mark_contact",
+      "position": [
+        0,
+        2860
+      ],
+      "type": 3112,
+      "values": {
+        "Name": "contact_saved",
+        "Value": true
+      }
+    },
+    {
+      "id": "contact_save",
+      "position": [
+        285,
+        2860
+      ],
+      "type": 23016,
+      "values": {
+        "Slot": "first-contact"
+      }
+    },
+    {
+      "id": "contact_load_event",
+      "position": [
+        570,
+        2860
+      ],
+      "type": 1002,
+      "values": {}
+    },
+    {
+      "id": "contact_key",
+      "position": [
+        855,
+        2860
+      ],
+      "type": 10002,
+      "values": {
+        "Key": "K"
+      }
+    },
+    {
+      "id": "contact_if",
+      "position": [
+        1140,
+        2860
+      ],
+      "type": 2001,
+      "values": {}
+    },
+    {
+      "id": "contact_load",
+      "position": [
+        1425,
+        2860
+      ],
+      "type": 23017,
+      "values": {
+        "Slot": "first-contact"
+      }
+    }
+  ],
+  "version": 1
+}

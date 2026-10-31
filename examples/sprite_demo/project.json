@@ -1,0 +1,9 @@
+{
+  "assets": [
+    "assets/atlas.png"
+  ],
+  "graph": "graphs/gameplay.json",
+  "name": "Sprite atlas",
+  "scene": "scenes/main.json",
+  "version": 1
+}

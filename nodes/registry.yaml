@@ -1,0 +1,749 @@
+version: 1
+categories:
+  1: Events & Signals
+  2: Flow Control & Async
+  3: Variables & Collections
+  4: Math & Geometry
+  5: Time & Random
+  6: Functions & Subgraphs
+  7: Scene & World
+  8: Entity / Component / Prefab
+  9: Transform & Spatial
+  10: Input & Devices
+  11: Physics & Collision
+  12: Character & Movement
+  13: Animation & Skeleton
+  14: Rendering & Materials
+  15: Camera & Cinematics
+  16: VFX & Environment
+  17: Audio & Music
+  18: UI & UX
+  19: AI & Navigation
+  20: Interaction & Combat
+  21: Inventory / Quest / Progression
+  22: Multiplayer & Networking
+  23: Save & Persistence
+  24: Asset & Resource Management
+  25: Procedural & World Generation
+  26: Platform & Application
+  27: Debug & Profiling
+  28: Editor & Automation
+  29: Specialized Systems
+nodes:
+  - {id: 6001, name: Function Input, category: 6, kind: function_entry}
+  - {id: 6002, name: Function Output, category: 6, kind: return}
+  - {id: 1001, name: On Game Start, category: 1, kind: event, event: start, outputs: [{name: Out, type: exec}]}
+  - {id: 1002, name: On Update, category: 1, kind: event, event: update, outputs: [{name: Out, type: exec}]}
+  - {id: 1004, name: On Fixed Update, category: 1, kind: event, event: fixed_update, outputs: [{name: Out, type: exec}]}
+  - {id: 1005, name: On Late Update, category: 1, kind: event, event: late_update, outputs: [{name: Out, type: exec}]}
+  - {id: 1006, name: On Object Created, category: 1, kind: event, event: entity_lifecycle, inputs: [{name: Receiver, type: entity, default: ''}], outputs: [{name: Out, type: exec}, {name: Entity, type: entity}, {name: Active, type: bool}]}
+  - {id: 1007, name: On Object Enabled, category: 1, kind: event, event: entity_lifecycle, inputs: [{name: Receiver, type: entity, default: ''}], outputs: [{name: Out, type: exec}, {name: Entity, type: entity}, {name: Active, type: bool}]}
+  - {id: 1008, name: On Object Disabled, category: 1, kind: event, event: entity_lifecycle, inputs: [{name: Receiver, type: entity, default: ''}], outputs: [{name: Out, type: exec}, {name: Entity, type: entity}, {name: Active, type: bool}]}
+  - {id: 1009, name: On Object Destroyed, category: 1, kind: event, event: entity_lifecycle, inputs: [{name: Receiver, type: entity, default: ''}], outputs: [{name: Out, type: exec}, {name: Entity, type: entity}, {name: Active, type: bool}]}
+  - {id: 1010, name: On Application Quit, category: 1, kind: event, event: quit, outputs: [{name: Out, type: exec}]}
+  - {id: 1017, name: On Game Pause, category: 1, kind: event, event: world_pause, outputs: [{name: Out, type: exec}]}
+  - {id: 1018, name: On Game Resume, category: 1, kind: event, event: world_pause, outputs: [{name: Out, type: exec}]}
+  - {id: 7001, name: Pause World, category: 7, kind: action, function: PauseWorld, context: true, inputs: [{name: In, type: exec}], outputs: [{name: Out, type: exec}]}
+  - {id: 7002, name: Resume World, category: 7, kind: action, function: ResumeWorld, context: true, inputs: [{name: In, type: exec}], outputs: [{name: Out, type: exec}]}
+  - {id: 7003, name: Is World Paused, category: 7, kind: pure, function: IsWorldPaused, context: true, outputs: [{name: Value, type: bool}]}
+  - {id: 1019, name: On Scene Loaded, category: 1, kind: event, event: scene_loaded, outputs: [{name: Out, type: exec}]}
+  - {id: 1020, name: On Scene Load Failed, category: 1, kind: event, event: scene_failure, outputs: [{name: Out, type: exec}, {name: Scene, type: string}, {name: Error, type: string}]}
+  - {id: 7004, name: Change Scene, category: 7, kind: action_result, function: ChangeScene, context: true, inputs: [{name: In, type: exec}, {name: Scene, type: string, default: main}], outputs: [{name: Out, type: exec}, {name: Accepted, type: bool}]}
+  - {id: 7005, name: Reload Scene, category: 7, kind: action_result, function: ReloadScene, context: true, inputs: [{name: In, type: exec}], outputs: [{name: Out, type: exec}, {name: Accepted, type: bool}]}
+  - {id: 7006, name: Get Active Scene, category: 7, kind: pure, function: GetActiveScene, context: true, outputs: [{name: Value, type: string}]}
+  - {id: 7007, name: Get Scene Names, category: 7, kind: pure, function: GetSceneNames, context: true, outputs: [{name: Value, type: 'array<string>'}]}
+  - {id: 7008, name: Scene Load Succeeded, category: 7, kind: pure, function: SceneLoadSucceeded, context: true, outputs: [{name: Value, type: bool}]}
+  - {id: 7009, name: Get Scene Error, category: 7, kind: pure, function: GetSceneError, context: true, outputs: [{name: Value, type: string}]}
+  - {id: 26001, name: Quit Application, category: 26, kind: action, function: QuitApplication, context: true, inputs: [{name: In, type: exec}], outputs: [{name: Out, type: exec}]}
+  - {id: 1011, name: On Collision Enter, category: 1, kind: event, event: physics, inputs: [{name: Receiver, type: entity, default: ''}], outputs: [{name: Out, type: exec}, {name: Entity, type: entity}, {name: Other, type: entity}, {name: Point, type: vec3}, {name: Normal, type: vec3}]}
+  - {id: 1012, name: On Collision Stay, category: 1, kind: event, event: physics, inputs: [{name: Receiver, type: entity, default: ''}], outputs: [{name: Out, type: exec}, {name: Entity, type: entity}, {name: Other, type: entity}, {name: Point, type: vec3}, {name: Normal, type: vec3}]}
+  - {id: 1013, name: On Collision Exit, category: 1, kind: event, event: physics, inputs: [{name: Receiver, type: entity, default: ''}], outputs: [{name: Out, type: exec}, {name: Entity, type: entity}, {name: Other, type: entity}, {name: Point, type: vec3}, {name: Normal, type: vec3}]}
+  - {id: 1014, name: On Trigger Enter, category: 1, kind: event, event: physics, inputs: [{name: Receiver, type: entity, default: ''}], outputs: [{name: Out, type: exec}, {name: Entity, type: entity}, {name: Other, type: entity}, {name: Point, type: vec3}, {name: Normal, type: vec3}]}
+  - {id: 1015, name: On Trigger Stay, category: 1, kind: event, event: physics, inputs: [{name: Receiver, type: entity, default: ''}], outputs: [{name: Out, type: exec}, {name: Entity, type: entity}, {name: Other, type: entity}, {name: Point, type: vec3}, {name: Normal, type: vec3}]}
+  - {id: 1016, name: On Trigger Exit, category: 1, kind: event, event: physics, inputs: [{name: Receiver, type: entity, default: ''}], outputs: [{name: Out, type: exec}, {name: Entity, type: entity}, {name: Other, type: entity}, {name: Point, type: vec3}, {name: Normal, type: vec3}]}
+  - id: 1003
+    name: On Timer Finished
+    category: 1
+    kind: event
+    event: timer
+    inputs: [{name: Filter, type: string, default: ''}, {name: Receiver, type: entity, default: ''}]
+    outputs: [{name: Out, type: exec}, {name: Name, type: string}, {name: Owner, type: entity}]
+  - id: 2001
+    name: Branch
+    category: 2
+    kind: branch
+    inputs: [{name: In, type: exec}, {name: Condition, type: bool, default: true}]
+    outputs: [{name: 'True', type: exec}, {name: 'False', type: exec}]
+  - id: 2002
+    name: Sequence
+    category: 2
+    kind: sequence
+    inputs: [{name: In, type: exec}]
+    outputs: [{name: First, type: exec}, {name: Then, type: exec}]
+  - id: 2003
+    name: For Loop
+    category: 2
+    kind: for
+    inputs: [{name: In, type: exec}, {name: Count, type: float, default: 3.0}]
+    outputs: [{name: Body, type: exec}, {name: Done, type: exec}]
+  - id: 2004
+    name: While Loop
+    category: 2
+    kind: while
+    inputs: [{name: In, type: exec}, {name: Condition, type: bool, default: false}]
+    outputs: [{name: Body, type: exec}, {name: Done, type: exec}]
+  - {id: 2005, name: Break Loop, category: 2, kind: break, inputs: [{name: In, type: exec}]}
+  - {id: 2006, name: Continue Loop, category: 2, kind: continue, inputs: [{name: In, type: exec}]}
+  - {id: 2007, name: Do Once, category: 2, kind: flow, context: true, function: DoOnceFlow, inputs: [{name: In, type: exec}, {name: Reset, type: exec}, {name: Owner, type: entity, default: ''}], outputs: [{name: Out, type: exec}]}
+  - {id: 2008, name: Do N, category: 2, kind: flow, context: true, function: DoNFlow, inputs: [{name: In, type: exec}, {name: Reset, type: exec}, {name: Owner, type: entity, default: ''}, {name: N, type: int, default: 1}], outputs: [{name: Out, type: exec}, {name: Counter, type: int}]}
+  - {id: 2009, name: Gate, category: 2, kind: flow, context: true, function: GateFlow, inputs: [{name: In, type: exec}, {name: Open, type: exec}, {name: Close, type: exec}, {name: Toggle, type: exec}, {name: Owner, type: entity, default: ''}, {name: Start Closed, type: bool, default: false}], outputs: [{name: Out, type: exec}]}
+  - {id: 2010, name: Flip Flop, category: 2, kind: flow, context: true, function: FlipFlopFlow, inputs: [{name: In, type: exec}, {name: Reset, type: exec}, {name: Owner, type: entity, default: ''}], outputs: [{name: A, type: exec}, {name: B, type: exec}, {name: Is A, type: bool}]}
+  - {id: 2012, name: Delay, category: 2, kind: latent, context: true, inputs: [{name: In, type: exec}, {name: Owner, type: entity, default: ''}, {name: Seconds, type: float, default: 1.0}, {name: Unscaled, type: bool, default: false}], outputs: [{name: Out, type: exec}]}
+  - {id: 2013, name: Wait Until, category: 2, kind: latent, context: true, inputs: [{name: In, type: exec}, {name: Owner, type: entity, default: ''}, {name: Condition, type: bool, default: false}], outputs: [{name: Out, type: exec}]}
+  - {id: 2014, name: Retriggerable Delay, category: 2, kind: latent, context: true, inputs: [{name: In, type: exec}, {name: Owner, type: entity, default: ''}, {name: Seconds, type: float, default: 1.0}, {name: Unscaled, type: bool, default: false}], outputs: [{name: Out, type: exec}]}
+  - {id: 2015, name: Switch Integer, category: 2, kind: switch, inputs: [{name: In, type: exec}, {name: Value, type: int, default: 0}], outputs: [{name: Case case_0, type: exec}, {name: Case case_1, type: exec}, {name: Default, type: exec}]}
+  - {id: 2016, name: Switch String, category: 2, kind: switch, inputs: [{name: In, type: exec}, {name: Value, type: string, default: ''}], outputs: [{name: Case case_0, type: exec}, {name: Case case_1, type: exec}, {name: Default, type: exec}]}
+  - id: 2011
+    name: Multi Gate
+    category: 2
+    kind: flow
+    context: true
+    function: MultiGateFlow
+    inputs: [{name: In, type: exec}, {name: Reset, type: exec}, {name: Owner, type: entity, default: ''}, {name: Branches, type: int, default: 2}, {name: Random, type: bool, default: false}, {name: Loop, type: bool, default: false}, {name: Start Index, type: int, default: -1}]
+    outputs: [{name: Out 0, type: exec}, {name: Out 1, type: exec}, {name: Out 2, type: exec}, {name: Out 3, type: exec}, {name: Out 4, type: exec}, {name: Out 5, type: exec}, {name: Out 6, type: exec}, {name: Out 7, type: exec}, {name: Index, type: int}]
+  - {id: 3001, name: Float, category: 3, kind: pure, function: Float, inputs: [{name: Value, type: float, default: 1.0}], outputs: [{name: Value, type: float}]}
+  - {id: 3002, name: Boolean, category: 3, kind: pure, function: Boolean, inputs: [{name: Value, type: bool, default: true}], outputs: [{name: Value, type: bool}]}
+  - {id: 3003, name: String, category: 3, kind: pure, function: String, inputs: [{name: Value, type: string, default: Hello}], outputs: [{name: Value, type: string}]}
+  - {id: 3004, name: Get Variable, category: 3, kind: pure, function: GetVariable, context: true, variable_type: float, variable_access: read, inputs: [{name: Name, type: string, default: score}], outputs: [{name: Value, type: float}]}
+  - id: 3005
+    name: Set Variable
+    category: 3
+    kind: action
+    function: SetVariable
+    context: true
+    variable_type: float
+    variable_access: write
+    inputs: [{name: In, type: exec}, {name: Name, type: string, default: score}, {name: Value, type: float, default: 0.0}]
+    outputs: [{name: Out, type: exec}]
+  - {id: 4001, name: Add, category: 4, kind: pure, function: Add, inputs: [{name: A, type: float, default: 0.0}, {name: B, type: float, default: 0.0}], outputs: [{name: Value, type: float}]}
+  - {id: 4002, name: Subtract, category: 4, kind: pure, function: Subtract, inputs: [{name: A, type: float, default: 0.0}, {name: B, type: float, default: 0.0}], outputs: [{name: Value, type: float}]}
+  - {id: 4003, name: Multiply, category: 4, kind: pure, function: Multiply, inputs: [{name: A, type: float, default: 1.0}, {name: B, type: float, default: 1.0}], outputs: [{name: Value, type: float}]}
+  - {id: 4004, name: Divide, category: 4, kind: pure, function: Divide, inputs: [{name: A, type: float, default: 1.0}, {name: B, type: float, default: 1.0}], outputs: [{name: Value, type: float}]}
+  - {id: 4005, name: Min, category: 4, kind: pure, function: Min, inputs: [{name: A, type: float, default: 0.0}, {name: B, type: float, default: 1.0}], outputs: [{name: Value, type: float}]}
+  - {id: 4006, name: Max, category: 4, kind: pure, function: Max, inputs: [{name: A, type: float, default: 0.0}, {name: B, type: float, default: 1.0}], outputs: [{name: Value, type: float}]}
+  - {id: 4007, name: Clamp, category: 4, kind: pure, function: Clamp, inputs: [{name: Value, type: float, default: 0.5}, {name: Min, type: float, default: 0.0}, {name: Max, type: float, default: 1.0}], outputs: [{name: Value, type: float}]}
+  - {id: 4008, name: Lerp, category: 4, kind: pure, function: Lerp, inputs: [{name: A, type: float, default: 0.0}, {name: B, type: float, default: 1.0}, {name: T, type: float, default: 0.5}], outputs: [{name: Value, type: float}]}
+  - {id: 4009, name: Sin, category: 4, kind: pure, function: Sin, inputs: [{name: Radians, type: float, default: 0.0}], outputs: [{name: Value, type: float}]}
+  - {id: 4010, name: Cos, category: 4, kind: pure, function: Cos, inputs: [{name: Radians, type: float, default: 0.0}], outputs: [{name: Value, type: float}]}
+  - {id: 4011, name: Abs, category: 4, kind: pure, function: Abs, inputs: [{name: Value, type: float, default: 0.0}], outputs: [{name: Value, type: float}]}
+  - {id: 4012, name: Less, category: 4, kind: pure, function: Less, inputs: [{name: A, type: float, default: 0.0}, {name: B, type: float, default: 1.0}], outputs: [{name: Value, type: bool}]}
+  - {id: 4013, name: Greater, category: 4, kind: pure, function: Greater, inputs: [{name: A, type: float, default: 0.0}, {name: B, type: float, default: 1.0}], outputs: [{name: Value, type: bool}]}
+  - {id: 4014, name: Nearly Equal, category: 4, kind: pure, function: NearlyEqual, inputs: [{name: A, type: float, default: 0.0}, {name: B, type: float, default: 0.0}, {name: Epsilon, type: float, default: 0.000001}], outputs: [{name: Value, type: bool}]}
+  - {id: 4015, name: AND, category: 4, kind: pure, function: And, inputs: [{name: A, type: bool, default: true}, {name: B, type: bool, default: true}], outputs: [{name: Value, type: bool}]}
+  - {id: 4016, name: OR, category: 4, kind: pure, function: Or, inputs: [{name: A, type: bool, default: false}, {name: B, type: bool, default: false}], outputs: [{name: Value, type: bool}]}
+  - {id: 4017, name: NOT, category: 4, kind: pure, function: Not, inputs: [{name: Value, type: bool, default: false}], outputs: [{name: Value, type: bool}]}
+  - {id: 4040, name: Modulo, category: 4, kind: pure, function: Modulo, inputs: [{name: A, type: float, default: 0.0}, {name: B, type: float, default: 1.0}], outputs: [{name: Value, type: float}]}
+  - {id: 4041, name: Power, category: 4, kind: pure, function: Power, inputs: [{name: Base, type: float, default: 2.0}, {name: Exponent, type: float, default: 2.0}], outputs: [{name: Value, type: float}]}
+  - {id: 4042, name: Sqrt, category: 4, kind: pure, function: Sqrt, inputs: [{name: Value, type: float, default: 0.0}], outputs: [{name: Value, type: float}]}
+  - {id: 4043, name: Floor, category: 4, kind: pure, function: Floor, inputs: [{name: Value, type: float, default: 0.0}], outputs: [{name: Value, type: float}]}
+  - {id: 4044, name: Ceil, category: 4, kind: pure, function: Ceil, inputs: [{name: Value, type: float, default: 0.0}], outputs: [{name: Value, type: float}]}
+  - {id: 4045, name: Round, category: 4, kind: pure, function: Round, inputs: [{name: Value, type: float, default: 0.0}], outputs: [{name: Value, type: float}]}
+  - {id: 4046, name: Tan, category: 4, kind: pure, function: Tan, inputs: [{name: Radians, type: float, default: 0.0}], outputs: [{name: Value, type: float}]}
+  - {id: 4047, name: Atan2, category: 4, kind: pure, function: Atan2, inputs: [{name: Y, type: float, default: 0.0}, {name: X, type: float, default: 1.0}], outputs: [{name: Value, type: float}]}
+  - {id: 4048, name: Inverse Lerp, category: 4, kind: pure, function: InverseLerp, inputs: [{name: A, type: float, default: 0.0}, {name: B, type: float, default: 1.0}, {name: Value, type: float, default: 0.5}], outputs: [{name: Value, type: float}]}
+  - {id: 4049, name: SmoothStep, category: 4, kind: pure, function: SmoothStep, inputs: [{name: A, type: float, default: 0.0}, {name: B, type: float, default: 1.0}, {name: Value, type: float, default: 0.5}], outputs: [{name: Value, type: float}]}
+  - {id: 4050, name: Remap Range, category: 4, kind: pure, function: RemapRange, inputs: [{name: Value, type: float, default: 0.5}, {name: Input Min, type: float, default: 0.0}, {name: Input Max, type: float, default: 1.0}, {name: Output Min, type: float, default: 0.0}, {name: Output Max, type: float, default: 1.0}], outputs: [{name: Value, type: float}]}
+  - {id: 4051, name: Equal, category: 4, kind: pure, function: Equal, inputs: [{name: A, type: float, default: 0.0}, {name: B, type: float, default: 0.0}], outputs: [{name: Value, type: bool}]}
+  - {id: 4052, name: Not Equal, category: 4, kind: pure, function: NotEqual, inputs: [{name: A, type: float, default: 0.0}, {name: B, type: float, default: 0.0}], outputs: [{name: Value, type: bool}]}
+  - {id: 4053, name: Less or Equal, category: 4, kind: pure, function: LessEqual, inputs: [{name: A, type: float, default: 0.0}, {name: B, type: float, default: 1.0}], outputs: [{name: Value, type: bool}]}
+  - {id: 4054, name: Greater or Equal, category: 4, kind: pure, function: GreaterEqual, inputs: [{name: A, type: float, default: 0.0}, {name: B, type: float, default: 1.0}], outputs: [{name: Value, type: bool}]}
+  - {id: 4055, name: XOR, category: 4, kind: pure, function: Xor, inputs: [{name: A, type: bool, default: false}, {name: B, type: bool, default: false}], outputs: [{name: Value, type: bool}]}
+  - {id: 4056, name: Bitwise AND, category: 4, kind: pure, function: BitwiseAnd, inputs: [{name: A, type: int, default: 0}, {name: B, type: int, default: 0}], outputs: [{name: Value, type: int}]}
+  - {id: 4057, name: Bitwise OR, category: 4, kind: pure, function: BitwiseOr, inputs: [{name: A, type: int, default: 0}, {name: B, type: int, default: 0}], outputs: [{name: Value, type: int}]}
+  - {id: 4058, name: Bitwise XOR, category: 4, kind: pure, function: BitwiseXor, inputs: [{name: A, type: int, default: 0}, {name: B, type: int, default: 0}], outputs: [{name: Value, type: int}]}
+  - {id: 4059, name: Integer Divide, category: 4, kind: pure, function: IntegerDivide, inputs: [{name: A, type: int, default: 0}, {name: B, type: int, default: 1}], outputs: [{name: Value, type: int}]}
+  - {id: 4060, name: Integer Modulo, category: 4, kind: pure, function: IntegerModulo, inputs: [{name: A, type: int, default: 0}, {name: B, type: int, default: 1}], outputs: [{name: Value, type: int}]}
+  - {id: 4061, name: Integer Abs, category: 4, kind: pure, function: IntegerAbs, inputs: [{name: Value, type: int, default: 0}], outputs: [{name: Value, type: int}]}
+  - {id: 4062, name: Integer Min, category: 4, kind: pure, function: IntegerMin, inputs: [{name: A, type: int, default: 0}, {name: B, type: int, default: 1}], outputs: [{name: Value, type: int}]}
+  - {id: 4063, name: Integer Max, category: 4, kind: pure, function: IntegerMax, inputs: [{name: A, type: int, default: 0}, {name: B, type: int, default: 1}], outputs: [{name: Value, type: int}]}
+  - {id: 4064, name: Integer Less or Equal, category: 4, kind: pure, function: IntegerLessEqual, inputs: [{name: A, type: int, default: 0}, {name: B, type: int, default: 1}], outputs: [{name: Value, type: bool}]}
+  - {id: 4065, name: Integer Greater or Equal, category: 4, kind: pure, function: IntegerGreaterEqual, inputs: [{name: A, type: int, default: 0}, {name: B, type: int, default: 1}], outputs: [{name: Value, type: bool}]}
+  - {id: 4066, name: Integer Not Equal, category: 4, kind: pure, function: IntegerNotEqual, inputs: [{name: A, type: int, default: 0}, {name: B, type: int, default: 0}], outputs: [{name: Value, type: bool}]}
+  - {id: 4070, name: Vector X, category: 4, kind: pure, function: VectorX, inputs: [{name: Vector, type: vec3, default: [0, 0, 0]}], outputs: [{name: Value, type: float}]}
+  - {id: 4071, name: Vector Y, category: 4, kind: pure, function: VectorY, inputs: [{name: Vector, type: vec3, default: [0, 0, 0]}], outputs: [{name: Value, type: float}]}
+  - {id: 4072, name: Vector Z, category: 4, kind: pure, function: VectorZ, inputs: [{name: Vector, type: vec3, default: [0, 0, 0]}], outputs: [{name: Value, type: float}]}
+  - {id: 4073, name: Angle Between, category: 4, kind: pure, function: AngleBetween, inputs: [{name: A, type: vec3, default: [1, 0, 0]}, {name: B, type: vec3, default: [0, 1, 0]}], outputs: [{name: Value, type: float}]}
+  - {id: 4074, name: Project Vector, category: 4, kind: pure, function: ProjectVector, inputs: [{name: Vector, type: vec3, default: [1, 0, 0]}, {name: 'On', type: vec3, default: [1, 0, 0]}], outputs: [{name: Value, type: vec3}]}
+  - {id: 4075, name: Reflect Vector, category: 4, kind: pure, function: ReflectVector, inputs: [{name: Vector, type: vec3, default: [1, -1, 0]}, {name: Normal, type: vec3, default: [0, 1, 0]}], outputs: [{name: Value, type: vec3}]}
+  - {id: 4076, name: Rotate Vector, category: 4, kind: pure, function: RotateVector, inputs: [{name: Vector, type: vec3, default: [1, 0, 0]}, {name: Rotation, type: vec3, default: [0, 0, 90]}], outputs: [{name: Value, type: vec3}]}
+  - {id: 4080, name: Make Vector2, category: 4, kind: pure, function: MakeVector2, inputs: [{name: X, type: float, default: 0.0}, {name: Y, type: float, default: 0.0}], outputs: [{name: Value, type: vec2}]}
+  - {id: 4081, name: Vector2 Add, category: 4, kind: pure, function: Vector2Add, inputs: [{name: A, type: vec2, default: [0, 0]}, {name: B, type: vec2, default: [0, 0]}], outputs: [{name: Value, type: vec2}]}
+  - {id: 4082, name: Vector2 Subtract, category: 4, kind: pure, function: Vector2Subtract, inputs: [{name: A, type: vec2, default: [0, 0]}, {name: B, type: vec2, default: [0, 0]}], outputs: [{name: Value, type: vec2}]}
+  - {id: 4083, name: Vector2 Scale, category: 4, kind: pure, function: Vector2Scale, inputs: [{name: Vector, type: vec2, default: [1, 0]}, {name: Scale, type: float, default: 1.0}], outputs: [{name: Value, type: vec2}]}
+  - {id: 4084, name: Vector2 Magnitude, category: 4, kind: pure, function: Vector2Magnitude, inputs: [{name: Vector, type: vec2, default: [1, 0]}], outputs: [{name: Value, type: float}]}
+  - {id: 4085, name: Vector2 Normalize, category: 4, kind: pure, function: Vector2Normalize, inputs: [{name: Vector, type: vec2, default: [1, 0]}], outputs: [{name: Value, type: vec2}]}
+  - {id: 4086, name: Vector2 Dot, category: 4, kind: pure, function: Vector2Dot, inputs: [{name: A, type: vec2, default: [1, 0]}, {name: B, type: vec2, default: [1, 0]}], outputs: [{name: Value, type: float}]}
+  - {id: 4087, name: Vector2 Distance, category: 4, kind: pure, function: Vector2Distance, inputs: [{name: A, type: vec2, default: [0, 0]}, {name: B, type: vec2, default: [1, 0]}], outputs: [{name: Value, type: float}]}
+  - {id: 4090, name: Make Vector4, category: 4, kind: pure, function: MakeVector4, inputs: [{name: X, type: float, default: 0.0}, {name: Y, type: float, default: 0.0}, {name: Z, type: float, default: 0.0}, {name: W, type: float, default: 0.0}], outputs: [{name: Value, type: vec4}]}
+  - {id: 4091, name: Vector4 Add, category: 4, kind: pure, function: Vector4Add, inputs: [{name: A, type: vec4, default: [0, 0, 0, 0]}, {name: B, type: vec4, default: [0, 0, 0, 0]}], outputs: [{name: Value, type: vec4}]}
+  - {id: 4092, name: Vector4 Subtract, category: 4, kind: pure, function: Vector4Subtract, inputs: [{name: A, type: vec4, default: [0, 0, 0, 0]}, {name: B, type: vec4, default: [0, 0, 0, 0]}], outputs: [{name: Value, type: vec4}]}
+  - {id: 4093, name: Vector4 Scale, category: 4, kind: pure, function: Vector4Scale, inputs: [{name: Vector, type: vec4, default: [1, 0, 0, 0]}, {name: Scale, type: float, default: 1.0}], outputs: [{name: Value, type: vec4}]}
+  - {id: 4094, name: Vector4 Magnitude, category: 4, kind: pure, function: Vector4Magnitude, inputs: [{name: Vector, type: vec4, default: [1, 0, 0, 0]}], outputs: [{name: Value, type: float}]}
+  - {id: 4095, name: Vector4 Normalize, category: 4, kind: pure, function: Vector4Normalize, inputs: [{name: Vector, type: vec4, default: [1, 0, 0, 0]}], outputs: [{name: Value, type: vec4}]}
+  - {id: 4096, name: Vector4 Dot, category: 4, kind: pure, function: Vector4Dot, inputs: [{name: A, type: vec4, default: [1, 0, 0, 0]}, {name: B, type: vec4, default: [1, 0, 0, 0]}], outputs: [{name: Value, type: float}]}
+  - {id: 4097, name: Vector4 Distance, category: 4, kind: pure, function: Vector4Distance, inputs: [{name: A, type: vec4, default: [0, 0, 0, 0]}, {name: B, type: vec4, default: [1, 0, 0, 0]}], outputs: [{name: Value, type: float}]}
+  - {id: 4100, name: Make Quaternion, category: 4, kind: pure, function: QuaternionFromEuler, inputs: [{name: Euler, type: vec3, default: [0, 0, 0]}], outputs: [{name: Value, type: quat}]}
+  - {id: 4101, name: Quaternion From Axis Angle, category: 4, kind: pure, function: QuaternionFromAxisAngle, inputs: [{name: Axis, type: vec3, default: [0, 1, 0]}, {name: Degrees, type: float, default: 0.0}], outputs: [{name: Value, type: quat}]}
+  - {id: 4102, name: Quaternion Multiply, category: 4, kind: pure, function: QuaternionMultiply, inputs: [{name: A, type: quat, default: [0, 0, 0, 1]}, {name: B, type: quat, default: [0, 0, 0, 1]}], outputs: [{name: Value, type: quat}]}
+  - {id: 4103, name: Quaternion Normalize, category: 4, kind: pure, function: QuaternionNormalize, inputs: [{name: Value, type: quat, default: [0, 0, 0, 1]}], outputs: [{name: Value, type: quat}]}
+  - {id: 4104, name: Quaternion Inverse, category: 4, kind: pure, function: QuaternionInverse, inputs: [{name: Value, type: quat, default: [0, 0, 0, 1]}], outputs: [{name: Value, type: quat}]}
+  - {id: 4105, name: Quaternion Slerp, category: 4, kind: pure, function: QuaternionSlerp, inputs: [{name: A, type: quat, default: [0, 0, 0, 1]}, {name: B, type: quat, default: [0, 0, 0, 1]}, {name: T, type: float, default: 0.5}], outputs: [{name: Value, type: quat}]}
+  - {id: 4106, name: Quaternion Rotate Vector, category: 4, kind: pure, function: QuaternionRotateVector, inputs: [{name: Vector, type: vec3, default: [1, 0, 0]}, {name: Rotation, type: quat, default: [0, 0, 0, 1]}], outputs: [{name: Value, type: vec3}]}
+  - {id: 4110, name: Identity Matrix, category: 4, kind: pure, function: IdentityMatrix, outputs: [{name: Value, type: mat4}]}
+  - {id: 4111, name: Matrix Multiply, category: 4, kind: pure, function: MatrixMultiply, inputs: [{name: A, type: mat4, default: [1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1]}, {name: B, type: mat4, default: [1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1]}], outputs: [{name: Value, type: mat4}]}
+  - {id: 4112, name: Matrix Inverse, category: 4, kind: pure, function: MatrixInverse, inputs: [{name: Value, type: mat4, default: [1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1]}], outputs: [{name: Value, type: mat4}]}
+  - {id: 4113, name: Transform Point, category: 4, kind: pure, function: TransformPoint, inputs: [{name: Matrix, type: mat4, default: [1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1]}, {name: Point, type: vec3, default: [0, 0, 0]}], outputs: [{name: Value, type: vec3}]}
+  - {id: 4114, name: Transform Direction, category: 4, kind: pure, function: TransformDirection, inputs: [{name: Matrix, type: mat4, default: [1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1]}, {name: Direction, type: vec3, default: [0, 0, 1]}], outputs: [{name: Value, type: vec3}]}
+  - {id: 4115, name: Make Transform Matrix, category: 4, kind: pure, function: MakeTransformMatrix, inputs: [{name: Position, type: vec3, default: [0, 0, 0]}, {name: Rotation, type: quat, default: [0, 0, 0, 1]}, {name: Scale, type: vec3, default: [1, 1, 1]}], outputs: [{name: Value, type: mat4}]}
+  - {id: 4120, name: Point In Bounds, category: 4, kind: pure, function: PointInBounds, inputs: [{name: Point, type: vec3, default: [0, 0, 0]}, {name: Min, type: vec3, default: [-1, -1, -1]}, {name: Max, type: vec3, default: [1, 1, 1]}], outputs: [{name: Value, type: bool}]}
+  - {id: 4121, name: Closest Point On Segment, category: 4, kind: pure, function: ClosestPointOnSegment, inputs: [{name: Point, type: vec3, default: [0, 0, 0]}, {name: A, type: vec3, default: [-1, 0, 0]}, {name: B, type: vec3, default: [1, 0, 0]}], outputs: [{name: Value, type: vec3}]}
+  - {id: 4122, name: Closest Point On Bounds, category: 4, kind: pure, function: ClosestPointOnBounds, inputs: [{name: Point, type: vec3, default: [0, 0, 0]}, {name: Min, type: vec3, default: [-1, -1, -1]}, {name: Max, type: vec3, default: [1, 1, 1]}], outputs: [{name: Value, type: vec3}]}
+  - {id: 4123, name: Ray Plane Intersection, category: 4, kind: pure, function: RayPlaneIntersection, inputs: [{name: Origin, type: vec3, default: [0, 0, 0]}, {name: Direction, type: vec3, default: [0, -1, 0]}, {name: Plane Point, type: vec3, default: [0, -1, 0]}, {name: Plane Normal, type: vec3, default: [0, 1, 0]}], outputs: [{name: Value, type: vec3}]}
+  - {id: 4124, name: Ray Sphere Intersection Distance, category: 4, kind: pure, function: RaySphereIntersectionDistance, inputs: [{name: Origin, type: vec3, default: [0, 0, -5]}, {name: Direction, type: vec3, default: [0, 0, 1]}, {name: Center, type: vec3, default: [0, 0, 0]}, {name: Radius, type: float, default: 1.0}], outputs: [{name: Value, type: float}]}
+  - {id: 4125, name: Line Segments Intersect 2D, category: 4, kind: pure, function: LineSegmentsIntersect2D, inputs: [{name: A1, type: vec3, default: [-1, 0, 0]}, {name: A2, type: vec3, default: [1, 0, 0]}, {name: B1, type: vec3, default: [0, -1, 0]}, {name: B2, type: vec3, default: [0, 1, 0]}], outputs: [{name: Value, type: bool}]}
+  - {id: 4126, name: Bounds Min, category: 4, kind: pure, function: BoundsMin, inputs: [{name: Points, type: 'array<vec3>', default: []}], outputs: [{name: Value, type: vec3}]}
+  - {id: 4127, name: Bounds Max, category: 4, kind: pure, function: BoundsMax, inputs: [{name: Points, type: 'array<vec3>', default: []}], outputs: [{name: Value, type: vec3}]}
+  - {id: 4128, name: Ray Bounds Intersection Distance, category: 4, kind: pure, function: RayBoundsIntersectionDistance, inputs: [{name: Origin, type: vec3, default: [0, 0, -5]}, {name: Direction, type: vec3, default: [0, 0, 1]}, {name: Min, type: vec3, default: [-1, -1, -1]}, {name: Max, type: vec3, default: [1, 1, 1]}], outputs: [{name: Value, type: float}]}
+  - {id: 4129, name: Closest Point On Triangle, category: 4, kind: pure, function: ClosestPointOnTriangle, inputs: [{name: Point, type: vec3, default: [0.25, 0.25, 1]}, {name: A, type: vec3, default: [0, 0, 0]}, {name: B, type: vec3, default: [1, 0, 0]}, {name: C, type: vec3, default: [0, 1, 0]}], outputs: [{name: Value, type: vec3}]}
+  - {id: 4130, name: Sphere Overlaps Bounds, category: 4, kind: pure, function: SphereOverlapsBounds, inputs: [{name: Center, type: vec3, default: [0, 0, 0]}, {name: Radius, type: float, default: 1}, {name: Min, type: vec3, default: [-1, -1, -1]}, {name: Max, type: vec3, default: [1, 1, 1]}], outputs: [{name: Value, type: bool}]}
+  - {id: 4131, name: Distance To Plane, category: 4, kind: pure, function: DistanceToPlane, inputs: [{name: Point, type: vec3, default: [0, 1, 0]}, {name: Plane Point, type: vec3, default: [0, 0, 0]}, {name: Plane Normal, type: vec3, default: [0, 1, 0]}], outputs: [{name: Value, type: float}]}
+  - {id: 4020, name: Make Vector3, category: 4, kind: pure, function: MakeVector3, inputs: [{name: X, type: float, default: 0.0}, {name: Y, type: float, default: 0.0}, {name: Z, type: float, default: 0.0}], outputs: [{name: Value, type: vec3}]}
+  - {id: 4021, name: Vector Add, category: 4, kind: pure, function: VectorAdd, inputs: [{name: A, type: vec3, default: [0, 0, 0]}, {name: B, type: vec3, default: [0, 0, 0]}], outputs: [{name: Value, type: vec3}]}
+  - {id: 4022, name: Vector Scale, category: 4, kind: pure, function: VectorScale, inputs: [{name: Vector, type: vec3, default: [1, 0, 0]}, {name: Scale, type: float, default: 1.0}], outputs: [{name: Value, type: vec3}]}
+  - {id: 4023, name: Normalize, category: 4, kind: pure, function: Normalize, inputs: [{name: Vector, type: vec3, default: [1, 0, 0]}], outputs: [{name: Value, type: vec3}]}
+  - {id: 4024, name: Magnitude, category: 4, kind: pure, function: Magnitude, inputs: [{name: Vector, type: vec3, default: [1, 0, 0]}], outputs: [{name: Value, type: float}]}
+  - {id: 4025, name: Dot Product, category: 4, kind: pure, function: Dot, inputs: [{name: A, type: vec3, default: [1, 0, 0]}, {name: B, type: vec3, default: [1, 0, 0]}], outputs: [{name: Value, type: float}]}
+  - {id: 4026, name: Cross Product, category: 4, kind: pure, function: Cross, inputs: [{name: A, type: vec3, default: [1, 0, 0]}, {name: B, type: vec3, default: [0, 1, 0]}], outputs: [{name: Value, type: vec3}]}
+  - {id: 4027, name: Vector Subtract, category: 4, kind: pure, function: VectorSubtract, inputs: [{name: A, type: vec3, default: [0, 0, 0]}, {name: B, type: vec3, default: [0, 0, 0]}], outputs: [{name: Value, type: vec3}]}
+  - {id: 4028, name: Vector Lerp, category: 4, kind: pure, function: VectorLerp, inputs: [{name: A, type: vec3, default: [0, 0, 0]}, {name: B, type: vec3, default: [1, 1, 1]}, {name: T, type: float, default: 0.5}], outputs: [{name: Value, type: vec3}]}
+  - {id: 4029, name: Distance, category: 4, kind: pure, function: Distance, inputs: [{name: A, type: vec3, default: [0, 0, 0]}, {name: B, type: vec3, default: [1, 0, 0]}], outputs: [{name: Value, type: float}]}
+  - {id: 5001, name: Get Delta Time, category: 5, kind: pure, function: DeltaTime, context: true, outputs: [{name: Value, type: float}]}
+  - {id: 5002, name: Get Game Time, category: 5, kind: pure, function: GameTime, context: true, outputs: [{name: Value, type: float}]}
+  - {id: 5003, name: Get Frame Count, category: 5, kind: pure, function: FrameCount, context: true, outputs: [{name: Value, type: float}]}
+  - {id: 5020, name: Set Random Seed, category: 5, kind: action, function: SetRandomSeed, context: true, inputs: [{name: In, type: exec}, {name: Seed, type: int, default: 0}], outputs: [{name: Out, type: exec}]}
+  - {id: 5021, name: Get Random Seed, category: 5, kind: pure, function: GetRandomSeed, context: true, outputs: [{name: Value, type: int}]}
+  - {id: 5022, name: Random Float, category: 5, kind: action_result, function: RandomFloat, context: true, inputs: [{name: In, type: exec}, {name: Minimum, type: float, default: 0.0}, {name: Maximum, type: float, default: 1.0}], outputs: [{name: Out, type: exec}, {name: Value, type: float}]}
+  - {id: 5023, name: Random Integer, category: 5, kind: action_result, function: RandomInteger, context: true, inputs: [{name: In, type: exec}, {name: Minimum, type: int, default: 0}, {name: Maximum, type: int, default: 100}], outputs: [{name: Out, type: exec}, {name: Value, type: int}]}
+  - {id: 5024, name: Random Boolean, category: 5, kind: action_result, function: RandomBoolean, context: true, inputs: [{name: In, type: exec}, {name: Probability, type: float, default: 0.5}], outputs: [{name: Out, type: exec}, {name: Value, type: bool}]}
+  - {id: 5025, name: Random Vector, category: 5, kind: action_result, function: RandomVector, context: true, inputs: [{name: In, type: exec}, {name: Minimum, type: vec3, default: [0, 0, 0]}, {name: Maximum, type: vec3, default: [1, 1, 1]}], outputs: [{name: Out, type: exec}, {name: Value, type: vec3}]}
+  - {id: 5026, name: Random Direction, category: 5, kind: action_result, function: RandomDirection, context: true, inputs: [{name: In, type: exec}], outputs: [{name: Out, type: exec}, {name: Value, type: vec3}]}
+  - {id: 5030, name: Set Time Scale, category: 5, kind: action, function: SetTimeScale, context: true, inputs: [{name: In, type: exec}, {name: Scale, type: float, default: 1.0}], outputs: [{name: Out, type: exec}]}
+  - {id: 5031, name: Get Time Scale, category: 5, kind: pure, function: GetTimeScale, context: true, outputs: [{name: Value, type: float}]}
+  - {id: 5032, name: Get Unscaled Delta Time, category: 5, kind: pure, function: UnscaledDeltaTime, context: true, outputs: [{name: Value, type: float}]}
+  - {id: 5033, name: Get Real Time, category: 5, kind: pure, function: RealTime, context: true, outputs: [{name: Value, type: float}]}
+  - {id: 5034, name: Get Fixed Delta Time, category: 5, kind: pure, function: FixedDeltaTime, outputs: [{name: Value, type: float}]}
+  - id: 5010
+    name: Start Timer
+    category: 5
+    kind: action
+    function: StartTimer
+    context: true
+    inputs: [{name: In, type: exec}, {name: Name, type: string, default: timer}, {name: Seconds, type: float, default: 1.0}, {name: Repeat, type: bool, default: false}, {name: Owner, type: entity, default: ''}, {name: Unscaled, type: bool, default: false}]
+    outputs: [{name: Out, type: exec}]
+  - {id: 5011, name: Stop Timer, category: 5, kind: action, function: StopTimer, context: true, inputs: [{name: In, type: exec}, {name: Name, type: string, default: timer}, {name: Owner, type: entity, default: ''}], outputs: [{name: Out, type: exec}]}
+  - {id: 5012, name: Pause Timer, category: 5, kind: action, function: PauseTimer, context: true, inputs: [{name: In, type: exec}, {name: Name, type: string, default: timer}, {name: Owner, type: entity, default: ''}], outputs: [{name: Out, type: exec}]}
+  - {id: 5013, name: Resume Timer, category: 5, kind: action, function: ResumeTimer, context: true, inputs: [{name: In, type: exec}, {name: Name, type: string, default: timer}, {name: Owner, type: entity, default: ''}], outputs: [{name: Out, type: exec}]}
+  - {id: 5014, name: Timer Exists, category: 5, kind: pure, function: TimerExists, context: true, inputs: [{name: Name, type: string, default: timer}, {name: Owner, type: entity, default: ''}], outputs: [{name: Value, type: bool}]}
+  - {id: 5015, name: Is Timer Paused, category: 5, kind: pure, function: IsTimerPaused, context: true, inputs: [{name: Name, type: string, default: timer}, {name: Owner, type: entity, default: ''}], outputs: [{name: Value, type: bool}]}
+  - {id: 5016, name: Get Timer Remaining, category: 5, kind: pure, function: TimerRemaining, context: true, inputs: [{name: Name, type: string, default: timer}, {name: Owner, type: entity, default: ''}], outputs: [{name: Value, type: float}]}
+  - {id: 8001, name: Entity Reference, category: 8, kind: pure, function: EntityReference, inputs: [{name: ID, type: string, default: player}], outputs: [{name: Entity, type: entity}]}
+  - {id: 8002, name: Get Self, category: 8, kind: pure, function: Self, context: true, outputs: [{name: Entity, type: entity}]}
+  - {id: 8003, name: Entity Exists, category: 8, kind: pure, function: EntityExists, context: true, inputs: [{name: Entity, type: entity, default: player}], outputs: [{name: Value, type: bool}]}
+  - {id: 8010, name: Spawn Entity, category: 8, kind: action_result, function: SpawnEntity, context: true, inputs: [{name: In, type: exec}, {name: Name, type: string, default: Entity}, {name: Mesh, type: string, default: ''}, {name: Position, type: vec3, default: [0, 0, 0]}], outputs: [{name: Out, type: exec}, {name: Entity, type: entity}]}
+  - {id: 8011, name: Clone Entity, category: 8, kind: action_result, function: CloneEntity, context: true, inputs: [{name: In, type: exec}, {name: Source, type: entity, default: player}, {name: Name, type: string, default: ''}], outputs: [{name: Out, type: exec}, {name: Entity, type: entity}]}
+  - {id: 8012, name: Destroy Entity, category: 8, kind: action, function: DestroyEntity, context: true, inputs: [{name: In, type: exec}, {name: Entity, type: entity, default: player}], outputs: [{name: Out, type: exec}]}
+  - {id: 8013, name: Get Entity By ID, category: 8, kind: pure, function: GetEntityById, context: true, inputs: [{name: ID, type: string, default: player}], outputs: [{name: Entity, type: entity}]}
+  - {id: 8014, name: Get All Entities, category: 8, kind: pure, function: GetAllEntities, context: true, outputs: [{name: Value, type: 'array<entity>'}]}
+  - {id: 8015, name: Get Entity Count, category: 8, kind: pure, function: EntityCount, context: true, outputs: [{name: Value, type: int}]}
+  - {id: 8016, name: Get Entity Name, category: 8, kind: pure, function: GetEntityName, context: true, inputs: [{name: Entity, type: entity, default: player}], outputs: [{name: Value, type: string}]}
+  - {id: 8017, name: Set Entity Name, category: 8, kind: action, function: SetEntityName, context: true, inputs: [{name: In, type: exec}, {name: Entity, type: entity, default: player}, {name: Name, type: string, default: Entity}], outputs: [{name: Out, type: exec}]}
+  - {id: 8018, name: Find Entities By Name, category: 8, kind: pure, function: FindEntitiesByName, context: true, inputs: [{name: Name, type: string, default: Entity}], outputs: [{name: Value, type: 'array<entity>'}]}
+  - {id: 8019, name: Get Parent, category: 8, kind: pure, function: GetParent, context: true, inputs: [{name: Entity, type: entity, default: player}], outputs: [{name: Entity, type: entity}]}
+  - {id: 8020, name: Set Parent, category: 8, kind: action, function: SetParent, context: true, inputs: [{name: In, type: exec}, {name: Child, type: entity, default: player}, {name: Parent, type: entity, default: ''}], outputs: [{name: Out, type: exec}]}
+  - {id: 8021, name: Get Children, category: 8, kind: pure, function: GetChildren, context: true, inputs: [{name: Parent, type: entity, default: ''}], outputs: [{name: Value, type: 'array<entity>'}]}
+  - {id: 8022, name: Is Entity Visible, category: 8, kind: pure, function: IsEntityVisible, context: true, inputs: [{name: Entity, type: entity, default: player}], outputs: [{name: Value, type: bool}]}
+  - {id: 8023, name: Set Entity Visibility, category: 8, kind: action, function: SetEntityVisibility, context: true, inputs: [{name: In, type: exec}, {name: Entity, type: entity, default: player}, {name: Visible, type: bool, default: true}], outputs: [{name: Out, type: exec}]}
+  - {id: 8024, name: Add Entity Tag, category: 8, kind: action, function: AddEntityTag, context: true, inputs: [{name: In, type: exec}, {name: Entity, type: entity, default: player}, {name: Tag, type: string, default: actor}], outputs: [{name: Out, type: exec}]}
+  - {id: 8025, name: Remove Entity Tag, category: 8, kind: action, function: RemoveEntityTag, context: true, inputs: [{name: In, type: exec}, {name: Entity, type: entity, default: player}, {name: Tag, type: string, default: actor}], outputs: [{name: Out, type: exec}]}
+  - {id: 8026, name: Has Entity Tag, category: 8, kind: pure, function: HasEntityTag, context: true, inputs: [{name: Entity, type: entity, default: player}, {name: Tag, type: string, default: actor}], outputs: [{name: Value, type: bool}]}
+  - {id: 8027, name: Find Entities By Tag, category: 8, kind: pure, function: FindEntitiesByTag, context: true, inputs: [{name: Tag, type: string, default: actor}], outputs: [{name: Value, type: 'array<entity>'}]}
+  - {id: 8028, name: Set Entity Active, category: 8, kind: action, function: SetEntityActive, context: true, inputs: [{name: In, type: exec}, {name: Entity, type: entity, default: player}, {name: Active, type: bool, default: true}], outputs: [{name: Out, type: exec}]}
+  - {id: 8029, name: Is Entity Active, category: 8, kind: pure, function: IsEntityActive, context: true, inputs: [{name: Entity, type: entity, default: player}], outputs: [{name: Value, type: bool}]}
+  - {id: 8030, name: Get Entity Active Self, category: 8, kind: pure, function: GetEntityActiveSelf, context: true, inputs: [{name: Entity, type: entity, default: player}], outputs: [{name: Value, type: bool}]}
+  - {id: 8031, name: Get Entity Layer, category: 8, kind: pure, function: GetEntityLayer, context: true, inputs: [{name: Entity, type: entity, default: player}], outputs: [{name: Value, type: int}]}
+  - {id: 8032, name: Set Entity Layer, category: 8, kind: action, function: SetEntityLayer, context: true, inputs: [{name: In, type: exec}, {name: Entity, type: entity, default: player}, {name: Layer, type: int, default: 0}], outputs: [{name: Out, type: exec}]}
+  - {id: 8033, name: Find Entities By Layer, category: 8, kind: pure, function: FindEntitiesByLayer, context: true, inputs: [{name: Layer, type: int, default: 0}, {name: ActiveOnly, type: bool, default: true}], outputs: [{name: Value, type: 'array<entity>'}]}
+  - {id: 8034, name: Instantiate Prefab, category: 8, kind: action_result, function: InstantiatePrefab, context: true, inputs: [{name: In, type: exec}, {name: Prefab, type: string, default: ''}, {name: Parent, type: entity, default: ''}, {name: Position, type: vec3, default: [0, 0, 0]}], outputs: [{name: Out, type: exec}, {name: Entity, type: entity}]}
+  - {id: 8035, name: Is Prefab Instance, category: 8, kind: pure, function: IsPrefabInstance, context: true, inputs: [{name: Entity, type: entity, default: player}], outputs: [{name: Value, type: bool}]}
+  - {id: 8036, name: Get Prefab Asset, category: 8, kind: pure, function: GetPrefabAsset, context: true, inputs: [{name: Entity, type: entity, default: player}], outputs: [{name: Value, type: string}]}
+  - {id: 8037, name: Get Prefab Root, category: 8, kind: pure, function: GetPrefabRoot, context: true, inputs: [{name: Entity, type: entity, default: player}], outputs: [{name: Entity, type: entity}]}
+  - {id: 8038, name: Get Prefab Entity, category: 8, kind: pure, function: GetPrefabEntity, context: true, inputs: [{name: Instance, type: entity, default: player}, {name: LocalID, type: string, default: root}], outputs: [{name: Entity, type: entity}]}
+  - {id: 8039, name: Reset Prefab Instance, category: 8, kind: action, function: ResetPrefabInstance, context: true, inputs: [{name: In, type: exec}, {name: Instance, type: entity, default: player}, {name: KeepPlacement, type: bool, default: true}], outputs: [{name: Out, type: exec}]}
+  - {id: 8040, name: Apply Prefab Overrides, category: 8, kind: action, function: ApplyPrefabOverrides, context: true, inputs: [{name: In, type: exec}, {name: Instance, type: entity, default: player}, {name: KeepPlacement, type: bool, default: true}], outputs: [{name: Out, type: exec}]}
+  - {id: 9010, name: Get World Position, category: 9, kind: pure, function: GetWorldPosition, context: true, inputs: [{name: Entity, type: entity, default: player}], outputs: [{name: Value, type: vec3}]}
+  - {id: 9001, name: Get Position, category: 9, kind: pure, function: GetPosition, context: true, inputs: [{name: Entity, type: entity, default: player}], outputs: [{name: Value, type: vec3}]}
+  - id: 9002
+    name: Set Position
+    category: 9
+    kind: action
+    function: SetPosition
+    context: true
+    inputs: [{name: In, type: exec}, {name: Entity, type: entity, default: player}, {name: Value, type: vec3, default: [0, 0, 0]}]
+    outputs: [{name: Out, type: exec}]
+  - id: 9003
+    name: Translate
+    category: 9
+    kind: action
+    function: Translate
+    context: true
+    inputs: [{name: In, type: exec}, {name: Entity, type: entity, default: player}, {name: Delta, type: vec3, default: [0.01, 0, 0]}]
+    outputs: [{name: Out, type: exec}]
+  - id: 9004
+    name: Rotate
+    category: 9
+    kind: action
+    function: Rotate
+    context: true
+    inputs: [{name: In, type: exec}, {name: Entity, type: entity, default: player}, {name: Degrees, type: vec3, default: [0, 1, 0]}]
+    outputs: [{name: Out, type: exec}]
+  - id: 9005
+    name: Set Scale
+    category: 9
+    kind: action
+    function: SetScale
+    context: true
+    inputs: [{name: In, type: exec}, {name: Entity, type: entity, default: player}, {name: Value, type: vec3, default: [1, 1, 1]}]
+    outputs: [{name: Out, type: exec}]
+  - {id: 9006, name: Get Rotation, category: 9, kind: pure, function: GetRotation, context: true, inputs: [{name: Entity, type: entity, default: player}], outputs: [{name: Value, type: vec3}]}
+  - id: 9007
+    name: Set Rotation
+    category: 9
+    kind: action
+    function: SetRotation
+    context: true
+    inputs: [{name: In, type: exec}, {name: Entity, type: entity, default: player}, {name: Value, type: vec3, default: [0, 0, 0]}]
+    outputs: [{name: Out, type: exec}]
+  - {id: 9008, name: Get Scale, category: 9, kind: pure, function: GetScale, context: true, inputs: [{name: Entity, type: entity, default: player}], outputs: [{name: Value, type: vec3}]}
+  - {id: 10001, name: Is Key Held, category: 10, kind: pure, function: KeyHeld, context: true, inputs: [{name: Key, type: string, default: D}], outputs: [{name: Value, type: bool}]}
+  - {id: 10002, name: Is Key Pressed, category: 10, kind: pure, function: KeyPressed, context: true, inputs: [{name: Key, type: string, default: Space}], outputs: [{name: Value, type: bool}]}
+  - {id: 10003, name: Is Key Released, category: 10, kind: pure, function: KeyReleased, context: true, inputs: [{name: Key, type: string, default: Space}], outputs: [{name: Value, type: bool}]}
+  - {id: 10004, name: Is Action Held, category: 10, kind: pure, function: ActionHeld, context: true, inputs: [{name: Action, type: string, default: jump}], outputs: [{name: Value, type: bool}]}
+  - {id: 10005, name: Is Action Pressed, category: 10, kind: pure, function: ActionPressed, context: true, inputs: [{name: Action, type: string, default: jump}], outputs: [{name: Value, type: bool}]}
+  - {id: 10006, name: Is Action Released, category: 10, kind: pure, function: ActionReleased, context: true, inputs: [{name: Action, type: string, default: jump}], outputs: [{name: Value, type: bool}]}
+  - {id: 10007, name: Get Input Axis, category: 10, kind: pure, function: InputAxis, context: true, inputs: [{name: Axis, type: string, default: horizontal}], outputs: [{name: Value, type: float}]}
+  - {id: 10008, name: On Key Pressed, category: 10, kind: event, event: input, inputs: [{name: Filter, type: string, default: Space}], outputs: [{name: Out, type: exec}, {name: Key, type: string}]}
+  - {id: 10009, name: On Key Released, category: 10, kind: event, event: input, inputs: [{name: Filter, type: string, default: Space}], outputs: [{name: Out, type: exec}, {name: Key, type: string}]}
+  - {id: 10010, name: On Mouse Button, category: 10, kind: event, event: input, inputs: [{name: Filter, type: string, default: MouseLeft}], outputs: [{name: Out, type: exec}, {name: Button, type: string}, {name: Down, type: bool}]}
+  - {id: 10011, name: On Action Pressed, category: 10, kind: event, event: input, inputs: [{name: Filter, type: string, default: ''}], outputs: [{name: Out, type: exec}, {name: Action, type: string}]}
+  - {id: 10012, name: On Action Released, category: 10, kind: event, event: input, inputs: [{name: Filter, type: string, default: ''}], outputs: [{name: Out, type: exec}, {name: Action, type: string}]}
+  - {id: 10013, name: Get Mouse Position, category: 10, kind: pure, function: MousePosition, context: true, outputs: [{name: Value, type: vec3}]}
+  - {id: 10014, name: Get Mouse Delta, category: 10, kind: pure, function: MouseDelta, context: true, outputs: [{name: Value, type: vec3}]}
+  - {id: 10015, name: Get Mouse Wheel, category: 10, kind: pure, function: MouseWheel, context: true, outputs: [{name: Value, type: vec3}]}
+  - {id: 10016, name: Set Cursor Visible, category: 10, kind: action, function: SetCursorVisible, context: true, inputs: [{name: In, type: exec}, {name: Visible, type: bool, default: true}], outputs: [{name: Out, type: exec}]}
+  - {id: 10017, name: Lock Cursor, category: 10, kind: action, function: LockCursor, context: true, inputs: [{name: In, type: exec}, {name: Locked, type: bool, default: true}], outputs: [{name: Out, type: exec}]}
+  - {id: 10018, name: Get Connected Controllers, category: 10, kind: pure, function: ConnectedControllers, context: true, outputs: [{name: Value, type: 'array<int>'}]}
+  - {id: 10019, name: Get Gamepad Axis, category: 10, kind: pure, function: GamepadAxis, context: true, inputs: [{name: Controller, type: int, default: 0}, {name: Axis, type: string, default: LeftX}, {name: Dead Zone, type: float, default: 0.15}], outputs: [{name: Value, type: float}]}
+  - {id: 10020, name: On Gamepad Button, category: 10, kind: event, event: input, inputs: [{name: Filter, type: string, default: ''}], outputs: [{name: Out, type: exec}, {name: Button, type: string}, {name: Down, type: bool}, {name: Controller, type: int}]}
+  - {id: 10021, name: Set Input Context Enabled, category: 10, kind: action, function: SetInputContextEnabled, context: true, inputs: [{name: In, type: exec}, {name: Context, type: string, default: gameplay}, {name: Enabled, type: bool, default: true}], outputs: [{name: Out, type: exec}]}
+  - {id: 10022, name: Is Input Context Enabled, category: 10, kind: pure, function: InputContextEnabled, context: true, inputs: [{name: Context, type: string, default: gameplay}], outputs: [{name: Value, type: bool}]}
+  - id: 27001
+    name: Print Log
+    category: 27
+    kind: action
+    function: Print
+    context: true
+    inputs: [{name: In, type: exec}, {name: Message, type: string, default: Hello from Node_Engine}]
+    outputs: [{name: Out, type: exec}]
+  - id: 27002
+    name: Assert
+    category: 27
+    kind: action
+    function: Assert
+    context: true
+    inputs: [{name: In, type: exec}, {name: Condition, type: bool, default: true}, {name: Message, type: string, default: Assertion failed}]
+    outputs: [{name: Out, type: exec}]
+  - {id: 27003, name: Begin Profile Sample, category: 27, kind: action, function: BeginProfileSample, context: true, inputs: [{name: In, type: exec}, {name: Name, type: string, default: frame}], outputs: [{name: Out, type: exec}]}
+  - {id: 27004, name: End Profile Sample, category: 27, kind: action_result, function: EndProfileSample, context: true, inputs: [{name: In, type: exec}, {name: Name, type: string, default: frame}], outputs: [{name: Out, type: exec}, {name: Seconds, type: float}]}
+  - {id: 27005, name: Get Profile Sample, category: 27, kind: pure, function: GetProfileSample, context: true, inputs: [{name: Name, type: string, default: frame}], outputs: [{name: Value, type: float}]}
+  - {id: 27006, name: 'C++ Code', category: 27, kind: action, function: EmbeddedCode, context: true, inputs: [{name: In, type: exec}], outputs: [{name: Out, type: exec}]}
+  - {id: 3090, name: Integer, category: 3, kind: pure, function: Integer, inputs: [{name: Value, type: int, default: 0}], outputs: [{name: Value, type: int}]}
+  - {id: 4030, name: Integer Add, category: 4, kind: pure, function: IntegerAdd, inputs: [{name: A, type: int, default: 0}, {name: B, type: int, default: 1}], outputs: [{name: Value, type: int}]}
+  - {id: 4031, name: Integer Subtract, category: 4, kind: pure, function: IntegerSubtract, inputs: [{name: A, type: int, default: 0}, {name: B, type: int, default: 1}], outputs: [{name: Value, type: int}]}
+  - {id: 4032, name: Integer Multiply, category: 4, kind: pure, function: IntegerMultiply, inputs: [{name: A, type: int, default: 0}, {name: B, type: int, default: 1}], outputs: [{name: Value, type: int}]}
+  - {id: 4033, name: Integer Less, category: 4, kind: pure, function: IntegerLess, inputs: [{name: A, type: int, default: 0}, {name: B, type: int, default: 1}], outputs: [{name: Value, type: bool}]}
+  - {id: 4034, name: Integer Equal, category: 4, kind: pure, function: IntegerEqual, inputs: [{name: A, type: int, default: 0}, {name: B, type: int, default: 0}], outputs: [{name: Value, type: bool}]}
+  - {id: 4035, name: Integer to Float, category: 3, kind: pure, function: IntegerToFloat, inputs: [{name: Value, type: int, default: 0}], outputs: [{name: Value, type: float}]}
+  - {id: 4036, name: Truncate to Integer, category: 3, kind: pure, function: TruncateToInteger, inputs: [{name: Value, type: float, default: 0}], outputs: [{name: Value, type: int}]}
+  - {id: 3050, name: Format Float, category: 3, kind: pure, function: FormatFloat, inputs: [{name: Value, type: float, default: 0}], outputs: [{name: Value, type: string}]}
+  - {id: 3051, name: Format Integer, category: 3, kind: pure, function: FormatInteger, inputs: [{name: Value, type: int, default: 0}], outputs: [{name: Value, type: string}]}
+  - {id: 3052, name: Concat Strings, category: 3, kind: pure, function: ConcatStrings, inputs: [{name: A, type: string, default: ''}, {name: B, type: string, default: ''}], outputs: [{name: Value, type: string}]}
+  - {id: 3053, name: String Equal, category: 3, kind: pure, function: StringEqual, inputs: [{name: A, type: string, default: ''}, {name: B, type: string, default: ''}], outputs: [{name: Value, type: bool}]}
+  - {id: 3054, name: Format Boolean, category: 3, kind: pure, function: FormatBoolean, inputs: [{name: Value, type: bool, default: false}], outputs: [{name: Value, type: string}]}
+  - {id: 3055, name: String Split, category: 3, kind: pure, function: StringSplit, inputs: [{name: Text, type: string, default: ''}, {name: Separator, type: string, default: ','}], outputs: [{name: Value, type: 'array<string>'}]}
+  - {id: 3056, name: String Replace, category: 3, kind: pure, function: StringReplace, inputs: [{name: Text, type: string, default: ''}, {name: Find, type: string, default: old}, {name: Replacement, type: string, default: new}], outputs: [{name: Value, type: string}]}
+  - {id: 3057, name: String Join, category: 3, kind: pure, function: StringJoin, inputs: [{name: Items, type: 'array<string>', default: []}, {name: Separator, type: string, default: ','}], outputs: [{name: Value, type: string}]}
+  - {id: 3058, name: Entity ID, category: 3, kind: pure, function: EntityId, inputs: [{name: Entity, type: entity, default: player}], outputs: [{name: Value, type: string}]}
+  - {id: 3059, name: Compare References, category: 3, kind: pure, function: ReferenceEqual, inputs: [{name: A, type: entity, default: player}, {name: B, type: entity, default: player}], outputs: [{name: Value, type: bool}]}
+
+  - {"id": 14001, "name": "Set Material", "category": 14, "kind": "action", "function": "SetMaterial", "context": true, "inputs": [{"name": "In", "type": "exec"}, {"name": "Entity", "type": "entity", "default": "player"}, {"name": "Material", "type": "string", "default": "material"}], "outputs": [{"name": "Out", "type": "exec"}]}
+  - {"id": 14002, "name": "Get Material", "category": 14, "kind": "pure", "function": "GetMaterial", "context": true, "inputs": [{"name": "Entity", "type": "entity", "default": "player"}], "outputs": [{"name": "Value", "type": "string"}]}
+  - {"id": 14003, "name": "Clear Material", "category": 14, "kind": "action", "function": "ClearMaterial", "context": true, "inputs": [{"name": "In", "type": "exec"}, {"name": "Entity", "type": "entity", "default": "player"}], "outputs": [{"name": "Out", "type": "exec"}]}
+  - {"id": 14004, "name": "Get Material Color", "category": 14, "kind": "pure", "function": "GetMaterialColor", "context": true, "inputs": [{"name": "Entity", "type": "entity", "default": "player"}], "outputs": [{"name": "Value", "type": "vec3"}]}
+  - {"id": 14005, "name": "Set Material Color", "category": 14, "kind": "action", "function": "SetMaterialColor", "context": true, "inputs": [{"name": "In", "type": "exec"}, {"name": "Entity", "type": "entity", "default": "player"}, {"name": "Color", "type": "vec3", "default": [1, 1, 1]}], "outputs": [{"name": "Out", "type": "exec"}]}
+  - {"id": 14006, "name": "Get Material Opacity", "category": 14, "kind": "pure", "function": "GetMaterialOpacity", "context": true, "inputs": [{"name": "Entity", "type": "entity", "default": "player"}], "outputs": [{"name": "Value", "type": "float"}]}
+  - {"id": 14007, "name": "Set Material Opacity", "category": 14, "kind": "action", "function": "SetMaterialOpacity", "context": true, "inputs": [{"name": "In", "type": "exec"}, {"name": "Entity", "type": "entity", "default": "player"}, {"name": "Opacity", "type": "float", "default": 1.0}], "outputs": [{"name": "Out", "type": "exec"}]}
+  - {"id": 14008, "name": "Reset Material Parameters", "category": 14, "kind": "action", "function": "ResetMaterialParameters", "context": true, "inputs": [{"name": "In", "type": "exec"}, {"name": "Entity", "type": "entity", "default": "player"}], "outputs": [{"name": "Out", "type": "exec"}]}
+  - {"id": 14009, "name": "Get Material Alpha Mode", "category": 14, "kind": "pure", "function": "GetMaterialAlphaMode", "context": true, "inputs": [{"name": "Entity", "type": "entity", "default": "player"}], "outputs": [{"name": "Value", "type": "string"}]}
+  - {"id": 14010, "name": "Set Material Alpha Mode", "category": 14, "kind": "action", "function": "SetMaterialAlphaMode", "context": true, "inputs": [{"name": "In", "type": "exec"}, {"name": "Entity", "type": "entity", "default": "player"}, {"name": "Mode", "type": "string", "default": "blend"}], "outputs": [{"name": "Out", "type": "exec"}]}
+  - {"id": 14011, "name": "Get Material Alpha Cutoff", "category": 14, "kind": "pure", "function": "GetMaterialAlphaCutoff", "context": true, "inputs": [{"name": "Entity", "type": "entity", "default": "player"}], "outputs": [{"name": "Value", "type": "float"}]}
+  - {"id": 14012, "name": "Set Material Alpha Cutoff", "category": 14, "kind": "action", "function": "SetMaterialAlphaCutoff", "context": true, "inputs": [{"name": "In", "type": "exec"}, {"name": "Entity", "type": "entity", "default": "player"}, {"name": "Cutoff", "type": "float", "default": 0.5}], "outputs": [{"name": "Out", "type": "exec"}]}
+  - {"id": 14013, "name": "Is Material Unlit", "category": 14, "kind": "pure", "function": "IsMaterialUnlit", "context": true, "inputs": [{"name": "Entity", "type": "entity", "default": "player"}], "outputs": [{"name": "Value", "type": "bool"}]}
+  - {"id": 14014, "name": "Set Material Unlit", "category": 14, "kind": "action", "function": "SetMaterialUnlit", "context": true, "inputs": [{"name": "In", "type": "exec"}, {"name": "Entity", "type": "entity", "default": "player"}, {"name": "Unlit", "type": "bool", "default": true}], "outputs": [{"name": "Out", "type": "exec"}]}
+  - {"id": 14015, "name": "Material Exists", "category": 14, "kind": "pure", "function": "MaterialExists", "context": true, "inputs": [{"name": "Material", "type": "string", "default": "material"}], "outputs": [{"name": "Value", "type": "bool"}]}
+  - {"id": 14101, workflow: 2d, "name": "Set Sprite", "category": 14, "kind": "action", "function": "SetSprite", "context": true, "inputs": [{"name": "In", "type": "exec"}, {"name": "Entity", "type": "entity", "default": "player"}, {"name": "Sprite", "type": "string", "default": "sprite"}], "outputs": [{"name": "Out", "type": "exec"}]}
+  - {"id": 14102, workflow: 2d, "name": "Get Sprite", "category": 14, "kind": "pure", "function": "GetSprite", "context": true, "inputs": [{"name": "Entity", "type": "entity", "default": "player"}], "outputs": [{"name": "Value", "type": "string"}]}
+  - {"id": 14103, workflow: 2d, "name": "Clear Sprite", "category": 14, "kind": "action", "function": "ClearSprite", "context": true, "inputs": [{"name": "In", "type": "exec"}, {"name": "Entity", "type": "entity", "default": "player"}], "outputs": [{"name": "Out", "type": "exec"}]}
+  - {"id": 14104, workflow: 2d, "name": "Set Sprite Frame", "category": 14, "kind": "action", "function": "SetSpriteFrame", "context": true, "inputs": [{"name": "In", "type": "exec"}, {"name": "Entity", "type": "entity", "default": "player"}, {"name": "Frame", "type": "int", "default": 0}], "outputs": [{"name": "Out", "type": "exec"}]}
+  - {"id": 14105, workflow: 2d, "name": "Get Sprite Frame", "category": 14, "kind": "pure", "function": "GetSpriteFrame", "context": true, "inputs": [{"name": "Entity", "type": "entity", "default": "player"}], "outputs": [{"name": "Value", "type": "int"}]}
+  - {"id": 14106, workflow: 2d, "name": "Get Sprite Frame Count", "category": 14, "kind": "pure", "function": "GetSpriteFrameCount", "context": true, "inputs": [{"name": "Entity", "type": "entity", "default": "player"}], "outputs": [{"name": "Value", "type": "int"}]}
+  - {"id": 14107, workflow: 2d, "name": "Set Sprite Flip", "category": 14, "kind": "action", "function": "SetSpriteFlip", "context": true, "inputs": [{"name": "In", "type": "exec"}, {"name": "Entity", "type": "entity", "default": "player"}, {"name": "Flip X", "type": "bool", "default": false}, {"name": "Flip Y", "type": "bool", "default": false}], "outputs": [{"name": "Out", "type": "exec"}]}
+  - {"id": 14108, workflow: 2d, "name": "Get Sprite Flip X", "category": 14, "kind": "pure", "function": "GetSpriteFlipX", "context": true, "inputs": [{"name": "Entity", "type": "entity", "default": "player"}], "outputs": [{"name": "Value", "type": "bool"}]}
+  - {"id": 14109, workflow: 2d, "name": "Get Sprite Flip Y", "category": 14, "kind": "pure", "function": "GetSpriteFlipY", "context": true, "inputs": [{"name": "Entity", "type": "entity", "default": "player"}], "outputs": [{"name": "Value", "type": "bool"}]}
+  - {"id": 14110, workflow: 2d, "name": "Sprite Exists", "category": 14, "kind": "pure", "function": "SpriteExists", "context": true, "inputs": [{"name": "Sprite", "type": "string", "default": "sprite"}], "outputs": [{"name": "Value", "type": "bool"}]}
+  - {"id": 14111, workflow: 2d, "name": "Set Sprite State", "category": 14, "kind": "action", "function": "SetSpriteState", "context": true, "inputs": [{"name": "In", "type": "exec"}, {"name": "Entity", "type": "entity", "default": "player"}, {"name": "State", "type": "string", "default": "idle"}], "outputs": [{"name": "Out", "type": "exec"}]}
+  - {"id": 14112, workflow: 2d, "name": "Get Sprite State", "category": 14, "kind": "pure", "function": "GetSpriteState", "context": true, "inputs": [{"name": "Entity", "type": "entity", "default": "player"}], "outputs": [{"name": "Value", "type": "string"}]}
+  - {id: 15001, name: Create Camera, category: 15, kind: action_result, function: CreateCamera, context: true, inputs: [{name: In, type: exec}, {name: Name, type: string, default: Camera}, {name: Position, type: vec3, default: [0, 2, 6]}], outputs: [{name: Out, type: exec}, {name: Camera, type: entity}]}
+  - {id: 15002, name: Has Camera, category: 15, kind: pure, function: HasCamera, context: true, inputs: [{name: Entity, type: entity, default: camera}], outputs: [{name: Value, type: bool}]}
+  - {id: 15003, name: Set Active Camera, category: 15, kind: action, function: SetActiveCamera, context: true, inputs: [{name: In, type: exec}, {name: Camera, type: entity, default: camera}], outputs: [{name: Out, type: exec}]}
+  - {id: 15004, name: Get Active Camera, category: 15, kind: pure, function: GetActiveCamera, context: true, outputs: [{name: Value, type: entity}]}
+  - {id: 15005, name: Set Camera Perspective, category: 15, kind: action, function: SetCameraPerspective, context: true, inputs: [{name: In, type: exec}, {name: Camera, type: entity, default: camera}, {name: FOV, type: float, default: 60}, {name: Near, type: float, default: 0.1}, {name: Far, type: float, default: 1000}], outputs: [{name: Out, type: exec}]}
+  - {id: 15006, name: Set Camera Orthographic, category: 15, kind: action, function: SetCameraOrthographic, context: true, inputs: [{name: In, type: exec}, {name: Camera, type: entity, default: camera}, {name: Height, type: float, default: 10}, {name: Near, type: float, default: 0.1}, {name: Far, type: float, default: 1000}], outputs: [{name: Out, type: exec}]}
+  - {id: 15007, name: Get Camera FOV, category: 15, kind: pure, function: GetCameraFOV, context: true, inputs: [{name: Camera, type: entity, default: camera}], outputs: [{name: Value, type: float}]}
+  - {id: 15008, name: Set Camera FOV, category: 15, kind: action, function: SetCameraFOV, context: true, inputs: [{name: In, type: exec}, {name: Camera, type: entity, default: camera}, {name: Value, type: float, default: 60}], outputs: [{name: Out, type: exec}]}
+  - {id: 15009, name: Get Camera Orthographic Size, category: 15, kind: pure, function: GetCameraSize, context: true, inputs: [{name: Camera, type: entity, default: camera}], outputs: [{name: Value, type: float}]}
+  - {id: 15010, name: Set Camera Orthographic Size, category: 15, kind: action, function: SetCameraSize, context: true, inputs: [{name: In, type: exec}, {name: Camera, type: entity, default: camera}, {name: Value, type: float, default: 10}], outputs: [{name: Out, type: exec}]}
+  - {id: 15011, name: Set Camera Clipping Planes, category: 15, kind: action, function: SetCameraClip, context: true, inputs: [{name: In, type: exec}, {name: Camera, type: entity, default: camera}, {name: Near, type: float, default: 0.1}, {name: Far, type: float, default: 1000}], outputs: [{name: Out, type: exec}]}
+  - {id: 15012, name: Camera Look At, category: 15, kind: action, function: CameraLookAt, context: true, inputs: [{name: In, type: exec}, {name: Camera, type: entity, default: camera}, {name: Target, type: vec3, default: [0, 0, 0]}, {name: Up, type: vec3, default: [0, 1, 0]}], outputs: [{name: Out, type: exec}]}
+  - {id: 15013, name: Camera Follow, category: 15, kind: action, function: CameraFollow, context: true, inputs: [{name: In, type: exec}, {name: Camera, type: entity, default: camera}, {name: Target, type: entity, default: player}, {name: Offset, type: vec3, default: [0, 2, 6]}, {name: Rate, type: float, default: 0}], outputs: [{name: Out, type: exec}]}
+  - {id: 15014, name: World To Screen, category: 15, kind: pure, function: WorldToScreen, context: true, inputs: [{name: Camera, type: entity, default: camera}, {name: World, type: vec3, default: [0, 0, 0]}, {name: Viewport, type: vec2, default: [960, 640]}], outputs: [{name: Value, type: vec2}]}
+  - {id: 15015, name: Screen To World, category: 15, kind: pure, function: ScreenToWorld, context: true, inputs: [{name: Camera, type: entity, default: camera}, {name: Screen, type: vec2, default: [480, 320]}, {name: Depth, type: float, default: 0.5}, {name: Viewport, type: vec2, default: [960, 640]}], outputs: [{name: Value, type: vec3}]}
+  - {id: 15016, name: Evaluate Cinematic Camera, category: 15, kind: pure, function: EvaluateCinematicCamera, context: true, inputs: [{name: Time, type: float, default: 0.0}], outputs: [{name: Value, type: vec3}]}
+  - {id: 19001, name: Find Navigation Path, category: 19, kind: pure, function: FindNavigationPath, context: true, inputs: [{name: Start, type: vec2, default: [0, 0]}, {name: Goal, type: vec2, default: [1, 0]}], outputs: [{name: Path, type: 'array<vec2>'}]}
+  - {id: 19002, name: Set AI State, category: 19, kind: action, function: SetAIState, context: true, inputs: [{name: In, type: exec}, {name: Entity, type: entity, default: player}, {name: State, type: string, default: idle}], outputs: [{name: Out, type: exec}]}
+  - {id: 19003, name: Get AI State, category: 19, kind: pure, function: GetAIState, context: true, inputs: [{name: Entity, type: entity, default: player}], outputs: [{name: Value, type: string}]}
+  - {id: 19004, name: Is AI State, category: 19, kind: pure, function: IsAIState, context: true, inputs: [{name: Entity, type: entity, default: player}, {name: State, type: string, default: idle}], outputs: [{name: Value, type: bool}]}
+  - {id: 19005, name: Update World Streaming, category: 19, kind: action_result, function: UpdateWorldStreaming, context: true, inputs: [{name: In, type: exec}, {name: Center, type: vec2, default: [0, 0]}], outputs: [{name: Out, type: exec}, {name: Loaded, type: 'array<vec2>'}]}
+  - {id: 20001, name: Apply Damage, category: 20, kind: action_result, function: ApplyDamage, context: true, inputs: [{name: In, type: exec}, {name: Target, type: entity, default: enemy}, {name: Amount, type: float, default: 10.0}], outputs: [{name: Out, type: exec}, {name: Applied, type: float}, {name: Alive, type: bool}]}
+  - {id: 20002, name: Get Health, category: 20, kind: pure, function: GetHealth, context: true, inputs: [{name: Target, type: entity, default: enemy}], outputs: [{name: Value, type: float}]}
+  - {id: 20003, name: Is Alive, category: 20, kind: pure, function: IsAlive, context: true, inputs: [{name: Target, type: entity, default: enemy}], outputs: [{name: Value, type: bool}]}
+  - {id: 21001, name: Add Inventory Item, category: 21, kind: action_result, function: InventoryAddItem, context: true, inputs: [{name: In, type: exec}, {name: Entity, type: entity, default: player}, {name: Item, type: string, default: item}, {name: Count, type: int, default: 1}], outputs: [{name: Out, type: exec}, {name: Accepted, type: bool}]}
+  - {id: 21002, name: Remove Inventory Item, category: 21, kind: action_result, function: InventoryRemoveItem, context: true, inputs: [{name: In, type: exec}, {name: Entity, type: entity, default: player}, {name: Item, type: string, default: item}, {name: Count, type: int, default: 1}], outputs: [{name: Out, type: exec}, {name: Removed, type: bool}]}
+  - {id: 21003, name: Get Inventory Count, category: 21, kind: pure, function: InventoryCount, context: true, inputs: [{name: Entity, type: entity, default: player}, {name: Item, type: string, default: item}], outputs: [{name: Value, type: int}]}
+  - {id: 21004, name: Has Inventory Item, category: 21, kind: pure, function: InventoryHasItem, context: true, inputs: [{name: Entity, type: entity, default: player}, {name: Item, type: string, default: item}], outputs: [{name: Value, type: bool}]}
+  - {id: 21005, name: Start Quest, category: 21, kind: action_result, function: StartQuest, context: true, inputs: [{name: In, type: exec}, {name: Quest, type: string, default: quest}], outputs: [{name: Out, type: exec}, {name: Accepted, type: bool}]}
+  - {id: 21006, name: Advance Quest, category: 21, kind: action_result, function: AdvanceQuest, context: true, inputs: [{name: In, type: exec}, {name: Quest, type: string, default: quest}, {name: Objective, type: string, default: objective}, {name: Amount, type: int, default: 1}], outputs: [{name: Out, type: exec}, {name: Completed, type: bool}]}
+  - {id: 21007, name: Is Quest Active, category: 21, kind: pure, function: IsQuestActive, context: true, inputs: [{name: Quest, type: string, default: quest}], outputs: [{name: Value, type: bool}]}
+  - {id: 21008, name: Is Quest Complete, category: 21, kind: pure, function: IsQuestComplete, context: true, inputs: [{name: Quest, type: string, default: quest}], outputs: [{name: Value, type: bool}]}
+  - {id: 22001, name: Set Replication Authority, category: 22, kind: action, function: SetReplicationAuthority, context: true, inputs: [{name: In, type: exec}, {name: Authority, type: string, default: server}], outputs: [{name: Out, type: exec}]}
+  - {id: 22002, name: Get Replication Authority, category: 22, kind: pure, function: GetReplicationAuthority, context: true, outputs: [{name: Value, type: string}]}
+  - {id: 22003, name: Publish Replicated Value, category: 22, kind: action_result, function: PublishReplicatedValue, context: true, inputs: [{name: In, type: exec}, {name: Key, type: string, default: key}, {name: Value, type: string, default: value}], outputs: [{name: Out, type: exec}, {name: Accepted, type: bool}]}
+  - {id: 22004, name: Get Replicated Value, category: 22, kind: pure, function: GetReplicatedValue, context: true, inputs: [{name: Key, type: string, default: key}], outputs: [{name: Value, type: string}]}
+  - {id: 22005, name: Get Replication Revision, category: 22, kind: pure, function: GetReplicationRevision, context: true, outputs: [{name: Value, type: int}]}
+
+  - {"id": 17001, "name": "Play Sound", "category": 17, "kind": "action", "function": "PlaySound", "context": true, "inputs": [{"name": "In", "type": "exec"}, {"name": "Sound", "type": "string", "default": "sound"}, {"name": "Voice", "type": "string", "default": "sound"}, {"name": "Loop", "type": "bool", "default": false}, {"name": "Volume", "type": "float", "default": 1.0}], "outputs": [{"name": "Out", "type": "exec"}]}
+  - {"id": 17002, "name": "Stop Sound", "category": 17, "kind": "action", "function": "StopSound", "context": true, "inputs": [{"name": "In", "type": "exec"}, {"name": "Voice", "type": "string", "default": "sound"}], "outputs": [{"name": "Out", "type": "exec"}]}
+  - {"id": 17003, "name": "Pause Sound", "category": 17, "kind": "action", "function": "PauseSound", "context": true, "inputs": [{"name": "In", "type": "exec"}, {"name": "Voice", "type": "string", "default": "sound"}], "outputs": [{"name": "Out", "type": "exec"}]}
+  - {"id": 17004, "name": "Resume Sound", "category": 17, "kind": "action", "function": "ResumeSound", "context": true, "inputs": [{"name": "In", "type": "exec"}, {"name": "Voice", "type": "string", "default": "sound"}], "outputs": [{"name": "Out", "type": "exec"}]}
+  - {"id": 17005, "name": "Is Sound Playing", "category": 17, "kind": "pure", "function": "IsSoundPlaying", "context": true, "inputs": [{"name": "Voice", "type": "string", "default": "sound"}], "outputs": [{"name": "Value", "type": "bool"}]}
+  - {"id": 17006, "name": "Is Sound Paused", "category": 17, "kind": "pure", "function": "IsSoundPaused", "context": true, "inputs": [{"name": "Voice", "type": "string", "default": "sound"}], "outputs": [{"name": "Value", "type": "bool"}]}
+  - {"id": 17007, "name": "Set Sound Volume", "category": 17, "kind": "action", "function": "SetSoundVolume", "context": true, "inputs": [{"name": "In", "type": "exec"}, {"name": "Voice", "type": "string", "default": "sound"}, {"name": "Volume", "type": "float", "default": 1.0}], "outputs": [{"name": "Out", "type": "exec"}]}
+  - {"id": 17008, "name": "Get Sound Volume", "category": 17, "kind": "pure", "function": "GetSoundVolume", "context": true, "inputs": [{"name": "Voice", "type": "string", "default": "sound"}], "outputs": [{"name": "Value", "type": "float"}]}
+  - {"id": 17009, "name": "Get Sound Position", "category": 17, "kind": "pure", "function": "GetSoundPosition", "context": true, "inputs": [{"name": "Voice", "type": "string", "default": "sound"}], "outputs": [{"name": "Value", "type": "float"}]}
+  - {"id": 17010, "name": "Get Sound Duration", "category": 17, "kind": "pure", "function": "GetSoundDuration", "context": true, "inputs": [{"name": "Sound", "type": "string", "default": "sound"}], "outputs": [{"name": "Value", "type": "float"}]}
+  - {"id": 17011, "name": "Sound Exists", "category": 17, "kind": "pure", "function": "SoundExists", "context": true, "inputs": [{"name": "Sound", "type": "string", "default": "sound"}], "outputs": [{"name": "Value", "type": "bool"}]}
+  - {"id": 17012, "name": "Stop All Sounds", "category": 17, "kind": "action", "function": "StopAllSounds", "context": true, "inputs": [{"name": "In", "type": "exec"}], "outputs": [{"name": "Out", "type": "exec"}]}
+  - {"id": 17013, "name": "Set Master Volume", "category": 17, "kind": "action", "function": "SetMasterVolume", "context": true, "inputs": [{"name": "In", "type": "exec"}, {"name": "Volume", "type": "float", "default": 1.0}], "outputs": [{"name": "Out", "type": "exec"}]}
+  - {"id": 17014, "name": "Get Master Volume", "category": 17, "kind": "pure", "function": "GetMasterVolume", "context": true, "inputs": [], "outputs": [{"name": "Value", "type": "float"}]}
+
+  - {"id": 18001, "name": "Create Widget", "category": 18, "kind": "action", "function": "CreateWidget", "context": true, "inputs": [{"name": "In", "type": "exec"}, {"name": "Template", "type": "string", "default": "hud"}, {"name": "Widget", "type": "string", "default": "hud"}], "outputs": [{"name": "Out", "type": "exec"}]}
+  - {"id": 18002, "name": "Destroy Widget", "category": 18, "kind": "action", "function": "DestroyWidget", "context": true, "inputs": [{"name": "In", "type": "exec"}, {"name": "Widget", "type": "string", "default": "hud"}], "outputs": [{"name": "Out", "type": "exec"}]}
+  - {"id": 18003, "name": "Widget Exists", "category": 18, "kind": "pure", "function": "WidgetExists", "context": true, "inputs": [{"name": "Widget", "type": "string", "default": "hud"}], "outputs": [{"name": "Value", "type": "bool"}]}
+  - {"id": 18004, "name": "Show Widget", "category": 18, "kind": "action", "function": "ShowWidget", "context": true, "inputs": [{"name": "In", "type": "exec"}, {"name": "Widget", "type": "string", "default": "hud"}, {"name": "Visible", "type": "bool", "default": true}], "outputs": [{"name": "Out", "type": "exec"}]}
+  - {"id": 18005, "name": "Set Widget Text", "category": 18, "kind": "action", "function": "SetWidgetText", "context": true, "inputs": [{"name": "In", "type": "exec"}, {"name": "Widget", "type": "string", "default": "hud"}, {"name": "Element", "type": "string", "default": "score"}, {"name": "Text", "type": "string", "default": "Hello"}], "outputs": [{"name": "Out", "type": "exec"}]}
+  - {"id": 18006, "name": "Get Widget Text", "category": 18, "kind": "pure", "function": "GetWidgetText", "context": true, "inputs": [{"name": "Widget", "type": "string", "default": "hud"}, {"name": "Element", "type": "string", "default": "score"}], "outputs": [{"name": "Value", "type": "string"}]}
+  - {"id": 18007, "name": "Set Widget Value", "category": 18, "kind": "action", "function": "SetWidgetValue", "context": true, "inputs": [{"name": "In", "type": "exec"}, {"name": "Widget", "type": "string", "default": "hud"}, {"name": "Element", "type": "string", "default": "progress"}, {"name": "Value", "type": "float", "default": 0.5}], "outputs": [{"name": "Out", "type": "exec"}]}
+  - {"id": 18008, "name": "Get Widget Value", "category": 18, "kind": "pure", "function": "GetWidgetValue", "context": true, "inputs": [{"name": "Widget", "type": "string", "default": "hud"}, {"name": "Element", "type": "string", "default": "progress"}], "outputs": [{"name": "Value", "type": "float"}]}
+  - {"id": 18009, "name": "Set Widget Checked", "category": 18, "kind": "action", "function": "SetWidgetChecked", "context": true, "inputs": [{"name": "In", "type": "exec"}, {"name": "Widget", "type": "string", "default": "hud"}, {"name": "Element", "type": "string", "default": "enabled"}, {"name": "Checked", "type": "bool", "default": true}], "outputs": [{"name": "Out", "type": "exec"}]}
+  - {"id": 18010, "name": "Get Widget Checked", "category": 18, "kind": "pure", "function": "GetWidgetChecked", "context": true, "inputs": [{"name": "Widget", "type": "string", "default": "hud"}, {"name": "Element", "type": "string", "default": "enabled"}], "outputs": [{"name": "Value", "type": "bool"}]}
+  - {"id": 18011, "name": "Set Widget Enabled", "category": 18, "kind": "action", "function": "SetWidgetEnabled", "context": true, "inputs": [{"name": "In", "type": "exec"}, {"name": "Widget", "type": "string", "default": "hud"}, {"name": "Element", "type": "string", "default": "add"}, {"name": "Enabled", "type": "bool", "default": true}], "outputs": [{"name": "Out", "type": "exec"}]}
+  - {"id": 18012, "name": "Get Widget Enabled", "category": 18, "kind": "pure", "function": "GetWidgetEnabled", "context": true, "inputs": [{"name": "Widget", "type": "string", "default": "hud"}, {"name": "Element", "type": "string", "default": "add"}], "outputs": [{"name": "Value", "type": "bool"}]}
+  - {"id": 18013, "name": "Focus Widget Element", "category": 18, "kind": "action", "function": "SetWidgetFocus", "context": true, "inputs": [{"name": "In", "type": "exec"}, {"name": "Widget", "type": "string", "default": "hud"}, {"name": "Element", "type": "string", "default": "name"}], "outputs": [{"name": "Out", "type": "exec"}]}
+  - {"id": 18014, "name": "Set Widget Style", "category": 18, "kind": "action", "function": "SetWidgetStyle", "context": true, "inputs": [{"name": "In", "type": "exec"}, {"name": "Widget", "type": "string", "default": "hud"}, {"name": "Element", "type": "string", "default": "score"}, {"name": "Property", "type": "string", "default": "color"}, {"name": "Value", "type": "string", "default": "#ffffff"}], "outputs": [{"name": "Out", "type": "exec"}]}
+  - {"id": 18015, "name": "Set Widget Position", "category": 18, "kind": "action", "function": "SetWidgetPosition", "context": true, "inputs": [{"name": "In", "type": "exec"}, {"name": "Widget", "type": "string", "default": "hud"}, {"name": "Element", "type": "string", "default": "panel"}, {"name": "X", "type": "float", "default": 24.0}, {"name": "Y", "type": "float", "default": 24.0}], "outputs": [{"name": "Out", "type": "exec"}]}
+  - {"id": 18016, "name": "Set Widget Size", "category": 18, "kind": "action", "function": "SetWidgetSize", "context": true, "inputs": [{"name": "In", "type": "exec"}, {"name": "Widget", "type": "string", "default": "hud"}, {"name": "Element", "type": "string", "default": "panel"}, {"name": "Width", "type": "float", "default": 300.0}, {"name": "Height", "type": "float", "default": 360.0}], "outputs": [{"name": "Out", "type": "exec"}]}
+  - {"id": 18101, "name": "On Button Click", "category": 18, "kind": "event", "event": "ui_click", "inputs": [{"name": "Widget Filter", "type": "string", "default": ""}, {"name": "Element Filter", "type": "string", "default": ""}], "outputs": [{"name": "Out", "type": "exec"}, {"name": "Widget", "type": "string"}, {"name": "Element", "type": "string"}, {"name": "Value", "type": "string"}, {"name": "Checked", "type": "bool"}]}
+  - {"id": 18102, "name": "On UI Value Changed", "category": 18, "kind": "event", "event": "ui_change", "inputs": [{"name": "Widget Filter", "type": "string", "default": ""}, {"name": "Element Filter", "type": "string", "default": ""}], "outputs": [{"name": "Out", "type": "exec"}, {"name": "Widget", "type": "string"}, {"name": "Element", "type": "string"}, {"name": "Value", "type": "string"}, {"name": "Checked", "type": "bool"}]}
+  - {"id": 18103, "name": "On UI Text Submitted", "category": 18, "kind": "event", "event": "ui_submit", "inputs": [{"name": "Widget Filter", "type": "string", "default": ""}, {"name": "Element Filter", "type": "string", "default": ""}], "outputs": [{"name": "Out", "type": "exec"}, {"name": "Widget", "type": "string"}, {"name": "Element", "type": "string"}, {"name": "Value", "type": "string"}, {"name": "Checked", "type": "bool"}]}
+
+  - {"id": 23001, "name": "Open Save Storage", "category": 23, "kind": "action_result", "function": "OpenSaveStorage", "context": true, "inputs": [{"name": "In", "type": "exec"}, {"name": "Game ID", "type": "string", "default": ""}], "outputs": [{"name": "Out", "type": "exec"}, {"name": "Value", "type": "bool"}]}
+  - {"id": 23002, "name": "Create Save Slot", "category": 23, "kind": "action_result", "function": "CreateSaveSlot", "context": true, "inputs": [{"name": "In", "type": "exec"}, {"name": "Slot", "type": "string", "default": "slot-1"}], "outputs": [{"name": "Out", "type": "exec"}, {"name": "Value", "type": "bool"}]}
+  - {"id": 23003, "name": "Delete Save Slot", "category": 23, "kind": "action_result", "function": "DeleteSaveSlot", "context": true, "inputs": [{"name": "In", "type": "exec"}, {"name": "Slot", "type": "string", "default": "slot-1"}], "outputs": [{"name": "Out", "type": "exec"}, {"name": "Value", "type": "bool"}]}
+  - {"id": 23004, "name": "Save Slot Exists", "category": 23, "kind": "action_result", "function": "SaveSlotExists", "context": true, "inputs": [{"name": "In", "type": "exec"}, {"name": "Slot", "type": "string", "default": "slot-1"}], "outputs": [{"name": "Out", "type": "exec"}, {"name": "Value", "type": "bool"}]}
+  - {"id": 23005, "name": "List Save Slots", "category": 23, "kind": "action_result", "function": "ListSaveSlots", "context": true, "inputs": [{"name": "In", "type": "exec"}], "outputs": [{"name": "Out", "type": "exec"}, {"name": "Value", "type": "array<string>"}]}
+  - {"id": 23006, "name": "Save Variable", "category": 23, "kind": "action_result", "function": "SaveVariable", "context": true, "inputs": [{"name": "In", "type": "exec"}, {"name": "Slot", "type": "string", "default": "slot-1"}, {"name": "Name", "type": "string", "default": "score"}], "outputs": [{"name": "Out", "type": "exec"}, {"name": "Value", "type": "bool"}]}
+  - {"id": 23007, "name": "Load Variable", "category": 23, "kind": "action_result", "function": "LoadVariable", "context": true, "inputs": [{"name": "In", "type": "exec"}, {"name": "Slot", "type": "string", "default": "slot-1"}, {"name": "Name", "type": "string", "default": "score"}], "outputs": [{"name": "Out", "type": "exec"}, {"name": "Value", "type": "bool"}]}
+  - {"id": 23008, "name": "Save Variables", "category": 23, "kind": "action_result", "function": "SaveVariables", "context": true, "inputs": [{"name": "In", "type": "exec"}, {"name": "Slot", "type": "string", "default": "slot-1"}, {"name": "Names", "type": "array<string>", "default": ["score"]}], "outputs": [{"name": "Out", "type": "exec"}, {"name": "Value", "type": "bool"}]}
+  - {"id": 23009, "name": "Load Variables", "category": 23, "kind": "action_result", "function": "LoadVariables", "context": true, "inputs": [{"name": "In", "type": "exec"}, {"name": "Slot", "type": "string", "default": "slot-1"}, {"name": "Names", "type": "array<string>", "default": ["score"]}], "outputs": [{"name": "Out", "type": "exec"}, {"name": "Value", "type": "bool"}]}
+  - {"id": 23010, "name": "Save JSON", "category": 23, "kind": "action_result", "function": "SaveJson", "context": true, "inputs": [{"name": "In", "type": "exec"}, {"name": "Slot", "type": "string", "default": "slot-1"}, {"name": "Key", "type": "string", "default": "settings"}, {"name": "JSON", "type": "string", "default": "{}"}], "outputs": [{"name": "Out", "type": "exec"}, {"name": "Value", "type": "bool"}]}
+  - {"id": 23011, "name": "Load JSON", "category": 23, "kind": "action_result", "function": "LoadJson", "context": true, "inputs": [{"name": "In", "type": "exec"}, {"name": "Slot", "type": "string", "default": "slot-1"}, {"name": "Key", "type": "string", "default": "settings"}], "outputs": [{"name": "Out", "type": "exec"}, {"name": "Value", "type": "string"}]}
+  - {"id": 23012, "name": "Get Save Version", "category": 23, "kind": "action_result", "function": "GetSaveVersion", "context": true, "inputs": [{"name": "In", "type": "exec"}, {"name": "Slot", "type": "string", "default": "slot-1"}], "outputs": [{"name": "Out", "type": "exec"}, {"name": "Value", "type": "int"}]}
+  - {"id": 23013, "name": "Validate Save Data", "category": 23, "kind": "action_result", "function": "ValidateSaveData", "context": true, "inputs": [{"name": "In", "type": "exec"}, {"name": "Slot", "type": "string", "default": "slot-1"}], "outputs": [{"name": "Out", "type": "exec"}, {"name": "Value", "type": "bool"}]}
+  - {"id": 23014, "name": "Save Operation Succeeded", "category": 23, "kind": "pure", "function": "SaveOperationSucceeded", "context": true, "inputs": [], "outputs": [{"name": "Value", "type": "bool"}]}
+  - {"id": 23015, "name": "Get Save Error", "category": 23, "kind": "pure", "function": "GetSaveError", "context": true, "inputs": [], "outputs": [{"name": "Value", "type": "string"}]}
+  - {"id": 23016, "name": "Save Game", "category": 23, "kind": "action_result", "function": "SaveGame", "context": true, "inputs": [{"name": "In", "type": "exec"}, {"name": "Slot", "type": "string", "default": "slot-1"}], "outputs": [{"name": "Out", "type": "exec"}, {"name": "Accepted", "type": "bool"}]}
+  - {"id": 23017, "name": "Load Game", "category": 23, "kind": "action_result", "function": "LoadGame", "context": true, "inputs": [{"name": "In", "type": "exec"}, {"name": "Slot", "type": "string", "default": "slot-1"}], "outputs": [{"name": "Out", "type": "exec"}, {"name": "Accepted", "type": "bool"}]}
+  - {"id": 23018, "name": "Game Save Pending", "category": 23, "kind": "pure", "function": "GameSavePending", "context": true, "inputs": [], "outputs": [{"name": "Value", "type": "bool"}]}
+  - {"id": 23101, "name": "On Save Completed", "category": 23, "kind": "event", "event": "persistence", "inputs": [], "outputs": [{"name": "Out", "type": "exec"}, {"name": "Slot", "type": "string"}]}
+  - {"id": 23102, "name": "On Save Failed", "category": 23, "kind": "event", "event": "persistence", "inputs": [], "outputs": [{"name": "Out", "type": "exec"}, {"name": "Slot", "type": "string"}, {"name": "Error", "type": "string"}]}
+  - {"id": 23103, "name": "On Load Completed", "category": 23, "kind": "event", "event": "persistence", "inputs": [], "outputs": [{"name": "Out", "type": "exec"}, {"name": "Slot", "type": "string"}]}
+  - {"id": 23104, "name": "On Load Failed", "category": 23, "kind": "event", "event": "persistence", "inputs": [], "outputs": [{"name": "Out", "type": "exec"}, {"name": "Slot", "type": "string"}, {"name": "Error", "type": "string"}]}
+
+# IDs are base + explicit offset. Never reorder/reassign offsets or ID bases.
+# Families expand to ordinary typed definitions for UI, validation and adapters.
+  - {"id": 11001, "name": "Create Box Rigid Body", "category": 11, "kind": "action", "function": "CreateBoxBody", "context": true, "inputs": [{"name": "In", "type": "exec"}, {"name": "Entity", "type": "entity", "default": "player"}, {"name": "Half Extents", "type": "vec3", "default": [0.5, 0.5, 0.5]}, {"name": "Motion", "type": "string", "default": "dynamic"}, {"name": "Mass", "type": "float", "default": 1}, {"name": "Sensor", "type": "bool", "default": false}, {"name": "Continuous", "type": "bool", "default": false}], "outputs": [{"name": "Out", "type": "exec"}]}
+  - {"id": 11002, "name": "Create Sphere Rigid Body", "category": 11, "kind": "action", "function": "CreateSphereBody", "context": true, "inputs": [{"name": "In", "type": "exec"}, {"name": "Entity", "type": "entity", "default": "player"}, {"name": "Radius", "type": "float", "default": 0.5}, {"name": "Motion", "type": "string", "default": "dynamic"}, {"name": "Mass", "type": "float", "default": 1}, {"name": "Sensor", "type": "bool", "default": false}, {"name": "Continuous", "type": "bool", "default": false}], "outputs": [{"name": "Out", "type": "exec"}]}
+  - {"id": 11003, "name": "Create Capsule Rigid Body", "category": 11, "kind": "action", "function": "CreateCapsuleBody", "context": true, "inputs": [{"name": "In", "type": "exec"}, {"name": "Entity", "type": "entity", "default": "player"}, {"name": "Radius", "type": "float", "default": 0.5}, {"name": "Half Height", "type": "float", "default": 0.5}, {"name": "Motion", "type": "string", "default": "dynamic"}, {"name": "Mass", "type": "float", "default": 1}, {"name": "Sensor", "type": "bool", "default": false}, {"name": "Continuous", "type": "bool", "default": false}], "outputs": [{"name": "Out", "type": "exec"}]}
+  - {"id": 11004, "name": "Remove Rigid Body", "category": 11, "kind": "action", "function": "RemoveBody", "context": true, "inputs": [{"name": "In", "type": "exec"}, {"name": "Entity", "type": "entity", "default": "player"}], "outputs": [{"name": "Out", "type": "exec"}]}
+  - {"id": 11005, "name": "Has Rigid Body", "category": 11, "kind": "pure", "function": "HasBody", "context": true, "inputs": [{"name": "Entity", "type": "entity", "default": "player"}], "outputs": [{"name": "Value", "type": "bool"}]}
+  - {"id": 11006, "name": "Set Body Type", "category": 11, "kind": "action", "function": "SetBodyType", "context": true, "inputs": [{"name": "In", "type": "exec"}, {"name": "Entity", "type": "entity", "default": "player"}, {"name": "Value", "type": "string", "default": "dynamic"}], "outputs": [{"name": "Out", "type": "exec"}]}
+  - {"id": 11007, "name": "Get Body Type", "category": 11, "kind": "pure", "function": "GetBodyType", "context": true, "inputs": [{"name": "Entity", "type": "entity", "default": "player"}], "outputs": [{"name": "Value", "type": "string"}]}
+  - {"id": 11008, "name": "Set Mass", "category": 11, "kind": "action", "function": "SetBodyMass", "context": true, "inputs": [{"name": "In", "type": "exec"}, {"name": "Entity", "type": "entity", "default": "player"}, {"name": "Value", "type": "float", "default": 1}], "outputs": [{"name": "Out", "type": "exec"}]}
+  - {"id": 11009, "name": "Get Mass", "category": 11, "kind": "pure", "function": "GetBodyMass", "context": true, "inputs": [{"name": "Entity", "type": "entity", "default": "player"}], "outputs": [{"name": "Value", "type": "float"}]}
+  - {"id": 11010, "name": "Set Velocity", "category": 11, "kind": "action", "function": "SetBodyVelocity", "context": true, "inputs": [{"name": "In", "type": "exec"}, {"name": "Entity", "type": "entity", "default": "player"}, {"name": "Value", "type": "vec3", "default": [0, 0, 0]}], "outputs": [{"name": "Out", "type": "exec"}]}
+  - {"id": 11011, "name": "Get Velocity", "category": 11, "kind": "pure", "function": "GetBodyVelocity", "context": true, "inputs": [{"name": "Entity", "type": "entity", "default": "player"}], "outputs": [{"name": "Value", "type": "vec3"}]}
+  - {"id": 11012, "name": "Set Angular Velocity", "category": 11, "kind": "action", "function": "SetBodyAngularVelocity", "context": true, "inputs": [{"name": "In", "type": "exec"}, {"name": "Entity", "type": "entity", "default": "player"}, {"name": "Value", "type": "vec3", "default": [0, 0, 0]}], "outputs": [{"name": "Out", "type": "exec"}]}
+  - {"id": 11013, "name": "Get Angular Velocity", "category": 11, "kind": "pure", "function": "GetBodyAngularVelocity", "context": true, "inputs": [{"name": "Entity", "type": "entity", "default": "player"}], "outputs": [{"name": "Value", "type": "vec3"}]}
+  - {"id": 11014, "name": "Apply Force", "category": 11, "kind": "action", "function": "ApplyForce", "context": true, "inputs": [{"name": "In", "type": "exec"}, {"name": "Entity", "type": "entity", "default": "player"}, {"name": "Value", "type": "vec3", "default": [0, 0, 0]}], "outputs": [{"name": "Out", "type": "exec"}]}
+  - {"id": 11015, "name": "Apply Impulse", "category": 11, "kind": "action", "function": "ApplyImpulse", "context": true, "inputs": [{"name": "In", "type": "exec"}, {"name": "Entity", "type": "entity", "default": "player"}, {"name": "Value", "type": "vec3", "default": [0, 0, 0]}], "outputs": [{"name": "Out", "type": "exec"}]}
+  - {"id": 11016, "name": "Apply Torque", "category": 11, "kind": "action", "function": "ApplyTorque", "context": true, "inputs": [{"name": "In", "type": "exec"}, {"name": "Entity", "type": "entity", "default": "player"}, {"name": "Value", "type": "vec3", "default": [0, 0, 0]}], "outputs": [{"name": "Out", "type": "exec"}]}
+  - {"id": 11017, "name": "Set Gravity Scale", "category": 11, "kind": "action", "function": "SetBodyGravityScale", "context": true, "inputs": [{"name": "In", "type": "exec"}, {"name": "Entity", "type": "entity", "default": "player"}, {"name": "Value", "type": "float", "default": 1}], "outputs": [{"name": "Out", "type": "exec"}]}
+  - {"id": 11018, "name": "Set Damping", "category": 11, "kind": "action", "function": "SetBodyDamping", "context": true, "inputs": [{"name": "In", "type": "exec"}, {"name": "Entity", "type": "entity", "default": "player"}, {"name": "Linear", "type": "float", "default": 0.05}, {"name": "Angular", "type": "float", "default": 0.05}], "outputs": [{"name": "Out", "type": "exec"}]}
+  - {"id": 11019, "name": "Wake Body", "category": 11, "kind": "action", "function": "WakeBody", "context": true, "inputs": [{"name": "In", "type": "exec"}, {"name": "Entity", "type": "entity", "default": "player"}], "outputs": [{"name": "Out", "type": "exec"}]}
+  - {"id": 11020, "name": "Sleep Body", "category": 11, "kind": "action", "function": "SleepBody", "context": true, "inputs": [{"name": "In", "type": "exec"}, {"name": "Entity", "type": "entity", "default": "player"}], "outputs": [{"name": "Out", "type": "exec"}]}
+  - {"id": 11021, "name": "Is Body Awake", "category": 11, "kind": "pure", "function": "IsBodyAwake", "context": true, "inputs": [{"name": "Entity", "type": "entity", "default": "player"}], "outputs": [{"name": "Value", "type": "bool"}]}
+  - {"id": 11022, "name": "Set Body Simulation Enabled", "category": 11, "kind": "action", "function": "SetBodyEnabled", "context": true, "inputs": [{"name": "In", "type": "exec"}, {"name": "Entity", "type": "entity", "default": "player"}, {"name": "Enabled", "type": "bool", "default": true}], "outputs": [{"name": "Out", "type": "exec"}]}
+  - {"id": 11023, "name": "Is Body Simulation Enabled", "category": 11, "kind": "pure", "function": "IsBodyEnabled", "context": true, "inputs": [{"name": "Entity", "type": "entity", "default": "player"}], "outputs": [{"name": "Value", "type": "bool"}]}
+  - {"id": 11024, "name": "Set Physics Material", "category": 11, "kind": "action", "function": "SetPhysicsMaterial", "context": true, "inputs": [{"name": "In", "type": "exec"}, {"name": "Entity", "type": "entity", "default": "player"}, {"name": "Friction", "type": "float", "default": 0.5}, {"name": "Restitution", "type": "float", "default": 0}], "outputs": [{"name": "Out", "type": "exec"}]}
+  - {"id": 11025, "name": "Set Collision Mask", "category": 11, "kind": "action", "function": "SetCollisionMask", "context": true, "inputs": [{"name": "In", "type": "exec"}, {"name": "Entity", "type": "entity", "default": "player"}, {"name": "Mask", "type": "int", "default": 4294967295}], "outputs": [{"name": "Out", "type": "exec"}]}
+  - {"id": 11026, "name": "Ignore Collision Pair", "category": 11, "kind": "action", "function": "IgnoreCollisionPair", "context": true, "inputs": [{"name": "In", "type": "exec"}, {"name": "Entity", "type": "entity", "default": "player"}, {"name": "Other", "type": "entity", "default": ""}, {"name": "Ignore", "type": "bool", "default": true}], "outputs": [{"name": "Out", "type": "exec"}]}
+  - {"id": 11027, "name": "Set Physics Gravity", "category": 11, "kind": "action", "function": "SetPhysicsGravity", "context": true, "inputs": [{"name": "In", "type": "exec"}, {"name": "Gravity", "type": "vec3", "default": [0, -9.81, 0]}], "outputs": [{"name": "Out", "type": "exec"}]}
+  - {"id": 11028, "name": "Physics Raycast Entity", "category": 11, "kind": "pure", "function": "PhysicsRaycast", "context": true, "inputs": [{"name": "Origin", "type": "vec3", "default": [0, 5, 0]}, {"name": "Displacement", "type": "vec3", "default": [0, -10, 0]}, {"name": "Mask", "type": "int", "default": 4294967295}, {"name": "Sensors", "type": "bool", "default": false}, {"name": "Exclude", "type": "entity", "default": ""}], "outputs": [{"name": "Value", "type": "entity"}]}
+  - {"id": 11029, "name": "Physics Overlap Sphere", "category": 11, "kind": "pure", "function": "PhysicsOverlapSphere", "context": true, "inputs": [{"name": "Center", "type": "vec3", "default": [0, 0, 0]}, {"name": "Radius", "type": "float", "default": 1}, {"name": "Mask", "type": "int", "default": 4294967295}, {"name": "Sensors", "type": "bool", "default": false}, {"name": "Exclude", "type": "entity", "default": ""}], "outputs": [{"name": "Value", "type": "array<entity>"}]}
+  - {"id": 11030, "name": "Move Kinematic Body", "category": 11, "kind": "action", "function": "MoveKinematicBody", "context": true, "inputs": [{"name": "In", "type": "exec"}, {"name": "Entity", "type": "entity", "default": "player"}, {"name": "Position", "type": "vec3", "default": [0, 0, 0]}, {"name": "Rotation", "type": "vec3", "default": [0, 0, 0]}, {"name": "Seconds", "type": "float", "default": 0.016666666666666666}], "outputs": [{"name": "Out", "type": "exec"}]}
+  - id: 11031
+    name: Physics Raycast
+    category: 11
+    kind: action_result
+    function: PhysicsRaycastHit
+    context: true
+    inputs: [{name: In, type: exec}, {name: Origin, type: vec3, default: [0, 5, 0]}, {name: Displacement, type: vec3, default: [0, -10, 0]}, {name: Mask, type: int, default: 4294967295}, {name: Sensors, type: bool, default: false}, {name: Exclude, type: entity, default: ''}]
+    outputs: &physics_hit_outputs [{name: Out, type: exec}, {name: Hit, type: bool}, {name: Entity, type: entity}, {name: Point, type: vec3}, {name: Normal, type: vec3}, {name: Fraction, type: float}, {name: Distance, type: float}]
+  - id: 11032
+    name: Physics Sphere Cast
+    category: 11
+    kind: action_result
+    function: PhysicsSphereCast
+    context: true
+    inputs: [{name: In, type: exec}, {name: Origin, type: vec3, default: [0, 5, 0]}, {name: Radius, type: float, default: 0.5}, {name: Displacement, type: vec3, default: [0, -10, 0]}, {name: Mask, type: int, default: 4294967295}, {name: Sensors, type: bool, default: false}, {name: Exclude, type: entity, default: ''}]
+    outputs: *physics_hit_outputs
+  - id: 11033
+    name: Physics Box Cast
+    category: 11
+    kind: action_result
+    function: PhysicsBoxCast
+    context: true
+    inputs: [{name: In, type: exec}, {name: Origin, type: vec3, default: [0, 5, 0]}, {name: Half Extents, type: vec3, default: [0.5, 0.5, 0.5]}, {name: Rotation, type: vec3, default: [0, 0, 0]}, {name: Displacement, type: vec3, default: [0, -10, 0]}, {name: Mask, type: int, default: 4294967295}, {name: Sensors, type: bool, default: false}, {name: Exclude, type: entity, default: ''}]
+    outputs: *physics_hit_outputs
+  - id: 11034
+    name: Physics Capsule Cast
+    category: 11
+    kind: action_result
+    function: PhysicsCapsuleCast
+    context: true
+    inputs: [{name: In, type: exec}, {name: Origin, type: vec3, default: [0, 5, 0]}, {name: Radius, type: float, default: 0.5}, {name: Half Height, type: float, default: 0.5}, {name: Rotation, type: vec3, default: [0, 0, 0]}, {name: Displacement, type: vec3, default: [0, -10, 0]}, {name: Mask, type: int, default: 4294967295}, {name: Sensors, type: bool, default: false}, {name: Exclude, type: entity, default: ''}]
+    outputs: *physics_hit_outputs
+  - id: 11035
+    name: Physics Overlap Box
+    category: 11
+    kind: pure
+    function: PhysicsOverlapBox
+    context: true
+    inputs: [{name: Center, type: vec3, default: [0, 0, 0]}, {name: Half Extents, type: vec3, default: [0.5, 0.5, 0.5]}, {name: Rotation, type: vec3, default: [0, 0, 0]}, {name: Mask, type: int, default: 4294967295}, {name: Sensors, type: bool, default: false}, {name: Exclude, type: entity, default: ''}]
+    outputs: [{name: Value, type: 'array<entity>'}]
+  - id: 11036
+    name: Physics Overlap Capsule
+    category: 11
+    kind: pure
+    function: PhysicsOverlapCapsule
+    context: true
+    inputs: [{name: Center, type: vec3, default: [0, 0, 0]}, {name: Radius, type: float, default: 0.5}, {name: Half Height, type: float, default: 0.5}, {name: Rotation, type: vec3, default: [0, 0, 0]}, {name: Mask, type: int, default: 4294967295}, {name: Sensors, type: bool, default: false}, {name: Exclude, type: entity, default: ''}]
+    outputs: [{name: Value, type: 'array<entity>'}]
+
+
+  - {"id": 12001, "name": "Create Character", "category": 12, "kind": "action", "function": "CreateCharacter", "context": true, "inputs": [{"name": "In", "type": "exec"}, {"name": "Entity", "type": "entity", "default": "player"}, {"name": "Radius", "type": "float", "default": 0.35}, {"name": "Half Height", "type": "float", "default": 0.5}, {"name": "Mass", "type": "float", "default": 80}, {"name": "Max Slope", "type": "float", "default": 45}, {"name": "Step Height", "type": "float", "default": 0.3}, {"name": "Floor Snap", "type": "float", "default": 0.4}, {"name": "Max Strength", "type": "float", "default": 100}], "outputs": [{"name": "Out", "type": "exec"}]}
+  - {"id": 12002, "name": "Remove Character", "category": 12, "kind": "action", "function": "RemoveCharacter", "context": true, "inputs": [{"name": "In", "type": "exec"}, {"name": "Entity", "type": "entity", "default": "player"}], "outputs": [{"name": "Out", "type": "exec"}]}
+  - {"id": 12003, "name": "Has Character", "category": 12, "kind": "pure", "function": "HasCharacter", "context": true, "inputs": [{"name": "Entity", "type": "entity", "default": "player"}], "outputs": [{"name": "Value", "type": "bool"}]}
+  - {"id": 12004, "name": "Character Move", "category": 12, "kind": "action", "function": "CharacterMove", "context": true, "inputs": [{"name": "In", "type": "exec"}, {"name": "Entity", "type": "entity", "default": "player"}, {"name": "Velocity", "type": "vec3", "default": [0, 0, 0]}], "outputs": [{"name": "Out", "type": "exec"}]}
+  - {"id": 12005, "name": "Character Jump", "category": 12, "kind": "action_result", "function": "CharacterJump", "context": true, "inputs": [{"name": "In", "type": "exec"}, {"name": "Entity", "type": "entity", "default": "player"}, {"name": "Speed", "type": "float", "default": 5}], "outputs": [{"name": "Out", "type": "exec"}, {"name": "Accepted", "type": "bool"}]}
+  - {"id": 12006, "name": "Character Resize", "category": 12, "kind": "action_result", "function": "CharacterResize", "context": true, "inputs": [{"name": "In", "type": "exec"}, {"name": "Entity", "type": "entity", "default": "player"}, {"name": "Radius", "type": "float", "default": 0.35}, {"name": "Half Height", "type": "float", "default": 0.5}], "outputs": [{"name": "Out", "type": "exec"}, {"name": "Resized", "type": "bool"}]}
+  - {"id": 12007, "name": "Configure Character", "category": 12, "kind": "action", "function": "ConfigureCharacter", "context": true, "inputs": [{"name": "In", "type": "exec"}, {"name": "Entity", "type": "entity", "default": "player"}, {"name": "Max Slope", "type": "float", "default": 45}, {"name": "Step Height", "type": "float", "default": 0.3}, {"name": "Floor Snap", "type": "float", "default": 0.4}, {"name": "Max Strength", "type": "float", "default": 100}], "outputs": [{"name": "Out", "type": "exec"}]}
+  - {"id": 12008, "name": "Character Ground Check", "category": 12, "kind": "action_result", "function": "CharacterGroundCheck", "context": true, "inputs": [{"name": "In", "type": "exec"}, {"name": "Entity", "type": "entity", "default": "player"}], "outputs": [{"name": "Out", "type": "exec"}, {"name": "Grounded", "type": "bool"}, {"name": "State", "type": "string"}, {"name": "Entity", "type": "entity"}, {"name": "Point", "type": "vec3"}, {"name": "Normal", "type": "vec3"}, {"name": "Velocity", "type": "vec3"}]}
+
+  - {"id": 13001, workflow: 3d, "name": "Get Animation Clips", "category": 13, "kind": "pure", "function": "GetAnimationClips", "context": true, "inputs": [{"name": "Entity", "type": "entity", "default": "player"}], "outputs": [{"name": "Value", "type": "array<string>"}]}
+  - {"id": 13002, workflow: 3d, "name": "Play Animation", "category": 13, "kind": "action", "function": "PlayAnimation", "context": true, "inputs": [{"name": "In", "type": "exec"}, {"name": "Entity", "type": "entity", "default": "player"}, {"name": "Clip", "type": "string", "default": "Idle"}, {"name": "Loop", "type": "bool", "default": true}, {"name": "Speed", "type": "float", "default": 1.0}], "outputs": [{"name": "Out", "type": "exec"}]}
+  - {"id": 13003, workflow: 3d, "name": "Stop Animation", "category": 13, "kind": "action", "function": "StopAnimation", "context": true, "inputs": [{"name": "In", "type": "exec"}, {"name": "Entity", "type": "entity", "default": "player"}], "outputs": [{"name": "Out", "type": "exec"}]}
+  - {"id": 13004, workflow: 3d, "name": "Pause Animation", "category": 13, "kind": "action", "function": "PauseAnimation", "context": true, "inputs": [{"name": "In", "type": "exec"}, {"name": "Entity", "type": "entity", "default": "player"}], "outputs": [{"name": "Out", "type": "exec"}]}
+  - {"id": 13005, workflow: 3d, "name": "Resume Animation", "category": 13, "kind": "action", "function": "ResumeAnimation", "context": true, "inputs": [{"name": "In", "type": "exec"}, {"name": "Entity", "type": "entity", "default": "player"}], "outputs": [{"name": "Out", "type": "exec"}]}
+  - {"id": 13006, workflow: 3d, "name": "Set Animation Speed", "category": 13, "kind": "action", "function": "SetAnimationSpeed", "context": true, "inputs": [{"name": "In", "type": "exec"}, {"name": "Entity", "type": "entity", "default": "player"}, {"name": "Speed", "type": "float", "default": 1.0}], "outputs": [{"name": "Out", "type": "exec"}]}
+  - {"id": 13007, workflow: 3d, "name": "Set Animation Loop", "category": 13, "kind": "action", "function": "SetAnimationLoop", "context": true, "inputs": [{"name": "In", "type": "exec"}, {"name": "Entity", "type": "entity", "default": "player"}, {"name": "Loop", "type": "bool", "default": true}], "outputs": [{"name": "Out", "type": "exec"}]}
+  - {"id": 13008, workflow: 3d, "name": "Set Animation Time", "category": 13, "kind": "action", "function": "SetAnimationTime", "context": true, "inputs": [{"name": "In", "type": "exec"}, {"name": "Entity", "type": "entity", "default": "player"}, {"name": "Time", "type": "float", "default": 0.0}], "outputs": [{"name": "Out", "type": "exec"}]}
+  - {"id": 13009, workflow: 3d, "name": "Get Animation Time", "category": 13, "kind": "pure", "function": "GetAnimationTime", "context": true, "inputs": [{"name": "Entity", "type": "entity", "default": "player"}], "outputs": [{"name": "Value", "type": "float"}]}
+  - {"id": 13010, workflow: 3d, "name": "Get Animation Progress", "category": 13, "kind": "pure", "function": "GetAnimationProgress", "context": true, "inputs": [{"name": "Entity", "type": "entity", "default": "player"}], "outputs": [{"name": "Value", "type": "float"}]}
+  - {"id": 13011, workflow: 3d, "name": "Get Animation Duration", "category": 13, "kind": "pure", "function": "GetAnimationDuration", "context": true, "inputs": [{"name": "Entity", "type": "entity", "default": "player"}, {"name": "Clip", "type": "string", "default": "Idle"}], "outputs": [{"name": "Value", "type": "float"}]}
+  - {"id": 13012, workflow: 3d, "name": "Is Animation Playing", "category": 13, "kind": "pure", "function": "IsAnimationPlaying", "context": true, "inputs": [{"name": "Entity", "type": "entity", "default": "player"}], "outputs": [{"name": "Value", "type": "bool"}]}
+  - {"id": 13013, workflow: 3d, "name": "Is Animation Paused", "category": 13, "kind": "pure", "function": "IsAnimationPaused", "context": true, "inputs": [{"name": "Entity", "type": "entity", "default": "player"}], "outputs": [{"name": "Value", "type": "bool"}]}
+  - {id: 13014, workflow: 3d, name: On Animation Finished, category: 13, kind: event, event: animation_finished, inputs: [{name: Receiver, type: entity, default: ''}, {name: Clip Filter, type: string, default: ''}], outputs: [{name: Out, type: exec}, {name: Entity, type: entity}, {name: Clip, type: string}]}
+  - {id: 13015, workflow: 3d, name: Play Animation Blended, category: 13, kind: action, function: PlayAnimationBlended, context: true, inputs: [{name: In, type: exec}, {name: Entity, type: entity, default: player}, {name: Clip, type: string, default: Idle}, {name: Loop, type: bool, default: true}, {name: Speed, type: float, default: 1.0}, {name: Blend, type: float, default: 0.2}], outputs: [{name: Out, type: exec}]}
+  - {id: 13016, workflow: 3d, name: On Animation Notify, category: 13, kind: event, event: animation_notify, inputs: [{name: Receiver, type: entity, default: ''}, {name: Notify Filter, type: string, default: ''}], outputs: [{name: Out, type: exec}, {name: Entity, type: entity}, {name: Notify, type: string}]}
+  - {id: 13017, workflow: 3d, name: Set Animation State, category: 13, kind: action, function: SetAnimationState, context: true, inputs: [{name: In, type: exec}, {name: Entity, type: entity, default: player}, {name: State, type: string, default: Idle}, {name: Blend, type: float, default: 0.2}], outputs: [{name: Out, type: exec}]}
+  - {id: 13018, name: Solve Two Bone IK, category: 13, kind: pure, function: SolveTwoBoneIK, inputs: [{name: Root, type: vec2, default: [0, 0]}, {name: Target, type: vec2, default: [1, 0]}, {name: Upper Length, type: float, default: 1.0}, {name: Lower Length, type: float, default: 1.0}], outputs: [{name: Elbow, type: vec2}]}
+
+type_variants:
+  float: {offset: 0, label: Float, cpp: double, default: 0.0}
+  int: {offset: 1, label: Integer, cpp: 'std::int64_t', default: 0}
+  bool: {offset: 2, label: Boolean, cpp: bool, default: false}
+  string: {offset: 3, label: String, cpp: 'std::string', default: ''}
+  vec3: {offset: 4, label: Vector3, cpp: 'rt::Vec3', default: [0, 0, 0]}
+  entity: {offset: 5, label: Entity, cpp: 'rt::EntityRef', default: ''}
+  vec2: {offset: 6, label: Vector2, cpp: 'rt::Vec2', default: [0, 0]}
+  vec4: {offset: 7, label: Vector4, cpp: 'rt::Vec4', default: [0, 0, 0, 0]}
+  quat: {offset: 8, label: Quaternion, cpp: 'rt::Quat', default: [0, 0, 0, 1]}
+  mat4: {offset: 9, label: Matrix4, cpp: 'rt::Mat4', default: [1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1]}
+
+families:
+  - types: ["float","int","bool","string","vec3","entity","vec2","vec4","quat","mat4"]
+    nodes:
+      - {"id":50000,"name":"Get Global {label} Variable","category":3,"kind":"pure","function":"GetGlobalVariableAs<{cpp}>","context":true,"variable_type":"{type}","variable_access":"read","variable_scope":"global","inputs":[{"name":"Name","type":"string","default":"{type}_value"}],"outputs":[{"name":"Value","type":"{type}"}]}
+      - {"id":50010,"name":"Set Global {label} Variable","category":3,"kind":"action","function":"SetGlobalVariableAs<{cpp}>","context":true,"variable_type":"{type}","variable_access":"write","variable_scope":"global","inputs":[{"name":"In","type":"exec"},{"name":"Name","type":"string","default":"{type}_value"},{"name":"Value","type":"{type}","default":"$default"}],"outputs":[{"name":"Out","type":"exec"}]}
+      - {"id":50020,"name":"Get Global {label} Array Variable","category":3,"kind":"pure","function":"GetGlobalVariableAs<rt::Array<{cpp}>>","context":true,"variable_type":"array<{type}>","variable_access":"read","variable_scope":"global","inputs":[{"name":"Name","type":"string","default":"{type}_value"}],"outputs":[{"name":"Value","type":"array<{type}>"}]}
+      - {"id":50030,"name":"Set Global {label} Array Variable","category":3,"kind":"action","function":"SetGlobalVariableAs<rt::Array<{cpp}>>","context":true,"variable_type":"array<{type}>","variable_access":"write","variable_scope":"global","inputs":[{"name":"In","type":"exec"},{"name":"Name","type":"string","default":"{type}_value"},{"name":"Value","type":"array<{type}>","default":[]}],"outputs":[{"name":"Out","type":"exec"}]}
+      - {"id":50040,"name":"Get Global {label} Map Variable","category":3,"kind":"pure","function":"GetGlobalVariableAs<rt::Map<{cpp}>>","context":true,"variable_type":"map<{type}>","variable_access":"read","variable_scope":"global","inputs":[{"name":"Name","type":"string","default":"{type}_value"}],"outputs":[{"name":"Value","type":"map<{type}>"}]}
+      - {"id":50050,"name":"Set Global {label} Map Variable","category":3,"kind":"action","function":"SetGlobalVariableAs<rt::Map<{cpp}>>","context":true,"variable_type":"map<{type}>","variable_access":"write","variable_scope":"global","inputs":[{"name":"In","type":"exec"},{"name":"Name","type":"string","default":"{type}_value"},{"name":"Value","type":"map<{type}>","default":{}}],"outputs":[{"name":"Out","type":"exec"}]}
+      - {"id":50060,"name":"Get Global {label} Set Variable","category":3,"kind":"pure","function":"GetGlobalVariableAs<rt::Set<{cpp}>>","context":true,"variable_type":"set<{type}>","variable_access":"read","variable_scope":"global","inputs":[{"name":"Name","type":"string","default":"{type}_value"}],"outputs":[{"name":"Value","type":"set<{type}>"}]}
+      - {"id":50070,"name":"Set Global {label} Set Variable","category":3,"kind":"action","function":"SetGlobalVariableAs<rt::Set<{cpp}>>","context":true,"variable_type":"set<{type}>","variable_access":"write","variable_scope":"global","inputs":[{"name":"In","type":"exec"},{"name":"Name","type":"string","default":"{type}_value"},{"name":"Value","type":"set<{type}>","default":[]}],"outputs":[{"name":"Out","type":"exec"}]}
+      - {"id":50080,"name":"Get Scene {label} Variable","category":3,"kind":"pure","function":"GetSceneVariableAs<{cpp}>","context":true,"variable_type":"{type}","variable_access":"read","variable_scope":"scene","inputs":[{"name":"Name","type":"string","default":"{type}_value"}],"outputs":[{"name":"Value","type":"{type}"}]}
+      - {"id":50090,"name":"Set Scene {label} Variable","category":3,"kind":"action","function":"SetSceneVariableAs<{cpp}>","context":true,"variable_type":"{type}","variable_access":"write","variable_scope":"scene","inputs":[{"name":"In","type":"exec"},{"name":"Name","type":"string","default":"{type}_value"},{"name":"Value","type":"{type}","default":"$default"}],"outputs":[{"name":"Out","type":"exec"}]}
+      - {"id":50100,"name":"Get Scene {label} Array Variable","category":3,"kind":"pure","function":"GetSceneVariableAs<rt::Array<{cpp}>>","context":true,"variable_type":"array<{type}>","variable_access":"read","variable_scope":"scene","inputs":[{"name":"Name","type":"string","default":"{type}_value"}],"outputs":[{"name":"Value","type":"array<{type}>"}]}
+      - {"id":50110,"name":"Set Scene {label} Array Variable","category":3,"kind":"action","function":"SetSceneVariableAs<rt::Array<{cpp}>>","context":true,"variable_type":"array<{type}>","variable_access":"write","variable_scope":"scene","inputs":[{"name":"In","type":"exec"},{"name":"Name","type":"string","default":"{type}_value"},{"name":"Value","type":"array<{type}>","default":[]}],"outputs":[{"name":"Out","type":"exec"}]}
+      - {"id":50120,"name":"Get Scene {label} Map Variable","category":3,"kind":"pure","function":"GetSceneVariableAs<rt::Map<{cpp}>>","context":true,"variable_type":"map<{type}>","variable_access":"read","variable_scope":"scene","inputs":[{"name":"Name","type":"string","default":"{type}_value"}],"outputs":[{"name":"Value","type":"map<{type}>"}]}
+      - {"id":50130,"name":"Set Scene {label} Map Variable","category":3,"kind":"action","function":"SetSceneVariableAs<rt::Map<{cpp}>>","context":true,"variable_type":"map<{type}>","variable_access":"write","variable_scope":"scene","inputs":[{"name":"In","type":"exec"},{"name":"Name","type":"string","default":"{type}_value"},{"name":"Value","type":"map<{type}>","default":{}}],"outputs":[{"name":"Out","type":"exec"}]}
+      - {"id":50140,"name":"Get Scene {label} Set Variable","category":3,"kind":"pure","function":"GetSceneVariableAs<rt::Set<{cpp}>>","context":true,"variable_type":"set<{type}>","variable_access":"read","variable_scope":"scene","inputs":[{"name":"Name","type":"string","default":"{type}_value"}],"outputs":[{"name":"Value","type":"set<{type}>"}]}
+      - {"id":50150,"name":"Set Scene {label} Set Variable","category":3,"kind":"action","function":"SetSceneVariableAs<rt::Set<{cpp}>>","context":true,"variable_type":"set<{type}>","variable_access":"write","variable_scope":"scene","inputs":[{"name":"In","type":"exec"},{"name":"Name","type":"string","default":"{type}_value"},{"name":"Value","type":"set<{type}>","default":[]}],"outputs":[{"name":"Out","type":"exec"}]}
+      - {"id":50160,"name":"Get Entity {label} Variable","category":3,"kind":"pure","function":"GetEntityVariableAs<{cpp}>","context":true,"variable_type":"{type}","variable_access":"read","variable_scope":"entity","inputs":[{"name":"Entity","type":"entity","default":"player"},{"name":"Name","type":"string","default":"{type}_value"}],"outputs":[{"name":"Value","type":"{type}"}]}
+      - {"id":50170,"name":"Set Entity {label} Variable","category":3,"kind":"action","function":"SetEntityVariableAs<{cpp}>","context":true,"variable_type":"{type}","variable_access":"write","variable_scope":"entity","inputs":[{"name":"In","type":"exec"},{"name":"Entity","type":"entity","default":"player"},{"name":"Name","type":"string","default":"{type}_value"},{"name":"Value","type":"{type}","default":"$default"}],"outputs":[{"name":"Out","type":"exec"}]}
+      - {"id":50180,"name":"Get Entity {label} Array Variable","category":3,"kind":"pure","function":"GetEntityVariableAs<rt::Array<{cpp}>>","context":true,"variable_type":"array<{type}>","variable_access":"read","variable_scope":"entity","inputs":[{"name":"Entity","type":"entity","default":"player"},{"name":"Name","type":"string","default":"{type}_value"}],"outputs":[{"name":"Value","type":"array<{type}>"}]}
+      - {"id":50190,"name":"Set Entity {label} Array Variable","category":3,"kind":"action","function":"SetEntityVariableAs<rt::Array<{cpp}>>","context":true,"variable_type":"array<{type}>","variable_access":"write","variable_scope":"entity","inputs":[{"name":"In","type":"exec"},{"name":"Entity","type":"entity","default":"player"},{"name":"Name","type":"string","default":"{type}_value"},{"name":"Value","type":"array<{type}>","default":[]}],"outputs":[{"name":"Out","type":"exec"}]}
+      - {"id":50200,"name":"Get Entity {label} Map Variable","category":3,"kind":"pure","function":"GetEntityVariableAs<rt::Map<{cpp}>>","context":true,"variable_type":"map<{type}>","variable_access":"read","variable_scope":"entity","inputs":[{"name":"Entity","type":"entity","default":"player"},{"name":"Name","type":"string","default":"{type}_value"}],"outputs":[{"name":"Value","type":"map<{type}>"}]}
+      - {"id":50210,"name":"Set Entity {label} Map Variable","category":3,"kind":"action","function":"SetEntityVariableAs<rt::Map<{cpp}>>","context":true,"variable_type":"map<{type}>","variable_access":"write","variable_scope":"entity","inputs":[{"name":"In","type":"exec"},{"name":"Entity","type":"entity","default":"player"},{"name":"Name","type":"string","default":"{type}_value"},{"name":"Value","type":"map<{type}>","default":{}}],"outputs":[{"name":"Out","type":"exec"}]}
+      - {"id":50220,"name":"Get Entity {label} Set Variable","category":3,"kind":"pure","function":"GetEntityVariableAs<rt::Set<{cpp}>>","context":true,"variable_type":"set<{type}>","variable_access":"read","variable_scope":"entity","inputs":[{"name":"Entity","type":"entity","default":"player"},{"name":"Name","type":"string","default":"{type}_value"}],"outputs":[{"name":"Value","type":"set<{type}>"}]}
+      - {"id":50230,"name":"Set Entity {label} Set Variable","category":3,"kind":"action","function":"SetEntityVariableAs<rt::Set<{cpp}>>","context":true,"variable_type":"set<{type}>","variable_access":"write","variable_scope":"entity","inputs":[{"name":"In","type":"exec"},{"name":"Entity","type":"entity","default":"player"},{"name":"Name","type":"string","default":"{type}_value"},{"name":"Value","type":"set<{type}>","default":[]}],"outputs":[{"name":"Out","type":"exec"}]}
+  - types: [float, int, bool, string, vec3, entity, vec2, vec4, quat, mat4]
+    nodes:
+      - {id: 2100, name: 'Select {label}', category: 2, kind: select, inputs: [{name: Condition, type: bool, default: false}, {name: 'True', type: '{type}', default: '$default'}, {name: 'False', type: '{type}', default: '$default'}], outputs: [{name: Value, type: '{type}'}]}
+      - {id: 2110, name: 'Select {label} Array', category: 2, kind: select, inputs: [{name: Condition, type: bool, default: false}, {name: 'True', type: 'array<{type}>', default: []}, {name: 'False', type: 'array<{type}>', default: []}], outputs: [{name: Value, type: 'array<{type}>'}]}
+      - {id: 2120, name: 'Select {label} Map', category: 2, kind: select, inputs: [{name: Condition, type: bool, default: false}, {name: 'True', type: 'map<{type}>', default: {}}, {name: 'False', type: 'map<{type}>', default: {}}], outputs: [{name: Value, type: 'map<{type}>'}]}
+      - {id: 2130, name: 'Select {label} Set', category: 2, kind: select, inputs: [{name: Condition, type: bool, default: false}, {name: 'True', type: 'set<{type}>', default: []}, {name: 'False', type: 'set<{type}>', default: []}], outputs: [{name: Value, type: 'set<{type}>'}]}
+  - types: [float, int, bool, string, vec3, entity, vec2, vec4, quat, mat4]
+    nodes:
+      - {id: 5100, name: 'Random {label} Item', category: 5, kind: action_result, function: 'RandomItem<{cpp}>', context: true, inputs: [{name: In, type: exec}, {name: Array, type: 'array<{type}>', default: []}], outputs: [{name: Out, type: exec}, {name: Value, type: '{type}'}, {name: Index, type: int}]}
+      - {id: 5110, name: 'Random Weighted {label} Item', category: 5, kind: action_result, function: 'RandomWeightedItem<{cpp}>', context: true, inputs: [{name: In, type: exec}, {name: Array, type: 'array<{type}>', default: []}, {name: Weights, type: 'array<float>', default: []}], outputs: [{name: Out, type: exec}, {name: Value, type: '{type}'}, {name: Index, type: int}]}
+      - {id: 5120, name: 'Shuffle {label} Array', category: 5, kind: action_result, function: 'ShuffleArray<{cpp}>', context: true, inputs: [{name: In, type: exec}, {name: Array, type: 'array<{type}>', default: []}], outputs: [{name: Out, type: exec}, {name: Value, type: 'array<{type}>'}]}
+  - types: [int, bool, string, vec3, entity, vec2, vec4, quat, mat4]
+    nodes:
+      - id: 3100
+        name: 'Get {label} Variable'
+        category: 3
+        kind: pure
+        function: 'GetVariableAs<{cpp}>'
+        context: true
+        variable_type: '{type}'
+        variable_access: read
+        inputs: [{name: Name, type: string, default: '{type}_value'}]
+        outputs: [{name: Value, type: '{type}'}]
+      - id: 3110
+        name: 'Set {label} Variable'
+        category: 3
+        kind: action
+        function: 'SetVariableAs<{cpp}>'
+        context: true
+        variable_type: '{type}'
+        variable_access: write
+        inputs: [{name: In, type: exec}, {name: Name, type: string, default: '{type}_value'}, {name: Value, type: '{type}', default: '$default'}]
+        outputs: [{name: Out, type: exec}]
+  - types: [float, int, bool, string, vec3, entity, vec2, vec4, quat, mat4]
+    nodes:
+      - {id: 3200, name: 'Get {label} Array Variable', category: 3, kind: pure, function: 'GetVariableAs<rt::Array<{cpp}>>', context: true, variable_type: 'array<{type}>', variable_access: read, inputs: [{name: Name, type: string, default: '{type}_items'}], outputs: [{name: Value, type: 'array<{type}>'}]}
+      - {id: 3210, name: 'Set {label} Array Variable', category: 3, kind: action, function: 'SetVariableAs<rt::Array<{cpp}>>', context: true, variable_type: 'array<{type}>', variable_access: write, inputs: [{name: In, type: exec}, {name: Name, type: string, default: '{type}_items'}, {name: Value, type: 'array<{type}>', default: []}], outputs: [{name: Out, type: exec}]}
+      - {id: 3220, name: 'Create {label} Array', category: 3, kind: pure, function: 'CreateArray<{cpp}>', inputs: [{name: Items, type: 'array<{type}>', default: []}], outputs: [{name: Value, type: 'array<{type}>'}]}
+      - {id: 3230, name: 'Append {label} Item', category: 3, kind: pure, function: 'ArrayAppend<{cpp}>', inputs: [{name: Array, type: 'array<{type}>', default: []}, {name: Item, type: '{type}', default: '$default'}], outputs: [{name: Value, type: 'array<{type}>'}]}
+      - {id: 3240, name: 'Insert {label} Item', category: 3, kind: pure, function: 'ArrayInsert<{cpp}>', inputs: [{name: Array, type: 'array<{type}>', default: []}, {name: Index, type: int, default: 0}, {name: Item, type: '{type}', default: '$default'}], outputs: [{name: Value, type: 'array<{type}>'}]}
+      - {id: 3250, name: 'Remove {label} Item At', category: 3, kind: pure, function: 'ArrayRemoveAt<{cpp}>', inputs: [{name: Array, type: 'array<{type}>', default: []}, {name: Index, type: int, default: 0}], outputs: [{name: Value, type: 'array<{type}>'}]}
+      - {id: 3260, name: 'Get {label} Item', category: 3, kind: pure, function: 'ArrayGet<{cpp}>', inputs: [{name: Array, type: 'array<{type}>', default: []}, {name: Index, type: int, default: 0}], outputs: [{name: Value, type: '{type}'}]}
+      - {id: 3270, name: 'Set {label} Item', category: 3, kind: pure, function: 'ArraySet<{cpp}>', inputs: [{name: Array, type: 'array<{type}>', default: []}, {name: Index, type: int, default: 0}, {name: Item, type: '{type}', default: '$default'}], outputs: [{name: Value, type: 'array<{type}>'}]}
+      - {id: 3280, name: '{label} Array Length', category: 3, kind: pure, function: 'ArrayLength<{cpp}>', inputs: [{name: Array, type: 'array<{type}>', default: []}], outputs: [{name: Value, type: int}]}
+      - {id: 3290, name: '{label} Array Contains', category: 3, kind: pure, function: 'ArrayContains<{cpp}>', inputs: [{name: Array, type: 'array<{type}>', default: []}, {name: Item, type: '{type}', default: '$default'}], outputs: [{name: Value, type: bool}]}
+      - {id: 3300, name: 'Find {label} Item', category: 3, kind: pure, function: 'ArrayFind<{cpp}>', inputs: [{name: Array, type: 'array<{type}>', default: []}, {name: Item, type: '{type}', default: '$default'}], outputs: [{name: Value, type: int}]}
+      - {id: 3310, name: 'Reverse {label} Array', category: 3, kind: pure, function: 'ArrayReverse<{cpp}>', inputs: [{name: Array, type: 'array<{type}>', default: []}], outputs: [{name: Value, type: 'array<{type}>'}]}
+      - {id: 3320, name: 'Clear {label} Array', category: 3, kind: pure, function: 'ArrayClear<{cpp}>', inputs: [{name: Array, type: 'array<{type}>', default: []}], outputs: [{name: Value, type: 'array<{type}>'}]}
+      - {id: 2300, name: 'For Each {label}', category: 2, kind: foreach, inputs: [{name: In, type: exec}, {name: Array, type: 'array<{type}>', default: []}], outputs: [{name: Body, type: exec}, {name: Done, type: exec}, {name: Item, type: '{type}'}, {name: Index, type: int}]}
+      - {id: 2350, name: 'For Each {label} Set', category: 2, kind: foreach, inputs: [{name: In, type: exec}, {name: Set, type: 'set<{type}>', default: []}], outputs: [{name: Body, type: exec}, {name: Done, type: exec}, {name: Item, type: '{type}'}, {name: Index, type: int}]}
+      - {id: 2360, name: 'For Each {label} Map', category: 2, kind: foreach, inputs: [{name: In, type: exec}, {name: Map, type: 'map<{type}>', default: {}}], outputs: [{name: Body, type: exec}, {name: Done, type: exec}, {name: Key, type: string}, {name: Item, type: '{type}'}, {name: Index, type: int}]}
+      - {id: 3400, name: 'Get {label} Map Variable', category: 3, kind: pure, function: 'GetVariableAs<rt::Map<{cpp}>>', context: true, variable_type: 'map<{type}>', variable_access: read, inputs: [{name: Name, type: string, default: '{type}_map'}], outputs: [{name: Value, type: 'map<{type}>'}]}
+      - {id: 3410, name: 'Set {label} Map Variable', category: 3, kind: action, function: 'SetVariableAs<rt::Map<{cpp}>>', context: true, variable_type: 'map<{type}>', variable_access: write, inputs: [{name: In, type: exec}, {name: Name, type: string, default: '{type}_map'}, {name: Value, type: 'map<{type}>', default: {}}], outputs: [{name: Out, type: exec}]}
+      - {id: 3420, name: 'Create {label} Map', category: 3, kind: pure, function: 'CreateMap<{cpp}>', inputs: [{name: Items, type: 'map<{type}>', default: {}}], outputs: [{name: Value, type: 'map<{type}>'}]}
+      - {id: 3430, name: 'Get {label} Map Item', category: 3, kind: pure, function: 'MapGet<{cpp}>', inputs: [{name: Map, type: 'map<{type}>', default: {}}, {name: Key, type: string, default: key}], outputs: [{name: Value, type: '{type}'}]}
+      - {id: 3440, name: 'Set {label} Map Item', category: 3, kind: pure, function: 'MapSet<{cpp}>', inputs: [{name: Map, type: 'map<{type}>', default: {}}, {name: Key, type: string, default: key}, {name: Item, type: '{type}', default: '$default'}], outputs: [{name: Value, type: 'map<{type}>'}]}
+      - {id: 3450, name: 'Remove {label} Map Item', category: 3, kind: pure, function: 'MapRemove<{cpp}>', inputs: [{name: Map, type: 'map<{type}>', default: {}}, {name: Key, type: string, default: key}], outputs: [{name: Value, type: 'map<{type}>'}]}
+      - {id: 3460, name: '{label} Map Has Key', category: 3, kind: pure, function: 'MapHasKey<{cpp}>', inputs: [{name: Map, type: 'map<{type}>', default: {}}, {name: Key, type: string, default: key}], outputs: [{name: Value, type: bool}]}
+      - {id: 3470, name: '{label} Map Keys', category: 3, kind: pure, function: 'MapKeys<{cpp}>', inputs: [{name: Map, type: 'map<{type}>', default: {}}], outputs: [{name: Value, type: 'array<string>'}]}
+      - {id: 3480, name: '{label} Map Values', category: 3, kind: pure, function: 'MapValues<{cpp}>', inputs: [{name: Map, type: 'map<{type}>', default: {}}], outputs: [{name: Value, type: 'array<{type}>'}]}
+      - {id: 3490, name: '{label} Map Size', category: 3, kind: pure, function: 'MapSize<{cpp}>', inputs: [{name: Map, type: 'map<{type}>', default: {}}], outputs: [{name: Value, type: int}]}
+      - {id: 3500, name: 'Clear {label} Map', category: 3, kind: pure, function: 'MapClear<{cpp}>', inputs: [{name: Map, type: 'map<{type}>', default: {}}], outputs: [{name: Value, type: 'map<{type}>'}]}
+  - types: [float, int, bool, string, vec3, entity, vec2, vec4, quat, mat4]
+    nodes:
+      - {id: 3600, name: 'Get {label} Set Variable', category: 3, kind: pure, function: 'GetVariableAs<rt::Set<{cpp}>>', context: true, variable_type: 'set<{type}>', variable_access: read, inputs: [{name: Name, type: string, default: '{type}_set'}], outputs: [{name: Value, type: 'set<{type}>'}]}
+      - {id: 3610, name: 'Set {label} Set Variable', category: 3, kind: action, function: 'SetVariableAs<rt::Set<{cpp}>>', context: true, variable_type: 'set<{type}>', variable_access: write, inputs: [{name: In, type: exec}, {name: Name, type: string, default: '{type}_set'}, {name: Value, type: 'set<{type}>', default: []}], outputs: [{name: Out, type: exec}]}
+      - {id: 3620, name: 'Create {label} Set', category: 3, kind: pure, function: 'CreateSet<{cpp}>', inputs: [{name: Items, type: 'set<{type}>', default: []}], outputs: [{name: Value, type: 'set<{type}>'}]}
+      - {id: 3630, name: 'Add {label} Set Item', category: 3, kind: pure, function: 'SetAdd<{cpp}>', inputs: [{name: Set, type: 'set<{type}>', default: []}, {name: Item, type: '{type}', default: '$default'}], outputs: [{name: Value, type: 'set<{type}>'}]}
+      - {id: 3640, name: 'Remove {label} Set Item', category: 3, kind: pure, function: 'SetRemove<{cpp}>', inputs: [{name: Set, type: 'set<{type}>', default: []}, {name: Item, type: '{type}', default: '$default'}], outputs: [{name: Value, type: 'set<{type}>'}]}
+      - {id: 3650, name: '{label} Set Contains', category: 3, kind: pure, function: 'SetContains<{cpp}>', inputs: [{name: Set, type: 'set<{type}>', default: []}, {name: Item, type: '{type}', default: '$default'}], outputs: [{name: Value, type: bool}]}
+      - {id: 3660, name: '{label} Set Length', category: 3, kind: pure, function: 'SetSize<{cpp}>', inputs: [{name: Set, type: 'set<{type}>', default: []}], outputs: [{name: Value, type: int}]}
+      - {id: 3670, name: 'Clear {label} Set', category: 3, kind: pure, function: 'SetClear<{cpp}>', inputs: [{name: Set, type: 'set<{type}>', default: []}], outputs: [{name: Value, type: 'set<{type}>'}]}
+      - {id: 3700, name: 'Concat {label} Arrays', category: 3, kind: pure, function: 'ArrayConcat<{cpp}>', inputs: [{name: A, type: 'array<{type}>', default: []}, {name: B, type: 'array<{type}>', default: []}], outputs: [{name: Value, type: 'array<{type}>'}]}
+      - {id: 3710, name: 'Slice {label} Array', category: 3, kind: pure, function: 'ArraySlice<{cpp}>', inputs: [{name: Array, type: 'array<{type}>', default: []}, {name: Start, type: int, default: 0}, {name: End, type: int, default: 0}], outputs: [{name: Value, type: 'array<{type}>'}]}
+  - types: [float, int, bool, string, vec3, entity, vec2, vec4, quat, mat4]
+    nodes:
+      - {id: 3720, name: 'Sort {label} Array', category: 3, kind: collection_callback, function: SortArray, inputs: [{name: Array, type: 'array<{type}>', default: []}, {name: Callback, type: int, default: 0}], outputs: [{name: Value, type: 'array<{type}>'}]}
+      - {id: 3730, name: 'Filter {label} Array', category: 3, kind: collection_callback, function: FilterArray, inputs: [{name: Array, type: 'array<{type}>', default: []}, {name: Callback, type: int, default: 0}], outputs: [{name: Value, type: 'array<{type}>'}]}
+      - {id: 3740, name: 'Map {label} Array', category: 3, kind: collection_callback, function: MapArray, inputs: [{name: Array, type: 'array<{type}>', default: []}, {name: Callback, type: int, default: 0}], outputs: [{name: Value, type: 'array<{type}>'}]}
+

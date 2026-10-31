@@ -1,0 +1,89 @@
+{
+  "entities": [
+    {
+      "id": "group",
+      "name": "Robot group",
+      "position": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "rotation": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "scale": [
+        1.0,
+        1.0,
+        1.0
+      ]
+    },
+    {
+      "id": "player",
+      "layer": 3,
+      "mesh": "assets/robot.gltf",
+      "name": "Timed robot",
+      "parent": "group",
+      "position": [
+        -2.2,
+        0,
+        0
+      ],
+      "rotation": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "scale": [
+        1.0,
+        1.0,
+        1.0
+      ]
+    },
+    {
+      "id": "child",
+      "layer": 3,
+      "mesh": "assets/robot.gltf",
+      "name": "Group companion",
+      "parent": "group",
+      "position": [
+        0,
+        0,
+        0
+      ],
+      "rotation": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "scale": [
+        1.0,
+        1.0,
+        1.0
+      ]
+    },
+    {
+      "id": "beacon",
+      "layer": 7,
+      "mesh": "assets/robot.gltf",
+      "name": "Always active beacon",
+      "position": [
+        2.2,
+        0,
+        0
+      ],
+      "rotation": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "scale": [
+        1.0,
+        1.0,
+        1.0
+      ]
+    }
+  ],
+  "variables": {}
+}

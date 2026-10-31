@@ -1,0 +1,48 @@
+{
+  "entities": [
+    {
+      "id": "player",
+      "mesh": "assets/robot.gltf",
+      "name": "Saved robot",
+      "position": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "rotation": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "scale": [
+        1.0,
+        1.0,
+        1.0
+      ]
+    }
+  ],
+  "ui_assets": [
+    {
+      "id": "hud",
+      "name": "HUD",
+      "rml": "<rml><head><title>Robot save playground</title><style>\nbody { font-family:node-ui; font-size:17px; color:#edf1ff; }\n#panel { position:absolute; left:24px; top:24px; width:340px; height:340px; background-color:#171e32ee; border:1px #6276b0; }\nh2 { position:absolute; left:18px; top:0px; font-size:21px; }\n#score { position:absolute; left:18px; top:45px; }\ninput { font-family:node-ui; font-size:17px; color:#ffffff; border:1px #7489ce; background-color:#30446e; height:30px; }\ninput:hover { background-color:#486397; }\n#name { position:absolute; left:18px; top:100px; width:290px; background-color:#101829; }\n#add { position:absolute; left:18px; top:155px; width:290px; }\n#save { position:absolute; left:18px; top:208px; width:132px; }\n#load { position:absolute; left:174px; top:208px; width:134px; }\n#status { position:absolute; left:18px; top:248px; width:300px; font-size:14px; }\n</style></head><body><div id=\"panel\"><h2>Robot save playground</h2>\n<p id=\"score\">Score: 0</p><input id=\"name\" type=\"text\" value=\"Player\"/>\n<input id=\"add\" type=\"button\" value=\"Add point / turn robot\"/>\n<input id=\"save\" type=\"button\" value=\"Save\"/><input id=\"load\" type=\"button\" value=\"Load\"/>\n<p id=\"status\">Add points, enter a name, then Save.</p></div></body></rml>",
+      "type": "ui",
+      "version": 1
+    }
+  ],
+  "variables": {
+    "player_name": {
+      "type": "string",
+      "value": "Player"
+    },
+    "robot_rotation": {
+      "type": "vec3",
+      "value": [
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    "score": 0.0
+  }
+}

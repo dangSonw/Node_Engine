@@ -1,0 +1,9 @@
+{
+  "assets": [
+    "assets/board.gltf"
+  ],
+  "graph": "graphs/gameplay.json",
+  "name": "Texture conformance board",
+  "scene": "scenes/main.json",
+  "version": 1
+}

@@ -1,0 +1,36 @@
+{
+  "component_definitions": [],
+  "entities": [
+    {
+      "active": true,
+      "components": {},
+      "id": "root",
+      "layer": 3,
+      "mesh": "assets/robot.gltf",
+      "name": "Timed robot",
+      "parent": "",
+      "position": [
+        0,
+        0,
+        0
+      ],
+      "rotation": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "scale": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "tags": [],
+      "visible": true
+    }
+  ],
+  "id": "robot",
+  "name": "Robot",
+  "root": "root",
+  "type": "prefab",
+  "version": 1
+}

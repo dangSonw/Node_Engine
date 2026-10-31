@@ -1,0 +1,772 @@
+{
+  "functions": [
+    {
+      "graph": {
+        "links": [
+          {
+            "from": [
+              "entry",
+              "Out"
+            ],
+            "to": [
+              "delay",
+              "In"
+            ]
+          },
+          {
+            "from": [
+              "delay",
+              "Out"
+            ],
+            "to": [
+              "return",
+              "In"
+            ]
+          },
+          {
+            "from": [
+              "entry",
+              "Destination"
+            ],
+            "to": [
+              "return",
+              "Point"
+            ]
+          }
+        ],
+        "name": "Gameplay",
+        "nodes": [
+          {
+            "id": "entry",
+            "type": 6001,
+            "values": {}
+          },
+          {
+            "id": "delay",
+            "type": 2012,
+            "values": {
+              "Owner": "player",
+              "Seconds": 0.5
+            }
+          },
+          {
+            "id": "return",
+            "type": 6002,
+            "values": {}
+          }
+        ],
+        "version": 1
+      },
+      "id": 1386007602,
+      "inputs": [
+        {
+          "default": [
+            0,
+            0,
+            0
+          ],
+          "name": "Destination",
+          "type": "vec3"
+        }
+      ],
+      "name": "Delayed destination",
+      "outputs": [
+        {
+          "name": "Point",
+          "type": "vec3"
+        }
+      ],
+      "pure": false
+    }
+  ],
+  "links": [
+    {
+      "from": [
+        "start",
+        "Out"
+      ],
+      "to": [
+        "storage",
+        "In"
+      ]
+    },
+    {
+      "from": [
+        "storage",
+        "Out"
+      ],
+      "to": [
+        "hud",
+        "In"
+      ]
+    },
+    {
+      "from": [
+        "hud",
+        "Out"
+      ],
+      "to": [
+        "idle",
+        "In"
+      ]
+    },
+    {
+      "from": [
+        "idle",
+        "Out"
+      ],
+      "to": [
+        "wait",
+        "In"
+      ]
+    },
+    {
+      "from": [
+        "started",
+        "Value"
+      ],
+      "to": [
+        "wait",
+        "Condition"
+      ]
+    },
+    {
+      "from": [
+        "wait",
+        "Out"
+      ],
+      "to": [
+        "status",
+        "In"
+      ]
+    },
+    {
+      "from": [
+        "status",
+        "Out"
+      ],
+      "to": [
+        "tour",
+        "In"
+      ]
+    },
+    {
+      "from": [
+        "tour",
+        "Body"
+      ],
+      "to": [
+        "destination",
+        "In"
+      ]
+    },
+    {
+      "from": [
+        "tour",
+        "Item"
+      ],
+      "to": [
+        "destination",
+        "Destination"
+      ]
+    },
+    {
+      "from": [
+        "destination",
+        "Out"
+      ],
+      "to": [
+        "move",
+        "In"
+      ]
+    },
+    {
+      "from": [
+        "destination",
+        "Point"
+      ],
+      "to": [
+        "move",
+        "Value"
+      ]
+    },
+    {
+      "from": [
+        "move",
+        "Out"
+      ],
+      "to": [
+        "progress",
+        "In"
+      ]
+    },
+    {
+      "from": [
+        "tour",
+        "Index"
+      ],
+      "to": [
+        "increment",
+        "A"
+      ]
+    },
+    {
+      "from": [
+        "increment",
+        "Value"
+      ],
+      "to": [
+        "progress",
+        "Value"
+      ]
+    },
+    {
+      "from": [
+        "progress",
+        "Out"
+      ],
+      "to": [
+        "show",
+        "In"
+      ]
+    },
+    {
+      "from": [
+        "increment",
+        "Value"
+      ],
+      "to": [
+        "format",
+        "Value"
+      ]
+    },
+    {
+      "from": [
+        "format",
+        "Value"
+      ],
+      "to": [
+        "show",
+        "Text"
+      ]
+    },
+    {
+      "from": [
+        "tour",
+        "Done"
+      ],
+      "to": [
+        "done",
+        "In"
+      ]
+    },
+    {
+      "from": [
+        "input_Space",
+        "Out"
+      ],
+      "to": [
+        "if_Space",
+        "In"
+      ]
+    },
+    {
+      "from": [
+        "key_Space",
+        "Value"
+      ],
+      "to": [
+        "if_Space",
+        "Condition"
+      ]
+    },
+    {
+      "from": [
+        "if_Space",
+        "True"
+      ],
+      "to": [
+        "begin",
+        "In"
+      ]
+    },
+    {
+      "from": [
+        "input_R",
+        "Out"
+      ],
+      "to": [
+        "if_R",
+        "In"
+      ]
+    },
+    {
+      "from": [
+        "key_R",
+        "Value"
+      ],
+      "to": [
+        "if_R",
+        "Condition"
+      ]
+    },
+    {
+      "from": [
+        "if_R",
+        "True"
+      ],
+      "to": [
+        "pending",
+        "In"
+      ]
+    },
+    {
+      "from": [
+        "pending",
+        "Out"
+      ],
+      "to": [
+        "debounce",
+        "In"
+      ]
+    },
+    {
+      "from": [
+        "debounce",
+        "Out"
+      ],
+      "to": [
+        "signal",
+        "In"
+      ]
+    },
+    {
+      "from": [
+        "input_S",
+        "Out"
+      ],
+      "to": [
+        "if_S",
+        "In"
+      ]
+    },
+    {
+      "from": [
+        "key_S",
+        "Value"
+      ],
+      "to": [
+        "if_S",
+        "Condition"
+      ]
+    },
+    {
+      "from": [
+        "if_S",
+        "True"
+      ],
+      "to": [
+        "action_S",
+        "In"
+      ]
+    },
+    {
+      "from": [
+        "input_L",
+        "Out"
+      ],
+      "to": [
+        "if_L",
+        "In"
+      ]
+    },
+    {
+      "from": [
+        "key_L",
+        "Value"
+      ],
+      "to": [
+        "if_L",
+        "Condition"
+      ]
+    },
+    {
+      "from": [
+        "if_L",
+        "True"
+      ],
+      "to": [
+        "action_L",
+        "In"
+      ]
+    }
+  ],
+  "name": "Latent robot tour",
+  "nodes": [
+    {
+      "id": "start",
+      "position": [
+        0,
+        0
+      ],
+      "type": 1001,
+      "values": {}
+    },
+    {
+      "id": "storage",
+      "position": [
+        280,
+        0
+      ],
+      "type": 23001,
+      "values": {
+        "Game ID": "node-engine-latent-flow-demo"
+      }
+    },
+    {
+      "id": "hud",
+      "position": [
+        560,
+        0
+      ],
+      "type": 18001,
+      "values": {}
+    },
+    {
+      "id": "idle",
+      "position": [
+        840,
+        0
+      ],
+      "type": 13002,
+      "values": {
+        "Clip": "Idle"
+      }
+    },
+    {
+      "id": "wait",
+      "position": [
+        1120,
+        0
+      ],
+      "type": 2013,
+      "values": {
+        "Owner": "player"
+      }
+    },
+    {
+      "id": "started",
+      "position": [
+        1400,
+        0
+      ],
+      "type": 3102,
+      "values": {
+        "Name": "started"
+      }
+    },
+    {
+      "id": "status",
+      "position": [
+        0,
+        280
+      ],
+      "type": 18005,
+      "values": {
+        "Element": "status",
+        "Text": "Tour running: Delay inside a function"
+      }
+    },
+    {
+      "id": "tour",
+      "position": [
+        280,
+        280
+      ],
+      "type": 2304,
+      "values": {
+        "Array": [
+          [
+            -1.5,
+            0,
+            -1
+          ],
+          [
+            1.5,
+            0,
+            -1
+          ],
+          [
+            1.5,
+            0,
+            1
+          ],
+          [
+            -1.5,
+            0,
+            1
+          ]
+        ]
+      }
+    },
+    {
+      "id": "destination",
+      "position": [
+        560,
+        280
+      ],
+      "type": 1386007602,
+      "values": {}
+    },
+    {
+      "id": "move",
+      "position": [
+        840,
+        280
+      ],
+      "type": 9002,
+      "values": {}
+    },
+    {
+      "id": "progress",
+      "position": [
+        1120,
+        280
+      ],
+      "type": 3111,
+      "values": {
+        "Name": "progress"
+      }
+    },
+    {
+      "id": "increment",
+      "position": [
+        1400,
+        280
+      ],
+      "type": 4030,
+      "values": {
+        "B": 1
+      }
+    },
+    {
+      "id": "show",
+      "position": [
+        0,
+        560
+      ],
+      "type": 18005,
+      "values": {
+        "Element": "progress"
+      }
+    },
+    {
+      "id": "format",
+      "position": [
+        280,
+        560
+      ],
+      "type": 3051,
+      "values": {}
+    },
+    {
+      "id": "done",
+      "position": [
+        560,
+        560
+      ],
+      "type": 18005,
+      "values": {
+        "Element": "status",
+        "Text": "Tour complete"
+      }
+    },
+    {
+      "id": "input_Space",
+      "position": [
+        840,
+        560
+      ],
+      "type": 1002,
+      "values": {}
+    },
+    {
+      "id": "key_Space",
+      "position": [
+        1120,
+        560
+      ],
+      "type": 10002,
+      "values": {
+        "Key": "Space"
+      }
+    },
+    {
+      "id": "if_Space",
+      "position": [
+        1400,
+        560
+      ],
+      "type": 2001,
+      "values": {}
+    },
+    {
+      "id": "begin",
+      "position": [
+        0,
+        840
+      ],
+      "type": 3112,
+      "values": {
+        "Name": "started",
+        "Value": true
+      }
+    },
+    {
+      "id": "input_R",
+      "position": [
+        280,
+        840
+      ],
+      "type": 1002,
+      "values": {}
+    },
+    {
+      "id": "key_R",
+      "position": [
+        560,
+        840
+      ],
+      "type": 10002,
+      "values": {
+        "Key": "R"
+      }
+    },
+    {
+      "id": "if_R",
+      "position": [
+        840,
+        840
+      ],
+      "type": 2001,
+      "values": {}
+    },
+    {
+      "id": "pending",
+      "position": [
+        1120,
+        840
+      ],
+      "type": 18005,
+      "values": {
+        "Element": "signal",
+        "Text": "Pending (each R restarts the delay)"
+      }
+    },
+    {
+      "id": "debounce",
+      "position": [
+        1400,
+        840
+      ],
+      "type": 2014,
+      "values": {
+        "Owner": "player",
+        "Seconds": 0.5
+      }
+    },
+    {
+      "id": "signal",
+      "position": [
+        0,
+        1120
+      ],
+      "type": 18005,
+      "values": {
+        "Element": "signal",
+        "Text": "Settled"
+      }
+    },
+    {
+      "id": "input_S",
+      "position": [
+        280,
+        1120
+      ],
+      "type": 1002,
+      "values": {}
+    },
+    {
+      "id": "key_S",
+      "position": [
+        560,
+        1120
+      ],
+      "type": 10002,
+      "values": {
+        "Key": "S"
+      }
+    },
+    {
+      "id": "if_S",
+      "position": [
+        840,
+        1120
+      ],
+      "type": 2001,
+      "values": {}
+    },
+    {
+      "id": "action_S",
+      "position": [
+        1120,
+        1120
+      ],
+      "type": 23016,
+      "values": {
+        "Slot": "tour"
+      }
+    },
+    {
+      "id": "input_L",
+      "position": [
+        1400,
+        1120
+      ],
+      "type": 1002,
+      "values": {}
+    },
+    {
+      "id": "key_L",
+      "position": [
+        0,
+        1400
+      ],
+      "type": 10002,
+      "values": {
+        "Key": "L"
+      }
+    },
+    {
+      "id": "if_L",
+      "position": [
+        280,
+        1400
+      ],
+      "type": 2001,
+      "values": {}
+    },
+    {
+      "id": "action_L",
+      "position": [
+        560,
+        1400
+      ],
+      "type": 23017,
+      "values": {
+        "Slot": "tour"
+      }
+    }
+  ],
+  "version": 1
+}

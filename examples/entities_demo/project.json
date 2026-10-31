@@ -1,0 +1,9 @@
+{
+  "assets": [
+    "assets/robot.gltf"
+  ],
+  "graph": "graphs/gameplay.json",
+  "name": "Entity lifecycle and hierarchy",
+  "scene": "scenes/main.json",
+  "version": 1
+}

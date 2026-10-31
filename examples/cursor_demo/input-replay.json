@@ -1,0 +1,111 @@
+{
+  "events": [
+    {
+      "frame": 0,
+      "type": "position",
+      "x": 25.5,
+      "y": 50.25
+    },
+    {
+      "button": "K",
+      "down": true,
+      "frame": 0
+    },
+    {
+      "button": "H",
+      "down": true,
+      "frame": 1
+    },
+    {
+      "dx": 15,
+      "dy": -5,
+      "frame": 1,
+      "type": "motion",
+      "x": 40.5,
+      "y": 45.25
+    },
+    {
+      "frame": 1,
+      "type": "wheel",
+      "x": 0.25,
+      "y": 1.5
+    },
+    {
+      "button": "V",
+      "down": true,
+      "frame": 2
+    },
+    {
+      "dx": 10.25,
+      "dy": 2.75,
+      "frame": 2,
+      "type": "motion",
+      "x": 50.75,
+      "y": 48
+    },
+    {
+      "frame": 2,
+      "type": "wheel",
+      "x": -0.5,
+      "y": -0.25
+    },
+    {
+      "button": "S",
+      "down": true,
+      "frame": 2
+    },
+    {
+      "button": "S",
+      "down": false,
+      "frame": 3
+    },
+    {
+      "dx": 30,
+      "dy": 10,
+      "frame": 4,
+      "type": "motion",
+      "x": 80.75,
+      "y": 58
+    },
+    {
+      "button": "U",
+      "down": true,
+      "frame": 5
+    },
+    {
+      "dx": -90.75,
+      "dy": -38,
+      "frame": 6,
+      "type": "motion",
+      "x": -10,
+      "y": 20
+    },
+    {
+      "button": "H",
+      "down": false,
+      "frame": 7
+    },
+    {
+      "button": "H",
+      "down": true,
+      "frame": 7
+    },
+    {
+      "frame": 7,
+      "type": "wheel",
+      "x": 0.125,
+      "y": -0.5
+    },
+    {
+      "frame": 9,
+      "release_all": true
+    },
+    {
+      "frame": 10,
+      "type": "position",
+      "x": 120,
+      "y": 90
+    }
+  ],
+  "version": 2
+}

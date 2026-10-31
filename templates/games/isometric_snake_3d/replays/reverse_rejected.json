@@ -1,0 +1,15 @@
+{
+  "events": [
+    {
+      "button": "Left",
+      "down": true,
+      "frame": 1
+    },
+    {
+      "button": "Left",
+      "down": false,
+      "frame": 2
+    }
+  ],
+  "version": 1
+}

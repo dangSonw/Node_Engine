@@ -1,0 +1,61 @@
+{
+  "active_camera": "camera",
+  "entities": [
+    {
+      "id": "player",
+      "mesh": "assets/robot.gltf",
+      "name": "Player",
+      "position": [
+        0,
+        0,
+        0
+      ],
+      "rotation": [
+        0,
+        25,
+        0
+      ],
+      "scale": [
+        1.0,
+        1.0,
+        1.0
+      ]
+    },
+    {
+      "camera": {
+        "far": 1000.0,
+        "fov": 60.0,
+        "near": 0.1,
+        "projection": "perspective",
+        "size": 10.0
+      },
+      "id": "camera",
+      "name": "Camera",
+      "position": [
+        0,
+        1,
+        8
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ]
+    }
+  ],
+  "ui_assets": [
+    {
+      "id": "hud",
+      "name": "HUD",
+      "rml": "<rml><head><style>body {width:100%;height:100%;font-family:node-ui;font-size:15px;color:#ffffff;pointer-events:none;}\n        #help {position:absolute;left:12px;top:12px;padding:12px;width:94%;max-width:440px;box-sizing:border-box;background-color:#171e32dd;}</style></head>\n        <body><div id=\"help\">MULTI-SCENE PLAYGROUND — MENU<br/>\n        C: enter level / M: menu / R: reload current scene<br/>\n        S: save whole game / L: load saved scene<br/>\n        P: pause world / U: resume / Q: quit<br/>\n        X: try unknown scene (world stays intact)<br/>\n        One Blockbench robot. Audio starts in the level.<br/>\n        <span id=\"status\"></span></div></body></rml>",
+      "type": "ui",
+      "version": 1
+    }
+  ],
+  "variables": {}
+}

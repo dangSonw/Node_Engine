@@ -1,0 +1,111 @@
+{
+  "active_camera": "camera",
+  "entities": [
+    {
+      "id": "player",
+      "mesh": "assets/robot.glb",
+      "name": "Input robot",
+      "position": [
+        0,
+        0,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ]
+    },
+    {
+      "camera": {
+        "far": 1000.0,
+        "fov": 60.0,
+        "near": 0.1,
+        "projection": "perspective",
+        "size": 10.0
+      },
+      "id": "camera",
+      "name": "Camera",
+      "position": [
+        0,
+        1.5,
+        8
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ]
+    }
+  ],
+  "ui_assets": [
+    {
+      "id": "hud",
+      "name": "HUD",
+      "rml": "<rml><head><style>body {width:100%;height:100%;font-family:node-ui;font-size:15px;color:#f4f5ff;pointer-events:none;} #help {position:absolute;left:8px;top:8px;right:8px;max-width:500px;padding:8px;background-color:#171d2c;}</style></head>\n    <body><div id=\"help\">Mouse input: position, motion and wheel<br/>\n    Left-drag: rotate / Wheel: move robot nearer or farther<br/>S/L: save/load / R: reset pose<br/>\n    Position: <span id=\"position\">0</span><br/>Frame delta: <span id=\"delta\">0</span><br/>\n    Frame wheel: <span id=\"wheel\">0</span><br/>Total delta: <span id=\"total_delta\">0</span><br/>\n    Total wheel: <span id=\"total_wheel\">0</span></div></body></rml>",
+      "type": "ui",
+      "version": 1
+    }
+  ],
+  "variables": {
+    "delta": {
+      "type": "vec3",
+      "value": [
+        0,
+        0,
+        0
+      ]
+    },
+    "position": {
+      "type": "vec3",
+      "value": [
+        0,
+        0,
+        0
+      ]
+    },
+    "start_position": {
+      "type": "vec3",
+      "value": [
+        0,
+        0,
+        0
+      ]
+    },
+    "total_delta": {
+      "type": "vec3",
+      "value": [
+        0,
+        0,
+        0
+      ]
+    },
+    "total_wheel": {
+      "type": "vec3",
+      "value": [
+        0,
+        0,
+        0
+      ]
+    },
+    "wheel": {
+      "type": "vec3",
+      "value": [
+        0,
+        0,
+        0
+      ]
+    }
+  },
+  "version": 1
+}

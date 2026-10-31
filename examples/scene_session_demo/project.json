@@ -1,0 +1,19 @@
+{
+  "entry_scene": "menu",
+  "name": "Scene playground",
+  "scenes": [
+    {
+      "graph": "graphs/menu.json",
+      "id": "menu",
+      "name": "Menu",
+      "scene": "scenes/menu.json"
+    },
+    {
+      "graph": "graphs/level.json",
+      "id": "level",
+      "name": "Level",
+      "scene": "scenes/level.json"
+    }
+  ],
+  "version": 2
+}

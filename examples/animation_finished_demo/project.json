@@ -1,0 +1,6 @@
+{
+  "graph": "graphs/gameplay.json",
+  "name": "Animation completion playground",
+  "scene": "scenes/main.json",
+  "version": 1
+}

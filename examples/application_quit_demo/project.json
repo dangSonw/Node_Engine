@@ -1,0 +1,6 @@
+{
+  "graph": "graphs/gameplay.json",
+  "name": "Save before application quit",
+  "scene": "scenes/main.json",
+  "version": 1
+}

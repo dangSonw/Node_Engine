@@ -1,0 +1,58 @@
+{
+  "entities": [
+    {
+      "id": "group",
+      "name": "Robot Pair",
+      "position": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "rotation": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "scale": [
+        1.0,
+        1.0,
+        1.0
+      ]
+    }
+  ],
+  "id": "robot_pair",
+  "name": "Robot Pair",
+  "nested": [
+    {
+      "id": "left",
+      "overrides": {
+        "root": {
+          "position": [
+            -2.2,
+            0,
+            0
+          ]
+        }
+      },
+      "parent": "group",
+      "prefab": "robot"
+    },
+    {
+      "id": "right",
+      "overrides": {
+        "root": {
+          "position": [
+            2.2,
+            0,
+            0
+          ]
+        }
+      },
+      "parent": "group",
+      "prefab": "inactive_robot"
+    }
+  ],
+  "root": "group",
+  "type": "prefab",
+  "version": 1
+}

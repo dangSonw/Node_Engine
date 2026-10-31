@@ -1,0 +1,15 @@
+{
+  "events": [
+    {
+      "button": "R",
+      "down": true,
+      "frame": 110
+    },
+    {
+      "button": "R",
+      "down": false,
+      "frame": 111
+    }
+  ],
+  "version": 1
+}

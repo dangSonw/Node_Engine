@@ -1,0 +1,85 @@
+{
+  "active_camera": "camera",
+  "audio_assets": [
+    {
+      "file": "assets/tone.wav",
+      "id": "tone",
+      "name": "Checkpoint tone",
+      "type": "sound",
+      "version": 1
+    }
+  ],
+  "entities": [
+    {
+      "id": "player",
+      "mesh": "assets/robot.gltf",
+      "name": "Checkpoint robot",
+      "position": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "rotation": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "scale": [
+        1.0,
+        1.0,
+        1.0
+      ]
+    },
+    {
+      "camera": {
+        "far": 1000.0,
+        "fov": 60.0,
+        "near": 0.1,
+        "projection": "perspective",
+        "size": 10.0
+      },
+      "id": "camera",
+      "name": "Game camera",
+      "position": [
+        2.0,
+        1.8,
+        4.0
+      ],
+      "rotation": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "scale": [
+        1.0,
+        1.0,
+        1.0
+      ]
+    }
+  ],
+  "ui_assets": [
+    {
+      "id": "hud",
+      "name": "HUD",
+      "rml": "<rml><head><style>\nbody {font-family:node-ui;font-size:18px;color:#edf1ff;}\n#panel {position:absolute;left:24px;top:24px;width:320px;height:240px;background-color:#171e32ee;}\np {position:absolute;left:16px;width:285px;}\n#title {top:10px;} #score {top:44px;} #hint {top:145px;font-size:15px;} #status {top:177px;font-size:14px;}\ninput {position:absolute;top:102px;font-family:node-ui;font-size:18px;color:#ffffff;height:34px;width:130px;background-color:#30446e;border:1px #7489ce;}\ninput:hover {background-color:#486397;} #save {left:16px;} #load {left:172px;}\n</style></head><body><div id=\"panel\"><p id=\"title\">Whole-game checkpoint</p><p id=\"score\">0</p>\n<input id=\"save\" type=\"button\" value=\"Save\"/><input id=\"load\" type=\"button\" value=\"Load\"/>\n<p id=\"hint\">S: save / L: load</p><p id=\"status\">Ready</p></div></body></rml>",
+      "type": "ui",
+      "version": 1
+    }
+  ],
+  "variables": {
+    "accepted": {
+      "type": "bool",
+      "value": false
+    },
+    "completed": {
+      "type": "bool",
+      "value": false
+    },
+    "pending": {
+      "type": "bool",
+      "value": false
+    },
+    "score": 0.0,
+    "ticks": 0.0
+  }
+}

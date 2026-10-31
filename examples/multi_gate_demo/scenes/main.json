@@ -1,0 +1,158 @@
+{
+  "active_camera": "camera",
+  "entities": [
+    {
+      "id": "player",
+      "mesh": "assets/robot.glb",
+      "name": "Touring robot",
+      "position": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "rotation": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "scale": [
+        1.0,
+        1.0,
+        1.0
+      ]
+    },
+    {
+      "id": "station0",
+      "mesh": "assets/robot.glb",
+      "name": "Station 0",
+      "position": [
+        -1.5,
+        -0.5,
+        -1
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "scale": [
+        0.25,
+        0.25,
+        0.25
+      ]
+    },
+    {
+      "id": "station1",
+      "mesh": "assets/robot.glb",
+      "name": "Station 1",
+      "position": [
+        1.5,
+        -0.5,
+        -1
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "scale": [
+        0.25,
+        0.25,
+        0.25
+      ]
+    },
+    {
+      "id": "station2",
+      "mesh": "assets/robot.glb",
+      "name": "Station 2",
+      "position": [
+        1.5,
+        -0.5,
+        1
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "scale": [
+        0.25,
+        0.25,
+        0.25
+      ]
+    },
+    {
+      "id": "station3",
+      "mesh": "assets/robot.glb",
+      "name": "Station 3",
+      "position": [
+        -1.5,
+        -0.5,
+        1
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "scale": [
+        0.25,
+        0.25,
+        0.25
+      ]
+    },
+    {
+      "camera": {
+        "far": 1000.0,
+        "fov": 60.0,
+        "near": 0.1,
+        "projection": "perspective",
+        "size": 10.0
+      },
+      "id": "camera",
+      "name": "Camera",
+      "position": [
+        0,
+        1.5,
+        8
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ]
+    }
+  ],
+  "ui_assets": [
+    {
+      "id": "hud",
+      "name": "HUD",
+      "rml": "<rml><head><style>body {width:100%;height:100%;font-family:node-ui;font-size:14px;color:#ffffff;pointer-events:none;}\n    #help {position:absolute;left:8px;top:8px;padding:8px;width:94%;max-width:480px;box-sizing:border-box;background-color:#171e32dd;}</style></head>\n    <body><div id=\"help\">Multi Gate: four-station robot tour<br/>\n    Space: next route / M: toggle random / T: toggle loop<br/>\n    R: reset tour and seed 42 / S: save / L: load<br/>\n    <span id=\"mode\">Sequential</span> / <span id=\"loop\">Stop after four routes</span><br/>\n    Route history: <span id=\"history\"></span></div></body></rml>",
+      "type": "ui",
+      "version": 1
+    }
+  ],
+  "variables": {
+    "history": {
+      "type": "string",
+      "value": ""
+    },
+    "loop": {
+      "type": "bool",
+      "value": false
+    },
+    "random": {
+      "type": "bool",
+      "value": false
+    },
+    "selected": {
+      "type": "int",
+      "value": -1
+    }
+  }
+}

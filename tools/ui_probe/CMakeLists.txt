@@ -1,0 +1,23 @@
+cmake_minimum_required(VERSION 3.24)
+project(NodeUiProbe LANGUAGES C CXX)
+set(CMAKE_CXX_STANDARD 20)
+get_filename_component(engine "${CMAKE_CURRENT_SOURCE_DIR}/../.." ABSOLUTE)
+if(WIN32)
+  list(APPEND CMAKE_PREFIX_PATH "${engine}/deps/SDL3-3.4.18/x86_64-w64-mingw32"
+    "${engine}/deps/SDL3_image-3.4.8/x86_64-w64-mingw32")
+endif()
+find_package(SDL3 CONFIG REQUIRED)
+find_package(SDL3_image CONFIG REQUIRED)
+include("${engine}/cmake/UiDependencies.cmake")
+node_engine_ui_dependencies()
+add_executable(node_ui_probe main.cpp)
+target_include_directories(node_ui_probe PRIVATE "${engine}/deps/include")
+target_link_libraries(node_ui_probe PRIVATE node_ui_renderer node_ui_session Freetype::Freetype)
+if(MINGW)
+  target_link_options(node_ui_probe PRIVATE -static)
+endif()
+if(WIN32)
+  add_custom_command(TARGET node_ui_probe POST_BUILD
+    COMMAND ${CMAKE_COMMAND} -E copy_if_different "$<TARGET_FILE:SDL3::SDL3-shared>" "$<TARGET_FILE_DIR:node_ui_probe>"
+    COMMAND ${CMAKE_COMMAND} -E copy_if_different "$<TARGET_FILE:SDL3_image::SDL3_image-shared>" "$<TARGET_FILE_DIR:node_ui_probe>")
+endif()

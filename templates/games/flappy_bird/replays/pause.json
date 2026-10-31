@@ -1,0 +1,25 @@
+{
+  "events": [
+    {
+      "button": "Space",
+      "down": true,
+      "frame": 0
+    },
+    {
+      "button": "Space",
+      "down": false,
+      "frame": 1
+    },
+    {
+      "button": "P",
+      "down": true,
+      "frame": 15
+    },
+    {
+      "button": "P",
+      "down": false,
+      "frame": 16
+    }
+  ],
+  "version": 1
+}

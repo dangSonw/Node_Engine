@@ -1,0 +1,223 @@
+{
+  "links": [
+    {
+      "from": [
+        "start",
+        "Out"
+      ],
+      "to": [
+        "set",
+        "In"
+      ]
+    },
+    {
+      "from": [
+        "set",
+        "Out"
+      ],
+      "to": [
+        "loop",
+        "In"
+      ]
+    },
+    {
+      "from": [
+        "loop",
+        "Body"
+      ],
+      "to": [
+        "inc",
+        "In"
+      ]
+    },
+    {
+      "from": [
+        "get",
+        "Value"
+      ],
+      "to": [
+        "add",
+        "A"
+      ]
+    },
+    {
+      "from": [
+        "add",
+        "Value"
+      ],
+      "to": [
+        "inc",
+        "Value"
+      ]
+    },
+    {
+      "from": [
+        "update",
+        "Out"
+      ],
+      "to": [
+        "seq",
+        "In"
+      ]
+    },
+    {
+      "from": [
+        "seq",
+        "First"
+      ],
+      "to": [
+        "rotate",
+        "In"
+      ]
+    },
+    {
+      "from": [
+        "seq",
+        "Then"
+      ],
+      "to": [
+        "branch",
+        "In"
+      ]
+    },
+    {
+      "from": [
+        "key",
+        "Value"
+      ],
+      "to": [
+        "branch",
+        "Condition"
+      ]
+    },
+    {
+      "from": [
+        "branch",
+        "True"
+      ],
+      "to": [
+        "move",
+        "In"
+      ]
+    },
+    {
+      "from": [
+        "dt",
+        "Value"
+      ],
+      "to": [
+        "scale",
+        "Scale"
+      ]
+    },
+    {
+      "from": [
+        "scale",
+        "Value"
+      ],
+      "to": [
+        "move",
+        "Delta"
+      ]
+    }
+  ],
+  "name": "Core Demo",
+  "nodes": [
+    {
+      "id": "start",
+      "type": 1001,
+      "values": {}
+    },
+    {
+      "id": "set",
+      "type": 3005,
+      "values": {
+        "Name": "score",
+        "Value": 0
+      }
+    },
+    {
+      "id": "loop",
+      "type": 2003,
+      "values": {
+        "Count": 3
+      }
+    },
+    {
+      "id": "get",
+      "type": 3004,
+      "values": {
+        "Name": "score"
+      }
+    },
+    {
+      "id": "add",
+      "type": 4001,
+      "values": {
+        "B": 1
+      }
+    },
+    {
+      "id": "inc",
+      "type": 3005,
+      "values": {
+        "Name": "score"
+      }
+    },
+    {
+      "id": "update",
+      "type": 1002,
+      "values": {}
+    },
+    {
+      "id": "seq",
+      "type": 2002,
+      "values": {}
+    },
+    {
+      "id": "rotate",
+      "type": 9004,
+      "values": {
+        "Degrees": [
+          0,
+          1,
+          0
+        ]
+      }
+    },
+    {
+      "id": "branch",
+      "type": 2001,
+      "values": {}
+    },
+    {
+      "id": "key",
+      "type": 10001,
+      "values": {
+        "Key": "D"
+      }
+    },
+    {
+      "id": "move",
+      "type": 9003,
+      "values": {}
+    },
+    {
+      "id": "dt",
+      "type": 5001,
+      "values": {}
+    },
+    {
+      "id": "scale",
+      "type": 4022,
+      "values": {
+        "Vector": [
+          3,
+          0,
+          0
+        ]
+      }
+    }
+  ],
+  "version": 1
+}

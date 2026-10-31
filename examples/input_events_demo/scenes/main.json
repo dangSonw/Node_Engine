@@ -1,0 +1,124 @@
+{
+  "active_camera": "camera",
+  "entities": [
+    {
+      "id": "player",
+      "mesh": "assets/robot.glb",
+      "name": "Input robot",
+      "position": [
+        0,
+        0,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ]
+    },
+    {
+      "camera": {
+        "far": 1000.0,
+        "fov": 60.0,
+        "near": 0.1,
+        "projection": "perspective",
+        "size": 10.0
+      },
+      "id": "camera",
+      "name": "Camera",
+      "position": [
+        0,
+        1.5,
+        8
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ]
+    }
+  ],
+  "input": {
+    "actions": {
+      "turn": [
+        "Space",
+        "MouseLeft"
+      ]
+    },
+    "axes": {
+      "horizontal": {
+        "negative": [
+          "A",
+          "Left"
+        ],
+        "positive": [
+          "D",
+          "Right"
+        ]
+      }
+    },
+    "version": 1
+  },
+  "ui_assets": [
+    {
+      "id": "hud",
+      "name": "HUD",
+      "rml": "<rml><head><style>body {width:100%;height:100%;font-family:node-ui;font-size:15px;color:#f4f5ff;pointer-events:none;} #help {position:absolute;left:8px;top:8px;right:8px;max-width:510px;padding:8px;background-color:#171d2c;}</style></head>\n    <body><div id=\"help\">Input events: ordered keyboard, mouse and mapped actions<br/>\n    Space / left mouse: turn once per action press<br/>A/D or arrows: move / R: reset pose / S/L: save/load<br/>\n    Key presses: <span id=\"presses\">0</span> / releases: <span id=\"releases\">0</span><br/>\n    Mouse edges: <span id=\"mouse_edges\">0</span> / down: <span id=\"last_down\">false</span><br/>\n    Turns: <span id=\"turns\">0</span> / action releases: <span id=\"action_releases\">0</span><br/>\n    Settled after delay: <span id=\"settled\">0</span><br/>\n    Last key: <span id=\"last_key\">None</span> / action: <span id=\"last_action\">None</span><br/>\n    Captured after delay: <span id=\"delayed_action\">None</span></div></body></rml>",
+      "type": "ui",
+      "version": 1
+    }
+  ],
+  "variables": {
+    "action_releases": {
+      "type": "int",
+      "value": 0
+    },
+    "delayed_action": {
+      "type": "string",
+      "value": "None"
+    },
+    "last_action": {
+      "type": "string",
+      "value": "None"
+    },
+    "last_down": {
+      "type": "bool",
+      "value": false
+    },
+    "last_key": {
+      "type": "string",
+      "value": "None"
+    },
+    "mouse_edges": {
+      "type": "int",
+      "value": 0
+    },
+    "presses": {
+      "type": "int",
+      "value": 0
+    },
+    "releases": {
+      "type": "int",
+      "value": 0
+    },
+    "settled": {
+      "type": "int",
+      "value": 0
+    },
+    "turns": {
+      "type": "int",
+      "value": 0
+    }
+  },
+  "version": 1
+}

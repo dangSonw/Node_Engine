@@ -1,0 +1,220 @@
+{
+  "controls": "WASD / arrows: turn; P: pause; R: restart",
+  "scenarios": [
+    {
+      "assertions": [
+        {
+          "op": "eq",
+          "path": "variables.score",
+          "value": 0
+        },
+        {
+          "op": "eq",
+          "path": "variables.alive",
+          "value": true
+        },
+        {
+          "op": "eq",
+          "path": "variables.steps",
+          "value": 0
+        }
+      ],
+      "covers": [],
+      "frames": 1,
+      "id": "start",
+      "replay": "replays/start.json"
+    },
+    {
+      "assertions": [
+        {
+          "op": "eq",
+          "path": "variables.score",
+          "value": 1
+        },
+        {
+          "op": "eq",
+          "path": "variables.alive",
+          "value": true
+        },
+        {
+          "op": "len_eq",
+          "path": "variables.snake",
+          "value": 5
+        }
+      ],
+      "before_assertions": [
+        {
+          "op": "eq",
+          "path": "variables.score",
+          "value": 0
+        },
+        {
+          "op": "eq",
+          "path": "variables.alive",
+          "value": true
+        }
+      ],
+      "before_frames": 22,
+      "covers": [
+        "scoring",
+        "growth"
+      ],
+      "frames": 34,
+      "id": "eat",
+      "replay": "replays/eat.json"
+    },
+    {
+      "assertions": [
+        {
+          "op": "eq",
+          "path": "variables.score",
+          "value": 1
+        },
+        {
+          "op": "eq",
+          "path": "variables.alive",
+          "value": false
+        },
+        {
+          "op": "eq",
+          "path": "variables.status",
+          "value": "WALL HIT  /  R TO RESTART"
+        }
+      ],
+      "covers": [
+        "wall_collision"
+      ],
+      "frames": 110,
+      "id": "wall",
+      "replay": "replays/wall.json"
+    },
+    {
+      "assertions": [
+        {
+          "op": "eq",
+          "path": "variables.score",
+          "value": 0
+        },
+        {
+          "op": "eq",
+          "path": "variables.alive",
+          "value": true
+        },
+        {
+          "op": "eq",
+          "path": "variables.steps",
+          "value": 0
+        },
+        {
+          "op": "eq",
+          "path": "variables.best",
+          "value": 1
+        }
+      ],
+      "before_assertions": [
+        {
+          "op": "eq",
+          "path": "variables.score",
+          "value": 1
+        },
+        {
+          "op": "eq",
+          "path": "variables.alive",
+          "value": false
+        }
+      ],
+      "before_frames": 109,
+      "covers": [
+        "restart"
+      ],
+      "frames": 112,
+      "id": "restart",
+      "replay": "replays/restart.json"
+    },
+    {
+      "assertions": [
+        {
+          "op": "eq",
+          "path": "variables.alive",
+          "value": true
+        },
+        {
+          "op": "eq",
+          "path": "variables.direction",
+          "value": [
+            1,
+            0,
+            0
+          ]
+        },
+        {
+          "op": "eq",
+          "path": "variables.steps",
+          "value": 1
+        }
+      ],
+      "covers": [],
+      "frames": 12,
+      "id": "reverse_rejected",
+      "replay": "replays/reverse_rejected.json"
+    },
+    {
+      "assertions": [
+        {
+          "op": "eq",
+          "path": "variables.paused",
+          "value": true
+        },
+        {
+          "op": "eq",
+          "path": "variables.steps",
+          "value": 0
+        },
+        {
+          "op": "eq",
+          "path": "variables.score",
+          "value": 0
+        },
+        {
+          "op": "eq",
+          "path": "variables.alive",
+          "value": true
+        }
+      ],
+      "covers": [],
+      "frames": 90,
+      "id": "pause",
+      "replay": "replays/pause.json"
+    },
+    {
+      "assertions": [
+        {
+          "op": "eq",
+          "path": "variables.score",
+          "value": 1
+        },
+        {
+          "op": "eq",
+          "path": "variables.alive",
+          "value": false
+        },
+        {
+          "op": "eq",
+          "path": "variables.status",
+          "value": "SELF COLLISION  /  R TO RESTART"
+        }
+      ],
+      "covers": [
+        "self_collision"
+      ],
+      "frames": 70,
+      "id": "self_collision",
+      "replay": "replays/self_collision.json"
+    }
+  ],
+  "state_paths": {
+    "resets": "variables.restart_count"
+  },
+  "tick_seconds": 0.18,
+  "version": 1
+}

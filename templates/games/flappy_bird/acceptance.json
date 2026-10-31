@@ -1,0 +1,241 @@
+{
+  "controls": "Space/click flap; P pause; R restart",
+  "scenarios": [
+    {
+      "assertions": [
+        {
+          "op": "eq",
+          "path": "variables.started",
+          "value": false
+        },
+        {
+          "op": "eq",
+          "path": "variables.alive",
+          "value": true
+        },
+        {
+          "op": "eq",
+          "path": "variables.score",
+          "value": 0
+        }
+      ],
+      "covers": [
+        "ready"
+      ],
+      "frames": 30,
+      "id": "ready",
+      "replay": "replays/ready.json"
+    },
+    {
+      "assertions": [
+        {
+          "op": "ge",
+          "path": "variables.score",
+          "value": 1
+        },
+        {
+          "op": "eq",
+          "path": "variables.alive",
+          "value": true
+        },
+        {
+          "op": "ge",
+          "path": "variables.best",
+          "value": 1
+        }
+      ],
+      "before_frames": 1,
+      "covers": [
+        "scoring"
+      ],
+      "frames": 250,
+      "id": "score",
+      "replay": "replays/score.json"
+    },
+    {
+      "assertions": [
+        {
+          "op": "eq",
+          "path": "variables.alive",
+          "value": false
+        },
+        {
+          "op": "eq",
+          "path": "variables.score",
+          "value": 0
+        },
+        {
+          "op": "eq",
+          "path": "variables.death_reason",
+          "value": "ground"
+        }
+      ],
+      "covers": [
+        "death"
+      ],
+      "frames": 120,
+      "id": "death",
+      "replay": "replays/death.json"
+    },
+    {
+      "assertions": [
+        {
+          "op": "eq",
+          "path": "variables.alive",
+          "value": false
+        },
+        {
+          "op": "eq",
+          "path": "variables.death_reason",
+          "value": "pipe"
+        },
+        {
+          "op": "gt",
+          "path": "variables.bird_y",
+          "value": -3.0
+        },
+        {
+          "op": "lt",
+          "path": "variables.bird_y",
+          "value": 3.0
+        }
+      ],
+      "covers": [
+        "death",
+        "pipe_collision"
+      ],
+      "frames": 170,
+      "id": "pipe_death",
+      "replay": "replays/pipe_death.json"
+    },
+    {
+      "assertions": [
+        {
+          "op": "eq",
+          "path": "variables.alive",
+          "value": true
+        },
+        {
+          "op": "eq",
+          "path": "variables.started",
+          "value": false
+        },
+        {
+          "op": "eq",
+          "path": "variables.score",
+          "value": 0
+        },
+        {
+          "op": "ge",
+          "path": "variables.best",
+          "value": 1
+        },
+        {
+          "op": "eq",
+          "path": "variables.bird_y",
+          "value": 0.0
+        },
+        {
+          "op": "eq",
+          "path": "variables.restart_count",
+          "value": 1
+        }
+      ],
+      "before_assertions": [
+        {
+          "op": "eq",
+          "path": "variables.alive",
+          "value": false
+        },
+        {
+          "op": "ge",
+          "path": "variables.score",
+          "value": 1
+        }
+      ],
+      "before_frames": 299,
+      "covers": [
+        "restart"
+      ],
+      "frames": 310,
+      "id": "restart",
+      "replay": "replays/restart_scored.json"
+    },
+    {
+      "assertions": [
+        {
+          "op": "eq",
+          "path": "variables.paused",
+          "value": true
+        },
+        {
+          "op": "eq",
+          "path": "variables.alive",
+          "value": true
+        },
+        {
+          "op": "eq",
+          "path": "variables.score",
+          "value": 0
+        },
+        {
+          "op": "eq",
+          "path": "variables.steps",
+          "value": 15
+        },
+        {
+          "op": "eq",
+          "path": "variables.bird_y",
+          "value": 0.875
+        }
+      ],
+      "covers": [
+        "pause"
+      ],
+      "frames": 90,
+      "id": "pause",
+      "replay": "replays/pause.json"
+    },
+    {
+      "assertions": [
+        {
+          "op": "eq",
+          "path": "variables.alive",
+          "value": true
+        },
+        {
+          "op": "eq",
+          "path": "variables.steps",
+          "value": 300
+        },
+        {
+          "op": "ne",
+          "path": "variables.pipe_0_gap",
+          "value": 0.0
+        },
+        {
+          "op": "gt",
+          "path": "variables.pipe_0_x",
+          "value": 0.0
+        },
+        {
+          "op": "eq",
+          "path": "variables.score",
+          "value": 2
+        }
+      ],
+      "covers": [
+        "pipe_recycling"
+      ],
+      "frames": 300,
+      "id": "recycle",
+      "replay": "replays/recycle.json"
+    }
+  ],
+  "state_paths": {
+    "reason": "variables.death_reason",
+    "resets": "variables.restart_count",
+    "ticks": "variables.steps"
+  },
+  "version": 1
+}

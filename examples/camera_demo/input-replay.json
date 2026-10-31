@@ -1,0 +1,44 @@
+{
+  "events": [
+    {
+      "button": "D",
+      "down": true,
+      "frame": 0
+    },
+    {
+      "button": "Space",
+      "down": true,
+      "frame": 5
+    },
+    {
+      "button": "Space",
+      "down": false,
+      "frame": 6
+    },
+    {
+      "button": "D",
+      "down": false,
+      "frame": 10
+    },
+    {
+      "button": "W",
+      "down": true,
+      "frame": 10
+    },
+    {
+      "frame": 20,
+      "release_all": true
+    },
+    {
+      "button": "MouseLeft",
+      "down": true,
+      "frame": 21
+    },
+    {
+      "button": "MouseLeft",
+      "down": false,
+      "frame": 21
+    }
+  ],
+  "version": 1
+}

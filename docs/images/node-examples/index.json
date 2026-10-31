@@ -1,0 +1,485 @@
+{
+  "10008": {
+    "caption": "Trích đoạn Gameplay của flappy_bird: node space. Đây là các node và dây nối thật từ graph đã chạy; vị trí được sắp lại để dễ đọc.",
+    "function": "Gameplay",
+    "graph": "templates/games/flappy_bird/graphs/gameplay.json",
+    "guide": "flappy",
+    "node": "space"
+  },
+  "1001": {
+    "caption": "Trích đoạn Gameplay của flappy_bird: node start. Đây là các node và dây nối thật từ graph đã chạy; vị trí được sắp lại để dễ đọc.",
+    "function": "Gameplay",
+    "graph": "templates/games/flappy_bird/graphs/gameplay.json",
+    "guide": "flappy",
+    "node": "start"
+  },
+  "10010": {
+    "caption": "Trích đoạn Gameplay của flappy_bird: node click. Đây là các node và dây nối thật từ graph đã chạy; vị trí được sắp lại để dễ đọc.",
+    "function": "Gameplay",
+    "graph": "templates/games/flappy_bird/graphs/gameplay.json",
+    "guide": "flappy",
+    "node": "click"
+  },
+  "1002": {
+    "caption": "Trích đoạn Gameplay của flappy_bird: node update. Đây là các node và dây nối thật từ graph đã chạy; vị trí được sắp lại để dễ đọc.",
+    "function": "Gameplay",
+    "graph": "templates/games/flappy_bird/graphs/gameplay.json",
+    "guide": "flappy",
+    "node": "update"
+  },
+  "1003": {
+    "caption": "Trích đoạn Gameplay của isometric_snake_3d: node n5. Đây là các node và dây nối thật từ graph đã chạy; vị trí được sắp lại để dễ đọc.",
+    "function": "Gameplay",
+    "graph": "templates/games/isometric_snake_3d/graphs/gameplay.json",
+    "guide": "snake",
+    "node": "n5"
+  },
+  "14111": {
+    "caption": "Trích đoạn Reset Round của flappy_bird: node n11. Đây là các node và dây nối thật từ graph đã chạy; vị trí được sắp lại để dễ đọc.",
+    "function": "Reset Round",
+    "graph": "templates/games/flappy_bird/graphs/gameplay.json",
+    "guide": "flappy",
+    "node": "n11"
+  },
+  "15012": {
+    "caption": "Trích đoạn Gameplay của isometric_snake_3d: node n3. Đây là các node và dây nối thật từ graph đã chạy; vị trí được sắp lại để dễ đọc.",
+    "function": "Gameplay",
+    "graph": "templates/games/isometric_snake_3d/graphs/gameplay.json",
+    "guide": "snake",
+    "node": "n3"
+  },
+  "18001": {
+    "caption": "Trích đoạn Gameplay của flappy_bird: node n1. Đây là các node và dây nối thật từ graph đã chạy; vị trí được sắp lại để dễ đọc.",
+    "function": "Gameplay",
+    "graph": "templates/games/flappy_bird/graphs/gameplay.json",
+    "guide": "flappy",
+    "node": "n1"
+  },
+  "18005": {
+    "caption": "Trích đoạn Refresh HUD của flappy_bird: node n4. Đây là các node và dây nối thật từ graph đã chạy; vị trí được sắp lại để dễ đọc.",
+    "function": "Refresh HUD",
+    "graph": "templates/games/flappy_bird/graphs/gameplay.json",
+    "guide": "flappy",
+    "node": "n4"
+  },
+  "18014": {
+    "caption": "Trích đoạn Refresh HUD của flappy_bird: node n19. Đây là các node và dây nối thật từ graph đã chạy; vị trí được sắp lại để dễ đọc.",
+    "function": "Refresh HUD",
+    "graph": "templates/games/flappy_bird/graphs/gameplay.json",
+    "guide": "flappy",
+    "node": "n19"
+  },
+  "2001": {
+    "caption": "Trích đoạn Flap của flappy_bird: node n5. Đây là các node và dây nối thật từ graph đã chạy; vị trí được sắp lại để dễ đọc.",
+    "function": "Flap",
+    "graph": "templates/games/flappy_bird/graphs/gameplay.json",
+    "guide": "flappy",
+    "node": "n5"
+  },
+  "2002": {
+    "caption": "Trích đoạn Advance Pipe 1 của flappy_bird: node n15. Đây là các node và dây nối thật từ graph đã chạy; vị trí được sắp lại để dễ đọc.",
+    "function": "Advance Pipe 1",
+    "graph": "templates/games/flappy_bird/graphs/gameplay.json",
+    "guide": "flappy",
+    "node": "n15"
+  },
+  "2005": {
+    "caption": "Trích đoạn Spawn food của isometric_snake_3d: node n19. Đây là các node và dây nối thật từ graph đã chạy; vị trí được sắp lại để dễ đọc.",
+    "function": "Spawn food",
+    "graph": "templates/games/isometric_snake_3d/graphs/gameplay.json",
+    "guide": "snake",
+    "node": "n19"
+  },
+  "2101": {
+    "caption": "Trích đoạn Advance snake của isometric_snake_3d: node n28. Đây là các node và dây nối thật từ graph đã chạy; vị trí được sắp lại để dễ đọc.",
+    "function": "Advance snake",
+    "graph": "templates/games/isometric_snake_3d/graphs/gameplay.json",
+    "guide": "snake",
+    "node": "n28"
+  },
+  "2103": {
+    "caption": "Trích đoạn Refresh HUD của flappy_bird: node n15. Đây là các node và dây nối thật từ graph đã chạy; vị trí được sắp lại để dễ đọc.",
+    "function": "Refresh HUD",
+    "graph": "templates/games/flappy_bird/graphs/gameplay.json",
+    "guide": "flappy",
+    "node": "n15"
+  },
+  "2301": {
+    "caption": "Trích đoạn Spawn food của isometric_snake_3d: node n5. Đây là các node và dây nối thật từ graph đã chạy; vị trí được sắp lại để dễ đọc.",
+    "function": "Spawn food",
+    "graph": "templates/games/isometric_snake_3d/graphs/gameplay.json",
+    "guide": "snake",
+    "node": "n5"
+  },
+  "2305": {
+    "caption": "Trích đoạn Refresh board của isometric_snake_3d: node n4. Đây là các node và dây nối thật từ graph đã chạy; vị trí được sắp lại để dễ đọc.",
+    "function": "Refresh board",
+    "graph": "templates/games/isometric_snake_3d/graphs/gameplay.json",
+    "guide": "snake",
+    "node": "n4"
+  },
+  "3004": {
+    "caption": "Trích đoạn Advance Pipe 1 của flappy_bird: node n1. Đây là các node và dây nối thật từ graph đã chạy; vị trí được sắp lại để dễ đọc.",
+    "function": "Advance Pipe 1",
+    "graph": "templates/games/flappy_bird/graphs/gameplay.json",
+    "guide": "flappy",
+    "node": "n1"
+  },
+  "3005": {
+    "caption": "Trích đoạn Advance Pipe 1 của flappy_bird: node n5. Đây là các node và dây nối thật từ graph đã chạy; vị trí được sắp lại để dễ đọc.",
+    "function": "Advance Pipe 1",
+    "graph": "templates/games/flappy_bird/graphs/gameplay.json",
+    "guide": "flappy",
+    "node": "n5"
+  },
+  "3051": {
+    "caption": "Trích đoạn Refresh HUD của flappy_bird: node n2. Đây là các node và dây nối thật từ graph đã chạy; vị trí được sắp lại để dễ đọc.",
+    "function": "Refresh HUD",
+    "graph": "templates/games/flappy_bird/graphs/gameplay.json",
+    "guide": "flappy",
+    "node": "n2"
+  },
+  "3052": {
+    "caption": "Trích đoạn Refresh HUD của flappy_bird: node n3. Đây là các node và dây nối thật từ graph đã chạy; vị trí được sắp lại để dễ đọc.",
+    "function": "Refresh HUD",
+    "graph": "templates/games/flappy_bird/graphs/gameplay.json",
+    "guide": "flappy",
+    "node": "n3"
+  },
+  "3053": {
+    "caption": "Trích đoạn Refresh HUD của flappy_bird: node n17. Đây là các node và dây nối thật từ graph đã chạy; vị trí được sắp lại để dễ đọc.",
+    "function": "Refresh HUD",
+    "graph": "templates/games/flappy_bird/graphs/gameplay.json",
+    "guide": "flappy",
+    "node": "n17"
+  },
+  "3101": {
+    "caption": "Trích đoạn Gameplay của flappy_bird: node n6. Đây là các node và dây nối thật từ graph đã chạy; vị trí được sắp lại để dễ đọc.",
+    "function": "Gameplay",
+    "graph": "templates/games/flappy_bird/graphs/gameplay.json",
+    "guide": "flappy",
+    "node": "n6"
+  },
+  "3102": {
+    "caption": "Trích đoạn Gameplay của flappy_bird: node n10. Đây là các node và dây nối thật từ graph đã chạy; vị trí được sắp lại để dễ đọc.",
+    "function": "Gameplay",
+    "graph": "templates/games/flappy_bird/graphs/gameplay.json",
+    "guide": "flappy",
+    "node": "n10"
+  },
+  "3103": {
+    "caption": "Trích đoạn Refresh board của isometric_snake_3d: node n21. Đây là các node và dây nối thật từ graph đã chạy; vị trí được sắp lại để dễ đọc.",
+    "function": "Refresh board",
+    "graph": "templates/games/isometric_snake_3d/graphs/gameplay.json",
+    "guide": "snake",
+    "node": "n21"
+  },
+  "3104": {
+    "caption": "Trích đoạn Advance snake của isometric_snake_3d: node n17. Đây là các node và dây nối thật từ graph đã chạy; vị trí được sắp lại để dễ đọc.",
+    "function": "Advance snake",
+    "graph": "templates/games/isometric_snake_3d/graphs/gameplay.json",
+    "guide": "snake",
+    "node": "n17"
+  },
+  "3111": {
+    "caption": "Trích đoạn Gameplay của flappy_bird: node n8. Đây là các node và dây nối thật từ graph đã chạy; vị trí được sắp lại để dễ đọc.",
+    "function": "Gameplay",
+    "graph": "templates/games/flappy_bird/graphs/gameplay.json",
+    "guide": "flappy",
+    "node": "n8"
+  },
+  "3112": {
+    "caption": "Trích đoạn Gameplay của flappy_bird: node n12. Đây là các node và dây nối thật từ graph đã chạy; vị trí được sắp lại để dễ đọc.",
+    "function": "Gameplay",
+    "graph": "templates/games/flappy_bird/graphs/gameplay.json",
+    "guide": "flappy",
+    "node": "n12"
+  },
+  "3113": {
+    "caption": "Trích đoạn Game Over của flappy_bird: node n3. Đây là các node và dây nối thật từ graph đã chạy; vị trí được sắp lại để dễ đọc.",
+    "function": "Game Over",
+    "graph": "templates/games/flappy_bird/graphs/gameplay.json",
+    "guide": "flappy",
+    "node": "n3"
+  },
+  "3114": {
+    "caption": "Trích đoạn Spawn food của isometric_snake_3d: node n17. Đây là các node và dây nối thật từ graph đã chạy; vị trí được sắp lại để dễ đọc.",
+    "function": "Spawn food",
+    "graph": "templates/games/isometric_snake_3d/graphs/gameplay.json",
+    "guide": "snake",
+    "node": "n17"
+  },
+  "3204": {
+    "caption": "Trích đoạn Refresh board của isometric_snake_3d: node n5. Đây là các node và dây nối thật từ graph đã chạy; vị trí được sắp lại để dễ đọc.",
+    "function": "Refresh board",
+    "graph": "templates/games/isometric_snake_3d/graphs/gameplay.json",
+    "guide": "snake",
+    "node": "n5"
+  },
+  "3205": {
+    "caption": "Trích đoạn Refresh board của isometric_snake_3d: node n3. Đây là các node và dây nối thật từ graph đã chạy; vị trí được sắp lại để dễ đọc.",
+    "function": "Refresh board",
+    "graph": "templates/games/isometric_snake_3d/graphs/gameplay.json",
+    "guide": "snake",
+    "node": "n3"
+  },
+  "3214": {
+    "caption": "Trích đoạn Advance snake của isometric_snake_3d: node n32. Đây là các node và dây nối thật từ graph đã chạy; vị trí được sắp lại để dễ đọc.",
+    "function": "Advance snake",
+    "graph": "templates/games/isometric_snake_3d/graphs/gameplay.json",
+    "guide": "snake",
+    "node": "n32"
+  },
+  "3244": {
+    "caption": "Trích đoạn Advance snake của isometric_snake_3d: node n38. Đây là các node và dây nối thật từ graph đã chạy; vị trí được sắp lại để dễ đọc.",
+    "function": "Advance snake",
+    "graph": "templates/games/isometric_snake_3d/graphs/gameplay.json",
+    "guide": "snake",
+    "node": "n38"
+  },
+  "3264": {
+    "caption": "Trích đoạn Refresh board của isometric_snake_3d: node n11. Đây là các node và dây nối thật từ graph đã chạy; vị trí được sắp lại để dễ đọc.",
+    "function": "Refresh board",
+    "graph": "templates/games/isometric_snake_3d/graphs/gameplay.json",
+    "guide": "snake",
+    "node": "n11"
+  },
+  "3284": {
+    "caption": "Trích đoạn Refresh board của isometric_snake_3d: node n6. Đây là các node và dây nối thật từ graph đã chạy; vị trí được sắp lại để dễ đọc.",
+    "function": "Refresh board",
+    "graph": "templates/games/isometric_snake_3d/graphs/gameplay.json",
+    "guide": "snake",
+    "node": "n6"
+  },
+  "3294": {
+    "caption": "Trích đoạn Spawn food của isometric_snake_3d: node n14. Đây là các node và dây nối thật từ graph đã chạy; vị trí được sắp lại để dễ đọc.",
+    "function": "Spawn food",
+    "graph": "templates/games/isometric_snake_3d/graphs/gameplay.json",
+    "guide": "snake",
+    "node": "n14"
+  },
+  "3714": {
+    "caption": "Trích đoạn Advance snake của isometric_snake_3d: node n31. Đây là các node và dây nối thật từ graph đã chạy; vị trí được sắp lại để dễ đọc.",
+    "function": "Advance snake",
+    "graph": "templates/games/isometric_snake_3d/graphs/gameplay.json",
+    "guide": "snake",
+    "node": "n31"
+  },
+  "4001": {
+    "caption": "Trích đoạn Simulate Bird của flappy_bird: node n13. Đây là các node và dây nối thật từ graph đã chạy; vị trí được sắp lại để dễ đọc.",
+    "function": "Simulate Bird",
+    "graph": "templates/games/flappy_bird/graphs/gameplay.json",
+    "guide": "flappy",
+    "node": "n13"
+  },
+  "4002": {
+    "caption": "Trích đoạn Advance Pipe 1 của flappy_bird: node n4. Đây là các node và dây nối thật từ graph đã chạy; vị trí được sắp lại để dễ đọc.",
+    "function": "Advance Pipe 1",
+    "graph": "templates/games/flappy_bird/graphs/gameplay.json",
+    "guide": "flappy",
+    "node": "n4"
+  },
+  "4003": {
+    "caption": "Trích đoạn Simulate Bird của flappy_bird: node n12. Đây là các node và dây nối thật từ graph đã chạy; vị trí được sắp lại để dễ đọc.",
+    "function": "Simulate Bird",
+    "graph": "templates/games/flappy_bird/graphs/gameplay.json",
+    "guide": "flappy",
+    "node": "n12"
+  },
+  "4011": {
+    "caption": "Trích đoạn Advance Pipe 1 của flappy_bird: node n42. Đây là các node và dây nối thật từ graph đã chạy; vị trí được sắp lại để dễ đọc.",
+    "function": "Advance Pipe 1",
+    "graph": "templates/games/flappy_bird/graphs/gameplay.json",
+    "guide": "flappy",
+    "node": "n42"
+  },
+  "4012": {
+    "caption": "Trích đoạn Advance Pipe 1 của flappy_bird: node n7. Đây là các node và dây nối thật từ graph đã chạy; vị trí được sắp lại để dễ đọc.",
+    "function": "Advance Pipe 1",
+    "graph": "templates/games/flappy_bird/graphs/gameplay.json",
+    "guide": "flappy",
+    "node": "n7"
+  },
+  "4013": {
+    "caption": "Trích đoạn Advance Pipe 1 của flappy_bird: node n48. Đây là các node và dây nối thật từ graph đã chạy; vị trí được sắp lại để dễ đọc.",
+    "function": "Advance Pipe 1",
+    "graph": "templates/games/flappy_bird/graphs/gameplay.json",
+    "guide": "flappy",
+    "node": "n48"
+  },
+  "4015": {
+    "caption": "Trích đoạn Gameplay của flappy_bird: node n16. Đây là các node và dây nối thật từ graph đã chạy; vị trí được sắp lại để dễ đọc.",
+    "function": "Gameplay",
+    "graph": "templates/games/flappy_bird/graphs/gameplay.json",
+    "guide": "flappy",
+    "node": "n16"
+  },
+  "4016": {
+    "caption": "Trích đoạn Simulate Bird của flappy_bird: node n25. Đây là các node và dây nối thật từ graph đã chạy; vị trí được sắp lại để dễ đọc.",
+    "function": "Simulate Bird",
+    "graph": "templates/games/flappy_bird/graphs/gameplay.json",
+    "guide": "flappy",
+    "node": "n25"
+  },
+  "4017": {
+    "caption": "Trích đoạn Gameplay của flappy_bird: node n11. Đây là các node và dây nối thật từ graph đã chạy; vị trí được sắp lại để dễ đọc.",
+    "function": "Gameplay",
+    "graph": "templates/games/flappy_bird/graphs/gameplay.json",
+    "guide": "flappy",
+    "node": "n11"
+  },
+  "4020": {
+    "caption": "Trích đoạn Spawn food của isometric_snake_3d: node n12. Đây là các node và dây nối thật từ graph đã chạy; vị trí được sắp lại để dễ đọc.",
+    "function": "Spawn food",
+    "graph": "templates/games/isometric_snake_3d/graphs/gameplay.json",
+    "guide": "snake",
+    "node": "n12"
+  },
+  "4021": {
+    "caption": "Trích đoạn Advance snake của isometric_snake_3d: node n15. Đây là các node và dây nối thật từ graph đã chạy; vị trí được sắp lại để dễ đọc.",
+    "function": "Advance snake",
+    "graph": "templates/games/isometric_snake_3d/graphs/gameplay.json",
+    "guide": "snake",
+    "node": "n15"
+  },
+  "4025": {
+    "caption": "Trích đoạn Request turn của isometric_snake_3d: node n11. Đây là các node và dây nối thật từ graph đã chạy; vị trí được sắp lại để dễ đọc.",
+    "function": "Request turn",
+    "graph": "templates/games/isometric_snake_3d/graphs/gameplay.json",
+    "guide": "snake",
+    "node": "n11"
+  },
+  "4029": {
+    "caption": "Trích đoạn Advance snake của isometric_snake_3d: node n22. Đây là các node và dây nối thật từ graph đã chạy; vị trí được sắp lại để dễ đọc.",
+    "function": "Advance snake",
+    "graph": "templates/games/isometric_snake_3d/graphs/gameplay.json",
+    "guide": "snake",
+    "node": "n22"
+  },
+  "4030": {
+    "caption": "Trích đoạn Spawn food của isometric_snake_3d: node n6. Đây là các node và dây nối thật từ graph đã chạy; vị trí được sắp lại để dễ đọc.",
+    "function": "Spawn food",
+    "graph": "templates/games/isometric_snake_3d/graphs/gameplay.json",
+    "guide": "snake",
+    "node": "n6"
+  },
+  "4031": {
+    "caption": "Trích đoạn Advance snake của isometric_snake_3d: node n29. Đây là các node và dây nối thật từ graph đã chạy; vị trí được sắp lại để dễ đọc.",
+    "function": "Advance snake",
+    "graph": "templates/games/isometric_snake_3d/graphs/gameplay.json",
+    "guide": "snake",
+    "node": "n29"
+  },
+  "4033": {
+    "caption": "Trích đoạn Refresh board của isometric_snake_3d: node n7. Đây là các node và dây nối thật từ graph đã chạy; vị trí được sắp lại để dễ đọc.",
+    "function": "Refresh board",
+    "graph": "templates/games/isometric_snake_3d/graphs/gameplay.json",
+    "guide": "snake",
+    "node": "n7"
+  },
+  "4035": {
+    "caption": "Trích đoạn Spawn food của isometric_snake_3d: node n9. Đây là các node và dây nối thật từ graph đã chạy; vị trí được sắp lại để dễ đọc.",
+    "function": "Spawn food",
+    "graph": "templates/games/isometric_snake_3d/graphs/gameplay.json",
+    "guide": "snake",
+    "node": "n9"
+  },
+  "4059": {
+    "caption": "Trích đoạn Spawn food của isometric_snake_3d: node n10. Đây là các node và dây nối thật từ graph đã chạy; vị trí được sắp lại để dễ đọc.",
+    "function": "Spawn food",
+    "graph": "templates/games/isometric_snake_3d/graphs/gameplay.json",
+    "guide": "snake",
+    "node": "n10"
+  },
+  "4060": {
+    "caption": "Trích đoạn Spawn food của isometric_snake_3d: node n7. Đây là các node và dây nối thật từ graph đã chạy; vị trí được sắp lại để dễ đọc.",
+    "function": "Spawn food",
+    "graph": "templates/games/isometric_snake_3d/graphs/gameplay.json",
+    "guide": "snake",
+    "node": "n7"
+  },
+  "4063": {
+    "caption": "Trích đoạn Game Over của flappy_bird: node n6. Đây là các node và dây nối thật từ graph đã chạy; vị trí được sắp lại để dễ đọc.",
+    "function": "Game Over",
+    "graph": "templates/games/flappy_bird/graphs/gameplay.json",
+    "guide": "flappy",
+    "node": "n6"
+  },
+  "4120": {
+    "caption": "Trích đoạn Advance snake của isometric_snake_3d: node n18. Đây là các node và dây nối thật từ graph đã chạy; vị trí được sắp lại để dễ đọc.",
+    "function": "Advance snake",
+    "graph": "templates/games/isometric_snake_3d/graphs/gameplay.json",
+    "guide": "snake",
+    "node": "n18"
+  },
+  "5001": {
+    "caption": "Trích đoạn Advance Pipe 1 của flappy_bird: node n2. Đây là các node và dây nối thật từ graph đã chạy; vị trí được sắp lại để dễ đọc.",
+    "function": "Advance Pipe 1",
+    "graph": "templates/games/flappy_bird/graphs/gameplay.json",
+    "guide": "flappy",
+    "node": "n2"
+  },
+  "5010": {
+    "caption": "Trích đoạn Reset round của isometric_snake_3d: node n15. Đây là các node và dây nối thật từ graph đã chạy; vị trí được sắp lại để dễ đọc.",
+    "function": "Reset round",
+    "graph": "templates/games/isometric_snake_3d/graphs/gameplay.json",
+    "guide": "snake",
+    "node": "n15"
+  },
+  "5020": {
+    "caption": "Trích đoạn Reset Round của flappy_bird: node n1. Đây là các node và dây nối thật từ graph đã chạy; vị trí được sắp lại để dễ đọc.",
+    "function": "Reset Round",
+    "graph": "templates/games/flappy_bird/graphs/gameplay.json",
+    "guide": "flappy",
+    "node": "n1"
+  },
+  "5022": {
+    "caption": "Trích đoạn Advance Pipe 1 của flappy_bird: node n12. Đây là các node và dây nối thật từ graph đã chạy; vị trí được sắp lại để dễ đọc.",
+    "function": "Advance Pipe 1",
+    "graph": "templates/games/flappy_bird/graphs/gameplay.json",
+    "guide": "flappy",
+    "node": "n12"
+  },
+  "5023": {
+    "caption": "Trích đoạn Spawn food của isometric_snake_3d: node n4. Đây là các node và dây nối thật từ graph đã chạy; vị trí được sắp lại để dễ đọc.",
+    "function": "Spawn food",
+    "graph": "templates/games/isometric_snake_3d/graphs/gameplay.json",
+    "guide": "snake",
+    "node": "n4"
+  },
+  "6001": {
+    "caption": "Trích đoạn Request turn của isometric_snake_3d: node n1. Đây là các node và dây nối thật từ graph đã chạy; vị trí được sắp lại để dễ đọc.",
+    "function": "Request turn",
+    "graph": "templates/games/isometric_snake_3d/graphs/gameplay.json",
+    "guide": "snake",
+    "node": "n1"
+  },
+  "6002": {
+    "caption": "Trích đoạn Advance snake của isometric_snake_3d: node n2. Đây là các node và dây nối thật từ graph đã chạy; vị trí được sắp lại để dễ đọc.",
+    "function": "Advance snake",
+    "graph": "templates/games/isometric_snake_3d/graphs/gameplay.json",
+    "guide": "snake",
+    "node": "n2"
+  },
+  "8028": {
+    "caption": "Trích đoạn Refresh board của isometric_snake_3d: node n8. Đây là các node và dây nối thật từ graph đã chạy; vị trí được sắp lại để dễ đọc.",
+    "function": "Refresh board",
+    "graph": "templates/games/isometric_snake_3d/graphs/gameplay.json",
+    "guide": "snake",
+    "node": "n8"
+  },
+  "9002": {
+    "caption": "Trích đoạn Advance Pipe 1 của flappy_bird: node n34. Đây là các node và dây nối thật từ graph đã chạy; vị trí được sắp lại để dễ đọc.",
+    "function": "Advance Pipe 1",
+    "graph": "templates/games/flappy_bird/graphs/gameplay.json",
+    "guide": "flappy",
+    "node": "n34"
+  },
+  "9007": {
+    "caption": "Trích đoạn Request turn của isometric_snake_3d: node n18. Đây là các node và dây nối thật từ graph đã chạy; vị trí được sắp lại để dễ đọc.",
+    "function": "Request turn",
+    "graph": "templates/games/isometric_snake_3d/graphs/gameplay.json",
+    "guide": "snake",
+    "node": "n18"
+  }
+}

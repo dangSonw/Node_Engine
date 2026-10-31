@@ -1,0 +1,1628 @@
+{
+  "links": [
+    {
+      "from": [
+        "start",
+        "Out"
+      ],
+      "to": [
+        "storage",
+        "In"
+      ]
+    },
+    {
+      "from": [
+        "storage",
+        "Out"
+      ],
+      "to": [
+        "hud",
+        "In"
+      ]
+    },
+    {
+      "from": [
+        "hud",
+        "Out"
+      ],
+      "to": [
+        "wave",
+        "In"
+      ]
+    },
+    {
+      "from": [
+        "wave",
+        "Out"
+      ],
+      "to": [
+        "gravity",
+        "In"
+      ]
+    },
+    {
+      "from": [
+        "gravity",
+        "Out"
+      ],
+      "to": [
+        "body",
+        "In"
+      ]
+    },
+    {
+      "from": [
+        "body",
+        "Out"
+      ],
+      "to": [
+        "damping",
+        "In"
+      ]
+    },
+    {
+      "from": [
+        "damping",
+        "Out"
+      ],
+      "to": [
+        "velocity",
+        "In"
+      ]
+    },
+    {
+      "from": [
+        "velocity",
+        "Out"
+      ],
+      "to": [
+        "timer_start",
+        "In"
+      ]
+    },
+    {
+      "from": [
+        "timer_start",
+        "Out"
+      ],
+      "to": [
+        "sound",
+        "In"
+      ]
+    },
+    {
+      "from": [
+        "timer_event",
+        "Out"
+      ],
+      "to": [
+        "turn",
+        "In"
+      ]
+    },
+    {
+      "from": [
+        "fixed",
+        "Out"
+      ],
+      "to": [
+        "count",
+        "In"
+      ]
+    },
+    {
+      "from": [
+        "ticks",
+        "Value"
+      ],
+      "to": [
+        "plus",
+        "A"
+      ]
+    },
+    {
+      "from": [
+        "plus",
+        "Value"
+      ],
+      "to": [
+        "count",
+        "Value"
+      ]
+    },
+    {
+      "from": [
+        "update",
+        "Out"
+      ],
+      "to": [
+        "dt_store",
+        "In"
+      ]
+    },
+    {
+      "from": [
+        "dt",
+        "Value"
+      ],
+      "to": [
+        "dt_store",
+        "Value"
+      ]
+    },
+    {
+      "from": [
+        "dt_store",
+        "Out"
+      ],
+      "to": [
+        "unscaled_store",
+        "In"
+      ]
+    },
+    {
+      "from": [
+        "unscaled",
+        "Value"
+      ],
+      "to": [
+        "unscaled_store",
+        "Value"
+      ]
+    },
+    {
+      "from": [
+        "unscaled_store",
+        "Out"
+      ],
+      "to": [
+        "real_store",
+        "In"
+      ]
+    },
+    {
+      "from": [
+        "real",
+        "Value"
+      ],
+      "to": [
+        "real_store",
+        "Value"
+      ]
+    },
+    {
+      "from": [
+        "real_store",
+        "Out"
+      ],
+      "to": [
+        "game_store",
+        "In"
+      ]
+    },
+    {
+      "from": [
+        "game",
+        "Value"
+      ],
+      "to": [
+        "game_store",
+        "Value"
+      ]
+    },
+    {
+      "from": [
+        "game_store",
+        "Out"
+      ],
+      "to": [
+        "scale_store",
+        "In"
+      ]
+    },
+    {
+      "from": [
+        "scale",
+        "Value"
+      ],
+      "to": [
+        "scale_store",
+        "Value"
+      ]
+    },
+    {
+      "from": [
+        "scale_store",
+        "Out"
+      ],
+      "to": [
+        "fixed_dt_store",
+        "In"
+      ]
+    },
+    {
+      "from": [
+        "fixed_dt",
+        "Value"
+      ],
+      "to": [
+        "fixed_dt_store",
+        "Value"
+      ]
+    },
+    {
+      "from": [
+        "update_0",
+        "Out"
+      ],
+      "to": [
+        "if_0",
+        "In"
+      ]
+    },
+    {
+      "from": [
+        "key_0",
+        "Value"
+      ],
+      "to": [
+        "if_0",
+        "Condition"
+      ]
+    },
+    {
+      "from": [
+        "if_0",
+        "True"
+      ],
+      "to": [
+        "scale_0",
+        "In"
+      ]
+    },
+    {
+      "from": [
+        "update_1",
+        "Out"
+      ],
+      "to": [
+        "if_1",
+        "In"
+      ]
+    },
+    {
+      "from": [
+        "key_1",
+        "Value"
+      ],
+      "to": [
+        "if_1",
+        "Condition"
+      ]
+    },
+    {
+      "from": [
+        "if_1",
+        "True"
+      ],
+      "to": [
+        "scale_1",
+        "In"
+      ]
+    },
+    {
+      "from": [
+        "update_2",
+        "Out"
+      ],
+      "to": [
+        "if_2",
+        "In"
+      ]
+    },
+    {
+      "from": [
+        "key_2",
+        "Value"
+      ],
+      "to": [
+        "if_2",
+        "Condition"
+      ]
+    },
+    {
+      "from": [
+        "if_2",
+        "True"
+      ],
+      "to": [
+        "scale_2",
+        "In"
+      ]
+    },
+    {
+      "from": [
+        "update_3",
+        "Out"
+      ],
+      "to": [
+        "if_3",
+        "In"
+      ]
+    },
+    {
+      "from": [
+        "key_3",
+        "Value"
+      ],
+      "to": [
+        "if_3",
+        "Condition"
+      ]
+    },
+    {
+      "from": [
+        "if_3",
+        "True"
+      ],
+      "to": [
+        "scale_3",
+        "In"
+      ]
+    },
+    {
+      "from": [
+        "update_S",
+        "Out"
+      ],
+      "to": [
+        "if_S",
+        "In"
+      ]
+    },
+    {
+      "from": [
+        "key_S",
+        "Value"
+      ],
+      "to": [
+        "if_S",
+        "Condition"
+      ]
+    },
+    {
+      "from": [
+        "if_S",
+        "True"
+      ],
+      "to": [
+        "action_S",
+        "In"
+      ]
+    },
+    {
+      "from": [
+        "update_L",
+        "Out"
+      ],
+      "to": [
+        "if_L",
+        "In"
+      ]
+    },
+    {
+      "from": [
+        "key_L",
+        "Value"
+      ],
+      "to": [
+        "if_L",
+        "Condition"
+      ]
+    },
+    {
+      "from": [
+        "if_L",
+        "True"
+      ],
+      "to": [
+        "action_L",
+        "In"
+      ]
+    },
+    {
+      "from": [
+        "pressed_P",
+        "Out"
+      ],
+      "to": [
+        "world_P",
+        "In"
+      ]
+    },
+    {
+      "from": [
+        "pressed_R",
+        "Out"
+      ],
+      "to": [
+        "world_R",
+        "In"
+      ]
+    },
+    {
+      "from": [
+        "pressed_Q",
+        "Out"
+      ],
+      "to": [
+        "world_Q",
+        "In"
+      ]
+    },
+    {
+      "from": [
+        "pauses_event",
+        "Out"
+      ],
+      "to": [
+        "pauses_set",
+        "In"
+      ]
+    },
+    {
+      "from": [
+        "pauses_get",
+        "Value"
+      ],
+      "to": [
+        "pauses_add",
+        "A"
+      ]
+    },
+    {
+      "from": [
+        "pauses_add",
+        "Value"
+      ],
+      "to": [
+        "pauses_set",
+        "Value"
+      ]
+    },
+    {
+      "from": [
+        "pauses_set",
+        "Out"
+      ],
+      "to": [
+        "pauses_log",
+        "In"
+      ]
+    },
+    {
+      "from": [
+        "resumes_event",
+        "Out"
+      ],
+      "to": [
+        "resumes_set",
+        "In"
+      ]
+    },
+    {
+      "from": [
+        "resumes_get",
+        "Value"
+      ],
+      "to": [
+        "resumes_add",
+        "A"
+      ]
+    },
+    {
+      "from": [
+        "resumes_add",
+        "Value"
+      ],
+      "to": [
+        "resumes_set",
+        "Value"
+      ]
+    },
+    {
+      "from": [
+        "resumes_set",
+        "Out"
+      ],
+      "to": [
+        "resumes_log",
+        "In"
+      ]
+    },
+    {
+      "from": [
+        "sound",
+        "Out"
+      ],
+      "to": [
+        "real_timer",
+        "In"
+      ]
+    },
+    {
+      "from": [
+        "real_event",
+        "Out"
+      ],
+      "to": [
+        "unscaled_ticks_set",
+        "In"
+      ]
+    },
+    {
+      "from": [
+        "unscaled_ticks_get",
+        "Value"
+      ],
+      "to": [
+        "unscaled_ticks_add",
+        "A"
+      ]
+    },
+    {
+      "from": [
+        "unscaled_ticks_add",
+        "Value"
+      ],
+      "to": [
+        "unscaled_ticks_set",
+        "Value"
+      ]
+    },
+    {
+      "from": [
+        "paused_query",
+        "Value"
+      ],
+      "to": [
+        "paused_text",
+        "Condition"
+      ]
+    },
+    {
+      "from": [
+        "hud_update",
+        "Out"
+      ],
+      "to": [
+        "status_text",
+        "In"
+      ]
+    },
+    {
+      "from": [
+        "paused_text",
+        "Value"
+      ],
+      "to": [
+        "status_text",
+        "Text"
+      ]
+    },
+    {
+      "from": [
+        "status_text",
+        "Out"
+      ],
+      "to": [
+        "pause_store",
+        "In"
+      ]
+    },
+    {
+      "from": [
+        "paused_query",
+        "Value"
+      ],
+      "to": [
+        "pause_store",
+        "Value"
+      ]
+    },
+    {
+      "from": [
+        "pauses_get",
+        "Value"
+      ],
+      "to": [
+        "pauses_text",
+        "Value"
+      ]
+    },
+    {
+      "from": [
+        "pause_store",
+        "Out"
+      ],
+      "to": [
+        "pauses_hud",
+        "In"
+      ]
+    },
+    {
+      "from": [
+        "pauses_text",
+        "Value"
+      ],
+      "to": [
+        "pauses_hud",
+        "Text"
+      ]
+    },
+    {
+      "from": [
+        "resumes_get",
+        "Value"
+      ],
+      "to": [
+        "resumes_text",
+        "Value"
+      ]
+    },
+    {
+      "from": [
+        "pauses_hud",
+        "Out"
+      ],
+      "to": [
+        "resumes_hud",
+        "In"
+      ]
+    },
+    {
+      "from": [
+        "resumes_text",
+        "Value"
+      ],
+      "to": [
+        "resumes_hud",
+        "Text"
+      ]
+    },
+    {
+      "from": [
+        "unscaled_ticks_get",
+        "Value"
+      ],
+      "to": [
+        "unscaled_ticks_text",
+        "Value"
+      ]
+    },
+    {
+      "from": [
+        "resumes_hud",
+        "Out"
+      ],
+      "to": [
+        "unscaled_ticks_hud",
+        "In"
+      ]
+    },
+    {
+      "from": [
+        "unscaled_ticks_text",
+        "Value"
+      ],
+      "to": [
+        "unscaled_ticks_hud",
+        "Text"
+      ]
+    }
+  ],
+  "name": "World pause playground",
+  "nodes": [
+    {
+      "id": "start",
+      "position": [
+        0,
+        0
+      ],
+      "type": 1001,
+      "values": {}
+    },
+    {
+      "id": "storage",
+      "position": [
+        270,
+        0
+      ],
+      "type": 23001,
+      "values": {
+        "Game ID": "node-engine-world-pause-demo"
+      }
+    },
+    {
+      "id": "hud",
+      "position": [
+        540,
+        0
+      ],
+      "type": 18001,
+      "values": {}
+    },
+    {
+      "id": "wave",
+      "position": [
+        810,
+        0
+      ],
+      "type": 13002,
+      "values": {
+        "Clip": "Wave"
+      }
+    },
+    {
+      "id": "gravity",
+      "position": [
+        1080,
+        0
+      ],
+      "type": 11027,
+      "values": {
+        "Gravity": [
+          0,
+          0,
+          0
+        ]
+      }
+    },
+    {
+      "id": "body",
+      "position": [
+        1350,
+        0
+      ],
+      "type": 11001,
+      "values": {
+        "Entity": "body"
+      }
+    },
+    {
+      "id": "damping",
+      "position": [
+        1620,
+        0
+      ],
+      "type": 11018,
+      "values": {
+        "Angular": 0.0,
+        "Entity": "body",
+        "Linear": 0.0
+      }
+    },
+    {
+      "id": "velocity",
+      "position": [
+        0,
+        220
+      ],
+      "type": 11010,
+      "values": {
+        "Entity": "body",
+        "Value": [
+          0,
+          0,
+          0.6
+        ]
+      }
+    },
+    {
+      "id": "timer_start",
+      "position": [
+        270,
+        220
+      ],
+      "type": 5010,
+      "values": {
+        "Name": "turn",
+        "Repeat": true,
+        "Seconds": 0.25
+      }
+    },
+    {
+      "id": "sound",
+      "position": [
+        540,
+        220
+      ],
+      "type": 17001,
+      "values": {
+        "Loop": true,
+        "Sound": "tone",
+        "Voice": "tone",
+        "Volume": 0.05
+      }
+    },
+    {
+      "id": "timer_event",
+      "position": [
+        810,
+        220
+      ],
+      "type": 1003,
+      "values": {
+        "Filter": "turn"
+      }
+    },
+    {
+      "id": "turn",
+      "position": [
+        1080,
+        220
+      ],
+      "type": 9004,
+      "values": {
+        "Degrees": [
+          0,
+          15,
+          0
+        ],
+        "Entity": "timer"
+      }
+    },
+    {
+      "id": "fixed",
+      "position": [
+        1350,
+        220
+      ],
+      "type": 1004,
+      "values": {}
+    },
+    {
+      "id": "count",
+      "position": [
+        1620,
+        220
+      ],
+      "type": 3005,
+      "values": {
+        "Name": "fixed_steps"
+      }
+    },
+    {
+      "id": "ticks",
+      "position": [
+        0,
+        440
+      ],
+      "type": 3004,
+      "values": {
+        "Name": "fixed_steps"
+      }
+    },
+    {
+      "id": "plus",
+      "position": [
+        270,
+        440
+      ],
+      "type": 4001,
+      "values": {
+        "B": 1
+      }
+    },
+    {
+      "id": "update",
+      "position": [
+        540,
+        440
+      ],
+      "type": 1002,
+      "values": {}
+    },
+    {
+      "id": "dt",
+      "position": [
+        810,
+        440
+      ],
+      "type": 5001,
+      "values": {}
+    },
+    {
+      "id": "dt_store",
+      "position": [
+        1080,
+        440
+      ],
+      "type": 3005,
+      "values": {
+        "Name": "dt"
+      }
+    },
+    {
+      "id": "unscaled",
+      "position": [
+        1350,
+        440
+      ],
+      "type": 5032,
+      "values": {}
+    },
+    {
+      "id": "unscaled_store",
+      "position": [
+        1620,
+        440
+      ],
+      "type": 3005,
+      "values": {
+        "Name": "unscaled"
+      }
+    },
+    {
+      "id": "real",
+      "position": [
+        0,
+        660
+      ],
+      "type": 5033,
+      "values": {}
+    },
+    {
+      "id": "real_store",
+      "position": [
+        270,
+        660
+      ],
+      "type": 3005,
+      "values": {
+        "Name": "real"
+      }
+    },
+    {
+      "id": "game",
+      "position": [
+        540,
+        660
+      ],
+      "type": 5002,
+      "values": {}
+    },
+    {
+      "id": "game_store",
+      "position": [
+        810,
+        660
+      ],
+      "type": 3005,
+      "values": {
+        "Name": "game"
+      }
+    },
+    {
+      "id": "scale",
+      "position": [
+        1080,
+        660
+      ],
+      "type": 5031,
+      "values": {}
+    },
+    {
+      "id": "scale_store",
+      "position": [
+        1350,
+        660
+      ],
+      "type": 3005,
+      "values": {
+        "Name": "scale"
+      }
+    },
+    {
+      "id": "fixed_dt",
+      "position": [
+        1620,
+        660
+      ],
+      "type": 5034,
+      "values": {}
+    },
+    {
+      "id": "fixed_dt_store",
+      "position": [
+        0,
+        880
+      ],
+      "type": 3005,
+      "values": {
+        "Name": "fixed_dt"
+      }
+    },
+    {
+      "id": "update_0",
+      "position": [
+        270,
+        880
+      ],
+      "type": 1002,
+      "values": {}
+    },
+    {
+      "id": "key_0",
+      "position": [
+        540,
+        880
+      ],
+      "type": 10002,
+      "values": {
+        "Key": "0"
+      }
+    },
+    {
+      "id": "if_0",
+      "position": [
+        810,
+        880
+      ],
+      "type": 2001,
+      "values": {}
+    },
+    {
+      "id": "scale_0",
+      "position": [
+        1080,
+        880
+      ],
+      "type": 5030,
+      "values": {
+        "Scale": 0
+      }
+    },
+    {
+      "id": "update_1",
+      "position": [
+        1350,
+        880
+      ],
+      "type": 1002,
+      "values": {}
+    },
+    {
+      "id": "key_1",
+      "position": [
+        1620,
+        880
+      ],
+      "type": 10002,
+      "values": {
+        "Key": "1"
+      }
+    },
+    {
+      "id": "if_1",
+      "position": [
+        0,
+        1100
+      ],
+      "type": 2001,
+      "values": {}
+    },
+    {
+      "id": "scale_1",
+      "position": [
+        270,
+        1100
+      ],
+      "type": 5030,
+      "values": {
+        "Scale": 0.25
+      }
+    },
+    {
+      "id": "update_2",
+      "position": [
+        540,
+        1100
+      ],
+      "type": 1002,
+      "values": {}
+    },
+    {
+      "id": "key_2",
+      "position": [
+        810,
+        1100
+      ],
+      "type": 10002,
+      "values": {
+        "Key": "2"
+      }
+    },
+    {
+      "id": "if_2",
+      "position": [
+        1080,
+        1100
+      ],
+      "type": 2001,
+      "values": {}
+    },
+    {
+      "id": "scale_2",
+      "position": [
+        1350,
+        1100
+      ],
+      "type": 5030,
+      "values": {
+        "Scale": 1
+      }
+    },
+    {
+      "id": "update_3",
+      "position": [
+        1620,
+        1100
+      ],
+      "type": 1002,
+      "values": {}
+    },
+    {
+      "id": "key_3",
+      "position": [
+        0,
+        1320
+      ],
+      "type": 10002,
+      "values": {
+        "Key": "3"
+      }
+    },
+    {
+      "id": "if_3",
+      "position": [
+        270,
+        1320
+      ],
+      "type": 2001,
+      "values": {}
+    },
+    {
+      "id": "scale_3",
+      "position": [
+        540,
+        1320
+      ],
+      "type": 5030,
+      "values": {
+        "Scale": 2
+      }
+    },
+    {
+      "id": "update_S",
+      "position": [
+        810,
+        1320
+      ],
+      "type": 1002,
+      "values": {}
+    },
+    {
+      "id": "key_S",
+      "position": [
+        1080,
+        1320
+      ],
+      "type": 10002,
+      "values": {
+        "Key": "S"
+      }
+    },
+    {
+      "id": "if_S",
+      "position": [
+        1350,
+        1320
+      ],
+      "type": 2001,
+      "values": {}
+    },
+    {
+      "id": "action_S",
+      "position": [
+        1620,
+        1320
+      ],
+      "type": 23016,
+      "values": {
+        "Slot": "pause"
+      }
+    },
+    {
+      "id": "update_L",
+      "position": [
+        0,
+        1540
+      ],
+      "type": 1002,
+      "values": {}
+    },
+    {
+      "id": "key_L",
+      "position": [
+        270,
+        1540
+      ],
+      "type": 10002,
+      "values": {
+        "Key": "L"
+      }
+    },
+    {
+      "id": "if_L",
+      "position": [
+        540,
+        1540
+      ],
+      "type": 2001,
+      "values": {}
+    },
+    {
+      "id": "action_L",
+      "position": [
+        810,
+        1540
+      ],
+      "type": 23017,
+      "values": {
+        "Slot": "pause"
+      }
+    },
+    {
+      "id": "pressed_P",
+      "position": [
+        1080,
+        1540
+      ],
+      "type": 10008,
+      "values": {
+        "Filter": "P"
+      }
+    },
+    {
+      "id": "world_P",
+      "position": [
+        1350,
+        1540
+      ],
+      "type": 7001,
+      "values": {}
+    },
+    {
+      "id": "pressed_R",
+      "position": [
+        1620,
+        1540
+      ],
+      "type": 10008,
+      "values": {
+        "Filter": "R"
+      }
+    },
+    {
+      "id": "world_R",
+      "position": [
+        0,
+        1760
+      ],
+      "type": 7002,
+      "values": {}
+    },
+    {
+      "id": "pressed_Q",
+      "position": [
+        270,
+        1760
+      ],
+      "type": 10008,
+      "values": {
+        "Filter": "Q"
+      }
+    },
+    {
+      "id": "world_Q",
+      "position": [
+        540,
+        1760
+      ],
+      "type": 26001,
+      "values": {}
+    },
+    {
+      "id": "pauses_event",
+      "position": [
+        810,
+        1760
+      ],
+      "type": 1017,
+      "values": {}
+    },
+    {
+      "id": "pauses_get",
+      "position": [
+        1080,
+        1760
+      ],
+      "type": 3004,
+      "values": {
+        "Name": "pauses"
+      }
+    },
+    {
+      "id": "pauses_add",
+      "position": [
+        1350,
+        1760
+      ],
+      "type": 4001,
+      "values": {
+        "B": 1
+      }
+    },
+    {
+      "id": "pauses_set",
+      "position": [
+        1620,
+        1760
+      ],
+      "type": 3005,
+      "values": {
+        "Name": "pauses"
+      }
+    },
+    {
+      "id": "pauses_log",
+      "position": [
+        0,
+        1980
+      ],
+      "type": 27001,
+      "values": {
+        "Message": "World paused"
+      }
+    },
+    {
+      "id": "resumes_event",
+      "position": [
+        270,
+        1980
+      ],
+      "type": 1018,
+      "values": {}
+    },
+    {
+      "id": "resumes_get",
+      "position": [
+        540,
+        1980
+      ],
+      "type": 3004,
+      "values": {
+        "Name": "resumes"
+      }
+    },
+    {
+      "id": "resumes_add",
+      "position": [
+        810,
+        1980
+      ],
+      "type": 4001,
+      "values": {
+        "B": 1
+      }
+    },
+    {
+      "id": "resumes_set",
+      "position": [
+        1080,
+        1980
+      ],
+      "type": 3005,
+      "values": {
+        "Name": "resumes"
+      }
+    },
+    {
+      "id": "resumes_log",
+      "position": [
+        1350,
+        1980
+      ],
+      "type": 27001,
+      "values": {
+        "Message": "World resumed"
+      }
+    },
+    {
+      "id": "real_timer",
+      "position": [
+        1620,
+        1980
+      ],
+      "type": 5010,
+      "values": {
+        "Name": "unscaled",
+        "Repeat": true,
+        "Seconds": 0.25,
+        "Unscaled": true
+      }
+    },
+    {
+      "id": "real_event",
+      "position": [
+        0,
+        2200
+      ],
+      "type": 1003,
+      "values": {
+        "Filter": "unscaled"
+      }
+    },
+    {
+      "id": "unscaled_ticks_get",
+      "position": [
+        270,
+        2200
+      ],
+      "type": 3004,
+      "values": {
+        "Name": "unscaled_ticks"
+      }
+    },
+    {
+      "id": "unscaled_ticks_add",
+      "position": [
+        540,
+        2200
+      ],
+      "type": 4001,
+      "values": {
+        "B": 1
+      }
+    },
+    {
+      "id": "unscaled_ticks_set",
+      "position": [
+        810,
+        2200
+      ],
+      "type": 3005,
+      "values": {
+        "Name": "unscaled_ticks"
+      }
+    },
+    {
+      "id": "paused_query",
+      "position": [
+        1080,
+        2200
+      ],
+      "type": 7003,
+      "values": {}
+    },
+    {
+      "id": "paused_text",
+      "position": [
+        1350,
+        2200
+      ],
+      "type": 2103,
+      "values": {
+        "False": "RUNNING",
+        "True": "PAUSED"
+      }
+    },
+    {
+      "id": "hud_update",
+      "position": [
+        1620,
+        2200
+      ],
+      "type": 1005,
+      "values": {}
+    },
+    {
+      "id": "status_text",
+      "position": [
+        0,
+        2420
+      ],
+      "type": 18005,
+      "values": {
+        "Element": "status",
+        "Widget": "hud"
+      }
+    },
+    {
+      "id": "pause_store",
+      "position": [
+        270,
+        2420
+      ],
+      "type": 3112,
+      "values": {
+        "Name": "world_paused"
+      }
+    },
+    {
+      "id": "pauses_text",
+      "position": [
+        540,
+        2420
+      ],
+      "type": 3050,
+      "values": {}
+    },
+    {
+      "id": "pauses_hud",
+      "position": [
+        810,
+        2420
+      ],
+      "type": 18005,
+      "values": {
+        "Element": "pauses",
+        "Widget": "hud"
+      }
+    },
+    {
+      "id": "resumes_text",
+      "position": [
+        1080,
+        2420
+      ],
+      "type": 3050,
+      "values": {}
+    },
+    {
+      "id": "resumes_hud",
+      "position": [
+        1350,
+        2420
+      ],
+      "type": 18005,
+      "values": {
+        "Element": "resumes",
+        "Widget": "hud"
+      }
+    },
+    {
+      "id": "unscaled_ticks_text",
+      "position": [
+        1620,
+        2420
+      ],
+      "type": 3050,
+      "values": {}
+    },
+    {
+      "id": "unscaled_ticks_hud",
+      "position": [
+        0,
+        2640
+      ],
+      "type": 18005,
+      "values": {
+        "Element": "unscaled_ticks",
+        "Widget": "hud"
+      }
+    }
+  ],
+  "version": 1
+}

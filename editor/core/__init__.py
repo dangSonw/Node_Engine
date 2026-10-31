@@ -1,0 +1,1 @@
+"""UI-independent domain layer."""

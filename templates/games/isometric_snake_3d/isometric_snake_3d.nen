@@ -1,0 +1,24 @@
+{
+  "assets": [
+    "assets/cube.gltf"
+  ],
+  "engine": {
+    "created_with": "0.1.0",
+    "last_saved_with": "0.1.0",
+    "minimum_version": "0.1.0"
+  },
+  "entry_scene": "main",
+  "format": "NodeEngine.Project",
+  "format_version": 1,
+  "name": "Isometric Snake 3D",
+  "project_id": "2fd0f655-fd8e-4930-a798-6b2403b9e399",
+  "scenes": [
+    {
+      "graph": "graphs/gameplay.json",
+      "id": "main",
+      "name": "Snake arena",
+      "scene": "scenes/main.json"
+    }
+  ],
+  "version": 2
+}

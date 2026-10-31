@@ -1,0 +1,733 @@
+{
+  "functions": [
+    {
+      "graph": {
+        "links": [
+          {
+            "from": [
+              "call_8bb413d2f0e14ba194d76520ce266dda",
+              "degrees_Value"
+            ],
+            "to": [
+              "return",
+              "Degrees"
+            ]
+          },
+          {
+            "from": [
+              "entry",
+              "Seconds"
+            ],
+            "to": [
+              "call_8bb413d2f0e14ba194d76520ce266dda",
+              "entry_Seconds"
+            ]
+          },
+          {
+            "from": [
+              "entry",
+              "Speed"
+            ],
+            "to": [
+              "call_8bb413d2f0e14ba194d76520ce266dda",
+              "entry_Speed"
+            ]
+          }
+        ],
+        "name": "Rotation Delta",
+        "nodes": [
+          {
+            "id": "call_8bb413d2f0e14ba194d76520ce266dda",
+            "label": "Angular Product",
+            "position": [
+              410.0,
+              20.0
+            ],
+            "type": 2120034270,
+            "values": {
+              "degrees_X": 0.0,
+              "degrees_Z": 0.0,
+              "entry_Seconds": 0.0,
+              "entry_Speed": 0.0
+            }
+          },
+          {
+            "id": "entry",
+            "label": "Function Input",
+            "position": [
+              0.0,
+              0.0
+            ],
+            "type": 6001,
+            "values": {}
+          },
+          {
+            "id": "return",
+            "label": "Function Output",
+            "position": [
+              800.0,
+              0.0
+            ],
+            "type": 6002,
+            "values": {
+              "Degrees": [
+                0.0,
+                0.0,
+                0.0
+              ]
+            }
+          }
+        ],
+        "version": 1
+      },
+      "id": 1000001,
+      "inputs": [
+        {
+          "name": "Speed",
+          "type": "float"
+        },
+        {
+          "name": "Seconds",
+          "type": "float"
+        }
+      ],
+      "name": "Rotation Delta",
+      "outputs": [
+        {
+          "name": "Degrees",
+          "type": "vec3"
+        }
+      ],
+      "pure": true
+    },
+    {
+      "graph": {
+        "links": [
+          {
+            "from": [
+              "entry",
+              "Out"
+            ],
+            "to": [
+              "rotate",
+              "In"
+            ]
+          },
+          {
+            "from": [
+              "entry",
+              "Target"
+            ],
+            "to": [
+              "rotate",
+              "Entity"
+            ]
+          },
+          {
+            "from": [
+              "entry",
+              "Target"
+            ],
+            "to": [
+              "rotation",
+              "Entity"
+            ]
+          },
+          {
+            "from": [
+              "entry",
+              "Speed"
+            ],
+            "to": [
+              "delta",
+              "Speed"
+            ]
+          },
+          {
+            "from": [
+              "entry",
+              "Seconds"
+            ],
+            "to": [
+              "delta",
+              "Seconds"
+            ]
+          },
+          {
+            "from": [
+              "delta",
+              "Degrees"
+            ],
+            "to": [
+              "rotate",
+              "Degrees"
+            ]
+          },
+          {
+            "from": [
+              "rotate",
+              "Out"
+            ],
+            "to": [
+              "return",
+              "In"
+            ]
+          },
+          {
+            "from": [
+              "rotation",
+              "Value"
+            ],
+            "to": [
+              "return",
+              "Rotation"
+            ]
+          }
+        ],
+        "name": "Spin Robot",
+        "nodes": [
+          {
+            "id": "entry",
+            "position": [
+              0,
+              0
+            ],
+            "type": 6001,
+            "values": {}
+          },
+          {
+            "id": "delta",
+            "position": [
+              260,
+              200
+            ],
+            "type": 1000001,
+            "values": {}
+          },
+          {
+            "id": "rotate",
+            "position": [
+              520,
+              0
+            ],
+            "type": 9004,
+            "values": {}
+          },
+          {
+            "id": "rotation",
+            "position": [
+              520,
+              230
+            ],
+            "type": 9006,
+            "values": {}
+          },
+          {
+            "id": "return",
+            "position": [
+              800,
+              0
+            ],
+            "type": 6002,
+            "values": {}
+          }
+        ],
+        "version": 1
+      },
+      "id": 1000002,
+      "inputs": [
+        {
+          "name": "Target",
+          "type": "entity"
+        },
+        {
+          "name": "Speed",
+          "type": "float"
+        },
+        {
+          "name": "Seconds",
+          "type": "float"
+        }
+      ],
+      "name": "Spin Robot",
+      "outputs": [
+        {
+          "name": "Rotation",
+          "type": "vec3"
+        }
+      ],
+      "pure": false
+    },
+    {
+      "graph": {
+        "links": [
+          {
+            "from": [
+              "entry_1dd9664b6d124025bfedf3e0099a5644",
+              "left_Target"
+            ],
+            "to": [
+              "left",
+              "Target"
+            ]
+          },
+          {
+            "from": [
+              "entry_1dd9664b6d124025bfedf3e0099a5644",
+              "left_Speed"
+            ],
+            "to": [
+              "left",
+              "Speed"
+            ]
+          },
+          {
+            "from": [
+              "dt",
+              "Value"
+            ],
+            "to": [
+              "left",
+              "Seconds"
+            ]
+          },
+          {
+            "from": [
+              "entry_1dd9664b6d124025bfedf3e0099a5644",
+              "right_Target"
+            ],
+            "to": [
+              "right",
+              "Target"
+            ]
+          },
+          {
+            "from": [
+              "entry_1dd9664b6d124025bfedf3e0099a5644",
+              "right_Speed"
+            ],
+            "to": [
+              "right",
+              "Speed"
+            ]
+          },
+          {
+            "from": [
+              "dt",
+              "Value"
+            ],
+            "to": [
+              "right",
+              "Seconds"
+            ]
+          },
+          {
+            "from": [
+              "entry_1dd9664b6d124025bfedf3e0099a5644",
+              "save_Name"
+            ],
+            "to": [
+              "save",
+              "Name"
+            ]
+          },
+          {
+            "from": [
+              "left",
+              "Rotation"
+            ],
+            "to": [
+              "save",
+              "Value"
+            ]
+          },
+          {
+            "from": [
+              "left",
+              "Out"
+            ],
+            "to": [
+              "right",
+              "In"
+            ]
+          },
+          {
+            "from": [
+              "right",
+              "Out"
+            ],
+            "to": [
+              "save",
+              "In"
+            ]
+          },
+          {
+            "from": [
+              "entry_1dd9664b6d124025bfedf3e0099a5644",
+              "Out"
+            ],
+            "to": [
+              "left",
+              "In"
+            ]
+          },
+          {
+            "from": [
+              "save",
+              "Out"
+            ],
+            "to": [
+              "return_3c7969cdae684be3a295a37d4a487e54",
+              "In"
+            ]
+          }
+        ],
+        "nodes": [
+          {
+            "id": "entry_1dd9664b6d124025bfedf3e0099a5644",
+            "position": [
+              0,
+              0
+            ],
+            "type": 6001,
+            "values": {}
+          },
+          {
+            "id": "left",
+            "label": "Spin Robot",
+            "position": [
+              600.0,
+              0.0
+            ],
+            "type": 1000002,
+            "values": {
+              "Seconds": 0.0,
+              "Speed": 45,
+              "Target": "player"
+            }
+          },
+          {
+            "id": "dt",
+            "label": "Get Delta Time",
+            "position": [
+              300.0,
+              230.0
+            ],
+            "type": 5001,
+            "values": {}
+          },
+          {
+            "id": "right",
+            "label": "Spin Robot 1",
+            "position": [
+              910.0,
+              0.0
+            ],
+            "type": 1000002,
+            "values": {
+              "Seconds": 0.0,
+              "Speed": -90,
+              "Target": "partner"
+            }
+          },
+          {
+            "id": "save",
+            "label": "Set Vector3 Variable",
+            "position": [
+              1220.0,
+              0.0
+            ],
+            "type": 3114,
+            "values": {
+              "Name": "left_rotation",
+              "Value": [
+                0,
+                0,
+                0
+              ]
+            }
+          },
+          {
+            "id": "return_3c7969cdae684be3a295a37d4a487e54",
+            "position": [
+              1570.0,
+              0
+            ],
+            "type": 6002,
+            "values": {}
+          }
+        ],
+        "version": 1
+      },
+      "id": 1090791802,
+      "inputs": [
+        {
+          "default": "player",
+          "name": "left_Target",
+          "type": "entity"
+        },
+        {
+          "default": 45,
+          "name": "left_Speed",
+          "type": "float"
+        },
+        {
+          "default": "partner",
+          "name": "right_Target",
+          "type": "entity"
+        },
+        {
+          "default": -90,
+          "name": "right_Speed",
+          "type": "float"
+        },
+        {
+          "default": "left_rotation",
+          "name": "save_Name",
+          "type": "string"
+        }
+      ],
+      "name": "Spin Pair",
+      "outputs": [],
+      "pure": false
+    },
+    {
+      "graph": {
+        "links": [
+          {
+            "from": [
+              "degrees",
+              "Value"
+            ],
+            "to": [
+              "return_23e85a16e4354bb89b7741b64bc34ccf",
+              "degrees_Value"
+            ]
+          },
+          {
+            "from": [
+              "entry_f10c71376351463fbec456381f1df3ab",
+              "degrees_X"
+            ],
+            "to": [
+              "degrees",
+              "X"
+            ]
+          },
+          {
+            "from": [
+              "entry_f10c71376351463fbec456381f1df3ab",
+              "degrees_Z"
+            ],
+            "to": [
+              "degrees",
+              "Z"
+            ]
+          },
+          {
+            "from": [
+              "entry_f10c71376351463fbec456381f1df3ab",
+              "entry_Seconds"
+            ],
+            "to": [
+              "multiply",
+              "B"
+            ]
+          },
+          {
+            "from": [
+              "entry_f10c71376351463fbec456381f1df3ab",
+              "entry_Speed"
+            ],
+            "to": [
+              "multiply",
+              "A"
+            ]
+          },
+          {
+            "from": [
+              "multiply",
+              "Value"
+            ],
+            "to": [
+              "degrees",
+              "Y"
+            ]
+          }
+        ],
+        "name": "Gameplay",
+        "nodes": [
+          {
+            "id": "degrees",
+            "label": "Make Vector3",
+            "position": [
+              560.0,
+              0.0
+            ],
+            "type": 4020,
+            "values": {
+              "X": 0.0,
+              "Y": 0.0,
+              "Z": 0.0
+            }
+          },
+          {
+            "id": "entry_f10c71376351463fbec456381f1df3ab",
+            "label": "Function Input",
+            "position": [
+              0.0,
+              0.0
+            ],
+            "type": 6001,
+            "values": {}
+          },
+          {
+            "id": "multiply",
+            "label": "Multiply",
+            "position": [
+              300.0,
+              40.0
+            ],
+            "type": 4003,
+            "values": {
+              "A": 1.0,
+              "B": 1.0
+            }
+          },
+          {
+            "id": "return_23e85a16e4354bb89b7741b64bc34ccf",
+            "label": "Function Output",
+            "position": [
+              910.0,
+              0.0
+            ],
+            "type": 6002,
+            "values": {
+              "degrees_Value": [
+                0.0,
+                0.0,
+                0.0
+              ]
+            }
+          }
+        ],
+        "version": 1
+      },
+      "id": 2120034270,
+      "inputs": [
+        {
+          "default": 0.0,
+          "name": "degrees_X",
+          "type": "float"
+        },
+        {
+          "default": 0.0,
+          "name": "entry_Speed",
+          "type": "float"
+        },
+        {
+          "default": 0.0,
+          "name": "entry_Seconds",
+          "type": "float"
+        },
+        {
+          "default": 0.0,
+          "name": "degrees_Z",
+          "type": "float"
+        }
+      ],
+      "name": "Angular Product",
+      "outputs": [
+        {
+          "name": "degrees_Value",
+          "type": "vec3"
+        }
+      ],
+      "pure": true
+    }
+  ],
+  "links": [
+    {
+      "from": [
+        "start",
+        "Out"
+      ],
+      "to": [
+        "log",
+        "In"
+      ]
+    },
+    {
+      "from": [
+        "update",
+        "Out"
+      ],
+      "to": [
+        "call_6b73e58b31464498aef291ad24b0883b",
+        "In"
+      ]
+    }
+  ],
+  "name": "Reusable robot functions",
+  "nodes": [
+    {
+      "id": "call_6b73e58b31464498aef291ad24b0883b",
+      "label": "Spin Pair",
+      "position": [
+        610.0,
+        0.0
+      ],
+      "type": 1090791802,
+      "values": {
+        "left_Speed": 45,
+        "left_Target": "player",
+        "right_Speed": -90,
+        "right_Target": "partner",
+        "save_Name": "left_rotation"
+      }
+    },
+    {
+      "id": "dt",
+      "label": "Get Delta Time",
+      "position": [
+        0.0,
+        230.0
+      ],
+      "type": 5001,
+      "values": {}
+    },
+    {
+      "id": "log",
+      "label": "Print Log",
+      "position": [
+        300.0,
+        -200.0
+      ],
+      "type": 27001,
+      "values": {
+        "Message": "Hai robot dùng chung function Spin Robot"
+      }
+    },
+    {
+      "id": "start",
+      "label": "On Game Start",
+      "position": [
+        0.0,
+        -200.0
+      ],
+      "type": 1001,
+      "values": {}
+    },
+    {
+      "id": "update",
+      "label": "On Update",
+      "position": [
+        0.0,
+        40.0
+      ],
+      "type": 1002,
+      "values": {}
+    }
+  ],
+  "version": 1
+}

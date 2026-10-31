@@ -1,0 +1,601 @@
+{
+  "links": [
+    {
+      "from": [
+        "x",
+        "Value"
+      ],
+      "to": [
+        "direction",
+        "X"
+      ]
+    },
+    {
+      "from": [
+        "z",
+        "Value"
+      ],
+      "to": [
+        "direction",
+        "Z"
+      ]
+    },
+    {
+      "from": [
+        "direction",
+        "Value"
+      ],
+      "to": [
+        "normalize",
+        "Vector"
+      ]
+    },
+    {
+      "from": [
+        "normalize",
+        "Value"
+      ],
+      "to": [
+        "delta",
+        "Vector"
+      ]
+    },
+    {
+      "from": [
+        "dt",
+        "Value"
+      ],
+      "to": [
+        "speed",
+        "A"
+      ]
+    },
+    {
+      "from": [
+        "speed",
+        "Value"
+      ],
+      "to": [
+        "delta",
+        "Scale"
+      ]
+    },
+    {
+      "from": [
+        "delta",
+        "Value"
+      ],
+      "to": [
+        "move",
+        "Delta"
+      ]
+    },
+    {
+      "from": [
+        "update",
+        "Out"
+      ],
+      "to": [
+        "move",
+        "In"
+      ]
+    },
+    {
+      "from": [
+        "move",
+        "Out"
+      ],
+      "to": [
+        "save_held",
+        "In"
+      ]
+    },
+    {
+      "from": [
+        "held",
+        "Value"
+      ],
+      "to": [
+        "save_held",
+        "Value"
+      ]
+    },
+    {
+      "from": [
+        "save_held",
+        "Out"
+      ],
+      "to": [
+        "save_axis",
+        "In"
+      ]
+    },
+    {
+      "from": [
+        "x",
+        "Value"
+      ],
+      "to": [
+        "save_axis",
+        "Value"
+      ]
+    },
+    {
+      "from": [
+        "save_axis",
+        "Out"
+      ],
+      "to": [
+        "sequence",
+        "In"
+      ]
+    },
+    {
+      "from": [
+        "sequence",
+        "First"
+      ],
+      "to": [
+        "turn_branch",
+        "In"
+      ]
+    },
+    {
+      "from": [
+        "turn",
+        "Value"
+      ],
+      "to": [
+        "turn_branch",
+        "Condition"
+      ]
+    },
+    {
+      "from": [
+        "turn_branch",
+        "True"
+      ],
+      "to": [
+        "rotate",
+        "In"
+      ]
+    },
+    {
+      "from": [
+        "rotate",
+        "Out"
+      ],
+      "to": [
+        "save_count",
+        "In"
+      ]
+    },
+    {
+      "from": [
+        "count",
+        "Value"
+      ],
+      "to": [
+        "increment",
+        "A"
+      ]
+    },
+    {
+      "from": [
+        "increment",
+        "Value"
+      ],
+      "to": [
+        "save_count",
+        "Value"
+      ]
+    },
+    {
+      "from": [
+        "sequence",
+        "Then"
+      ],
+      "to": [
+        "sequence2",
+        "In"
+      ]
+    },
+    {
+      "from": [
+        "sequence2",
+        "First"
+      ],
+      "to": [
+        "released_branch",
+        "In"
+      ]
+    },
+    {
+      "from": [
+        "released",
+        "Value"
+      ],
+      "to": [
+        "released_branch",
+        "Condition"
+      ]
+    },
+    {
+      "from": [
+        "released_branch",
+        "True"
+      ],
+      "to": [
+        "save_release",
+        "In"
+      ]
+    },
+    {
+      "from": [
+        "release_count",
+        "Value"
+      ],
+      "to": [
+        "release_increment",
+        "A"
+      ]
+    },
+    {
+      "from": [
+        "release_increment",
+        "Value"
+      ],
+      "to": [
+        "save_release",
+        "Value"
+      ]
+    },
+    {
+      "from": [
+        "sequence2",
+        "Then"
+      ],
+      "to": [
+        "reset_branch",
+        "In"
+      ]
+    },
+    {
+      "from": [
+        "reset",
+        "Value"
+      ],
+      "to": [
+        "reset_branch",
+        "Condition"
+      ]
+    },
+    {
+      "from": [
+        "reset_branch",
+        "True"
+      ],
+      "to": [
+        "origin",
+        "In"
+      ]
+    },
+    {
+      "from": [
+        "origin",
+        "Out"
+      ],
+      "to": [
+        "rotation",
+        "In"
+      ]
+    }
+  ],
+  "name": "Robot input playground",
+  "nodes": [
+    {
+      "id": "update",
+      "position": [
+        0,
+        0
+      ],
+      "type": 1002,
+      "values": {}
+    },
+    {
+      "id": "x",
+      "position": [
+        260,
+        0
+      ],
+      "type": 10007,
+      "values": {
+        "Axis": "horizontal"
+      }
+    },
+    {
+      "id": "z",
+      "position": [
+        520,
+        0
+      ],
+      "type": 10007,
+      "values": {
+        "Axis": "vertical"
+      }
+    },
+    {
+      "id": "direction",
+      "position": [
+        780,
+        0
+      ],
+      "type": 4020,
+      "values": {}
+    },
+    {
+      "id": "normalize",
+      "position": [
+        1040,
+        0
+      ],
+      "type": 4023,
+      "values": {}
+    },
+    {
+      "id": "dt",
+      "position": [
+        1300,
+        0
+      ],
+      "type": 5001,
+      "values": {}
+    },
+    {
+      "id": "speed",
+      "position": [
+        0,
+        240
+      ],
+      "type": 4003,
+      "values": {
+        "B": 3.0
+      }
+    },
+    {
+      "id": "delta",
+      "position": [
+        260,
+        240
+      ],
+      "type": 4022,
+      "values": {}
+    },
+    {
+      "id": "move",
+      "position": [
+        520,
+        240
+      ],
+      "type": 9003,
+      "values": {}
+    },
+    {
+      "id": "held",
+      "position": [
+        780,
+        240
+      ],
+      "type": 10004,
+      "values": {
+        "Action": "turn"
+      }
+    },
+    {
+      "id": "save_held",
+      "position": [
+        1040,
+        240
+      ],
+      "type": 3112,
+      "values": {
+        "Name": "turn_held"
+      }
+    },
+    {
+      "id": "save_axis",
+      "position": [
+        1300,
+        240
+      ],
+      "type": 3005,
+      "values": {
+        "Name": "horizontal"
+      }
+    },
+    {
+      "id": "sequence",
+      "position": [
+        0,
+        480
+      ],
+      "type": 2002,
+      "values": {}
+    },
+    {
+      "id": "turn",
+      "position": [
+        260,
+        480
+      ],
+      "type": 10005,
+      "values": {
+        "Action": "turn"
+      }
+    },
+    {
+      "id": "turn_branch",
+      "position": [
+        520,
+        480
+      ],
+      "type": 2001,
+      "values": {}
+    },
+    {
+      "id": "rotate",
+      "position": [
+        780,
+        480
+      ],
+      "type": 9004,
+      "values": {
+        "Degrees": [
+          0,
+          90,
+          0
+        ]
+      }
+    },
+    {
+      "id": "count",
+      "position": [
+        1040,
+        480
+      ],
+      "type": 3004,
+      "values": {
+        "Name": "turn_count"
+      }
+    },
+    {
+      "id": "increment",
+      "position": [
+        1300,
+        480
+      ],
+      "type": 4001,
+      "values": {
+        "B": 1
+      }
+    },
+    {
+      "id": "save_count",
+      "position": [
+        0,
+        720
+      ],
+      "type": 3005,
+      "values": {
+        "Name": "turn_count"
+      }
+    },
+    {
+      "id": "sequence2",
+      "position": [
+        260,
+        720
+      ],
+      "type": 2002,
+      "values": {}
+    },
+    {
+      "id": "released",
+      "position": [
+        520,
+        720
+      ],
+      "type": 10006,
+      "values": {
+        "Action": "turn"
+      }
+    },
+    {
+      "id": "released_branch",
+      "position": [
+        780,
+        720
+      ],
+      "type": 2001,
+      "values": {}
+    },
+    {
+      "id": "release_count",
+      "position": [
+        1040,
+        720
+      ],
+      "type": 3004,
+      "values": {
+        "Name": "release_count"
+      }
+    },
+    {
+      "id": "release_increment",
+      "position": [
+        1300,
+        720
+      ],
+      "type": 4001,
+      "values": {
+        "B": 1
+      }
+    },
+    {
+      "id": "save_release",
+      "position": [
+        0,
+        960
+      ],
+      "type": 3005,
+      "values": {
+        "Name": "release_count"
+      }
+    },
+    {
+      "id": "reset",
+      "position": [
+        260,
+        960
+      ],
+      "type": 10005,
+      "values": {
+        "Action": "reset"
+      }
+    },
+    {
+      "id": "reset_branch",
+      "position": [
+        520,
+        960
+      ],
+      "type": 2001,
+      "values": {}
+    },
+    {
+      "id": "origin",
+      "position": [
+        780,
+        960
+      ],
+      "type": 9002,
+      "values": {}
+    },
+    {
+      "id": "rotation",
+      "position": [
+        1040,
+        960
+      ],
+      "type": 9007,
+      "values": {
+        "Value": [
+          0,
+          0,
+          0
+        ]
+      }
+    }
+  ],
+  "version": 1
+}

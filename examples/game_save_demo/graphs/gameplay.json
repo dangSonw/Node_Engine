@@ -1,0 +1,1085 @@
+{
+  "links": [
+    {
+      "from": [
+        "start",
+        "Out"
+      ],
+      "to": [
+        "open",
+        "In"
+      ]
+    },
+    {
+      "from": [
+        "open",
+        "Out"
+      ],
+      "to": [
+        "aim",
+        "In"
+      ]
+    },
+    {
+      "from": [
+        "aim",
+        "Out"
+      ],
+      "to": [
+        "widget",
+        "In"
+      ]
+    },
+    {
+      "from": [
+        "widget",
+        "Out"
+      ],
+      "to": [
+        "sound",
+        "In"
+      ]
+    },
+    {
+      "from": [
+        "sound",
+        "Out"
+      ],
+      "to": [
+        "timer",
+        "In"
+      ]
+    },
+    {
+      "from": [
+        "timer",
+        "Out"
+      ],
+      "to": [
+        "exists",
+        "In"
+      ]
+    },
+    {
+      "from": [
+        "exists",
+        "Out"
+      ],
+      "to": [
+        "restore",
+        "In"
+      ]
+    },
+    {
+      "from": [
+        "exists",
+        "Value"
+      ],
+      "to": [
+        "restore",
+        "Condition"
+      ]
+    },
+    {
+      "from": [
+        "restore",
+        "True"
+      ],
+      "to": [
+        "startup_load",
+        "In"
+      ]
+    },
+    {
+      "from": [
+        "startup_load",
+        "Out"
+      ],
+      "to": [
+        "startup_load_accepted",
+        "In"
+      ]
+    },
+    {
+      "from": [
+        "startup_load",
+        "Accepted"
+      ],
+      "to": [
+        "startup_load_accepted",
+        "Value"
+      ]
+    },
+    {
+      "from": [
+        "startup_load_accepted",
+        "Out"
+      ],
+      "to": [
+        "startup_load_pending",
+        "In"
+      ]
+    },
+    {
+      "from": [
+        "pending",
+        "Value"
+      ],
+      "to": [
+        "startup_load_pending",
+        "Value"
+      ]
+    },
+    {
+      "from": [
+        "ticks",
+        "Value"
+      ],
+      "to": [
+        "add_tick",
+        "A"
+      ]
+    },
+    {
+      "from": [
+        "tick",
+        "Out"
+      ],
+      "to": [
+        "set_tick",
+        "In"
+      ]
+    },
+    {
+      "from": [
+        "add_tick",
+        "Value"
+      ],
+      "to": [
+        "set_tick",
+        "Value"
+      ]
+    },
+    {
+      "from": [
+        "update",
+        "Out"
+      ],
+      "to": [
+        "sequence",
+        "In"
+      ]
+    },
+    {
+      "from": [
+        "sequence",
+        "Then"
+      ],
+      "to": [
+        "keys",
+        "In"
+      ]
+    },
+    {
+      "from": [
+        "score",
+        "Value"
+      ],
+      "to": [
+        "increment",
+        "A"
+      ]
+    },
+    {
+      "from": [
+        "sequence",
+        "First"
+      ],
+      "to": [
+        "store_score",
+        "In"
+      ]
+    },
+    {
+      "from": [
+        "increment",
+        "Value"
+      ],
+      "to": [
+        "store_score",
+        "Value"
+      ]
+    },
+    {
+      "from": [
+        "store_score",
+        "Out"
+      ],
+      "to": [
+        "rotate",
+        "In"
+      ]
+    },
+    {
+      "from": [
+        "score",
+        "Value"
+      ],
+      "to": [
+        "format",
+        "Value"
+      ]
+    },
+    {
+      "from": [
+        "rotate",
+        "Out"
+      ],
+      "to": [
+        "show_score",
+        "In"
+      ]
+    },
+    {
+      "from": [
+        "format",
+        "Value"
+      ],
+      "to": [
+        "show_score",
+        "Text"
+      ]
+    },
+    {
+      "from": [
+        "show_score",
+        "Out"
+      ],
+      "to": [
+        "record_status",
+        "In"
+      ]
+    },
+    {
+      "from": [
+        "success",
+        "Value"
+      ],
+      "to": [
+        "record_status",
+        "Value"
+      ]
+    },
+    {
+      "from": [
+        "record_status",
+        "Out"
+      ],
+      "to": [
+        "status",
+        "In"
+      ]
+    },
+    {
+      "from": [
+        "success",
+        "Value"
+      ],
+      "to": [
+        "status",
+        "Condition"
+      ]
+    },
+    {
+      "from": [
+        "status",
+        "True"
+      ],
+      "to": [
+        "ok",
+        "In"
+      ]
+    },
+    {
+      "from": [
+        "status",
+        "False"
+      ],
+      "to": [
+        "failed",
+        "In"
+      ]
+    },
+    {
+      "from": [
+        "error",
+        "Value"
+      ],
+      "to": [
+        "failed",
+        "Text"
+      ]
+    },
+    {
+      "from": [
+        "keys",
+        "First"
+      ],
+      "to": [
+        "save_key_check",
+        "In"
+      ]
+    },
+    {
+      "from": [
+        "save_key_pressed",
+        "Value"
+      ],
+      "to": [
+        "save_key_check",
+        "Condition"
+      ]
+    },
+    {
+      "from": [
+        "save_key_check",
+        "True"
+      ],
+      "to": [
+        "save_key",
+        "In"
+      ]
+    },
+    {
+      "from": [
+        "save_key",
+        "Out"
+      ],
+      "to": [
+        "save_key_accepted",
+        "In"
+      ]
+    },
+    {
+      "from": [
+        "save_key",
+        "Accepted"
+      ],
+      "to": [
+        "save_key_accepted",
+        "Value"
+      ]
+    },
+    {
+      "from": [
+        "save_key_accepted",
+        "Out"
+      ],
+      "to": [
+        "save_key_pending",
+        "In"
+      ]
+    },
+    {
+      "from": [
+        "pending",
+        "Value"
+      ],
+      "to": [
+        "save_key_pending",
+        "Value"
+      ]
+    },
+    {
+      "from": [
+        "keys",
+        "Then"
+      ],
+      "to": [
+        "load_key_check",
+        "In"
+      ]
+    },
+    {
+      "from": [
+        "load_key_pressed",
+        "Value"
+      ],
+      "to": [
+        "load_key_check",
+        "Condition"
+      ]
+    },
+    {
+      "from": [
+        "load_key_check",
+        "True"
+      ],
+      "to": [
+        "load_key",
+        "In"
+      ]
+    },
+    {
+      "from": [
+        "load_key",
+        "Out"
+      ],
+      "to": [
+        "load_key_accepted",
+        "In"
+      ]
+    },
+    {
+      "from": [
+        "load_key",
+        "Accepted"
+      ],
+      "to": [
+        "load_key_accepted",
+        "Value"
+      ]
+    },
+    {
+      "from": [
+        "load_key_accepted",
+        "Out"
+      ],
+      "to": [
+        "load_key_pending",
+        "In"
+      ]
+    },
+    {
+      "from": [
+        "pending",
+        "Value"
+      ],
+      "to": [
+        "load_key_pending",
+        "Value"
+      ]
+    },
+    {
+      "from": [
+        "save_click",
+        "Out"
+      ],
+      "to": [
+        "save_button",
+        "In"
+      ]
+    },
+    {
+      "from": [
+        "save_button",
+        "Out"
+      ],
+      "to": [
+        "save_button_accepted",
+        "In"
+      ]
+    },
+    {
+      "from": [
+        "save_button",
+        "Accepted"
+      ],
+      "to": [
+        "save_button_accepted",
+        "Value"
+      ]
+    },
+    {
+      "from": [
+        "save_button_accepted",
+        "Out"
+      ],
+      "to": [
+        "save_button_pending",
+        "In"
+      ]
+    },
+    {
+      "from": [
+        "pending",
+        "Value"
+      ],
+      "to": [
+        "save_button_pending",
+        "Value"
+      ]
+    },
+    {
+      "from": [
+        "load_click",
+        "Out"
+      ],
+      "to": [
+        "load_button",
+        "In"
+      ]
+    },
+    {
+      "from": [
+        "load_button",
+        "Out"
+      ],
+      "to": [
+        "load_button_accepted",
+        "In"
+      ]
+    },
+    {
+      "from": [
+        "load_button",
+        "Accepted"
+      ],
+      "to": [
+        "load_button_accepted",
+        "Value"
+      ]
+    },
+    {
+      "from": [
+        "load_button_accepted",
+        "Out"
+      ],
+      "to": [
+        "load_button_pending",
+        "In"
+      ]
+    },
+    {
+      "from": [
+        "pending",
+        "Value"
+      ],
+      "to": [
+        "load_button_pending",
+        "Value"
+      ]
+    }
+  ],
+  "name": "Whole-game save and restore",
+  "nodes": [
+    {
+      "id": "pending",
+      "position": [
+        0,
+        0
+      ],
+      "type": 23018,
+      "values": {}
+    },
+    {
+      "id": "success",
+      "position": [
+        270,
+        0
+      ],
+      "type": 23014,
+      "values": {}
+    },
+    {
+      "id": "error",
+      "position": [
+        540,
+        0
+      ],
+      "type": 23015,
+      "values": {}
+    },
+    {
+      "id": "start",
+      "position": [
+        810,
+        0
+      ],
+      "type": 1001,
+      "values": {}
+    },
+    {
+      "id": "open",
+      "position": [
+        1080,
+        0
+      ],
+      "type": 23001,
+      "values": {
+        "Game ID": "node-engine-game-save-demo"
+      }
+    },
+    {
+      "id": "aim",
+      "position": [
+        1350,
+        0
+      ],
+      "type": 15012,
+      "values": {
+        "Target": [
+          0.0,
+          0.7,
+          0.0
+        ]
+      }
+    },
+    {
+      "id": "widget",
+      "position": [
+        1620,
+        0
+      ],
+      "type": 18001,
+      "values": {}
+    },
+    {
+      "id": "sound",
+      "position": [
+        0,
+        230
+      ],
+      "type": 17001,
+      "values": {
+        "Loop": true,
+        "Sound": "tone",
+        "Voice": "music",
+        "Volume": 0.05
+      }
+    },
+    {
+      "id": "timer",
+      "position": [
+        270,
+        230
+      ],
+      "type": 5010,
+      "values": {
+        "Name": "pulse",
+        "Repeat": true,
+        "Seconds": 0.019
+      }
+    },
+    {
+      "id": "exists",
+      "position": [
+        540,
+        230
+      ],
+      "type": 23004,
+      "values": {}
+    },
+    {
+      "id": "restore",
+      "position": [
+        810,
+        230
+      ],
+      "type": 2001,
+      "values": {}
+    },
+    {
+      "id": "startup_load",
+      "position": [
+        1080,
+        230
+      ],
+      "type": 23017,
+      "values": {}
+    },
+    {
+      "id": "startup_load_accepted",
+      "position": [
+        1350,
+        230
+      ],
+      "type": 3112,
+      "values": {
+        "Name": "accepted"
+      }
+    },
+    {
+      "id": "startup_load_pending",
+      "position": [
+        1620,
+        230
+      ],
+      "type": 3112,
+      "values": {
+        "Name": "pending"
+      }
+    },
+    {
+      "id": "tick",
+      "position": [
+        0,
+        460
+      ],
+      "type": 1003,
+      "values": {
+        "Filter": "pulse"
+      }
+    },
+    {
+      "id": "ticks",
+      "position": [
+        270,
+        460
+      ],
+      "type": 3004,
+      "values": {
+        "Name": "ticks"
+      }
+    },
+    {
+      "id": "add_tick",
+      "position": [
+        540,
+        460
+      ],
+      "type": 4001,
+      "values": {
+        "B": 1.0
+      }
+    },
+    {
+      "id": "set_tick",
+      "position": [
+        810,
+        460
+      ],
+      "type": 3005,
+      "values": {
+        "Name": "ticks"
+      }
+    },
+    {
+      "id": "update",
+      "position": [
+        1080,
+        460
+      ],
+      "type": 1002,
+      "values": {}
+    },
+    {
+      "id": "sequence",
+      "position": [
+        1350,
+        460
+      ],
+      "type": 2002,
+      "values": {}
+    },
+    {
+      "id": "keys",
+      "position": [
+        1620,
+        460
+      ],
+      "type": 2002,
+      "values": {}
+    },
+    {
+      "id": "score",
+      "position": [
+        0,
+        690
+      ],
+      "type": 3004,
+      "values": {
+        "Name": "score"
+      }
+    },
+    {
+      "id": "increment",
+      "position": [
+        270,
+        690
+      ],
+      "type": 4001,
+      "values": {
+        "B": 1.0
+      }
+    },
+    {
+      "id": "store_score",
+      "position": [
+        540,
+        690
+      ],
+      "type": 3005,
+      "values": {
+        "Name": "score"
+      }
+    },
+    {
+      "id": "rotate",
+      "position": [
+        810,
+        690
+      ],
+      "type": 9004,
+      "values": {
+        "Degrees": [
+          0.0,
+          1.0,
+          0.0
+        ]
+      }
+    },
+    {
+      "id": "format",
+      "position": [
+        1080,
+        690
+      ],
+      "type": 3050,
+      "values": {}
+    },
+    {
+      "id": "show_score",
+      "position": [
+        1350,
+        690
+      ],
+      "type": 18005,
+      "values": {
+        "Element": "score"
+      }
+    },
+    {
+      "id": "record_status",
+      "position": [
+        1620,
+        690
+      ],
+      "type": 3112,
+      "values": {
+        "Name": "completed"
+      }
+    },
+    {
+      "id": "status",
+      "position": [
+        0,
+        920
+      ],
+      "type": 2001,
+      "values": {}
+    },
+    {
+      "id": "ok",
+      "position": [
+        270,
+        920
+      ],
+      "type": 18005,
+      "values": {
+        "Element": "status",
+        "Text": "Ready / last operation succeeded"
+      }
+    },
+    {
+      "id": "failed",
+      "position": [
+        540,
+        920
+      ],
+      "type": 18005,
+      "values": {
+        "Element": "status"
+      }
+    },
+    {
+      "id": "save_key_pressed",
+      "position": [
+        810,
+        920
+      ],
+      "type": 10002,
+      "values": {
+        "Key": "S"
+      }
+    },
+    {
+      "id": "save_key_check",
+      "position": [
+        1080,
+        920
+      ],
+      "type": 2001,
+      "values": {}
+    },
+    {
+      "id": "save_key",
+      "position": [
+        1350,
+        920
+      ],
+      "type": 23016,
+      "values": {}
+    },
+    {
+      "id": "save_key_accepted",
+      "position": [
+        1620,
+        920
+      ],
+      "type": 3112,
+      "values": {
+        "Name": "accepted"
+      }
+    },
+    {
+      "id": "save_key_pending",
+      "position": [
+        0,
+        1150
+      ],
+      "type": 3112,
+      "values": {
+        "Name": "pending"
+      }
+    },
+    {
+      "id": "load_key_pressed",
+      "position": [
+        270,
+        1150
+      ],
+      "type": 10002,
+      "values": {
+        "Key": "L"
+      }
+    },
+    {
+      "id": "load_key_check",
+      "position": [
+        540,
+        1150
+      ],
+      "type": 2001,
+      "values": {}
+    },
+    {
+      "id": "load_key",
+      "position": [
+        810,
+        1150
+      ],
+      "type": 23017,
+      "values": {}
+    },
+    {
+      "id": "load_key_accepted",
+      "position": [
+        1080,
+        1150
+      ],
+      "type": 3112,
+      "values": {
+        "Name": "accepted"
+      }
+    },
+    {
+      "id": "load_key_pending",
+      "position": [
+        1350,
+        1150
+      ],
+      "type": 3112,
+      "values": {
+        "Name": "pending"
+      }
+    },
+    {
+      "id": "save_click",
+      "position": [
+        1620,
+        1150
+      ],
+      "type": 18101,
+      "values": {
+        "Element Filter": "save",
+        "Widget Filter": "hud"
+      }
+    },
+    {
+      "id": "save_button",
+      "position": [
+        0,
+        1380
+      ],
+      "type": 23016,
+      "values": {}
+    },
+    {
+      "id": "save_button_accepted",
+      "position": [
+        270,
+        1380
+      ],
+      "type": 3112,
+      "values": {
+        "Name": "accepted"
+      }
+    },
+    {
+      "id": "save_button_pending",
+      "position": [
+        540,
+        1380
+      ],
+      "type": 3112,
+      "values": {
+        "Name": "pending"
+      }
+    },
+    {
+      "id": "load_click",
+      "position": [
+        810,
+        1380
+      ],
+      "type": 18101,
+      "values": {
+        "Element Filter": "load",
+        "Widget Filter": "hud"
+      }
+    },
+    {
+      "id": "load_button",
+      "position": [
+        1080,
+        1380
+      ],
+      "type": 23017,
+      "values": {}
+    },
+    {
+      "id": "load_button_accepted",
+      "position": [
+        1350,
+        1380
+      ],
+      "type": 3112,
+      "values": {
+        "Name": "accepted"
+      }
+    },
+    {
+      "id": "load_button_pending",
+      "position": [
+        1620,
+        1380
+      ],
+      "type": 3112,
+      "values": {
+        "Name": "pending"
+      }
+    }
+  ],
+  "version": 1
+}

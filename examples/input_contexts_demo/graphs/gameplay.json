@@ -1,0 +1,2010 @@
+{
+  "links": [
+    {
+      "from": [
+        "start",
+        "Out"
+      ],
+      "to": [
+        "storage",
+        "In"
+      ]
+    },
+    {
+      "from": [
+        "storage",
+        "Out"
+      ],
+      "to": [
+        "hud",
+        "In"
+      ]
+    },
+    {
+      "from": [
+        "hud",
+        "Out"
+      ],
+      "to": [
+        "animation",
+        "In"
+      ]
+    },
+    {
+      "from": [
+        "key_press",
+        "Out"
+      ],
+      "to": [
+        "write_presses",
+        "In"
+      ]
+    },
+    {
+      "from": [
+        "get_presses",
+        "Value"
+      ],
+      "to": [
+        "add_presses",
+        "A"
+      ]
+    },
+    {
+      "from": [
+        "add_presses",
+        "Value"
+      ],
+      "to": [
+        "write_presses",
+        "Value"
+      ]
+    },
+    {
+      "from": [
+        "write_presses",
+        "Out"
+      ],
+      "to": [
+        "remember_key",
+        "In"
+      ]
+    },
+    {
+      "from": [
+        "key_press",
+        "Key"
+      ],
+      "to": [
+        "remember_key",
+        "Value"
+      ]
+    },
+    {
+      "from": [
+        "key_release",
+        "Out"
+      ],
+      "to": [
+        "write_releases",
+        "In"
+      ]
+    },
+    {
+      "from": [
+        "get_releases",
+        "Value"
+      ],
+      "to": [
+        "add_releases",
+        "A"
+      ]
+    },
+    {
+      "from": [
+        "add_releases",
+        "Value"
+      ],
+      "to": [
+        "write_releases",
+        "Value"
+      ]
+    },
+    {
+      "from": [
+        "mouse",
+        "Out"
+      ],
+      "to": [
+        "write_mouse_edges",
+        "In"
+      ]
+    },
+    {
+      "from": [
+        "get_mouse_edges",
+        "Value"
+      ],
+      "to": [
+        "add_mouse_edges",
+        "A"
+      ]
+    },
+    {
+      "from": [
+        "add_mouse_edges",
+        "Value"
+      ],
+      "to": [
+        "write_mouse_edges",
+        "Value"
+      ]
+    },
+    {
+      "from": [
+        "write_mouse_edges",
+        "Out"
+      ],
+      "to": [
+        "remember_down",
+        "In"
+      ]
+    },
+    {
+      "from": [
+        "mouse",
+        "Down"
+      ],
+      "to": [
+        "remember_down",
+        "Value"
+      ]
+    },
+    {
+      "from": [
+        "turn",
+        "Out"
+      ],
+      "to": [
+        "write_turns",
+        "In"
+      ]
+    },
+    {
+      "from": [
+        "get_turns",
+        "Value"
+      ],
+      "to": [
+        "add_turns",
+        "A"
+      ]
+    },
+    {
+      "from": [
+        "add_turns",
+        "Value"
+      ],
+      "to": [
+        "write_turns",
+        "Value"
+      ]
+    },
+    {
+      "from": [
+        "write_turns",
+        "Out"
+      ],
+      "to": [
+        "rotate",
+        "In"
+      ]
+    },
+    {
+      "from": [
+        "rotate",
+        "Out"
+      ],
+      "to": [
+        "remember_action",
+        "In"
+      ]
+    },
+    {
+      "from": [
+        "turn",
+        "Action"
+      ],
+      "to": [
+        "remember_action",
+        "Value"
+      ]
+    },
+    {
+      "from": [
+        "remember_action",
+        "Out"
+      ],
+      "to": [
+        "settle_delay",
+        "In"
+      ]
+    },
+    {
+      "from": [
+        "settle_delay",
+        "Out"
+      ],
+      "to": [
+        "write_settled",
+        "In"
+      ]
+    },
+    {
+      "from": [
+        "get_settled",
+        "Value"
+      ],
+      "to": [
+        "add_settled",
+        "A"
+      ]
+    },
+    {
+      "from": [
+        "add_settled",
+        "Value"
+      ],
+      "to": [
+        "write_settled",
+        "Value"
+      ]
+    },
+    {
+      "from": [
+        "write_settled",
+        "Out"
+      ],
+      "to": [
+        "remember_delayed",
+        "In"
+      ]
+    },
+    {
+      "from": [
+        "turn",
+        "Action"
+      ],
+      "to": [
+        "remember_delayed",
+        "Value"
+      ]
+    },
+    {
+      "from": [
+        "turn_release",
+        "Out"
+      ],
+      "to": [
+        "write_action_releases",
+        "In"
+      ]
+    },
+    {
+      "from": [
+        "get_action_releases",
+        "Value"
+      ],
+      "to": [
+        "add_action_releases",
+        "A"
+      ]
+    },
+    {
+      "from": [
+        "add_action_releases",
+        "Value"
+      ],
+      "to": [
+        "write_action_releases",
+        "Value"
+      ]
+    },
+    {
+      "from": [
+        "key_S",
+        "Out"
+      ],
+      "to": [
+        "save",
+        "In"
+      ]
+    },
+    {
+      "from": [
+        "key_L",
+        "Out"
+      ],
+      "to": [
+        "load",
+        "In"
+      ]
+    },
+    {
+      "from": [
+        "key_R",
+        "Out"
+      ],
+      "to": [
+        "reset_pos",
+        "In"
+      ]
+    },
+    {
+      "from": [
+        "reset_pos",
+        "Out"
+      ],
+      "to": [
+        "reset_rot",
+        "In"
+      ]
+    },
+    {
+      "from": [
+        "update",
+        "Out"
+      ],
+      "to": [
+        "move",
+        "In"
+      ]
+    },
+    {
+      "from": [
+        "axis",
+        "Value"
+      ],
+      "to": [
+        "amount",
+        "A"
+      ]
+    },
+    {
+      "from": [
+        "dt",
+        "Value"
+      ],
+      "to": [
+        "amount",
+        "B"
+      ]
+    },
+    {
+      "from": [
+        "amount",
+        "Value"
+      ],
+      "to": [
+        "speed",
+        "A"
+      ]
+    },
+    {
+      "from": [
+        "speed",
+        "Value"
+      ],
+      "to": [
+        "direction",
+        "X"
+      ]
+    },
+    {
+      "from": [
+        "direction",
+        "Value"
+      ],
+      "to": [
+        "move",
+        "Delta"
+      ]
+    },
+    {
+      "from": [
+        "late",
+        "Out"
+      ],
+      "to": [
+        "show_presses",
+        "In"
+      ]
+    },
+    {
+      "from": [
+        "get_presses",
+        "Value"
+      ],
+      "to": [
+        "format_presses",
+        "Value"
+      ]
+    },
+    {
+      "from": [
+        "format_presses",
+        "Value"
+      ],
+      "to": [
+        "show_presses",
+        "Text"
+      ]
+    },
+    {
+      "from": [
+        "show_presses",
+        "Out"
+      ],
+      "to": [
+        "show_releases",
+        "In"
+      ]
+    },
+    {
+      "from": [
+        "get_releases",
+        "Value"
+      ],
+      "to": [
+        "format_releases",
+        "Value"
+      ]
+    },
+    {
+      "from": [
+        "format_releases",
+        "Value"
+      ],
+      "to": [
+        "show_releases",
+        "Text"
+      ]
+    },
+    {
+      "from": [
+        "show_releases",
+        "Out"
+      ],
+      "to": [
+        "show_mouse_edges",
+        "In"
+      ]
+    },
+    {
+      "from": [
+        "get_mouse_edges",
+        "Value"
+      ],
+      "to": [
+        "format_mouse_edges",
+        "Value"
+      ]
+    },
+    {
+      "from": [
+        "format_mouse_edges",
+        "Value"
+      ],
+      "to": [
+        "show_mouse_edges",
+        "Text"
+      ]
+    },
+    {
+      "from": [
+        "show_mouse_edges",
+        "Out"
+      ],
+      "to": [
+        "show_turns",
+        "In"
+      ]
+    },
+    {
+      "from": [
+        "get_turns",
+        "Value"
+      ],
+      "to": [
+        "format_turns",
+        "Value"
+      ]
+    },
+    {
+      "from": [
+        "format_turns",
+        "Value"
+      ],
+      "to": [
+        "show_turns",
+        "Text"
+      ]
+    },
+    {
+      "from": [
+        "show_turns",
+        "Out"
+      ],
+      "to": [
+        "show_action_releases",
+        "In"
+      ]
+    },
+    {
+      "from": [
+        "get_action_releases",
+        "Value"
+      ],
+      "to": [
+        "format_action_releases",
+        "Value"
+      ]
+    },
+    {
+      "from": [
+        "format_action_releases",
+        "Value"
+      ],
+      "to": [
+        "show_action_releases",
+        "Text"
+      ]
+    },
+    {
+      "from": [
+        "show_action_releases",
+        "Out"
+      ],
+      "to": [
+        "show_settled",
+        "In"
+      ]
+    },
+    {
+      "from": [
+        "get_settled",
+        "Value"
+      ],
+      "to": [
+        "format_settled",
+        "Value"
+      ]
+    },
+    {
+      "from": [
+        "format_settled",
+        "Value"
+      ],
+      "to": [
+        "show_settled",
+        "Text"
+      ]
+    },
+    {
+      "from": [
+        "show_settled",
+        "Out"
+      ],
+      "to": [
+        "show_last_key",
+        "In"
+      ]
+    },
+    {
+      "from": [
+        "get_last_key",
+        "Value"
+      ],
+      "to": [
+        "show_last_key",
+        "Text"
+      ]
+    },
+    {
+      "from": [
+        "show_last_key",
+        "Out"
+      ],
+      "to": [
+        "show_last_action",
+        "In"
+      ]
+    },
+    {
+      "from": [
+        "get_last_action",
+        "Value"
+      ],
+      "to": [
+        "show_last_action",
+        "Text"
+      ]
+    },
+    {
+      "from": [
+        "show_last_action",
+        "Out"
+      ],
+      "to": [
+        "show_delayed_action",
+        "In"
+      ]
+    },
+    {
+      "from": [
+        "get_delayed_action",
+        "Value"
+      ],
+      "to": [
+        "show_delayed_action",
+        "Text"
+      ]
+    },
+    {
+      "from": [
+        "show_delayed_action",
+        "Out"
+      ],
+      "to": [
+        "show_last_down",
+        "In"
+      ]
+    },
+    {
+      "from": [
+        "get_last_down",
+        "Value"
+      ],
+      "to": [
+        "format_last_down",
+        "Value"
+      ]
+    },
+    {
+      "from": [
+        "format_last_down",
+        "Value"
+      ],
+      "to": [
+        "show_last_down",
+        "Text"
+      ]
+    },
+    {
+      "from": [
+        "vertical_axis",
+        "Value"
+      ],
+      "to": [
+        "vertical_amount",
+        "A"
+      ]
+    },
+    {
+      "from": [
+        "dt",
+        "Value"
+      ],
+      "to": [
+        "vertical_amount",
+        "B"
+      ]
+    },
+    {
+      "from": [
+        "vertical_amount",
+        "Value"
+      ],
+      "to": [
+        "vertical_speed",
+        "A"
+      ]
+    },
+    {
+      "from": [
+        "vertical_speed",
+        "Value"
+      ],
+      "to": [
+        "direction",
+        "Z"
+      ]
+    },
+    {
+      "from": [
+        "move",
+        "Out"
+      ],
+      "to": [
+        "capture_horizontal",
+        "In"
+      ]
+    },
+    {
+      "from": [
+        "axis",
+        "Value"
+      ],
+      "to": [
+        "capture_horizontal",
+        "Value"
+      ]
+    },
+    {
+      "from": [
+        "capture_horizontal",
+        "Out"
+      ],
+      "to": [
+        "capture_vertical",
+        "In"
+      ]
+    },
+    {
+      "from": [
+        "vertical_axis",
+        "Value"
+      ],
+      "to": [
+        "capture_vertical",
+        "Value"
+      ]
+    },
+    {
+      "from": [
+        "capture_vertical",
+        "Out"
+      ],
+      "to": [
+        "capture_trigger",
+        "In"
+      ]
+    },
+    {
+      "from": [
+        "trigger_axis",
+        "Value"
+      ],
+      "to": [
+        "capture_trigger",
+        "Value"
+      ]
+    },
+    {
+      "from": [
+        "capture_trigger",
+        "Out"
+      ],
+      "to": [
+        "capture_turn_held",
+        "In"
+      ]
+    },
+    {
+      "from": [
+        "turn_held",
+        "Value"
+      ],
+      "to": [
+        "capture_turn_held",
+        "Value"
+      ]
+    },
+    {
+      "from": [
+        "axis",
+        "Value"
+      ],
+      "to": [
+        "text_horizontal",
+        "Value"
+      ]
+    },
+    {
+      "from": [
+        "axes_hud",
+        "Out"
+      ],
+      "to": [
+        "show_horizontal",
+        "In"
+      ]
+    },
+    {
+      "from": [
+        "text_horizontal",
+        "Value"
+      ],
+      "to": [
+        "show_horizontal",
+        "Text"
+      ]
+    },
+    {
+      "from": [
+        "vertical_axis",
+        "Value"
+      ],
+      "to": [
+        "text_vertical",
+        "Value"
+      ]
+    },
+    {
+      "from": [
+        "show_horizontal",
+        "Out"
+      ],
+      "to": [
+        "show_vertical",
+        "In"
+      ]
+    },
+    {
+      "from": [
+        "text_vertical",
+        "Value"
+      ],
+      "to": [
+        "show_vertical",
+        "Text"
+      ]
+    },
+    {
+      "from": [
+        "trigger_axis",
+        "Value"
+      ],
+      "to": [
+        "text_trigger",
+        "Value"
+      ]
+    },
+    {
+      "from": [
+        "show_vertical",
+        "Out"
+      ],
+      "to": [
+        "show_trigger",
+        "In"
+      ]
+    },
+    {
+      "from": [
+        "text_trigger",
+        "Value"
+      ],
+      "to": [
+        "show_trigger",
+        "Text"
+      ]
+    },
+    {
+      "from": [
+        "context_enabled",
+        "Value"
+      ],
+      "to": [
+        "context_not",
+        "Value"
+      ]
+    },
+    {
+      "from": [
+        "context_not",
+        "Value"
+      ],
+      "to": [
+        "context_set",
+        "Enabled"
+      ]
+    },
+    {
+      "from": [
+        "menu_key",
+        "Out"
+      ],
+      "to": [
+        "context_set",
+        "In"
+      ]
+    },
+    {
+      "from": [
+        "context_late",
+        "Out"
+      ],
+      "to": [
+        "context_capture",
+        "In"
+      ]
+    },
+    {
+      "from": [
+        "context_enabled",
+        "Value"
+      ],
+      "to": [
+        "context_capture",
+        "Value"
+      ]
+    },
+    {
+      "from": [
+        "context_enabled",
+        "Value"
+      ],
+      "to": [
+        "context_format",
+        "Value"
+      ]
+    },
+    {
+      "from": [
+        "context_format",
+        "Value"
+      ],
+      "to": [
+        "context_text",
+        "Text"
+      ]
+    },
+    {
+      "from": [
+        "context_capture",
+        "Out"
+      ],
+      "to": [
+        "context_text",
+        "In"
+      ]
+    },
+    {
+      "from": [
+        "context_enabled",
+        "Value"
+      ],
+      "to": [
+        "context_display",
+        "Condition"
+      ]
+    },
+    {
+      "from": [
+        "context_display",
+        "Value"
+      ],
+      "to": [
+        "context_panel",
+        "Value"
+      ]
+    },
+    {
+      "from": [
+        "context_text",
+        "Out"
+      ],
+      "to": [
+        "context_panel",
+        "In"
+      ]
+    }
+  ],
+  "name": "Ordered input events",
+  "nodes": [
+    {
+      "id": "start",
+      "position": [
+        0,
+        0
+      ],
+      "type": 1001,
+      "values": {}
+    },
+    {
+      "id": "storage",
+      "position": [
+        280,
+        0
+      ],
+      "type": 23001,
+      "values": {
+        "Game ID": "node-engine-input-contexts-demo"
+      }
+    },
+    {
+      "id": "hud",
+      "position": [
+        560,
+        0
+      ],
+      "type": 18001,
+      "values": {}
+    },
+    {
+      "id": "animation",
+      "position": [
+        840,
+        0
+      ],
+      "type": 13002,
+      "values": {
+        "Clip": "Idle"
+      }
+    },
+    {
+      "id": "key_press",
+      "position": [
+        1120,
+        0
+      ],
+      "type": 10008,
+      "values": {
+        "Filter": ""
+      }
+    },
+    {
+      "id": "write_presses",
+      "position": [
+        1400,
+        0
+      ],
+      "type": 3111,
+      "values": {
+        "Name": "presses"
+      }
+    },
+    {
+      "id": "get_presses",
+      "position": [
+        0,
+        270
+      ],
+      "type": 3101,
+      "values": {
+        "Name": "presses"
+      }
+    },
+    {
+      "id": "add_presses",
+      "position": [
+        280,
+        270
+      ],
+      "type": 4030,
+      "values": {
+        "B": 1
+      }
+    },
+    {
+      "id": "remember_key",
+      "position": [
+        560,
+        270
+      ],
+      "type": 3113,
+      "values": {
+        "Name": "last_key"
+      }
+    },
+    {
+      "id": "key_release",
+      "position": [
+        840,
+        270
+      ],
+      "type": 10009,
+      "values": {
+        "Filter": ""
+      }
+    },
+    {
+      "id": "write_releases",
+      "position": [
+        1120,
+        270
+      ],
+      "type": 3111,
+      "values": {
+        "Name": "releases"
+      }
+    },
+    {
+      "id": "get_releases",
+      "position": [
+        1400,
+        270
+      ],
+      "type": 3101,
+      "values": {
+        "Name": "releases"
+      }
+    },
+    {
+      "id": "add_releases",
+      "position": [
+        0,
+        540
+      ],
+      "type": 4030,
+      "values": {
+        "B": 1
+      }
+    },
+    {
+      "id": "mouse",
+      "position": [
+        280,
+        540
+      ],
+      "type": 10010,
+      "values": {}
+    },
+    {
+      "id": "write_mouse_edges",
+      "position": [
+        560,
+        540
+      ],
+      "type": 3111,
+      "values": {
+        "Name": "mouse_edges"
+      }
+    },
+    {
+      "id": "get_mouse_edges",
+      "position": [
+        840,
+        540
+      ],
+      "type": 3101,
+      "values": {
+        "Name": "mouse_edges"
+      }
+    },
+    {
+      "id": "add_mouse_edges",
+      "position": [
+        1120,
+        540
+      ],
+      "type": 4030,
+      "values": {
+        "B": 1
+      }
+    },
+    {
+      "id": "remember_down",
+      "position": [
+        1400,
+        540
+      ],
+      "type": 3112,
+      "values": {
+        "Name": "last_down"
+      }
+    },
+    {
+      "id": "turn",
+      "position": [
+        0,
+        810
+      ],
+      "type": 10011,
+      "values": {
+        "Filter": "turn"
+      }
+    },
+    {
+      "id": "write_turns",
+      "position": [
+        280,
+        810
+      ],
+      "type": 3111,
+      "values": {
+        "Name": "turns"
+      }
+    },
+    {
+      "id": "get_turns",
+      "position": [
+        560,
+        810
+      ],
+      "type": 3101,
+      "values": {
+        "Name": "turns"
+      }
+    },
+    {
+      "id": "add_turns",
+      "position": [
+        840,
+        810
+      ],
+      "type": 4030,
+      "values": {
+        "B": 1
+      }
+    },
+    {
+      "id": "rotate",
+      "position": [
+        1120,
+        810
+      ],
+      "type": 9004,
+      "values": {
+        "Degrees": [
+          0,
+          90,
+          0
+        ]
+      }
+    },
+    {
+      "id": "remember_action",
+      "position": [
+        1400,
+        810
+      ],
+      "type": 3113,
+      "values": {
+        "Name": "last_action"
+      }
+    },
+    {
+      "id": "settle_delay",
+      "position": [
+        0,
+        1080
+      ],
+      "type": 2014,
+      "values": {
+        "Seconds": 0.2,
+        "Unscaled": true
+      }
+    },
+    {
+      "id": "write_settled",
+      "position": [
+        280,
+        1080
+      ],
+      "type": 3111,
+      "values": {
+        "Name": "settled"
+      }
+    },
+    {
+      "id": "get_settled",
+      "position": [
+        560,
+        1080
+      ],
+      "type": 3101,
+      "values": {
+        "Name": "settled"
+      }
+    },
+    {
+      "id": "add_settled",
+      "position": [
+        840,
+        1080
+      ],
+      "type": 4030,
+      "values": {
+        "B": 1
+      }
+    },
+    {
+      "id": "remember_delayed",
+      "position": [
+        1120,
+        1080
+      ],
+      "type": 3113,
+      "values": {
+        "Name": "delayed_action"
+      }
+    },
+    {
+      "id": "turn_release",
+      "position": [
+        1400,
+        1080
+      ],
+      "type": 10012,
+      "values": {
+        "Filter": "turn"
+      }
+    },
+    {
+      "id": "write_action_releases",
+      "position": [
+        0,
+        1350
+      ],
+      "type": 3111,
+      "values": {
+        "Name": "action_releases"
+      }
+    },
+    {
+      "id": "get_action_releases",
+      "position": [
+        280,
+        1350
+      ],
+      "type": 3101,
+      "values": {
+        "Name": "action_releases"
+      }
+    },
+    {
+      "id": "add_action_releases",
+      "position": [
+        560,
+        1350
+      ],
+      "type": 4030,
+      "values": {
+        "B": 1
+      }
+    },
+    {
+      "id": "key_S",
+      "position": [
+        840,
+        1350
+      ],
+      "type": 10008,
+      "values": {
+        "Filter": "S"
+      }
+    },
+    {
+      "id": "save",
+      "position": [
+        1120,
+        1350
+      ],
+      "type": 23016,
+      "values": {
+        "Slot": "contexts"
+      }
+    },
+    {
+      "id": "key_L",
+      "position": [
+        1400,
+        1350
+      ],
+      "type": 10008,
+      "values": {
+        "Filter": "L"
+      }
+    },
+    {
+      "id": "load",
+      "position": [
+        0,
+        1620
+      ],
+      "type": 23017,
+      "values": {
+        "Slot": "contexts"
+      }
+    },
+    {
+      "id": "key_R",
+      "position": [
+        280,
+        1620
+      ],
+      "type": 10008,
+      "values": {
+        "Filter": "R"
+      }
+    },
+    {
+      "id": "reset_pos",
+      "position": [
+        560,
+        1620
+      ],
+      "type": 9002,
+      "values": {}
+    },
+    {
+      "id": "reset_rot",
+      "position": [
+        840,
+        1620
+      ],
+      "type": 9007,
+      "values": {
+        "Value": [
+          0,
+          0,
+          0
+        ]
+      }
+    },
+    {
+      "id": "update",
+      "position": [
+        1120,
+        1620
+      ],
+      "type": 1002,
+      "values": {}
+    },
+    {
+      "id": "move",
+      "position": [
+        1400,
+        1620
+      ],
+      "type": 9003,
+      "values": {}
+    },
+    {
+      "id": "axis",
+      "position": [
+        0,
+        1890
+      ],
+      "type": 10007,
+      "values": {
+        "Axis": "horizontal"
+      }
+    },
+    {
+      "id": "dt",
+      "position": [
+        280,
+        1890
+      ],
+      "type": 5001,
+      "values": {}
+    },
+    {
+      "id": "amount",
+      "position": [
+        560,
+        1890
+      ],
+      "type": 4003,
+      "values": {}
+    },
+    {
+      "id": "speed",
+      "position": [
+        840,
+        1890
+      ],
+      "type": 4003,
+      "values": {
+        "B": 3
+      }
+    },
+    {
+      "id": "direction",
+      "position": [
+        1120,
+        1890
+      ],
+      "type": 4020,
+      "values": {}
+    },
+    {
+      "id": "late",
+      "position": [
+        1400,
+        1890
+      ],
+      "type": 1005,
+      "values": {}
+    },
+    {
+      "id": "show_presses",
+      "position": [
+        0,
+        2160
+      ],
+      "type": 18005,
+      "values": {
+        "Element": "presses"
+      }
+    },
+    {
+      "id": "format_presses",
+      "position": [
+        280,
+        2160
+      ],
+      "type": 3051,
+      "values": {}
+    },
+    {
+      "id": "show_releases",
+      "position": [
+        560,
+        2160
+      ],
+      "type": 18005,
+      "values": {
+        "Element": "releases"
+      }
+    },
+    {
+      "id": "format_releases",
+      "position": [
+        840,
+        2160
+      ],
+      "type": 3051,
+      "values": {}
+    },
+    {
+      "id": "show_mouse_edges",
+      "position": [
+        1120,
+        2160
+      ],
+      "type": 18005,
+      "values": {
+        "Element": "mouse_edges"
+      }
+    },
+    {
+      "id": "format_mouse_edges",
+      "position": [
+        1400,
+        2160
+      ],
+      "type": 3051,
+      "values": {}
+    },
+    {
+      "id": "show_turns",
+      "position": [
+        0,
+        2430
+      ],
+      "type": 18005,
+      "values": {
+        "Element": "turns"
+      }
+    },
+    {
+      "id": "format_turns",
+      "position": [
+        280,
+        2430
+      ],
+      "type": 3051,
+      "values": {}
+    },
+    {
+      "id": "show_action_releases",
+      "position": [
+        560,
+        2430
+      ],
+      "type": 18005,
+      "values": {
+        "Element": "action_releases"
+      }
+    },
+    {
+      "id": "format_action_releases",
+      "position": [
+        840,
+        2430
+      ],
+      "type": 3051,
+      "values": {}
+    },
+    {
+      "id": "show_settled",
+      "position": [
+        1120,
+        2430
+      ],
+      "type": 18005,
+      "values": {
+        "Element": "settled"
+      }
+    },
+    {
+      "id": "format_settled",
+      "position": [
+        1400,
+        2430
+      ],
+      "type": 3051,
+      "values": {}
+    },
+    {
+      "id": "show_last_key",
+      "position": [
+        0,
+        2700
+      ],
+      "type": 18005,
+      "values": {
+        "Element": "last_key"
+      }
+    },
+    {
+      "id": "get_last_key",
+      "position": [
+        280,
+        2700
+      ],
+      "type": 3103,
+      "values": {
+        "Name": "last_key"
+      }
+    },
+    {
+      "id": "show_last_action",
+      "position": [
+        560,
+        2700
+      ],
+      "type": 18005,
+      "values": {
+        "Element": "last_action"
+      }
+    },
+    {
+      "id": "get_last_action",
+      "position": [
+        840,
+        2700
+      ],
+      "type": 3103,
+      "values": {
+        "Name": "last_action"
+      }
+    },
+    {
+      "id": "show_delayed_action",
+      "position": [
+        1120,
+        2700
+      ],
+      "type": 18005,
+      "values": {
+        "Element": "delayed_action"
+      }
+    },
+    {
+      "id": "get_delayed_action",
+      "position": [
+        1400,
+        2700
+      ],
+      "type": 3103,
+      "values": {
+        "Name": "delayed_action"
+      }
+    },
+    {
+      "id": "show_last_down",
+      "position": [
+        0,
+        2970
+      ],
+      "type": 18005,
+      "values": {
+        "Element": "last_down"
+      }
+    },
+    {
+      "id": "get_last_down",
+      "position": [
+        280,
+        2970
+      ],
+      "type": 3102,
+      "values": {
+        "Name": "last_down"
+      }
+    },
+    {
+      "id": "format_last_down",
+      "position": [
+        560,
+        2970
+      ],
+      "type": 3054,
+      "values": {}
+    },
+    {
+      "id": "vertical_axis",
+      "position": [
+        840,
+        2970
+      ],
+      "type": 10007,
+      "values": {
+        "Axis": "vertical"
+      }
+    },
+    {
+      "id": "vertical_amount",
+      "position": [
+        1120,
+        2970
+      ],
+      "type": 4003,
+      "values": {}
+    },
+    {
+      "id": "vertical_speed",
+      "position": [
+        1400,
+        2970
+      ],
+      "type": 4003,
+      "values": {
+        "B": 3
+      }
+    },
+    {
+      "id": "trigger_axis",
+      "position": [
+        0,
+        3240
+      ],
+      "type": 10007,
+      "values": {
+        "Axis": "trigger"
+      }
+    },
+    {
+      "id": "turn_held",
+      "position": [
+        280,
+        3240
+      ],
+      "type": 10004,
+      "values": {
+        "Action": "turn"
+      }
+    },
+    {
+      "id": "capture_horizontal",
+      "position": [
+        560,
+        3240
+      ],
+      "type": 3005,
+      "values": {
+        "Name": "horizontal"
+      }
+    },
+    {
+      "id": "capture_vertical",
+      "position": [
+        840,
+        3240
+      ],
+      "type": 3005,
+      "values": {
+        "Name": "vertical"
+      }
+    },
+    {
+      "id": "capture_trigger",
+      "position": [
+        1120,
+        3240
+      ],
+      "type": 3005,
+      "values": {
+        "Name": "trigger"
+      }
+    },
+    {
+      "id": "capture_turn_held",
+      "position": [
+        1400,
+        3240
+      ],
+      "type": 3112,
+      "values": {
+        "Name": "turn_held"
+      }
+    },
+    {
+      "id": "axes_hud",
+      "position": [
+        0,
+        3510
+      ],
+      "type": 1005,
+      "values": {}
+    },
+    {
+      "id": "text_horizontal",
+      "position": [
+        280,
+        3510
+      ],
+      "type": 3050,
+      "values": {}
+    },
+    {
+      "id": "show_horizontal",
+      "position": [
+        560,
+        3510
+      ],
+      "type": 18005,
+      "values": {
+        "Element": "horizontal"
+      }
+    },
+    {
+      "id": "text_vertical",
+      "position": [
+        840,
+        3510
+      ],
+      "type": 3050,
+      "values": {}
+    },
+    {
+      "id": "show_vertical",
+      "position": [
+        1120,
+        3510
+      ],
+      "type": 18005,
+      "values": {
+        "Element": "vertical"
+      }
+    },
+    {
+      "id": "text_trigger",
+      "position": [
+        1400,
+        3510
+      ],
+      "type": 3050,
+      "values": {}
+    },
+    {
+      "id": "show_trigger",
+      "position": [
+        0,
+        3780
+      ],
+      "type": 18005,
+      "values": {
+        "Element": "trigger"
+      }
+    },
+    {
+      "id": "menu_key",
+      "position": [
+        280,
+        3780
+      ],
+      "type": 10008,
+      "values": {
+        "Filter": "M"
+      }
+    },
+    {
+      "id": "context_enabled",
+      "position": [
+        560,
+        3780
+      ],
+      "type": 10022,
+      "values": {}
+    },
+    {
+      "id": "context_not",
+      "position": [
+        840,
+        3780
+      ],
+      "type": 4017,
+      "values": {}
+    },
+    {
+      "id": "context_set",
+      "position": [
+        1120,
+        3780
+      ],
+      "type": 10021,
+      "values": {}
+    },
+    {
+      "id": "context_late",
+      "position": [
+        1400,
+        3780
+      ],
+      "type": 1005,
+      "values": {}
+    },
+    {
+      "id": "context_capture",
+      "position": [
+        0,
+        4050
+      ],
+      "type": 3112,
+      "values": {
+        "Name": "game_enabled"
+      }
+    },
+    {
+      "id": "context_format",
+      "position": [
+        280,
+        4050
+      ],
+      "type": 3054,
+      "values": {}
+    },
+    {
+      "id": "context_text",
+      "position": [
+        560,
+        4050
+      ],
+      "type": 18005,
+      "values": {
+        "Element": "context"
+      }
+    },
+    {
+      "id": "context_display",
+      "position": [
+        840,
+        4050
+      ],
+      "type": 2103,
+      "values": {
+        "False": "block",
+        "True": "none"
+      }
+    },
+    {
+      "id": "context_panel",
+      "position": [
+        1120,
+        4050
+      ],
+      "type": 18014,
+      "values": {
+        "Element": "menu",
+        "Property": "display"
+      }
+    }
+  ],
+  "version": 1
+}

@@ -1,0 +1,101 @@
+{
+  "active_camera": "camera",
+  "entities": [
+    {
+      "id": "player",
+      "mesh": "assets/robot.glb",
+      "name": "Moving animated robot",
+      "position": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "rotation": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "scale": [
+        1.0,
+        1.0,
+        1.0
+      ]
+    },
+    {
+      "id": "left",
+      "mesh": "assets/landmark.gltf",
+      "name": "left landmark",
+      "position": [
+        -3,
+        0,
+        -2
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ]
+    },
+    {
+      "id": "right",
+      "mesh": "assets/landmark.gltf",
+      "name": "right landmark",
+      "position": [
+        3,
+        0,
+        -2
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ]
+    },
+    {
+      "camera": {
+        "far": 1000.0,
+        "fov": 60.0,
+        "near": 0.1,
+        "projection": "perspective",
+        "size": 10.0
+      },
+      "id": "camera",
+      "name": "Late follow camera",
+      "position": [
+        0,
+        1,
+        7
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ]
+    }
+  ],
+  "ui_assets": [
+    {
+      "id": "hud",
+      "name": "HUD",
+      "rml": "<rml><head><style>body {width:100%;height:100%;font-family:node-ui;font-size:14px;color:#ffffff;pointer-events:none;}\n    #help {position:absolute;left:8px;top:8px;padding:8px;width:94%;max-width:490px;box-sizing:border-box;background-color:#171e32dd;}</style></head>\n    <body><div id=\"help\">Late Update camera follow<br/>\n    Camera follows the robot after physics moves it.<br/>\n    A/D: move left/right / Space: stop<br/>\n    0: freeze / 1: normal / 2: double speed<br/>\n    S/L: save/load at the end of the frame</div></body></rml>",
+      "type": "ui",
+      "version": 1
+    }
+  ],
+  "variables": {}
+}

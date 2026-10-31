@@ -1,0 +1,61 @@
+{
+  "entities": [
+    {
+      "id": "player",
+      "mesh": "assets/robot.gltf",
+      "name": "Blockbench robot",
+      "position": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "rotation": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "scale": [
+        1.0,
+        1.0,
+        1.0
+      ]
+    }
+  ],
+  "input": {
+    "actions": {
+      "world_click": [
+        "MouseLeft"
+      ]
+    },
+    "axes": {
+      "horizontal": {
+        "negative": [
+          "A"
+        ],
+        "positive": [
+          "D"
+        ]
+      }
+    },
+    "version": 1
+  },
+  "ui_assets": [
+    {
+      "id": "hud",
+      "name": "HUD",
+      "rml": "<rml><head><title>HUD</title><style>\nbody { font-family: node-ui; font-size: 18px; color: #e9efff; }\n#panel { display: block; position: absolute; left: 24px; top: 24px; width: 300px;\n    padding: 20px; background-color: #172338e8; border-radius: 12px; }\np { display: block; margin: 0px 0px 12px; }\ninput { display: block; margin-bottom: 12px; }\ninput.button { width: 260px; height: 38px; background-color: #4080c0; text-align: center; }\ninput.button:hover { background-color: #559ce0; }\ninput.button:disabled { background-color: #4a4f58; }\ninput.text { width: 252px; height: 30px; padding: 4px; background-color: #0d1625; }\nprogress { display: block; width: 260px; height: 14px; background-color: #0d1625; margin-bottom: 12px; }\nprogress fill { background-color: #53cfa4; }\ninput.range { width: 260px; height: 20px; }\nslidertrack { background-color: #263b55; height: 8px; margin-top: 6px; }\nsliderbar { width: 14px; height: 20px; background-color: #8dbbff; }\ninput.checkbox { width: 20px; height: 20px; background-color: #4a586c; }\ninput.checkbox:checked { background-color: #53cfa4; }\n</style></head><body><div id=\"panel\">\n<p id=\"title\">Robot playground</p><p id=\"score\">Score: 0</p>\n<progress id=\"progress\" value=\"0\" />\n<input id=\"add\" type=\"button\" class=\"button\" value=\"Add point\" />\n<input id=\"name\" type=\"text\" class=\"text\" value=\"Player\" maxlength=\"128\" />\n<input id=\"volume\" type=\"range\" class=\"range\" min=\"0\" max=\"1\" step=\"0.1\" value=\"0.5\" />\n<input id=\"enabled\" type=\"checkbox\" class=\"checkbox\" checked=\"checked\" />\n<p id=\"status\">Click Add point to start</p>\n</div></body></rml>",
+      "type": "ui",
+      "version": 1
+    }
+  ],
+  "variables": {
+    "clicks_outside": 0.0,
+    "horizontal": 0.0,
+    "player_name": {
+      "type": "string",
+      "value": "Player"
+    },
+    "score": 0.0,
+    "volume": 0.5
+  }
+}

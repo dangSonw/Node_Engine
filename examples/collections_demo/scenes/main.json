@@ -1,0 +1,82 @@
+{
+  "entities": [
+    {
+      "id": "player",
+      "mesh": "assets/robot.gltf",
+      "name": "Robot trái",
+      "position": [
+        -1,
+        0,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ]
+    },
+    {
+      "id": "partner",
+      "mesh": "assets/robot.gltf",
+      "name": "Robot phải",
+      "position": [
+        1,
+        0,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ]
+    }
+  ],
+  "variables": {
+    "axis": {
+      "type": "vec3",
+      "value": [
+        0,
+        1,
+        0
+      ]
+    },
+    "inventory": {
+      "type": "map<int>",
+      "value": {
+        "coin": 10,
+        "potion": 2
+      }
+    },
+    "message": {
+      "type": "string",
+      "value": "Vật phẩm: "
+    },
+    "ready": {
+      "type": "bool",
+      "value": false
+    },
+    "speed": 45.0,
+    "targets": {
+      "type": "array<entity>",
+      "value": [
+        "player",
+        "partner"
+      ]
+    },
+    "total": {
+      "type": "int",
+      "value": 0
+    }
+  },
+  "version": 1
+}

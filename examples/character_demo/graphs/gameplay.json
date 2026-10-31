@@ -1,0 +1,1080 @@
+{
+  "links": [
+    {
+      "from": [
+        "aim",
+        "Out"
+      ],
+      "to": [
+        "hud",
+        "In"
+      ]
+    },
+    {
+      "from": [
+        "hud",
+        "Out"
+      ],
+      "to": [
+        "storage",
+        "In"
+      ]
+    },
+    {
+      "from": [
+        "storage",
+        "Out"
+      ],
+      "to": [
+        "slot",
+        "In"
+      ]
+    },
+    {
+      "from": [
+        "slot",
+        "Out"
+      ],
+      "to": [
+        "exists",
+        "In"
+      ]
+    },
+    {
+      "from": [
+        "slot",
+        "Value"
+      ],
+      "to": [
+        "exists",
+        "Condition"
+      ]
+    },
+    {
+      "from": [
+        "exists",
+        "True"
+      ],
+      "to": [
+        "startup_load",
+        "In"
+      ]
+    },
+    {
+      "from": [
+        "fixed",
+        "Out"
+      ],
+      "to": [
+        "force",
+        "In"
+      ]
+    },
+    {
+      "from": [
+        "axis_x",
+        "Value"
+      ],
+      "to": [
+        "vector",
+        "X"
+      ]
+    },
+    {
+      "from": [
+        "axis_z",
+        "Value"
+      ],
+      "to": [
+        "vector",
+        "Z"
+      ]
+    },
+    {
+      "from": [
+        "vector",
+        "Value"
+      ],
+      "to": [
+        "strength",
+        "Vector"
+      ]
+    },
+    {
+      "from": [
+        "strength",
+        "Value"
+      ],
+      "to": [
+        "force",
+        "Velocity"
+      ]
+    },
+    {
+      "from": [
+        "force",
+        "Out"
+      ],
+      "to": [
+        "count",
+        "In"
+      ]
+    },
+    {
+      "from": [
+        "ticks",
+        "Value"
+      ],
+      "to": [
+        "plus",
+        "A"
+      ]
+    },
+    {
+      "from": [
+        "plus",
+        "Value"
+      ],
+      "to": [
+        "count",
+        "Value"
+      ]
+    },
+    {
+      "from": [
+        "jump_event",
+        "Out"
+      ],
+      "to": [
+        "jump_branch",
+        "In"
+      ]
+    },
+    {
+      "from": [
+        "jump_pressed",
+        "Value"
+      ],
+      "to": [
+        "jump_branch",
+        "Condition"
+      ]
+    },
+    {
+      "from": [
+        "jump_branch",
+        "True"
+      ],
+      "to": [
+        "jump",
+        "In"
+      ]
+    },
+    {
+      "from": [
+        "reset_event",
+        "Out"
+      ],
+      "to": [
+        "reset_branch",
+        "In"
+      ]
+    },
+    {
+      "from": [
+        "reset_pressed",
+        "Value"
+      ],
+      "to": [
+        "reset_branch",
+        "Condition"
+      ]
+    },
+    {
+      "from": [
+        "reset_branch",
+        "True"
+      ],
+      "to": [
+        "reset",
+        "In"
+      ]
+    },
+    {
+      "from": [
+        "save_event",
+        "Out"
+      ],
+      "to": [
+        "save_branch",
+        "In"
+      ]
+    },
+    {
+      "from": [
+        "save_pressed",
+        "Value"
+      ],
+      "to": [
+        "save_branch",
+        "Condition"
+      ]
+    },
+    {
+      "from": [
+        "save_branch",
+        "True"
+      ],
+      "to": [
+        "save",
+        "In"
+      ]
+    },
+    {
+      "from": [
+        "load_event",
+        "Out"
+      ],
+      "to": [
+        "load_branch",
+        "In"
+      ]
+    },
+    {
+      "from": [
+        "load_pressed",
+        "Value"
+      ],
+      "to": [
+        "load_branch",
+        "Condition"
+      ]
+    },
+    {
+      "from": [
+        "load_branch",
+        "True"
+      ],
+      "to": [
+        "load",
+        "In"
+      ]
+    },
+    {
+      "from": [
+        "reset",
+        "Out"
+      ],
+      "to": [
+        "reset_rotation",
+        "In"
+      ]
+    },
+    {
+      "from": [
+        "reset_rotation",
+        "Out"
+      ],
+      "to": [
+        "reset_velocity",
+        "In"
+      ]
+    },
+    {
+      "from": [
+        "start",
+        "Out"
+      ],
+      "to": [
+        "aim",
+        "In"
+      ]
+    },
+    {
+      "from": [
+        "crouch_event",
+        "Out"
+      ],
+      "to": [
+        "crouch_branch",
+        "In"
+      ]
+    },
+    {
+      "from": [
+        "crouch_key",
+        "Value"
+      ],
+      "to": [
+        "crouch_branch",
+        "Condition"
+      ]
+    },
+    {
+      "from": [
+        "crouch_branch",
+        "True"
+      ],
+      "to": [
+        "crouch",
+        "In"
+      ]
+    },
+    {
+      "from": [
+        "crouch",
+        "Out"
+      ],
+      "to": [
+        "crouch_fits",
+        "In"
+      ]
+    },
+    {
+      "from": [
+        "crouch",
+        "Resized"
+      ],
+      "to": [
+        "crouch_fits",
+        "Condition"
+      ]
+    },
+    {
+      "from": [
+        "crouch_fits",
+        "True"
+      ],
+      "to": [
+        "crouch_mesh",
+        "In"
+      ]
+    },
+    {
+      "from": [
+        "crouch_mesh",
+        "Out"
+      ],
+      "to": [
+        "crouch_offset",
+        "In"
+      ]
+    },
+    {
+      "from": [
+        "crouch_offset",
+        "Out"
+      ],
+      "to": [
+        "crouch_hud",
+        "In"
+      ]
+    },
+    {
+      "from": [
+        "stand_event",
+        "Out"
+      ],
+      "to": [
+        "stand_branch",
+        "In"
+      ]
+    },
+    {
+      "from": [
+        "stand_key",
+        "Value"
+      ],
+      "to": [
+        "stand_branch",
+        "Condition"
+      ]
+    },
+    {
+      "from": [
+        "stand_branch",
+        "True"
+      ],
+      "to": [
+        "stand",
+        "In"
+      ]
+    },
+    {
+      "from": [
+        "stand",
+        "Out"
+      ],
+      "to": [
+        "stand_fits",
+        "In"
+      ]
+    },
+    {
+      "from": [
+        "stand",
+        "Resized"
+      ],
+      "to": [
+        "stand_fits",
+        "Condition"
+      ]
+    },
+    {
+      "from": [
+        "stand_fits",
+        "True"
+      ],
+      "to": [
+        "stand_mesh",
+        "In"
+      ]
+    },
+    {
+      "from": [
+        "stand_mesh",
+        "Out"
+      ],
+      "to": [
+        "stand_offset",
+        "In"
+      ]
+    },
+    {
+      "from": [
+        "stand_offset",
+        "Out"
+      ],
+      "to": [
+        "stand_hud",
+        "In"
+      ]
+    },
+    {
+      "from": [
+        "status",
+        "Out"
+      ],
+      "to": [
+        "ground_check",
+        "In"
+      ]
+    },
+    {
+      "from": [
+        "ground_check",
+        "Out"
+      ],
+      "to": [
+        "ground_hud",
+        "In"
+      ]
+    },
+    {
+      "from": [
+        "ground_check",
+        "State"
+      ],
+      "to": [
+        "ground_text",
+        "B"
+      ]
+    },
+    {
+      "from": [
+        "ground_text",
+        "Value"
+      ],
+      "to": [
+        "ground_hud",
+        "Text"
+      ]
+    }
+  ],
+  "name": "Physics robot",
+  "nodes": [
+    {
+      "id": "start",
+      "position": [
+        0,
+        0
+      ],
+      "type": 1001,
+      "values": {}
+    },
+    {
+      "id": "aim",
+      "position": [
+        285,
+        0
+      ],
+      "type": 15012,
+      "values": {
+        "Target": [
+          0,
+          1,
+          0
+        ]
+      }
+    },
+    {
+      "id": "hud",
+      "position": [
+        570,
+        0
+      ],
+      "type": 18001,
+      "values": {}
+    },
+    {
+      "id": "storage",
+      "position": [
+        855,
+        0
+      ],
+      "type": 23001,
+      "values": {
+        "Game ID": "node-engine-character-demo"
+      }
+    },
+    {
+      "id": "slot",
+      "position": [
+        1140,
+        0
+      ],
+      "type": 23004,
+      "values": {}
+    },
+    {
+      "id": "exists",
+      "position": [
+        1425,
+        0
+      ],
+      "type": 2001,
+      "values": {}
+    },
+    {
+      "id": "startup_load",
+      "position": [
+        1710,
+        0
+      ],
+      "type": 23017,
+      "values": {}
+    },
+    {
+      "id": "fixed",
+      "position": [
+        0,
+        220
+      ],
+      "type": 1004,
+      "values": {}
+    },
+    {
+      "id": "force",
+      "position": [
+        285,
+        220
+      ],
+      "type": 12004,
+      "values": {}
+    },
+    {
+      "id": "axis_x",
+      "position": [
+        570,
+        220
+      ],
+      "type": 10007,
+      "values": {
+        "Axis": "horizontal"
+      }
+    },
+    {
+      "id": "axis_z",
+      "position": [
+        855,
+        220
+      ],
+      "type": 10007,
+      "values": {
+        "Axis": "vertical"
+      }
+    },
+    {
+      "id": "vector",
+      "position": [
+        1140,
+        220
+      ],
+      "type": 4020,
+      "values": {}
+    },
+    {
+      "id": "strength",
+      "position": [
+        1425,
+        220
+      ],
+      "type": 4022,
+      "values": {
+        "Scale": 3
+      }
+    },
+    {
+      "id": "count",
+      "position": [
+        1710,
+        220
+      ],
+      "type": 3005,
+      "values": {
+        "Name": "fixed_steps"
+      }
+    },
+    {
+      "id": "ticks",
+      "position": [
+        0,
+        440
+      ],
+      "type": 3004,
+      "values": {
+        "Name": "fixed_steps"
+      }
+    },
+    {
+      "id": "plus",
+      "position": [
+        285,
+        440
+      ],
+      "type": 4001,
+      "values": {
+        "B": 1
+      }
+    },
+    {
+      "id": "jump_event",
+      "position": [
+        570,
+        440
+      ],
+      "type": 1002,
+      "values": {}
+    },
+    {
+      "id": "jump_pressed",
+      "position": [
+        855,
+        440
+      ],
+      "type": 10002,
+      "values": {
+        "Key": "Space"
+      }
+    },
+    {
+      "id": "jump_branch",
+      "position": [
+        1140,
+        440
+      ],
+      "type": 2001,
+      "values": {}
+    },
+    {
+      "id": "jump",
+      "position": [
+        1425,
+        440
+      ],
+      "type": 12005,
+      "values": {
+        "Speed": 5
+      }
+    },
+    {
+      "id": "reset_event",
+      "position": [
+        1710,
+        440
+      ],
+      "type": 1002,
+      "values": {}
+    },
+    {
+      "id": "reset_pressed",
+      "position": [
+        0,
+        660
+      ],
+      "type": 10002,
+      "values": {
+        "Key": "R"
+      }
+    },
+    {
+      "id": "reset_branch",
+      "position": [
+        285,
+        660
+      ],
+      "type": 2001,
+      "values": {}
+    },
+    {
+      "id": "reset",
+      "position": [
+        570,
+        660
+      ],
+      "type": 9002,
+      "values": {
+        "Value": [
+          0,
+          3,
+          0
+        ]
+      }
+    },
+    {
+      "id": "save_event",
+      "position": [
+        855,
+        660
+      ],
+      "type": 1002,
+      "values": {}
+    },
+    {
+      "id": "save_pressed",
+      "position": [
+        1140,
+        660
+      ],
+      "type": 10002,
+      "values": {
+        "Key": "S"
+      }
+    },
+    {
+      "id": "save_branch",
+      "position": [
+        1425,
+        660
+      ],
+      "type": 2001,
+      "values": {}
+    },
+    {
+      "id": "save",
+      "position": [
+        1710,
+        660
+      ],
+      "type": 23016,
+      "values": {}
+    },
+    {
+      "id": "load_event",
+      "position": [
+        0,
+        880
+      ],
+      "type": 1002,
+      "values": {}
+    },
+    {
+      "id": "load_pressed",
+      "position": [
+        285,
+        880
+      ],
+      "type": 10002,
+      "values": {
+        "Key": "L"
+      }
+    },
+    {
+      "id": "load_branch",
+      "position": [
+        570,
+        880
+      ],
+      "type": 2001,
+      "values": {}
+    },
+    {
+      "id": "load",
+      "position": [
+        855,
+        880
+      ],
+      "type": 23017,
+      "values": {}
+    },
+    {
+      "id": "reset_rotation",
+      "position": [
+        1140,
+        880
+      ],
+      "type": 9007,
+      "values": {
+        "Value": [
+          0,
+          0,
+          0
+        ]
+      }
+    },
+    {
+      "id": "reset_velocity",
+      "position": [
+        1425,
+        880
+      ],
+      "type": 11010,
+      "values": {
+        "Value": [
+          0,
+          0,
+          0
+        ]
+      }
+    },
+    {
+      "id": "crouch_event",
+      "position": [
+        1710,
+        880
+      ],
+      "type": 1002,
+      "values": {}
+    },
+    {
+      "id": "crouch_key",
+      "position": [
+        0,
+        1100
+      ],
+      "type": 10002,
+      "values": {
+        "Key": "C"
+      }
+    },
+    {
+      "id": "crouch_branch",
+      "position": [
+        285,
+        1100
+      ],
+      "type": 2001,
+      "values": {}
+    },
+    {
+      "id": "crouch",
+      "position": [
+        570,
+        1100
+      ],
+      "type": 12006,
+      "values": {
+        "Half Height": 0.2,
+        "Radius": 0.35
+      }
+    },
+    {
+      "id": "crouch_fits",
+      "position": [
+        855,
+        1100
+      ],
+      "type": 2001,
+      "values": {}
+    },
+    {
+      "id": "crouch_mesh",
+      "position": [
+        1140,
+        1100
+      ],
+      "type": 9005,
+      "values": {
+        "Entity": "robot_mesh",
+        "Value": [
+          1,
+          0.6470588235294118,
+          1
+        ]
+      }
+    },
+    {
+      "id": "crouch_offset",
+      "position": [
+        1425,
+        1100
+      ],
+      "type": 9002,
+      "values": {
+        "Entity": "robot_mesh",
+        "Value": [
+          0,
+          -0.55,
+          0
+        ]
+      }
+    },
+    {
+      "id": "crouch_hud",
+      "position": [
+        1710,
+        1100
+      ],
+      "type": 18005,
+      "values": {
+        "Element": "posture",
+        "Text": "Posture: crouching"
+      }
+    },
+    {
+      "id": "stand_event",
+      "position": [
+        0,
+        1320
+      ],
+      "type": 1002,
+      "values": {}
+    },
+    {
+      "id": "stand_key",
+      "position": [
+        285,
+        1320
+      ],
+      "type": 10002,
+      "values": {
+        "Key": "V"
+      }
+    },
+    {
+      "id": "stand_branch",
+      "position": [
+        570,
+        1320
+      ],
+      "type": 2001,
+      "values": {}
+    },
+    {
+      "id": "stand",
+      "position": [
+        855,
+        1320
+      ],
+      "type": 12006,
+      "values": {
+        "Half Height": 0.5,
+        "Radius": 0.35
+      }
+    },
+    {
+      "id": "stand_fits",
+      "position": [
+        1140,
+        1320
+      ],
+      "type": 2001,
+      "values": {}
+    },
+    {
+      "id": "stand_mesh",
+      "position": [
+        1425,
+        1320
+      ],
+      "type": 9005,
+      "values": {
+        "Entity": "robot_mesh",
+        "Value": [
+          1,
+          1.0,
+          1
+        ]
+      }
+    },
+    {
+      "id": "stand_offset",
+      "position": [
+        1710,
+        1320
+      ],
+      "type": 9002,
+      "values": {
+        "Entity": "robot_mesh",
+        "Value": [
+          0,
+          -0.85,
+          0
+        ]
+      }
+    },
+    {
+      "id": "stand_hud",
+      "position": [
+        0,
+        1540
+      ],
+      "type": 18005,
+      "values": {
+        "Element": "posture",
+        "Text": "Posture: standing"
+      }
+    },
+    {
+      "id": "status",
+      "position": [
+        285,
+        1540
+      ],
+      "type": 1002,
+      "values": {}
+    },
+    {
+      "id": "ground_check",
+      "position": [
+        570,
+        1540
+      ],
+      "type": 12008,
+      "values": {}
+    },
+    {
+      "id": "ground_hud",
+      "position": [
+        855,
+        1540
+      ],
+      "type": 18005,
+      "values": {
+        "Element": "ground"
+      }
+    },
+    {
+      "id": "ground_text",
+      "position": [
+        1140,
+        1540
+      ],
+      "type": 3052,
+      "values": {
+        "A": "Ground: "
+      }
+    }
+  ],
+  "version": 1
+}

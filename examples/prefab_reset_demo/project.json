@@ -1,0 +1,9 @@
+{
+  "assets": [
+    "assets/robot.gltf"
+  ],
+  "graph": "graphs/gameplay.json",
+  "name": "Live prefab reset",
+  "scene": "scenes/main.json",
+  "version": 1
+}

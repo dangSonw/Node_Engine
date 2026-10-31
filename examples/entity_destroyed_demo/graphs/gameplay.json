@@ -1,0 +1,2632 @@
+{
+  "links": [
+    {
+      "from": [
+        "on_created",
+        "Out"
+      ],
+      "to": [
+        "write_created",
+        "In"
+      ]
+    },
+    {
+      "from": [
+        "get_created",
+        "Value"
+      ],
+      "to": [
+        "add_created",
+        "A"
+      ]
+    },
+    {
+      "from": [
+        "add_created",
+        "Value"
+      ],
+      "to": [
+        "write_created",
+        "Value"
+      ]
+    },
+    {
+      "from": [
+        "write_created",
+        "Out"
+      ],
+      "to": [
+        "event_created",
+        "In"
+      ]
+    },
+    {
+      "from": [
+        "event_created",
+        "Out"
+      ],
+      "to": [
+        "entity_created",
+        "In"
+      ]
+    },
+    {
+      "from": [
+        "on_created",
+        "Entity"
+      ],
+      "to": [
+        "entity_created",
+        "Value"
+      ]
+    },
+    {
+      "from": [
+        "entity_created",
+        "Out"
+      ],
+      "to": [
+        "active_created",
+        "In"
+      ]
+    },
+    {
+      "from": [
+        "on_created",
+        "Active"
+      ],
+      "to": [
+        "active_created",
+        "Value"
+      ]
+    },
+    {
+      "from": [
+        "on_enabled",
+        "Out"
+      ],
+      "to": [
+        "write_enabled",
+        "In"
+      ]
+    },
+    {
+      "from": [
+        "get_enabled",
+        "Value"
+      ],
+      "to": [
+        "add_enabled",
+        "A"
+      ]
+    },
+    {
+      "from": [
+        "add_enabled",
+        "Value"
+      ],
+      "to": [
+        "write_enabled",
+        "Value"
+      ]
+    },
+    {
+      "from": [
+        "write_enabled",
+        "Out"
+      ],
+      "to": [
+        "event_enabled",
+        "In"
+      ]
+    },
+    {
+      "from": [
+        "event_enabled",
+        "Out"
+      ],
+      "to": [
+        "entity_enabled",
+        "In"
+      ]
+    },
+    {
+      "from": [
+        "on_enabled",
+        "Entity"
+      ],
+      "to": [
+        "entity_enabled",
+        "Value"
+      ]
+    },
+    {
+      "from": [
+        "entity_enabled",
+        "Out"
+      ],
+      "to": [
+        "active_enabled",
+        "In"
+      ]
+    },
+    {
+      "from": [
+        "on_enabled",
+        "Active"
+      ],
+      "to": [
+        "active_enabled",
+        "Value"
+      ]
+    },
+    {
+      "from": [
+        "on_disabled",
+        "Out"
+      ],
+      "to": [
+        "write_disabled",
+        "In"
+      ]
+    },
+    {
+      "from": [
+        "get_disabled",
+        "Value"
+      ],
+      "to": [
+        "add_disabled",
+        "A"
+      ]
+    },
+    {
+      "from": [
+        "add_disabled",
+        "Value"
+      ],
+      "to": [
+        "write_disabled",
+        "Value"
+      ]
+    },
+    {
+      "from": [
+        "write_disabled",
+        "Out"
+      ],
+      "to": [
+        "event_disabled",
+        "In"
+      ]
+    },
+    {
+      "from": [
+        "event_disabled",
+        "Out"
+      ],
+      "to": [
+        "entity_disabled",
+        "In"
+      ]
+    },
+    {
+      "from": [
+        "on_disabled",
+        "Entity"
+      ],
+      "to": [
+        "entity_disabled",
+        "Value"
+      ]
+    },
+    {
+      "from": [
+        "entity_disabled",
+        "Out"
+      ],
+      "to": [
+        "active_disabled",
+        "In"
+      ]
+    },
+    {
+      "from": [
+        "on_disabled",
+        "Active"
+      ],
+      "to": [
+        "active_disabled",
+        "Value"
+      ]
+    },
+    {
+      "from": [
+        "own",
+        "Out"
+      ],
+      "to": [
+        "write_owned_disabled",
+        "In"
+      ]
+    },
+    {
+      "from": [
+        "get_owned_disabled",
+        "Value"
+      ],
+      "to": [
+        "add_owned_disabled",
+        "A"
+      ]
+    },
+    {
+      "from": [
+        "add_owned_disabled",
+        "Value"
+      ],
+      "to": [
+        "write_owned_disabled",
+        "Value"
+      ]
+    },
+    {
+      "from": [
+        "start",
+        "Out"
+      ],
+      "to": [
+        "storage",
+        "In"
+      ]
+    },
+    {
+      "from": [
+        "storage",
+        "Out"
+      ],
+      "to": [
+        "hud",
+        "In"
+      ]
+    },
+    {
+      "from": [
+        "hud",
+        "Out"
+      ],
+      "to": [
+        "animation",
+        "In"
+      ]
+    },
+    {
+      "from": [
+        "input_T",
+        "Out"
+      ],
+      "to": [
+        "if_T",
+        "In"
+      ]
+    },
+    {
+      "from": [
+        "pressed_T",
+        "Value"
+      ],
+      "to": [
+        "if_T",
+        "Condition"
+      ]
+    },
+    {
+      "from": [
+        "if_T",
+        "True"
+      ],
+      "to": [
+        "toggle",
+        "In"
+      ]
+    },
+    {
+      "from": [
+        "group_active",
+        "Value"
+      ],
+      "to": [
+        "opposite",
+        "Value"
+      ]
+    },
+    {
+      "from": [
+        "opposite",
+        "Value"
+      ],
+      "to": [
+        "toggle",
+        "Active"
+      ]
+    },
+    {
+      "from": [
+        "input_N",
+        "Out"
+      ],
+      "to": [
+        "if_N",
+        "In"
+      ]
+    },
+    {
+      "from": [
+        "pressed_N",
+        "Value"
+      ],
+      "to": [
+        "if_N",
+        "Condition"
+      ]
+    },
+    {
+      "from": [
+        "if_N",
+        "True"
+      ],
+      "to": [
+        "spawn",
+        "In"
+      ]
+    },
+    {
+      "from": [
+        "spawn",
+        "Out"
+      ],
+      "to": [
+        "last_N",
+        "In"
+      ]
+    },
+    {
+      "from": [
+        "spawn",
+        "Entity"
+      ],
+      "to": [
+        "last_N",
+        "Value"
+      ]
+    },
+    {
+      "from": [
+        "input_C",
+        "Out"
+      ],
+      "to": [
+        "if_C",
+        "In"
+      ]
+    },
+    {
+      "from": [
+        "pressed_C",
+        "Value"
+      ],
+      "to": [
+        "if_C",
+        "Condition"
+      ]
+    },
+    {
+      "from": [
+        "if_C",
+        "True"
+      ],
+      "to": [
+        "clone",
+        "In"
+      ]
+    },
+    {
+      "from": [
+        "clone",
+        "Out"
+      ],
+      "to": [
+        "clone_place",
+        "In"
+      ]
+    },
+    {
+      "from": [
+        "clone",
+        "Entity"
+      ],
+      "to": [
+        "clone_place",
+        "Entity"
+      ]
+    },
+    {
+      "from": [
+        "clone_place",
+        "Out"
+      ],
+      "to": [
+        "last_C",
+        "In"
+      ]
+    },
+    {
+      "from": [
+        "clone",
+        "Entity"
+      ],
+      "to": [
+        "last_C",
+        "Value"
+      ]
+    },
+    {
+      "from": [
+        "input_X",
+        "Out"
+      ],
+      "to": [
+        "if_X",
+        "In"
+      ]
+    },
+    {
+      "from": [
+        "pressed_X",
+        "Value"
+      ],
+      "to": [
+        "if_X",
+        "Condition"
+      ]
+    },
+    {
+      "from": [
+        "if_X",
+        "True"
+      ],
+      "to": [
+        "destroy",
+        "In"
+      ]
+    },
+    {
+      "from": [
+        "last_spawn",
+        "Value"
+      ],
+      "to": [
+        "destroy",
+        "Entity"
+      ]
+    },
+    {
+      "from": [
+        "input_R",
+        "Out"
+      ],
+      "to": [
+        "if_R",
+        "In"
+      ]
+    },
+    {
+      "from": [
+        "pressed_R",
+        "Value"
+      ],
+      "to": [
+        "if_R",
+        "Condition"
+      ]
+    },
+    {
+      "from": [
+        "if_R",
+        "True"
+      ],
+      "to": [
+        "check_prefab",
+        "In"
+      ]
+    },
+    {
+      "from": [
+        "last_spawn",
+        "Value"
+      ],
+      "to": [
+        "is_prefab",
+        "Entity"
+      ]
+    },
+    {
+      "from": [
+        "is_prefab",
+        "Value"
+      ],
+      "to": [
+        "check_prefab",
+        "Condition"
+      ]
+    },
+    {
+      "from": [
+        "check_prefab",
+        "True"
+      ],
+      "to": [
+        "reset",
+        "In"
+      ]
+    },
+    {
+      "from": [
+        "last_spawn",
+        "Value"
+      ],
+      "to": [
+        "reset",
+        "Instance"
+      ]
+    },
+    {
+      "from": [
+        "input_S",
+        "Out"
+      ],
+      "to": [
+        "if_S",
+        "In"
+      ]
+    },
+    {
+      "from": [
+        "pressed_S",
+        "Value"
+      ],
+      "to": [
+        "if_S",
+        "Condition"
+      ]
+    },
+    {
+      "from": [
+        "if_S",
+        "True"
+      ],
+      "to": [
+        "save",
+        "In"
+      ]
+    },
+    {
+      "from": [
+        "input_L",
+        "Out"
+      ],
+      "to": [
+        "if_L",
+        "In"
+      ]
+    },
+    {
+      "from": [
+        "pressed_L",
+        "Value"
+      ],
+      "to": [
+        "if_L",
+        "Condition"
+      ]
+    },
+    {
+      "from": [
+        "if_L",
+        "True"
+      ],
+      "to": [
+        "load",
+        "In"
+      ]
+    },
+    {
+      "from": [
+        "late",
+        "Out"
+      ],
+      "to": [
+        "show_created",
+        "In"
+      ]
+    },
+    {
+      "from": [
+        "get_created",
+        "Value"
+      ],
+      "to": [
+        "format_created",
+        "Value"
+      ]
+    },
+    {
+      "from": [
+        "format_created",
+        "Value"
+      ],
+      "to": [
+        "show_created",
+        "Text"
+      ]
+    },
+    {
+      "from": [
+        "show_created",
+        "Out"
+      ],
+      "to": [
+        "show_enabled",
+        "In"
+      ]
+    },
+    {
+      "from": [
+        "get_enabled",
+        "Value"
+      ],
+      "to": [
+        "format_enabled",
+        "Value"
+      ]
+    },
+    {
+      "from": [
+        "format_enabled",
+        "Value"
+      ],
+      "to": [
+        "show_enabled",
+        "Text"
+      ]
+    },
+    {
+      "from": [
+        "show_enabled",
+        "Out"
+      ],
+      "to": [
+        "show_disabled",
+        "In"
+      ]
+    },
+    {
+      "from": [
+        "get_disabled",
+        "Value"
+      ],
+      "to": [
+        "format_disabled",
+        "Value"
+      ]
+    },
+    {
+      "from": [
+        "format_disabled",
+        "Value"
+      ],
+      "to": [
+        "show_disabled",
+        "Text"
+      ]
+    },
+    {
+      "from": [
+        "show_disabled",
+        "Out"
+      ],
+      "to": [
+        "show_owned_disabled",
+        "In"
+      ]
+    },
+    {
+      "from": [
+        "get_owned_disabled",
+        "Value"
+      ],
+      "to": [
+        "format_owned_disabled",
+        "Value"
+      ]
+    },
+    {
+      "from": [
+        "format_owned_disabled",
+        "Value"
+      ],
+      "to": [
+        "show_owned_disabled",
+        "Text"
+      ]
+    },
+    {
+      "from": [
+        "show_owned_disabled",
+        "Out"
+      ],
+      "to": [
+        "show_last_event",
+        "In"
+      ]
+    },
+    {
+      "from": [
+        "get_last_event",
+        "Value"
+      ],
+      "to": [
+        "show_last_event",
+        "Text"
+      ]
+    },
+    {
+      "from": [
+        "show_last_event",
+        "Out"
+      ],
+      "to": [
+        "show_last_entity",
+        "In"
+      ]
+    },
+    {
+      "from": [
+        "get_last_entity",
+        "Value"
+      ],
+      "to": [
+        "format_last_entity",
+        "Entity"
+      ]
+    },
+    {
+      "from": [
+        "format_last_entity",
+        "Value"
+      ],
+      "to": [
+        "show_last_entity",
+        "Text"
+      ]
+    },
+    {
+      "from": [
+        "show_last_entity",
+        "Out"
+      ],
+      "to": [
+        "show_last_active",
+        "In"
+      ]
+    },
+    {
+      "from": [
+        "get_last_active",
+        "Value"
+      ],
+      "to": [
+        "format_last_active",
+        "Value"
+      ]
+    },
+    {
+      "from": [
+        "format_last_active",
+        "Value"
+      ],
+      "to": [
+        "show_last_active",
+        "Text"
+      ]
+    },
+    {
+      "from": [
+        "on_destroyed",
+        "Out"
+      ],
+      "to": [
+        "write_destroyed",
+        "In"
+      ]
+    },
+    {
+      "from": [
+        "get_destroyed",
+        "Value"
+      ],
+      "to": [
+        "inc_destroyed",
+        "A"
+      ]
+    },
+    {
+      "from": [
+        "inc_destroyed",
+        "Value"
+      ],
+      "to": [
+        "write_destroyed",
+        "Value"
+      ]
+    },
+    {
+      "from": [
+        "write_destroyed",
+        "Out"
+      ],
+      "to": [
+        "dead_name",
+        "In"
+      ]
+    },
+    {
+      "from": [
+        "on_destroyed",
+        "Entity"
+      ],
+      "to": [
+        "read_dead_name",
+        "Entity"
+      ]
+    },
+    {
+      "from": [
+        "read_dead_name",
+        "Value"
+      ],
+      "to": [
+        "dead_name",
+        "Value"
+      ]
+    },
+    {
+      "from": [
+        "dead_name",
+        "Out"
+      ],
+      "to": [
+        "dead_active",
+        "In"
+      ]
+    },
+    {
+      "from": [
+        "on_destroyed",
+        "Active"
+      ],
+      "to": [
+        "dead_active",
+        "Value"
+      ]
+    },
+    {
+      "from": [
+        "dead_active",
+        "Out"
+      ],
+      "to": [
+        "drop_if",
+        "In"
+      ]
+    },
+    {
+      "from": [
+        "on_destroyed",
+        "Entity"
+      ],
+      "to": [
+        "has_loot",
+        "Entity"
+      ]
+    },
+    {
+      "from": [
+        "has_loot",
+        "Value"
+      ],
+      "to": [
+        "drop_if",
+        "Condition"
+      ]
+    },
+    {
+      "from": [
+        "drop_if",
+        "True"
+      ],
+      "to": [
+        "drop",
+        "In"
+      ]
+    },
+    {
+      "from": [
+        "on_destroyed",
+        "Entity"
+      ],
+      "to": [
+        "drop_position",
+        "Entity"
+      ]
+    },
+    {
+      "from": [
+        "drop_position",
+        "Value"
+      ],
+      "to": [
+        "drop",
+        "Position"
+      ]
+    },
+    {
+      "from": [
+        "drop",
+        "Out"
+      ],
+      "to": [
+        "drop_scale",
+        "In"
+      ]
+    },
+    {
+      "from": [
+        "drop",
+        "Entity"
+      ],
+      "to": [
+        "drop_scale",
+        "Entity"
+      ]
+    },
+    {
+      "from": [
+        "drop_scale",
+        "Out"
+      ],
+      "to": [
+        "drop_tag",
+        "In"
+      ]
+    },
+    {
+      "from": [
+        "drop",
+        "Entity"
+      ],
+      "to": [
+        "drop_tag",
+        "Entity"
+      ]
+    },
+    {
+      "from": [
+        "drop_tag",
+        "Out"
+      ],
+      "to": [
+        "write_loot",
+        "In"
+      ]
+    },
+    {
+      "from": [
+        "get_loot",
+        "Value"
+      ],
+      "to": [
+        "inc_loot",
+        "A"
+      ]
+    },
+    {
+      "from": [
+        "inc_loot",
+        "Value"
+      ],
+      "to": [
+        "write_loot",
+        "Value"
+      ]
+    },
+    {
+      "from": [
+        "write_loot",
+        "Out"
+      ],
+      "to": [
+        "self_destroy",
+        "In"
+      ]
+    },
+    {
+      "from": [
+        "on_destroyed",
+        "Entity"
+      ],
+      "to": [
+        "self_destroy",
+        "Entity"
+      ]
+    },
+    {
+      "from": [
+        "input_A",
+        "Out"
+      ],
+      "to": [
+        "if_A",
+        "In"
+      ]
+    },
+    {
+      "from": [
+        "pressed_A",
+        "Value"
+      ],
+      "to": [
+        "if_A",
+        "Condition"
+      ]
+    },
+    {
+      "from": [
+        "if_A",
+        "True"
+      ],
+      "to": [
+        "prefab_A",
+        "In"
+      ]
+    },
+    {
+      "from": [
+        "is_prefab",
+        "Value"
+      ],
+      "to": [
+        "prefab_A",
+        "Condition"
+      ]
+    },
+    {
+      "from": [
+        "prefab_A",
+        "True"
+      ],
+      "to": [
+        "attach_spawn",
+        "In"
+      ]
+    },
+    {
+      "from": [
+        "attach_spawn",
+        "Out"
+      ],
+      "to": [
+        "attach_parent",
+        "In"
+      ]
+    },
+    {
+      "from": [
+        "attach_spawn",
+        "Entity"
+      ],
+      "to": [
+        "attach_parent",
+        "Child"
+      ]
+    },
+    {
+      "from": [
+        "last_spawn",
+        "Value"
+      ],
+      "to": [
+        "attach_parent",
+        "Parent"
+      ]
+    },
+    {
+      "from": [
+        "attach_parent",
+        "Out"
+      ],
+      "to": [
+        "attach_scale",
+        "In"
+      ]
+    },
+    {
+      "from": [
+        "attach_spawn",
+        "Entity"
+      ],
+      "to": [
+        "attach_scale",
+        "Entity"
+      ]
+    },
+    {
+      "from": [
+        "attach_scale",
+        "Out"
+      ],
+      "to": [
+        "attach_tag",
+        "In"
+      ]
+    },
+    {
+      "from": [
+        "attach_spawn",
+        "Entity"
+      ],
+      "to": [
+        "attach_tag",
+        "Entity"
+      ]
+    },
+    {
+      "from": [
+        "input_P",
+        "Out"
+      ],
+      "to": [
+        "if_P",
+        "In"
+      ]
+    },
+    {
+      "from": [
+        "pressed_P",
+        "Value"
+      ],
+      "to": [
+        "if_P",
+        "Condition"
+      ]
+    },
+    {
+      "from": [
+        "if_P",
+        "True"
+      ],
+      "to": [
+        "prefab_P",
+        "In"
+      ]
+    },
+    {
+      "from": [
+        "is_prefab",
+        "Value"
+      ],
+      "to": [
+        "prefab_P",
+        "Condition"
+      ]
+    },
+    {
+      "from": [
+        "prefab_P",
+        "True"
+      ],
+      "to": [
+        "apply",
+        "In"
+      ]
+    },
+    {
+      "from": [
+        "last_spawn",
+        "Value"
+      ],
+      "to": [
+        "apply",
+        "Instance"
+      ]
+    },
+    {
+      "from": [
+        "show_last_active",
+        "Out"
+      ],
+      "to": [
+        "show_destroyed",
+        "In"
+      ]
+    },
+    {
+      "from": [
+        "get_destroyed",
+        "Value"
+      ],
+      "to": [
+        "format_destroyed",
+        "Value"
+      ]
+    },
+    {
+      "from": [
+        "format_destroyed",
+        "Value"
+      ],
+      "to": [
+        "show_destroyed",
+        "Text"
+      ]
+    },
+    {
+      "from": [
+        "show_destroyed",
+        "Out"
+      ],
+      "to": [
+        "show_loot",
+        "In"
+      ]
+    },
+    {
+      "from": [
+        "get_loot",
+        "Value"
+      ],
+      "to": [
+        "format_loot",
+        "Value"
+      ]
+    },
+    {
+      "from": [
+        "format_loot",
+        "Value"
+      ],
+      "to": [
+        "show_loot",
+        "Text"
+      ]
+    },
+    {
+      "from": [
+        "show_loot",
+        "Out"
+      ],
+      "to": [
+        "show_dead_name",
+        "In"
+      ]
+    },
+    {
+      "from": [
+        "get_dead_name",
+        "Value"
+      ],
+      "to": [
+        "show_dead_name",
+        "Text"
+      ]
+    },
+    {
+      "from": [
+        "show_dead_name",
+        "Out"
+      ],
+      "to": [
+        "show_dead_active",
+        "In"
+      ]
+    },
+    {
+      "from": [
+        "get_dead_active",
+        "Value"
+      ],
+      "to": [
+        "format_dead_active",
+        "Value"
+      ]
+    },
+    {
+      "from": [
+        "format_dead_active",
+        "Value"
+      ],
+      "to": [
+        "show_dead_active",
+        "Text"
+      ]
+    }
+  ],
+  "name": "Before deletion and loot",
+  "nodes": [
+    {
+      "id": "on_created",
+      "position": [
+        0,
+        0
+      ],
+      "type": 1006,
+      "values": {}
+    },
+    {
+      "id": "write_created",
+      "position": [
+        280,
+        0
+      ],
+      "type": 3111,
+      "values": {
+        "Name": "created"
+      }
+    },
+    {
+      "id": "get_created",
+      "position": [
+        560,
+        0
+      ],
+      "type": 3101,
+      "values": {
+        "Name": "created"
+      }
+    },
+    {
+      "id": "add_created",
+      "position": [
+        840,
+        0
+      ],
+      "type": 4030,
+      "values": {
+        "B": 1
+      }
+    },
+    {
+      "id": "event_created",
+      "position": [
+        1120,
+        0
+      ],
+      "type": 3113,
+      "values": {
+        "Name": "last_event",
+        "Value": "Created"
+      }
+    },
+    {
+      "id": "entity_created",
+      "position": [
+        1400,
+        0
+      ],
+      "type": 3115,
+      "values": {
+        "Name": "last_entity"
+      }
+    },
+    {
+      "id": "active_created",
+      "position": [
+        0,
+        280
+      ],
+      "type": 3112,
+      "values": {
+        "Name": "last_active"
+      }
+    },
+    {
+      "id": "on_enabled",
+      "position": [
+        280,
+        280
+      ],
+      "type": 1007,
+      "values": {}
+    },
+    {
+      "id": "write_enabled",
+      "position": [
+        560,
+        280
+      ],
+      "type": 3111,
+      "values": {
+        "Name": "enabled"
+      }
+    },
+    {
+      "id": "get_enabled",
+      "position": [
+        840,
+        280
+      ],
+      "type": 3101,
+      "values": {
+        "Name": "enabled"
+      }
+    },
+    {
+      "id": "add_enabled",
+      "position": [
+        1120,
+        280
+      ],
+      "type": 4030,
+      "values": {
+        "B": 1
+      }
+    },
+    {
+      "id": "event_enabled",
+      "position": [
+        1400,
+        280
+      ],
+      "type": 3113,
+      "values": {
+        "Name": "last_event",
+        "Value": "Enabled"
+      }
+    },
+    {
+      "id": "entity_enabled",
+      "position": [
+        0,
+        560
+      ],
+      "type": 3115,
+      "values": {
+        "Name": "last_entity"
+      }
+    },
+    {
+      "id": "active_enabled",
+      "position": [
+        280,
+        560
+      ],
+      "type": 3112,
+      "values": {
+        "Name": "last_active"
+      }
+    },
+    {
+      "id": "on_disabled",
+      "position": [
+        560,
+        560
+      ],
+      "type": 1008,
+      "values": {}
+    },
+    {
+      "id": "write_disabled",
+      "position": [
+        840,
+        560
+      ],
+      "type": 3111,
+      "values": {
+        "Name": "disabled"
+      }
+    },
+    {
+      "id": "get_disabled",
+      "position": [
+        1120,
+        560
+      ],
+      "type": 3101,
+      "values": {
+        "Name": "disabled"
+      }
+    },
+    {
+      "id": "add_disabled",
+      "position": [
+        1400,
+        560
+      ],
+      "type": 4030,
+      "values": {
+        "B": 1
+      }
+    },
+    {
+      "id": "event_disabled",
+      "position": [
+        0,
+        840
+      ],
+      "type": 3113,
+      "values": {
+        "Name": "last_event",
+        "Value": "Disabled"
+      }
+    },
+    {
+      "id": "entity_disabled",
+      "position": [
+        280,
+        840
+      ],
+      "type": 3115,
+      "values": {
+        "Name": "last_entity"
+      }
+    },
+    {
+      "id": "active_disabled",
+      "position": [
+        560,
+        840
+      ],
+      "type": 3112,
+      "values": {
+        "Name": "last_active"
+      }
+    },
+    {
+      "id": "own",
+      "position": [
+        840,
+        840
+      ],
+      "type": 1008,
+      "values": {
+        "Receiver": "player"
+      }
+    },
+    {
+      "id": "write_owned_disabled",
+      "position": [
+        1120,
+        840
+      ],
+      "type": 3111,
+      "values": {
+        "Name": "owned_disabled"
+      }
+    },
+    {
+      "id": "get_owned_disabled",
+      "position": [
+        1400,
+        840
+      ],
+      "type": 3101,
+      "values": {
+        "Name": "owned_disabled"
+      }
+    },
+    {
+      "id": "add_owned_disabled",
+      "position": [
+        0,
+        1120
+      ],
+      "type": 4030,
+      "values": {
+        "B": 1
+      }
+    },
+    {
+      "id": "start",
+      "position": [
+        280,
+        1120
+      ],
+      "type": 1001,
+      "values": {}
+    },
+    {
+      "id": "storage",
+      "position": [
+        560,
+        1120
+      ],
+      "type": 23001,
+      "values": {
+        "Game ID": "node-engine-entity-destroyed-demo"
+      }
+    },
+    {
+      "id": "hud",
+      "position": [
+        840,
+        1120
+      ],
+      "type": 18001,
+      "values": {}
+    },
+    {
+      "id": "animation",
+      "position": [
+        1120,
+        1120
+      ],
+      "type": 13002,
+      "values": {
+        "Clip": "Idle"
+      }
+    },
+    {
+      "id": "last_spawn",
+      "position": [
+        1400,
+        1120
+      ],
+      "type": 3105,
+      "values": {
+        "Name": "spawned"
+      }
+    },
+    {
+      "id": "input_T",
+      "position": [
+        0,
+        1400
+      ],
+      "type": 1002,
+      "values": {}
+    },
+    {
+      "id": "pressed_T",
+      "position": [
+        280,
+        1400
+      ],
+      "type": 10002,
+      "values": {
+        "Key": "T"
+      }
+    },
+    {
+      "id": "if_T",
+      "position": [
+        560,
+        1400
+      ],
+      "type": 2001,
+      "values": {}
+    },
+    {
+      "id": "toggle",
+      "position": [
+        840,
+        1400
+      ],
+      "type": 8028,
+      "values": {
+        "Entity": "group"
+      }
+    },
+    {
+      "id": "group_active",
+      "position": [
+        1120,
+        1400
+      ],
+      "type": 8030,
+      "values": {
+        "Entity": "group"
+      }
+    },
+    {
+      "id": "opposite",
+      "position": [
+        1400,
+        1400
+      ],
+      "type": 4017,
+      "values": {}
+    },
+    {
+      "id": "input_N",
+      "position": [
+        0,
+        1680
+      ],
+      "type": 1002,
+      "values": {}
+    },
+    {
+      "id": "pressed_N",
+      "position": [
+        280,
+        1680
+      ],
+      "type": 10002,
+      "values": {
+        "Key": "N"
+      }
+    },
+    {
+      "id": "if_N",
+      "position": [
+        560,
+        1680
+      ],
+      "type": 2001,
+      "values": {}
+    },
+    {
+      "id": "spawn",
+      "position": [
+        840,
+        1680
+      ],
+      "type": 8034,
+      "values": {
+        "Position": [
+          2,
+          0,
+          0
+        ],
+        "Prefab": "robot_pair"
+      }
+    },
+    {
+      "id": "last_N",
+      "position": [
+        1120,
+        1680
+      ],
+      "type": 3115,
+      "values": {
+        "Name": "spawned"
+      }
+    },
+    {
+      "id": "input_C",
+      "position": [
+        1400,
+        1680
+      ],
+      "type": 1002,
+      "values": {}
+    },
+    {
+      "id": "pressed_C",
+      "position": [
+        0,
+        1960
+      ],
+      "type": 10002,
+      "values": {
+        "Key": "C"
+      }
+    },
+    {
+      "id": "if_C",
+      "position": [
+        280,
+        1960
+      ],
+      "type": 2001,
+      "values": {}
+    },
+    {
+      "id": "clone",
+      "position": [
+        560,
+        1960
+      ],
+      "type": 8011,
+      "values": {
+        "Name": "Clone"
+      }
+    },
+    {
+      "id": "clone_place",
+      "position": [
+        840,
+        1960
+      ],
+      "type": 9002,
+      "values": {
+        "Value": [
+          -2,
+          0,
+          0
+        ]
+      }
+    },
+    {
+      "id": "last_C",
+      "position": [
+        1120,
+        1960
+      ],
+      "type": 3115,
+      "values": {
+        "Name": "spawned"
+      }
+    },
+    {
+      "id": "input_X",
+      "position": [
+        1400,
+        1960
+      ],
+      "type": 1002,
+      "values": {}
+    },
+    {
+      "id": "pressed_X",
+      "position": [
+        0,
+        2240
+      ],
+      "type": 10002,
+      "values": {
+        "Key": "X"
+      }
+    },
+    {
+      "id": "if_X",
+      "position": [
+        280,
+        2240
+      ],
+      "type": 2001,
+      "values": {}
+    },
+    {
+      "id": "destroy",
+      "position": [
+        560,
+        2240
+      ],
+      "type": 8012,
+      "values": {}
+    },
+    {
+      "id": "input_R",
+      "position": [
+        840,
+        2240
+      ],
+      "type": 1002,
+      "values": {}
+    },
+    {
+      "id": "pressed_R",
+      "position": [
+        1120,
+        2240
+      ],
+      "type": 10002,
+      "values": {
+        "Key": "R"
+      }
+    },
+    {
+      "id": "if_R",
+      "position": [
+        1400,
+        2240
+      ],
+      "type": 2001,
+      "values": {}
+    },
+    {
+      "id": "check_prefab",
+      "position": [
+        0,
+        2520
+      ],
+      "type": 2001,
+      "values": {}
+    },
+    {
+      "id": "is_prefab",
+      "position": [
+        280,
+        2520
+      ],
+      "type": 8035,
+      "values": {}
+    },
+    {
+      "id": "reset",
+      "position": [
+        560,
+        2520
+      ],
+      "type": 8039,
+      "values": {}
+    },
+    {
+      "id": "input_S",
+      "position": [
+        840,
+        2520
+      ],
+      "type": 1002,
+      "values": {}
+    },
+    {
+      "id": "pressed_S",
+      "position": [
+        1120,
+        2520
+      ],
+      "type": 10002,
+      "values": {
+        "Key": "S"
+      }
+    },
+    {
+      "id": "if_S",
+      "position": [
+        1400,
+        2520
+      ],
+      "type": 2001,
+      "values": {}
+    },
+    {
+      "id": "save",
+      "position": [
+        0,
+        2800
+      ],
+      "type": 23016,
+      "values": {
+        "Slot": "entities"
+      }
+    },
+    {
+      "id": "input_L",
+      "position": [
+        280,
+        2800
+      ],
+      "type": 1002,
+      "values": {}
+    },
+    {
+      "id": "pressed_L",
+      "position": [
+        560,
+        2800
+      ],
+      "type": 10002,
+      "values": {
+        "Key": "L"
+      }
+    },
+    {
+      "id": "if_L",
+      "position": [
+        840,
+        2800
+      ],
+      "type": 2001,
+      "values": {}
+    },
+    {
+      "id": "load",
+      "position": [
+        1120,
+        2800
+      ],
+      "type": 23017,
+      "values": {
+        "Slot": "entities"
+      }
+    },
+    {
+      "id": "late",
+      "position": [
+        1400,
+        2800
+      ],
+      "type": 1005,
+      "values": {}
+    },
+    {
+      "id": "show_created",
+      "position": [
+        0,
+        3080
+      ],
+      "type": 18005,
+      "values": {
+        "Element": "created"
+      }
+    },
+    {
+      "id": "format_created",
+      "position": [
+        280,
+        3080
+      ],
+      "type": 3051,
+      "values": {}
+    },
+    {
+      "id": "show_enabled",
+      "position": [
+        560,
+        3080
+      ],
+      "type": 18005,
+      "values": {
+        "Element": "enabled"
+      }
+    },
+    {
+      "id": "format_enabled",
+      "position": [
+        840,
+        3080
+      ],
+      "type": 3051,
+      "values": {}
+    },
+    {
+      "id": "show_disabled",
+      "position": [
+        1120,
+        3080
+      ],
+      "type": 18005,
+      "values": {
+        "Element": "disabled"
+      }
+    },
+    {
+      "id": "format_disabled",
+      "position": [
+        1400,
+        3080
+      ],
+      "type": 3051,
+      "values": {}
+    },
+    {
+      "id": "show_owned_disabled",
+      "position": [
+        0,
+        3360
+      ],
+      "type": 18005,
+      "values": {
+        "Element": "owned_disabled"
+      }
+    },
+    {
+      "id": "format_owned_disabled",
+      "position": [
+        280,
+        3360
+      ],
+      "type": 3051,
+      "values": {}
+    },
+    {
+      "id": "show_last_event",
+      "position": [
+        560,
+        3360
+      ],
+      "type": 18005,
+      "values": {
+        "Element": "last_event"
+      }
+    },
+    {
+      "id": "get_last_event",
+      "position": [
+        840,
+        3360
+      ],
+      "type": 3103,
+      "values": {
+        "Name": "last_event"
+      }
+    },
+    {
+      "id": "show_last_entity",
+      "position": [
+        1120,
+        3360
+      ],
+      "type": 18005,
+      "values": {
+        "Element": "last_entity"
+      }
+    },
+    {
+      "id": "get_last_entity",
+      "position": [
+        1400,
+        3360
+      ],
+      "type": 3105,
+      "values": {
+        "Name": "last_entity"
+      }
+    },
+    {
+      "id": "format_last_entity",
+      "position": [
+        0,
+        3640
+      ],
+      "type": 3058,
+      "values": {}
+    },
+    {
+      "id": "show_last_active",
+      "position": [
+        280,
+        3640
+      ],
+      "type": 18005,
+      "values": {
+        "Element": "last_active"
+      }
+    },
+    {
+      "id": "get_last_active",
+      "position": [
+        560,
+        3640
+      ],
+      "type": 3102,
+      "values": {
+        "Name": "last_active"
+      }
+    },
+    {
+      "id": "format_last_active",
+      "position": [
+        840,
+        3640
+      ],
+      "type": 3054,
+      "values": {}
+    },
+    {
+      "id": "on_destroyed",
+      "position": [
+        1120,
+        3640
+      ],
+      "type": 1009,
+      "values": {}
+    },
+    {
+      "id": "write_destroyed",
+      "position": [
+        1400,
+        3640
+      ],
+      "type": 3111,
+      "values": {
+        "Name": "destroyed"
+      }
+    },
+    {
+      "id": "get_destroyed",
+      "position": [
+        0,
+        3920
+      ],
+      "type": 3101,
+      "values": {
+        "Name": "destroyed"
+      }
+    },
+    {
+      "id": "inc_destroyed",
+      "position": [
+        280,
+        3920
+      ],
+      "type": 4030,
+      "values": {
+        "B": 1
+      }
+    },
+    {
+      "id": "dead_name",
+      "position": [
+        560,
+        3920
+      ],
+      "type": 3113,
+      "values": {
+        "Name": "dead_name"
+      }
+    },
+    {
+      "id": "read_dead_name",
+      "position": [
+        840,
+        3920
+      ],
+      "type": 8016,
+      "values": {}
+    },
+    {
+      "id": "dead_active",
+      "position": [
+        1120,
+        3920
+      ],
+      "type": 3112,
+      "values": {
+        "Name": "dead_active"
+      }
+    },
+    {
+      "id": "drop_if",
+      "position": [
+        1400,
+        3920
+      ],
+      "type": 2001,
+      "values": {}
+    },
+    {
+      "id": "has_loot",
+      "position": [
+        0,
+        4200
+      ],
+      "type": 8026,
+      "values": {
+        "Tag": "loot_source"
+      }
+    },
+    {
+      "id": "drop",
+      "position": [
+        280,
+        4200
+      ],
+      "type": 8010,
+      "values": {
+        "Mesh": "assets/robot.glb",
+        "Name": "Dropped loot"
+      }
+    },
+    {
+      "id": "drop_position",
+      "position": [
+        560,
+        4200
+      ],
+      "type": 9010,
+      "values": {}
+    },
+    {
+      "id": "drop_scale",
+      "position": [
+        840,
+        4200
+      ],
+      "type": 9005,
+      "values": {
+        "Value": [
+          0.25,
+          0.25,
+          0.25
+        ]
+      }
+    },
+    {
+      "id": "drop_tag",
+      "position": [
+        1120,
+        4200
+      ],
+      "type": 8024,
+      "values": {
+        "Tag": "loot"
+      }
+    },
+    {
+      "id": "write_loot",
+      "position": [
+        1400,
+        4200
+      ],
+      "type": 3111,
+      "values": {
+        "Name": "loot"
+      }
+    },
+    {
+      "id": "get_loot",
+      "position": [
+        0,
+        4480
+      ],
+      "type": 3101,
+      "values": {
+        "Name": "loot"
+      }
+    },
+    {
+      "id": "inc_loot",
+      "position": [
+        280,
+        4480
+      ],
+      "type": 4030,
+      "values": {
+        "B": 1
+      }
+    },
+    {
+      "id": "self_destroy",
+      "position": [
+        560,
+        4480
+      ],
+      "type": 8012,
+      "values": {}
+    },
+    {
+      "id": "input_A",
+      "position": [
+        840,
+        4480
+      ],
+      "type": 1002,
+      "values": {}
+    },
+    {
+      "id": "pressed_A",
+      "position": [
+        1120,
+        4480
+      ],
+      "type": 10002,
+      "values": {
+        "Key": "A"
+      }
+    },
+    {
+      "id": "if_A",
+      "position": [
+        1400,
+        4480
+      ],
+      "type": 2001,
+      "values": {}
+    },
+    {
+      "id": "prefab_A",
+      "position": [
+        0,
+        4760
+      ],
+      "type": 2001,
+      "values": {}
+    },
+    {
+      "id": "attach_spawn",
+      "position": [
+        280,
+        4760
+      ],
+      "type": 8010,
+      "values": {
+        "Mesh": "assets/robot.glb",
+        "Name": "Temporary attachment",
+        "Position": [
+          1,
+          0,
+          0
+        ]
+      }
+    },
+    {
+      "id": "attach_parent",
+      "position": [
+        560,
+        4760
+      ],
+      "type": 8020,
+      "values": {}
+    },
+    {
+      "id": "attach_scale",
+      "position": [
+        840,
+        4760
+      ],
+      "type": 9005,
+      "values": {
+        "Value": [
+          0.3,
+          0.3,
+          0.3
+        ]
+      }
+    },
+    {
+      "id": "attach_tag",
+      "position": [
+        1120,
+        4760
+      ],
+      "type": 8024,
+      "values": {
+        "Tag": "loot_source"
+      }
+    },
+    {
+      "id": "input_P",
+      "position": [
+        1400,
+        4760
+      ],
+      "type": 1002,
+      "values": {}
+    },
+    {
+      "id": "pressed_P",
+      "position": [
+        0,
+        5040
+      ],
+      "type": 10002,
+      "values": {
+        "Key": "P"
+      }
+    },
+    {
+      "id": "if_P",
+      "position": [
+        280,
+        5040
+      ],
+      "type": 2001,
+      "values": {}
+    },
+    {
+      "id": "prefab_P",
+      "position": [
+        560,
+        5040
+      ],
+      "type": 2001,
+      "values": {}
+    },
+    {
+      "id": "apply",
+      "position": [
+        840,
+        5040
+      ],
+      "type": 8040,
+      "values": {}
+    },
+    {
+      "id": "show_destroyed",
+      "position": [
+        1120,
+        5040
+      ],
+      "type": 18005,
+      "values": {
+        "Element": "destroyed"
+      }
+    },
+    {
+      "id": "format_destroyed",
+      "position": [
+        1400,
+        5040
+      ],
+      "type": 3051,
+      "values": {}
+    },
+    {
+      "id": "show_loot",
+      "position": [
+        0,
+        5320
+      ],
+      "type": 18005,
+      "values": {
+        "Element": "loot"
+      }
+    },
+    {
+      "id": "format_loot",
+      "position": [
+        280,
+        5320
+      ],
+      "type": 3051,
+      "values": {}
+    },
+    {
+      "id": "show_dead_name",
+      "position": [
+        560,
+        5320
+      ],
+      "type": 18005,
+      "values": {
+        "Element": "dead_name"
+      }
+    },
+    {
+      "id": "get_dead_name",
+      "position": [
+        840,
+        5320
+      ],
+      "type": 3103,
+      "values": {
+        "Name": "dead_name"
+      }
+    },
+    {
+      "id": "show_dead_active",
+      "position": [
+        1120,
+        5320
+      ],
+      "type": 18005,
+      "values": {
+        "Element": "dead_active"
+      }
+    },
+    {
+      "id": "get_dead_active",
+      "position": [
+        1400,
+        5320
+      ],
+      "type": 3102,
+      "values": {
+        "Name": "dead_active"
+      }
+    },
+    {
+      "id": "format_dead_active",
+      "position": [
+        0,
+        5600
+      ],
+      "type": 3054,
+      "values": {}
+    }
+  ],
+  "version": 1
+}

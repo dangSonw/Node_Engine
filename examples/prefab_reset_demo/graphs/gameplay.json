@@ -1,0 +1,459 @@
+{
+  "event_definitions": [
+    {
+      "id": 100001,
+      "name": "Reset Notice",
+      "parameters": [
+        {
+          "name": "Message",
+          "type": "string"
+        }
+      ]
+    }
+  ],
+  "links": [
+    {
+      "from": [
+        "start",
+        "Out"
+      ],
+      "to": [
+        "timer",
+        "In"
+      ]
+    },
+    {
+      "from": [
+        "timer",
+        "Out"
+      ],
+      "to": [
+        "log_start",
+        "In"
+      ]
+    },
+    {
+      "from": [
+        "tick",
+        "Out"
+      ],
+      "to": [
+        "save_ticks",
+        "In"
+      ]
+    },
+    {
+      "from": [
+        "read_ticks",
+        "Value"
+      ],
+      "to": [
+        "increment",
+        "A"
+      ]
+    },
+    {
+      "from": [
+        "increment",
+        "Value"
+      ],
+      "to": [
+        "save_ticks",
+        "Value"
+      ]
+    },
+    {
+      "from": [
+        "delete_event",
+        "Out"
+      ],
+      "to": [
+        "delete_if",
+        "In"
+      ]
+    },
+    {
+      "from": [
+        "delete_count",
+        "Value"
+      ],
+      "to": [
+        "delete_eq",
+        "A"
+      ]
+    },
+    {
+      "from": [
+        "delete_eq",
+        "Value"
+      ],
+      "to": [
+        "delete_if",
+        "Condition"
+      ]
+    },
+    {
+      "from": [
+        "delete_if",
+        "True"
+      ],
+      "to": [
+        "delete",
+        "In"
+      ]
+    },
+    {
+      "from": [
+        "delete",
+        "Out"
+      ],
+      "to": [
+        "enlarge",
+        "In"
+      ]
+    },
+    {
+      "from": [
+        "enlarge",
+        "Out"
+      ],
+      "to": [
+        "log_damage",
+        "In"
+      ]
+    },
+    {
+      "from": [
+        "queue_event",
+        "Out"
+      ],
+      "to": [
+        "queue_if",
+        "In"
+      ]
+    },
+    {
+      "from": [
+        "queue_count",
+        "Value"
+      ],
+      "to": [
+        "queue_eq",
+        "A"
+      ]
+    },
+    {
+      "from": [
+        "queue_eq",
+        "Value"
+      ],
+      "to": [
+        "queue_if",
+        "Condition"
+      ]
+    },
+    {
+      "from": [
+        "queue_if",
+        "True"
+      ],
+      "to": [
+        "queue",
+        "In"
+      ]
+    },
+    {
+      "from": [
+        "queue",
+        "Out"
+      ],
+      "to": [
+        "reset",
+        "In"
+      ]
+    },
+    {
+      "from": [
+        "reset",
+        "Out"
+      ],
+      "to": [
+        "log_reset",
+        "In"
+      ]
+    },
+    {
+      "from": [
+        "notice",
+        "Out"
+      ],
+      "to": [
+        "log_notice",
+        "In"
+      ]
+    },
+    {
+      "from": [
+        "notice",
+        "Message"
+      ],
+      "to": [
+        "log_notice",
+        "Message"
+      ]
+    }
+  ],
+  "name": "Reset robots while playing",
+  "nodes": [
+    {
+      "id": "start",
+      "position": [
+        0,
+        0
+      ],
+      "type": 1001,
+      "values": {}
+    },
+    {
+      "id": "timer",
+      "position": [
+        310,
+        0
+      ],
+      "type": 5010,
+      "values": {
+        "Name": "heartbeat",
+        "Owner": "pair",
+        "Repeat": true,
+        "Seconds": 0.25
+      }
+    },
+    {
+      "id": "log_start",
+      "position": [
+        620,
+        0
+      ],
+      "type": 27001,
+      "values": {
+        "Message": "Timer started; reset at frame 60"
+      }
+    },
+    {
+      "id": "tick",
+      "position": [
+        930,
+        0
+      ],
+      "type": 1003,
+      "values": {
+        "NameFilter": "heartbeat",
+        "Receiver": "pair"
+      }
+    },
+    {
+      "id": "read_ticks",
+      "position": [
+        1240,
+        0
+      ],
+      "type": 3101,
+      "values": {
+        "Name": "ticks"
+      }
+    },
+    {
+      "id": "increment",
+      "position": [
+        0,
+        240
+      ],
+      "type": 4030,
+      "values": {
+        "B": 1
+      }
+    },
+    {
+      "id": "save_ticks",
+      "position": [
+        310,
+        240
+      ],
+      "type": 3111,
+      "values": {
+        "Name": "ticks"
+      }
+    },
+    {
+      "id": "delete_event",
+      "position": [
+        620,
+        240
+      ],
+      "type": 1002,
+      "values": {}
+    },
+    {
+      "id": "delete_count",
+      "position": [
+        930,
+        240
+      ],
+      "type": 5003,
+      "values": {}
+    },
+    {
+      "id": "delete_eq",
+      "position": [
+        1240,
+        240
+      ],
+      "type": 4014,
+      "values": {
+        "B": 20,
+        "Epsilon": 0
+      }
+    },
+    {
+      "id": "delete_if",
+      "position": [
+        0,
+        480
+      ],
+      "type": 2001,
+      "values": {}
+    },
+    {
+      "id": "delete",
+      "position": [
+        310,
+        480
+      ],
+      "type": 8012,
+      "values": {
+        "Entity": "left"
+      }
+    },
+    {
+      "id": "enlarge",
+      "position": [
+        620,
+        480
+      ],
+      "type": 9005,
+      "values": {
+        "Entity": "right",
+        "Value": [
+          1.8,
+          1.8,
+          1.8
+        ]
+      }
+    },
+    {
+      "id": "log_damage",
+      "position": [
+        930,
+        480
+      ],
+      "type": 27001,
+      "values": {
+        "Message": "Left deleted; right enlarged"
+      }
+    },
+    {
+      "id": "queue_event",
+      "position": [
+        1240,
+        480
+      ],
+      "type": 1002,
+      "values": {}
+    },
+    {
+      "id": "queue_count",
+      "position": [
+        0,
+        720
+      ],
+      "type": 5003,
+      "values": {}
+    },
+    {
+      "id": "queue_eq",
+      "position": [
+        310,
+        720
+      ],
+      "type": 4014,
+      "values": {
+        "B": 60,
+        "Epsilon": 0
+      }
+    },
+    {
+      "id": "queue_if",
+      "position": [
+        620,
+        720
+      ],
+      "type": 2001,
+      "values": {}
+    },
+    {
+      "id": "queue",
+      "position": [
+        930,
+        720
+      ],
+      "type": 200001,
+      "values": {
+        "Message": "Queued event survived Reset",
+        "Recipient": "pair"
+      }
+    },
+    {
+      "id": "reset",
+      "position": [
+        1240,
+        720
+      ],
+      "type": 8039,
+      "values": {
+        "Instance": "pair"
+      }
+    },
+    {
+      "id": "log_reset",
+      "position": [
+        0,
+        960
+      ],
+      "type": 27001,
+      "values": {
+        "Message": "Prefab restored; timer continues"
+      }
+    },
+    {
+      "id": "notice",
+      "position": [
+        310,
+        960
+      ],
+      "type": 100001,
+      "values": {
+        "Receiver": "pair"
+      }
+    },
+    {
+      "id": "log_notice",
+      "position": [
+        620,
+        960
+      ],
+      "type": 27001,
+      "values": {}
+    }
+  ],
+  "version": 1
+}

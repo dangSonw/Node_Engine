@@ -1,0 +1,474 @@
+{
+  "links": [
+    {
+      "from": [
+        "start",
+        "Out"
+      ],
+      "to": [
+        "sumloop",
+        "In"
+      ]
+    },
+    {
+      "from": [
+        "inventory",
+        "Value"
+      ],
+      "to": [
+        "values",
+        "Map"
+      ]
+    },
+    {
+      "from": [
+        "values",
+        "Value"
+      ],
+      "to": [
+        "sumloop",
+        "Array"
+      ]
+    },
+    {
+      "from": [
+        "sumloop",
+        "Body"
+      ],
+      "to": [
+        "sum",
+        "In"
+      ]
+    },
+    {
+      "from": [
+        "sumloop",
+        "Item"
+      ],
+      "to": [
+        "add",
+        "A"
+      ]
+    },
+    {
+      "from": [
+        "total",
+        "Value"
+      ],
+      "to": [
+        "add",
+        "B"
+      ]
+    },
+    {
+      "from": [
+        "add",
+        "Value"
+      ],
+      "to": [
+        "sum",
+        "Value"
+      ]
+    },
+    {
+      "from": [
+        "sumloop",
+        "Done"
+      ],
+      "to": [
+        "log",
+        "In"
+      ]
+    },
+    {
+      "from": [
+        "total",
+        "Value"
+      ],
+      "to": [
+        "format",
+        "Value"
+      ]
+    },
+    {
+      "from": [
+        "format",
+        "Value"
+      ],
+      "to": [
+        "concat",
+        "B"
+      ]
+    },
+    {
+      "from": [
+        "message",
+        "Value"
+      ],
+      "to": [
+        "concat",
+        "A"
+      ]
+    },
+    {
+      "from": [
+        "concat",
+        "Value"
+      ],
+      "to": [
+        "log",
+        "Message"
+      ]
+    },
+    {
+      "from": [
+        "log",
+        "Out"
+      ],
+      "to": [
+        "ready",
+        "In"
+      ]
+    },
+    {
+      "from": [
+        "update",
+        "Out"
+      ],
+      "to": [
+        "branch",
+        "In"
+      ]
+    },
+    {
+      "from": [
+        "isready",
+        "Value"
+      ],
+      "to": [
+        "branch",
+        "Condition"
+      ]
+    },
+    {
+      "from": [
+        "branch",
+        "True"
+      ],
+      "to": [
+        "each",
+        "In"
+      ]
+    },
+    {
+      "from": [
+        "targets",
+        "Value"
+      ],
+      "to": [
+        "each",
+        "Array"
+      ]
+    },
+    {
+      "from": [
+        "each",
+        "Body"
+      ],
+      "to": [
+        "rotate",
+        "In"
+      ]
+    },
+    {
+      "from": [
+        "each",
+        "Item"
+      ],
+      "to": [
+        "rotate",
+        "Entity"
+      ]
+    },
+    {
+      "from": [
+        "axis",
+        "Value"
+      ],
+      "to": [
+        "degrees",
+        "Vector"
+      ]
+    },
+    {
+      "from": [
+        "speed",
+        "Value"
+      ],
+      "to": [
+        "angle",
+        "A"
+      ]
+    },
+    {
+      "from": [
+        "dt",
+        "Value"
+      ],
+      "to": [
+        "angle",
+        "B"
+      ]
+    },
+    {
+      "from": [
+        "angle",
+        "Value"
+      ],
+      "to": [
+        "degrees",
+        "Scale"
+      ]
+    },
+    {
+      "from": [
+        "degrees",
+        "Value"
+      ],
+      "to": [
+        "rotate",
+        "Degrees"
+      ]
+    }
+  ],
+  "name": "Inventory totals and entity groups",
+  "nodes": [
+    {
+      "id": "start",
+      "position": [
+        0,
+        0
+      ],
+      "type": 1001,
+      "values": {}
+    },
+    {
+      "id": "inventory",
+      "position": [
+        0,
+        160
+      ],
+      "type": 3401,
+      "values": {
+        "Name": "inventory"
+      }
+    },
+    {
+      "id": "values",
+      "position": [
+        240,
+        160
+      ],
+      "type": 3481,
+      "values": {}
+    },
+    {
+      "id": "sumloop",
+      "position": [
+        480,
+        0
+      ],
+      "type": 2301,
+      "values": {}
+    },
+    {
+      "id": "total",
+      "position": [
+        480,
+        200
+      ],
+      "type": 3101,
+      "values": {
+        "Name": "total"
+      }
+    },
+    {
+      "id": "add",
+      "position": [
+        720,
+        160
+      ],
+      "type": 4030,
+      "values": {}
+    },
+    {
+      "id": "sum",
+      "position": [
+        960,
+        0
+      ],
+      "type": 3111,
+      "values": {
+        "Name": "total"
+      }
+    },
+    {
+      "id": "format",
+      "position": [
+        720,
+        340
+      ],
+      "type": 3051,
+      "values": {}
+    },
+    {
+      "id": "message",
+      "position": [
+        480,
+        440
+      ],
+      "type": 3103,
+      "values": {
+        "Name": "message"
+      }
+    },
+    {
+      "id": "concat",
+      "position": [
+        960,
+        340
+      ],
+      "type": 3052,
+      "values": {}
+    },
+    {
+      "id": "log",
+      "position": [
+        1200,
+        200
+      ],
+      "type": 27001,
+      "values": {}
+    },
+    {
+      "id": "ready",
+      "position": [
+        1440,
+        200
+      ],
+      "type": 3112,
+      "values": {
+        "Name": "ready",
+        "Value": true
+      }
+    },
+    {
+      "id": "update",
+      "position": [
+        0,
+        680
+      ],
+      "type": 1002,
+      "values": {}
+    },
+    {
+      "id": "isready",
+      "position": [
+        0,
+        840
+      ],
+      "type": 3102,
+      "values": {
+        "Name": "ready"
+      }
+    },
+    {
+      "id": "branch",
+      "position": [
+        240,
+        680
+      ],
+      "type": 2001,
+      "values": {}
+    },
+    {
+      "id": "targets",
+      "position": [
+        240,
+        1000
+      ],
+      "type": 3205,
+      "values": {
+        "Name": "targets"
+      }
+    },
+    {
+      "id": "each",
+      "position": [
+        480,
+        680
+      ],
+      "type": 2305,
+      "values": {}
+    },
+    {
+      "id": "axis",
+      "position": [
+        480,
+        1100
+      ],
+      "type": 3104,
+      "values": {
+        "Name": "axis"
+      }
+    },
+    {
+      "id": "speed",
+      "position": [
+        0,
+        1200
+      ],
+      "type": 3004,
+      "values": {
+        "Name": "speed"
+      }
+    },
+    {
+      "id": "dt",
+      "position": [
+        0,
+        1050
+      ],
+      "type": 5001,
+      "values": {}
+    },
+    {
+      "id": "angle",
+      "position": [
+        240,
+        1200
+      ],
+      "type": 4003,
+      "values": {}
+    },
+    {
+      "id": "degrees",
+      "position": [
+        720,
+        1040
+      ],
+      "type": 4022,
+      "values": {}
+    },
+    {
+      "id": "rotate",
+      "position": [
+        960,
+        680
+      ],
+      "type": 9004,
+      "values": {}
+    }
+  ],
+  "version": 1
+}

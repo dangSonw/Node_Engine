@@ -1,0 +1,27 @@
+// Generated from nodes/registry.yaml. Do not edit.
+#include "node_code.hpp"
+#include <tuple>
+namespace rt {
+Value dispatch(Ctx& ctx, int type, const std::vector<Value>& args) {
+    switch(type) {
+{% for adapter in adapters %}
+    case << adapter.id >>:
+        if(args.size()!=<< adapter.count >>) throw std::runtime_error("Invalid argument count");
+        << adapter.body >>
+{% endfor %}
+    default: return type<0 || (type>=800000 && type<900000) ? DispatchUserVariable(ctx,type,args) : DispatchComponent(ctx,type,args);
+    }
+}
+std::vector<Value> dispatch_results(Ctx& ctx, int type, const std::vector<Value>& args) {
+    switch(type) {
+{% for adapter in result_adapters %}
+    case << adapter.id >>: {
+        if(args.size()!=<< adapter.count >>) throw std::runtime_error("Invalid argument count");
+        auto result = << adapter.call >>;
+        return {<< adapter.result_values >>};
+    }
+{% endfor %}
+    default: return {dispatch(ctx,type,args)};
+    }
+}
+}

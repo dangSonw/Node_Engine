@@ -1,0 +1,6 @@
+{
+  "graph": "graphs/gameplay.json",
+  "name": "Late Update camera follow",
+  "scene": "scenes/main.json",
+  "version": 1
+}

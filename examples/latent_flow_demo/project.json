@@ -1,0 +1,6 @@
+{
+  "graph": "graphs/gameplay.json",
+  "name": "Latent flow robot tour",
+  "scene": "scenes/main.json",
+  "version": 1
+}

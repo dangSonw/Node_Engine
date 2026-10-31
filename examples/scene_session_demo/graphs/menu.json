@@ -1,0 +1,666 @@
+{
+  "links": [
+    {
+      "from": [
+        "start",
+        "Out"
+      ],
+      "to": [
+        "hud",
+        "In"
+      ]
+    },
+    {
+      "from": [
+        "game_start",
+        "Out"
+      ],
+      "to": [
+        "storage",
+        "In"
+      ]
+    },
+    {
+      "from": [
+        "storage",
+        "Out"
+      ],
+      "to": [
+        "game_log",
+        "In"
+      ]
+    },
+    {
+      "from": [
+        "S",
+        "Out"
+      ],
+      "to": [
+        "S_action",
+        "In"
+      ]
+    },
+    {
+      "from": [
+        "L",
+        "Out"
+      ],
+      "to": [
+        "L_action",
+        "In"
+      ]
+    },
+    {
+      "from": [
+        "C",
+        "Out"
+      ],
+      "to": [
+        "C_action",
+        "In"
+      ]
+    },
+    {
+      "from": [
+        "M",
+        "Out"
+      ],
+      "to": [
+        "M_action",
+        "In"
+      ]
+    },
+    {
+      "from": [
+        "R",
+        "Out"
+      ],
+      "to": [
+        "R_action",
+        "In"
+      ]
+    },
+    {
+      "from": [
+        "P",
+        "Out"
+      ],
+      "to": [
+        "P_action",
+        "In"
+      ]
+    },
+    {
+      "from": [
+        "U",
+        "Out"
+      ],
+      "to": [
+        "U_action",
+        "In"
+      ]
+    },
+    {
+      "from": [
+        "Q",
+        "Out"
+      ],
+      "to": [
+        "Q_action",
+        "In"
+      ]
+    },
+    {
+      "from": [
+        "X",
+        "Out"
+      ],
+      "to": [
+        "X_action",
+        "In"
+      ]
+    },
+    {
+      "from": [
+        "scene_loaded_log",
+        "Out"
+      ],
+      "to": [
+        "scene_log",
+        "In"
+      ]
+    },
+    {
+      "from": [
+        "load_failed",
+        "Out"
+      ],
+      "to": [
+        "failed_log",
+        "In"
+      ]
+    },
+    {
+      "from": [
+        "load_failed",
+        "Error"
+      ],
+      "to": [
+        "failed_log",
+        "Message"
+      ]
+    },
+    {
+      "from": [
+        "late",
+        "Out"
+      ],
+      "to": [
+        "active_scene_store",
+        "In"
+      ]
+    },
+    {
+      "from": [
+        "active_scene",
+        "Value"
+      ],
+      "to": [
+        "active_scene_store",
+        "Value"
+      ]
+    },
+    {
+      "from": [
+        "active_scene_store",
+        "Out"
+      ],
+      "to": [
+        "scene_ok_store",
+        "In"
+      ]
+    },
+    {
+      "from": [
+        "scene_ok",
+        "Value"
+      ],
+      "to": [
+        "scene_ok_store",
+        "Value"
+      ]
+    },
+    {
+      "from": [
+        "scene_ok_store",
+        "Out"
+      ],
+      "to": [
+        "scene_error_store",
+        "In"
+      ]
+    },
+    {
+      "from": [
+        "scene_error",
+        "Value"
+      ],
+      "to": [
+        "scene_error_store",
+        "Value"
+      ]
+    },
+    {
+      "from": [
+        "names",
+        "Value"
+      ],
+      "to": [
+        "join",
+        "Items"
+      ]
+    },
+    {
+      "from": [
+        "scene_error_store",
+        "Out"
+      ],
+      "to": [
+        "scene_list",
+        "In"
+      ]
+    },
+    {
+      "from": [
+        "join",
+        "Value"
+      ],
+      "to": [
+        "scene_list",
+        "Value"
+      ]
+    },
+    {
+      "from": [
+        "scene_list",
+        "Out"
+      ],
+      "to": [
+        "status",
+        "In"
+      ]
+    },
+    {
+      "from": [
+        "scene_error",
+        "Value"
+      ],
+      "to": [
+        "status",
+        "Text"
+      ]
+    }
+  ],
+  "name": "Menu",
+  "nodes": [
+    {
+      "id": "start",
+      "position": [
+        0,
+        0
+      ],
+      "type": 1019,
+      "values": {}
+    },
+    {
+      "id": "hud",
+      "position": [
+        280,
+        0
+      ],
+      "type": 18001,
+      "values": {}
+    },
+    {
+      "id": "game_start",
+      "position": [
+        560,
+        0
+      ],
+      "type": 1001,
+      "values": {}
+    },
+    {
+      "id": "storage",
+      "position": [
+        840,
+        0
+      ],
+      "type": 23001,
+      "values": {
+        "Game ID": "node-engine-scene-demo"
+      }
+    },
+    {
+      "id": "game_log",
+      "position": [
+        1120,
+        0
+      ],
+      "type": 27001,
+      "values": {
+        "Message": "Game started once"
+      }
+    },
+    {
+      "id": "update",
+      "position": [
+        1400,
+        0
+      ],
+      "type": 1002,
+      "values": {}
+    },
+    {
+      "id": "S",
+      "position": [
+        1680,
+        0
+      ],
+      "type": 10008,
+      "values": {
+        "Filter": "S"
+      }
+    },
+    {
+      "id": "S_action",
+      "position": [
+        0,
+        220
+      ],
+      "type": 23016,
+      "values": {
+        "Slot": "scene"
+      }
+    },
+    {
+      "id": "L",
+      "position": [
+        280,
+        220
+      ],
+      "type": 10008,
+      "values": {
+        "Filter": "L"
+      }
+    },
+    {
+      "id": "L_action",
+      "position": [
+        560,
+        220
+      ],
+      "type": 23017,
+      "values": {
+        "Slot": "scene"
+      }
+    },
+    {
+      "id": "C",
+      "position": [
+        840,
+        220
+      ],
+      "type": 10008,
+      "values": {
+        "Filter": "C"
+      }
+    },
+    {
+      "id": "C_action",
+      "position": [
+        1120,
+        220
+      ],
+      "type": 7004,
+      "values": {
+        "Scene": "level"
+      }
+    },
+    {
+      "id": "M",
+      "position": [
+        1400,
+        220
+      ],
+      "type": 10008,
+      "values": {
+        "Filter": "M"
+      }
+    },
+    {
+      "id": "M_action",
+      "position": [
+        1680,
+        220
+      ],
+      "type": 7004,
+      "values": {
+        "Scene": "menu"
+      }
+    },
+    {
+      "id": "R",
+      "position": [
+        0,
+        440
+      ],
+      "type": 10008,
+      "values": {
+        "Filter": "R"
+      }
+    },
+    {
+      "id": "R_action",
+      "position": [
+        280,
+        440
+      ],
+      "type": 7005,
+      "values": {}
+    },
+    {
+      "id": "P",
+      "position": [
+        560,
+        440
+      ],
+      "type": 10008,
+      "values": {
+        "Filter": "P"
+      }
+    },
+    {
+      "id": "P_action",
+      "position": [
+        840,
+        440
+      ],
+      "type": 7001,
+      "values": {}
+    },
+    {
+      "id": "U",
+      "position": [
+        1120,
+        440
+      ],
+      "type": 10008,
+      "values": {
+        "Filter": "U"
+      }
+    },
+    {
+      "id": "U_action",
+      "position": [
+        1400,
+        440
+      ],
+      "type": 7002,
+      "values": {}
+    },
+    {
+      "id": "Q",
+      "position": [
+        1680,
+        440
+      ],
+      "type": 10008,
+      "values": {
+        "Filter": "Q"
+      }
+    },
+    {
+      "id": "Q_action",
+      "position": [
+        0,
+        660
+      ],
+      "type": 26001,
+      "values": {}
+    },
+    {
+      "id": "X",
+      "position": [
+        280,
+        660
+      ],
+      "type": 10008,
+      "values": {
+        "Filter": "X"
+      }
+    },
+    {
+      "id": "X_action",
+      "position": [
+        560,
+        660
+      ],
+      "type": 7004,
+      "values": {
+        "Scene": "missing"
+      }
+    },
+    {
+      "id": "scene_loaded_log",
+      "position": [
+        840,
+        660
+      ],
+      "type": 1019,
+      "values": {}
+    },
+    {
+      "id": "scene_log",
+      "position": [
+        1120,
+        660
+      ],
+      "type": 27001,
+      "values": {
+        "Message": "Loaded menu"
+      }
+    },
+    {
+      "id": "load_failed",
+      "position": [
+        1400,
+        660
+      ],
+      "type": 1020,
+      "values": {}
+    },
+    {
+      "id": "failed_log",
+      "position": [
+        1680,
+        660
+      ],
+      "type": 27001,
+      "values": {}
+    },
+    {
+      "id": "late",
+      "position": [
+        0,
+        880
+      ],
+      "type": 1005,
+      "values": {}
+    },
+    {
+      "id": "active_scene",
+      "position": [
+        280,
+        880
+      ],
+      "type": 7006,
+      "values": {}
+    },
+    {
+      "id": "active_scene_store",
+      "position": [
+        560,
+        880
+      ],
+      "type": 3113,
+      "values": {
+        "Name": "active_scene"
+      }
+    },
+    {
+      "id": "scene_ok",
+      "position": [
+        840,
+        880
+      ],
+      "type": 7008,
+      "values": {}
+    },
+    {
+      "id": "scene_ok_store",
+      "position": [
+        1120,
+        880
+      ],
+      "type": 3112,
+      "values": {
+        "Name": "scene_ok"
+      }
+    },
+    {
+      "id": "scene_error",
+      "position": [
+        1400,
+        880
+      ],
+      "type": 7009,
+      "values": {}
+    },
+    {
+      "id": "scene_error_store",
+      "position": [
+        1680,
+        880
+      ],
+      "type": 3113,
+      "values": {
+        "Name": "scene_error"
+      }
+    },
+    {
+      "id": "names",
+      "position": [
+        0,
+        1100
+      ],
+      "type": 7007,
+      "values": {}
+    },
+    {
+      "id": "join",
+      "position": [
+        280,
+        1100
+      ],
+      "type": 3057,
+      "values": {
+        "Separator": ", "
+      }
+    },
+    {
+      "id": "scene_list",
+      "position": [
+        560,
+        1100
+      ],
+      "type": 3113,
+      "values": {
+        "Name": "scene_list"
+      }
+    },
+    {
+      "id": "status",
+      "position": [
+        840,
+        1100
+      ],
+      "type": 18005,
+      "values": {
+        "Element": "status",
+        "Widget": "hud"
+      }
+    }
+  ],
+  "version": 1
+}

@@ -1,0 +1,441 @@
+{
+  "links": [
+    {
+      "from": [
+        "start",
+        "Out"
+      ],
+      "to": [
+        "pivot",
+        "In"
+      ]
+    },
+    {
+      "from": [
+        "pivot",
+        "Out"
+      ],
+      "to": [
+        "savepivot",
+        "In"
+      ]
+    },
+    {
+      "from": [
+        "savepivot",
+        "Out"
+      ],
+      "to": [
+        "clone",
+        "In"
+      ]
+    },
+    {
+      "from": [
+        "clone",
+        "Out"
+      ],
+      "to": [
+        "move",
+        "In"
+      ]
+    },
+    {
+      "from": [
+        "move",
+        "Out"
+      ],
+      "to": [
+        "parentclone",
+        "In"
+      ]
+    },
+    {
+      "from": [
+        "parentclone",
+        "Out"
+      ],
+      "to": [
+        "show",
+        "In"
+      ]
+    },
+    {
+      "from": [
+        "show",
+        "Out"
+      ],
+      "to": [
+        "spawn",
+        "In"
+      ]
+    },
+    {
+      "from": [
+        "spawn",
+        "Out"
+      ],
+      "to": [
+        "parentspawn",
+        "In"
+      ]
+    },
+    {
+      "from": [
+        "parentspawn",
+        "Out"
+      ],
+      "to": [
+        "savetemporary",
+        "In"
+      ]
+    },
+    {
+      "from": [
+        "savetemporary",
+        "Out"
+      ],
+      "to": [
+        "timer",
+        "In"
+      ]
+    },
+    {
+      "from": [
+        "pivot",
+        "Entity"
+      ],
+      "to": [
+        "savepivot",
+        "Value"
+      ]
+    },
+    {
+      "from": [
+        "clone",
+        "Entity"
+      ],
+      "to": [
+        "move",
+        "Entity"
+      ]
+    },
+    {
+      "from": [
+        "clone",
+        "Entity"
+      ],
+      "to": [
+        "parentclone",
+        "Child"
+      ]
+    },
+    {
+      "from": [
+        "pivot",
+        "Entity"
+      ],
+      "to": [
+        "parentclone",
+        "Parent"
+      ]
+    },
+    {
+      "from": [
+        "clone",
+        "Entity"
+      ],
+      "to": [
+        "show",
+        "Entity"
+      ]
+    },
+    {
+      "from": [
+        "spawn",
+        "Entity"
+      ],
+      "to": [
+        "parentspawn",
+        "Child"
+      ]
+    },
+    {
+      "from": [
+        "pivot",
+        "Entity"
+      ],
+      "to": [
+        "parentspawn",
+        "Parent"
+      ]
+    },
+    {
+      "from": [
+        "spawn",
+        "Entity"
+      ],
+      "to": [
+        "savetemporary",
+        "Value"
+      ]
+    },
+    {
+      "from": [
+        "update",
+        "Out"
+      ],
+      "to": [
+        "rotate",
+        "In"
+      ]
+    },
+    {
+      "from": [
+        "readpivot",
+        "Value"
+      ],
+      "to": [
+        "rotate",
+        "Entity"
+      ]
+    },
+    {
+      "from": [
+        "expire",
+        "Out"
+      ],
+      "to": [
+        "destroy",
+        "In"
+      ]
+    },
+    {
+      "from": [
+        "readtemporary",
+        "Value"
+      ],
+      "to": [
+        "destroy",
+        "Entity"
+      ]
+    },
+    {
+      "from": [
+        "destroy",
+        "Out"
+      ],
+      "to": [
+        "log",
+        "In"
+      ]
+    }
+  ],
+  "name": "Entity lifecycle and hierarchy",
+  "nodes": [
+    {
+      "id": "start",
+      "position": [
+        0,
+        0
+      ],
+      "type": 1001,
+      "values": {}
+    },
+    {
+      "id": "pivot",
+      "position": [
+        260,
+        0
+      ],
+      "type": 8010,
+      "values": {
+        "Name": "Orbit pivot"
+      }
+    },
+    {
+      "id": "savepivot",
+      "position": [
+        520,
+        0
+      ],
+      "type": 3115,
+      "values": {
+        "Name": "pivot"
+      }
+    },
+    {
+      "id": "clone",
+      "position": [
+        780,
+        0
+      ],
+      "type": 8011,
+      "values": {
+        "Name": "Orbit robot"
+      }
+    },
+    {
+      "id": "move",
+      "position": [
+        1040,
+        0
+      ],
+      "type": 9002,
+      "values": {
+        "Value": [
+          2,
+          0,
+          0
+        ]
+      }
+    },
+    {
+      "id": "parentclone",
+      "position": [
+        0,
+        220
+      ],
+      "type": 8020,
+      "values": {}
+    },
+    {
+      "id": "show",
+      "position": [
+        260,
+        220
+      ],
+      "type": 8023,
+      "values": {
+        "Visible": true
+      }
+    },
+    {
+      "id": "spawn",
+      "position": [
+        520,
+        220
+      ],
+      "type": 8010,
+      "values": {
+        "Mesh": "assets/robot.gltf",
+        "Name": "Temporary robot",
+        "Position": [
+          -2,
+          0,
+          0
+        ]
+      }
+    },
+    {
+      "id": "parentspawn",
+      "position": [
+        780,
+        220
+      ],
+      "type": 8020,
+      "values": {}
+    },
+    {
+      "id": "savetemporary",
+      "position": [
+        1040,
+        220
+      ],
+      "type": 3115,
+      "values": {
+        "Name": "temporary"
+      }
+    },
+    {
+      "id": "timer",
+      "position": [
+        0,
+        440
+      ],
+      "type": 5010,
+      "values": {
+        "Name": "cleanup",
+        "Seconds": 1
+      }
+    },
+    {
+      "id": "update",
+      "position": [
+        260,
+        440
+      ],
+      "type": 1002,
+      "values": {}
+    },
+    {
+      "id": "readpivot",
+      "position": [
+        520,
+        440
+      ],
+      "type": 3105,
+      "values": {
+        "Name": "pivot"
+      }
+    },
+    {
+      "id": "rotate",
+      "position": [
+        780,
+        440
+      ],
+      "type": 9004,
+      "values": {
+        "Degrees": [
+          0,
+          1,
+          0
+        ]
+      }
+    },
+    {
+      "id": "expire",
+      "position": [
+        1040,
+        440
+      ],
+      "type": 1003,
+      "values": {
+        "Filter": "cleanup"
+      }
+    },
+    {
+      "id": "readtemporary",
+      "position": [
+        0,
+        660
+      ],
+      "type": 3105,
+      "values": {
+        "Name": "temporary"
+      }
+    },
+    {
+      "id": "destroy",
+      "position": [
+        260,
+        660
+      ],
+      "type": 8012,
+      "values": {}
+    },
+    {
+      "id": "log",
+      "position": [
+        520,
+        660
+      ],
+      "type": 27001,
+      "values": {
+        "Message": "Temporary robot destroyed; orbit robot remains."
+      }
+    }
+  ],
+  "version": 1
+}

@@ -1,0 +1,6 @@
+{
+  "graph": "graphs/gameplay.json",
+  "name": "Before deletion and loot",
+  "scene": "scenes/main.json",
+  "version": 1
+}

@@ -1,0 +1,166 @@
+{
+  "active_camera": "camera",
+  "entities": [
+    {
+      "id": "player",
+      "name": "Player",
+      "position": [
+        -1.5,
+        1.5,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "sprite": {
+        "asset": "atlas",
+        "flip_x": false,
+        "flip_y": false,
+        "frame": 0
+      }
+    },
+    {
+      "id": "second",
+      "name": "Second",
+      "position": [
+        1.5,
+        1.5,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "sprite": {
+        "asset": "atlas",
+        "flip_x": false,
+        "flip_y": false,
+        "frame": 1
+      }
+    },
+    {
+      "id": "third",
+      "name": "Third",
+      "position": [
+        -1.5,
+        -1.5,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "sprite": {
+        "asset": "atlas",
+        "flip_x": false,
+        "flip_y": false,
+        "frame": 2
+      }
+    },
+    {
+      "id": "fourth",
+      "name": "Fourth",
+      "position": [
+        1.5,
+        -1.5,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "sprite": {
+        "asset": "atlas",
+        "flip_x": false,
+        "flip_y": false,
+        "frame": 3
+      }
+    },
+    {
+      "camera": {
+        "far": 1000.0,
+        "fov": 60.0,
+        "near": 0.1,
+        "projection": "orthographic",
+        "size": 8
+      },
+      "id": "camera",
+      "name": "Sprite Camera",
+      "position": [
+        0,
+        0,
+        8
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ]
+    }
+  ],
+  "input": {
+    "actions": {
+      "flip_x": [
+        "X"
+      ],
+      "flip_y": [
+        "Y"
+      ],
+      "next": [
+        "Space"
+      ]
+    },
+    "axes": {},
+    "version": 1
+  },
+  "sprite_assets": [
+    {
+      "columns": 2,
+      "filter": "nearest",
+      "height": 2.0,
+      "id": "atlas",
+      "name": "Four-frame atlas",
+      "pivot": [
+        0.5,
+        0.5
+      ],
+      "rows": 2,
+      "texture": "assets/atlas.png",
+      "type": "sprite",
+      "version": 1,
+      "width": 2.0
+    }
+  ],
+  "variables": {},
+  "version": 1
+}

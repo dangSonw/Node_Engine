@@ -1,0 +1,292 @@
+{
+  "links": [
+    {
+      "from": [
+        "start",
+        "Out"
+      ],
+      "to": [
+        "toggle_timer",
+        "In"
+      ]
+    },
+    {
+      "from": [
+        "toggle_timer",
+        "Out"
+      ],
+      "to": [
+        "worker_timer",
+        "In"
+      ]
+    },
+    {
+      "from": [
+        "worker_timer",
+        "Out"
+      ],
+      "to": [
+        "initial_save",
+        "In"
+      ]
+    },
+    {
+      "from": [
+        "initial_query",
+        "Value"
+      ],
+      "to": [
+        "initial_save",
+        "Value"
+      ]
+    },
+    {
+      "from": [
+        "toggle",
+        "Out"
+      ],
+      "to": [
+        "set_active",
+        "In"
+      ]
+    },
+    {
+      "from": [
+        "active",
+        "Value"
+      ],
+      "to": [
+        "invert",
+        "Value"
+      ]
+    },
+    {
+      "from": [
+        "invert",
+        "Value"
+      ],
+      "to": [
+        "set_active",
+        "Active"
+      ]
+    },
+    {
+      "from": [
+        "set_active",
+        "Out"
+      ],
+      "to": [
+        "save_query",
+        "In"
+      ]
+    },
+    {
+      "from": [
+        "query",
+        "Value"
+      ],
+      "to": [
+        "save_query",
+        "Value"
+      ]
+    },
+    {
+      "from": [
+        "worker",
+        "Out"
+      ],
+      "to": [
+        "rotate_worker",
+        "In"
+      ]
+    },
+    {
+      "from": [
+        "update",
+        "Out"
+      ],
+      "to": [
+        "rotate_beacon",
+        "In"
+      ]
+    }
+  ],
+  "name": "Activity and layers",
+  "nodes": [
+    {
+      "id": "start",
+      "position": [
+        0,
+        0
+      ],
+      "type": 1001,
+      "values": {}
+    },
+    {
+      "id": "toggle_timer",
+      "position": [
+        270,
+        0
+      ],
+      "type": 5010,
+      "values": {
+        "Name": "toggle",
+        "Repeat": true,
+        "Seconds": 0.5
+      }
+    },
+    {
+      "id": "worker_timer",
+      "position": [
+        540,
+        0
+      ],
+      "type": 5010,
+      "values": {
+        "Name": "work",
+        "Owner": "player",
+        "Repeat": true,
+        "Seconds": 0.25
+      }
+    },
+    {
+      "id": "initial_query",
+      "position": [
+        810,
+        0
+      ],
+      "type": 8033,
+      "values": {
+        "Layer": 3
+      }
+    },
+    {
+      "id": "initial_save",
+      "position": [
+        1080,
+        0
+      ],
+      "type": 3215,
+      "values": {
+        "Name": "active_actors"
+      }
+    },
+    {
+      "id": "toggle",
+      "position": [
+        0,
+        240
+      ],
+      "type": 1003,
+      "values": {
+        "Filter": "toggle"
+      }
+    },
+    {
+      "id": "active",
+      "position": [
+        270,
+        240
+      ],
+      "type": 8029,
+      "values": {
+        "Entity": "group"
+      }
+    },
+    {
+      "id": "invert",
+      "position": [
+        540,
+        240
+      ],
+      "type": 4017,
+      "values": {}
+    },
+    {
+      "id": "set_active",
+      "position": [
+        810,
+        240
+      ],
+      "type": 8028,
+      "values": {
+        "Entity": "group"
+      }
+    },
+    {
+      "id": "query",
+      "position": [
+        1080,
+        240
+      ],
+      "type": 8033,
+      "values": {
+        "Layer": 3
+      }
+    },
+    {
+      "id": "save_query",
+      "position": [
+        0,
+        480
+      ],
+      "type": 3215,
+      "values": {
+        "Name": "active_actors"
+      }
+    },
+    {
+      "id": "worker",
+      "position": [
+        270,
+        480
+      ],
+      "type": 1003,
+      "values": {
+        "Filter": "work",
+        "Receiver": "player"
+      }
+    },
+    {
+      "id": "rotate_worker",
+      "position": [
+        540,
+        480
+      ],
+      "type": 9004,
+      "values": {
+        "Degrees": [
+          0,
+          15,
+          0
+        ]
+      }
+    },
+    {
+      "id": "update",
+      "position": [
+        810,
+        480
+      ],
+      "type": 1002,
+      "values": {}
+    },
+    {
+      "id": "rotate_beacon",
+      "position": [
+        1080,
+        480
+      ],
+      "type": 9004,
+      "values": {
+        "Degrees": [
+          0,
+          1,
+          0
+        ],
+        "Entity": "beacon"
+      }
+    }
+  ],
+  "version": 1
+}

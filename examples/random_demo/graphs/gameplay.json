@@ -1,0 +1,1079 @@
+{
+  "links": [
+    {
+      "from": [
+        "start",
+        "Out"
+      ],
+      "to": [
+        "seed",
+        "In"
+      ]
+    },
+    {
+      "from": [
+        "seed",
+        "Out"
+      ],
+      "to": [
+        "storage",
+        "In"
+      ]
+    },
+    {
+      "from": [
+        "storage",
+        "Out"
+      ],
+      "to": [
+        "hud",
+        "In"
+      ]
+    },
+    {
+      "from": [
+        "update_Space",
+        "Out"
+      ],
+      "to": [
+        "if_Space",
+        "In"
+      ]
+    },
+    {
+      "from": [
+        "key_Space",
+        "Value"
+      ],
+      "to": [
+        "if_Space",
+        "Condition"
+      ]
+    },
+    {
+      "from": [
+        "update_R",
+        "Out"
+      ],
+      "to": [
+        "if_R",
+        "In"
+      ]
+    },
+    {
+      "from": [
+        "key_R",
+        "Value"
+      ],
+      "to": [
+        "if_R",
+        "Condition"
+      ]
+    },
+    {
+      "from": [
+        "update_S",
+        "Out"
+      ],
+      "to": [
+        "if_S",
+        "In"
+      ]
+    },
+    {
+      "from": [
+        "key_S",
+        "Value"
+      ],
+      "to": [
+        "if_S",
+        "Condition"
+      ]
+    },
+    {
+      "from": [
+        "update_L",
+        "Out"
+      ],
+      "to": [
+        "if_L",
+        "In"
+      ]
+    },
+    {
+      "from": [
+        "key_L",
+        "Value"
+      ],
+      "to": [
+        "if_L",
+        "Condition"
+      ]
+    },
+    {
+      "from": [
+        "if_R",
+        "True"
+      ],
+      "to": [
+        "action_R",
+        "In"
+      ]
+    },
+    {
+      "from": [
+        "if_S",
+        "True"
+      ],
+      "to": [
+        "action_S",
+        "In"
+      ]
+    },
+    {
+      "from": [
+        "if_L",
+        "True"
+      ],
+      "to": [
+        "action_L",
+        "In"
+      ]
+    },
+    {
+      "from": [
+        "if_Space",
+        "True"
+      ],
+      "to": [
+        "position",
+        "In"
+      ]
+    },
+    {
+      "from": [
+        "position",
+        "Out"
+      ],
+      "to": [
+        "dice",
+        "In"
+      ]
+    },
+    {
+      "from": [
+        "dice",
+        "Out"
+      ],
+      "to": [
+        "bonus",
+        "In"
+      ]
+    },
+    {
+      "from": [
+        "bonus",
+        "Out"
+      ],
+      "to": [
+        "move",
+        "In"
+      ]
+    },
+    {
+      "from": [
+        "position",
+        "Value"
+      ],
+      "to": [
+        "move",
+        "Value"
+      ]
+    },
+    {
+      "from": [
+        "move",
+        "Out"
+      ],
+      "to": [
+        "visible",
+        "In"
+      ]
+    },
+    {
+      "from": [
+        "bonus",
+        "Value"
+      ],
+      "to": [
+        "visible",
+        "Visible"
+      ]
+    },
+    {
+      "from": [
+        "visible",
+        "Out"
+      ],
+      "to": [
+        "store",
+        "In"
+      ]
+    },
+    {
+      "from": [
+        "dice",
+        "Value"
+      ],
+      "to": [
+        "store",
+        "Value"
+      ]
+    },
+    {
+      "from": [
+        "dice",
+        "Value"
+      ],
+      "to": [
+        "format",
+        "Value"
+      ]
+    },
+    {
+      "from": [
+        "store",
+        "Out"
+      ],
+      "to": [
+        "show",
+        "In"
+      ]
+    },
+    {
+      "from": [
+        "format",
+        "Value"
+      ],
+      "to": [
+        "show",
+        "Text"
+      ]
+    },
+    {
+      "from": [
+        "show",
+        "Out"
+      ],
+      "to": [
+        "item",
+        "In"
+      ]
+    },
+    {
+      "from": [
+        "item",
+        "Out"
+      ],
+      "to": [
+        "item_store",
+        "In"
+      ]
+    },
+    {
+      "from": [
+        "item",
+        "Value"
+      ],
+      "to": [
+        "item_store",
+        "Value"
+      ]
+    },
+    {
+      "from": [
+        "item_store",
+        "Out"
+      ],
+      "to": [
+        "item_index",
+        "In"
+      ]
+    },
+    {
+      "from": [
+        "item",
+        "Index"
+      ],
+      "to": [
+        "item_index",
+        "Value"
+      ]
+    },
+    {
+      "from": [
+        "item_index",
+        "Out"
+      ],
+      "to": [
+        "item_show",
+        "In"
+      ]
+    },
+    {
+      "from": [
+        "item",
+        "Value"
+      ],
+      "to": [
+        "item_show",
+        "Text"
+      ]
+    },
+    {
+      "from": [
+        "item_show",
+        "Out"
+      ],
+      "to": [
+        "loot",
+        "In"
+      ]
+    },
+    {
+      "from": [
+        "loot",
+        "Out"
+      ],
+      "to": [
+        "loot_store",
+        "In"
+      ]
+    },
+    {
+      "from": [
+        "loot",
+        "Value"
+      ],
+      "to": [
+        "loot_store",
+        "Value"
+      ]
+    },
+    {
+      "from": [
+        "loot_store",
+        "Out"
+      ],
+      "to": [
+        "loot_index",
+        "In"
+      ]
+    },
+    {
+      "from": [
+        "loot",
+        "Index"
+      ],
+      "to": [
+        "loot_index",
+        "Value"
+      ]
+    },
+    {
+      "from": [
+        "loot_index",
+        "Out"
+      ],
+      "to": [
+        "loot_show",
+        "In"
+      ]
+    },
+    {
+      "from": [
+        "loot",
+        "Value"
+      ],
+      "to": [
+        "loot_show",
+        "Text"
+      ]
+    },
+    {
+      "from": [
+        "loot_show",
+        "Out"
+      ],
+      "to": [
+        "deck",
+        "In"
+      ]
+    },
+    {
+      "from": [
+        "deck",
+        "Out"
+      ],
+      "to": [
+        "deck_store",
+        "In"
+      ]
+    },
+    {
+      "from": [
+        "deck",
+        "Value"
+      ],
+      "to": [
+        "deck_store",
+        "Value"
+      ]
+    },
+    {
+      "from": [
+        "deck",
+        "Value"
+      ],
+      "to": [
+        "deck_join",
+        "Items"
+      ]
+    },
+    {
+      "from": [
+        "deck_store",
+        "Out"
+      ],
+      "to": [
+        "deck_show",
+        "In"
+      ]
+    },
+    {
+      "from": [
+        "deck_join",
+        "Value"
+      ],
+      "to": [
+        "deck_show",
+        "Text"
+      ]
+    },
+    {
+      "from": [
+        "deck_show",
+        "Out"
+      ],
+      "to": [
+        "direction",
+        "In"
+      ]
+    },
+    {
+      "from": [
+        "direction",
+        "Out"
+      ],
+      "to": [
+        "direction_store",
+        "In"
+      ]
+    },
+    {
+      "from": [
+        "direction",
+        "Value"
+      ],
+      "to": [
+        "direction_store",
+        "Value"
+      ]
+    },
+    {
+      "from": [
+        "direction",
+        "Value"
+      ],
+      "to": [
+        "direction_offset",
+        "Vector"
+      ]
+    },
+    {
+      "from": [
+        "position",
+        "Value"
+      ],
+      "to": [
+        "direction_origin",
+        "A"
+      ]
+    },
+    {
+      "from": [
+        "direction_offset",
+        "Value"
+      ],
+      "to": [
+        "marker_position",
+        "A"
+      ]
+    },
+    {
+      "from": [
+        "direction_origin",
+        "Value"
+      ],
+      "to": [
+        "marker_position",
+        "B"
+      ]
+    },
+    {
+      "from": [
+        "direction_store",
+        "Out"
+      ],
+      "to": [
+        "marker_move",
+        "In"
+      ]
+    },
+    {
+      "from": [
+        "marker_position",
+        "Value"
+      ],
+      "to": [
+        "marker_move",
+        "Value"
+      ]
+    },
+    {
+      "from": [
+        "marker_move",
+        "Out"
+      ],
+      "to": [
+        "marker_visible",
+        "In"
+      ]
+    }
+  ],
+  "name": "Seeded random playground",
+  "nodes": [
+    {
+      "id": "start",
+      "position": [
+        0,
+        0
+      ],
+      "type": 1001,
+      "values": {}
+    },
+    {
+      "id": "seed",
+      "position": [
+        270,
+        0
+      ],
+      "type": 5020,
+      "values": {
+        "Seed": 42
+      }
+    },
+    {
+      "id": "storage",
+      "position": [
+        540,
+        0
+      ],
+      "type": 23001,
+      "values": {
+        "Game ID": "node-engine-random-demo"
+      }
+    },
+    {
+      "id": "hud",
+      "position": [
+        810,
+        0
+      ],
+      "type": 18001,
+      "values": {}
+    },
+    {
+      "id": "update_Space",
+      "position": [
+        1080,
+        0
+      ],
+      "type": 1002,
+      "values": {}
+    },
+    {
+      "id": "key_Space",
+      "position": [
+        1350,
+        0
+      ],
+      "type": 10002,
+      "values": {
+        "Key": "Space"
+      }
+    },
+    {
+      "id": "if_Space",
+      "position": [
+        1620,
+        0
+      ],
+      "type": 2001,
+      "values": {}
+    },
+    {
+      "id": "update_R",
+      "position": [
+        0,
+        220
+      ],
+      "type": 1002,
+      "values": {}
+    },
+    {
+      "id": "key_R",
+      "position": [
+        270,
+        220
+      ],
+      "type": 10002,
+      "values": {
+        "Key": "R"
+      }
+    },
+    {
+      "id": "if_R",
+      "position": [
+        540,
+        220
+      ],
+      "type": 2001,
+      "values": {}
+    },
+    {
+      "id": "update_S",
+      "position": [
+        810,
+        220
+      ],
+      "type": 1002,
+      "values": {}
+    },
+    {
+      "id": "key_S",
+      "position": [
+        1080,
+        220
+      ],
+      "type": 10002,
+      "values": {
+        "Key": "S"
+      }
+    },
+    {
+      "id": "if_S",
+      "position": [
+        1350,
+        220
+      ],
+      "type": 2001,
+      "values": {}
+    },
+    {
+      "id": "update_L",
+      "position": [
+        1620,
+        220
+      ],
+      "type": 1002,
+      "values": {}
+    },
+    {
+      "id": "key_L",
+      "position": [
+        0,
+        440
+      ],
+      "type": 10002,
+      "values": {
+        "Key": "L"
+      }
+    },
+    {
+      "id": "if_L",
+      "position": [
+        270,
+        440
+      ],
+      "type": 2001,
+      "values": {}
+    },
+    {
+      "id": "action_R",
+      "position": [
+        540,
+        440
+      ],
+      "type": 5020,
+      "values": {
+        "Seed": 42
+      }
+    },
+    {
+      "id": "action_S",
+      "position": [
+        810,
+        440
+      ],
+      "type": 23016,
+      "values": {
+        "Slot": "random"
+      }
+    },
+    {
+      "id": "action_L",
+      "position": [
+        1080,
+        440
+      ],
+      "type": 23017,
+      "values": {
+        "Slot": "random"
+      }
+    },
+    {
+      "id": "position",
+      "position": [
+        1350,
+        440
+      ],
+      "type": 5025,
+      "values": {
+        "Maximum": [
+          1.4,
+          0,
+          1
+        ],
+        "Minimum": [
+          -2,
+          0,
+          -1
+        ]
+      }
+    },
+    {
+      "id": "dice",
+      "position": [
+        1620,
+        440
+      ],
+      "type": 5023,
+      "values": {
+        "Maximum": 6,
+        "Minimum": 1
+      }
+    },
+    {
+      "id": "bonus",
+      "position": [
+        0,
+        660
+      ],
+      "type": 5024,
+      "values": {
+        "Probability": 0.25
+      }
+    },
+    {
+      "id": "move",
+      "position": [
+        270,
+        660
+      ],
+      "type": 9002,
+      "values": {}
+    },
+    {
+      "id": "visible",
+      "position": [
+        540,
+        660
+      ],
+      "type": 8023,
+      "values": {
+        "Entity": "bonus"
+      }
+    },
+    {
+      "id": "store",
+      "position": [
+        810,
+        660
+      ],
+      "type": 3111,
+      "values": {
+        "Name": "roll"
+      }
+    },
+    {
+      "id": "format",
+      "position": [
+        1080,
+        660
+      ],
+      "type": 3051,
+      "values": {}
+    },
+    {
+      "id": "show",
+      "position": [
+        1350,
+        660
+      ],
+      "type": 18005,
+      "values": {
+        "Element": "roll"
+      }
+    },
+    {
+      "id": "item",
+      "position": [
+        1620,
+        660
+      ],
+      "type": 5103,
+      "values": {
+        "Array": [
+          "Potion",
+          "Shield",
+          "Sword"
+        ]
+      }
+    },
+    {
+      "id": "item_store",
+      "position": [
+        0,
+        880
+      ],
+      "type": 3113,
+      "values": {
+        "Name": "item"
+      }
+    },
+    {
+      "id": "item_index",
+      "position": [
+        270,
+        880
+      ],
+      "type": 3111,
+      "values": {
+        "Name": "item_index"
+      }
+    },
+    {
+      "id": "item_show",
+      "position": [
+        540,
+        880
+      ],
+      "type": 18005,
+      "values": {
+        "Element": "item"
+      }
+    },
+    {
+      "id": "loot",
+      "position": [
+        810,
+        880
+      ],
+      "type": 5113,
+      "values": {
+        "Array": [
+          "Potion",
+          "Shield",
+          "Sword"
+        ],
+        "Weights": [
+          6.0,
+          3.0,
+          1.0
+        ]
+      }
+    },
+    {
+      "id": "loot_store",
+      "position": [
+        1080,
+        880
+      ],
+      "type": 3113,
+      "values": {
+        "Name": "loot"
+      }
+    },
+    {
+      "id": "loot_index",
+      "position": [
+        1350,
+        880
+      ],
+      "type": 3111,
+      "values": {
+        "Name": "loot_index"
+      }
+    },
+    {
+      "id": "loot_show",
+      "position": [
+        1620,
+        880
+      ],
+      "type": 18005,
+      "values": {
+        "Element": "loot"
+      }
+    },
+    {
+      "id": "deck",
+      "position": [
+        0,
+        1100
+      ],
+      "type": 5123,
+      "values": {
+        "Array": [
+          "Ace",
+          "King",
+          "Queen",
+          "Jack"
+        ]
+      }
+    },
+    {
+      "id": "deck_store",
+      "position": [
+        270,
+        1100
+      ],
+      "type": 3213,
+      "values": {
+        "Name": "deck"
+      }
+    },
+    {
+      "id": "deck_join",
+      "position": [
+        540,
+        1100
+      ],
+      "type": 3057,
+      "values": {
+        "Separator": " / "
+      }
+    },
+    {
+      "id": "deck_show",
+      "position": [
+        810,
+        1100
+      ],
+      "type": 18005,
+      "values": {
+        "Element": "deck"
+      }
+    },
+    {
+      "id": "direction",
+      "position": [
+        1080,
+        1100
+      ],
+      "type": 5026,
+      "values": {}
+    },
+    {
+      "id": "direction_store",
+      "position": [
+        1350,
+        1100
+      ],
+      "type": 3114,
+      "values": {
+        "Name": "direction"
+      }
+    },
+    {
+      "id": "direction_offset",
+      "position": [
+        1620,
+        1100
+      ],
+      "type": 4022,
+      "values": {
+        "Scale": 1.8
+      }
+    },
+    {
+      "id": "direction_origin",
+      "position": [
+        0,
+        1320
+      ],
+      "type": 4021,
+      "values": {
+        "B": [
+          0,
+          0.8,
+          0
+        ]
+      }
+    },
+    {
+      "id": "marker_position",
+      "position": [
+        270,
+        1320
+      ],
+      "type": 4021,
+      "values": {}
+    },
+    {
+      "id": "marker_move",
+      "position": [
+        540,
+        1320
+      ],
+      "type": 9002,
+      "values": {
+        "Entity": "direction"
+      }
+    },
+    {
+      "id": "marker_visible",
+      "position": [
+        810,
+        1320
+      ],
+      "type": 8023,
+      "values": {
+        "Entity": "direction",
+        "Visible": true
+      }
+    }
+  ],
+  "version": 1
+}

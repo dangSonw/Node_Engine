@@ -1,0 +1,1332 @@
+{
+  "links": [
+    {
+      "from": [
+        "start",
+        "Out"
+      ],
+      "to": [
+        "storage",
+        "In"
+      ]
+    },
+    {
+      "from": [
+        "storage",
+        "Out"
+      ],
+      "to": [
+        "hud",
+        "In"
+      ]
+    },
+    {
+      "from": [
+        "hud",
+        "Out"
+      ],
+      "to": [
+        "seed",
+        "In"
+      ]
+    },
+    {
+      "from": [
+        "seed",
+        "Out"
+      ],
+      "to": [
+        "idle",
+        "In"
+      ]
+    },
+    {
+      "from": [
+        "input_Space",
+        "Out"
+      ],
+      "to": [
+        "if_Space",
+        "In"
+      ]
+    },
+    {
+      "from": [
+        "key_Space",
+        "Value"
+      ],
+      "to": [
+        "if_Space",
+        "Condition"
+      ]
+    },
+    {
+      "from": [
+        "if_Space",
+        "True"
+      ],
+      "to": [
+        "route",
+        "In"
+      ]
+    },
+    {
+      "from": [
+        "get_random",
+        "Value"
+      ],
+      "to": [
+        "route",
+        "Random"
+      ]
+    },
+    {
+      "from": [
+        "input_M",
+        "Out"
+      ],
+      "to": [
+        "if_M",
+        "In"
+      ]
+    },
+    {
+      "from": [
+        "key_M",
+        "Value"
+      ],
+      "to": [
+        "if_M",
+        "Condition"
+      ]
+    },
+    {
+      "from": [
+        "if_M",
+        "True"
+      ],
+      "to": [
+        "toggle_random",
+        "In"
+      ]
+    },
+    {
+      "from": [
+        "get_random",
+        "Value"
+      ],
+      "to": [
+        "toggle_random",
+        "Condition"
+      ]
+    },
+    {
+      "from": [
+        "toggle_random",
+        "True"
+      ],
+      "to": [
+        "set_randomTrue",
+        "In"
+      ]
+    },
+    {
+      "from": [
+        "set_randomTrue",
+        "Out"
+      ],
+      "to": [
+        "label_randomTrue",
+        "In"
+      ]
+    },
+    {
+      "from": [
+        "toggle_random",
+        "False"
+      ],
+      "to": [
+        "set_randomFalse",
+        "In"
+      ]
+    },
+    {
+      "from": [
+        "set_randomFalse",
+        "Out"
+      ],
+      "to": [
+        "label_randomFalse",
+        "In"
+      ]
+    },
+    {
+      "from": [
+        "get_loop",
+        "Value"
+      ],
+      "to": [
+        "route",
+        "Loop"
+      ]
+    },
+    {
+      "from": [
+        "input_T",
+        "Out"
+      ],
+      "to": [
+        "if_T",
+        "In"
+      ]
+    },
+    {
+      "from": [
+        "key_T",
+        "Value"
+      ],
+      "to": [
+        "if_T",
+        "Condition"
+      ]
+    },
+    {
+      "from": [
+        "if_T",
+        "True"
+      ],
+      "to": [
+        "toggle_loop",
+        "In"
+      ]
+    },
+    {
+      "from": [
+        "get_loop",
+        "Value"
+      ],
+      "to": [
+        "toggle_loop",
+        "Condition"
+      ]
+    },
+    {
+      "from": [
+        "toggle_loop",
+        "True"
+      ],
+      "to": [
+        "set_loopTrue",
+        "In"
+      ]
+    },
+    {
+      "from": [
+        "set_loopTrue",
+        "Out"
+      ],
+      "to": [
+        "label_loopTrue",
+        "In"
+      ]
+    },
+    {
+      "from": [
+        "toggle_loop",
+        "False"
+      ],
+      "to": [
+        "set_loopFalse",
+        "In"
+      ]
+    },
+    {
+      "from": [
+        "set_loopFalse",
+        "Out"
+      ],
+      "to": [
+        "label_loopFalse",
+        "In"
+      ]
+    },
+    {
+      "from": [
+        "route",
+        "Index"
+      ],
+      "to": [
+        "selected",
+        "Value"
+      ]
+    },
+    {
+      "from": [
+        "route",
+        "Out 0"
+      ],
+      "to": [
+        "position0",
+        "In"
+      ]
+    },
+    {
+      "from": [
+        "position0",
+        "Out"
+      ],
+      "to": [
+        "rotation0",
+        "In"
+      ]
+    },
+    {
+      "from": [
+        "rotation0",
+        "Out"
+      ],
+      "to": [
+        "selected",
+        "In"
+      ]
+    },
+    {
+      "from": [
+        "route",
+        "Out 1"
+      ],
+      "to": [
+        "position1",
+        "In"
+      ]
+    },
+    {
+      "from": [
+        "position1",
+        "Out"
+      ],
+      "to": [
+        "rotation1",
+        "In"
+      ]
+    },
+    {
+      "from": [
+        "rotation1",
+        "Out"
+      ],
+      "to": [
+        "selected",
+        "In"
+      ]
+    },
+    {
+      "from": [
+        "route",
+        "Out 2"
+      ],
+      "to": [
+        "position2",
+        "In"
+      ]
+    },
+    {
+      "from": [
+        "position2",
+        "Out"
+      ],
+      "to": [
+        "rotation2",
+        "In"
+      ]
+    },
+    {
+      "from": [
+        "rotation2",
+        "Out"
+      ],
+      "to": [
+        "selected",
+        "In"
+      ]
+    },
+    {
+      "from": [
+        "route",
+        "Out 3"
+      ],
+      "to": [
+        "position3",
+        "In"
+      ]
+    },
+    {
+      "from": [
+        "position3",
+        "Out"
+      ],
+      "to": [
+        "rotation3",
+        "In"
+      ]
+    },
+    {
+      "from": [
+        "rotation3",
+        "Out"
+      ],
+      "to": [
+        "selected",
+        "In"
+      ]
+    },
+    {
+      "from": [
+        "selected",
+        "Out"
+      ],
+      "to": [
+        "history",
+        "In"
+      ]
+    },
+    {
+      "from": [
+        "route",
+        "Index"
+      ],
+      "to": [
+        "index",
+        "Value"
+      ]
+    },
+    {
+      "from": [
+        "index",
+        "Value"
+      ],
+      "to": [
+        "space",
+        "A"
+      ]
+    },
+    {
+      "from": [
+        "old_history",
+        "Value"
+      ],
+      "to": [
+        "append",
+        "A"
+      ]
+    },
+    {
+      "from": [
+        "space",
+        "Value"
+      ],
+      "to": [
+        "append",
+        "B"
+      ]
+    },
+    {
+      "from": [
+        "append",
+        "Value"
+      ],
+      "to": [
+        "history",
+        "Value"
+      ]
+    },
+    {
+      "from": [
+        "history",
+        "Out"
+      ],
+      "to": [
+        "show_history",
+        "In"
+      ]
+    },
+    {
+      "from": [
+        "old_history",
+        "Value"
+      ],
+      "to": [
+        "show_history",
+        "Text"
+      ]
+    },
+    {
+      "from": [
+        "input_R_pose",
+        "Out"
+      ],
+      "to": [
+        "if_R_pose",
+        "In"
+      ]
+    },
+    {
+      "from": [
+        "key_R_pose",
+        "Value"
+      ],
+      "to": [
+        "if_R_pose",
+        "Condition"
+      ]
+    },
+    {
+      "from": [
+        "if_R_pose",
+        "True"
+      ],
+      "to": [
+        "reset_position",
+        "In"
+      ]
+    },
+    {
+      "from": [
+        "reset_position",
+        "Out"
+      ],
+      "to": [
+        "reset_rotation",
+        "In"
+      ]
+    },
+    {
+      "from": [
+        "reset_rotation",
+        "Out"
+      ],
+      "to": [
+        "reset_selected",
+        "In"
+      ]
+    },
+    {
+      "from": [
+        "reset_selected",
+        "Out"
+      ],
+      "to": [
+        "reset_history",
+        "In"
+      ]
+    },
+    {
+      "from": [
+        "reset_history",
+        "Out"
+      ],
+      "to": [
+        "clear_history",
+        "In"
+      ]
+    },
+    {
+      "from": [
+        "clear_history",
+        "Out"
+      ],
+      "to": [
+        "reset_seed",
+        "In"
+      ]
+    },
+    {
+      "from": [
+        "input_R_gate",
+        "Out"
+      ],
+      "to": [
+        "if_R_gate",
+        "In"
+      ]
+    },
+    {
+      "from": [
+        "key_R_gate",
+        "Value"
+      ],
+      "to": [
+        "if_R_gate",
+        "Condition"
+      ]
+    },
+    {
+      "from": [
+        "if_R_gate",
+        "True"
+      ],
+      "to": [
+        "route",
+        "Reset"
+      ]
+    },
+    {
+      "from": [
+        "input_S",
+        "Out"
+      ],
+      "to": [
+        "if_S",
+        "In"
+      ]
+    },
+    {
+      "from": [
+        "key_S",
+        "Value"
+      ],
+      "to": [
+        "if_S",
+        "Condition"
+      ]
+    },
+    {
+      "from": [
+        "if_S",
+        "True"
+      ],
+      "to": [
+        "action_S",
+        "In"
+      ]
+    },
+    {
+      "from": [
+        "input_L",
+        "Out"
+      ],
+      "to": [
+        "if_L",
+        "In"
+      ]
+    },
+    {
+      "from": [
+        "key_L",
+        "Value"
+      ],
+      "to": [
+        "if_L",
+        "Condition"
+      ]
+    },
+    {
+      "from": [
+        "if_L",
+        "True"
+      ],
+      "to": [
+        "action_L",
+        "In"
+      ]
+    }
+  ],
+  "name": "Multi Gate robot tour",
+  "nodes": [
+    {
+      "id": "start",
+      "position": [
+        0,
+        0
+      ],
+      "type": 1001,
+      "values": {}
+    },
+    {
+      "id": "storage",
+      "position": [
+        280,
+        0
+      ],
+      "type": 23001,
+      "values": {
+        "Game ID": "node-engine-multi-gate-demo"
+      }
+    },
+    {
+      "id": "hud",
+      "position": [
+        560,
+        0
+      ],
+      "type": 18001,
+      "values": {}
+    },
+    {
+      "id": "seed",
+      "position": [
+        840,
+        0
+      ],
+      "type": 5020,
+      "values": {
+        "Seed": 42
+      }
+    },
+    {
+      "id": "idle",
+      "position": [
+        1120,
+        0
+      ],
+      "type": 13002,
+      "values": {
+        "Clip": "Idle"
+      }
+    },
+    {
+      "id": "route",
+      "position": [
+        1400,
+        0
+      ],
+      "type": 2011,
+      "values": {
+        "Branches": 4,
+        "Owner": "player"
+      }
+    },
+    {
+      "id": "input_Space",
+      "position": [
+        1680,
+        0
+      ],
+      "type": 1002,
+      "values": {}
+    },
+    {
+      "id": "key_Space",
+      "position": [
+        0,
+        280
+      ],
+      "type": 10002,
+      "values": {
+        "Key": "Space"
+      }
+    },
+    {
+      "id": "if_Space",
+      "position": [
+        280,
+        280
+      ],
+      "type": 2001,
+      "values": {}
+    },
+    {
+      "id": "get_random",
+      "position": [
+        560,
+        280
+      ],
+      "type": 3102,
+      "values": {
+        "Name": "random"
+      }
+    },
+    {
+      "id": "input_M",
+      "position": [
+        840,
+        280
+      ],
+      "type": 1002,
+      "values": {}
+    },
+    {
+      "id": "key_M",
+      "position": [
+        1120,
+        280
+      ],
+      "type": 10002,
+      "values": {
+        "Key": "M"
+      }
+    },
+    {
+      "id": "if_M",
+      "position": [
+        1400,
+        280
+      ],
+      "type": 2001,
+      "values": {}
+    },
+    {
+      "id": "toggle_random",
+      "position": [
+        1680,
+        280
+      ],
+      "type": 2001,
+      "values": {}
+    },
+    {
+      "id": "set_randomTrue",
+      "position": [
+        0,
+        560
+      ],
+      "type": 3112,
+      "values": {
+        "Name": "random",
+        "Value": false
+      }
+    },
+    {
+      "id": "label_randomTrue",
+      "position": [
+        280,
+        560
+      ],
+      "type": 18005,
+      "values": {
+        "Element": "mode",
+        "Text": "Sequential"
+      }
+    },
+    {
+      "id": "set_randomFalse",
+      "position": [
+        560,
+        560
+      ],
+      "type": 3112,
+      "values": {
+        "Name": "random",
+        "Value": true
+      }
+    },
+    {
+      "id": "label_randomFalse",
+      "position": [
+        840,
+        560
+      ],
+      "type": 18005,
+      "values": {
+        "Element": "mode",
+        "Text": "Random without repeats"
+      }
+    },
+    {
+      "id": "get_loop",
+      "position": [
+        1120,
+        560
+      ],
+      "type": 3102,
+      "values": {
+        "Name": "loop"
+      }
+    },
+    {
+      "id": "input_T",
+      "position": [
+        1400,
+        560
+      ],
+      "type": 1002,
+      "values": {}
+    },
+    {
+      "id": "key_T",
+      "position": [
+        1680,
+        560
+      ],
+      "type": 10002,
+      "values": {
+        "Key": "T"
+      }
+    },
+    {
+      "id": "if_T",
+      "position": [
+        0,
+        840
+      ],
+      "type": 2001,
+      "values": {}
+    },
+    {
+      "id": "toggle_loop",
+      "position": [
+        280,
+        840
+      ],
+      "type": 2001,
+      "values": {}
+    },
+    {
+      "id": "set_loopTrue",
+      "position": [
+        560,
+        840
+      ],
+      "type": 3112,
+      "values": {
+        "Name": "loop",
+        "Value": false
+      }
+    },
+    {
+      "id": "label_loopTrue",
+      "position": [
+        840,
+        840
+      ],
+      "type": 18005,
+      "values": {
+        "Element": "loop",
+        "Text": "Stop after four routes"
+      }
+    },
+    {
+      "id": "set_loopFalse",
+      "position": [
+        1120,
+        840
+      ],
+      "type": 3112,
+      "values": {
+        "Name": "loop",
+        "Value": true
+      }
+    },
+    {
+      "id": "label_loopFalse",
+      "position": [
+        1400,
+        840
+      ],
+      "type": 18005,
+      "values": {
+        "Element": "loop",
+        "Text": "Loop enabled"
+      }
+    },
+    {
+      "id": "selected",
+      "position": [
+        1680,
+        840
+      ],
+      "type": 3111,
+      "values": {
+        "Name": "selected"
+      }
+    },
+    {
+      "id": "position0",
+      "position": [
+        0,
+        1120
+      ],
+      "type": 9002,
+      "values": {
+        "Value": [
+          -1.5,
+          0,
+          -1
+        ]
+      }
+    },
+    {
+      "id": "rotation0",
+      "position": [
+        280,
+        1120
+      ],
+      "type": 9007,
+      "values": {
+        "Value": [
+          0,
+          0,
+          0
+        ]
+      }
+    },
+    {
+      "id": "position1",
+      "position": [
+        560,
+        1120
+      ],
+      "type": 9002,
+      "values": {
+        "Value": [
+          1.5,
+          0,
+          -1
+        ]
+      }
+    },
+    {
+      "id": "rotation1",
+      "position": [
+        840,
+        1120
+      ],
+      "type": 9007,
+      "values": {
+        "Value": [
+          0,
+          90,
+          0
+        ]
+      }
+    },
+    {
+      "id": "position2",
+      "position": [
+        1120,
+        1120
+      ],
+      "type": 9002,
+      "values": {
+        "Value": [
+          1.5,
+          0,
+          1
+        ]
+      }
+    },
+    {
+      "id": "rotation2",
+      "position": [
+        1400,
+        1120
+      ],
+      "type": 9007,
+      "values": {
+        "Value": [
+          0,
+          180,
+          0
+        ]
+      }
+    },
+    {
+      "id": "position3",
+      "position": [
+        1680,
+        1120
+      ],
+      "type": 9002,
+      "values": {
+        "Value": [
+          -1.5,
+          0,
+          1
+        ]
+      }
+    },
+    {
+      "id": "rotation3",
+      "position": [
+        0,
+        1400
+      ],
+      "type": 9007,
+      "values": {
+        "Value": [
+          0,
+          270,
+          0
+        ]
+      }
+    },
+    {
+      "id": "history",
+      "position": [
+        280,
+        1400
+      ],
+      "type": 3113,
+      "values": {
+        "Name": "history"
+      }
+    },
+    {
+      "id": "old_history",
+      "position": [
+        560,
+        1400
+      ],
+      "type": 3103,
+      "values": {
+        "Name": "history"
+      }
+    },
+    {
+      "id": "index",
+      "position": [
+        840,
+        1400
+      ],
+      "type": 3051,
+      "values": {}
+    },
+    {
+      "id": "space",
+      "position": [
+        1120,
+        1400
+      ],
+      "type": 3052,
+      "values": {
+        "B": " "
+      }
+    },
+    {
+      "id": "append",
+      "position": [
+        1400,
+        1400
+      ],
+      "type": 3052,
+      "values": {}
+    },
+    {
+      "id": "show_history",
+      "position": [
+        1680,
+        1400
+      ],
+      "type": 18005,
+      "values": {
+        "Element": "history"
+      }
+    },
+    {
+      "id": "input_R_pose",
+      "position": [
+        0,
+        1680
+      ],
+      "type": 1002,
+      "values": {}
+    },
+    {
+      "id": "key_R_pose",
+      "position": [
+        280,
+        1680
+      ],
+      "type": 10002,
+      "values": {
+        "Key": "R"
+      }
+    },
+    {
+      "id": "if_R_pose",
+      "position": [
+        560,
+        1680
+      ],
+      "type": 2001,
+      "values": {}
+    },
+    {
+      "id": "reset_position",
+      "position": [
+        840,
+        1680
+      ],
+      "type": 9002,
+      "values": {
+        "Value": [
+          0,
+          0,
+          0
+        ]
+      }
+    },
+    {
+      "id": "reset_rotation",
+      "position": [
+        1120,
+        1680
+      ],
+      "type": 9007,
+      "values": {
+        "Value": [
+          0,
+          0,
+          0
+        ]
+      }
+    },
+    {
+      "id": "reset_selected",
+      "position": [
+        1400,
+        1680
+      ],
+      "type": 3111,
+      "values": {
+        "Name": "selected",
+        "Value": -1
+      }
+    },
+    {
+      "id": "reset_history",
+      "position": [
+        1680,
+        1680
+      ],
+      "type": 3113,
+      "values": {
+        "Name": "history",
+        "Value": ""
+      }
+    },
+    {
+      "id": "clear_history",
+      "position": [
+        0,
+        1960
+      ],
+      "type": 18005,
+      "values": {
+        "Element": "history",
+        "Text": ""
+      }
+    },
+    {
+      "id": "reset_seed",
+      "position": [
+        280,
+        1960
+      ],
+      "type": 5020,
+      "values": {
+        "Seed": 42
+      }
+    },
+    {
+      "id": "input_R_gate",
+      "position": [
+        560,
+        1960
+      ],
+      "type": 1002,
+      "values": {}
+    },
+    {
+      "id": "key_R_gate",
+      "position": [
+        840,
+        1960
+      ],
+      "type": 10002,
+      "values": {
+        "Key": "R"
+      }
+    },
+    {
+      "id": "if_R_gate",
+      "position": [
+        1120,
+        1960
+      ],
+      "type": 2001,
+      "values": {}
+    },
+    {
+      "id": "input_S",
+      "position": [
+        1400,
+        1960
+      ],
+      "type": 1002,
+      "values": {}
+    },
+    {
+      "id": "key_S",
+      "position": [
+        1680,
+        1960
+      ],
+      "type": 10002,
+      "values": {
+        "Key": "S"
+      }
+    },
+    {
+      "id": "if_S",
+      "position": [
+        0,
+        2240
+      ],
+      "type": 2001,
+      "values": {}
+    },
+    {
+      "id": "action_S",
+      "position": [
+        280,
+        2240
+      ],
+      "type": 23016,
+      "values": {
+        "Slot": "routes"
+      }
+    },
+    {
+      "id": "input_L",
+      "position": [
+        560,
+        2240
+      ],
+      "type": 1002,
+      "values": {}
+    },
+    {
+      "id": "key_L",
+      "position": [
+        840,
+        2240
+      ],
+      "type": 10002,
+      "values": {
+        "Key": "L"
+      }
+    },
+    {
+      "id": "if_L",
+      "position": [
+        1120,
+        2240
+      ],
+      "type": 2001,
+      "values": {}
+    },
+    {
+      "id": "action_L",
+      "position": [
+        1400,
+        2240
+      ],
+      "type": 23017,
+      "values": {
+        "Slot": "routes"
+      }
+    }
+  ],
+  "version": 1
+}

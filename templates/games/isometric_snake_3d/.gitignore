@@ -1,0 +1,19 @@
+# Rebuildable Node_Engine project output
+generated/
+build/
+build-*/
+dist/
+.cache/
+.pytest_cache/
+__pycache__/
+*.py[cod]
+*.log
+*.tmp
+*.dmp
+# Local runtime save state
+.node-engine/
+saves/
+save-data/
+.storage.lock
+slot-*.json
+# Keep .nen, graphs, scenes, assets, replays, acceptance and Markdown docs.

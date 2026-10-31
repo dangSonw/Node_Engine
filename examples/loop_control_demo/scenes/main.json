@@ -1,0 +1,121 @@
+{
+  "active_camera": "camera",
+  "entities": [
+    {
+      "active": false,
+      "id": "player",
+      "mesh": "assets/robot.glb",
+      "name": "Robot 1",
+      "position": [
+        -1.5,
+        0,
+        0
+      ],
+      "rotation": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "scale": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "tags": [
+        "target"
+      ]
+    },
+    {
+      "id": "robot_b",
+      "mesh": "assets/robot.glb",
+      "name": "Robot 2",
+      "position": [
+        0,
+        0,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "tags": [
+        "target"
+      ]
+    },
+    {
+      "id": "robot_c",
+      "mesh": "assets/robot.glb",
+      "name": "Robot 3",
+      "position": [
+        1.5,
+        0,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "tags": [
+        "target"
+      ]
+    },
+    {
+      "camera": {
+        "far": 1000.0,
+        "fov": 60.0,
+        "near": 0.1,
+        "projection": "perspective",
+        "size": 10.0
+      },
+      "id": "camera",
+      "name": "Camera",
+      "position": [
+        0,
+        1,
+        7
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ]
+    }
+  ],
+  "ui_assets": [
+    {
+      "id": "hud",
+      "name": "HUD",
+      "rml": "<rml><head><style>body {width:100%;height:100%;font-family:node-ui;font-size:14px;color:#ffffff;pointer-events:none;}\n    #help {position:absolute;left:8px;top:8px;padding:8px;width:94%;max-width:470px;box-sizing:border-box;background-color:#171e32dd;}</style></head>\n    <body><div id=\"help\">Break / Continue target selection<br/>\n    Continue skips non-targets and inactive robots.<br/>Break stops at the first available robot.<br/>\n    1/2/3: toggle robot availability<br/>Space: scan and enlarge first available robot<br/>\n    S/L: save/load<br/>Selected: <span id=\"selected\">robot_b</span></div></body></rml>",
+      "type": "ui",
+      "version": 1
+    }
+  ],
+  "variables": {
+    "scans": 0.0,
+    "selected": {
+      "type": "entity",
+      "value": ""
+    },
+    "visited": {
+      "type": "int",
+      "value": 0
+    }
+  }
+}

@@ -1,0 +1,115 @@
+{
+  "component_definitions": [],
+  "entities": [],
+  "prefab_assets": [
+    {
+      "base": "robot",
+      "id": "inactive_robot",
+      "name": "Inactive Robot",
+      "overrides": {
+        "root": {
+          "active": false,
+          "layer": 5
+        }
+      },
+      "type": "prefab",
+      "version": 1
+    },
+    {
+      "component_definitions": [],
+      "entities": [
+        {
+          "active": true,
+          "components": {},
+          "id": "root",
+          "layer": 3,
+          "mesh": "assets/robot.gltf",
+          "name": "Timed robot",
+          "parent": "",
+          "position": [
+            0,
+            0,
+            0
+          ],
+          "rotation": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "scale": [
+            1.0,
+            1.0,
+            1.0
+          ],
+          "tags": [],
+          "visible": true
+        }
+      ],
+      "id": "robot",
+      "name": "Robot",
+      "root": "root",
+      "type": "prefab",
+      "version": 1
+    },
+    {
+      "entities": [
+        {
+          "id": "group",
+          "name": "Robot Pair",
+          "position": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "rotation": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "scale": [
+            1.0,
+            1.0,
+            1.0
+          ]
+        }
+      ],
+      "id": "robot_pair",
+      "name": "Robot Pair",
+      "nested": [
+        {
+          "id": "left",
+          "overrides": {
+            "root": {
+              "position": [
+                -2.2,
+                0,
+                0
+              ]
+            }
+          },
+          "parent": "group",
+          "prefab": "robot"
+        },
+        {
+          "id": "right",
+          "overrides": {
+            "root": {
+              "position": [
+                2.2,
+                0,
+                0
+              ]
+            }
+          },
+          "parent": "group",
+          "prefab": "inactive_robot"
+        }
+      ],
+      "root": "group",
+      "type": "prefab",
+      "version": 1
+    }
+  ],
+  "variables": {},
+  "version": 1
+}

@@ -1,0 +1,6 @@
+{
+  "graph": "graphs/gameplay.json",
+  "name": "Persistent flow gates",
+  "scene": "scenes/main.json",
+  "version": 1
+}

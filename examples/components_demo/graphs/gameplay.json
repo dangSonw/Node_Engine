@@ -1,0 +1,520 @@
+{
+  "functions": [
+    {
+      "graph": {
+        "links": [
+          {
+            "from": [
+              "entry",
+              "Out"
+            ],
+            "to": [
+              "set",
+              "In"
+            ]
+          },
+          {
+            "from": [
+              "entry",
+              "Target"
+            ],
+            "to": [
+              "hp",
+              "Entity"
+            ]
+          },
+          {
+            "from": [
+              "hp",
+              "Value"
+            ],
+            "to": [
+              "subtract",
+              "A"
+            ]
+          },
+          {
+            "from": [
+              "entry",
+              "Amount"
+            ],
+            "to": [
+              "subtract",
+              "B"
+            ]
+          },
+          {
+            "from": [
+              "subtract",
+              "Value"
+            ],
+            "to": [
+              "set",
+              "Value"
+            ]
+          },
+          {
+            "from": [
+              "entry",
+              "Target"
+            ],
+            "to": [
+              "set",
+              "Entity"
+            ]
+          },
+          {
+            "from": [
+              "set",
+              "Out"
+            ],
+            "to": [
+              "branch",
+              "In"
+            ]
+          },
+          {
+            "from": [
+              "entry",
+              "Target"
+            ],
+            "to": [
+              "remaining",
+              "Entity"
+            ]
+          },
+          {
+            "from": [
+              "remaining",
+              "Value"
+            ],
+            "to": [
+              "zero",
+              "A"
+            ]
+          },
+          {
+            "from": [
+              "zero",
+              "Value"
+            ],
+            "to": [
+              "branch",
+              "Condition"
+            ]
+          },
+          {
+            "from": [
+              "branch",
+              "False"
+            ],
+            "to": [
+              "return",
+              "In"
+            ]
+          },
+          {
+            "from": [
+              "branch",
+              "True"
+            ],
+            "to": [
+              "disable",
+              "In"
+            ]
+          },
+          {
+            "from": [
+              "entry",
+              "Target"
+            ],
+            "to": [
+              "disable",
+              "Entity"
+            ]
+          },
+          {
+            "from": [
+              "disable",
+              "Out"
+            ],
+            "to": [
+              "hide",
+              "In"
+            ]
+          },
+          {
+            "from": [
+              "entry",
+              "Target"
+            ],
+            "to": [
+              "hide",
+              "Entity"
+            ]
+          },
+          {
+            "from": [
+              "hide",
+              "Out"
+            ],
+            "to": [
+              "collect",
+              "In"
+            ]
+          },
+          {
+            "from": [
+              "items",
+              "Value"
+            ],
+            "to": [
+              "append",
+              "Array"
+            ]
+          },
+          {
+            "from": [
+              "append",
+              "Value"
+            ],
+            "to": [
+              "collect",
+              "Value"
+            ]
+          },
+          {
+            "from": [
+              "collect",
+              "Out"
+            ],
+            "to": [
+              "log",
+              "In"
+            ]
+          },
+          {
+            "from": [
+              "log",
+              "Out"
+            ],
+            "to": [
+              "return",
+              "In"
+            ]
+          }
+        ],
+        "name": "Gameplay",
+        "nodes": [
+          {
+            "id": "entry",
+            "position": [
+              0,
+              0
+            ],
+            "type": 6001,
+            "values": {}
+          },
+          {
+            "id": "hp",
+            "position": [
+              250,
+              0
+            ],
+            "type": 600112,
+            "values": {}
+          },
+          {
+            "id": "subtract",
+            "position": [
+              500,
+              0
+            ],
+            "type": 4031,
+            "values": {}
+          },
+          {
+            "id": "set",
+            "position": [
+              750,
+              0
+            ],
+            "type": 600113,
+            "values": {}
+          },
+          {
+            "id": "remaining",
+            "position": [
+              1000,
+              0
+            ],
+            "type": 600112,
+            "values": {}
+          },
+          {
+            "id": "zero",
+            "position": [
+              0,
+              240
+            ],
+            "type": 4033,
+            "values": {
+              "B": 1
+            }
+          },
+          {
+            "id": "branch",
+            "position": [
+              250,
+              240
+            ],
+            "type": 2001,
+            "values": {}
+          },
+          {
+            "id": "disable",
+            "position": [
+              500,
+              240
+            ],
+            "type": 600103,
+            "values": {
+              "Enabled": false
+            }
+          },
+          {
+            "id": "hide",
+            "position": [
+              750,
+              240
+            ],
+            "type": 8023,
+            "values": {
+              "Visible": false
+            }
+          },
+          {
+            "id": "items",
+            "position": [
+              1000,
+              240
+            ],
+            "type": 600212,
+            "values": {
+              "Entity": "collector"
+            }
+          },
+          {
+            "id": "append",
+            "position": [
+              0,
+              480
+            ],
+            "type": 3233,
+            "values": {
+              "Item": "robot token"
+            }
+          },
+          {
+            "id": "collect",
+            "position": [
+              250,
+              480
+            ],
+            "type": 600213,
+            "values": {
+              "Entity": "collector"
+            }
+          },
+          {
+            "id": "log",
+            "position": [
+              500,
+              480
+            ],
+            "type": 27001,
+            "values": {
+              "Message": "Collected robot token; Health disabled and robot hidden."
+            }
+          },
+          {
+            "id": "return",
+            "position": [
+              750,
+              480
+            ],
+            "type": 6002,
+            "values": {}
+          }
+        ],
+        "version": 1
+      },
+      "id": 1000001,
+      "inputs": [
+        {
+          "name": "Target",
+          "type": "entity"
+        },
+        {
+          "default": 25,
+          "name": "Amount",
+          "type": "int"
+        }
+      ],
+      "name": "Damage",
+      "outputs": [],
+      "pure": false
+    }
+  ],
+  "links": [
+    {
+      "from": [
+        "start",
+        "Out"
+      ],
+      "to": [
+        "timer",
+        "In"
+      ]
+    },
+    {
+      "from": [
+        "pulse",
+        "Out"
+      ],
+      "to": [
+        "each",
+        "In"
+      ]
+    },
+    {
+      "from": [
+        "query",
+        "Value"
+      ],
+      "to": [
+        "each",
+        "Array"
+      ]
+    },
+    {
+      "from": [
+        "each",
+        "Body"
+      ],
+      "to": [
+        "damage",
+        "In"
+      ]
+    },
+    {
+      "from": [
+        "each",
+        "Item"
+      ],
+      "to": [
+        "damage",
+        "Target"
+      ]
+    },
+    {
+      "from": [
+        "update",
+        "Out"
+      ],
+      "to": [
+        "rotate",
+        "In"
+      ]
+    }
+  ],
+  "name": "Health and collectible components",
+  "nodes": [
+    {
+      "id": "start",
+      "position": [
+        0,
+        0
+      ],
+      "type": 1001,
+      "values": {}
+    },
+    {
+      "id": "timer",
+      "position": [
+        300,
+        0
+      ],
+      "type": 5010,
+      "values": {
+        "Name": "damage",
+        "Repeat": true,
+        "Seconds": 0.25
+      }
+    },
+    {
+      "id": "pulse",
+      "position": [
+        600,
+        0
+      ],
+      "type": 1003,
+      "values": {
+        "Filter": "damage"
+      }
+    },
+    {
+      "id": "query",
+      "position": [
+        0,
+        230
+      ],
+      "type": 600105,
+      "values": {}
+    },
+    {
+      "id": "each",
+      "position": [
+        300,
+        230
+      ],
+      "type": 2305,
+      "values": {}
+    },
+    {
+      "id": "damage",
+      "position": [
+        600,
+        230
+      ],
+      "type": 1000001,
+      "values": {}
+    },
+    {
+      "id": "update",
+      "position": [
+        0,
+        460
+      ],
+      "type": 1002,
+      "values": {}
+    },
+    {
+      "id": "rotate",
+      "position": [
+        300,
+        460
+      ],
+      "type": 9004,
+      "values": {
+        "Degrees": [
+          0,
+          1,
+          0
+        ],
+        "Entity": "collector"
+      }
+    }
+  ],
+  "version": 1
+}

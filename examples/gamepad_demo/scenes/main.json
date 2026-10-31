@@ -1,0 +1,124 @@
+{
+  "active_camera": "camera",
+  "entities": [
+    {
+      "id": "player",
+      "mesh": "assets/robot.glb",
+      "name": "Input robot",
+      "position": [
+        0,
+        0,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ]
+    },
+    {
+      "camera": {
+        "far": 1000.0,
+        "fov": 60.0,
+        "near": 0.1,
+        "projection": "perspective",
+        "size": 10.0
+      },
+      "id": "camera",
+      "name": "Camera",
+      "position": [
+        0,
+        1.5,
+        8
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ]
+    }
+  ],
+  "input": {
+    "actions": {
+      "turn": [
+        "Space",
+        "MouseLeft"
+      ]
+    },
+    "axes": {
+      "horizontal": {
+        "negative": [
+          "A",
+          "Left"
+        ],
+        "positive": [
+          "D",
+          "Right"
+        ]
+      }
+    },
+    "version": 1
+  },
+  "ui_assets": [
+    {
+      "id": "hud",
+      "name": "HUD",
+      "rml": "<rml><head><style>body{width:100%;height:100%;font-family:node-ui;font-size:15px;color:#f4f5ff;pointer-events:none;} #help{position:absolute;left:8px;top:8px;right:8px;max-width:520px;padding:8px;background-color:#171d2c;}</style></head><body><div id=\"help\">Gamepad: analog and ordered button events<br/>\n    Left stick: move / South face button: turn<br/>A/D: keyboard movement / R: reset / S/L: save/load<br/>\n    Connected: <span id=\"count\">0</span> / left stick: <span id=\"left_x\">0</span>, <span id=\"left_y\">0</span><br/>\n    Left trigger: <span id=\"trigger\">0</span><br/>Presses: <span id=\"presses\">0</span> / releases: <span id=\"releases\">0</span><br/>\n    Last button: <span id=\"last_button\">None</span> / controller: <span id=\"last_controller\">0</span><br/>\n    Controller retained after delay: <span id=\"delayed_controller\">0</span></div></body></rml>",
+      "type": "ui",
+      "version": 1
+    }
+  ],
+  "variables": {
+    "controllers": {
+      "type": "array<int>",
+      "value": []
+    },
+    "count": {
+      "type": "int",
+      "value": 0
+    },
+    "delayed_controller": {
+      "type": "int",
+      "value": 0
+    },
+    "last_button": {
+      "type": "string",
+      "value": "None"
+    },
+    "last_controller": {
+      "type": "int",
+      "value": 0
+    },
+    "left_x": {
+      "type": "float",
+      "value": 0
+    },
+    "left_y": {
+      "type": "float",
+      "value": 0
+    },
+    "presses": {
+      "type": "int",
+      "value": 0
+    },
+    "releases": {
+      "type": "int",
+      "value": 0
+    },
+    "trigger": {
+      "type": "float",
+      "value": 0
+    }
+  },
+  "version": 1
+}

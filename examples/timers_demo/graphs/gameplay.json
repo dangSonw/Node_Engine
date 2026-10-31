@@ -1,0 +1,159 @@
+{
+  "links": [
+    {
+      "from": [
+        "start",
+        "Out"
+      ],
+      "to": [
+        "left_timer",
+        "In"
+      ]
+    },
+    {
+      "from": [
+        "left_timer",
+        "Out"
+      ],
+      "to": [
+        "right_timer",
+        "In"
+      ]
+    },
+    {
+      "from": [
+        "left_event",
+        "Out"
+      ],
+      "to": [
+        "left_turn",
+        "In"
+      ]
+    },
+    {
+      "from": [
+        "left_event",
+        "Owner"
+      ],
+      "to": [
+        "left_turn",
+        "Entity"
+      ]
+    },
+    {
+      "from": [
+        "right_event",
+        "Out"
+      ],
+      "to": [
+        "right_turn",
+        "In"
+      ]
+    },
+    {
+      "from": [
+        "right_event",
+        "Owner"
+      ],
+      "to": [
+        "right_turn",
+        "Entity"
+      ]
+    }
+  ],
+  "name": "Robot timers",
+  "nodes": [
+    {
+      "id": "start",
+      "position": [
+        0,
+        0
+      ],
+      "type": 1001,
+      "values": {}
+    },
+    {
+      "id": "left_timer",
+      "position": [
+        250,
+        0
+      ],
+      "type": 5010,
+      "values": {
+        "Name": "turn",
+        "Owner": "player",
+        "Repeat": true,
+        "Seconds": 0.25
+      }
+    },
+    {
+      "id": "right_timer",
+      "position": [
+        600,
+        0
+      ],
+      "type": 5010,
+      "values": {
+        "Name": "turn",
+        "Owner": "partner",
+        "Repeat": true,
+        "Seconds": 0.5
+      }
+    },
+    {
+      "id": "left_event",
+      "position": [
+        0,
+        300
+      ],
+      "type": 1003,
+      "values": {
+        "Filter": "turn",
+        "Receiver": "player"
+      }
+    },
+    {
+      "id": "left_turn",
+      "position": [
+        350,
+        300
+      ],
+      "type": 9004,
+      "values": {
+        "Degrees": [
+          0,
+          15,
+          0
+        ]
+      }
+    },
+    {
+      "id": "right_event",
+      "position": [
+        0,
+        520
+      ],
+      "type": 1003,
+      "values": {
+        "Filter": "turn",
+        "Receiver": "partner"
+      }
+    },
+    {
+      "id": "right_turn",
+      "position": [
+        350,
+        520
+      ],
+      "type": 9004,
+      "values": {
+        "Degrees": [
+          0,
+          -30,
+          0
+        ]
+      }
+    }
+  ],
+  "version": 1
+}
